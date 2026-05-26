@@ -224,7 +224,7 @@ More on time recurrence:
 	
 	<timezone>|<dtstart>|<dtend>|<duration>|<freq>|<until>|<interval>|<byday>|<bymonthday>|<byyearday>|<byweekno>|<bymonth>
 	
-	, identical to the input of the [check_time_rec()](cfgutils#func_check_time_rec)
+	, identical to the input of the [check_time_rec()](/modules/cfgutils#func_check_time_rec)
 	function of the *cfgutils* module, including the optional
 	use of logical operators linking multiple such strings into a larger expression.
 - When an attribute is not specified, the corresponding place must be left

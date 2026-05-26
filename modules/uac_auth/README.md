@@ -25,9 +25,9 @@ Note that authentication provided by this module supports both
 #### RFC 8760 Support (Strenghtened Authentication) {#rfc-8760-support}
 
 
-Starting with OpenSIPS 3.2, the [auth](auth),
-			[auth_db](auth_db) and
-			[uac_auth](uac_auth)
+Starting with OpenSIPS 3.2, the [auth](/modules/auth),
+			[auth_db](/modules/auth_db) and
+			[uac_auth](/modules/uac_auth)
 			modules include support for two new digest authentication algorithms
 			("SHA-256" and "SHA-512-256"), according to the
 	        [RFC 8760](https://datatracker.ietf.org/doc/html/rfc8760)
