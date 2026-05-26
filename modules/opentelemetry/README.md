@@ -61,7 +61,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `enable` (integer)
+#### enable (integer)
 
 
 Enables or disables OpenTelemetry tracing at startup. It can also be
@@ -76,7 +76,7 @@ The module is built only when the OpenTelemetry C++ SDK is available
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `enable` parameter**
+**Example: Set enable parameter**
 
 
 ```opensips
@@ -86,7 +86,7 @@ modparam("opentelemetry", "enable", 1)
 ```
 
 
-#### `proc_profiling` (integer)
+#### proc_profiling (integer)
 
 
 If enabled, the module will also profile/trace the OpenSIPS processes,
@@ -96,7 +96,7 @@ If enabled, the module will also profile/trace the OpenSIPS processes,
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `proc_profiling` parameter**
+**Example: Set proc_profiling parameter**
 
 
 ```opensips
@@ -106,7 +106,7 @@ modparam("opentelemetry", "proc_profiling", 1)
 ```
 
 
-#### `log_level` (integer)
+#### log_level (integer)
 
 
 Log level threshold used by the OpenTelemetry log consumer when
@@ -116,7 +116,7 @@ Log level threshold used by the OpenTelemetry log consumer when
 *Default value is "L_DBG".*
 
 
-**Example: Set `log_level` parameter**
+**Example: Set log_level parameter**
 
 
 ```opensips
@@ -126,7 +126,7 @@ modparam("opentelemetry", "log_level", 3)
 ```
 
 
-#### `use_batch` (integer)
+#### use_batch (integer)
 
 
 Selects the OpenTelemetry span processor. When enabled, the module uses
@@ -136,7 +136,7 @@ Selects the OpenTelemetry span processor. When enabled, the module uses
 *Default value is "1 (enabled)".*
 
 
-**Example: Set `use_batch` parameter**
+**Example: Set use_batch parameter**
 
 
 ```opensips
@@ -146,7 +146,7 @@ modparam("opentelemetry", "use_batch", 0)
 ```
 
 
-#### `service_name` (string)
+#### service_name (string)
 
 
 Sets the OpenTelemetry "service.name" resource attribute.
@@ -155,7 +155,7 @@ Sets the OpenTelemetry "service.name" resource attribute.
 *Default value is "opensips".*
 
 
-**Example: Set `service_name` parameter**
+**Example: Set service_name parameter**
 
 
 ```opensips
@@ -165,7 +165,7 @@ modparam("opentelemetry", "service_name", "edge-proxy")
 ```
 
 
-#### `exporter_endpoint` (string)
+#### exporter_endpoint (string)
 
 
 Overrides the OTLP/HTTP exporter endpoint. If empty, the OpenTelemetry
@@ -175,7 +175,7 @@ Overrides the OTLP/HTTP exporter endpoint. If empty, the OpenTelemetry
 *Default value is "empty".*
 
 
-**Example: Set `exporter_endpoint` parameter**
+**Example: Set exporter_endpoint parameter**
 
 
 ```opensips
@@ -188,7 +188,7 @@ modparam("opentelemetry", "exporter_endpoint", "http://127.0.0.1:4318/v1/traces"
 ### Exported MI Functions
 
 
-#### `opentelemetry:enable`
+#### opentelemetry:enable
 
 
 Replaces obsolete MI command: *otel_enable*.

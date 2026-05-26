@@ -83,7 +83,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Database URL used to load the initial configuration values,
@@ -104,7 +104,7 @@ modparam("config", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 Name of the table where configuration entries are stored.
@@ -123,7 +123,7 @@ modparam("config", "table_name", "configuration")
 ```
 
 
-#### `name_column` (string)
+#### name_column (string)
 
 
 Name of the column storing configuration variable names.
@@ -142,7 +142,7 @@ modparam("config", "name_column", "key")
 ```
 
 
-#### `value_column` (string)
+#### value_column (string)
 
 
 Name of the column storing configuration variable values.
@@ -161,7 +161,7 @@ modparam("config", "value_column", "val")
 ```
 
 
-#### `description_column` (string)
+#### description_column (string)
 
 
 Name of the column storing variable descriptions.
@@ -180,7 +180,7 @@ modparam("config", "description_column", "desc")
 ```
 
 
-#### `enable_restart_persistency` (integer)
+#### enable_restart_persistency (integer)
 
 
 Enables restart persistency. Check the
@@ -200,7 +200,7 @@ modparam("config", "restart_persistent_memory", yes)
 ```
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 Size of the internal hash table used to store config variables.
@@ -224,14 +224,14 @@ modparam("config", "hash_size", 32)
 ### Exported Pseudo-Variables
 
 
-#### `$config(name)`
+#### $config(name)
 
 
 Returns the value of the given config variable by name.
 			Can also be used for temporarily changing the value.
 
 
-**Example: Usage of `$config(...)`**
+**Example: Usage of $config(...)**
 
 
 ```opensips
@@ -243,7 +243,7 @@ Returns the value of the given config variable by name.
 ```
 
 
-#### `$config.description(name)`
+#### $config.description(name)
 
 
 Returns the description of a config variable if available.
@@ -252,7 +252,7 @@ Returns the description of a config variable if available.
 This variable is read-only.
 
 
-**Example: Usage of `$config.description(name)`**
+**Example: Usage of $config.description(name)**
 
 
 ```opensips
@@ -266,7 +266,7 @@ This variable is read-only.
 ### MI Commands
 
 
-#### `config:reload`
+#### config:reload
 
 
 Replaces obsolete MI command: *config_reload*.
@@ -286,7 +286,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `config:list`
+#### config:list
 
 
 Replaces obsolete MI command: *config_list*.
@@ -311,7 +311,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `config:push`
+#### config:push
 
 
 Replaces obsolete MI command: *config_push*.
@@ -341,7 +341,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `config:push_bulk`
+#### config:push_bulk
 
 
 Replaces obsolete MI command: *config_push_bulk*.
@@ -384,7 +384,7 @@ MI FIFO Command Format:
 The command returns the number of values successfully pushed.
 
 
-#### `config:flush`
+#### config:flush
 
 
 Replaces obsolete MI command: *config_flush*.

@@ -82,7 +82,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `client_bye_mode` (string)
+#### client_bye_mode (string)
 
 
 This parameter indicates how a BYE coming from the
@@ -111,7 +111,7 @@ Possible values are:
 		*Default value is "disable".*
 
 
-**Example: Set `client_bye_mode` parameter**
+**Example: Set client_bye_mode parameter**
 
 
 ```opensips
@@ -124,7 +124,7 @@ modparam("b2b_sdp_demux", "client_bye_mode", "terminate")
 ### Exported Functions
 
 
-#### `b2b_sdp_demux(URI[, [headers][, streams]])`
+#### b2b_sdp_demux(URI[, [headers][, streams]])
 
 
 Engages the B2B SDP De-Multiplexing scenario for the
@@ -160,7 +160,7 @@ Parameters:
 This function can be used only from request route.
 
 
-**Example: Use `b2b_sdp_demux()` to 
+**Example: Use b2b_sdp_demux() to 
 				handle an audio SIPREC call**
 
 

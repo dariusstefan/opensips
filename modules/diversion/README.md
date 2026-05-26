@@ -43,7 +43,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `suffix` (string)
+#### suffix (string)
 
 
 The suffix to be appended to the end of the header field. You can use 
@@ -54,7 +54,7 @@ The suffix to be appended to the end of the header field. You can use
 Default value is "" (empty string).
 
 
-**Example: `suffix` usage**
+**Example: suffix usage**
 
 
 ```opensips
@@ -65,7 +65,7 @@ modparam("diversion", "suffix", ";privacy=full")
 ### Exported Functions
 
 
-#### `add_diversion(reason, [uri], [counter])`
+#### add_diversion(reason, [uri], [counter])
 
 
 The function adds a new diversion header field before any other 
@@ -88,7 +88,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `add_diversion` usage**
+**Example: add_diversion usage**
 
 
 ```

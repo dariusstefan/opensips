@@ -38,7 +38,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `auth_date_freshness` (integer)
+#### auth_date_freshness (integer)
 
 
 The maximum number of seconds that the value in the Date header field
@@ -52,7 +52,7 @@ This parameter is only relevant
 The default value is *60*.
 
 
-**Example: Set `auth_date_freshness` parameter**
+**Example: Set auth_date_freshness parameter**
 
 
 ```opensips
@@ -62,7 +62,7 @@ modparam("stir_shaken", "auth_date_freshness", 300)
 ```
 
 
-#### `verify_date_freshness` (integer)
+#### verify_date_freshness (integer)
 
 
 The maximum number of seconds that the value in the Date header field can be
@@ -84,7 +84,7 @@ This parameter is only relevant for the
 The default value is *60*.
 
 
-**Example: Set `verify_date_freshness` parameter**
+**Example: Set verify_date_freshness parameter**
 
 
 ```opensips
@@ -94,14 +94,14 @@ modparam("stir_shaken", "verify_date_freshness", 300)
 ```
 
 
-#### `ca_list` (string)
+#### ca_list (string)
 
 
 Path to a file containing trusted CA certificates for the verifier.
 		The certificates must be in PEM format, one after another.
 
 
-**Example: Set `ca_list` parameter**
+**Example: Set ca_list parameter**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("stir_shaken", "ca_list", "/stir_certs/ca_list.pem")
 ```
 
 
-#### `ca_dir` (string)
+#### ca_dir (string)
 
 
 Path to a directory containing trusted CA certificates for the verifier.
@@ -120,7 +120,7 @@ Path to a directory containing trusted CA certificates for the verifier.
 		*Hashed Directory Method*.
 
 
-**Example: Set `ca_dir` parameter**
+**Example: Set ca_dir parameter**
 
 
 ```opensips
@@ -130,13 +130,13 @@ modparam("stir_shaken", "ca_dir", "/stir_certs/cas")
 ```
 
 
-#### `crl_list` (string)
+#### crl_list (string)
 
 
 Path to a file containing certificate revocation lists (CRLs) for the verifier.
 
 
-**Example: Set `crl_list` parameter**
+**Example: Set crl_list parameter**
 
 
 ```opensips
@@ -146,7 +146,7 @@ modparam("stir_shaken", "crl_list", "/stir_certs/crl_list.pem")
 ```
 
 
-#### `crl_dir` (string)
+#### crl_dir (string)
 
 
 Path to a directory containing certificate revocation lists (CRLs) for
@@ -155,7 +155,7 @@ Path to a directory containing certificate revocation lists (CRLs) for
 		*Hashed Directory Method*.
 
 
-**Example: Set `crl_dir` parameter**
+**Example: Set crl_dir parameter**
 
 
 ```opensips
@@ -165,7 +165,7 @@ modparam("stir_shaken", "crl_dir", "/stir_certs/crls")
 ```
 
 
-#### `e164_strict_mode` (integer)
+#### e164_strict_mode (integer)
 
 
 Require a leading *"+"* to be present in
@@ -179,7 +179,7 @@ Require a leading *"+"* to be present in
 The default value is *0* (disabled).
 
 
-**Example: Set `e164_strict_mode` parameter**
+**Example: Set e164_strict_mode parameter**
 
 
 ```opensips
@@ -189,7 +189,7 @@ modparam("stir_shaken", "e164_strict_mode", 1)
 ```
 
 
-#### `e164_max_length` (integer)
+#### e164_max_length (integer)
 
 
 This parameter allows the 15-digit number length restriction of the E.164
@@ -201,7 +201,7 @@ This parameter allows the 15-digit number length restriction of the E.164
 The default value is *15*.
 
 
-**Example: Set `e164_max_length` parameter**
+**Example: Set e164_max_length parameter**
 
 
 ```opensips
@@ -211,7 +211,7 @@ modparam("stir_shaken", "e164_max_length", 16)
 ```
 
 
-#### `require_date_hdr` (integer)
+#### require_date_hdr (integer)
 
 
 Specifies whether the Date header is mandatory when doing verification
@@ -232,7 +232,7 @@ If the parameter is set to "not required" but the Date header is present in the
 The default value is *1* (required).
 
 
-**Example: Set `require_date_hdr` parameter**
+**Example: Set require_date_hdr parameter**
 
 
 ```opensips
@@ -245,7 +245,7 @@ modparam("stir_shaken", "require_date_hdr", 0)
 ### Exported Functions
 
 
-#### `stir_shaken_auth(attest, origid, cert, pkey, x5u, [orig], [dest], [out])`
+#### stir_shaken_auth(attest, origid, cert, pkey, x5u, [orig], [dest], [out])
 
 
 This function performs the steps of an authentication service. Before
@@ -315,7 +315,7 @@ The function returns the following values:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `stir_shaken_auth()` usage**
+**Example: stir_shaken_auth() usage**
 
 
 ```
@@ -326,7 +326,7 @@ stir_shaken_auth("A", "4437c7eb-8f7a-4f0e-a863-f53a0e60251a",
 ```
 
 
-#### `stir_shaken_verify(cert, err_code, err_reason, [orig], [dest])`
+#### stir_shaken_verify(cert, err_code, err_reason, [orig], [dest])
 
 
 This function performs the steps of an verification service.
@@ -370,7 +370,7 @@ The function returns the following values:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `stir_shaken_verify()` usage**
+**Example: stir_shaken_verify() usage**
 
 
 ```
@@ -384,7 +384,7 @@ if ($var(rc) < -1) {
 ```
 
 
-#### `stir_shaken_check()`
+#### stir_shaken_check()
 
 
 This function checks the Identity header in order to validate the
@@ -405,7 +405,7 @@ The function returns the following values:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `stir_shaken_check()` usage**
+**Example: stir_shaken_check() usage**
 
 
 ```opensips
@@ -418,7 +418,7 @@ if (stir_shaken_check()) {
 ```
 
 
-#### `stir_shaken_check_cert()`
+#### stir_shaken_check_cert()
 
 
 This function checks if the current time falls within the given
@@ -436,7 +436,7 @@ The function returns the following values:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `stir_shaken_check_cert()` usage**
+**Example: stir_shaken_check_cert() usage**
 
 
 ```
@@ -451,7 +451,7 @@ if (!stir_shaken_check_cert($var(cert))) {
 ```
 
 
-#### `stir_shaken_disengagement(token)`
+#### stir_shaken_disengagement(token)
 
 
 This function add P-Identity-Bypass header with token value at the end of SIP headers.
@@ -473,7 +473,7 @@ The function returns the following values:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `stir_shaken_disengagement()` usage**
+**Example: stir_shaken_disengagement() usage**
 
 
 ```opensips
@@ -489,7 +489,7 @@ if ( is_method("INVITE") && !has_totag()) {
 ### Exported Pseudo-Variables
 
 
-#### `$identity(field)`
+#### $identity(field)
 
 
 This is a read-only pseudo-variable that provides access to the
@@ -509,7 +509,7 @@ This is a read-only pseudo-variable that provides access to the
 - *origid* - the value of the 'origid' PASSporT claim;
 
 
-**Example: `identity` usage**
+**Example: identity usage**
 
 
 ```opensips
@@ -530,7 +530,7 @@ This is a read-only pseudo-variable that provides access to the
 ### Exported MI Functions
 
 
-#### `stir_shaken:ca_reload`
+#### stir_shaken:ca_reload
 
 
 Replaces obsolete MI command: *stir_shaken_ca_reload*.
@@ -557,7 +557,7 @@ opensips-cli -x mi stir_shaken:ca_reload
 ```
 
 
-#### `stir_shaken:crl_reload`
+#### stir_shaken:crl_reload
 
 
 Replaces obsolete MI command: *stir_shaken_crl_reload*.

@@ -80,7 +80,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `secret` (string)
+#### secret (string)
 
 
 Secret phrase used to calculate the nonce value.
@@ -106,7 +106,7 @@ modparam("auth", "secret", "johndoessecretphrase")
 ```
 
 
-#### `nonce_expire` (integer)
+#### nonce_expire (integer)
 
 
 Nonces have limited lifetime. After a given period of time nonces 
@@ -130,7 +130,7 @@ modparam("auth", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
 
-#### `rpid_prefix` (string)
+#### rpid_prefix (string)
 
 
 Prefix to be added to Remote-Party-ID header field just before 
@@ -148,7 +148,7 @@ modparam("auth", "rpid_prefix", "Whatever <")
 ```
 
 
-#### `rpid_suffix` (string)
+#### rpid_suffix (string)
 
 
 Suffix to be added to Remote-Party-ID header field after the URI 
@@ -167,7 +167,7 @@ modparam("auth", "rpid_suffix", "@1.2.3.4>")
 ```
 
 
-#### `realm_prefix` (string)
+#### realm_prefix (string)
 
 
 Prefix to be automatically strip from realm. As an alternative to
@@ -190,7 +190,7 @@ modparam("auth", "realm_prefix", "sip.")
 ```
 
 
-#### `rpid_avp` (string)
+#### rpid_avp (string)
 
 
 Full AVP specification for the AVP which 
@@ -215,7 +215,7 @@ modparam("auth", "rpid_avp", "$avp(caller_rpid)")
 ```
 
 
-#### `username_spec` (string)
+#### username_spec (string)
 
 
 This name of the pseudo-variable that will hold the username.
@@ -224,7 +224,7 @@ This name of the pseudo-variable that will hold the username.
 Default value is "NULL".
 
 
-**Example: `username_spec` parameter usage**
+**Example: username_spec parameter usage**
 
 
 ```opensips
@@ -232,7 +232,7 @@ modparam("auth", "username_spec", "$var(username)")
 ```
 
 
-#### `password_spec` (string)
+#### password_spec (string)
 
 
 This name of the pseudo-variable that will hold the password.
@@ -241,7 +241,7 @@ This name of the pseudo-variable that will hold the password.
 Default value is "NULL".
 
 
-**Example: `password_spec` parameter usage**
+**Example: password_spec parameter usage**
 
 
 ```opensips
@@ -249,7 +249,7 @@ modparam("auth", "password_spec", "$var(password)")
 ```
 
 
-#### `calculate_ha1` (integer)
+#### calculate_ha1 (integer)
 
 
 This parameter tells the server whether it should expect plaintext
@@ -266,7 +266,7 @@ If the parameter is set to 1 then the server will assume that the
 Default value of this parameter is 0.
 
 
-**Example: `calculate_ha1` parameter usage**
+**Example: calculate_ha1 parameter usage**
 
 
 ```opensips
@@ -274,7 +274,7 @@ modparam("auth", "calculate_ha1", 1)
 ```
 
 
-#### `disable_nonce_check` (int)
+#### disable_nonce_check (int)
 
 
 By setting this parameter you disable the security mechanism 
@@ -288,7 +288,7 @@ By setting this parameter you disable the security mechanism
 Default value is "0" (enabled).
 
 
-**Example: `disable_nonce_check` parameter usage**
+**Example: disable_nonce_check parameter usage**
 
 
 ```opensips
@@ -299,7 +299,7 @@ modparam("auth", "disable_nonce_check", 1)
 ### Exported Functions
 
 
-#### `www_challenge(realm[, qop[, algorithms]])`
+#### www_challenge(realm[, qop[, algorithms]])
 
 
 The function challenges a user agent. It will generate one or
@@ -368,7 +368,7 @@ if (!www_authorize("siphub.net", "subscriber")) {
 ```
 
 
-#### `proxy_challenge(realm[, qop[, algorithms]])`
+#### proxy_challenge(realm[, qop[, algorithms]])
 
 
 The function challenges a user agent. It will generate a 
@@ -403,7 +403,7 @@ if (!proxy_authorize("", "subscriber")) {
 ```
 
 
-#### `consume_credentials()`
+#### consume_credentials()
 
 
 This function removes previously authorized credentials from the 
@@ -431,7 +431,7 @@ if (www_authorize("", "subscriber")) {
 ```
 
 
-#### `is_rpid_user_e164()`
+#### is_rpid_user_e164()
 
 
 The function checks if the SIP URI received from the database or 
@@ -456,7 +456,7 @@ if (is_rpid_user_e164()) {
 ```
 
 
-#### `append_rpid_hf()`
+#### append_rpid_hf()
 
 
 Appends to the message a Remote-Party-ID header that contains header
@@ -480,7 +480,7 @@ append_rpid_hf();  # Append Remote-Party-ID header field
 ```
 
 
-#### `append_rpid_hf(prefix, suffix)`
+#### append_rpid_hf(prefix, suffix)
 
 
 This function is the same as 
@@ -518,7 +518,7 @@ append_rpid_hf("", ";party=calling;id-type=subscriber;screen=yes");
 ```
 
 
-#### `pv_www_authorize(realm)`
+#### pv_www_authorize(realm)
 
 
 The function verifies credentials according to 
@@ -562,7 +562,7 @@ If an empty string "" is used then the server will
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `pv_www_authorize`
+**Example: pv_www_authorize
 		usage**
 
 
@@ -577,7 +577,7 @@ if (!pv_www_authorize("opensips.org")) {
 ```
 
 
-#### `pv_proxy_authorize(realm)`
+#### pv_proxy_authorize(realm)
 
 
 The function verifies credentials according to 

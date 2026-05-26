@@ -123,14 +123,14 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_urls` (str)
+#### db_urls (str)
 
 
 Multiple value parameter used for virtual DB URLs declaration.
 
 
 **Example: Set
-					`db_urls` parameter**
+					db_urls parameter**
 
 
 ```opensips
@@ -150,7 +150,7 @@ modparam("db_virtual", "db_urls", "mysql://opensips:opensipsrw@localhost/testa")
 ```
 
 
-#### `db_probe_time` (integer)
+#### db_probe_time (integer)
 
 
 Time interval after which a registered timer process attempts to check
@@ -162,7 +162,7 @@ Time interval after which a registered timer process attempts to check
 
 
 **Example: Set
-					`db_probe_time` parameter**
+					db_probe_time parameter**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("db_virtual", "db_probe_time", 20)
 ```
 
 
-#### `db_max_consec_retrys` (integer)
+#### db_max_consec_retrys (integer)
 
 
 After the timer process has reported that it can connect to the real db,
@@ -187,7 +187,7 @@ After the timer process has reported that it can connect to the real db,
 
 
 **Example: Set
-					`db_max_consec_retrys` parameter**
+					db_max_consec_retrys parameter**
 
 
 ```opensips
@@ -202,7 +202,7 @@ modparam("db_virtual", "db_max_consec_retrys", 20)
 ### Exported MI Functions
 
 
-#### `db_virtual:get`
+#### db_virtual:get
 
 
 Replaces obsolete MI command: *db_get*.
@@ -230,7 +230,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `db_virtual:set`
+#### db_virtual:set
 
 
 Replaces obsolete MI command: *db_set*.

@@ -73,7 +73,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Database where to load the rules from.
@@ -93,7 +93,7 @@ modparam("fraud_detection", "db_url", "mysql://user:passwb@localhost/database")
 ```
 
 
-#### `use_utc_time` (integer)
+#### use_utc_time (integer)
 
 
 Set this parameter to non-zero in order to enable UTC-based interval
@@ -113,7 +113,7 @@ modparam("fraud_detection", "use_utc_time", 1)
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 If you want to load the rules from the database you must set
@@ -133,7 +133,7 @@ modparam("fraud_detection", "table_name", "my_fraud")
 ```
 
 
-#### `rid_col` (string)
+#### rid_col (string)
 
 
 The column's name in the database storing the
@@ -153,7 +153,7 @@ modparam("fraud_detection", "rid_col", "theruleid")
 ```
 
 
-#### `pid_col` (string)
+#### pid_col (string)
 
 
 The column's name in the database storing the
@@ -177,7 +177,7 @@ modparam("fraud_detection", "pid_col", "profile")
 ```
 
 
-#### `prefix_col` (string)
+#### prefix_col (string)
 
 
 The column's name in the database storing the
@@ -197,7 +197,7 @@ modparam("fraud_detection", "prefix_col", "myprefix")
 ```
 
 
-#### `start_h` (string)
+#### start_h (string)
 
 
 The column's name in the database storing the
@@ -222,7 +222,7 @@ modparam("fraud_detection", "start_h", "the_start_time")
 ```
 
 
-#### `end_h` (string)
+#### end_h (string)
 
 
 The column's name in the database storing the
@@ -247,7 +247,7 @@ modparam("fraud_detection", "end_h", "the_end_time")
 ```
 
 
-#### `days_col` (string)
+#### days_col (string)
 
 
 The column's name in the database storing the
@@ -275,7 +275,7 @@ modparam("fraud_detection", "days_col", "days")
 ```
 
 
-#### `cpm_thresh_warn_col` (string)
+#### cpm_thresh_warn_col (string)
 
 
 The column's name in the database storing the
@@ -295,7 +295,7 @@ modparam("fraud_detection", "cpm_thresh_warn_col", "cpm_warn_thresh")
 ```
 
 
-#### `cpm_thresh_crit_col` (string)
+#### cpm_thresh_crit_col (string)
 
 
 The column's name in the database storing the
@@ -315,7 +315,7 @@ modparam("fraud_detection", "cpm_thresh_crit_col", "cpm_crit_thresh")
 ```
 
 
-#### `calldur_thresh_warn_col` (string)
+#### calldur_thresh_warn_col (string)
 
 
 The column's name in the database storing the
@@ -335,7 +335,7 @@ modparam("fraud_detection", "calldur_thresh_warn_col", "calldur_warn_thresh")
 ```
 
 
-#### `calldur_thresh_crit_col` (string)
+#### calldur_thresh_crit_col (string)
 
 
 The column's name in the database storing the
@@ -355,7 +355,7 @@ modparam("fraud_detection", "calldur_thresh_crit_col", "calldur_crit_thresh")
 ```
 
 
-#### `totalc_thresh_warn_col` (string)
+#### totalc_thresh_warn_col (string)
 
 
 The column's name in the database storing the
@@ -375,7 +375,7 @@ modparam("fraud_detection", "totalc_thresh_warn_col", "totalc_warn_thresh")
 ```
 
 
-#### `totalc_thresh_crit_col` (string)
+#### totalc_thresh_crit_col (string)
 
 
 The column's name in the database storing the
@@ -395,7 +395,7 @@ modparam("fraud_detection", "totalc_thresh_crit_col", "totalc_crit_thresh")
 ```
 
 
-#### `concalls_thresh_warn_col` (string)
+#### concalls_thresh_warn_col (string)
 
 
 The column's name in the database storing the
@@ -416,7 +416,7 @@ modparam("fraud_detection", "concalls_thresh_warn_col", "concalls_warn_thresh")
 ```
 
 
-#### `concalls_thresh_crit_col` (string)
+#### concalls_thresh_crit_col (string)
 
 
 The column's name in the database storing the
@@ -437,7 +437,7 @@ modparam("fraud_detection", "concalls_thresh_crit_col", "concalls_crit_thresh")
 ```
 
 
-#### `seqcalls_thresh_warn_col` (string)
+#### seqcalls_thresh_warn_col (string)
 
 
 The column's name in the database storing the
@@ -458,7 +458,7 @@ modparam("fraud_detection", "seqcalls_thresh_warn_col", "seqcalls_warn_thresh")
 ```
 
 
-#### `seqcalls_thresh_crit_col` (string)
+#### seqcalls_thresh_crit_col (string)
 
 
 The column's name in the database storing the
@@ -482,7 +482,7 @@ modparam("fraud_detection", "seqcalls_thresh_crit_col", "seqcalls_crit_thresh")
 ### Exported Functions
 
 
-#### `check_fraud(user, number, profile_id)`
+#### check_fraud(user, number, profile_id)
 
 
 This method should be called each time a given *user*
@@ -528,7 +528,7 @@ This function can be used from REQUEST_ROUTE and ONREPLY_ROUTE.
 ### Exported MI Functions
 
 
-#### `fraud_detection:show_stats`
+#### fraud_detection:show_stats
 
 
 Replaces obsolete MI command: *show_fraud_stats*.
@@ -555,7 +555,7 @@ Parameters:
 - prefix
 
 
-#### `fraud_detection:reload`
+#### fraud_detection:reload
 
 
 Replaces obsolete MI command: *fraud_reload*.
@@ -573,7 +573,7 @@ Parameters: *none*
 ### Exported Events
 
 
-#### `E_FRD_WARNING`
+#### E_FRD_WARNING
 
 
 This event is raised whenever one of the 5 monitored parameters
@@ -593,7 +593,7 @@ Parameters:
 - *profile_id* - the profile id used
 
 
-#### `E_FRD_CRITICAL`
+#### E_FRD_CRITICAL
 
 
 This event is raised whenever one of the 5 monitored parameters

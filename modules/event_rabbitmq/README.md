@@ -100,7 +100,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `heartbeat` (integer)
+#### heartbeat (integer)
 
 
 Enables heartbeat support for the AMQP communication. If the
@@ -114,7 +114,7 @@ Enables heartbeat support for the AMQP communication. If the
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `heartbeat` parameter**
+**Example: Set heartbeat parameter**
 
 
 ```opensips
@@ -124,7 +124,7 @@ modparam("event_rabbitmq", "heartbeat", 3)
 ```
 
 
-#### `connect_timeout` (integer)
+#### connect_timeout (integer)
 
 
 The maximally allowed duration (in milliseconds) for the establishment
@@ -134,7 +134,7 @@ The maximally allowed duration (in milliseconds) for the establishment
 *Default value is "500" (milliseconds).*
 
 
-**Example: Setting the `connect_timeout` parameter**
+**Example: Setting the connect_timeout parameter**
 
 
 ```opensips
@@ -145,7 +145,7 @@ modparam("event_rabbitmq", "connect_timeout", 1000)
 ```
 
 
-#### `use_tls` (integer)
+#### use_tls (integer)
 
 
 Setting this parameter will allow you to use TLS for broker connections.
@@ -162,7 +162,7 @@ When using this parameter, you must also ensure that
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the `use_tls` parameter**
+**Example: Set the use_tls parameter**
 
 
 ```opensips
@@ -177,7 +177,7 @@ modparam("event_rabbitmq", "use_tls", 1)
 ```
 
 
-#### `timeout` (integer)
+#### timeout (integer)
 
 
 Indicates the timeout (in milliseconds) of any command (i.e. publish)
@@ -193,7 +193,7 @@ Indicates the timeout (in milliseconds) of any command (i.e. publish)
 *Default value is **0** (no timeout - blocking mode)*
 
 
-**Example: Set the `timeout` parameter**
+**Example: Set the timeout parameter**
 
 
 ```opensips
@@ -203,7 +203,7 @@ modparam("event_rabbitmq", "timeout", 1000) # timeout after 1s
 ```
 
 
-#### `server_id` (string)
+#### server_id (string)
 
 
 Specify configuration for a RabbitMQ server. It contains a set
@@ -255,7 +255,7 @@ The following parameters can be used:
 				[use tls](#param_use_tls) module parameter must be enabled.
 
 
-**Example: Set `server_id` parameter**
+**Example: Set server_id parameter**
 
 
 ```opensips
@@ -277,8 +277,8 @@ modparam("event_rabbitmq", "server_id","[ID3] uri = amqps://127.0.0.1; tls_domai
 ### Exported Functions
 
 
-#### `rabbitmq_publish(server_id, routing_key, message 
-					[, [content_type [, headers, headers_vals]]])`
+#### rabbitmq_publish(server_id, routing_key, message 
+					[, [content_type [, headers, headers_vals]]])
 
 
 Sends a publish message to a RabbitMQ server.
@@ -315,7 +315,7 @@ The function has the following parameters:
 						*headers* parameter must also be specified.
 
 
-**Example: `rabbitmq_publish()` function usage**
+**Example: rabbitmq_publish() function usage**
 
 
 ```

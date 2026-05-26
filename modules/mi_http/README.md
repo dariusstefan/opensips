@@ -34,7 +34,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `root`(string)
+#### root(string)
 
 
 Specifies the root path for HTTP requests:
@@ -44,7 +44,7 @@ Specifies the root path for HTTP requests:
 *The default value is "mi".*
 
 
-**Example: Set `root` parameter**
+**Example: Set root parameter**
 
 
 ```opensips
@@ -54,7 +54,7 @@ modparam("mi_http", "root", "opensips_mi")
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -70,7 +70,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -82,7 +82,7 @@ modparam("mi_http", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_bwlist` (string)
+#### trace_bwlist (string)
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -109,7 +109,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips

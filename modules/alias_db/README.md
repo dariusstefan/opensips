@@ -46,7 +46,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 Database URL.
@@ -55,7 +55,7 @@ Database URL.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -65,7 +65,7 @@ modparam("alias_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `user_column` (str)
+#### user_column (str)
 
 
 Name of the column storing username.
@@ -74,7 +74,7 @@ Name of the column storing username.
 *Default value is "username".*
 
 
-**Example: Set `user_column` parameter**
+**Example: Set user_column parameter**
 
 
 ```opensips
@@ -84,7 +84,7 @@ modparam("alias_db", "user_column", "susername")
 ```
 
 
-#### `domain_column` (str)
+#### domain_column (str)
 
 
 Name of the column storing user's domain.
@@ -93,7 +93,7 @@ Name of the column storing user's domain.
 *Default value is "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -103,7 +103,7 @@ modparam("alias_db", "domain_column", "sdomain")
 ```
 
 
-#### `alias_user_column` (str)
+#### alias_user_column (str)
 
 
 Name of the column storing alias username.
@@ -112,7 +112,7 @@ Name of the column storing alias username.
 *Default value is "alias_username".*
 
 
-**Example: Set `alias_user_column` parameter**
+**Example: Set alias_user_column parameter**
 
 
 ```opensips
@@ -122,7 +122,7 @@ modparam("alias_db", "alias_user_column", "auser")
 ```
 
 
-#### `alias_domain_column` (str)
+#### alias_domain_column (str)
 
 
 Name of the column storing alias domain.
@@ -131,7 +131,7 @@ Name of the column storing alias domain.
 *Default value is "alias_domain".*
 
 
-**Example: Set `alias_domain_column` parameter**
+**Example: Set alias_domain_column parameter**
 
 
 ```opensips
@@ -141,7 +141,7 @@ modparam("alias_db", "alias_domain_column", "adomain")
 ```
 
 
-#### `domain_prefix` (str)
+#### domain_prefix (str)
 
 
 Specifies the prefix to be stripped from the domain in R-URI before
@@ -151,7 +151,7 @@ Specifies the prefix to be stripped from the domain in R-URI before
 *Default value is "NULL".*
 
 
-**Example: Set `domain_prefix` parameter**
+**Example: Set domain_prefix parameter**
 
 
 ```opensips
@@ -161,7 +161,7 @@ modparam("alias_db", "domain_prefix", "sip.")
 ```
 
 
-#### `append_branches` (int)
+#### append_branches (int)
 
 
 If the alias resolves to many SIP IDs, the first is replacing
@@ -172,7 +172,7 @@ If the alias resolves to many SIP IDs, the first is replacing
 			1 - add branches).*
 
 
-**Example: Set `append_branches` parameter**
+**Example: Set append_branches parameter**
 
 
 ```opensips
@@ -185,7 +185,7 @@ modparam("alias_db", "append_branches", 1)
 ### Exported Functions
 
 
-#### `alias_db_lookup(table_name, [flags])`
+#### alias_db_lookup(table_name, [flags])
 
 
 The function takes the R-URI and search to see whether it is an alias
@@ -217,7 +217,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `alias_db_lookup()` usage**
+**Example: alias_db_lookup() usage**
 
 
 ```
@@ -228,7 +228,7 @@ alias_db_lookup("dba_$(rU{s.substr,0,1})");
 ```
 
 
-#### `alias_db_find(table_name, input_uri, output_var, [flags])`
+#### alias_db_find(table_name, input_uri, output_var, [flags])
 
 
 The function is very similar to `alias_db_lookup()`,
@@ -270,7 +270,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 			LOCAL_ROUTE, STARTUP_ROUTE, FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `alias_db_find()` usage**
+**Example: alias_db_find() usage**
 
 
 ```

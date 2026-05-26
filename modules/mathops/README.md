@@ -38,7 +38,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `decimal_digits` (integer)
+#### decimal_digits (integer)
 
 
 The precision of the results returned by all the module functions.
@@ -60,7 +60,7 @@ modparam("mathops", "decimal_digits", 10)
 ### Exported Functions
 
 
-#### `math_eval(expression, result_var)`
+#### math_eval(expression, result_var)
 
 
 The function evaluates a given expression and writes the result in the
@@ -86,7 +86,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_eval` usage**
+**Example: math_eval usage**
 
 
 ```opensips
@@ -107,7 +107,7 @@ if (math_eval("$avp(1) * ($avp(3) - ($avp(1) - $avp(2))) / $avp(3)", $avp(result
 ```
 
 
-#### `math_rpn(expression, result_var)`
+#### math_rpn(expression, result_var)
 
 
 The function evaluates a given RPN expression and writes the result in the
@@ -138,7 +138,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_rpn` usage**
+**Example: math_rpn usage**
 
 
 ```opensips
@@ -157,7 +157,7 @@ finally compute 1 divided by the result, giving 3 as the result. */
 ```
 
 
-#### `math_trunc(number, result_var)`
+#### math_trunc(number, result_var)
 
 
 Truncation of a number towards zero. This means that trunc(3.7) = 3.0 and
@@ -175,7 +175,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_trunc` usage**
+**Example: math_trunc usage**
 
 
 ```opensips
@@ -193,7 +193,7 @@ if (math_trunc($avp(1), $avp(result))) {
 ```
 
 
-#### `math_floor(number, result_var)`
+#### math_floor(number, result_var)
 
 
 Truncates a number, always towards -infinity. This means that floor(3.7) = 3.0
@@ -211,7 +211,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_floor` usage**
+**Example: math_floor usage**
 
 
 ```opensips
@@ -229,7 +229,7 @@ if (math_floor($avp(1), $avp(result))) {
 ```
 
 
-#### `math_ceil(number, result_var)`
+#### math_ceil(number, result_var)
 
 
 Truncates a number, always towards +infinity. This means that ceil(3.2) = 4.0
@@ -247,7 +247,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_ceil` usage**
+**Example: math_ceil usage**
 
 
 ```opensips
@@ -265,7 +265,7 @@ if (math_ceil($avp(1), $avp(result))) {
 ```
 
 
-#### `math_round(number, result_var[, decimals])`
+#### math_round(number, result_var[, decimals])
 
 
 The round function returns the nearest integer, and tie-breaking is done away
@@ -291,7 +291,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_round` usage**
+**Example: math_round usage**
 
 
 ```opensips
@@ -321,7 +321,7 @@ if (math_round($avp(1), $avp(result), 4)) {
 ```
 
 
-#### `math_round_sf(number, result_var, figures)`
+#### math_round_sf(number, result_var, figures)
 
 
 To give a simple explanation, rounding to N significant figures is done by 
@@ -355,7 +355,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_round_sf` usage**
+**Example: math_round_sf usage**
 
 
 ```opensips
@@ -376,7 +376,7 @@ if (math_round_sf($avp(1), $avp(result), 4)) {
 ```
 
 
-#### `math_compare(exp1, exp2, result_var)`
+#### math_compare(exp1, exp2, result_var)
 
 
 Compare exp1 with exp2 and returns the comparison result in the result_var.
@@ -397,7 +397,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `math_compare` usage**
+**Example: math_compare usage**
 
 
 ```

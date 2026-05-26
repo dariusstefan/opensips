@@ -43,13 +43,13 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `server_address`(str)
+#### server_address(str)
 
 
 The IP address of the server.
 
 
-**Example: Set `server_address` parameter**
+**Example: Set server_address parameter**
 
 
 ```opensips
@@ -59,14 +59,14 @@ modparam("pua_xmpp", "server_address", "sip:sa@opensips.org:5060")
 ```
 
 
-#### `presence_server` (str)
+#### presence_server (str)
 
 
 The the address of the presence server. If set, it will be
 		used as outbound proxy when sending PUBLISH requests.
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -83,7 +83,7 @@ modparam("pua_xmpp", "presence_server", "sip:pa@opensips.org:5075")
 Functions exported to be used in configuration file.
 
 
-#### `pua_xmpp_notify()`
+#### pua_xmpp_notify()
 
 
 Function that handles Notify messages addressed to a user from
@@ -95,7 +95,7 @@ Function that handles Notify messages addressed to a user from
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `Notify2Xmpp` usage**
+**Example: Notify2Xmpp usage**
 
 
 ```opensips
@@ -110,7 +110,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### `pua_xmpp_req_winfo(request_uri, expires)`
+#### pua_xmpp_req_winfo(request_uri, expires)
 
 
 Function called when a Subscribe addressed to a user from a
@@ -132,7 +132,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `xmpp_send_winfo` usage**
+**Example: xmpp_send_winfo usage**
 
 
 ```opensips

@@ -72,7 +72,7 @@ The following libraries or applications must be installed before running
 ### Exported Functions
 
 
-#### `sngtc_offer()`
+#### sngtc_offer()
 
 
 The function strips off the SDP offer from a SIP INVITE, thus
@@ -88,7 +88,7 @@ The function strips off the SDP offer from a SIP INVITE, thus
 The function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `sngtc_offer` usage**
+**Example: sngtc_offer usage**
 
 
 ```opensips
@@ -102,8 +102,8 @@ The function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 ```
 
 
-#### `sngtc_callee_answer([listen_if_A], [listen_if_B])
-		`
+#### sngtc_callee_answer([listen_if_A], [listen_if_B])
+		
 
 
 Handles the SDP offer from 200 OK responses, intersects both offers with
@@ -139,7 +139,7 @@ The following **error codes** may be returned:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `sngtc_callee_answer` usage**
+**Example: sngtc_callee_answer usage**
 
 
 ```
@@ -152,7 +152,7 @@ onreply_route[1] {
 ```
 
 
-#### `sngtc_caller_answer()`
+#### sngtc_caller_answer()
 
 
 Attaches an SDP body to the caller's ACK request, so that it matches
@@ -168,7 +168,7 @@ The following **error codes** may be returned:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `sngtc_caller_answer` usage**
+**Example: sngtc_caller_answer usage**
 
 
 ```opensips

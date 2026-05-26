@@ -48,7 +48,7 @@ The module depends on the following modules (in the other words the
 ### Exported Parameters
 
 
-#### `initial` (integer)
+#### initial (integer)
 
 
 The initial value of global flags bitmap.
@@ -57,7 +57,7 @@ The initial value of global flags bitmap.
 Default value is "0".
 
 
-**Example: `initial` parameter usage**
+**Example: initial parameter usage**
 
 
 ```opensips
@@ -69,7 +69,7 @@ modparam("gflags", "initial", 15)
 ### Exported Functions
 
 
-#### `set_gflag(flag)`
+#### set_gflag(flag)
 
 
 Set the bit at the position "flag" in global flags.
@@ -81,7 +81,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: `set_gflag()` usage**
+**Example: set_gflag() usage**
 
 
 ```
@@ -91,7 +91,7 @@ set_gflag(4);
 ```
 
 
-#### `reset_gflag(flag)`
+#### reset_gflag(flag)
 
 
 Reset the bit at the position "flag" in global flags.
@@ -103,7 +103,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: `reset_gflag()` usage**
+**Example: reset_gflag() usage**
 
 
 ```
@@ -113,7 +113,7 @@ reset_gflag(4);
 ```
 
 
-#### `is_gflag(flag)`
+#### is_gflag(flag)
 
 
 Check if bit at the position "flag" in global flags is
@@ -126,7 +126,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: `is_gflag()` usage**
+**Example: is_gflag() usage**
 
 
 ```
@@ -151,7 +151,7 @@ Functions that check or change some flags accepts one parameter
 			script.
 
 
-#### `set_gflag`
+#### set_gflag
 
 
 Set the value of some flags (specified by bitmask) to 1.
@@ -161,7 +161,7 @@ The parameter value must be a bitmask in decimal or hexa format.
 			The bitmaks has a 32 bit size.
 
 
-**Example: `set_gflag` usage**
+**Example: set_gflag usage**
 
 
 ```
@@ -172,7 +172,7 @@ $ opensips-cli -x mi set_gflag 0x3
 ```
 
 
-#### `reset_gflag`
+#### reset_gflag
 
 
 Reset the value of some flags to 0.
@@ -182,7 +182,7 @@ The parameter value must be a bitmask in decimal or hexa format.
 			The bitmaks has a 32 bit size.
 
 
-**Example: `reset_gflag` usage**
+**Example: reset_gflag usage**
 
 
 ```
@@ -193,7 +193,7 @@ $ opensips-cli -x mi reset_gflag 0x3
 ```
 
 
-#### `is_gflag`
+#### is_gflag
 
 
 Returns true if the all the flags from the bitmask are set.
@@ -207,7 +207,7 @@ The function returns TRUE if all the flags from the set are set
 			and FALSE if at least one is not set.
 
 
-**Example: `is_gflag` usage**
+**Example: is_gflag usage**
 
 
 ```
@@ -230,14 +230,14 @@ TRUE
 ```
 
 
-#### `get_gflags`
+#### get_gflags
 
 
 Return the bitmap with all flags. The function gets no 
 			parameters and returns the bitmap in hexa and decimal format.
 
 
-**Example: `get_gflags` usage**
+**Example: get_gflags usage**
 
 
 ```

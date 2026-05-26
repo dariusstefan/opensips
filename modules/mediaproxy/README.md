@@ -105,7 +105,7 @@ The following libraries or applications must be installed before
 ### Exported parameters
 
 
-#### `disable` (int)
+#### disable (int)
 
 
 Boolean flag that specifies if mediaproxy should be disabled. This
@@ -118,7 +118,7 @@ Boolean flag that specifies if mediaproxy should be disabled. This
 *Default value is "0".*
 
 
-**Example: Setting the `disable` parameter**
+**Example: Setting the disable parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("mediaproxy", "disable", 1)
 ```
 
 
-#### `mediaproxy_socket` (string)
+#### mediaproxy_socket (string)
 
 
 It is the path to the filesystem socket where the mediaproxy dispatcher
@@ -140,7 +140,7 @@ It is the path to the filesystem socket where the mediaproxy dispatcher
             "/run/mediaproxy/dispatcher.sock".*
 
 
-**Example: Setting the `mediaproxy_socket` parameter**
+**Example: Setting the mediaproxy_socket parameter**
 
 
 ```opensips
@@ -151,7 +151,7 @@ modparam("mediaproxy", "mediaproxy_socket", "/run/mediaproxy/dispatcher.sock")
 ```
 
 
-#### `mediaproxy_timeout` (int)
+#### mediaproxy_timeout (int)
 
 
 How much time (in milliseconds) to wait for an answer from the
@@ -161,7 +161,7 @@ How much time (in milliseconds) to wait for an answer from the
 *Default value is "500".*
 
 
-**Example: Setting the `mediaproxy_timeout` parameter**
+**Example: Setting the mediaproxy_timeout parameter**
 
 
 ```opensips
@@ -172,7 +172,7 @@ modparam("mediaproxy", "mediaproxy_timeout", 500)
 ```
 
 
-#### `signaling_ip_avp` (string)
+#### signaling_ip_avp (string)
 
 
 Specification of the AVP which holds the IP address from where
@@ -193,7 +193,7 @@ Specification of the AVP which holds the IP address from where
 *Default value is "$avp(signaling_ip)".*
 
 
-**Example: Setting the `signaling_ip_avp` parameter**
+**Example: Setting the signaling_ip_avp parameter**
 
 
 ```opensips
@@ -204,7 +204,7 @@ modparam("mediaproxy", "signaling_ip_avp", "$avp(nat_ip)")
 ```
 
 
-#### `media_relay_avp` (string)
+#### media_relay_avp (string)
 
 
 Specification of the AVP which holds an optional application
@@ -218,7 +218,7 @@ Specification of the AVP which holds an optional application
 *Default value is "$avp(media_relay)".*
 
 
-**Example: Setting the `media_relay_avp` parameter**
+**Example: Setting the media_relay_avp parameter**
 
 
 ```opensips
@@ -229,7 +229,7 @@ modparam("mediaproxy", "media_relay_avp", "$avp(media_relay)")
 ```
 
 
-#### `ice_candidate` (string)
+#### ice_candidate (string)
 
 
 Indicates the type of ICE candidate that will be added to the SDP. 
@@ -242,7 +242,7 @@ Indicates the type of ICE candidate that will be added to the SDP.
 *Default value is "none".*
 
 
-**Example: Setting the `ice_candidate` parameter**
+**Example: Setting the ice_candidate parameter**
 
 
 ```opensips
@@ -253,7 +253,7 @@ modparam("mediaproxy", "ice_candidate", "low-priority")
 ```
 
 
-#### `ice_candidate_avp` (string)
+#### ice_candidate_avp (string)
 
 
 Specification of the AVP which holds the ICE candidate that will be 
@@ -269,7 +269,7 @@ Specification of the AVP which holds the ICE candidate that will be
 *Default value is "$avp(ice_candidate)".*
 
 
-**Example: Setting the `ice_candidate_avp` parameter**
+**Example: Setting the ice_candidate_avp parameter**
 
 
 ```opensips
@@ -283,7 +283,7 @@ modparam("mediaproxy", "ice_candidate_avp", "$avp(ice_candidate)")
 ### Exported Functions
 
 
-#### `engage_media_proxy()`
+#### engage_media_proxy()
 
 
 Trigger the use of MediaProxy for all the dialog requests and
@@ -316,7 +316,7 @@ This function is an advanced mechanism to use a media relay
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Using the `engage_media_proxy` function**
+**Example: Using the engage_media_proxy function**
 
 
 ```opensips
@@ -331,7 +331,7 @@ if (is_method("INVITE") && !has_totag()) {
 ```
 
 
-#### `use_media_proxy()`
+#### use_media_proxy()
 
 
 Will make a call to the dispatcher and replace the IPs and ports
@@ -357,7 +357,7 @@ This function has the following return codes:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: Using the `use_media_proxy` function**
+**Example: Using the use_media_proxy function**
 
 
 ```opensips
@@ -372,7 +372,7 @@ if (is_method("INVITE")) {
 ```
 
 
-#### `end_media_session()`
+#### end_media_session()
 
 
 Will call on the dispatcher to inform the media relay to end the
@@ -388,7 +388,7 @@ This function should NOT be mixed with engage_media_proxy().
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: Using the `end_media_session` function**
+**Example: Using the end_media_session function**
 
 
 ```opensips

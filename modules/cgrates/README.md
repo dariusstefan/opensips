@@ -195,7 +195,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `cgrates_engine` (string)
+#### cgrates_engine (string)
 
 
 This parameter is used to specify a CGRateS engine connection.
@@ -210,7 +210,7 @@ This parameter can have multiple values, for each server
 *Default value is "None".*
 
 
-**Example: Set `cgrates_engine` parameter**
+**Example: Set cgrates_engine parameter**
 
 
 ```opensips
@@ -221,7 +221,7 @@ modparam("cgrates", "cgrates_engine", "127.0.0.1:2013")
 ```
 
 
-#### `bind_ip` (string)
+#### bind_ip (string)
 
 
 IP used to bind the socket that communicates with the
@@ -234,7 +234,7 @@ IP used to bind the socket that communicates with the
 *Default value is "not set - any IP is used".*
 
 
-**Example: Set `bind_ip` parameter**
+**Example: Set bind_ip parameter**
 
 
 ```opensips
@@ -244,7 +244,7 @@ modparam("cgrates", "bind_ip", "10.0.0.100")
 ```
 
 
-#### `max_async_connections` (integer)
+#### max_async_connections (integer)
 
 
 The maximum number of simultaneous asynchronous connections
@@ -254,7 +254,7 @@ The maximum number of simultaneous asynchronous connections
 *Default value is "10".*
 
 
-**Example: Set `max_async_connections` parameter**
+**Example: Set max_async_connections parameter**
 
 
 ```opensips
@@ -264,7 +264,7 @@ modparam("cgrates", "max_async_connections", 20)
 ```
 
 
-#### `retry_timeout` (integer)
+#### retry_timeout (integer)
 
 
 The number of seconds after which a disabled connection/engine
@@ -274,7 +274,7 @@ The number of seconds after which a disabled connection/engine
 *Default value is "60".*
 
 
-**Example: Set `retry_timeout` parameter**
+**Example: Set retry_timeout parameter**
 
 
 ```opensips
@@ -284,7 +284,7 @@ modparam("cgrates", "retry_timeout", 120)
 ```
 
 
-#### `compat_mode` (integer)
+#### compat_mode (integer)
 
 
 Indicates whether OpenSIPS should use the old (compat_mode)
@@ -294,7 +294,7 @@ Indicates whether OpenSIPS should use the old (compat_mode)
 *Default value is "false (0)".*
 
 
-**Example: Set `compat_mode` parameter**
+**Example: Set compat_mode parameter**
 
 
 ```opensips
@@ -307,7 +307,7 @@ modparam("cgrates", "compat_mode", 1)
 ### Exported Functions
 
 
-#### `cgrates_acc([flags[, account[, destination[, session]]]])`
+#### cgrates_acc([flags[, account[, destination[, session]]]])
 
 
 `cgrates_acc()` starts an accounting
@@ -388,7 +388,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### `cgrates_auth([account[, destination[, session]]])`
+#### cgrates_auth([account[, destination[, session]]])
 
 
 `cgrates_auth()` does call authorization
@@ -471,7 +471,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### `cgrates_cmd(command[, session])`
+#### cgrates_cmd(command[, session])
 
 
 `cgrates_cmd()` can send
@@ -526,7 +526,7 @@ This function can be used from any route.
 ### Exported Pseudo-Variables
 
 
-#### `$cgr(name) / $(cgr(name)[session])`
+#### $cgr(name) / $(cgr(name)[session])
 
 
 Pseudo-variable used to set different parameters for the
@@ -613,7 +613,7 @@ When assigned with the *:=* operator,
 ```
 
 
-#### `$cgr_opt(name) / $(cgr_opt(name)[session])`
+#### $cgr_opt(name) / $(cgr_opt(name)[session])
 
 
 Used to tune the request parameter of a CGRateS request when used in
@@ -653,7 +653,7 @@ Possible values at the time the documentation was written:
 ```
 
 
-#### `$cgr_ret(name)`
+#### $cgr_ret(name)
 
 
 Returns the reply message of a CGRateS command in script,
@@ -681,7 +681,7 @@ Returns the reply message of a CGRateS command in script,
 ### Exported Asynchronous Functions
 
 
-#### `cgrates_auth([account[, destination[, session]]])`
+#### cgrates_auth([account[, destination[, session]]])
 
 
 Does the CGRateS authorization call in an asynchronous way. Script
@@ -717,7 +717,7 @@ The function can return the following values:
 - *-5* - CGRateS returned an invalid message.
 
 
-**Example: `async cgrates_auth` usage**
+**Example: async cgrates_auth usage**
 
 
 ```opensips
@@ -738,7 +738,7 @@ route [auth_reply]
 ```
 
 
-#### `cgrates_cmd(command[, session])`
+#### cgrates_cmd(command[, session])
 
 
 Can run an arbitrary CGRateS command in an asynchronous way. The
@@ -768,7 +768,7 @@ The function can return the following values:
 				message type (not an initial INVITE).
 
 
-**Example: `async cgrates_cmd compat_mode` usage**
+**Example: async cgrates_cmd compat_mode usage**
 
 
 ```opensips
@@ -795,7 +795,7 @@ route [auth_reply]
 ```
 
 
-**Example: `async cgrates_cmd new` usage**
+**Example: async cgrates_cmd new usage**
 
 
 ```opensips

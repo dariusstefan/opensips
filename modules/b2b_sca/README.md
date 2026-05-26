@@ -96,7 +96,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `hash_size`(integer)
+#### hash_size(integer)
 
 
 The size of the hash table internally used to keep the shared calls.
@@ -107,7 +107,7 @@ The size of the hash table internally used to keep the shared calls.
 *The default value is "10".*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("b2b_sca", "hash_size", "5")
 ```
 
 
-#### `presence_server`(string)
+#### presence_server(string)
 
 
 The address of the presence server, where the PUBLISH
@@ -129,7 +129,7 @@ The address of the presence server, where the PUBLISH
 *The default value is "NULL".*
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -139,7 +139,7 @@ modparam("b2b_sca", "presence_server", "sip:opensips.org")
 ```
 
 
-#### `watchers_avp_spec`(string)
+#### watchers_avp_spec(string)
 
 
 AVP that will hold one or more watcher URI(s).
@@ -150,7 +150,7 @@ AVP that will hold one or more watcher URI(s).
 *The default value is "NULL".*
 
 
-**Example: Set `watchers_avp_spec` parameter**
+**Example: Set watchers_avp_spec parameter**
 
 
 ```opensips
@@ -166,7 +166,7 @@ route {
 ```
 
 
-#### `shared_line_spec_param`(string)
+#### shared_line_spec_param(string)
 
 
 Mandatory parameter.
@@ -177,7 +177,7 @@ Mandatory parameter.
 *The default value is "NULL".*
 
 
-**Example: Set `shared_line_spec_param` parameter**
+**Example: Set shared_line_spec_param parameter**
 
 
 ```opensips
@@ -187,7 +187,7 @@ modparam("b2b_sca", "shared_line_spec_param", "$var(shared_line)")
 ```
 
 
-#### `appearance_name_addr_spec_param`(string)
+#### appearance_name_addr_spec_param(string)
 
 
 Mandatory parameter.
@@ -200,7 +200,7 @@ Mandatory parameter.
 *The default value is "NULL".*
 
 
-**Example: Set `appearance_name_addr_spec_param` parameter**
+**Example: Set appearance_name_addr_spec_param parameter**
 
 
 ```opensips
@@ -210,7 +210,7 @@ modparam("b2b_sca", "appearance_name_addr_spec_param", "")
 ```
 
 
-#### `db_url`(string)
+#### db_url(string)
 
 
 This is URL of the database to be used.
@@ -219,7 +219,7 @@ This is URL of the database to be used.
 *The default value is "NULL".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -229,7 +229,7 @@ modparam("b2b_sca", "db_url", "[dbdriver]://[[username]:[password]]@[dbhost]/[db
 ```
 
 
-#### `db_mode`(integer)
+#### db_mode(integer)
 
 
 The b2b_sca module can utilize database for persistent call appearance storage.
@@ -245,7 +245,7 @@ The b2b_sca module can utilize database for persistent call appearance storage.
 *The default value is 0 (NO DB STORAGE).*
 
 
-**Example: Set `db_mode` parameter**
+**Example: Set db_mode parameter**
 
 
 ```opensips
@@ -255,7 +255,7 @@ modparam("b2b_sca", "db_mode", 1)
 ```
 
 
-#### `table_name`(string)
+#### table_name(string)
 
 
 Identifies the table name from the defined database.
@@ -264,7 +264,7 @@ Identifies the table name from the defined database.
 *The default value is "b2b_sca".*
 
 
-**Example: Set `table_name` parameter**
+**Example: Set table_name parameter**
 
 
 ```opensips
@@ -274,7 +274,7 @@ modparam("b2b_sca", "table_name", "sla")
 ```
 
 
-#### `shared_line_column`(string)
+#### shared_line_column(string)
 
 
 The column's name in the database storing the shared call/line id.
@@ -284,7 +284,7 @@ The column's name in the database storing the shared call/line id.
 *The default value is "shared_line".*
 
 
-**Example: Set `shared_line_column` parameter**
+**Example: Set shared_line_column parameter**
 
 
 ```opensips
@@ -294,7 +294,7 @@ modparam("b2b_sca", "shared_line_column", "")
 ```
 
 
-#### `watchers_column`(string)
+#### watchers_column(string)
 
 
 The column's name in the database storing the list of watchers.
@@ -304,7 +304,7 @@ The column's name in the database storing the list of watchers.
 *The default value is "watchers".*
 
 
-**Example: Set `watchers_column` parameter**
+**Example: Set watchers_column parameter**
 
 
 ```opensips
@@ -314,7 +314,7 @@ modparam("b2b_sca", "watchers_column", "")
 ```
 
 
-#### `app[index]_shared_entity_column`(string)
+#### app[index]_shared_entity_column(string)
 
 
 The column's name in the database storing the shared entity of a
@@ -326,7 +326,7 @@ The column's name in the database storing the shared entity of a
 		Index is an integer between 1 and 10.
 
 
-**Example: Set `app[index]_shared_entity_column` parameter**
+**Example: Set app[index]_shared_entity_column parameter**
 
 
 ```opensips
@@ -337,7 +337,7 @@ modparam("b2b_sca", "app2_shared_entity_column", "second_shared_entity")
 ```
 
 
-#### `app[index]_call_state_column`(string)
+#### app[index]_call_state_column(string)
 
 
 The column's name in the database storing the call state of a
@@ -354,7 +354,7 @@ The column's name in the database storing the call state of a
 		Index is an integer between 1 and 10.
 
 
-**Example: Set `app[index]_call_state_column` parameter**
+**Example: Set app[index]_call_state_column parameter**
 
 
 ```opensips
@@ -365,7 +365,7 @@ modparam("b2b_sca", "app2_call_state_column", "second_call_state")
 ```
 
 
-#### `app[index]_call_info_uri_column`(string)
+#### app[index]_call_info_uri_column(string)
 
 
 The column's name in the database storing the call info URI of a
@@ -376,7 +376,7 @@ The column's name in the database storing the call info URI of a
 		Index is an integer between 1 and 10.
 
 
-**Example: Set `app[index]_call_info_uri_column` parameter**
+**Example: Set app[index]_call_info_uri_column parameter**
 
 
 ```opensips
@@ -387,7 +387,7 @@ modparam("b2b_sca", "app2_call_info_uri_column", "second_call_info_uri")
 ```
 
 
-#### `app[index]_call_info_appearance_uri_column`(string)
+#### app[index]_call_info_appearance_uri_column(string)
 
 
 The column's name in the database storing the call info appearance URI
@@ -400,7 +400,7 @@ The column's name in the database storing the call info appearance URI
 		Index is an integer between 1 and 10.
 
 
-**Example: Set `app[index]_call_info_appearance_uri_column` parameter**
+**Example: Set app[index]_call_info_appearance_uri_column parameter**
 
 
 ```opensips
@@ -411,7 +411,7 @@ modparam("b2b_sca", "app2_call_info_appearance_uri_column", "second_call_info_ap
 ```
 
 
-#### `appindex_b2bl_key_column`(string)
+#### appindex_b2bl_key_column(string)
 
 
 The column's name in the database storing the b2b_logic key of a
@@ -422,7 +422,7 @@ The column's name in the database storing the b2b_logic key of a
 		Index is an integer between 1 and 10.
 
 
-**Example: Set `app[index]_b2bl_key_column` parameter**
+**Example: Set app[index]_b2bl_key_column parameter**
 
 
 ```opensips
@@ -436,7 +436,7 @@ modparam("b2b_sca", "app2_b2bl_key_column", "second_b2bl_key")
 ### Exported Functions
 
 
-#### `sca_init_request(shared_line)`
+#### sca_init_request(shared_line)
 
 
 This is the function that must be called by the script writer
@@ -454,7 +454,7 @@ Meaning of the parameters:
 			1: "appearance" call
 
 
-**Example: `sca_init_request()` usage**
+**Example: sca_init_request() usage**
 
 
 ```opensips
@@ -498,7 +498,7 @@ modparam("b2b_sca",
 ```
 
 
-#### `sca_bridge_request(shared_line_to bridge)`
+#### sca_bridge_request(shared_line_to bridge)
 
 
 This is the function that must be called by the script writer on an initial
@@ -533,7 +533,7 @@ Meaning of the parameters:
 ### Exported MI Functions
 
 
-#### `b2b_sca:list`
+#### b2b_sca:list
 
 
 Replaces obsolete MI command: *sca_list*.

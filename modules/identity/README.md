@@ -37,13 +37,13 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `privKey` (string)
+#### privKey (string)
 
 
 Filename of private RSA-key of authentication service. This file must be in PEM format.
 
 
-**Example: Set `privKey` parameter**
+**Example: Set privKey parameter**
 
 
 ```opensips
@@ -53,13 +53,13 @@ modparam("identity", "privKey", "/etc/openser/privkey.pem")
 ```
 
 
-#### `authCert` (string)
+#### authCert (string)
 
 
 Filename of certificate which belongs to `privKey`. This file must be in PEM format.
 
 
-**Example: Set `authCert` parameter**
+**Example: Set authCert parameter**
 
 
 ```opensips
@@ -69,13 +69,13 @@ modparam("identity", "authCert", "/etc/openser/cert.pem")
 ```
 
 
-#### `certUri` (string)
+#### certUri (string)
 
 
 URI from which the certificate of the authentication service can be acquired. This string will be placed in the Identity-Info header.
 
 
-**Example: Set `certUri` parameter**
+**Example: Set certUri parameter**
 
 
 ```opensips
@@ -85,14 +85,14 @@ modparam("identity", "certUri", "http://www.myserver.com/cert.pem")
 ```
 
 
-#### `verCert` (string)
+#### verCert (string)
 
 
 Path containing certificates for the verifier. Certificates must be in PEM format. The URI in the Identity-Info header field is used to find the corresponding certificate for the request. For this purpose the verifier replaces every character which is not alphanumeric, no "_" and no "." with a "-". A "." at the beginning of the URI is forbidden. If the URI is "http://www.test.com/cert.pem" the verifier will look for the file "http---www.test.com-cert.pem", for example.
 		It is also possible to store a whole certificate chain in a file. In this case certificates must be in right order, end certificate first.
 
 
-**Example: Set `verCert` parameter**
+**Example: Set verCert parameter**
 
 
 ```opensips
@@ -102,13 +102,13 @@ modparam("identity", "verCert", "/etc/openser/verCert/")
 ```
 
 
-#### `caList` (string)
+#### caList (string)
 
 
 File containing all trusted (root) certificates for the verifier. Certificates must be in PEM format.
 
 
-**Example: Set `caList` parameter**
+**Example: Set caList parameter**
 
 
 ```opensips
@@ -118,13 +118,13 @@ modparam("identity", "caList", "/etc/openser/caList.pem")
 ```
 
 
-#### `crlList` (string)
+#### crlList (string)
 
 
 File containing certificate revocation lists (crls) for the verifier. Setting this parameter is only necessary if `useCrls` is set to "1".
 
 
-**Example: Set `crlList` parameter**
+**Example: Set crlList parameter**
 
 
 ```opensips
@@ -134,7 +134,7 @@ modparam("identity", "crlList", "/etc/openser/crls.pem")
 ```
 
 
-#### `useCrls` (integer)
+#### useCrls (integer)
 
 
 Switch to decide whether to use revocation lists ("1") or not ("0").
@@ -143,7 +143,7 @@ Switch to decide whether to use revocation lists ("1") or not ("0").
 *Default value is "0".*
 
 
-**Example: Set `privKey` parameter**
+**Example: Set privKey parameter**
 
 
 ```opensips
@@ -156,7 +156,7 @@ modparam("identity", "useCrls", 1)
 ### Exported Functions
 
 
-#### `authservice()`
+#### authservice()
 
 
 This function performs the steps of an authentication service. Before you call this function, you have to ensure
@@ -173,7 +173,7 @@ This function performs the steps of an authentication service. Before you call t
 - 1: everything OK, Identity header has been added.
 
 
-**Example: `authservice()` usage**
+**Example: authservice() usage**
 
 
 ```opensips
@@ -239,7 +239,7 @@ route(1); #forward with ($retcode=1) or without ($retcode!=1) Identity header
 ```
 
 
-#### `verifier()`
+#### verifier()
 
 
 This function performs the steps of an verifier. The returned code tells you the result of the verification:
@@ -255,7 +255,7 @@ This function performs the steps of an verifier. The returned code tells you the
 - 1: verification OK
 
 
-**Example: `verifier()` usage**
+**Example: verifier() usage**
 
 
 ```opensips

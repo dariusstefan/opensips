@@ -39,7 +39,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `vendors_db_url` (str)
+#### vendors_db_url (str)
 
 
 The DB URL for querying the Vendors used by the module
@@ -48,7 +48,7 @@ The DB URL for querying the Vendors used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the `vendors_db_url` parameter**
+**Example: Setting the vendors_db_url parameter**
 
 
 ```opensips
@@ -58,7 +58,7 @@ modparam("rate_cacher", "vendors_db_url", "mysql://opensips:opensipsrw@localhost
 ```
 
 
-#### `vendors_db_table` (str)
+#### vendors_db_table (str)
 
 
 The DB Table for querying the Vendors used by the module
@@ -67,7 +67,7 @@ The DB Table for querying the Vendors used by the module
 *Default value is "rc_vendors".*
 
 
-**Example: Setting the `vendors_db_table` parameter**
+**Example: Setting the vendors_db_table parameter**
 
 
 ```opensips
@@ -77,7 +77,7 @@ modparam("rate_cacher", "vendors_db_table", "my_vendors_view")
 ```
 
 
-#### `vendors_hash_size` (int)
+#### vendors_hash_size (int)
 
 
 The size of the hash table internally used to keep the vendors. A
@@ -88,7 +88,7 @@ The size of the hash table internally used to keep the vendors. A
 *Default value is "256".*
 
 
-**Example: Setting the `vendors_hash_size` parameter**
+**Example: Setting the vendors_hash_size parameter**
 
 
 ```opensips
@@ -98,7 +98,7 @@ modparam("rate_cacher", "vendors_hash_size", 1024)
 ```
 
 
-#### `clients_db_url` (str)
+#### clients_db_url (str)
 
 
 The DB URL for querying the Clients used by the module
@@ -107,7 +107,7 @@ The DB URL for querying the Clients used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the `clients_db_url` parameter**
+**Example: Setting the clients_db_url parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("rate_cacher", "clients_db_url", "mysql://opensips:opensipsrw@localhost
 ```
 
 
-#### `clients_db_table` (str)
+#### clients_db_table (str)
 
 
 The DB Table for querying the Clients used by the module
@@ -126,7 +126,7 @@ The DB Table for querying the Clients used by the module
 *Default value is "rc_clients".*
 
 
-**Example: Setting the `clients_db_table` parameter**
+**Example: Setting the clients_db_table parameter**
 
 
 ```opensips
@@ -136,7 +136,7 @@ modparam("rate_cacher", "clients_db_table", "my_clients_view")
 ```
 
 
-#### `clients_hash_size` (int)
+#### clients_hash_size (int)
 
 
 The size of the hash table internally used to keep the clients. A
@@ -147,7 +147,7 @@ The size of the hash table internally used to keep the clients. A
 *Default value is "256".*
 
 
-**Example: Setting the `vendors_hash_size` parameter**
+**Example: Setting the vendors_hash_size parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("rate_cacher", "clients_hash_size", 1024)
 ```
 
 
-#### `rates_db_url` (str)
+#### rates_db_url (str)
 
 
 The DB URL for querying the Ratesheets used by the module
@@ -166,7 +166,7 @@ The DB URL for querying the Ratesheets used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the `rates_db_url` parameter**
+**Example: Setting the rates_db_url parameter**
 
 
 ```opensips
@@ -176,7 +176,7 @@ modparam("rate_cacher", "rates_db_url", "mysql://opensips:opensipsrw@localhost/o
 ```
 
 
-#### `rates_db_table` (str)
+#### rates_db_table (str)
 
 
 The DB Table for querying the Ratesheets used by the module
@@ -185,7 +185,7 @@ The DB Table for querying the Ratesheets used by the module
 *Default value is "rc_ratesheets".*
 
 
-**Example: Setting the `rates_db_table` parameter**
+**Example: Setting the rates_db_table parameter**
 
 
 ```opensips
@@ -198,7 +198,7 @@ modparam("rate_cacher", "rates_db_table", "my_clients_view")
 ### Exported Functions
 
 
-#### `get_client_price(client_id,is_wholesale,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)`
+#### get_client_price(client_id,is_wholesale,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function will matched the dialled number against the client's ratesheet and return the matched prefix, destination, price, minimum and increment.
@@ -237,7 +237,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: `get_client_price` usage**
+**Example: get_client_price usage**
 
 
 ```opensips
@@ -250,7 +250,7 @@ if (get_client_price("my_client",1,"4072794242",$var(prefix),$var(dest),$var(pri
 ```
 
 
-#### `get_vendor_price(vendor_id,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)`
+#### get_vendor_price(vendor_id,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)
 
 
 For a call originating going to the provided vendor ID, going to dialled_no, the function will matched the dialled number against the vendor's ratesheet and return the matched prefix, destination, price, minimum and increment.
@@ -286,7 +286,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: `get_vendor_price` usage**
+**Example: get_vendor_price usage**
 
 
 ```opensips
@@ -299,7 +299,7 @@ if (get_vendor_price("my_vendor","4072794242",$var(prefix),$var(dest),$var(price
 ```
 
 
-#### `cost_based_filtering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)`
+#### cost_based_filtering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function removes the Vendors ( from the vendor_csv list ) which do not pass the desired_margin condition, and sets the out_vendor_csv variable to the list of Vendor that meet the margin condition, while maintaining the initial order provided in the vendor_csv variable.
@@ -332,7 +332,7 @@ Possible parameter types
 This function can be used from a REQUEST or FAILURE route.
 
 
-**Example: `cost_based_filtering` usage**
+**Example: cost_based_filtering usage**
 
 
 ```opensips
@@ -358,7 +358,7 @@ if (cost_based_filtering("$avp(client_id)","$avp(is_ws)","$avp(carrierlist)","$a
 ```
 
 
-#### `cost_based_ordering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)`
+#### cost_based_ordering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function removes the Vendors ( from the vendor_csv list ) which do not pass the desired_margin condition, and sets th out_vendor_csv variable to the list of Vendor that meet the margin condition, in descending order of their margin ( from most profitable Vendor to least profitable Vendor that still meets the margin condition )
@@ -391,7 +391,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: `cost_based_ordering` usage**
+**Example: cost_based_ordering usage**
 
 
 ```opensips
@@ -420,7 +420,7 @@ if (cost_based_ordering("$avp(client_id)","$avp(is_ws)","$avp(carrierlist)","$av
 ### Exported MI Functions
 
 
-#### `rate_cacher:addVendor`
+#### rate_cacher:addVendor
 
 
 Replaces obsolete MI command: *rc_addVendor*.
@@ -448,7 +448,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:deleteVendor`
+#### rate_cacher:deleteVendor
 
 
 Replaces obsolete MI command: *rc_deleteVendor*.
@@ -476,7 +476,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:reloadVendorRate`
+#### rate_cacher:reloadVendorRate
 
 
 Replaces obsolete MI command: *rc_reloadVendorRate*.
@@ -505,7 +505,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:deleteVendorRate`
+#### rate_cacher:deleteVendorRate
 
 
 Replaces obsolete MI command: *rc_deleteVendorRate*.
@@ -533,7 +533,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:getVendorPrice`
+#### rate_cacher:getVendorPrice
 
 
 Replaces obsolete MI command: *rc_getVendorPrice*.
@@ -570,7 +570,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:addClient`
+#### rate_cacher:addClient
 
 
 Replaces obsolete MI command: *rc_addClient*.
@@ -598,7 +598,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:deleteClient`
+#### rate_cacher:deleteClient
 
 
 Replaces obsolete MI command: *rc_deleteClient*.
@@ -626,7 +626,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:reloadClientRate`
+#### rate_cacher:reloadClientRate
 
 
 Replaces obsolete MI command: *rc_reloadClientRate*.
@@ -656,7 +656,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:deleteClientRate`
+#### rate_cacher:deleteClientRate
 
 
 Replaces obsolete MI command: *rc_deleteClientRate*.
@@ -685,7 +685,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rate_cacher:getClientPrice`
+#### rate_cacher:getClientPrice
 
 
 Replaces obsolete MI command: *rc_getClientPrice*.

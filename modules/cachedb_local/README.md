@@ -80,7 +80,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 URLs of local cache groups to be used used for the script and MI cacheDB
@@ -99,7 +99,7 @@ One collection can belong to multiple URLs, but one URL can have only one collec
 					will be used.".*
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -124,7 +124,7 @@ cache_store("local:group2", ...)
 ```
 
 
-#### `cache_collections` (string)
+#### cache_collections (string)
 
 
 Using this parameter, collections(hash tables) and their sizes can be defined. Each
@@ -141,7 +141,7 @@ The *"default"* collection always gets created, even when
 				not included in this list of collections.
 
 
-**Example: Set `cache_collections` parameter**
+**Example: Set cache_collections parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("cachedb_local", "cache_collections", "collection1/r; collection2/r = 5
 ```
 
 
-#### `cache_clean_period` (int)
+#### cache_clean_period (int)
 
 
 The time interval in seconds at which to go through all the
@@ -167,7 +167,7 @@ The time interval in seconds at which to go through all the
 *Default value is "600 (10 minutes)".*
 
 
-**Example: Set `cache_clean_period` parameter**
+**Example: Set cache_clean_period parameter**
 
 
 ```opensips
@@ -178,7 +178,7 @@ modparam("cachedb_local", "cache_clean_period", 1200)
 ```
 
 
-#### `cluster_id` (int)
+#### cluster_id (int)
 
 
 Specifies the cluster ID which this instance will send to and receive
@@ -197,7 +197,7 @@ chapter for more details.
 Default value is 0 (replication disabled).
 
 
-**Example: Setting the `cluster_id` parameter**
+**Example: Setting the cluster_id parameter**
 
 
 ```opensips
@@ -208,7 +208,7 @@ modparam("cachedb_local", "cluster_id", 1)
 ```
 
 
-#### `cluster_persistency` (string)
+#### cluster_persistency (string)
 
 
 Controls the behavior of the OpenSIPS local cachedb clustering following a restart.
@@ -232,7 +232,7 @@ This parameter may take the following values:
 				*"sync-from-cluster"*.*
 
 
-**Example: Set `cluster_persistency` parameter**
+**Example: Set cluster_persistency parameter**
 
 
 ```opensips
@@ -243,7 +243,7 @@ modparam("cachedb_local", "cluster_persistency", "sync-from-cluster")
 ```
 
 
-#### `enable_restart_persistency` (int)
+#### enable_restart_persistency (int)
 
 
 Enable restart persistency using the persistent memory mechanism. Data is
@@ -261,7 +261,7 @@ If cluster persistency is enabled as well, keys loaded from the persistent
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `enable_restart_persistency` parameter**
+**Example: Set enable_restart_persistency parameter**
 
 
 ```opensips
@@ -274,7 +274,7 @@ modparam("cachedb_local", "enable_restart_persistency", yes)
 ### Exported Functions
 
 
-#### `cache_remove_chunk([collection,] glob)`
+#### cache_remove_chunk([collection,] glob)
 
 
 Remove all keys from local cache that match the *glob* pattern
@@ -293,7 +293,7 @@ Parameters:
 This function can be used from all routes
 
 
-**Example: `cache_remove_chunk` usage**
+**Example: cache_remove_chunk usage**
 
 
 ```
@@ -308,7 +308,7 @@ This function can be used from all routes
 ### Exported MI Functions
 
 
-#### `cachedb_local:remove_chunk`
+#### cachedb_local:remove_chunk
 
 
 Replaces obsolete MI command: *cache_remove_chunk*.
@@ -334,7 +334,7 @@ opensips-cli -x mi cachedb_local:remove_chunk "keyprefix*" collection
 ```
 
 
-#### `cachedb_local:fetch_chunk`
+#### cachedb_local:fetch_chunk
 
 
 Replaces obsolete MI command: *cache_fetch_chunk*.

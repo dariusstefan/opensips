@@ -54,7 +54,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `send_timeout` (integer)
+#### send_timeout (integer)
 
 
 Time in milliseconds after a MSRP connection will be closed if it is
@@ -65,7 +65,7 @@ Time in milliseconds after a MSRP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set `send_timeout` parameter**
+**Example: Set send_timeout parameter**
 
 
 ```opensips
@@ -75,7 +75,7 @@ modparam("proto_msrp", "send_timeout", 200)
 ```
 
 
-#### `max_msg_chunks` (integer)
+#### max_msg_chunks (integer)
 
 
 The maximum number of chunks that a SIP message is expected to
@@ -89,7 +89,7 @@ The maximum number of chunks that a SIP message is expected to
 *Default value is 4.*
 
 
-**Example: Set `max_msg_chunks` parameter**
+**Example: Set max_msg_chunks parameter**
 
 
 ```opensips
@@ -99,7 +99,7 @@ modparam("proto_msrp", "max_msg_chunks", 8)
 ```
 
 
-#### `tls_handshake_timeout` (integer)
+#### tls_handshake_timeout (integer)
 
 
 Sets the timeout (in milliseconds) for the SSL handshake sequence
@@ -117,7 +117,7 @@ The timeout is invoked during acceptance of a new connection
 *Default value is 100.*
 
 
-**Example: Set `tls_handshake_timeout` variable**
+**Example: Set tls_handshake_timeout variable**
 
 
 ```
@@ -127,7 +127,7 @@ param("proto_msrp", "tls_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### `cert_check_on_conn_reusage` (integer)
+#### cert_check_on_conn_reusage (integer)
 
 
 This parameter turns on or off the extra checking/matching of the
@@ -147,7 +147,7 @@ This checking is done only when comes to send SIP traffic via TLS and
 *Default value is 0 (disabled).*
 
 
-**Example: Set `cert_check_on_conn_reusage` parameter**
+**Example: Set cert_check_on_conn_reusage parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("proto_msrp", "cert_check_on_conn_reusage", 1)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -174,7 +174,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -186,7 +186,7 @@ modparam("proto_msrp", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_on` (int)
+#### trace_on (int)
 
 
 This controls whether tracing for MSRP is on or not. You still need
@@ -195,7 +195,7 @@ This controls whether tracing for MSRP is on or not. You still need
 		[msrp trace](#msrp-trace).
 
 
-**Example: Set `trace_on` parameter**
+**Example: Set trace_on parameter**
 
 
 ```opensips
@@ -205,7 +205,7 @@ modparam("proto_msrp", "trace_on", 1)
 ```
 
 
-#### `trace_filter_route` (string)
+#### trace_filter_route (string)
 
 
 Define the name of a route in which you can filter which connections will
@@ -233,7 +233,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-**Example: Set `trace_filter_route` parameter**
+**Example: Set trace_filter_route parameter**
 
 
 ```opensips
@@ -260,7 +260,7 @@ route[msrp_filter] {
 ### Exported MI Functions
 
 
-#### `msrp:trace`
+#### msrp:trace
 
 
 Replaces obsolete MI command: *msrp_trace*.

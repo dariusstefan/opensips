@@ -217,7 +217,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `pi_http_root`(string)
+#### pi_http_root(string)
 
 
 Specifies the root path for pi HTTP requests.
@@ -229,7 +229,7 @@ Specifies the root path for pi HTTP requests.
 *The default value is "pi".*
 
 
-**Example: Set `pi_http_root` parameter**
+**Example: Set pi_http_root parameter**
 
 
 ```opensips
@@ -239,7 +239,7 @@ modparam("pi_http", "pi_http_root", "opensips_pi")
 ```
 
 
-#### `framework`(string)
+#### framework(string)
 
 
 Specifies the full path for xml framework descriptor.
@@ -248,7 +248,7 @@ Specifies the full path for xml framework descriptor.
 *There's no default value. This parameter is mandatory.*
 
 
-**Example: Set `framework` parameter**
+**Example: Set framework parameter**
 
 
 ```opensips
@@ -258,7 +258,7 @@ modparam("pi_http", "framework", "/usr/local/etc/opensips/pi_framework.xml")
 ```
 
 
-#### `pi_http_method`(integrer)
+#### pi_http_method(integrer)
 
 
 Specifies the HTTP request method to be used:
@@ -271,7 +271,7 @@ Specifies the HTTP request method to be used:
 *The default value is 0.*
 
 
-**Example: Set `pi_http_method` parameter**
+**Example: Set pi_http_method parameter**
 
 
 ```opensips
@@ -284,7 +284,7 @@ modparam("pi_http", "pi_http_method", 1)
 ### Exported MI Functions
 
 
-#### `pi_http:reload_tbls_and_cmds`
+#### pi_http:reload_tbls_and_cmds
 
 
 Replaces obsolete MI command: *pi_reload_tbls_and_cmds*.

@@ -40,7 +40,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `default_domain`(str)
+#### default_domain(str)
 
 
 The default domain for the registered users to be used when
@@ -50,7 +50,7 @@ The default domain for the registered users to be used when
 *Default value is "NULL".*
 
 
-**Example: Set `default_domain` parameter**
+**Example: Set default_domain parameter**
 
 
 ```opensips
@@ -60,7 +60,7 @@ modparam("pua_bla", "default_domain", "opensips.org")
 ```
 
 
-#### `header_name`(str)
+#### header_name(str)
 
 
 The name of the header to be added to Publish requests.
@@ -72,7 +72,7 @@ The name of the header to be added to Publish requests.
 *Default value is "NULL".*
 
 
-**Example: Set `header_name` parameter**
+**Example: Set header_name parameter**
 
 
 ```opensips
@@ -82,7 +82,7 @@ modparam("pua_bla", "header_name", "Sender")
 ```
 
 
-#### `outbound_proxy`(str)
+#### outbound_proxy(str)
 
 
 The outbound_proxy uri to be used when sending Subscribe requests.
@@ -91,7 +91,7 @@ The outbound_proxy uri to be used when sending Subscribe requests.
 *Default value is "NULL".*
 
 
-**Example: Set `outbound_proxy` parameter**
+**Example: Set outbound_proxy parameter**
 
 
 ```opensips
@@ -101,13 +101,13 @@ modparam("pua_bla", "outbound_proxy", "sip:proxy@opensips.org")
 ```
 
 
-#### `server_address`(str)
+#### server_address(str)
 
 
 The IP address of the server.
 
 
-**Example: Set `server_address` parameter**
+**Example: Set server_address parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("pua_bla", "server_address", "sip:bla@160.34.23.12")
 ```
 
 
-#### `presence_server`(str)
+#### presence_server(str)
 
 
 The address of the presence server - will be used as
@@ -128,7 +128,7 @@ The address of the presence server - will be used as
 *Default value is "NULL".*
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -141,7 +141,7 @@ modparam("pua_bla", "presence_server", "sip:pa@opensips.org")
 ### Exported Functions
 
 
-#### `bla_set_flag()`
+#### bla_set_flag()
 
 
 The function is used to mark REGISTER requests made to a BLA AOR.
@@ -149,7 +149,7 @@ The function is used to mark REGISTER requests made to a BLA AOR.
 				event.
 
 
-**Example: `bla_set_flag` usage**
+**Example: bla_set_flag usage**
 
 
 ```opensips
@@ -160,7 +160,7 @@ if(is_method("REGISTER") && $tu=~"bla_aor@opensips.org")
 ```
 
 
-#### `bla_handle_notify()`
+#### bla_handle_notify()
 
 
 The function handles Notify requests sent from phones on the
@@ -169,7 +169,7 @@ The function handles Notify requests sent from phones on the
 				in case of a successful processing a 2xx reply should be sent.
 
 
-**Example: `bla_handle_notify` usage**
+**Example: bla_handle_notify usage**
 
 
 ```opensips

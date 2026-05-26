@@ -70,7 +70,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `use_struct_param` (integer)
+#### use_struct_param (integer)
 
 
 When raising an event, pack the name and value of the
@@ -83,7 +83,7 @@ When raising an event, pack the name and value of the
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `use_struct_param` parameter**
+**Example: Set use_struct_param parameter**
 
 
 ```opensips

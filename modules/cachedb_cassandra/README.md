@@ -66,7 +66,7 @@ The DataStax C/C++ driver for Cassandra and the libuv dependency
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The urls of the server groups that OpenSIPS will connect to in order
@@ -85,7 +85,7 @@ Cassandra does not support regular columns in a table that contains any
 The database part of the URL needs to be in the format *Keyspace.Table[.CountersTable]*.
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -114,7 +114,7 @@ cache_remove("cassandra:cluster1","key");
 ```
 
 
-#### `connect_timeout` (int)
+#### connect_timeout (int)
 
 
 The timeout in ms that will be triggered in case a connection attempt fails.
@@ -123,7 +123,7 @@ The timeout in ms that will be triggered in case a connection attempt fails.
 *Default value is "5000".*
 
 
-**Example: Set `connect_timeout` parameter**
+**Example: Set connect_timeout parameter**
 
 
 ```opensips
@@ -134,7 +134,7 @@ modparam("cachedb_cassandra", "connect_timeout",1000);
 ```
 
 
-#### `query_timeout` (int)
+#### query_timeout (int)
 
 
 The timeout in ms that will be triggered in case a Cassandra query takes too long.
@@ -143,7 +143,7 @@ The timeout in ms that will be triggered in case a Cassandra query takes too lon
 *Default value is "5000".*
 
 
-**Example: Set `query_timeout` parameter**
+**Example: Set query_timeout parameter**
 
 
 ```opensips
@@ -154,7 +154,7 @@ modparam("cachedb_cassandra", "query_timeout",1000);
 ```
 
 
-#### `wr_consistency_level` (int)
+#### wr_consistency_level (int)
 
 
 The consistency level desired for write operations.
@@ -175,7 +175,7 @@ The consistency level desired for write operations.
 Default value is *one*.
 
 
-**Example: Set `wr_consistency_level` parameter**
+**Example: Set wr_consistency_level parameter**
 
 
 ```opensips
@@ -186,7 +186,7 @@ modparam("cachedb_cassandra", "wr_consistency_level", "each_quorum");
 ```
 
 
-#### `rd_consistency_level` (int)
+#### rd_consistency_level (int)
 
 
 The consistency level desired for write operations.
@@ -207,7 +207,7 @@ The consistency level desired for write operations.
 Default value is *one*.
 
 
-**Example: Set `rd_consistency_level` parameter**
+**Example: Set rd_consistency_level parameter**
 
 
 ```opensips
@@ -218,7 +218,7 @@ modparam("cachedb_cassandra", "rd_consistency_level", "quorum");
 ```
 
 
-#### `exec_threshold` (int)
+#### exec_threshold (int)
 
 
 A cassandra cache query that lasts more than this threshold will
@@ -233,7 +233,7 @@ This value, if set, only makes sense to be lower than the
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set `exec_threshold` parameter**
+**Example: Set exec_threshold parameter**
 
 
 ```opensips

@@ -42,7 +42,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `sctp_port` (integer)
+#### sctp_port (integer)
 
 
 The default port to be used for all SCTP related operation. Be careful
@@ -58,7 +58,7 @@ If you want to change only the listening port for STP, use the port
 *Default value is 5060.*
 
 
-**Example: Set `sctp_port` parameter**
+**Example: Set sctp_port parameter**
 
 
 ```opensips

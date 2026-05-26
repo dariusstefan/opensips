@@ -79,7 +79,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `trace_on` (integer)
+#### trace_on (integer)
 
 
 Parameter to enable/disable trace (on(1)/off(0))
@@ -88,7 +88,7 @@ Parameter to enable/disable trace (on(1)/off(0))
 *Default value is "1"(enabled).*
 
 
-**Example: Set `trace_on` parameter**
+**Example: Set trace_on parameter**
 
 
 ```opensips
@@ -98,7 +98,7 @@ modparam("tracer", "trace_on", 1)
 ```
 
 
-#### `trace_local_ip` (str)
+#### trace_local_ip (str)
 
 
 The address to be used in the fields that specify the source address
@@ -111,7 +111,7 @@ The address to be used in the fields that specify the source address
 *Default value is "NULL".*
 
 
-**Example: Set `trace_local_ip` parameter**
+**Example: Set trace_local_ip parameter**
 
 
 ```opensips
@@ -137,7 +137,7 @@ modparam("tracer", "trace_local_ip", "10.1.1.1")
 ```
 
 
-#### `trace_id` (str)
+#### trace_id (str)
 
 
 Specify a destination for the trace. This can be a hep id defined
@@ -183,7 +183,7 @@ All the old parameter such as db_url, table and duplicate_uri
 *No default value. If not set the module will be useless.*
 
 
-**Example: Set `trace_id` parameter**
+**Example: Set trace_id parameter**
 
 
 ```opensips
@@ -213,7 +213,7 @@ modparam("tracer", "trace_id",
 ```
 
 
-#### `syslog_default_facility` (string)
+#### syslog_default_facility (string)
 
 
 When *syslog* tracing is used, this parameter specifies
@@ -223,7 +223,7 @@ When *syslog* tracing is used, this parameter specifies
 *Default value is the value of *syslog_facility*.*
 
 
-**Example: Set `syslog_default_facility` parameter**
+**Example: Set syslog_default_facility parameter**
 
 
 ```opensips
@@ -233,7 +233,7 @@ modparam("tracer", "syslog_default_facility", "LOG_DAEMON")
 ```
 
 
-#### `syslog_default_level` (integer)
+#### syslog_default_level (integer)
 
 
 When *syslog* tracing is used, this parameter specifies
@@ -243,7 +243,7 @@ When *syslog* tracing is used, this parameter specifies
 *Default value is the value of *log_level*.*
 
 
-**Example: Set `syslog_default_level` parameter**
+**Example: Set syslog_default_level parameter**
 
 
 ```opensips
@@ -253,7 +253,7 @@ modparam("tracer", "syslog_default_level", 2) # NOTICE
 ```
 
 
-#### `file_mode` (integer)
+#### file_mode (integer)
 
 
 When *file* tracing is used, this parameter
@@ -264,7 +264,7 @@ When *file* tracing is used, this parameter
 *Default value is *0600 (rw-------)*.*
 
 
-**Example: Set `file_mode` parameter**
+**Example: Set file_mode parameter**
 
 
 ```opensips
@@ -277,7 +277,7 @@ modparam("tracer", "file_mode", 0644)
 ### Exported Functions
 
 
-#### `trace(trace_id, [scope], [type], [trace_attrs], [flags], [correlation_id])`
+#### trace(trace_id, [scope], [type], [trace_attrs], [flags], [correlation_id])
 
 
 This function has replaced the *sip_trace()* in OpenSIPS 3.0.
@@ -344,7 +344,7 @@ NOTE these flags are supported only by transactional and dialog tracing
 			to correlate this traffic (transaction, dialog) with other traffic.
 
 
-**Example: `trace()` usage**
+**Example: trace() usage**
 
 
 ```opensips
@@ -397,7 +397,7 @@ NOTE these flags are supported only by transactional and dialog tracing
 ### Exported MI Functions
 
 
-#### `trace`
+#### trace
 
 
 Enable/disable tracing(globally or for a specific trace id) or dump
@@ -445,7 +445,7 @@ opensips-cli -x mi trace id=tid2 mode=on
 ```
 
 
-#### `tracer:start`
+#### tracer:start
 
 
 Replaces obsolete MI command: *trace_start*.
@@ -507,7 +507,7 @@ MI FIFO Command to start tracing calls from user Alice to user Bob:
 ```
 
 
-#### `tracer:stop`
+#### tracer:stop
 
 
 Replaces obsolete MI command: *trace_stop*.

@@ -51,7 +51,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `force_active` (int)
+#### force_active (int)
 
 
 This parameter is used for permissions when handling Subscribe messages.
@@ -71,7 +71,7 @@ Note: When switching from one value to another, the watchers table must
 *Default value is "0".*
 
 
-**Example: Set `force_active` parameter**
+**Example: Set force_active parameter**
 
 
 ```opensips
@@ -81,7 +81,7 @@ modparam("presence_xml", "force_active", 1)
 ```
 
 
-#### `pidf_manipulation` (int)
+#### pidf_manipulation (int)
 
 
 Setting this parameter to 1 enables the features described in RFC 4827.
@@ -96,7 +96,7 @@ Setting this parameter to 1 enables the features described in RFC 4827.
 *Default value is "0".*
 
 
-**Example: Set `pidf_manipulation` parameter**
+**Example: Set pidf_manipulation parameter**
 
 
 ```opensips
@@ -106,7 +106,7 @@ modparam("presence_xml", "pidf_manipulation", 1)
 ```
 
 
-#### `xcap_server` (str)
+#### xcap_server (str)
 
 
 The address of the xcap servers used for storage.
@@ -115,7 +115,7 @@ The address of the xcap servers used for storage.
 		list of trusted XCAP servers.
 
 
-**Example: Set `xcap_server` parameter**
+**Example: Set xcap_server parameter**
 
 
 ```opensips
@@ -126,14 +126,14 @@ modparam("presence_xml", "xcap_server", "xcap_server.ag.org")
 ```
 
 
-#### `pres_rules_auid` (str)
+#### pres_rules_auid (str)
 
 
 This parameter should be configured if you are using the non integrated xcap
 		mode and you need to use another pres-rules auid than the default 'pres-rules'.
 
 
-**Example: Set `pres_rules_auid` parameter**
+**Example: Set pres_rules_auid parameter**
 
 
 ```opensips
@@ -143,14 +143,14 @@ modparam("presence_xml", "pres_rules_auid", "org.openmobilealliance.pres-rules")
 ```
 
 
-#### `pres_rules_filename` (str)
+#### pres_rules_filename (str)
 
 
 This parameter should be configured if you are using the non integrated xcap
 		mode and you need to configure another filename than the default 'index'.
 
 
-**Example: Set `pres_rules_filename` parameter**
+**Example: Set pres_rules_filename parameter**
 
 
 ```opensips
@@ -160,7 +160,7 @@ modparam("presence_xml", "pres_rules_filename", "pres-rules")
 ```
 
 
-#### `generate_offline_body` (str)
+#### generate_offline_body (str)
 
 
 This parameter should be set to 0 if you want to prevent OpenSIPS from automatically
@@ -168,7 +168,7 @@ This parameter should be set to 0 if you want to prevent OpenSIPS from automatic
                 (a PUBLISH request is received with Expires: 0).
 
 
-**Example: Set `generate_offline_body` parameter**
+**Example: Set generate_offline_body parameter**
 
 
 ```opensips

@@ -49,7 +49,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `http_root`(string)
+#### http_root(string)
 
 
 Specifies the root path for xmlrpc requests:
@@ -59,7 +59,7 @@ Specifies the root path for xmlrpc requests:
 *The default value is "RPC2".*
 
 
-**Example: Set `http_root` parameter**
+**Example: Set http_root parameter**
 
 
 ```opensips
@@ -69,7 +69,7 @@ modparam("mi_xmlrpc", "http_root", "opensips_mi_xmlrpc")
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -85,7 +85,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("mi_xmlrpc", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_bwlist` (string)
+#### trace_bwlist (string)
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -124,7 +124,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips

@@ -89,7 +89,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Url to the database containing the routing data.
@@ -98,7 +98,7 @@ Url to the database containing the routing data.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -109,7 +109,7 @@ modparam("carrierroute", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 Name of the table where the routing data is stored.
@@ -118,7 +118,7 @@ Name of the table where the routing data is stored.
 *Default value is "carrierroute".*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("carrierroute", "db_table", "carrierroute")
 ```
 
 
-#### `id_column` (string)
+#### id_column (string)
 
 
 Name of the column containing the id identifier.
@@ -138,7 +138,7 @@ Name of the column containing the id identifier.
 *Default value is "id".*
 
 
-**Example: Set `id_column` parameter**
+**Example: Set id_column parameter**
 
 
 ```opensips
@@ -149,7 +149,7 @@ modparam("carrierroute", "id_column", "id")
 ```
 
 
-#### `carrier_column` (string)
+#### carrier_column (string)
 
 
 Name of the column containing the  carrier id.
@@ -158,7 +158,7 @@ Name of the column containing the  carrier id.
 *Default value is "carrier".*
 
 
-**Example: Set `carrier_column` parameter**
+**Example: Set carrier_column parameter**
 
 
 ```opensips
@@ -169,7 +169,7 @@ modparam("carrierroute", "carrier_column", "carrier")
 ```
 
 
-#### `scan_prefix_column` (string)
+#### scan_prefix_column (string)
 
 
 Name of column containing the scan prefixes. Scan prefixes define
@@ -183,7 +183,7 @@ Name of column containing the scan prefixes. Scan prefixes define
 *Default value is "scan_prefix".*
 
 
-**Example: Set `scan_prefix_column` parameter**
+**Example: Set scan_prefix_column parameter**
 
 
 ```opensips
@@ -194,7 +194,7 @@ modparam("carrierroute", "scan_prefix_column", "scan_prefix")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 Name of column containing the rule domain. You can define several routing
@@ -205,7 +205,7 @@ Name of column containing the rule domain. You can define several routing
 *Default value is "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -216,7 +216,7 @@ modparam("carrierroute", "domain_column", "domain")
 ```
 
 
-#### `flags_column` (string)
+#### flags_column (string)
 
 
 Name of the column containing the flags.
@@ -225,7 +225,7 @@ Name of the column containing the flags.
 *Default value is "flags".*
 
 
-**Example: Set `flags_column` parameter**
+**Example: Set flags_column parameter**
 
 
 ```opensips
@@ -236,7 +236,7 @@ modparam("carrierroute", "flags_column", "flags")
 ```
 
 
-#### `mask_column` (string)
+#### mask_column (string)
 
 
 Name of the column containing the flags mask.
@@ -245,7 +245,7 @@ Name of the column containing the flags mask.
 *Default value is "mask".*
 
 
-**Example: Set `mask_column` parameter**
+**Example: Set mask_column parameter**
 
 
 ```opensips
@@ -256,7 +256,7 @@ modparam("carrierroute", "mask_column", "mask")
 ```
 
 
-#### `prob_column` (string)
+#### prob_column (string)
 
 
 Name of column containing probability. The probability value is used to 
@@ -276,7 +276,7 @@ If all probabilities for a given prefix, tree and domain don't add to 100%,
 *Default value is "prob".*
 
 
-**Example: Set `prob_column` parameter**
+**Example: Set prob_column parameter**
 
 
 ```opensips
@@ -287,7 +287,7 @@ modparam("carrierroute", "prob_column", "prob")
 ```
 
 
-#### `rewrite_host_column` (string)
+#### rewrite_host_column (string)
 
 
 Name of column containing rewrite host value. An empty field represents a
@@ -298,7 +298,7 @@ Name of column containing rewrite host value. An empty field represents a
 *Default value is "rewrite_host".*
 
 
-**Example: Set `rewrite_host_column` parameter**
+**Example: Set rewrite_host_column parameter**
 
 
 ```opensips
@@ -309,7 +309,7 @@ modparam("carrierroute", "rewrite_host_column", "rewrite_host")
 ```
 
 
-#### `strip_column` (string)
+#### strip_column (string)
 
 
 Name of the column containing the number of digits to be stripped of the
@@ -319,7 +319,7 @@ Name of the column containing the number of digits to be stripped of the
 *Default value is "strip".*
 
 
-**Example: Set `strip_column` parameter**
+**Example: Set strip_column parameter**
 
 
 ```opensips
@@ -330,7 +330,7 @@ modparam("carrierroute", "strip_column", "strip")
 ```
 
 
-#### `comment_column` (string)
+#### comment_column (string)
 
 
 Name of the column containing an optional comment (useful in large routing tables)
@@ -341,7 +341,7 @@ Name of the column containing an optional comment (useful in large routing table
 *Default value is "description".*
 
 
-**Example: Set `comment_column` parameter**
+**Example: Set comment_column parameter**
 
 
 ```opensips
@@ -352,7 +352,7 @@ modparam("carrierroute", "comment_column", "description")
 ```
 
 
-#### `carrier_table` (string)
+#### carrier_table (string)
 
 
 The name of the table containing the existing carriers, consisting
@@ -362,7 +362,7 @@ The name of the table containing the existing carriers, consisting
 *Default value is "route_tree".*
 
 
-**Example: Set `carrier_table` parameter**
+**Example: Set carrier_table parameter**
 
 
 ```opensips
@@ -373,7 +373,7 @@ modparam("carrierroute", "carrier_table", "route_tree")
 ```
 
 
-#### `rewrite_prefix_column` (string)
+#### rewrite_prefix_column (string)
 
 
 Name of column containing rewrite prefixes. Here you can define a rewrite
@@ -383,7 +383,7 @@ Name of column containing rewrite prefixes. Here you can define a rewrite
 *Default value is "rewrite_prefix".*
 
 
-**Example: Set `rewrite_prefix_column` parameter**
+**Example: Set rewrite_prefix_column parameter**
 
 
 ```opensips
@@ -394,7 +394,7 @@ modparam("carrierroute", "rewrite_prefix_column", "rewrite_prefix")
 ```
 
 
-#### `rewrite_suffix_column` (string)
+#### rewrite_suffix_column (string)
 
 
 Name of column containing rewrite suffixes. Here you can define a rewrite
@@ -404,7 +404,7 @@ Name of column containing rewrite suffixes. Here you can define a rewrite
 *Default value is "rewrite_suffix".*
 
 
-**Example: Set `rewrite_suffix_column` parameter**
+**Example: Set rewrite_suffix_column parameter**
 
 
 ```opensips
@@ -415,7 +415,7 @@ modparam("carrierroute", "rewrite_suffix_column", "rewrite_suffix")
 ```
 
 
-#### `carrier_id_col` (string)
+#### carrier_id_col (string)
 
 
 The name of the column in the carrier table containing the carrier id.
@@ -424,7 +424,7 @@ The name of the column in the carrier table containing the carrier id.
 *Default value is "id".*
 
 
-**Example: Set `id_col` parameter**
+**Example: Set id_col parameter**
 
 
 ```opensips
@@ -435,7 +435,7 @@ modparam("carrierroute", "carrier_id_col", "id")
 ```
 
 
-#### `carrier_name_col` (string)
+#### carrier_name_col (string)
 
 
 The name of the column in the carrier table containing the carrier name.
@@ -444,7 +444,7 @@ The name of the column in the carrier table containing the carrier name.
 *Default value is "carrier".*
 
 
-**Example: Set `carrier_name_col` parameter**
+**Example: Set carrier_name_col parameter**
 
 
 ```opensips
@@ -455,7 +455,7 @@ modparam("carrierroute", "carrier_name_col", "carrier")
 ```
 
 
-#### `subscriber_table` (string)
+#### subscriber_table (string)
 
 
 The name of the table containing the subscribers
@@ -464,7 +464,7 @@ The name of the table containing the subscribers
 *Default value is "subscriber".*
 
 
-**Example: Set `subscriber_table` parameter**
+**Example: Set subscriber_table parameter**
 
 
 ```opensips
@@ -475,7 +475,7 @@ modparam("carrierroute", "subscriber_table", "subscriber")
 ```
 
 
-#### `subscriber_user_col` (string)
+#### subscriber_user_col (string)
 
 
 The name of the column in the subscriber table containing the usernames.
@@ -484,7 +484,7 @@ The name of the column in the subscriber table containing the usernames.
 *Default value is "username".*
 
 
-**Example: Set `subscriber_user_col` parameter**
+**Example: Set subscriber_user_col parameter**
 
 
 ```opensips
@@ -495,7 +495,7 @@ modparam("carrierroute", "subscriber_user_col", "username")
 ```
 
 
-#### `subscriber_domain_col` (string)
+#### subscriber_domain_col (string)
 
 
 The name of the column in the subscriber table containing the domain of 
@@ -505,7 +505,7 @@ The name of the column in the subscriber table containing the domain of
 *Default value is "domain".*
 
 
-**Example: Set `subscriber_domain_col` parameter**
+**Example: Set subscriber_domain_col parameter**
 
 
 ```opensips
@@ -516,7 +516,7 @@ modparam("carrierroute", "subscriber_domain_col", "domain")
 ```
 
 
-#### `subscriber_carrier_col` (string)
+#### subscriber_carrier_col (string)
 
 
 The name of the column in the subscriber table containing the carrier id
@@ -526,7 +526,7 @@ The name of the column in the subscriber table containing the carrier id
 *Default value is "cr_preferred_carrier".*
 
 
-**Example: Set `subscriber_carrier_col` parameter**
+**Example: Set subscriber_carrier_col parameter**
 
 
 ```opensips
@@ -537,7 +537,7 @@ modparam("carrierroute", "subscriber_carrier_col", "cr_preferred_carrier")
 ```
 
 
-#### `config_source` (string)
+#### config_source (string)
 
 
 Specifies whether the module loads its config data from a file or from a
@@ -547,7 +547,7 @@ Specifies whether the module loads its config data from a file or from a
 *Default value is "file".*
 
 
-**Example: Set `config_source` parameter**
+**Example: Set config_source parameter**
 
 
 ```opensips
@@ -558,7 +558,7 @@ modparam("carrierroute", "config_source", "file")
 ```
 
 
-#### `config_file` (string)
+#### config_file (string)
 
 
 Specifies the path to the config file.
@@ -567,7 +567,7 @@ Specifies the path to the config file.
 *Default value is "/etc/opensips/carrierroute.conf".*
 
 
-**Example: Set `config_file` parameter**
+**Example: Set config_file parameter**
 
 
 ```opensips
@@ -578,7 +578,7 @@ modparam("carrierroute", "config_file", "/etc/opensips/carrierroute.conf")
 ```
 
 
-#### `default_tree` (string)
+#### default_tree (string)
 
 
 The name of the carrier tree used per default (if the current
@@ -588,7 +588,7 @@ The name of the carrier tree used per default (if the current
 *Default value is "default".*
 
 
-**Example: Set `default_tree` parameter**
+**Example: Set default_tree parameter**
 
 
 ```opensips
@@ -599,7 +599,7 @@ modparam("carrierroute", "default_tree", "default")
 ```
 
 
-#### `use_domain` (boolean)
+#### use_domain (boolean)
 
 
 When using tree lookup per user, this parameter specifies whether
@@ -609,7 +609,7 @@ When using tree lookup per user, this parameter specifies whether
 *Default value is *true*.*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -620,7 +620,7 @@ modparam("carrierroute", "use_domain", true)
 ```
 
 
-#### `fallback_default` (int)
+#### fallback_default (int)
 
 
 This parameter defines the behaviour when using user-based tree
@@ -632,7 +632,7 @@ This parameter defines the behaviour when using user-based tree
 *Default value is "1".*
 
 
-**Example: Set `fallback_default` parameter**
+**Example: Set fallback_default parameter**
 
 
 ```opensips
@@ -643,7 +643,7 @@ modparam("carrierroute", "fallback_default", 1)
 ```
 
 
-#### `db_failure_table` (string)
+#### db_failure_table (string)
 
 
 Name of the table where the failure routing data is stored.
@@ -652,7 +652,7 @@ Name of the table where the failure routing data is stored.
 *Default value is "carrierfailureroute".*
 
 
-**Example: Set `db_failure_table` parameter**
+**Example: Set db_failure_table parameter**
 
 
 ```opensips
@@ -663,7 +663,7 @@ modparam("carrierroute", "db_failure_table", "carrierfailureroute")
 ```
 
 
-#### `failure_id_column` (string)
+#### failure_id_column (string)
 
 
 Name of the column containing the id identifier.
@@ -672,7 +672,7 @@ Name of the column containing the id identifier.
 *Default value is "id".*
 
 
-**Example: Set `failure_id_column` parameter**
+**Example: Set failure_id_column parameter**
 
 
 ```opensips
@@ -683,7 +683,7 @@ modparam("carrierroute", "failure_id_column", "id")
 ```
 
 
-#### `failure_carrier_column` (string)
+#### failure_carrier_column (string)
 
 
 Name of the column containing the carrier id.
@@ -692,7 +692,7 @@ Name of the column containing the carrier id.
 *Default value is "carrier".*
 
 
-**Example: Set `failure_carrier_column` parameter**
+**Example: Set failure_carrier_column parameter**
 
 
 ```opensips
@@ -703,7 +703,7 @@ modparam("carrierroute", "failure_carrier_column", "carrier")
 ```
 
 
-#### `failure_scan_prefix_column` (string)
+#### failure_scan_prefix_column (string)
 
 
 Name of column containing the scan prefixes. Scan prexies
@@ -717,7 +717,7 @@ Name of column containing the scan prefixes. Scan prexies
 *Default value is "scan_prefix".*
 
 
-**Example: Set `failure_scan_prefix_column` parameter**
+**Example: Set failure_scan_prefix_column parameter**
 
 
 ```opensips
@@ -728,7 +728,7 @@ modparam("carrierroute", "failure_scan_prefix_column", "scan_prefix")
 ```
 
 
-#### `failure_domain_column` (string)
+#### failure_domain_column (string)
 
 
 Name of column containing the rule domain. You can define
@@ -740,7 +740,7 @@ Name of column containing the rule domain. You can define
 *Default value is "domain".*
 
 
-**Example: Set `failure_domain_column` parameter**
+**Example: Set failure_domain_column parameter**
 
 
 ```opensips
@@ -751,7 +751,7 @@ modparam("carrierroute", "failure_domain_column", "domain")
 ```
 
 
-#### `failure_host_name_column` (string)
+#### failure_host_name_column (string)
 
 
 Name of the column containing the host name of the last routing
@@ -761,7 +761,7 @@ Name of the column containing the host name of the last routing
 *Default value is "host_name".*
 
 
-**Example: Set `failure_host_name_column` parameter**
+**Example: Set failure_host_name_column parameter**
 
 
 ```opensips
@@ -772,7 +772,7 @@ modparam("carrierroute", "failure_host_name_column", "host_name")
 ```
 
 
-#### `failure_reply_code_column` (string)
+#### failure_reply_code_column (string)
 
 
 Name of the column containing the reply code.
@@ -781,7 +781,7 @@ Name of the column containing the reply code.
 *Default value is "reply_code".*
 
 
-**Example: Set `failure_reply_code_column` parameter**
+**Example: Set failure_reply_code_column parameter**
 
 
 ```opensips
@@ -792,7 +792,7 @@ modparam("carrierroute", "failure_reply_code_column", "reply_code")
 ```
 
 
-#### `failure_flags_column` (string)
+#### failure_flags_column (string)
 
 
 Name of the column containing the flags.
@@ -801,7 +801,7 @@ Name of the column containing the flags.
 *Default value is "flags".*
 
 
-**Example: Set `failure_flags_column` parameter**
+**Example: Set failure_flags_column parameter**
 
 
 ```opensips
@@ -812,7 +812,7 @@ modparam("carrierroute", "failure_flags_column", "flags")
 ```
 
 
-#### `failure_mask_column` (string)
+#### failure_mask_column (string)
 
 
 Name of the column containing the flags mask.
@@ -821,7 +821,7 @@ Name of the column containing the flags mask.
 *Default value is "mask".*
 
 
-**Example: Set `failure_mask_column` parameter**
+**Example: Set failure_mask_column parameter**
 
 
 ```opensips
@@ -832,7 +832,7 @@ modparam("carrierroute", "failure_mask_column", "mask")
 ```
 
 
-#### `failure_next_domain_column` (string)
+#### failure_next_domain_column (string)
 
 
 Name of the column containing the next routing domain.
@@ -841,7 +841,7 @@ Name of the column containing the next routing domain.
 *Default value is "next_domain".*
 
 
-**Example: Set `failure_next_domain_column` parameter**
+**Example: Set failure_next_domain_column parameter**
 
 
 ```opensips
@@ -852,7 +852,7 @@ modparam("carrierroute", "failure_next_domain_column", "next_domain")
 ```
 
 
-#### `failure_comment_column` (string)
+#### failure_comment_column (string)
 
 
 Name of the column containing an optional comment.
@@ -861,7 +861,7 @@ Name of the column containing an optional comment.
 *Default value is "description".*
 
 
-**Example: Set `failure_comment_column` parameter**
+**Example: Set failure_comment_column parameter**
 
 
 ```opensips
@@ -909,7 +909,7 @@ cr_tree_rewrite_uri(tree, domain)
 ```
 
 
-#### `cr_user_carrier(user, domain, dst_avp)`
+#### cr_user_carrier(user, domain, dst_avp)
 
 
 This function loads the carrier and stores it in an AVP.
@@ -932,7 +932,7 @@ Parameters:
 				  store the carrier id
 
 
-#### `cr_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])`
+#### cr_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])
 
 
 This function searches for the longest match for the user given
@@ -968,7 +968,7 @@ Parameters:
 				where to store the rewritten host
 
 
-#### `cr_prime_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])`
+#### cr_prime_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])
 
 
 This function searches for the longest match for the user given
@@ -1005,7 +1005,7 @@ Meaning of the parameters is as follows:
 				where to store the rewritten host
 
 
-#### `cr_next_domain(carrier, domain, prefix_matching, host, reply_code, dst_avp)`
+#### cr_next_domain(carrier, domain, prefix_matching, host, reply_code, dst_avp)
 
 
 This function searches for the longest match for the user given
@@ -1046,7 +1046,7 @@ All commands understand the "-?" parameter to print a short help message.
 		like "-d prox*").
 
 
-#### `carrierroute:reload_routes`
+#### carrierroute:reload_routes
 
 
 Replaces obsolete MI command: *cr_reload_routes*.
@@ -1062,7 +1062,7 @@ Important: When new domains have been added, a restart of the server must be
 		internally from the server. Modifying of already existing domains is no problem.
 
 
-#### `carrierroute:dump_routes`
+#### carrierroute:dump_routes
 
 
 Replaces obsolete MI command: *cr_dump_routes*.
@@ -1071,7 +1071,7 @@ Replaces obsolete MI command: *cr_dump_routes*.
 This command prints the route rules on the command line.
 
 
-#### `carrierroute:replace_host`
+#### carrierroute:replace_host
 
 
 Replaces obsolete MI command: *cr_replace_host*.
@@ -1090,7 +1090,7 @@ This command can replace the rewrite_host of a route rule, it is only
 Use the "null" prefix to specify an empty prefix.
 
 
-**Example: `carrierroute:replace_host` usage**
+**Example: carrierroute:replace_host usage**
 
 
 ```
@@ -1101,7 +1101,7 @@ opensips-cli -x mi carrierroute:replace_host "-d proxy -p 49 -h proxy1 -t proxy2
 ```
 
 
-#### `carrierroute:deactivate_host`
+#### carrierroute:deactivate_host
 
 
 Replaces obsolete MI command: *cr_deactivate_host*.
@@ -1125,7 +1125,7 @@ When -t (new_host) is specified, the portion of traffic for the deactivated host
 Use the "null" prefix to specify an empty prefix.
 
 
-**Example: `carrierroute:deactivate_host` usage**
+**Example: carrierroute:deactivate_host usage**
 
 
 ```
@@ -1136,7 +1136,7 @@ opensips-cli -x mi carrierroute:deactivate_host "-d proxy -p 49 -h proxy1"
 ```
 
 
-#### `carrierroute:activate_host`
+#### carrierroute:activate_host
 
 
 Replaces obsolete MI command: *cr_activate_host*.
@@ -1154,7 +1154,7 @@ This command activates the specified host, i.e. it sets its status to 1.
 Use the "null" prefix to specify an empty prefix.
 
 
-**Example: `carrierroute:activate_host` usage**
+**Example: carrierroute:activate_host usage**
 
 
 ```
@@ -1165,7 +1165,7 @@ opensips-cli -x mi carrierroute:activate_host "-d proxy -p 49 -h proxy1"
 ```
 
 
-#### `carrierroute:add_host`
+#### carrierroute:add_host
 
 
 Replaces obsolete MI command: *cr_add_host*.
@@ -1188,7 +1188,7 @@ This command adds a route rule, it is only usable in file mode. Following option
 Use the "null" prefix to specify an empty prefix.
 
 
-**Example: `carrierroute:add_host` usage**
+**Example: carrierroute:add_host usage**
 
 
 ```
@@ -1199,7 +1199,7 @@ opensips-cli -x mi carrierroute:add_host "-d proxy -p 49 -h proxy1 -w 0.25"
 ```
 
 
-#### `carrierroute:delete_host`
+#### carrierroute:delete_host
 
 
 Replaces obsolete MI command: *cr_delete_host*.
@@ -1223,7 +1223,7 @@ This command delete the specified hosts or rules, i.e. remove
 Use the "null" prefix to specify an empty prefix.
 
 
-**Example: `carrierroute:delete_host` usage**
+**Example: carrierroute:delete_host usage**
 
 
 ```

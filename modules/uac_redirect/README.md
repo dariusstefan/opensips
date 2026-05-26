@@ -62,7 +62,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `default_filter` (string)
+#### default_filter (string)
 
 
 The default behavior in filtering contacts. It may be 
@@ -72,7 +72,7 @@ The default behavior in filtering contacts. It may be
 *The default value is "accept".*
 
 
-**Example: Set `default_filter` 
+**Example: Set default_filter 
 					module parameter**
 
 
@@ -84,7 +84,7 @@ modparam("uac_redirect","default_filter","deny")
 ```
 
 
-#### `deny_filter` (string)
+#### deny_filter (string)
 
 
 The regular expression for default deny filtering. It make sens
@@ -105,7 +105,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-**Example: Set `deny_filter` 
+**Example: Set deny_filter 
 					module parameter**
 
 
@@ -117,7 +117,7 @@ modparam("uac_redirect","deny_filter",".*@siphub\.net")
 ```
 
 
-#### `accept_filter` (string)
+#### accept_filter (string)
 
 
 The regular expression for default accept filtering. It make sens
@@ -138,7 +138,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-**Example: Set `accept_filter` 
+**Example: Set accept_filter 
 					module parameter**
 
 
@@ -153,8 +153,8 @@ modparam("uac_redirect","accept_filter",".*@siphub\.net")
 ### Exported Functions
 
 
-#### `set_deny_filter(filter,flags)
-					`
+#### set_deny_filter(filter,flags)
+					
 
 
 Sets additional deny filters. Maximum 6 may be combined. This
@@ -183,7 +183,7 @@ Default or previous added deny filter may be reset depending of
 This function can be used from FAILURE_ROUTE.
 
 
-**Example: `set_deny_filter` usage**
+**Example: set_deny_filter usage**
 
 
 ```
@@ -195,8 +195,8 @@ set_deny_filter(".*@domain1.net","");
 ```
 
 
-#### `set_accept_filter(filter,flags)
-					`
+#### set_accept_filter(filter,flags)
+					
 
 
 Sets additional accept filters. Maximum 6 may be combined. This
@@ -225,7 +225,7 @@ Default or previous added deny filter may be reset depending of
 This function can be used from FAILURE_ROUTE.
 
 
-**Example: `set_accept_filter` usage**
+**Example: set_accept_filter usage**
 
 
 ```
@@ -237,7 +237,7 @@ set_accept_filter(".*@domain1.net","");
 ```
 
 
-#### `get_redirects([max_total], [max_branch])`
+#### get_redirects([max_total], [max_branch])
 
 
 The function may be called only from failure routes. It will
@@ -267,7 +267,7 @@ NOTE that during the selection process, each set of contacts
 This function can be used from FAILURE_ROUTE.
 
 
-**Example: `get_redirects` usage**
+**Example: get_redirects usage**
 
 
 ```

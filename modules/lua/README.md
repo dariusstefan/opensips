@@ -189,7 +189,7 @@ Logs informations about memory.
 ### Exported MI Functions
 
 
-#### `watch`
+#### watch
 
 
 Name: *watch*

@@ -138,7 +138,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `flush` (integer)
+#### flush (integer)
 
 
 Enable or disable flushing after each write.
@@ -157,7 +157,7 @@ modparam("db_flatstore", "flush", 0)
 ```
 
 
-#### `delimiter` (char)
+#### delimiter (char)
 
 
 Delimiter used to separate the values.
@@ -176,7 +176,7 @@ modparam("db_flatstore", "delimiter", ";")
 ```
 
 
-#### `suffix` (string)
+#### suffix (string)
 
 
 The suffix appended to the table name. Can be a pseudo
@@ -196,7 +196,7 @@ modparam("db_flatstore", "suffix", "$time(%H)")
 ```
 
 
-#### `prefix` (string)
+#### prefix (string)
 
 
 The table name prefix. Can be a pseudo variable.
@@ -215,7 +215,7 @@ modparam("db_flatstore", "prefix", "$time(%H)")
 ```
 
 
-#### `single_file` (integer)
+#### single_file (integer)
 
 
 Specifies if all the processes should dump the data
@@ -244,7 +244,7 @@ There are no function exported to routing script.
 ### Exported MI Functions
 
 
-#### `db_flatstore:rotate`
+#### db_flatstore:rotate
 
 
 Replaces obsolete MI command: *flat_rotate*.

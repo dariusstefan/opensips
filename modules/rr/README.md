@@ -99,7 +99,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `append_fromtag` (integer)
+#### append_fromtag (integer)
 
 
 If turned on, request's from-tag is appended to record-route; that's 
@@ -111,7 +111,7 @@ If turned on, request's from-tag is appended to record-route; that's
 *Default value is 1 (yes).*
 
 
-**Example: Set `append_fromtag` parameter**
+**Example: Set append_fromtag parameter**
 
 
 ```opensips
@@ -121,7 +121,7 @@ modparam("rr", "append_fromtag", 0)
 ```
 
 
-#### `enable_double_rr` (integer)
+#### enable_double_rr (integer)
 
 
 There are some situations when the server needs to insert two 
@@ -134,7 +134,7 @@ There are some situations when the server needs to insert two
 *Default value is 1 (yes).*
 
 
-**Example: Set `enable_double_rr` parameter**
+**Example: Set enable_double_rr parameter**
 
 
 ```opensips
@@ -144,7 +144,7 @@ modparam("rr", "enable_double_rr", 0)
 ```
 
 
-#### `add_username` (integer)
+#### add_username (integer)
 
 
 If set to a non 0 value (which means yes), the username part will
@@ -154,7 +154,7 @@ If set to a non 0 value (which means yes), the username part will
 *Default value is 0 (no).*
 
 
-**Example: Set `add_username` parameter**
+**Example: Set add_username parameter**
 
 
 ```opensips
@@ -164,7 +164,7 @@ modparam("rr", "add_username", 1)
 ```
 
 
-#### `enable_socket_mismatch_warning` (integer)
+#### enable_socket_mismatch_warning (integer)
 
 
 When a preset record-route header is forced in OpenSIPS config and the
@@ -178,7 +178,7 @@ When a preset record-route header is forced in OpenSIPS config and the
 *Default value is 1 (yes).*
 
 
-**Example: `enable_socket_mismatch_warning` usage**
+**Example: enable_socket_mismatch_warning usage**
 
 
 ```opensips
@@ -191,7 +191,7 @@ modparam("rr", "enable_socket_mismatch_warning", 0)
 ### Exported Functions
 
 
-#### `loose_route()`
+#### loose_route()
 
 
 The function performs routing of SIP requests which contain a route 
@@ -245,7 +245,7 @@ The loose_routing topic is very complex. See the RFC3261 for more
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `loose_route` usage**
+**Example: loose_route usage**
 
 
 ```
@@ -255,8 +255,8 @@ loose_route();
 ```
 
 
-#### `record_route()` and 
-		`record_route(string)`
+#### record_route() and 
+		record_route(string)
 
 
 The function adds a new Record-Route header field. The header field 
@@ -273,7 +273,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: `record_route` usage**
+**Example: record_route usage**
 
 
 ```
@@ -283,7 +283,7 @@ record_route();
 ```
 
 
-#### `record_route_preset(string [, string2])`
+#### record_route_preset(string [, string2])
 
 
 This function will put the string into Record-Route, don't use 
@@ -307,7 +307,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: `record_route_preset` usage**
+**Example: record_route_preset usage**
 
 
 ```
@@ -317,7 +317,7 @@ record_route_preset("1.2.3.4:5090");
 ```
 
 
-#### `add_rr_param(param)`
+#### add_rr_param(param)
 
 
 Adds a parameter to the Record-Route URI (param must be in 
@@ -337,7 +337,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: `add_rr_param` usage**
+**Example: add_rr_param usage**
 
 
 ```
@@ -347,7 +347,7 @@ add_rr_param(";nat=yes");
 ```
 
 
-#### `check_route_param(re)`
+#### check_route_param(re)
 
 
 The function checks if the URI parameters of the local Route 
@@ -366,7 +366,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `check_route_param` usage**
+**Example: check_route_param usage**
 
 
 ```
@@ -378,7 +378,7 @@ if (check_route_param("nat=yes")) {
 ```
 
 
-#### `is_direction(dir)`
+#### is_direction(dir)
 
 
 The function checks the flow direction of the request.
@@ -407,7 +407,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `is_direction` usage**
+**Example: is_direction usage**
 
 
 ```
@@ -450,7 +450,7 @@ For internal(non-script) usage, the RR module offers to other module the
 ### Available Functions
 
 
-#### `add_rr_param( msg, param)`
+#### add_rr_param( msg, param)
 
 
 Adds a parameter to the requests's Record-Route URI (param must be in 
@@ -471,7 +471,7 @@ Meaning of the parameters is as follows:
 				";name=value" format.
 
 
-#### `check_route_param( msg, re)`
+#### check_route_param( msg, re)
 
 
 The function checks for the request "msg" if the URI 
@@ -492,7 +492,7 @@ Meaning of the parameters is as follows:
 				expression to be checked against the Route header parameters.
 
 
-#### `is_direction( msg, dir)`
+#### is_direction( msg, dir)
 
 
 The function checks the flow direction of the request 
@@ -517,7 +517,7 @@ Meaning of the parameters is as follows:
 				"RR_FLOW_DOWNSTREAM".
 
 
-#### `get_route_param( msg, name, val)`
+#### get_route_param( msg, name, val)
 
 
 The function search in to the "msg"'s Route header 
@@ -542,7 +542,7 @@ Meaning of the parameters is as follows:
 				string if the parameter had no value.
 
 
-#### `register_rrcb( callback, param, prior)`
+#### register_rrcb( callback, param, prior)
 
 
 The function register a new callback (along with its parameter). The
