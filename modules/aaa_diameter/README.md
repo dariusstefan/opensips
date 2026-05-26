@@ -25,7 +25,7 @@ Any module that wishes to use it has to do the following:
 
 The module implements the core AAA OpenSIPS interface, thus offering
 		an alternative client implementation to the
-		[aaa_radius](aaa_radius) module which can be useful,
+		[aaa_radius](/modules/aaa_radius) module which can be useful,
 		for example, when performing billing and accounting for the live SIP calls.
 
 
@@ -43,7 +43,7 @@ Starting with OpenSIPS **3.5**, the Diameter
 		module includes *server-side* support as well.
 
 
-First, the [event_route](event_route) module must be loaded in
+First, the [event_route](/modules/event_route) module must be loaded in
 		order to be able to process [dm request](#event_dm_request) events in
 		the OpenSIPS configuration file.  These events will contain all necessary
 		information on the incoming Diameter request.
@@ -474,7 +474,7 @@ Parameters:
 						or a *NULL* value if neither of these
 						transaction-identifying AVPs is present in the Diameter request.
 - *avps_json (string)* - a JSON Array containing the
-					AVPs of the request.  Use the [json](json) module's
+					AVPs of the request.  Use the [json](/modules/json) module's
 					**$json** variable
 					to easily parse and work with it.
 
