@@ -6,7 +6,7 @@ description: "The sql_cacher module introduces the possibility to cache data fro
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The sql_cacher module introduces the possibility to cache data from a
@@ -40,7 +40,7 @@ For on demand caching, the stored values have a configurable expire period after
 	until it expires.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The following modules must be loaded before this module:
@@ -50,10 +50,10 @@ The following modules must be loaded before this module:
 		    	connection*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cache_table (string)
+#### cache_table (string) {#param_cache_table}
 
 
 This parameter can be set multiple times in order to cache multiple SQL
@@ -117,7 +117,7 @@ on_demand=0")
 ```
 
 
-#### spec_delimiter (string)
+#### spec_delimiter (string) {#param_spec_delimiter}
 
 
 The delimiter to be used in the caching entry specification provided in the
@@ -136,7 +136,7 @@ modparam("sql_cacher", "spec_delimiter", "\n")
 ```
 
 
-#### pvar_delimiter (string)
+#### pvar_delimiter (string) {#param_pvar_delimiter}
 
 
 The delimiter to be used in the "$sql_cached_value"
@@ -155,7 +155,7 @@ modparam("sql_cacher", "pvar_delimiter", " ")
 ```
 
 
-#### columns_delimiter (string)
+#### columns_delimiter (string) {#param_columns_delimiter}
 
 
 The delimiter to be used in the *columns* subparameter of
@@ -174,7 +174,7 @@ modparam("sql_cacher", "columns_delimiter", ",")
 ```
 
 
-#### sql_fetch_nr_rows (integer)
+#### sql_fetch_nr_rows (integer) {#param_sql_fetch_nr_rows}
 
 
 The number of rows to be fetched into OpenSIPS private memory in one chunk from
@@ -193,7 +193,7 @@ modparam("sql_cacher", "sql_fetch_nr_rows", 1000)
 ```
 
 
-#### full_caching_expire (integer)
+#### full_caching_expire (integer) {#param_full_caching_expire}
 
 
 Expire period for the values stored in cache for the full caching type
@@ -212,7 +212,7 @@ modparam("sql_cacher", "full_caching_expire", 3600)
 ```
 
 
-#### reload_interval (integer)
+#### reload_interval (integer) {#param_reload_interval}
 
 
 This parameter represents how many seconds before the data expires (for full caching) the
@@ -230,7 +230,7 @@ modparam("sql_cacher", "reload_interval", 5)
 ```
 
 
-#### bigint_to_str (integer)
+#### bigint_to_str (integer) {#param_bigint_to_str}
 
 
 Controls bigint conversion.
@@ -251,16 +251,16 @@ modparam("sql_cacher", "bigint_to_str", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### sql_cacher_reload
+#### sql_cacher_reload {#mi_sql_cacher_reload}
 
 
 Reloads the entire SQL table in cache or the single key (if key provided) in
@@ -289,10 +289,10 @@ $ opensips-cli -x mi sql_cacher_reload subs_caching alice@domain.com
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $sql_cached_value(id{sep}col{sep}key)
+#### $sql_cached_value(id{sep}col{sep}key) {#pv_sql_cached_value}
 
 
 The cached data is available through this read-only PV.The format
@@ -385,7 +385,7 @@ xlog("host name is: $sql_cached_value(carrier_fr_caching:host_name:2)");
 ```
 
 
-### Exported Status/Report Identifiers
+### Exported Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "sql_cacher" Status/Report group, where each
@@ -393,7 +393,7 @@ The module provides the "sql_cacher" Status/Report group, where each
 	are no identifiers created for the on-demand caches.
 
 
-#### [cache_entry_id]
+#### [cache_entry_id] {#sr_id_cache_entry_id}
 
 
 The status of these identifiers reflects the readiness/status of the
@@ -419,10 +419,10 @@ For how to access and use the Status/Report information, please see
 	[https://www.opensips.org/Documentation/Interface-StatusReport-3-3](>https://www.opensips.org/Documentation/Interface-StatusReport-3-3).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -454,7 +454,7 @@ For how to access and use the Status/Report information, please see
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -480,10 +480,10 @@ For how to access and use the Status/Report information, please see
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

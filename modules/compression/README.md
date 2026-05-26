@@ -6,7 +6,7 @@ description: "This module implements message compression/decompression and base6
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements message compression/decompression and base64 encoding
@@ -49,7 +49,7 @@ The module also does message decompresion and base64 decoding. It can
 	header. At this moment only gzip and deflate algorithms are supported.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -71,10 +71,10 @@ The following libraries or applications must be installed before
 - *zlib-dev - the development libraries of [zlib](http://www.zlib.net/)*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### mc_level (int)
+#### mc_level (int) {#param_mc_level}
 
 
 This parameter ranges from 1 to 9 and it specifies the level of compression you want to do.
@@ -94,10 +94,10 @@ modparam("mc", "mc_level", "3")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mc_compress([algo], flags, [whitelist])
+#### mc_compress([algo], flags, [whitelist]) {#func_mc_compress}
 
 
 This function will compress the current message as specified in the parameters. Keep in mind
@@ -172,7 +172,7 @@ xlog("compression registered\n");
 ```
 
 
-#### mc_compact([whitelist], flags)
+#### mc_compact([whitelist], flags) {#func_mc_compact}
 
 
 This function will realise four different things: headers which are not mandatory
@@ -224,7 +224,7 @@ if (!mc_compact("Max-Forwards|P-Asserted-Identity"))
 ```
 
 
-#### mc_decompress()
+#### mc_decompress() {#func_mc_decompress}
 
 
 This function does the reverse of mc_compress, meaning that it does base64
@@ -290,10 +290,10 @@ The following results have been obtained using the compression function
 | `3` | `4` | `1329` | `607` | `Body + Headers` | `1329` | `9` | `804` | `1.65` |
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -325,7 +325,7 @@ The following results have been obtained using the compression function
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -351,10 +351,10 @@ The following results have been obtained using the compression function
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Aron Podrigal ([@ar45](https://github.com/ar45)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

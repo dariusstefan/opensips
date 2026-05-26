@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed to wor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed to work with a
@@ -37,7 +37,7 @@ This module is an implementation of a cache system designed to work with a
 - *keys (in key:value pairs) may not contain spaces or control characters*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -67,10 +67,10 @@ If TLS connections are enabled via the [use tls](#param_use_tls) modparam,
 				*hiredis* needs to be compiled with TLS support.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -105,7 +105,7 @@ cache_remove("redis:cluster1", "key");
 ```
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -127,7 +127,7 @@ modparam("cachedb_redis", "connect_timeout",1000)
 ```
 
 
-#### query_timeout (integer)
+#### query_timeout (integer) {#param_query_timeout}
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -149,7 +149,7 @@ modparam("cachedb_redis", "query_timeout",1000)
 ```
 
 
-#### shutdown_on_error (integer)
+#### shutdown_on_error (integer) {#param_shutdown_on_error}
 
 
 By setting this parameter to 1, OpenSIPS will abort startup if
@@ -172,7 +172,7 @@ modparam("cachedb_redis", "shutdown_on_error", 1)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for Redis connections.
@@ -211,7 +211,7 @@ modparam("cachedb_redis", "cachedb_url","redis://localhost:6379/?tls_domain=redi
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
@@ -260,10 +260,10 @@ Here are a couple examples of running some Redis queries :
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -295,7 +295,7 @@ Here are a couple examples of running some Redis queries :
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -321,10 +321,10 @@ Here are a couple examples of running some Redis queries :
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

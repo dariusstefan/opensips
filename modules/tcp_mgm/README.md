@@ -6,14 +6,14 @@ description: "This module provides optional, SQL-based support for fine-grained 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides optional, SQL-based support for fine-grained
 		management of all TCP connections taking place on OpenSIPS.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -28,10 +28,10 @@ At least one SQL database module must be loaded (e.g. "db_xxx").
 None.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Mandatory URL to the SQL database.
@@ -45,7 +45,7 @@ modparam("tcp_mgm", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The name of the table holding the TCP paths (rules).
@@ -62,7 +62,7 @@ modparam("tcp_mgm", "db_table", "tcp_mgm")
 ```
 
 
-#### [column-name]_col (string)
+#### [column-name]_col (string) {#param_column_name_col}
 
 
 Use a different name for column *"column-name"*.
@@ -76,10 +76,10 @@ modparam("tcp_mgm", "connect_timeout_col", "connect_to")
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### tcp_reload
+#### tcp_reload {#mi_tcp_reload}
 
 
 Reload all TCP paths from the *tcp_mgm* table
@@ -99,10 +99,10 @@ $ "OK"
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -123,7 +123,7 @@ $ "OK"
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -138,10 +138,10 @@ $ "OK"
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

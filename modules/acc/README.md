@@ -6,7 +6,7 @@ description: "The ACC module is used to account transaction information to diffe
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The ACC module is used to account transaction information to different
@@ -102,10 +102,10 @@ if ($ru=~"sip:+40") /* calls to Romania */ {
 ```
 
 
-### Extra accounting
+### Extra accounting {#ACC-extra-id}
 
 
-#### Overview
+#### Overview {#overview_extra}
 
 
 Along the static default information, the ACC module
@@ -182,10 +182,10 @@ If radius accounting is used, except from a radius client library which is manda
 				to work properly.
 
 
-### Multi Call-Legs accounting
+### Multi Call-Legs accounting {#multi-call-legs}
 
 
-#### Overview
+#### Overview {#overview_multi_call_legs}
 
 
 A SIP call can have multiple legs due forwarding actions. For
@@ -263,10 +263,10 @@ For each call, all the values from the *acc_leg*
 				(at least at this moment) because they are only used in openSips.
 
 
-### CDRs accounting
+### CDRs accounting {#ACC-cdr-id}
 
 
-#### Overview
+#### Overview {#overview_cdr_accounting}
 
 
 ACC module can now also maintain session/dialog accounting. This
@@ -295,7 +295,7 @@ This type of accounting is based on the dialog module. When
 			the desired backend.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -325,10 +325,10 @@ The following libraries or applications must be installed
 - none.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### early_media (integer)
+#### early_media (integer) {#param_early_media}
 
 
 Should be early media (any provisional reply with body) accounted too ?
@@ -345,7 +345,7 @@ modparam("acc", "early_media", 1)
 ```
 
 
-#### report_cancels (integer)
+#### report_cancels (integer) {#param_report_cancels}
 
 
 By default, CANCEL reporting is disabled -- most accounting
@@ -364,7 +364,7 @@ modparam("acc", "report_cancels", 1)
 ```
 
 
-#### detect_direction (integer)
+#### detect_direction (integer) {#param_detect_direction}
 
 
 Controls the direction detection for sequential requests. If
@@ -388,7 +388,7 @@ modparam("acc", "detect_direction", 1)
 ```
 
 
-#### extra_fields (string)
+#### extra_fields (string) {#param_extra_fields}
 
 
 Defines the tag-log_value set to be used in extra fields accounting.
@@ -420,7 +420,7 @@ modparam("acc", "extra_fields","a->2345;b->2346")
 ```
 
 
-#### leg_fields (string)
+#### leg_fields (string) {#param_leg_fields}
 
 
 Defines the tag-log_value set to be used in multi-leg accounting.
@@ -452,7 +452,7 @@ modparam("acc", "leg_fields","a->2345;b->2346")
 ```
 
 
-#### log_level (integer)
+#### log_level (integer) {#param_log_level}
 
 
 Log level at which accounting messages are issued to syslog.
@@ -469,7 +469,7 @@ modparam("acc", "log_level", 2)   # Set log_level to 2
 ```
 
 
-#### log_facility (string)
+#### log_facility (string) {#param_log_facility}
 
 
 Log facility to which accounting messages are issued to syslog.
@@ -488,7 +488,7 @@ modparam("acc", "log_facility", "LOG_DAEMON")
 ```
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -511,7 +511,7 @@ modparam("acc", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### service_type (integer)
+#### service_type (integer) {#param_service_type}
 
 
 AAA service type used for accounting.
@@ -529,7 +529,7 @@ modparam("acc", "service_type", 15)
 ```
 
 
-#### db_table_acc (string)
+#### db_table_acc (string) {#param_db_table_acc}
 
 
 Table name of accounting successful calls -- database specific.
@@ -546,7 +546,7 @@ modparam("acc", "db_table_acc", "myacc_table")
 ```
 
 
-#### db_table_missed_calls (string)
+#### db_table_missed_calls (string) {#param_db_table_missed_calls}
 
 
 Table name for accounting missed calls -- database specific.
@@ -563,7 +563,7 @@ modparam("acc", "db_table_missed_calls", "myMC_table")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 SQL address -- database specific. If is set to NULL or empty string,
@@ -581,7 +581,7 @@ modparam("acc", "db_url", "mysql://user:password@localhost/opensips")
 ```
 
 
-#### acc_method_column (string)
+#### acc_method_column (string) {#param_acc_method_column}
 
 
 Column name in accounting table to store the request's method name as
@@ -599,7 +599,7 @@ modparam("acc", "acc_method_column", "method")
 ```
 
 
-#### acc_from_tag_column (string)
+#### acc_from_tag_column (string) {#param_acc_from_tag_column}
 
 
 Column name in accounting table to store the From header TAG parameter.
@@ -616,7 +616,7 @@ modparam("acc", "acc_from_tag_column", "from_tag")
 ```
 
 
-#### acc_to_tag_column (string)
+#### acc_to_tag_column (string) {#param_acc_to_tag_column}
 
 
 Column name in accounting table to store the To header TAG parameter.
@@ -633,7 +633,7 @@ modparam("acc", "acc_to_tag_column", "to_tag")
 ```
 
 
-#### acc_callid_column (string)
+#### acc_callid_column (string) {#param_acc_callid_column}
 
 
 Column name in accounting table to store the request's Callid value.
@@ -650,7 +650,7 @@ modparam("acc", "acc_callid_column", "callid")
 ```
 
 
-#### acc_sip_code_column (string)
+#### acc_sip_code_column (string) {#param_acc_sip_code_column}
 
 
 Column name in accounting table to store the final reply's numeric code
@@ -668,7 +668,7 @@ modparam("acc", "acc_sip_code_column", "sip_code")
 ```
 
 
-#### acc_sip_reason_column (string)
+#### acc_sip_reason_column (string) {#param_acc_sip_reason_column}
 
 
 Column name in accounting table to store the final reply's reason
@@ -686,7 +686,7 @@ modparam("acc", "acc_sip_reason_column", "sip_reason")
 ```
 
 
-#### acc_time_column (string)
+#### acc_time_column (string) {#param_acc_time_column}
 
 
 Column name in accounting table to store the time stamp of the
@@ -704,10 +704,10 @@ modparam("acc", "acc_time_column", "time")
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $acc_extra(tag_name)
+#### $acc_extra(tag_name) {#pv_acc_extra}
 
 
 This variable can addresed with the tag names defined
@@ -720,7 +720,7 @@ This variable can addresed with the tag names defined
 			actual accounting is being made.
 
 
-#### $(acc_leg(tag_name)[leg_index])
+#### $(acc_leg(tag_name)[leg_index]) {#pv_acc_leg}
 
 
 This variable can be addressed with the tag names defined
@@ -744,17 +744,17 @@ $(acc_leg(caller)[-2])
 ```
 
 
-#### $acc_current_leg (read-only)
+#### $acc_current_leg (read-only) {#pv_acc_current_leg}
 
 
 Holds the index of the current leg, starting from 0.  Calling
 			[acc new leg](#func_acc_new_leg) will increment this index.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### do_accounting(type, [flags], [table])
+#### do_accounting(type, [flags], [table]) {#func_do_accounting}
 
 
 `do_accounting()` replaces all the
@@ -825,7 +825,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### drop_accounting([type], [flags])
+#### drop_accounting([type], [flags]) {#func_drop_accounting}
 
 
 `drop_accounting()` resets flags
@@ -891,7 +891,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### acc_log_request(comment)
+#### acc_log_request(comment) {#func_acc_log_request}
 
 
 `acc_request` reports on a request,
@@ -924,7 +924,7 @@ acc_log_request("403 Destination not allowed");
 ```
 
 
-#### acc_db_request(comment, table)
+#### acc_db_request(comment, table) {#func_acc_db_request}
 
 
 Like `acc_log_request`,
@@ -958,7 +958,7 @@ acc_db_request("$T_reply_code $(<reply>rr)", "acc");
 ```
 
 
-#### acc_aaa_request(comment)
+#### acc_aaa_request(comment) {#func_acc_aaa_request}
 
 
 Like `acc_log_request`,
@@ -990,7 +990,7 @@ acc_aaa_request("403 Destination not allowed");
 ```
 
 
-#### acc_evi_request(comment)
+#### acc_evi_request(comment) {#func_acc_evi_request}
 
 
 Like `acc_log_request`,
@@ -1024,7 +1024,7 @@ acc_evi_request("403 Destination not allowed");
 ```
 
 
-#### acc_new_leg()
+#### acc_new_leg() {#func_acc_new_leg}
 
 
 Creates a new leg and increments [acc current leg](#pv_acc_current_leg)
@@ -1046,7 +1046,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### acc_load_ctx_from_dlg()
+#### acc_load_ctx_from_dlg() {#func_acc_load_ctx_from_dlg}
 
 
 The function loads and exposes the accounting context of the
@@ -1089,7 +1089,7 @@ if ( load_dialog_ctx("$var(callid)") ) {
 ```
 
 
-#### acc_unload_ctx_from_dlg()
+#### acc_unload_ctx_from_dlg() {#func_acc_unload_ctx_from_dlg}
 
 
 The function off-loads a previosuly loaded accounting context, exposing
@@ -1106,10 +1106,10 @@ This function can be used from any type of route.
 For usage example, see the [acc load ctx from dlg](#func_acc_load_ctx_from_dlg).
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_ACC_CDR
+#### E_ACC_CDR {#event_E_ACC_CDR}
 
 
 The event raised when a CDR is generated. Note that this event will
@@ -1141,7 +1141,7 @@ Parameters:
 				created (the initial Invite was received)
 
 
-#### E_ACC_EVENT
+#### E_ACC_EVENT {#event_E_ACC_EVENT}
 
 
 This event is triggered when old-style accounting is used. It is
@@ -1166,7 +1166,7 @@ Parameters:
 				the *multi_leg_info* parameter
 
 
-#### E_ACC_MISSED_EVENT
+#### E_ACC_MISSED_EVENT {#event_E_ACC_MISSED_EVENT}
 
 
 This event is triggered when old-style accounting is used. It is
@@ -1259,10 +1259,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1294,7 +1294,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1320,10 +1320,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Irina-Maria Stanescu, Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Elena-Ramona Modroiu.

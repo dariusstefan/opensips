@@ -6,7 +6,7 @@ description: "The modules handles PUBLISH and SUBSCRIBE messages and generates N
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The modules handles PUBLISH and SUBSCRIBE messages and generates
@@ -47,7 +47,7 @@ The server follows the specifications in: RFC3265, RFC3856, RFC3857,
 	RFC3858.
 
 
-### Presence clustering
+### Presence clustering {#presence_clustering}
 
 
 To read and understand the presence clustering, its abilities and how to
@@ -60,7 +60,7 @@ As data synchronization at startup is performed when using the
 	you should define at least one "seed" node in the cluster in this case.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -81,10 +81,10 @@ The following modules must be loaded before this module:
 - *libxml-dev*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url(str)
+#### db_url(str) {#param_db_url}
 
 
 The database url.
@@ -109,7 +109,7 @@ modparam("presence", "db_url",
 ```
 
 
-#### fallback2db (int)
+#### fallback2db (int) {#param_fallback2db}
 
 
 Setting this parameter enables a fallback to db mode of operation.
@@ -129,7 +129,7 @@ modparam("presence", "fallback2db", 1)
 ```
 
 
-#### cluster_id (int)
+#### cluster_id (int) {#param_cluster_id}
 
 
 The ID of the cluster this presence server belongs to. This parameter
@@ -164,7 +164,7 @@ modparam("presence", "cluster_id", 2)
 ```
 
 
-#### cluster_federation_mode (str)
+#### cluster_federation_mode (str) {#param_cluster_federation_mode}
 
 
 When enabling the federation mode, nodes inside the presence
@@ -210,7 +210,7 @@ modparam("presence", "cluster_federation_mode", "full-sharing")
 ```
 
 
-#### cluster_pres_events (str)
+#### cluster_pres_events (str) {#param_cluster_pres_events}
 
 
 Comma Separated Value (CSV) list with the events to considered by the
@@ -235,7 +235,7 @@ modparam("presence", "cluster_pres_events" ,"presence, dialog;sla, message-summa
 ```
 
 
-#### cluster_be_active_shtag (str)
+#### cluster_be_active_shtag (str) {#param_cluster_be_active_shtag}
 
 
 The name of a cluster sharing tag to be used to indicate when this
@@ -271,7 +271,7 @@ modparam("presence", "cluster_be_active_shtag" ,"local_ha")
 ```
 
 
-#### expires_offset (int)
+#### expires_offset (int) {#param_expires_offset}
 
 
 The extra time to store a subscription/publication.
@@ -290,7 +290,7 @@ modparam("presence", "expires_offset", 10)
 ```
 
 
-#### max_expires_subscribe (int)
+#### max_expires_subscribe (int) {#param_max_expires_subscribe}
 
 
 The the maximum admissible expires value for SUBSCRIBE
@@ -310,7 +310,7 @@ modparam("presence", "max_expires_subscribe", 3600)
 ```
 
 
-#### max_expires_publish (int)
+#### max_expires_publish (int) {#param_max_expires_publish}
 
 
 The the maximum admissible expires value for PUBLISH
@@ -330,7 +330,7 @@ modparam("presence", "max_expires_publish", 3600)
 ```
 
 
-#### contact_user (str)
+#### contact_user (str) {#param_contact_user}
 
 
 This is the username that will be used in the Contact header for the 200 OK
@@ -357,7 +357,7 @@ modparam("presence", "contact_user", "presence")
 ```
 
 
-#### enable_sphere_check (int)
+#### enable_sphere_check (int) {#param_enable_sphere_check}
 
 
 This parameter is a flag that should be set if permission rules 
@@ -381,7 +381,7 @@ modparam("presence", "enable_sphere_check", 1)
 ```
 
 
-#### waiting_subs_daysno (int)
+#### waiting_subs_daysno (int) {#param_waiting_subs_daysno}
 
 
 The number of days to keep the record of a subscription in server
@@ -406,7 +406,7 @@ modparam("presence", "waiting_subs_daysno", 2)
 ```
 
 
-#### mix_dialog_presence (int)
+#### mix_dialog_presence (int) {#param_mix_dialog_presence}
 
 
 This module parameter enables a very nice feature in the presence 
@@ -431,7 +431,7 @@ modparam("presence", "mix_dialog_presence", 1)
 ```
 
 
-#### bla_presentity_spec (str)
+#### bla_presentity_spec (str) {#param_bla_presentity_spec}
 
 
 By default the presentity uri for BLA subscribes (event=dialog;sla)
@@ -459,7 +459,7 @@ modparam("presence", "bla_presentity_spec", "$var(bla_pres)")
 ```
 
 
-#### bla_fix_remote_target (int)
+#### bla_fix_remote_target (int) {#param_bla_fix_remote_target}
 
 
 Polycom has a bug in the bla implementation. It inserts the 
@@ -489,7 +489,7 @@ modparam("presence", "bla_fix_remote_target", 0)
 ```
 
 
-#### notify_offline_body (int)
+#### notify_offline_body (int) {#param_notify_offline_body}
 
 
 If this parameter is set, when no published info is found for
@@ -512,7 +512,7 @@ modparam("presence", "notify_offline_body", 1)
 ```
 
 
-#### end_sub_on_timeout (int)
+#### end_sub_on_timeout (int) {#param_end_sub_on_timeout}
 
 
 If a presence subscription should be automatically terminated 
@@ -534,7 +534,7 @@ modparam("presence", "end_sub_on_timeout", 0)
 ```
 
 
-#### clean_period (int)
+#### clean_period (int) {#param_clean_period}
 
 
 The period at which to clean the expired subscription dialogs.
@@ -554,7 +554,7 @@ modparam("presence", "clean_period", 100)
 ```
 
 
-#### db_update_period (int)
+#### db_update_period (int) {#param_db_update_period}
 
 
 The period at which to synchronize cached subscriber info with the
@@ -575,7 +575,7 @@ modparam("presence", "db_update_period", 100)
 ```
 
 
-#### presentity_table(str)
+#### presentity_table(str) {#param_presentity_table}
 
 
 The name of the db table where Publish information are stored.
@@ -594,7 +594,7 @@ modparam("presence", "presentity_table", "presentity")
 ```
 
 
-#### active_watchers_table(str)
+#### active_watchers_table(str) {#param_active_watchers_table}
 
 
 The name of the db table where active subscription information are 
@@ -614,7 +614,7 @@ modparam("presence", "active_watchers_table", "active_watchers")
 ```
 
 
-#### watchers_table(str)
+#### watchers_table(str) {#param_watchers_table}
 
 
 The name of the db table where subscription states are stored.
@@ -633,7 +633,7 @@ modparam("presence", "watchers_table", "watchers")
 ```
 
 
-#### subs_htable_size (int)
+#### subs_htable_size (int) {#param_subs_htable_size}
 
 
 The size of the hash table to store subscription dialogs.
@@ -654,7 +654,7 @@ modparam("presence", "subs_htable_size", 11)
 ```
 
 
-#### pres_htable_size (int)
+#### pres_htable_size (int) {#param_pres_htable_size}
 
 
 The size of the hash table to store publish records.
@@ -675,10 +675,10 @@ modparam("presence", "pres_htable_size", 11)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### handle_publish([sender_uri])
+#### handle_publish([sender_uri]) {#func_handle_publish}
 
 
 The function handles PUBLISH requests. It stores and updates 
@@ -727,7 +727,7 @@ The module sends an appropriate stateless reply
 ```
 
 
-#### handle_subscribe([force_active] [,sharing_tag])
+#### handle_subscribe([force_active] [,sharing_tag]) {#func_handle_subscribe}
 
 
 This function is to be used for handling SUBSCRIBE requests. It stores
@@ -793,10 +793,10 @@ if($rm=="SUBSCRIBE")
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### refresh_watchers
+#### refresh_watchers {#mi_refresh_watchers}
 
 
 Triggers sending Notify messages to watchers if a change in watchers
@@ -833,7 +833,7 @@ opensips-cli -x mi refresh_watchers sip:11@192.168.2.132 presence 1
 ```
 
 
-#### cleanup
+#### cleanup {#mi_cleanup}
 
 
 Manually triggers the cleanup functions for watchers and presentity tables. Useful if you
@@ -855,7 +855,7 @@ opensips-cli -x mi cleanup
 ```
 
 
-#### pres_phtable_list
+#### pres_phtable_list {#mi_pres_phtable_list}
 
 
 Lists all the presentity records.
@@ -876,7 +876,7 @@ opensips-cli -x mi pres_phtable_list
 ```
 
 
-#### subs_phtable_list
+#### subs_phtable_list {#mi_subs_phtable_list}
 
 
 Lists all the subscription records, or the subscriptions for which the "To" and "From" URIs match the given parameters.
@@ -901,7 +901,7 @@ opensips-cli -x mi subs_phtable_list sip:222@domain2.com sip:user_1@example.com
 ```
 
 
-#### pres_expose
+#### pres_expose {#mi_pres_expose}
 
 
 Exposes in the script, by rasing an
@@ -934,10 +934,10 @@ opensips-cli -x mi pres_expose presence ^sip:10\.0\.5\.[0-9]*
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_PRESENCE_PUBLISH
+#### E_PRESENCE_PUBLISH {#event_E_PRESENCE_PUBLISH}
 
 
 This event is raised when the presence module receives
@@ -959,7 +959,7 @@ Parameters:
 					PUBLISH request
 
 
-#### E_PRESENCE_EXPOSED
+#### E_PRESENCE_EXPOSED {#event_E_PRESENCE_EXPOSED}
 
 
 This event is raised for each presentity exposeed
@@ -1384,10 +1384,10 @@ This function searches is a presence uri has published any presence
 	information. It return 1 if a record is found, -1 otherwise.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1419,7 +1419,7 @@ This function searches is a presence uri has published any presence
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1445,10 +1445,10 @@ This function searches is a presence uri has published any presence
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Jasper Hafkenscheid, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Anca Vamanu, Kennard White, Angel Marin, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Klaus Darilion, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu.

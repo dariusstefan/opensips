@@ -6,7 +6,7 @@ description: "The time needed when writing a new OpenSIPS module unfortunately i
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The time needed when writing a new OpenSIPS module unfortunately is quite high, while the
@@ -77,7 +77,7 @@ On the Perl side, there are a number of functions that let you read and modify t
 		to the Perl interface and the full reference documentation can be found below.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -138,10 +138,10 @@ Although SuSE delivers a lot of perl modules, others may have to be fetched
 		is available on CPAN. It creates RPM files from CPAN.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### filename (string)
+#### filename (string) {#param_filename}
 
 
 This is the file name of your script. This may be set once only, but it may include an arbitary
@@ -161,7 +161,7 @@ modparam("perl", "filename", "/home/john/opensips/myperl.pl")
 ```
 
 
-#### modpath (string)
+#### modpath (string) {#param_modpath}
 
 
 The path to the Perl modules included (OpenSIPS.pm et.al). It is not absolutely
@@ -181,10 +181,10 @@ modparam("perl", "modpath", "/usr/local/lib/opensips/perl/")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### perl_exec_simple(func, [param])
+#### perl_exec_simple(func, [param]) {#func_perl_exec_simple}
 
 
 Calls a perl function *without* passing it the current SIP message.
@@ -216,7 +216,7 @@ if ($rm=="INVITE") {
 ```
 
 
-#### perl_exec(func, [param])
+#### perl_exec(func, [param]) {#func_perl_exec}
 
 
 Calls a perl function *with* passing it the current SIP message.
@@ -251,7 +251,7 @@ if (perl_exec("ldapalias")) {
 ## OpenSIPS Perl API
 
 
-### OpenSIPS
+### OpenSIPS {#ID-d83a4c83b0cd455aef9602128b87c323}
 
 
 This module provides access to a limited number of OpenSIPS core
@@ -259,7 +259,7 @@ This module provides access to a limited number of OpenSIPS core
       they are located in the OpenSIPS::Message class below.
 
 
-#### log(level,message)
+#### log(level,message) {#ID-3ae476990b7b1fe73d972e68eb52f93c}
 
 
 Logs the message with OpenSIPS's logging facility. The logging level
@@ -288,7 +288,7 @@ OpenSIPS::log(L_INFO, "foobar");
 ```
 
 
-### OpenSIPS::Message
+### OpenSIPS::Message {#ID-949656abaac653354242d1d0e9b418be}
 
 
 This package provides access functions for an OpenSIPS `sip_msg` structure and its
@@ -296,34 +296,34 @@ This package provides access functions for an OpenSIPS `sip_msg` structure and i
       alternative routing decisions.
 
 
-#### getType()
+#### getType() {#ID-4462b43922a45955436db6a77eff1274}
 
 
 Returns one of the constants SIP_REQUEST, SIP_REPLY, SIP_INVALID
 	stating the type of the current message.
 
 
-#### getStatus()
+#### getStatus() {#ID-48eb6f3897940320d3dca81eee99e60f}
 
 
 Returns the status code of the current Reply message. This function
 	is invalid in Request context!
 
 
-#### getReason()
+#### getReason() {#ID-06ad673da0ada52b0d53a16dc5edf3c7}
 
 
 Returns the reason of the current Reply message. This function is
 	invalid in Request context!
 
 
-#### getVersion()
+#### getVersion() {#ID-defa3c4593f2232a246f800880c3db8d}
 
 
 Returns the version string of the current SIP message.
 
 
-#### getRURI()
+#### getRURI() {#ID-40655f47473dfd0b09ab79f021379661}
 
 
 This function returns the recipient URI of the present SIP message:
@@ -340,7 +340,7 @@ getRURI returns a string. See ["getParsedRURI()"](#ID-f20c57aaa92a757d7152aa0479
 This function is valid in request messages only.
 
 
-#### getMethod()
+#### getMethod() {#ID-09d760cb43aa35ee3338a63959e1ad52}
 
 
 Returns the current method, such as `INVITE`, `REGISTER`, `ACK` and so on.
@@ -353,7 +353,7 @@ Returns the current method, such as `INVITE`, `REGISTER`, `ACK` and so on.
 This function is valid in request messages only.
 
 
-#### getFullHeader()
+#### getFullHeader() {#ID-29a7bfa2b533d46b900690c15e89dac0}
 
 
 Returns the full message header as present in the current message.
@@ -365,19 +365,19 @@ Returns the full message header as present in the current message.
 	$m->getFullHeader();`
 
 
-#### getBody()
+#### getBody() {#ID-d4227612556f15885224f8d7c9baa63d}
 
 
 Returns the message body.
 
 
-#### getMessage()
+#### getMessage() {#ID-5c55b75dca8e197bf8d4e9195f3fc78b}
 
 
 Returns the whole message including headers and body.
 
 
-#### getHeader(name)
+#### getHeader(name) {#ID-2cd2368ec9da09ded819e54da7ed7e56}
 
 
 Returns the body of the first message header with this name.
@@ -391,13 +391,13 @@ Returns the body of the first message header with this name.
 	<sip:john@doe.example>`**
 
 
-#### getHeaderNames()
+#### getHeaderNames() {#ID-e6f4b718fa39a84855f41d5048abfd17}
 
 
 Returns an array of all header names. Duplicates possible!
 
 
-#### moduleFunction(func,string1,string2)
+#### moduleFunction(func,string1,string2) {#ID-7b0efd72c8ec89bc43dad940590b40c6}
 
 
 Search for an arbitrary function in module exports and call it with
@@ -529,7 +529,7 @@ Here is a list of functions that are expected to be working (not
 ```
 
 
-#### log(level,message) (deprecated type)
+#### log(level,message) (deprecated type) {#ID-9fb36151aa2a86585e66dc19227b7d92}
 
 
 Logs the message with OpenSIPS's logging facility. The logging level
@@ -551,7 +551,7 @@ The logging function should be accessed via the OpenSIPS module
 	variant. This one, located in OpenSIPS::Message, is deprecated.
 
 
-#### rewrite_ruri(newruri)
+#### rewrite_ruri(newruri) {#ID-b6b5403d6a2b667316e7ce7ddd0937d0}
 
 
 Sets a new destination (recipient) URI. Useful for rerouting the
@@ -565,26 +565,26 @@ if ($m->getRURI() =~ m/\@somedomain.net/) {
 ```
 
 
-#### setFlag(flag)
+#### setFlag(flag) {#ID-43bdd45f2267be3165993d728ae6ac58}
 
 
 Sets a message flag. The constants as known from the C API may be
 	used, when Constants.pm is included.
 
 
-#### resetFlag(flag)
+#### resetFlag(flag) {#ID-d3f836fca6d5be320332751cb544a50b}
 
 
 Resets a message flag.
 
 
-#### isFlagSet(flag)
+#### isFlagSet(flag) {#ID-9df30424b7e93814c7928cf5899a12cc}
 
 
 Returns whether a message flag is set or not.
 
 
-#### pseudoVar(string)
+#### pseudoVar(string) {#ID-cfb8c8675a6620394b21ab786379acfa}
 
 
 Returns a new string where all pseudo variables are substituted by
@@ -596,157 +596,157 @@ Returns a new string where all pseudo variables are substituted by
 	'$' sign in perl strings!**
 
 
-#### append_branch(branch,qval)
+#### append_branch(branch,qval) {#ID-098e67bc760ef445343eb9e8f93ece8b}
 
 
 Append a branch to current message.
 
 
-#### serialize_branches(clean_before, keep_order)
+#### serialize_branches(clean_before, keep_order) {#ID-bff5c83f8c28e72abf1d8a5204310202}
 
 
 Serialize branches.
 
 
-#### next_branches()
+#### next_branches() {#ID-db3ce723c8e1880caf5fc0cb9ed7aa4d}
 
 
 Next branches.
 
 
-#### getParsedRURI()
+#### getParsedRURI() {#ID-f20c57aaa92a757d7152aa0479ee1fc0}
 
 
 Returns the current destination URI as an OpenSIPS::URI object.
 
 
-### OpenSIPS::URI
+### OpenSIPS::URI {#ID-ea7b3e8a4dc6ddf7af0e02f7cec8eef1}
 
 
 This package provides functions for access to sip_uri structures.
 
 
-#### user()
+#### user() {#ID-f0b0fe573c97823c7db7e6d2f763eecd}
 
 
 Returns the user part of this URI.
 
 
-#### host()
+#### host() {#ID-13f823f4d5d264262256ce6c13ebda7f}
 
 
 Returns the host part of this URI.
 
 
-#### passwd()
+#### passwd() {#ID-f16f4d3590aeadbb89be6381c63d31ba}
 
 
 Returns the passwd part of this URI.
 
 
-#### port()
+#### port() {#ID-0e78ab3771467ade60bb813acff96e1f}
 
 
 Returns the port part of this URI.
 
 
-#### params()
+#### params() {#ID-f09a07f5c225a4cdc0c8cf1b562feca5}
 
 
 Returns the params part of this URI.
 
 
-#### headers()
+#### headers() {#ID-6ac4960ecbb77b9b208182e39c3fced6}
 
 
 Returns the headers part of this URI.
 
 
-#### transport()
+#### transport() {#ID-edbeee75601887c5522ec606864fcf06}
 
 
 Returns the transport part of this URI.
 
 
-#### ttl()
+#### ttl() {#ID-9b062529593a90fa98b8fdaf147d9625}
 
 
 Returns the ttl part of this URI.
 
 
-#### user_param()
+#### user_param() {#ID-af281c7d5fa29dfa3d059c93e2ece82f}
 
 
 Returns the user_param part of this URI.
 
 
-#### maddr()
+#### maddr() {#ID-cc3ad600892aefceee9bb7f7d083b9eb}
 
 
 Returns the maddr part of this URI.
 
 
-#### method()
+#### method() {#ID-bcde93cc9055b03c23ac61f4f7aba922}
 
 
 Returns the method part of this URI.
 
 
-#### lr()
+#### lr() {#ID-ffda2446aa820304039c53eaca5c1383}
 
 
 Returns the lr part of this URI.
 
 
-#### r2()
+#### r2() {#ID-e07722a580a9e670d428835b7efacfaf}
 
 
 Returns the r2 part of this URI.
 
 
-#### transport_val()
+#### transport_val() {#ID-20d6cdc41465025baceba8056215ac58}
 
 
 Returns the transport_val part of this URI.
 
 
-#### ttl_val()
+#### ttl_val() {#ID-6643223dbdb425407fe9801fd4d2fa5b}
 
 
 Returns the ttl_val part of this URI.
 
 
-#### user_param_val()
+#### user_param_val() {#ID-aa87e27dd0cce4de62a0f32a7ecb7a33}
 
 
 Returns the user_param_val part of this URI.
 
 
-#### maddr_val()
+#### maddr_val() {#ID-85b278e13c1c6169d612921b32a42c3a}
 
 
 Returns the maddr_val part of this URI.
 
 
-#### method_val()
+#### method_val() {#ID-64d75002d2db35d7a66847e0c92f37a9}
 
 
 Returns the method_val part of this URI.
 
 
-#### lr_val()
+#### lr_val() {#ID-cdb1f6d4201cd9b6ee19e6f58236a900}
 
 
 Returns the lr_val part of this URI.
 
 
-#### r2_val()
+#### r2_val() {#ID-af30e585b8decaf3e377375210e977b6}
 
 
 Returns the r2_val part of this URI.
 
 
-### OpenSIPS::AVP
+### OpenSIPS::AVP {#ID-f092a1ce520e2e575c41702289adf85e}
 
 
 This package provides access functions for OpenSIPS's AVPs. These
@@ -759,7 +759,7 @@ Please note that these functions do NOT support the notation used in
       documentation of add method below.
 
 
-#### add(name,val)
+#### add(name,val) {#ID-d4453222c49e08dc556c25a6586a00bc}
 
 
 Add an AVP.
@@ -790,7 +790,7 @@ due to this evaluation: The first will create _string_ AVPs with
 You can modify/overwrite AVPs with this function.
 
 
-#### get(name)
+#### get(name) {#ID-ad3f402b1c78426a3a1de4d0c1d9ad6c}
 
 
 get an OpenSIPS AVP:
@@ -802,7 +802,7 @@ my $stravp = OpenSIPS::AVP::get("foo");
 ```
 
 
-#### destroy(name)
+#### destroy(name) {#ID-15db533161502fc4591ec9acdd990ef4}
 
 
 Destroy an AVP.
@@ -814,7 +814,7 @@ OpenSIPS::AVP::destroy("foo");
 ```
 
 
-### OpenSIPS::Utils::PhoneNumbers
+### OpenSIPS::Utils::PhoneNumbers {#ID-b2dcbd51ac3a3e6208edd5e4f6a5ef63}
 
 
 OpenSIPS::Utils::PhoneNumbers - Functions for canonical forms of phone
@@ -885,7 +885,7 @@ The following fields should be set:
 This module exports the following functions when `use`ed:
 
 
-#### new(publicAccessPrefix,internationalPrefix,longDistancePrefix,countryCode,areaCode,pbxCode)
+#### new(publicAccessPrefix,internationalPrefix,longDistancePrefix,countryCode,areaCode,pbxCode) {#ID-bd49dfdfc2284e87abd95fbce2d63cbd}
 
 
 The new operator returns an object of this type and sets its
@@ -895,7 +895,7 @@ The new operator returns an object of this type and sets its
 	 above.
 
 
-#### canonicalForm( number [, context] )
+#### canonicalForm( number [, context] ) {#ID-aa52786fee82fe6e26ac766b30a1a4fa}
 
 
 Convert a phone number (given as first argument) into its canonical
@@ -903,7 +903,7 @@ Convert a phone number (given as first argument) into its canonical
 	default context from the systems configuration file is used.
 
 
-#### dialNumber( number [, context] )
+#### dialNumber( number [, context] ) {#ID-31479dee3ae037c27cd7a84aa7358bd2}
 
 
 Convert a canonical phone number (given in the first argument) into
@@ -911,7 +911,7 @@ Convert a canonical phone number (given in the first argument) into
 	argument, a default context from the systems configuration is used.
 
 
-### OpenSIPS::LDAPUtils::LDAPConf
+### OpenSIPS::LDAPUtils::LDAPConf {#ID-05a2ba8f92ec3fe3d26bcb69d169a1b1}
 
 
 OpenSIPS::LDAPUtils::LDAPConf - Read openldap config from standard
@@ -933,32 +933,32 @@ When used from an account with sufficient privilegs (e.g. root), the
       ldap manager passwort is also retrieved.
 
 
-#### Constructor new()
+#### Constructor new() {#ID-77bbb24cd07a34db564171c3072c9f8c}
 
 
 Returns a new, initialized `OpenSIPS::LDAPUtils::LDAPConf`
 	object.
 
 
-#### Method base()
+#### Method base() {#ID-09b3942c6aa316dd4659cc1d84cfab21}
 
 
 Returns the servers base-dn to use when doing queries.
 
 
-#### Method host()
+#### Method host() {#ID-cabd9882c784cf96cf68ca988c1dae0f}
 
 
 Returns the ldap host to contact.
 
 
-#### Method port()
+#### Method port() {#ID-467ec702bbcdb63e337bbff9e3a5bf01}
 
 
 Returns the ldap servers port.
 
 
-#### Method uri()
+#### Method uri() {#ID-1a047746515766cf720b5cc0f154c783}
 
 
 Returns an uri to contact the ldap server. When there is no
@@ -966,7 +966,7 @@ Returns an uri to contact the ldap server. When there is no
 	and port.
 
 
-#### Method rootbindpw()
+#### Method rootbindpw() {#ID-35ebbd3612d026b4176d2eb8eae428b0}
 
 
 Returns the ldap "root" password.
@@ -977,13 +977,13 @@ Note that the `rootbindpw`
 	to access `/etc/openldap/ldap.secret`.
 
 
-#### Method rootbinddn()
+#### Method rootbinddn() {#ID-5e0c4c1de34f9247439d8d10d6734b9e}
 
 
 Returns the DN to use for "root"-access to the ldap server.
 
 
-#### Method binddn()
+#### Method binddn() {#ID-cdb5e3ce4599d0613db43f1f387f7ea6}
 
 
 Returns the DN to use for authentication to the ldap server. When
@@ -991,14 +991,14 @@ Returns the DN to use for authentication to the ldap server. When
 	the `rootbinddn`.
 
 
-#### Method bindpw()
+#### Method bindpw() {#ID-3c51d4eeaae6feb7498a2f562b176df3}
 
 
 Returns the password to use for authentication to the ldap server.
 	When no bind password has been specified, returns the `rootbindpw` if any.
 
 
-### OpenSIPS::LDAPUtils::LDAPConnection
+### OpenSIPS::LDAPUtils::LDAPConnection {#ID-10d643239760bcd4a2286051808d077e}
 
 
 OpenSIPS::LDAPUtils::LDAPConnection - Perl module to perform simple
@@ -1031,7 +1031,7 @@ This perl module offers a somewhat simplified interface to the
       retrieved without the overhead of the full featured `Net::LDAP`.
 
 
-#### Constructor new( [config, [authenticated]] )
+#### Constructor new( [config, [authenticated]] ) {#ID-58e29437b48125a88033370afe8fa32b}
 
 
 Set up a new LDAP connection.
@@ -1052,7 +1052,7 @@ On success, a new `LDAPConnection` object is
 	returned, otherwise the result is `undef`.
 
 
-#### Function/Method search( conf, filter, base, [requested_attributes ...])
+#### Function/Method search( conf, filter, base, [requested_attributes ...]) {#ID-129bd2634f1c36a401321f2fa34be026}
 
 
 perform an ldap search, return the dn of the first matching
@@ -1072,7 +1072,7 @@ Otherwise the `conf`
 	from previous queries will be reused.
 
 
-##### Arguments:
+##### Arguments: {#ID-fb371aca693935a2ea3467c59473c78f}
 
 
 **conf**
@@ -1102,7 +1102,7 @@ retrieve the given attributes instead of the dn from the
 		  ldap directory.
 
 
-##### Result:
+##### Result: {#ID-5c0875c73d1d44335ab71b50d8930584}
 
 
 Without any specific `requested_attributes`, return
@@ -1114,7 +1114,7 @@ When some `requested_attributes` are given,
 	  the query, the attribute lists are concatenated.
 
 
-### OpenSIPS::VDB
+### OpenSIPS::VDB {#ID-94fdb1e4103544a567ac38ee23c8a4d1}
 
 
 This package is an (abstract) base class for all virtual databases.
@@ -1126,7 +1126,7 @@ The base class itself should NOT be used in this context, as it does
       not provide any functionality.
 
 
-### OpenSIPS::Constants
+### OpenSIPS::Constants {#ID-d97df315e2044f430319fc4cd9937aa5}
 
 
 This package provides a number of constants taken from enums and
@@ -1135,13 +1135,13 @@ This package provides a number of constants taken from enums and
       are in doubt.
 
 
-### OpenSIPS::VDB::Adapter::Speeddial
+### OpenSIPS::VDB::Adapter::Speeddial {#ID-9658bbad14831f685cca13a5c9bb4335}
 
 
 This adapter can be used with the speeddial module.
 
 
-### OpenSIPS::VDB::Adapter::Alias
+### OpenSIPS::VDB::Adapter::Alias {#ID-5cdb14839de18c32782e3d768e170da7}
 
 
 This package is intended for usage with the alias_db module. The
@@ -1149,21 +1149,21 @@ This package is intended for usage with the alias_db module. The
       arguments (user name/domain).
 
 
-#### query(conds,retkeys,order)
+#### query(conds,retkeys,order) {#ID-748da8d11c20576948ef68d62753a06a}
 
 
 Queries the vtab with the given arguments for request conditions,
 	keys to return and sort order column name.
 
 
-### OpenSIPS::VDB::Adapter::AccountingSIPtrace
+### OpenSIPS::VDB::Adapter::AccountingSIPtrace {#ID-8165ac0b808b36ff72ee4032e0f62881}
 
 
 This package is an Adapter for the acc and tracer modules,
       featuring only an insert operation.
 
 
-### OpenSIPS::VDB::Adapter::Describe
+### OpenSIPS::VDB::Adapter::Describe {#ID-048913e15394a9675cfe02af5c340528}
 
 
 This package is intended for debug usage. It will print information
@@ -1174,7 +1174,7 @@ Use this module to request schema information when creating new
       adapters.
 
 
-### OpenSIPS::VDB::Adapter::Auth
+### OpenSIPS::VDB::Adapter::Auth {#ID-682dd320dd536e7fb0de4a24e9d1e46e}
 
 
 This adapter is intended for usage with the auth_db module. The VTab
@@ -1182,7 +1182,7 @@ This adapter is intended for usage with the auth_db module. The VTab
       password.
 
 
-### OpenSIPS::VDB::ReqCond
+### OpenSIPS::VDB::ReqCond {#ID-f245c032bf4b4837415c871537a63e3b}
 
 
 This package represents a request condition for database access,
@@ -1194,19 +1194,19 @@ This package inherits from OpenSIPS::VDB::Pair and thus includes its
       methods.
 
 
-#### new(key,op,type,name)
+#### new(key,op,type,name) {#ID-c50f7cee51ceffdb7253101a36d6b7b3}
 
 
 Constructs a new Column object.
 
 
-#### op()
+#### op() {#ID-cb5f02a3144f3af620484048b11472af}
 
 
 Returns or sets the current operator.
 
 
-### OpenSIPS::VDB::Pair
+### OpenSIPS::VDB::Pair {#ID-4be9a5fa03b11c2c2dad3594fc3b585d}
 
 
 This package represents database key/value pairs, consisting of a
@@ -1217,19 +1217,19 @@ This package inherits from OpenSIPS::VDB::Value and thus has the same
       methods.
 
 
-#### new(key,type,name)
+#### new(key,type,name) {#ID-e6cc5b1a997ea8e29d2a00b986784dc0}
 
 
 Constructs a new Column object.
 
 
-#### key()
+#### key() {#ID-9c70856322a870405521ad299a6785d6}
 
 
 Returns or sets the current key.
 
 
-### OpenSIPS::VDB::VTab
+### OpenSIPS::VDB::VTab {#ID-41cd8a9b5b94c05139d2a7f62d5a967b}
 
 
 This package handles virtual tables and is used by the OpenSIPS::VDB
@@ -1237,7 +1237,7 @@ This package handles virtual tables and is used by the OpenSIPS::VDB
       inteded for end user access.
 
 
-#### new()
+#### new() {#ID-a42ddb87d67983028cf8d1b7d6f46baa}
 
 
 ```
@@ -1245,21 +1245,21 @@ Constructs a new VTab object
 ```
 
 
-#### call(op,[args])
+#### call(op,[args]) {#ID-c00e2c0b9abc7cd56be59f2b051a538c}
 
 
 Invokes an operation on the table (insert, update, ...) with the
 	given arguments.
 
 
-### OpenSIPS::VDB::Value
+### OpenSIPS::VDB::Value {#ID-dd87abbf6c21bba656e60f50bf1db81b}
 
 
 This package represents a database value. Additional to the data
       itself, information about its type is stored.
 
 
-#### stringification
+#### stringification {#ID-f8210a055e2dc48b7cd31acfbe483ef9}
 
 
 When accessing a OpenSIPS::VDB::Value object as a string, it simply
@@ -1284,34 +1284,34 @@ use OpenSIPS; use OpenSIPS::Constants;
 our @ISA = qw ( OpenSIPS::Utils::Debug );
 
 
-#### new(type,data)
+#### new(type,data) {#ID-246aa300bb8cb062e3126e6eddd094c4}
 
 
 Constructs a new Value object. Its data type and the data are
 	passed as parameters.
 
 
-#### type()
+#### type() {#ID-1b24f490feaba7e8ffde5919a34a3ea5}
 
 
 Returns or sets the current data type. Please consider using the
 	constants from OpenSIPS::Constants
 
 
-#### data()
+#### data() {#ID-8ed1b290ce747e1e6fc97d5c253d67eb}
 
 
 Returns or sets the current data.
 
 
-### OpenSIPS::VDB::Column
+### OpenSIPS::VDB::Column {#ID-01b04d0ae14c862d7543534782702100}
 
 
 This package represents database column definition, consisting of a
       column name and its data type.
 
 
-#### Stringification
+#### Stringification {#ID-c1f63ab2d499e0ffb0eff65d3d1bcaa3}
 
 
 When accessing a OpenSIPS::VDB::Column object as a string, it simply
@@ -1333,27 +1333,27 @@ use OpenSIPS; use OpenSIPS::Constants;
 our @ISA = qw ( OpenSIPS::Utils::Debug );
 
 
-#### new(type,name)
+#### new(type,name) {#ID-9be0a542b4be1d36c09e57a0a7785b8b}
 
 
 Constructs a new Column object. Its type and the name are passed as
 	parameters.
 
 
-#### type( )
+#### type( ) {#ID-9e27faa58b7b4659e2d511fd4ed58ccd}
 
 
 Returns or sets the current type. Please consider using the
 	constants from OpenSIPS::Constants
 
 
-#### name()
+#### name() {#ID-e3219d620b6d1b4f5656ee466ef3cf22}
 
 
 Returns or sets the current column name.
 
 
-#### OpenSIPS::VDB::Result
+#### OpenSIPS::VDB::Result {#ID-07e232dc068e186782a8d0c0bbae91d3}
 
 
 This class represents a VDB result set. It contains a column
@@ -1361,7 +1361,7 @@ This class represents a VDB result set. It contains a column
 	references to arrays of scalars.
 
 
-#### new(coldefs,[row, row, ...])
+#### new(coldefs,[row, row, ...]) {#ID-54e80aeec6aaaa66afb9548d25388dea}
 
 
 The constructor creates a new Result object. Its first parameter is
@@ -1370,7 +1370,7 @@ The constructor creates a new Result object. Its first parameter is
 	references to arrays of scalars.
 
 
-#### coldefs()
+#### coldefs() {#ID-c77fe41ba24f3f04c12254c9f001bb27}
 
 
 ```
@@ -1378,7 +1378,7 @@ Returns or sets the column definition of the object.
 ```
 
 
-#### rows()
+#### rows() {#ID-a20f0baefcdf46a3e923bb02203b3792}
 
 
 ```
@@ -1568,10 +1568,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1603,7 +1603,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1629,10 +1629,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Bastian Friedrich.

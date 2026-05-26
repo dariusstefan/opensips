@@ -6,7 +6,7 @@ description: "This module provides functionalities for different methods of grou
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides functionalities for different methods of group
@@ -38,7 +38,7 @@ Due performance reasons (regular expression evaluation), DB cache
 			startup and all regular expressions are compiled.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -61,10 +61,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 URL of the database table to be used.
@@ -80,7 +80,7 @@ modparam("group", "db_url", "mysql://username:password@dbhost/opensips")
 ```
 
 
-#### table (string)
+#### table (string) {#param_table}
 
 
 Name of the table holding strict definitions of groups and
@@ -100,7 +100,7 @@ modparam("group", "table", "grp_table")
 ```
 
 
-#### user_column (string)
+#### user_column (string) {#param_user_column}
 
 
 Name of the "table" column holding usernames.
@@ -119,7 +119,7 @@ modparam("group", "user_column", "user")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 Name of the "table" column holding domains.
@@ -138,7 +138,7 @@ modparam("group", "domain_column", "realm")
 ```
 
 
-#### group_column (string)
+#### group_column (string) {#param_group_column}
 
 
 Name of the "table" column holding groups.
@@ -157,7 +157,7 @@ modparam("group", "group_column", "grp")
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 If enabled (set to non zero value) then domain will be used also used
@@ -178,7 +178,7 @@ modparam("group", "use_domain", 1)
 ```
 
 
-#### re_table (string)
+#### re_table (string) {#param_re_table}
 
 
 Name of the table holding definitions for regular-expression
@@ -199,7 +199,7 @@ modparam("group", "re_table", "re_grp")
 ```
 
 
-#### re_exp_column (string)
+#### re_exp_column (string) {#param_re_exp_column}
 
 
 Name of the "re_table" column holding the regular
@@ -219,7 +219,7 @@ modparam("group", "re_exp_column", "re")
 ```
 
 
-#### re_gid_column (string)
+#### re_gid_column (string) {#param_re_gid_column}
 
 
 Name of the "re_table" column holding the group IDs.
@@ -238,7 +238,7 @@ modparam("group", "re_gid_column", "grp_id")
 ```
 
 
-#### multiple_gid (integer)
+#### multiple_gid (integer) {#param_multiple_gid}
 
 
 If enabled (non zero value) the regular-expression matching will
@@ -259,7 +259,7 @@ modparam("group", "multiple_gid", 0)
 ```
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -275,10 +275,10 @@ modparam("group", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### db_is_user_in(uri, group)
+#### db_is_user_in(uri, group) {#func_db_is_user_in}
 
 
 This function is to be used for script group membership. The function
@@ -331,7 +331,7 @@ if (db_is_user_in("Credentials", $avp(grouptocheck))) {
 ```
 
 
-#### db_get_user_group(uri, output_avp)
+#### db_get_user_group(uri, output_avp) {#func_db_get_user_group}
 
 
 This function is to be used for regular expression based group
@@ -386,7 +386,7 @@ if (db_get_user_group("Request-URI", $avp(10))) {
 ```
 
 
-#### aaa_is_user_in(uri, group)
+#### aaa_is_user_in(uri, group) {#func_aaa_is_user_in}
 
 
 This function checks group membership, using AAA support.
@@ -430,10 +430,10 @@ if (aaa_is_user_in("Request-URI", "ld")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -465,7 +465,7 @@ if (aaa_is_user_in("Request-URI", "ld")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -491,10 +491,10 @@ if (aaa_is_user_in("Request-URI", "ld")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)), Jan Janak ([@janakj](https://github.com/janakj)).

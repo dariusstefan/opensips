@@ -6,7 +6,7 @@ description: "This module is a management module for TLS certificates and parame
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is a management module for TLS certificates and
@@ -119,7 +119,7 @@ For any TLS domain (defined through script or DB) if not specified otherwise, th
 - ec_curve -  none
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -142,10 +142,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### is_peer_verified
+#### is_peer_verified {#func_is_peer_verified}
 
 
 Returns 1 if the message is received via TLS and the peer was verified
@@ -169,16 +169,16 @@ if (is_peer_verified()) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### tls_list
+#### tls_list {#mi_tls_list}
 
 
 List all domains information.
 
 
-#### tls_reload
+#### tls_reload {#mi_tls_reload}
 
 
 Reloads the TLS domains information from the database.
@@ -193,7 +193,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-TLS.
 
 
-#### listen=interface
+#### listen=interface {#param_listen}
 
 
 Not specific to TLS. Allows to specify the protocol
@@ -212,7 +212,7 @@ socket= tls:1.2.3.4:5061
 ```
 
 
-#### tls_library (string)
+#### tls_library (string) {#param_tls_library}
 
 
 Selects which TLS library to use. Possible values are:
@@ -248,7 +248,7 @@ modparam("tls_mgm", "tls_library", "none")
 ```
 
 
-#### tls_method ([domain]string)
+#### tls_method ([domain]string) {#param_tls_method}
 
 
 Sets the TLS protocol. The domain part represents the name of
@@ -319,7 +319,7 @@ modparam("tls_mgm", "tls_method", "[dom]-")              # all supported
 ```
 
 
-#### certificate ([domain](string)
+#### certificate ([domain](string) {#param_certificate}
 
 
 Public certificate file for OpenSIPS. It will be used as
@@ -342,7 +342,7 @@ modparam("tls_mgm", "certificate", "[dom]/mycerts/certs/opensips_server_cert.pem
 ```
 
 
-#### private_key ([domain](string)
+#### private_key ([domain](string) {#param_private_key}
 
 
 Private key of the above certificate. I must be kept in a
@@ -364,7 +364,7 @@ modparam("tls_mgm", "private_key", "[dom]/mycerts/private/prik.pem")
 ```
 
 
-#### ca_list ([domain](string)
+#### ca_list ([domain](string) {#param_ca_list}
 
 
 List of trusted CAs. The file contains the certificates
@@ -387,7 +387,7 @@ modparam("tls_mgm", "ca_list", "[dom]/mycerts/certs/ca_list.pem")
 ```
 
 
-#### ca_dir ([domain](string)
+#### ca_dir ([domain](string) {#param_ca_dir}
 
 
 Directory storing trusted CAs. The certificates in the directory
@@ -411,7 +411,7 @@ modparam("tls_mgm", "ca_dir", "[dom]/mycerts/certs")
 ```
 
 
-#### crl_dir ([domain](string)
+#### crl_dir ([domain](string) {#param_crl_dir}
 
 
 Directory storing certificate revocation lists (CRLs). The domain
@@ -432,7 +432,7 @@ modparam("tls_mgm", "crl_dir", "[dom]/mycerts/crls")
 ```
 
 
-#### crl_check_all ([domain](string)
+#### crl_check_all ([domain](string) {#param_crl_check_all}
 
 
 Setting this parameter with a non-zero integer value enables CRL
@@ -454,7 +454,7 @@ modparam("tls_mgm", "crl_check_all", "[dom]1")
 ```
 
 
-#### ciphers_list ([domain](string)
+#### ciphers_list ([domain](string) {#param_ciphers_list}
 
 
 You can specify the list of algorithms for authentication
@@ -483,7 +483,7 @@ modparam("tls_mgm", "ciphers_list", "[dom]NULL")
 ```
 
 
-#### dh_params ([domain](string)
+#### dh_params ([domain](string) {#param_dh_params}
 
 
 You can specify a file which contains Diffie-Hellman
@@ -506,7 +506,7 @@ modparam("tls_mgm", "dh_params", "[dom]/etc/pki/CA/dh1024.pem")
 ```
 
 
-#### ec_curve ([domain](string)
+#### ec_curve ([domain](string) {#param_ec_curve}
 
 
 You can specify an elliptic curve which should be used for
@@ -527,7 +527,7 @@ It's usable only if TLS v1.1/1.2 support was compiled.
 *It defaults to not set a elliptic curve.*
 
 
-#### verify_cert ([domain](string)
+#### verify_cert ([domain](string) {#param_verify_cert}
 
 
 Activates SSL_VERIFY_PEER in the ssl_context. For a detailed
@@ -551,7 +551,7 @@ modparam("tls_mgm", "verify_cert", "[dom]0")
 ```
 
 
-#### require_cert ([domain](string)
+#### require_cert ([domain](string) {#param_require_cert}
 
 
 Activates SSL_VERIFY_FAIL_IF_NO_PEER_CERT in the ssl_context. For a
@@ -577,7 +577,7 @@ modparam("tls_mgm", "require_cert", "[dom]0")
 ```
 
 
-#### client_tls_domain_avp (string)
+#### client_tls_domain_avp (string) {#param_client_tls_domain_avp}
 
 
 Name of the AVP used for enforcing the selection of a specific TLS
@@ -610,7 +610,7 @@ modparam("tls_mgm", "client_tls_domain_avp", "tls_match_dom")
 ```
 
 
-#### client_sip_domain_avp (string)
+#### client_sip_domain_avp (string) {#param_client_sip_domain_avp}
 
 
 Name of the AVP that sets the SIP domain used in the TLS client
@@ -644,7 +644,7 @@ modparam("tls_mgm", "client_sip_domain_avp", "sip_match_dom")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The database url. It cannot be NULL.
@@ -951,7 +951,7 @@ modparam("tls_mgm", "ec_curve_col", "ec_curve")
 ```
 
 
-#### match_ip_address (string)
+#### match_ip_address (string) {#param_match_ip_address}
 
 
 The IP addresses and ports used to match a TLS connection with a
@@ -979,7 +979,7 @@ modparam("tls_mgm", "match_ip_address", "[dom1]10.0.0.10:5061, 10.0.0.11:5061")
 ```
 
 
-#### match_sip_domain (string)
+#### match_sip_domain (string) {#param_match_sip_domain}
 
 
 The SIP domains used to match a TLS connection with a
@@ -1021,7 +1021,7 @@ modparam("tls_mgm", "match_sip_domain", "[default_dom]*")
 ```
 
 
-#### server_domain, client_domain (string)
+#### server_domain, client_domain (string) {#domains-param}
 
 
 You can define virtual TLS domains through these parameters.
@@ -1331,7 +1331,7 @@ Some variables are available for both, the peer'S certificate and
 			String type.
 
 
-### OpenSIPS with TLS - script example
+### OpenSIPS with TLS - script example {#tls-example}
 
 
 IMPORTANT: The TLS support is based on TCP, and for allowing OpenSIPS
@@ -1598,7 +1598,7 @@ xlog("L_INFO","================= end TLS pseudo variables ===============\n");
 ### API Functions
 
 
-#### find_server_domain
+#### find_server_domain {#find-server-domain-id}
 
 
 struct tls_domain *find_server_domain(struct ip_addr *ip,
@@ -1609,7 +1609,7 @@ Find a TLS server domain with given ip and port
                     (local listening socket).
 
 
-#### find_client_domain
+#### find_client_domain {#find-client-domain-id}
 
 
 struct tls_domain *find_client_domain(struct ip_addr *ip,
@@ -1619,7 +1619,7 @@ struct tls_domain *find_client_domain(struct ip_addr *ip,
 Find TLS client domain.
 
 
-#### get_handshake_timeout
+#### get_handshake_timeout {#get-handshake-timeout-id}
 
 
 int get_handshake_timeout(void);
@@ -1628,7 +1628,7 @@ int get_handshake_timeout(void);
 Returns the handshanke timeout.
 
 
-#### get_send_timeout
+#### get_send_timeout {#get-send-timeout-id}
 
 
 int get_send_timeout(void);
@@ -1824,10 +1824,10 @@ void tls_free_domains(void);
 Cleans up the entire domain lists.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1859,7 +1859,7 @@ Cleans up the entire domain lists.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1885,10 +1885,10 @@ Cleans up the entire domain lists.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).

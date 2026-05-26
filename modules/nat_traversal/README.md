@@ -6,7 +6,7 @@ description: "The nat_traversal module provides support for handling far-end NAT
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The nat_traversal module provides support for handling far-end NAT
@@ -278,7 +278,7 @@ Considering the elements presented in this section, we can say that
         module, which should also improve its efficiency.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -308,7 +308,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### keepalive_interval (integer)
+#### keepalive_interval (integer) {#param_keepalive_interval}
 
 
 The time interval (in seconds) required to send a keepalive message to
@@ -331,7 +331,7 @@ modparam("nat_traversal", "keepalive_interval", 90)
 ```
 
 
-#### keepalive_method (string)
+#### keepalive_method (string) {#param_keepalive_method}
 
 
 What SIP method to use to send keepalive messages. Typical methods
@@ -368,7 +368,7 @@ modparam("nat_traversal", "keepalive_method", "OPTIONS")
 ```
 
 
-#### keepalive_from (string)
+#### keepalive_from (string) {#param_keepalive_from}
 
 
 Indicates what SIP URI to use in the From header of the keepalive
@@ -393,7 +393,7 @@ modparam("nat_traversal", "keepalive_from", "sip:keepalive@my-domain.com")
 ```
 
 
-#### keepalive_extra_headers (string)
+#### keepalive_extra_headers (string) {#param_keepalive_extra_headers}
 
 
 Specifies extra headers that should be added to the keepalive messages
@@ -416,7 +416,7 @@ modparam("nat_traversal", "keepalive_extra_headers", "User-Agent: OpenSIPS\r\nX-
 ```
 
 
-#### keepalive_state_file (string)
+#### keepalive_state_file (string) {#param_keepalive_state_file}
 
 
 Specifies a filename where information about the NAT endpoints and the
@@ -449,7 +449,7 @@ modparam("nat_traversal", "keepalive_state_file", "/run/opensips/keepalive_state
 ```
 
 
-#### cluster_id (integer)
+#### cluster_id (integer) {#param_cluster_id}
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -482,7 +482,7 @@ modparam("nat_traversal", "cluster_id", 9)
 ```
 
 
-#### cluster_sharing_tag (string)
+#### cluster_sharing_tag (string) {#param_cluster_sharing_tag}
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -518,7 +518,7 @@ modparam("nat_traversal", "cluster_sharing_tag", "vip")
 ### Exported Functions
 
 
-#### client_nat_test(type)
+#### client_nat_test(type) {#func_client_nat_test}
 
 
 Check if the client is behind NAT. What tests are performed is
@@ -559,7 +559,7 @@ if (client_nat_test(3)) {
 ```
 
 
-#### fix_contact()
+#### fix_contact() {#func_fix_contact}
 
 
 Will replace the IP and port in the Contact header with the
@@ -583,7 +583,7 @@ if (client_nat_test(3)) {
 ```
 
 
-#### nat_keepalive()
+#### nat_keepalive() {#func_nat_keepalive}
 
 
 Trigger keepalive functionality for the source address of the request.
@@ -623,38 +623,38 @@ if (($rm=="REGISTER" || $rm=="SUBSCRIBE" ||
 ```
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
-#### keepalive_endpoints
+#### keepalive_endpoints {#stat_keepalive_endpoints}
 
 
 Indicates the total number of NAT endpoints that are being kept alive.
 
 
-#### registered_endpoints
+#### registered_endpoints {#stat_registered_endpoints}
 
 
 Indicates how many of the NAT endpoints are kept alive for registrations.
 
 
-#### subscribed_endpoints
+#### subscribed_endpoints {#stat_subscribed_endpoints}
 
 
 Indicates how many of the NAT endpoints are kept alive for subscriptions.
 
 
-#### dialog_endpoints
+#### dialog_endpoints {#stat_dialog_endpoints}
 
 
 Indicates how many of the NAT endpoints are kept alive for taking part
         in an INVITE dialog.
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $keepalive.socket(nat_endpoint)
+#### $keepalive.socket(nat_endpoint) {#pv_keepalive.socket}
 
 
 Returns the local socket used to send messages to the given NAT
@@ -707,7 +707,7 @@ if ($rm=="INVITE" && $hdr(X-Scope)=="nat-relay") {
 ```
 
 
-#### $source_uri
+#### $source_uri {#pv_source_uri}
 
 
 Returns the URI specification from where a request was received in the
@@ -794,7 +794,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### $nat_traversal.track_dialog
+#### $nat_traversal.track_dialog {#pv_nat_traversal.track_dialog}
 
 
 Returns a boolean value (0 or 1) indicating if dialog tracking will
@@ -903,10 +903,10 @@ If the proxy receiving the INVITE request is the same as the proxy
         in the path.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -938,7 +938,7 @@ If the proxy receiving the INVITE request is the same as the proxy
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -964,10 +964,10 @@ If the proxy receiving the INVITE request is the same as the proxy
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)).

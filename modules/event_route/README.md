@@ -6,7 +6,7 @@ description: "This module provides a simple way for capturing and handling direc
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a simple way for capturing and handling 
@@ -32,7 +32,7 @@ NOTE that inside the *event_route* you should
 		variable or context, not even to a SIP message.
 
 
-### ROUTE events parameters
+### ROUTE events parameters {#event-route-parameters}
 
 
 In order to retrieve the parameters of an event, the
@@ -87,7 +87,7 @@ Example:
 		*route:E_PIKE_BLOCKED*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -109,13 +109,13 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 The module does not export parameters to be used in configuration script.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The function does not export any function.
@@ -165,10 +165,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -200,7 +200,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -226,10 +226,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

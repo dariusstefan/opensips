@@ -6,7 +6,7 @@ description: "Mediaproxy is an OpenSIPS module that is designed to allow automat
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Mediaproxy is an OpenSIPS module that is designed to allow automatic 
@@ -79,7 +79,7 @@ The SIP clients that will work transparently behind NAT when using
             running on multiple hosts.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -105,7 +105,7 @@ The following libraries or applications must be installed before
 ### Exported parameters
 
 
-#### disable (int)
+#### disable (int) {#param_disable}
 
 
 Boolean flag that specifies if mediaproxy should be disabled. This
@@ -129,7 +129,7 @@ modparam("mediaproxy", "disable", 1)
 ```
 
 
-#### mediaproxy_socket (string)
+#### mediaproxy_socket (string) {#param_mediaproxy_socket}
 
 
 It is the path to the filesystem socket where the mediaproxy dispatcher
@@ -151,7 +151,7 @@ modparam("mediaproxy", "mediaproxy_socket", "/run/mediaproxy/dispatcher.sock")
 ```
 
 
-#### mediaproxy_timeout (int)
+#### mediaproxy_timeout (int) {#param_mediaproxy_timeout}
 
 
 How much time (in milliseconds) to wait for an answer from the
@@ -172,7 +172,7 @@ modparam("mediaproxy", "mediaproxy_timeout", 500)
 ```
 
 
-#### signaling_ip_avp (string)
+#### signaling_ip_avp (string) {#param_signaling_ip_avp}
 
 
 Specification of the AVP which holds the IP address from where
@@ -204,7 +204,7 @@ modparam("mediaproxy", "signaling_ip_avp", "$avp(nat_ip)")
 ```
 
 
-#### media_relay_avp (string)
+#### media_relay_avp (string) {#param_media_relay_avp}
 
 
 Specification of the AVP which holds an optional application
@@ -229,7 +229,7 @@ modparam("mediaproxy", "media_relay_avp", "$avp(media_relay)")
 ```
 
 
-#### ice_candidate (string)
+#### ice_candidate (string) {#param_ice_candidate}
 
 
 Indicates the type of ICE candidate that will be added to the SDP. 
@@ -253,7 +253,7 @@ modparam("mediaproxy", "ice_candidate", "low-priority")
 ```
 
 
-#### ice_candidate_avp (string)
+#### ice_candidate_avp (string) {#param_ice_candidate_avp}
 
 
 Specification of the AVP which holds the ICE candidate that will be 
@@ -280,10 +280,10 @@ modparam("mediaproxy", "ice_candidate_avp", "$avp(ice_candidate)")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### engage_media_proxy()
+#### engage_media_proxy() {#func_engage_media_proxy}
 
 
 Trigger the use of MediaProxy for all the dialog requests and
@@ -331,7 +331,7 @@ if (is_method("INVITE") && !has_totag()) {
 ```
 
 
-#### use_media_proxy()
+#### use_media_proxy() {#func_use_media_proxy}
 
 
 Will make a call to the dispatcher and replace the IPs and ports
@@ -372,7 +372,7 @@ if (is_method("INVITE")) {
 ```
 
 
-#### end_media_session()
+#### end_media_session() {#func_end_media_session}
 
 
 Will call on the dispatcher to inform the media relay to end the
@@ -401,10 +401,10 @@ if (is_method("BYE")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -436,7 +436,7 @@ if (is_method("BYE")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -462,10 +462,10 @@ if (is_method("BYE")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.

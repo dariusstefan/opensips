@@ -184,7 +184,7 @@ onreply_route[register_reply] {
 ### Functions
 
 
-#### reginfo_handle_notify(uldomain)
+#### reginfo_handle_notify(uldomain) {#pua_reginfo.f.reginfo_handle_notify}
 
 
 This function processes received "NOTIFY"-requests and updates
@@ -296,10 +296,10 @@ onreply_route[register_reply] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -321,7 +321,7 @@ onreply_route[register_reply] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -337,10 +337,10 @@ onreply_route[register_reply] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Carsten Bock.

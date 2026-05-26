@@ -6,7 +6,7 @@ description: "This module provides a way to prevent some basic fraud attacks. Al
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a way to prevent some basic fraud attacks.
@@ -47,7 +47,7 @@ A rule is a set of two thresholds (warning and critical thresholds) for each of 
 			function.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS modules
@@ -70,10 +70,10 @@ The following libraries or applications must be installed before
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database where to load the rules from.
@@ -93,7 +93,7 @@ modparam("fraud_detection", "db_url", "mysql://user:passwb@localhost/database")
 ```
 
 
-#### use_utc_time (integer)
+#### use_utc_time (integer) {#param_use_utc_time}
 
 
 Set this parameter to non-zero in order to enable UTC-based interval
@@ -113,7 +113,7 @@ modparam("fraud_detection", "use_utc_time", 1)
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 If you want to load the rules from the database you must set
@@ -133,7 +133,7 @@ modparam("fraud_detection", "table_name", "my_fraud")
 ```
 
 
-#### rid_col (string)
+#### rid_col (string) {#param_rid_col}
 
 
 The column's name in the database storing the
@@ -153,7 +153,7 @@ modparam("fraud_detection", "rid_col", "theruleid")
 ```
 
 
-#### pid_col (string)
+#### pid_col (string) {#param_pid_col}
 
 
 The column's name in the database storing the
@@ -177,7 +177,7 @@ modparam("fraud_detection", "pid_col", "profile")
 ```
 
 
-#### prefix_col (string)
+#### prefix_col (string) {#param_prefix_col}
 
 
 The column's name in the database storing the
@@ -197,7 +197,7 @@ modparam("fraud_detection", "prefix_col", "myprefix")
 ```
 
 
-#### start_h (string)
+#### start_h (string) {#param_start_h}
 
 
 The column's name in the database storing the
@@ -222,7 +222,7 @@ modparam("fraud_detection", "start_h", "the_start_time")
 ```
 
 
-#### end_h (string)
+#### end_h (string) {#param_end_h}
 
 
 The column's name in the database storing the
@@ -247,7 +247,7 @@ modparam("fraud_detection", "end_h", "the_end_time")
 ```
 
 
-#### days_col (string)
+#### days_col (string) {#param_days_col}
 
 
 The column's name in the database storing the
@@ -275,7 +275,7 @@ modparam("fraud_detection", "days_col", "days")
 ```
 
 
-#### cpm_thresh_warn_col (string)
+#### cpm_thresh_warn_col (string) {#param_cpm_thresh_warn_col}
 
 
 The column's name in the database storing the
@@ -295,7 +295,7 @@ modparam("fraud_detection", "cpm_thresh_warn_col", "cpm_warn_thresh")
 ```
 
 
-#### cpm_thresh_crit_col (string)
+#### cpm_thresh_crit_col (string) {#param_cpm_thresh_crit_col}
 
 
 The column's name in the database storing the
@@ -315,7 +315,7 @@ modparam("fraud_detection", "cpm_thresh_crit_col", "cpm_crit_thresh")
 ```
 
 
-#### calldur_thresh_warn_col (string)
+#### calldur_thresh_warn_col (string) {#param_calldur_thresh_warn_col}
 
 
 The column's name in the database storing the
@@ -335,7 +335,7 @@ modparam("fraud_detection", "calldur_thresh_warn_col", "calldur_warn_thresh")
 ```
 
 
-#### calldur_thresh_crit_col (string)
+#### calldur_thresh_crit_col (string) {#param_calldur_thresh_crit_col}
 
 
 The column's name in the database storing the
@@ -355,7 +355,7 @@ modparam("fraud_detection", "calldur_thresh_crit_col", "calldur_crit_thresh")
 ```
 
 
-#### totalc_thresh_warn_col (string)
+#### totalc_thresh_warn_col (string) {#param_totalc_thresh_warn_col}
 
 
 The column's name in the database storing the
@@ -375,7 +375,7 @@ modparam("fraud_detection", "totalc_thresh_warn_col", "totalc_warn_thresh")
 ```
 
 
-#### totalc_thresh_crit_col (string)
+#### totalc_thresh_crit_col (string) {#param_totalc_thresh_crit_col}
 
 
 The column's name in the database storing the
@@ -395,7 +395,7 @@ modparam("fraud_detection", "totalc_thresh_crit_col", "totalc_crit_thresh")
 ```
 
 
-#### concalls_thresh_warn_col (string)
+#### concalls_thresh_warn_col (string) {#param_concalls_thresh_warn_col}
 
 
 The column's name in the database storing the
@@ -416,7 +416,7 @@ modparam("fraud_detection", "concalls_thresh_warn_col", "concalls_warn_thresh")
 ```
 
 
-#### concalls_thresh_crit_col (string)
+#### concalls_thresh_crit_col (string) {#param_concalls_thresh_crit_col}
 
 
 The column's name in the database storing the
@@ -437,7 +437,7 @@ modparam("fraud_detection", "concalls_thresh_crit_col", "concalls_crit_thresh")
 ```
 
 
-#### seqcalls_thresh_warn_col (string)
+#### seqcalls_thresh_warn_col (string) {#param_seqcalls_thresh_warn_col}
 
 
 The column's name in the database storing the
@@ -458,7 +458,7 @@ modparam("fraud_detection", "seqcalls_thresh_warn_col", "seqcalls_warn_thresh")
 ```
 
 
-#### seqcalls_thresh_crit_col (string)
+#### seqcalls_thresh_crit_col (string) {#param_seqcalls_thresh_crit_col}
 
 
 The column's name in the database storing the
@@ -479,10 +479,10 @@ modparam("fraud_detection", "seqcalls_thresh_crit_col", "seqcalls_crit_thresh")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### check_fraud(user, number, profile_id)
+#### check_fraud(user, number, profile_id) {#func_check_fraud}
 
 
 This method should be called each time a given *user*
@@ -525,10 +525,10 @@ The meaning of the return code is as follows:
 This function can be used from REQUEST_ROUTE and ONREPLY_ROUTE.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### show_fraud_stats
+#### show_fraud_stats {#mi_show_fraud_stats}
 
 
 Show the current statistics for all dials of a
@@ -552,7 +552,7 @@ Parameters:
 - prefix
 
 
-#### fraud_reload
+#### fraud_reload {#mi_fraud_reload}
 
 
 Reload the all the fraud rules.
@@ -564,29 +564,10 @@ Name: *fraud_reload*
 Parameters: *none*
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_FRD_WARNING
-
-
-This event is raised whenever one of the 5 monitored parameters
-			is above the warning threshold value
-
-
-Parameters:
-
-
-- *param* - the name of the parameter.
-- *value* - the current value of the parameter.
-- *threshold* - the warning threshold value.
-- *user* - the user who initiated the call.
-- *called_number* - the number that was called.
-- *rule_id* - the id of the fraud rule that matched
-					when the call was initiated
-
-
-#### E_FRD_CRITICAL
+#### E_FRD_WARNING {#event_E_FRD_WARNING}
 
 
 This event is raised whenever one of the 5 monitored parameters
@@ -605,10 +586,29 @@ Parameters:
 					when the call was initiated
 
 
-## Contributors
+#### E_FRD_CRITICAL {#event_E_FRD_CRITICAL}
 
 
-### By Commit Statistics
+This event is raised whenever one of the 5 monitored parameters
+			is above the warning threshold value
+
+
+Parameters:
+
+
+- *param* - the name of the parameter.
+- *value* - the current value of the parameter.
+- *threshold* - the warning threshold value.
+- *user* - the user who initiated the call.
+- *called_number* - the number that was called.
+- *rule_id* - the id of the fraud rule that matched
+					when the call was initiated
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -635,7 +635,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -656,10 +656,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)).

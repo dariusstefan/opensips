@@ -6,7 +6,7 @@ description: "gflags module (global flags) keeps a bitmap of flags in shared mem
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 gflags module (global flags) keeps a bitmap of flags in shared memory
@@ -35,7 +35,7 @@ The module exports external commands that can be used to change
 	"is_gflag".
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The module depends on the following modules (in the other words the
@@ -45,10 +45,10 @@ The module depends on the following modules (in the other words the
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### initial (integer)
+#### initial (integer) {#param_initial}
 
 
 The initial value of global flags bitmap.
@@ -66,10 +66,10 @@ modparam("gflags", "initial", 15)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### set_gflag(flag)
+#### set_gflag(flag) {#func_set_gflag}
 
 
 Set the bit at the position "flag" in global flags.
@@ -91,7 +91,7 @@ set_gflag(4);
 ```
 
 
-#### reset_gflag(flag)
+#### reset_gflag(flag) {#func_reset_gflag}
 
 
 Reset the bit at the position "flag" in global flags.
@@ -113,7 +113,7 @@ reset_gflag(4);
 ```
 
 
-#### is_gflag(flag)
+#### is_gflag(flag) {#func_is_gflag}
 
 
 Check if bit at the position "flag" in global flags is
@@ -141,7 +141,7 @@ if(is_gflag(4))
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
 Functions that check or change some flags accepts one parameter 
@@ -151,7 +151,7 @@ Functions that check or change some flags accepts one parameter
 			script.
 
 
-#### set_gflag
+#### set_gflag {#mi_set_gflag}
 
 
 Set the value of some flags (specified by bitmask) to 1.
@@ -172,7 +172,7 @@ $ opensips-cli -x mi set_gflag 0x3
 ```
 
 
-#### reset_gflag
+#### reset_gflag {#mi_reset_gflag}
 
 
 Reset the value of some flags to 0.
@@ -193,7 +193,7 @@ $ opensips-cli -x mi reset_gflag 0x3
 ```
 
 
-#### is_gflag
+#### is_gflag {#mi_is_gflag}
 
 
 Returns true if the all the flags from the bitmask are set.
@@ -230,7 +230,7 @@ TRUE
 ```
 
 
-#### get_gflags
+#### get_gflags {#mi_get_gflags}
 
 
 Return the bitmap with all flags. The function gets no 
@@ -249,10 +249,10 @@ $ opensips-cli -x mi get_gflags
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -284,7 +284,7 @@ $ opensips-cli -x mi get_gflags
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -310,10 +310,10 @@ $ opensips-cli -x mi get_gflags
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Richard Revels, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Klaus Darilion.

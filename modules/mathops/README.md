@@ -6,14 +6,14 @@ description: "The mathops module provides a series of functions which enable var
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The mathops module provides a series of functions which enable various
 		floating point operations at OpenSIPS script level.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### decimal_digits (integer)
+#### decimal_digits (integer) {#param_decimal_digits}
 
 
 The precision of the results returned by all the module functions.
@@ -57,10 +57,10 @@ modparam("mathops", "decimal_digits", 10)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### math_eval(expression, result_var)
+#### math_eval(expression, result_var) {#func_math_eval}
 
 
 The function evaluates a given expression and writes the result in the
@@ -107,7 +107,7 @@ if (math_eval("$avp(1) * ($avp(3) - ($avp(1) - $avp(2))) / $avp(3)", $avp(result
 ```
 
 
-#### math_rpn(expression, result_var)
+#### math_rpn(expression, result_var) {#func_math_rpn}
 
 
 The function evaluates a given RPN expression and writes the result in the
@@ -157,7 +157,7 @@ finally compute 1 divided by the result, giving 3 as the result. */
 ```
 
 
-#### math_trunc(number, result_var)
+#### math_trunc(number, result_var) {#func_math_trunc}
 
 
 Truncation of a number towards zero. This means that trunc(3.7) = 3.0 and
@@ -193,7 +193,7 @@ if (math_trunc($avp(1), $avp(result))) {
 ```
 
 
-#### math_floor(number, result_var)
+#### math_floor(number, result_var) {#func_math_floor}
 
 
 Truncates a number, always towards -infinity. This means that floor(3.7) = 3.0
@@ -229,7 +229,7 @@ if (math_floor($avp(1), $avp(result))) {
 ```
 
 
-#### math_ceil(number, result_var)
+#### math_ceil(number, result_var) {#func_math_ceil}
 
 
 Truncates a number, always towards +infinity. This means that ceil(3.2) = 4.0
@@ -265,7 +265,7 @@ if (math_ceil($avp(1), $avp(result))) {
 ```
 
 
-#### math_round(number, result_var[, decimals])
+#### math_round(number, result_var[, decimals]) {#func_math_round}
 
 
 The round function returns the nearest integer, and tie-breaking is done away
@@ -321,7 +321,7 @@ if (math_round($avp(1), $avp(result), 4)) {
 ```
 
 
-#### math_round_sf(number, result_var, figures)
+#### math_round_sf(number, result_var, figures) {#func_math_round_sf}
 
 
 To give a simple explanation, rounding to N significant figures is done by 
@@ -376,7 +376,7 @@ if (math_round_sf($avp(1), $avp(result), 4)) {
 ```
 
 
-#### math_compare(exp1, exp2, result_var)
+#### math_compare(exp1, exp2, result_var) {#func_math_compare}
 
 
 Compare exp1 with exp2 and returns the comparison result in the result_var.
@@ -416,10 +416,10 @@ if (math_compare($var(exp1), $var(exp2), $var(result))) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -448,7 +448,7 @@ if (math_compare($var(exp1), $var(exp2), $var(result))) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -471,10 +471,10 @@ if (math_compare($var(exp1), $var(exp2), $var(result))) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Julián Moreno Patiño, Stephane Alnet.

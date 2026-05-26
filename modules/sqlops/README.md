@@ -6,7 +6,7 @@ description: "SQLops (SQL-operations) modules implements a set of script functio
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 SQLops (SQL-operations) modules implements a set of script
@@ -15,7 +15,7 @@ SQLops (SQL-operations) modules implements a set of script
 		(loading/storing/removing) of user AVPs (preferences).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -37,10 +37,10 @@ The following libraries or applications must be installed
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 DB URL for database connection. As the module allows the usage
@@ -68,7 +68,7 @@ modparam("sqlops","db_url","1 postgres://user:passwd@host2/opensips")
 ```
 
 
-#### usr_table (string)
+#### usr_table (string) {#param_usr_table}
 
 
 DB table to be used for user preferences (AVPs)
@@ -89,7 +89,7 @@ modparam("sqlops","usr_table","avptable")
 ```
 
 
-#### db_scheme (string)
+#### db_scheme (string) {#param_db_scheme}
 
 
 Definition of a DB scheme to be used for accessing
@@ -125,7 +125,7 @@ modparam("sqlops","db_scheme",
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 If the domain part of the a SIP URI should be used for
@@ -146,7 +146,7 @@ modparam("sqlops","use_domain",1)
 ```
 
 
-#### ps_id_max_buf_len (integer)
+#### ps_id_max_buf_len (integer) {#param_ps_id_max_buf_len}
 
 
 The maximum size of the buffer used to build the query IDs which
@@ -173,7 +173,7 @@ modparam("sqlops","ps_id_max_buf_len", 2048)
 ```
 
 
-#### bigint_to_str (int)
+#### bigint_to_str (int) {#bigint_to_str}
 
 
 Controls bigint conversion.
@@ -198,7 +198,7 @@ modparam("sqlops","bigint_to_str",1)
 ```
 
 
-#### uuid_column (string)
+#### uuid_column (string) {#param_uuid_column}
 
 
 Name of column containing the uuid (unique user id).
@@ -218,7 +218,7 @@ modparam("sqlops","uuid_column","uuid")
 ```
 
 
-#### username_column (string)
+#### username_column (string) {#param_username_column}
 
 
 Name of column containing the username.
@@ -238,7 +238,7 @@ modparam("sqlops","username_column","username")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 Name of column containing the domain name.
@@ -258,7 +258,7 @@ modparam("sqlops","domain_column","domain")
 ```
 
 
-#### attribute_column (string)
+#### attribute_column (string) {#param_attribute_column}
 
 
 Name of column containing the attribute name (AVP name).
@@ -278,7 +278,7 @@ modparam("sqlops","attribute_column","attribute")
 ```
 
 
-#### value_column (string)
+#### value_column (string) {#param_value_column}
 
 
 Name of column containing the AVP value.
@@ -298,7 +298,7 @@ modparam("sqlops","value_column","value")
 ```
 
 
-#### type_column (string)
+#### type_column (string) {#param_type_column}
 
 
 Name of column containing the AVP type.
@@ -318,10 +318,10 @@ modparam("sqlops","type_column","type")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sql_query(query, [res_col_avps], [db_id])
+#### sql_query(query, [res_col_avps], [db_id]) {#func_sql_query}
 
 
 Make a database query and store the result in AVPs.
@@ -380,7 +380,7 @@ sql_query("DELETE FROM subscriber", , $avp(id));
 ```
 
 
-#### sql_query_one(query, [res_col_vars], [db_id])
+#### sql_query_one(query, [res_col_vars], [db_id]) {#func_sql_query_one}
 
 
 Similar to [sql query](#func_sql_query), it makes a generic raw
@@ -426,7 +426,7 @@ sql_query_one("SELECT value, type FROM usr_preferences WHERE username='$fU' and 
 
 
 #### sql_select([columns],table,[filter],[order],[res_col_avps], [db_id])
-				
+				 {#func_sql_select}
 
 
 Function to perform a structured (not raw) SQL SELECT operation.
@@ -505,7 +505,7 @@ sql_select('["password","ha1"]', 'subscriber',
 ```
 
 
-#### sql_select_one([columns],table,[filter],[order],[res_col_vars], [db_id])
+#### sql_select_one([columns],table,[filter],[order],[res_col_vars], [db_id]) {#func_sql_select_one}
 
 
 Similar to [sql select](#func_sql_select), it makes a SELECT SQL
@@ -547,7 +547,7 @@ sql_select_one('["value","type"]', 'usr_preferences',
 
 
 #### sql_update(columns,table,[filter],[db_id])
-				
+				 {#func_sql_update}
 
 
 Function to perform a structured (not raw) SQL UPDATE operation.
@@ -598,7 +598,7 @@ sql_update( '[{"password":"my_secret"}]', 'subscriber',
 
 
 #### sql_insert(table,columns,[db_id])
-				
+				 {#func_sql_insert}
 
 
 Function to perform a structured (not raw) SQL INSERT operation.
@@ -639,7 +639,7 @@ sql_insert( 'cc_agents', '[{"agentid":"agentX"},{"skills":"info"},{"location":nu
 
 
 #### sql_delete(table,[filter],[db_id])
-				
+				 {#func_sql_delete}
 
 
 Function to perform a structured (not raw) SQL DELETE operation.
@@ -685,7 +685,7 @@ sql_delete( 'subscriber', '[{"username": "$tu"}]');
 
 
 #### sql_replace(table,columns,[db_id])
-				
+				 {#func_sql_replace}
 
 
 Function very similar to [sql insert](#func_sql_insert) function,
@@ -697,7 +697,7 @@ The function returns true if the query was successful.
 
 
 #### sql_avp_load(source, name, [db_id], [prefix]])
-				
+				 {#func_sql_avp_load}
 
 
 Loads from DB into memory the AVPs corresponding to the given
@@ -759,7 +759,7 @@ xlog("Loaded: $avp(caller_100)\n");
 ```
 
 
-#### sql_avp_store(source, name, [db_id])
+#### sql_avp_store(source, name, [db_id]) {#func_sql_avp_store}
 
 
 Stores to DB the AVPs corresponding to the given
@@ -789,7 +789,7 @@ sql_avp_store("$ru", "$avp(1)", 3);
 ```
 
 
-#### sql_avp_delete(source, name, [db_id])
+#### sql_avp_delete(source, name, [db_id]) {#func_sql_avp_delete}
 
 
 Deletes from DB the AVPs corresponding to the given
@@ -823,7 +823,7 @@ sql_avp_delete("$ru", "$avp(1)", 3);
 ### Exported Asynchronous Functions
 
 
-#### sql_query(query, [dest], [db_id])
+#### sql_query(query, [dest], [db_id]) {#afunc_sql_query}
 
 
 This function takes the same parameters and behaves identically
@@ -865,7 +865,7 @@ route [my_resume_route]
 ```
 
 
-#### sql_query_one(query, [dest], [db_id])
+#### sql_query_one(query, [dest], [db_id]) {#afunc_sql_query_one}
 
 
 This function takes the same parameters and behaves identically
@@ -904,10 +904,10 @@ route [my_resume_route]
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -939,7 +939,7 @@ route [my_resume_route]
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -965,10 +965,10 @@ route [my_resume_route]
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), John Burke ([@john08burke](https://github.com/john08burke)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Norman Brandinger ([@NormB](https://github.com/NormB)), Kobi Eshun ([@ekobi](https://github.com/ekobi)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Klaus Darilion, Andrei Pelinescu-Onciul, Elena-Ramona Modroiu.

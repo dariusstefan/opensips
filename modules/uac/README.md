@@ -6,7 +6,7 @@ description: "UAC (User Agent Client) module provides some basic UAC functionali
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 UAC (User Agent Client) module provides some basic UAC
@@ -18,7 +18,7 @@ If the dialog module is loaded and a dialog can be created,
 		then the auto mode can be done more efficiently.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -46,10 +46,10 @@ The following libraries or applications must be installed
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### restore_mode (string)
+#### restore_mode (string) {#param_restore_mode}
 
 
 There are 3 mode of restoring the original headers (FROM/TO) URI:
@@ -79,7 +79,7 @@ modparam("uac","restore_mode","auto")
 ```
 
 
-#### restore_passwd (string)
+#### restore_passwd (string) {#param_restore_passwd}
 
 
 String password to be used to encrypt the RR storing parameter
@@ -101,7 +101,7 @@ modparam("uac","restore_passwd","my_secret_passwd")
 ```
 
 
-#### rr_from_store_param (string)
+#### rr_from_store_param (string) {#param_rr_from_store_param}
 
 
 Name of Record-Route header parameter that will be used to store 
@@ -123,7 +123,7 @@ modparam("uac","rr_from_store_param","my_Fparam")
 ```
 
 
-#### rr_to_store_param (string)
+#### rr_to_store_param (string) {#param_rr_to_store_param}
 
 
 Name of Record-Route header parameter that will be used to store 
@@ -145,7 +145,7 @@ modparam("uac","rr_to_store_param","my_Tparam")
 ```
 
 
-#### force_dialog (int)
+#### force_dialog (int) {#param_force_dialog}
 
 
 Force create dialog if it is not created from the configuration script.
@@ -165,11 +165,11 @@ modparam("uac", "force_dialog", yes)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### uac_replace_from([display],uri)
-				uac_replace_to([display],uri)
+				uac_replace_to([display],uri) {#func_uac_replace_from}
 
 
 Replace in FROM/TO header the *display* name or/and
@@ -213,7 +213,7 @@ uac_replace_from( , "sip:batman@gotham.org");
 
 
 #### uac_restore_from()
-				uac_restore_to()
+				uac_restore_to() {#func_uac_restore_from}
 
 
 This function will check if the FROM/TO URI was modified and will
@@ -240,7 +240,7 @@ uac_restore_from();
 ```
 
 
-#### uac_auth()
+#### uac_auth() {#func_uac_auth}
 
 
 This function can be called only from failure route and will 
@@ -300,7 +300,7 @@ failure_route[check_auth] {
 ```
 
 
-#### uac_inc_cseq()
+#### uac_inc_cseq() {#func_uac_inc_cseq}
 
 
 This function can be called to increase the CSeq of an ongoing request.
@@ -362,10 +362,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -397,7 +397,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -423,10 +423,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Elena-Ramona Modroiu.

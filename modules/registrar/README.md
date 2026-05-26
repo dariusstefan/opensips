@@ -6,14 +6,14 @@ description: "The module contains SIP REGISTER request processing logic, per RFC
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module contains SIP REGISTER request processing logic, per RFC
 	3261.  On top of this support, several extensions are available:
 
 
-#### Path Support (RFC 3327)
+#### Path Support (RFC 3327) {#rfc-3327-support}
 
 
 The registrar module includes SIP Path header field support
@@ -55,7 +55,7 @@ The whole process is transparent to the user, so no
 		"p0" / "p1" / "p2" flags when calling *save()*.
 
 
-#### GRUU Support (RFC 5627)
+#### GRUU Support (RFC 5627) {#rfc-5627-support}
 
 
 The registrar module includes support for Globally Routable User
@@ -94,7 +94,7 @@ As the GRUU will be present in the contact header of the initial
 		indication in the RURI.
 
 
-#### SIP Push Notification Support (RFC 8599)
+#### SIP Push Notification Support (RFC 8599) {#rfc-8599-support}
 
 
 The registrar module includes support for standards-based SIP Push
@@ -153,7 +153,7 @@ For more information or examples, refer to the documentation of the
 		"SIP Push Notification" topic.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -178,10 +178,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_expires (integer)
+#### default_expires (integer) {#param_default_expires}
 
 
 If the processed message contains neither Expires
@@ -203,7 +203,7 @@ modparam("registrar", "default_expires", 1800)
 ```
 
 
-#### min_expires (integer)
+#### min_expires (integer) {#param_min_expires}
 
 
 The minimum expires value of a Contact, values lower than this
@@ -224,7 +224,7 @@ modparam("registrar", "min_expires", 60)
 ```
 
 
-#### max_expires (integer)
+#### max_expires (integer) {#param_max_expires}
 
 
 The maximum expires value of a Contact, values higher than this
@@ -245,7 +245,7 @@ modparam("registrar", "max_expires", 120)
 ```
 
 
-#### default_q (integer)
+#### default_q (integer) {#param_default_q}
 
 
 The parameter represents default q value for new contacts. Because
@@ -267,7 +267,7 @@ modparam("registrar", "default_q", 1000)
 ```
 
 
-#### tcp_persistent_flag (string)
+#### tcp_persistent_flag (string) {#param_tcp_persistent_flag}
 
 
 The parameter specifies the message flag to be used to control the
@@ -291,7 +291,7 @@ modparam("registrar", "tcp_persistent_flag", "TCP_PERSIST_DURATION")
 ```
 
 
-#### realm_prefix (string)
+#### realm_prefix (string) {#param_realm_prefix}
 
 
 Prefix to be automatically strip from realm. As an alternative to
@@ -315,7 +315,7 @@ modparam("registrar", "realm_prefix", "sip.")
 ```
 
 
-#### case_sensitive (integer)
+#### case_sensitive (integer) {#param_case_sensitive}
 
 
 If set to 1 then AOR comparison will be case
@@ -336,7 +336,7 @@ modparam("registrar", "case_sensitive", 0)
 ```
 
 
-#### received_avp (str)
+#### received_avp (str) {#param_received_avp}
 
 
 Registrar will store the value of the AVP configured by this
@@ -363,7 +363,7 @@ modparam("registrar", "received_avp", "$avp(rcv)")
 ```
 
 
-#### received_param (string)
+#### received_param (string) {#param_received_param}
 
 
 The name of the parameter that will be appended to Contacts of
@@ -383,7 +383,7 @@ modparam("registrar", "received_param", "rcv")
 ```
 
 
-#### expires_max_deviation (integer)
+#### expires_max_deviation (integer) {#param_expires_max_deviation}
 
 
 Set this parameter in order to add a random +/- deviation up to
@@ -412,7 +412,7 @@ modparam("
 ```
 
 
-#### max_contacts (integer)
+#### max_contacts (integer) {#param_max_contacts}
 
 
 The parameter can be used to limit the number of contacts per
@@ -436,7 +436,7 @@ modparam("
 ```
 
 
-#### max_username_len (integer)
+#### max_username_len (integer) {#param_max_username_len}
 
 
 The maximum length of the "username" part of an Address-of-Record SIP URI.
@@ -453,7 +453,7 @@ modparam("
 ```
 
 
-#### max_domain_len (integer)
+#### max_domain_len (integer) {#param_max_domain_len}
 
 
 The maximum length of the "domain" part of an Address-of-Record SIP URI.
@@ -470,7 +470,7 @@ modparam("
 ```
 
 
-#### max_aor_len (integer)
+#### max_aor_len (integer) {#param_max_aor_len}
 
 
 The maximum length of an Address-of-Record SIP URI.
@@ -487,7 +487,7 @@ modparam("
 ```
 
 
-#### max_contact_len (integer)
+#### max_contact_len (integer) {#param_max_contact_len}
 
 
 The maximum length of a Contact header field SIP URI.
@@ -504,7 +504,7 @@ modparam("
 ```
 
 
-#### retry_after (integer)
+#### retry_after (integer) {#param_retry_after}
 
 
 The registrar can generate 5xx reply to REGISTER in various
@@ -533,7 +533,7 @@ modparam("registrar", "retry_after", 30)
 ```
 
 
-#### sock_hdr_name (string)
+#### sock_hdr_name (string) {#param_sock_hdr_name}
 
 
 Header which contains a socket description (proto:IP:port) to override
@@ -558,7 +558,7 @@ modparam("registrar", "sock_hdr_name", "Sock-Info")
 ```
 
 
-#### mcontact_avp (string)
+#### mcontact_avp (string) {#param_mcontact_avp}
 
 
 AVP to store the modified binding/contact that is set during cached
@@ -602,7 +602,7 @@ onreply_route[do_save] {
 ```
 
 
-#### attr_avp (string)
+#### attr_avp (string) {#param_attr_avp}
 
 
 AVP to store specific additional information for each registration.
@@ -646,7 +646,7 @@ branch_route [parallel_fork] {
 ```
 
 
-#### gruu_secret (string)
+#### gruu_secret (string) {#param_gruu_secret}
 
 
 The string that will be used in XORing when generating
@@ -667,7 +667,7 @@ modparam("registrar", "gruu_secret", "top_secret")
 ```
 
 
-#### disable_gruu (int)
+#### disable_gruu (int) {#param_disable_gruu}
 
 
 Globally disable GRUU handling
@@ -687,7 +687,7 @@ modparam("registrar", "disable_gruu", 0)
 ```
 
 
-#### pn_enable (boolean)
+#### pn_enable (boolean) {#param_pn_enable}
 
 
 Enable SIP Push Notification support ([RFC 8599](https://tools.ietf.org/html/rfc8599)).
@@ -710,7 +710,7 @@ modparam("
 ```
 
 
-#### pn_providers (string)
+#### pn_providers (string) {#param_pn_providers}
 
 
 A list of supported Push Notification providers.  While only three
@@ -731,7 +731,7 @@ modparam("
 ```
 
 
-#### pn_ct_match_params (string)
+#### pn_ct_match_params (string) {#param_pn_ct_match_params}
 
 
 The minimally required list of RFC 8599 parameters (custom ones are
@@ -766,7 +766,7 @@ modparam("
 ```
 
 
-#### pn_pnsreg_interval (integer)
+#### pn_pnsreg_interval (integer) {#param_pn_pnsreg_interval}
 
 
 For devices capable of waking up and refreshing their binding on
@@ -789,7 +789,7 @@ modparam("
 ```
 
 
-#### pn_trigger_interval (integer)
+#### pn_trigger_interval (integer) {#param_pn_trigger_interval}
 
 
 If a binding refresh REGISTER request from a given SIP endpoint does
@@ -820,7 +820,7 @@ modparam("
 ```
 
 
-#### pn_skip_pn_interval (integer)
+#### pn_skip_pn_interval (integer) {#param_pn_skip_pn_interval}
 
 
 Following a successful (re)registration of a contact, this setting
@@ -841,7 +841,7 @@ modparam("
 ```
 
 
-#### pn_refresh_timeout (integer)
+#### pn_refresh_timeout (integer) {#param_pn_refresh_timeout}
 
 
 This timeout starts counting following a *lookup()* or a
@@ -877,7 +877,7 @@ modparam("
 ```
 
 
-#### pn_enable_purr (boolean)
+#### pn_enable_purr (boolean) {#param_pn_enable_purr}
 
 
 Enable the SIP Push Notification mechanism for long-lived dialogs.
@@ -911,10 +911,10 @@ modparam("
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### save(domain[, flags[, aor[, ownership_tag]]])
+#### save(domain[, flags[, aor[, ownership_tag]]]) {#func_save}
 
 
 The function processes a REGISTER message. It can add, remove or
@@ -1059,7 +1059,7 @@ save("location", , , "vip");
 ```
 
 
-#### remove(domain, AOR[, [contact][, [next_hop][, [sip_instance], [bflag]]]])
+#### remove(domain, AOR[, [contact][, [next_hop][, [sip_instance], [bflag]]]]) {#func_remove}
 
 
 Explicitly remove contacts behind a given address-of-record.
@@ -1127,7 +1127,7 @@ remove("location", "sip:bob@atlanta.com", , , "<urn:uuid:e5e68d40-f08a-4600-b82e
 ```
 
 
-#### remove_ip_port(IP,Port, domain, [AOR])
+#### remove_ip_port(IP,Port, domain, [AOR]) {#func_remove_ip_port}
 
 
 Remove all contacts behind a specific IP and Port, optionally filtering by AOR.
@@ -1161,7 +1161,7 @@ remove_ip_port("8.8.8.8",43213,"location","sip:bob@atlanta.com");
 ```
 
 
-#### lookup(domain [, flags [, aor]])
+#### lookup(domain [, flags [, aor]]) {#func_lookup}
 
 
 The functions extracts username from Request-URI and tries to find
@@ -1303,7 +1303,7 @@ switch ($retcode) {
 ```
 
 
-#### is_registered(domain ,[AOR])
+#### is_registered(domain ,[AOR]) {#func_is_registered}
 
 
 The function returns true if an AOR is registered, false otherwise.
@@ -1349,7 +1349,7 @@ if (is_registered("location",$fu)) {
 ```
 
 
-#### is_contact_registered(domain ,[AOR],[contact],[callid])
+#### is_contact_registered(domain ,[AOR],[contact],[callid]) {#func_is_contact_registered}
 
 
 The function returns true if a contact and/or a callid from a certain AOR is registered, false otherwise.
@@ -1401,7 +1401,7 @@ if (is_method("INVITE")) {
 ```
 
 
-#### is_ip_registered(domain ,[AOR],IPvar,[PORTvar])
+#### is_ip_registered(domain ,[AOR],IPvar,[PORTvar]) {#func_is_ip_registered}
 
 
 The function returns true if there is at least one contact that has
@@ -1450,7 +1450,7 @@ if (is_method("REGISTER")) {
 ```
 
 
-#### add_sock_hdr(hdr_name)
+#### add_sock_hdr(hdr_name) {#func_add_sock_hdr}
 
 
 Adds to the current REGISTER request a new header with
@@ -1484,7 +1484,7 @@ add_sock_hdr("Sock-Info");
 
 
 #### pn_process_purr(domain)
-		
+		 {#afunc_pn_process_purr}
 
 
 Perform mid-dialog request processing, according to RFC 8599.  For
@@ -1557,31 +1557,31 @@ route [resume_route] {
 ### Exported Statistics
 
 
-#### max_expires
+#### max_expires {#max_expires_stat}
 
 
 Value of max_expires parameter.
 
 
-#### max_contacts
+#### max_contacts {#max_contacts_stat}
 
 
 The value of max_contacts parameter.
 
 
-#### defaults_expires
+#### defaults_expires {#defaults_expires}
 
 
 The value of default_expires parameter.
 
 
-#### accepted_regs
+#### accepted_regs {#accepted_regs}
 
 
 Number of accepted registrations.
 
 
-#### rejected_regs
+#### rejected_regs {#rejected_regs}
 
 
 Number of rejected registrations.
@@ -1689,10 +1689,10 @@ It was removed, as its functionality was mmigrate into usrloc
 			module, were there is a parameter with the same name.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1724,7 +1724,7 @@ It was removed, as its functionality was mmigrate into usrloc
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1750,10 +1750,10 @@ It was removed, as its functionality was mmigrate into usrloc
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dudu Ben Moshe, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Irina-Maria Stanescu, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Marcus Hunger, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Carsten Bock, Andreas Granig, Jan Janak ([@janakj](https://github.com/janakj)).

@@ -6,7 +6,7 @@ description: "A SIP user location implementation. Its main purpose is to store, 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 A SIP user location implementation. Its main purpose is to store,
@@ -35,7 +35,7 @@ The OpenSIPS user location implementation is cluster-enabled. On top of
 		NAT pinging workloads.
 
 
-### Distributed SIP User Location
+### Distributed SIP User Location {#distributed-sip-user-location}
 
 
 Starting with OpenSIPS 2.4, the user location module offers several optional
@@ -49,7 +49,7 @@ Depending on data locality, the distribution models are split in two main
 	categories:
 
 
-#### "Federation" Topology
+#### "Federation" Topology {#federation-topology}
 
 
 A *federated* user location keeps contact data local
@@ -94,7 +94,7 @@ The [federated user location tutorial](https://opensips.org/Documentation/Tutori
 		Availability support).
 
 
-#### "Full Sharing" Topology
+#### "Full Sharing" Topology {#full-sharing-topology}
 
 
 A *fully sharing* user location broadcasts contact
@@ -135,7 +135,7 @@ The ["full sharing" user location tutorial](https://opensips.org/Documentation/T
 		NoSQL storage support).
 
 
-#### "N Contact Pings" Problem
+#### "N Contact Pings" Problem {#n-contact-pings-problem}
 
 
 A long-standing problem caused by contact information being replicated
@@ -158,7 +158,7 @@ This problem is solved with the help of the OpenSIPS cluster layer,
 		built-in pinging heuristics in more detail.
 
 
-### Contact matching
+### Contact matching {#contact-matching}
 
 
 Contact matching (for the same Address-of-Record, AoR) is an important
@@ -193,7 +193,7 @@ For more details on how to control/select the contact matching algorithm,
 	**[matching mode](#param_matching_mode)**.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -218,10 +218,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### nat_bflag (string)
+#### nat_bflag (string) {#param_nat_bflag}
 
 
 The name of the branch flag to be used as NAT marker (if the contact
@@ -242,7 +242,7 @@ modparam("usrloc", "nat_bflag", "NAT_BFLAG")
 ```
 
 
-#### contact_id_column (string)
+#### contact_id_column (string) {#param_contact_id_column}
 
 
 Name of the column holding the unique contact IDs.
@@ -261,7 +261,7 @@ modparam("usrloc", "contact_id_column", "ctid")
 ```
 
 
-#### user_column (string)
+#### user_column (string) {#param_user_column}
 
 
 Name of column containing usernames.
@@ -280,7 +280,7 @@ modparam("usrloc", "user_column", "username")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 Name of column containing domains.
@@ -299,7 +299,7 @@ modparam("usrloc", "domain_column", "domain")
 ```
 
 
-#### contact_column (string)
+#### contact_column (string) {#param_contact_column}
 
 
 Name of column containing contacts.
@@ -318,7 +318,7 @@ modparam("usrloc", "contact_column", "contact")
 ```
 
 
-#### expires_column (string)
+#### expires_column (string) {#param_expires_column}
 
 
 Name of column containing expires value.
@@ -337,7 +337,7 @@ modparam("usrloc", "expires_column", "expires")
 ```
 
 
-#### q_column (string)
+#### q_column (string) {#param_q_column}
 
 
 Name of column containing q values.
@@ -356,7 +356,7 @@ modparam("usrloc", "q_column", "q")
 ```
 
 
-#### callid_column (string)
+#### callid_column (string) {#param_callid_column}
 
 
 Name of column containing callid values.
@@ -375,7 +375,7 @@ modparam("usrloc", "callid_column", "callid")
 ```
 
 
-#### cseq_column (string)
+#### cseq_column (string) {#param_cseq_column}
 
 
 Name of column containing cseq numbers.
@@ -394,7 +394,7 @@ modparam("usrloc", "cseq_column", "cseq")
 ```
 
 
-#### methods_column (string)
+#### methods_column (string) {#param_methods_column}
 
 
 Name of column containing supported methods.
@@ -413,7 +413,7 @@ modparam("usrloc", "methods_column", "methods")
 ```
 
 
-#### flags_column (string)
+#### flags_column (string) {#param_flags_column}
 
 
 Name of column to save the internal flags of the record.
@@ -432,7 +432,7 @@ modparam("usrloc", "flags_column", "flags")
 ```
 
 
-#### cflags_column (string)
+#### cflags_column (string) {#param_cflags_column}
 
 
 Name of column to save the branch/contact flags of the record.
@@ -451,7 +451,7 @@ modparam("usrloc", "cflags_column", "cflags")
 ```
 
 
-#### user_agent_column (string)
+#### user_agent_column (string) {#param_user_agent_column}
 
 
 Name of column containing user-agent values.
@@ -470,7 +470,7 @@ modparam("usrloc", "user_agent_column", "user_agent")
 ```
 
 
-#### received_column (string)
+#### received_column (string) {#param_received_column}
 
 
 Name of column containing the source IP, port, and protocol from the REGISTER
@@ -490,7 +490,7 @@ modparam("usrloc", "received_column", "received")
 ```
 
 
-#### socket_column (string)
+#### socket_column (string) {#param_socket_column}
 
 
 Name of column containing the received socket information (IP:port)
@@ -510,7 +510,7 @@ modparam("usrloc", "socket_column", "socket")
 ```
 
 
-#### path_column (string)
+#### path_column (string) {#param_path_column}
 
 
 Name of column containing the Path header.
@@ -529,7 +529,7 @@ modparam("usrloc", "path_column", "path")
 ```
 
 
-#### sip_instance_column (string)
+#### sip_instance_column (string) {#param_sip_instance_column}
 
 
 Name of column containing the SIP instance.
@@ -548,7 +548,7 @@ modparam("usrloc", "sip_instance_column", "sip_instance")
 ```
 
 
-#### kv_store_column (string)
+#### kv_store_column (string) {#param_kv_store_column}
 
 
 Name of column containing generic key-value data.
@@ -567,7 +567,7 @@ modparam("usrloc", "kv_store_column", "json_data")
 ```
 
 
-#### attr_column (string)
+#### attr_column (string) {#param_attr_column}
 
 
 Name of column containing additional registration-related information.
@@ -586,7 +586,7 @@ modparam("usrloc", "attr_column", "attributes")
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 If the domain part of the user should be also saved and used for
@@ -607,7 +607,7 @@ modparam("usrloc", "use_domain", 1)
 ```
 
 
-#### desc_time_order (integer)
+#### desc_time_order (integer) {#param_desc_time_order}
 
 
 If the user's contacts should be kept timestamp ordered; otherwise the
@@ -628,7 +628,7 @@ modparam("usrloc", "desc_time_order", 1)
 ```
 
 
-#### timer_interval (integer)
+#### timer_interval (integer) {#param_timer_interval}
 
 
 Number of seconds between two timer runs.  During each run, the module
@@ -655,7 +655,7 @@ modparam("usrloc", "timer_interval", 120)
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 URL of the database that should be used.
@@ -674,7 +674,7 @@ modparam("usrloc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 URL of a NoSQL database to be used. Only required in a
@@ -695,7 +695,7 @@ modparam("usrloc", "cachedb_url", "mongodb://10.0.0.4:27017/opensipsDB.userlocat
 ```
 
 
-#### db_mode (integer, deprecated)
+#### db_mode (integer, deprecated) {#param_db_mode}
 
 
 This parameter has been kept for backwards compatibility.  It acts as a
@@ -724,7 +724,7 @@ modparam("usrloc", "db_mode", 2)
 ```
 
 
-#### working_mode_preset (string)
+#### working_mode_preset (string) {#param_working_mode_preset}
 
 
 A pre-defined working mode for the usrloc module.  Setting this
@@ -803,7 +803,7 @@ modparam("usrloc", "working_mode_preset", "full-sharing-cachedb-cluster")
 ```
 
 
-#### cluster_mode (string)
+#### cluster_mode (string) {#param_cluster_mode}
 
 
 **This parameter will get overridden if either
@@ -857,7 +857,7 @@ modparam("usrloc", "cluster_mode", "federation-cachedb")
 ```
 
 
-#### restart_persistency (string)
+#### restart_persistency (string) {#param_restart_persistency}
 
 
 **This parameter will get overridden if either
@@ -909,7 +909,7 @@ modparam("usrloc", "restart_persistency", "sync-from-cluster")
 ```
 
 
-#### sql_write_mode (string)
+#### sql_write_mode (string) {#param_sql_write_mode}
 
 
 **This parameter will get overridden if either
@@ -956,7 +956,7 @@ modparam("usrloc", "sql_write_mode", "write-back")
 ```
 
 
-#### matching_mode (integer)
+#### matching_mode (integer) {#param_matching_mode}
 
 
 What contact matching algorithm to be used. Refer to section
@@ -986,7 +986,7 @@ modparam("usrloc", "matching_mode", 1)
 ```
 
 
-#### cseq_delay (integer)
+#### cseq_delay (integer) {#param_cseq_delay}
 
 
 Delay (in seconds) for accepting as retransmissions register requests
@@ -1015,7 +1015,7 @@ modparam("usrloc", "cseq_delay", 5)
 ```
 
 
-#### location_cluster (integer)
+#### location_cluster (integer) {#param_location_cluster}
 
 
 Specifies the cluster ID which this instance will send to and receive
@@ -1050,7 +1050,7 @@ modparam("usrloc", "location_cluster", 1)
 ```
 
 
-#### skip_replicated_db_ops (int)
+#### skip_replicated_db_ops (int) {#param_skip_replicated_db_ops}
 
 
 Prevent OpenSIPS from performing any DB-related contact operations
@@ -1077,7 +1077,7 @@ modparam("usrloc", "skip_replicated_db_ops", 1)
 ```
 
 
-#### max_contact_delete (int)
+#### max_contact_delete (int) {#param_max_contact_delete}
 
 
 Relevant only in WRITE_THROUGH or WRITE_BACK schemes. The maximum
@@ -1099,7 +1099,7 @@ modparam("usrloc", "max_contact_delete", 10)
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The number of entries of the hash table used by usrloc to store the
@@ -1121,7 +1121,7 @@ modparam("usrloc", "hash_size", 10)
 ```
 
 
-#### regen_broken_contactid (integer)
+#### regen_broken_contactid (integer) {#param_regen_broken_contactid}
 
 
 Since version 2.2, **contact_id** concept
@@ -1147,7 +1147,7 @@ modparam("usrloc", "regen_broken_contactid", 1)
 ```
 
 
-#### latency_event_min_us (integer)
+#### latency_event_min_us (integer) {#param_latency_event_min_us}
 
 
 Defines a minimal pinging latency threshold, in microseconds, past
@@ -1174,7 +1174,7 @@ modparam("usrloc", "latency_event_min_us", 425000)
 ```
 
 
-#### latency_event_min_us_delta (integer)
+#### latency_event_min_us_delta (integer) {#param_latency_event_min_us_delta}
 
 
 Defines a minimal, absolute pinging latency difference, in
@@ -1203,7 +1203,7 @@ modparam("usrloc", "latency_event_min_us_delta", 300000)
 ```
 
 
-#### pinging_mode (string)
+#### pinging_mode (string) {#param_pinging_mode}
 
 
 Depending on the [cluster mode](#param_cluster_mode), the module
@@ -1258,7 +1258,7 @@ modparam("usrloc", "pinging_mode", "ownership")
 ```
 
 
-#### mi_dump_kv_store (integer)
+#### mi_dump_kv_store (integer) {#param_mi_dump_kv_store}
 
 
 Enable in order to include the "KV-Store" field in all usrloc MI
@@ -1281,7 +1281,7 @@ modparam("usrloc", "mi_dump_kv_store", 1)
 ```
 
 
-#### contact_refresh_timer (boolean)
+#### contact_refresh_timer (boolean) {#param_contact_refresh_timer}
 
 
 Enable a timer which will periodically scan a sorted list of contacts
@@ -1304,10 +1304,10 @@ modparam("usrloc", "contact_refresh_timer", true)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ul_add_key(domain, aor, key_name, [key_value])
+#### ul_add_key(domain, aor, key_name, [key_value]) {#func_ul_add_key}
 
 
 Append a Key/Value to the Key-Value-Store of a Usrloc-Record.
@@ -1343,7 +1343,7 @@ ul_add_key("location", "$tU@$td", "service_route", "$hdr(Service-Route)");
 ```
 
 
-#### ul_get_key(domain, aor, key_name, destination)
+#### ul_get_key(domain, aor, key_name, destination) {#func_ul_get_key}
 
 
 Retrieve a Key/Value from the Key-Value-Store of a Usrloc-Record.
@@ -1380,7 +1380,7 @@ if (ul_get_key("location", "$tU@$td", "service_route", $avp(service_route))) {
 ```
 
 
-#### ul_del_key(domain, aor, key_name)
+#### ul_del_key(domain, aor, key_name) {#func_ul_del_key}
 
 
 Deletes a Key/Value from the Key-Value-Store of a Usrloc-Record.
@@ -1413,10 +1413,10 @@ ul_del_key("location", "$tU@$td", "service_route");
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### ul_rm
+#### ul_rm {#mi_ul_rm}
 
 
 Deletes an entire AOR record (including its contacts).
@@ -1432,7 +1432,7 @@ Parameters:
 				is on).
 
 
-#### ul_rm_contact
+#### ul_rm_contact {#mi_ul_rm_contact}
 
 
 Deletes a contact from an AOR record.
@@ -1449,7 +1449,7 @@ Parameters:
 - *contact* - exact contact to be removed
 
 
-#### ul_dump
+#### ul_dump {#mi_ul_dump}
 
 
 Dumps the entire content of the USRLOC in memory cache
@@ -1463,7 +1463,7 @@ Parameters:
 				done (only AOR and contacts, with no other details)
 
 
-#### ul_flush
+#### ul_flush {#mi_ul_flush}
 
 
 Force a flush of all pending usrloc cache changes to the database.
@@ -1471,7 +1471,7 @@ Force a flush of all pending usrloc cache changes to the database.
 		[timer interval](#param_timer_interval) seconds.
 
 
-#### ul_add
+#### ul_add {#mi_ul_add}
 
 
 Adds a new contact for an user AOR.
@@ -1498,7 +1498,7 @@ Parameters:
 				of each method's value, see the "request_method" internal enum.
 
 
-#### ul_show_contact
+#### ul_show_contact {#mi_ul_show_contact}
 
 
 Dumps the contacts of an user AOR.
@@ -1514,7 +1514,7 @@ Parameters:
 				is on).
 
 
-#### ul_sync
+#### ul_sync {#mi_ul_sync}
 
 
 Empty the location table, then synchronize it with all contacts from
@@ -1538,7 +1538,7 @@ Parameters:
 				[use domain](#param_use_domain) option is on).
 
 
-#### ul_cluster_sync
+#### ul_cluster_sync {#mi_ul_cluster_sync}
 
 
 This command will only take effect if the target OpenSIPS instance is
@@ -1555,13 +1555,13 @@ The current node will locate a healthy donor node within the
 		only if the sync data is newer than the current data.
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
 Exported statistics are listed in the next sections.
 
 
-#### users
+#### users {#stat_users}
 
 
 Number of AOR existing in the USRLOC memory cache for that domain
@@ -1569,7 +1569,7 @@ Number of AOR existing in the USRLOC memory cache for that domain
 			used domain (Ex: location).
 
 
-#### contacts
+#### contacts {#stat_contacts}
 
 
 Number of contacts existing in the USRLOC memory cache for that
@@ -1577,7 +1577,7 @@ Number of contacts existing in the USRLOC memory cache for that
 			each used domain (Ex: location).
 
 
-#### expires
+#### expires {#stat_expires}
 
 
 Total number of expired contacts for that domain - can be resetted;
@@ -1585,17 +1585,17 @@ Total number of expired contacts for that domain - can be resetted;
 			(Ex: location).
 
 
-#### registered_users
+#### registered_users {#stat_registered_users}
 
 
 Total number of AOR existing in the USRLOC memory cache for all
 			domains - can not be resetted.
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_UL_AOR_INSERT
+#### E_UL_AOR_INSERT {#event_E_UL_AOR_INSERT}
 
 
 This event is raised when a new AOR is inserted in the USRLOC
@@ -1609,7 +1609,7 @@ Parameters:
 - *aor* - The AOR of the inserted record.
 
 
-#### E_UL_AOR_DELETE
+#### E_UL_AOR_DELETE {#event_E_UL_AOR_DELETE}
 
 
 This event is raised when a new AOR is deleted from the USRLOC
@@ -1623,7 +1623,7 @@ Parameters:
 - *aor* - The AOR of the deleted record.
 
 
-#### E_UL_CONTACT_INSERT
+#### E_UL_CONTACT_INSERT {#event_E_UL_CONTACT_INSERT}
 
 
 This event is raised when a new contact is inserted in any of the
@@ -1677,7 +1677,7 @@ Parameters:
 				string)!
 
 
-#### E_UL_CONTACT_DELETE
+#### E_UL_CONTACT_DELETE {#event_E_UL_CONTACT_DELETE}
 
 
 This event is raised when a contact is deleted from an
@@ -1690,7 +1690,7 @@ Parameters: same as the
 			[E UL CONTACT INSERT](#event_E_UL_CONTACT_INSERT) event
 
 
-#### E_UL_CONTACT_UPDATE
+#### E_UL_CONTACT_UPDATE {#event_E_UL_CONTACT_UPDATE}
 
 
 This event is raised when a contact's info is updated by receiving
@@ -1701,7 +1701,7 @@ Parameters: same as the
 			[E UL CONTACT INSERT](#event_E_UL_CONTACT_INSERT) event
 
 
-#### E_UL_CONTACT_REFRESH
+#### E_UL_CONTACT_REFRESH {#event_E_UL_CONTACT_REFRESH}
 
 
 This event may only be raised for RFC 8599 (Push Notification)
@@ -1769,7 +1769,7 @@ Using the *req_callid*, if a dialog has been
 				functions of the dialog module.
 
 
-#### E_UL_LATENCY_UPDATE
+#### E_UL_LATENCY_UPDATE {#event_E_UL_LATENCY_UPDATE}
 
 
 This event is raised when a contact pinging latency matches either
@@ -2127,10 +2127,10 @@ Meaning of the parameters is as follows:
 The function loops through all domains summing up the number of users.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -2162,7 +2162,7 @@ The function loops through all domains summing up the number of users.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -2188,10 +2188,10 @@ The function loops through all domains summing up the number of users.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Norman Brandinger ([@NormB](https://github.com/NormB)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Carsten Bock, Zero King ([@l2dy](https://github.com/l2dy)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Marcus Hunger, Elena-Ramona Modroiu, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Jan Janak ([@janakj](https://github.com/janakj)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Nils Ohlmeier.

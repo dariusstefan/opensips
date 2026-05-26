@@ -6,7 +6,7 @@ description: "The module implements text based operations over the SIP message p
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module implements text based operations over the SIP message
@@ -36,7 +36,7 @@ From: medabeda
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -58,10 +58,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### search(re)
+#### search(re) {#func_search}
 
 
 Searches for the re in the message.
@@ -87,7 +87,7 @@ if ( search("[Ss][Ii][Pp]") ) { /*....*/ };
 ```
 
 
-#### search_body(re)
+#### search_body(re) {#func_search_body}
 
 
 Searches for the re in the body of the message.
@@ -113,7 +113,7 @@ if ( search_body("[Ss][Ii][Pp]") ) { /*....*/ };
 ```
 
 
-#### search_append(re, txt)
+#### search_append(re, txt) {#func_search_append}
 
 
 Searches for the first match of re and appends txt after it.
@@ -140,7 +140,7 @@ search_append("[Oo]pen[Ss]er", " SIP Proxy");
 ```
 
 
-#### search_append_body(re, txt)
+#### search_append_body(re, txt) {#func_search_append_body}
 
 
 Searches for the first match of re in the body of the message
@@ -168,7 +168,7 @@ search_append_body("[Oo]pen[Ss]er", " SIP Proxy");
 ```
 
 
-#### replace(re, txt)
+#### replace(re, txt) {#func_replace}
 
 
 Replaces the first occurrence of re with txt.
@@ -195,7 +195,7 @@ replace("opensips", "Open SIP Server");
 ```
 
 
-#### replace_body(re, txt)
+#### replace_body(re, txt) {#func_replace_body}
 
 
 Replaces the first occurrence of re in the body of the message
@@ -223,7 +223,7 @@ replace_body("opensips", "Open SIP Server");
 ```
 
 
-#### replace_all(re, txt)
+#### replace_all(re, txt) {#func_replace_all}
 
 
 Replaces all occurrence of re with txt.
@@ -250,7 +250,7 @@ replace_all("opensips", "Open SIP Server");
 ```
 
 
-#### replace_body_all(re, txt)
+#### replace_body_all(re, txt) {#func_replace_body_all}
 
 
 Replaces all occurrence of re in the body of the message
@@ -278,7 +278,7 @@ replace_body_all("opensips", "Open SIP Server");
 ```
 
 
-#### replace_body_atonce(re, txt)
+#### replace_body_atonce(re, txt) {#func_replace_body_atonce}
 
 
 Replaces all occurrence of re in the body of the message
@@ -308,7 +308,7 @@ if(has_body() && replace_body_atonce("^.+$", ""))
 ```
 
 
-#### subst('/re/repl/flags')
+#### subst('/re/repl/flags') {#func_subst}
 
 
 Replaces re with repl (sed or perl like).
@@ -344,7 +344,7 @@ if ( subst('/^To:(.*)sip:[^@]*@[a-zA-Z0-9.]+(.*)$/t:\1$avp(sip_address)\2/ig') )
 ```
 
 
-#### subst_uri('/re/repl/flags')
+#### subst_uri('/re/repl/flags') {#func_subst_uri}
 
 
 Runs the re substitution on the message uri (like subst but works
@@ -383,7 +383,7 @@ if (subst_uri('/^sip:([0-9]+)@(.*)$/sip:$avp(uri_prefix)\1@\2;orig_uri=\0/i')){$
 ```
 
 
-#### subst_user('/re/repl/flags')
+#### subst_user('/re/repl/flags') {#func_subst_user}
 
 
 Runs the re substitution on the message uri (like subst_uri but works
@@ -421,7 +421,7 @@ if (subst_user('/(.*)3642$/$avp(user_prefix)\13642/')){$
 ```
 
 
-#### subst_body('/re/repl/flags')
+#### subst_body('/re/repl/flags') {#func_subst_body}
 
 
 Replaces re with repl (sed or perl like) in the body of the message.
@@ -454,10 +454,10 @@ if (subst_body("/^o=([^ ]*) /o=$fU /"))
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -489,7 +489,7 @@ if (subst_body("/^o=([^ ]*) /o=$fU /"))
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -515,10 +515,10 @@ if (subst_body("/^o=([^ ]*) /o=$fU /"))
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Andrei Dragus, Anca Vamanu, Andreas Granig, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Klaus Darilion, Marc Haisenko, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Andrei Pelinescu-Onciul.

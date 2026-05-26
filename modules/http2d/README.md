@@ -6,7 +6,7 @@ description: "This module provides an RFC 7540/9113 HTTP/2 server implementation
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides an RFC 7540/9113 HTTP/2 server implementation with "h2" ALPN support,
@@ -25,7 +25,7 @@ The OpenSIPS **http2d** server includes support for both "h2" (TLS secured)
 		where script writers may process the data and respond accordingly.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -50,10 +50,10 @@ Overall, the following libraries must be installed before running
 - *libssl*, *libcrypto*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### ip (string)
+#### ip (string) {#param_ip}
 
 
 The listening IPv4 address.
@@ -70,7 +70,7 @@ modparam("http2d", "ip", "127.0.0.2")
 ```
 
 
-#### port (integer)
+#### port (integer) {#param_port}
 
 
 The listening port.
@@ -87,7 +87,7 @@ modparam("http2d", "port", 5000)
 ```
 
 
-#### tls_cert_path (string)
+#### tls_cert_path (string) {#param_tls_cert_path}
 
 
 File path to the TLS certificate, in PEM format.
@@ -104,7 +104,7 @@ modparam("http2d", "tls_cert_path", "/etc/pki/http2/cert.pem")
 ```
 
 
-#### tls_cert_key (string)
+#### tls_cert_key (string) {#param_tls_cert_key}
 
 
 File path to the TLS private key, in PEM format.
@@ -121,7 +121,7 @@ modparam("http2d", "tls_cert_key", "/etc/pki/http2/private/key.pem")
 ```
 
 
-#### max_headers_size (integer)
+#### max_headers_size (integer) {#param_max_headers_size}
 
 
 The maximum amount of bytes allowed for all header field names and values
@@ -141,7 +141,7 @@ modparam("http2d", "max_headers_size", 16384)
 ```
 
 
-#### response_timeout (integer)
+#### response_timeout (integer) {#param_response_timeout}
 
 
 The maximum amount of time, in milliseconds, that the library will
@@ -163,10 +163,10 @@ modparam("http2d", "response_timeout", 5000)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### http2_send_response(code, [headers_json], [data])
+#### http2_send_response(code, [headers_json], [data]) {#func_http2_send_response}
 
 
 Sends a response for the HTTP/2 request being processed.  The *":status"*
@@ -223,10 +223,10 @@ event_route [E_HTTP2_REQUEST] {
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_HTTP2_REQUEST
+#### E_HTTP2_REQUEST {#event_http2_request}
 
 
 This event is raised whenever the *http2d*
@@ -252,10 +252,10 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 		this event can be successfully consumed through any other EVI-compatible delivery channel ☺️
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -277,7 +277,7 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -293,10 +293,10 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

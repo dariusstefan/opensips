@@ -6,7 +6,7 @@ description: "The modules is a Resource List Server implementation following the
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The modules is a Resource List Server implementation following the
@@ -40,7 +40,7 @@ The same as presence module, it has a caching mode with periodical update
 	messages is stored in database only.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -63,10 +63,10 @@ The following modules must be loaded before this module:
 - *libxml-dev*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### rlsubs_table(str)
+#### rlsubs_table(str) {#param_rlsubs_table}
 
 
 The name of the db table where resource lists subscription 
@@ -86,7 +86,7 @@ modparam("rls", "rlsubs_table", "rls_subscriptions")
 ```
 
 
-#### rlpres_table(str)
+#### rlpres_table(str) {#param_rlpres_table}
 
 
 The name of the db table where notified event specific
@@ -106,7 +106,7 @@ modparam("rls", "rlpres_table", "rls_notify")
 ```
 
 
-#### clean_period (int)
+#### clean_period (int) {#param_clean_period}
 
 
 The period at which to check for expired information.
@@ -125,7 +125,7 @@ modparam("rls", "clean_period", 100)
 ```
 
 
-#### waitn_time (int)
+#### waitn_time (int) {#param_waitn_time}
 
 
 The timer period at which the server should attempt to send
@@ -146,7 +146,7 @@ modparam("rls", "waitn_time", 10)
 ```
 
 
-#### max_expires (int)
+#### max_expires (int) {#param_max_expires}
 
 
 The maximum accepted expires for a subscription to a list.
@@ -166,7 +166,7 @@ modparam("rls", "max_expires", 10800)
 ```
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The dimension of the hash table used to store subscription to a list.
@@ -187,7 +187,7 @@ modparam("rls", "hash_size", 11)
 ```
 
 
-#### xcap_root (str)
+#### xcap_root (str) {#param_xcap_root}
 
 
 The address of the xcap server.
@@ -207,7 +207,7 @@ modparam("rls", "xcap_root", "http://192.168.2.132/xcap-root:800")
 ```
 
 
-#### to_presence_code (int)
+#### to_presence_code (int) {#param_to_presence_code}
 
 
 The code to be returned by rls_handle_subscribe function 
@@ -231,7 +231,7 @@ modparam("rls", "to_presence_code", 10)
 ```
 
 
-#### rls_event (str)
+#### rls_event (str) {#param_rls_event}
 
 
 The default event that RLS handles is presence. If some other
@@ -253,7 +253,7 @@ modparam("rls", "rls_event", "dialog;sla")
 ```
 
 
-#### presence_server (str)
+#### presence_server (str) {#param_presence_server}
 
 
 The address of the presence server. It will be used as outbound proxy for
@@ -273,7 +273,7 @@ modparam("rls", "presence_server", "sip:pres@opensips.org:5060")
 ```
 
 
-#### contact_user (str)
+#### contact_user (str) {#param_contact_user}
 
 
 This is the username that will be used in the Contact header for the 200 OK
@@ -302,10 +302,10 @@ modparam("rls", "contact_user", "rls")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### rls_handle_subscribe()
+#### rls_handle_subscribe() {#func_rls_handle_subscribe}
 
 
 This function detects if a Subscribe message should be
@@ -346,7 +346,7 @@ For rls only:
 ```
 
 
-#### rls_handle_notify()
+#### rls_handle_notify() {#func_rls_handle_notify}
 
 
 This function has to be called for Notify messages sent by presence
@@ -377,10 +377,10 @@ if($rm=="NOTIFY")
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rls_update_subscriptions
+#### rls_update_subscriptions {#mi_rls_update_subscriptions}
 
 
 Triggers updating backend subscriptions after a resources-list or rls-services document
@@ -423,10 +423,10 @@ The module requires 2 table in OpenSIPS database: rls_presentity
 The module provides no functions to be used	in other OpenSIPS modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -458,7 +458,7 @@ The module provides no functions to be used	in other OpenSIPS modules.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -484,10 +484,10 @@ The module provides no functions to be used	in other OpenSIPS modules.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Dan Pascu ([@danpascu](https://github.com/danpascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

@@ -6,7 +6,7 @@ description: "Enum module implements [i_]enum_query functions that make an enum 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Enum module implements [i_]enum_query functions that make an enum query 
@@ -100,7 +100,7 @@ Enum module also implements is_from_user_enum function.
 		returns true if found, false otherwise.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The module depends on the following modules (in the other words the 
@@ -110,10 +110,10 @@ The module depends on the following modules (in the other words the
 - No dependencies.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### domain_suffix (string)
+#### domain_suffix (string) {#param_domain_suffix}
 
 
 The domain suffix to be added to the domain name obtained from
@@ -132,7 +132,7 @@ modparam("enum", "domain_suffix", "e1234.arpa.")
 ```
 
 
-#### tel_uri_params (string)
+#### tel_uri_params (string) {#param_tel_uri_params}
 
 
 A string whose contents is appended to each new tel URI in the 
@@ -154,7 +154,7 @@ modparam("enum", "tel_uri_params", ";npdi")
 ```
 
 
-#### i_enum_suffix (string)
+#### i_enum_suffix (string) {#param_i_enum_suffix}
 
 
 The domain suffix to be used for i_enum_query() lookups.
@@ -172,7 +172,7 @@ modparam("enum", "i_enum_suffix", "e1234.arpa.")
 ```
 
 
-#### isn_suffix (string)
+#### isn_suffix (string) {#param_isn_suffix}
 
 
 The domain suffix to be used for isn_query() lookups. Can
@@ -190,7 +190,7 @@ modparam("enum", "isn_suffix", "freenum.org.")
 ```
 
 
-#### branchlabel (string)
+#### branchlabel (string) {#param_branchlabel}
 
 
 This parameter determines which label i_enum_query() will use
@@ -208,7 +208,7 @@ modparam("enum", "branchlabel", "i")
 ```
 
 
-#### bl_algorithm (string)
+#### bl_algorithm (string) {#param_bl_algorithm}
 
 
 This parameter determines which algorithm i_enum_query() will use
@@ -265,10 +265,10 @@ modparam("enum", "bl_algorithm", "txt")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### enum_query([suffix], [service], [number])
+#### enum_query([suffix], [service], [number]) {#func_enum_query}
 
 
 The function performs an ENUM query on a given E.164 "number" (or R-URI
@@ -319,7 +319,7 @@ enum_query("e164.arpa.", "+sip+voice:sip");
 ```
 
 
-#### i_enum_query([suffix], [service])
+#### i_enum_query([suffix], [service]) {#func_i_enum_query}
 
 
 The function performs an enum query and rewrites the Request-URI with
@@ -341,7 +341,7 @@ See ftp://ftp.rfc-editor.org/in-notes/internet-drafts/draft-haberler-carrier-enu
         for the rationale behind this function.
 
 
-#### isn_query([suffix], [service])
+#### isn_query([suffix], [service]) {#func_isn_query}
 
 
 The function performs a ISN query and rewrites the Request-URI with 
@@ -383,7 +383,7 @@ isn_query("freenum.org.", "voice");
 ```
 
 
-#### is_from_user_enum([suffix], [service])
+#### is_from_user_enum([suffix], [service]) {#func_is_from_user_enum}
 
 
 Checks if the user part of from URI
@@ -415,10 +415,10 @@ if (is_from_user_enum()) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -450,7 +450,7 @@ if (is_from_user_enum()) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -476,10 +476,10 @@ if (is_from_user_enum()) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Greg Fausak, Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).

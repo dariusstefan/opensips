@@ -6,7 +6,7 @@ description: "This module offer the internal support for OpenSIPS to act as a Pr
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module offer the internal support for OpenSIPS to act as a 
@@ -42,7 +42,7 @@ Notice: This module must not be used in no fork mode (the locking
 		mechanism used may cause deadlock in no fork mode).
 
 
-### PUA clustering
+### PUA clustering {#pua_clustering}
 
 
 Starting 3.2, the module was extended with clustering support also. This 
@@ -78,7 +78,7 @@ On the OpenSIPS clustering layer, the PUA module use the sharing-tags
 	presentity (like sending the PUBLISH with expires 0).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -103,10 +103,10 @@ The following libraries or applications must be installed before running
 - *libxml*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The size of the hash table used for storing Subscribe and 
@@ -127,7 +127,7 @@ modparam("pua", "hash_size", 11)
 ```
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 Database url.
@@ -146,7 +146,7 @@ modparam("pua", "db_url" "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### db_table (str)
+#### db_table (str) {#param_db_table}
 
 
 The name of the database table.
@@ -165,7 +165,7 @@ modparam("pua", "db_table", "pua")
 ```
 
 
-#### min_expires (int)
+#### min_expires (int) {#param_min_expires}
 
 
 The inferior expires limit for both Publish and Subscribe.
@@ -184,7 +184,7 @@ modparam("pua", "min_expires", 0)
 ```
 
 
-#### default_expires (int)
+#### default_expires (int) {#param_default_expires}
 
 
 The default expires value used in case this information is not provisioned.
@@ -203,7 +203,7 @@ modparam("pua", "default_expires", 3600)
 ```
 
 
-#### update_period (int)
+#### update_period (int) {#param_update_period}
 
 
 The interval at which the information in database and hash table
@@ -228,7 +228,7 @@ modparam("pua", "update_period", 100)
 ```
 
 
-#### cluster_id (int)
+#### cluster_id (int) {#param_cluster_id}
 
 
 The cluster ID where the PUA data should be replicated/shared.
@@ -254,7 +254,7 @@ modparam("pua", "cluster_id", 10)
 ```
 
 
-#### cluster_sharing_tag (int)
+#### cluster_sharing_tag (int) {#param_cluster_sharing_tag}
 
 
 The clustering share-tag to be used by the PUA module when creating
@@ -283,10 +283,10 @@ modparam("pua", "cluster_sharing_tag", "vip")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### pua_update_contact()
+#### pua_update_contact() {#func_pua_update_contact}
 
 
 The remote target can be updated by the Contact of a subsequent in
@@ -617,10 +617,10 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -652,7 +652,7 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -678,10 +678,10 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.

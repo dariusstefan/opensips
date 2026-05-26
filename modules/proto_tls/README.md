@@ -6,7 +6,7 @@ description: "TLS, as defined in SIP RFC 3261, is a mandatory feature for proxie
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 TLS, as defined in SIP RFC 3261, is a mandatory feature for proxies
@@ -139,7 +139,7 @@ One way to do it is by remotely changing the ringing type of the
 			retrieve a ringing tone.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -170,7 +170,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-TLS.
 
 
-#### listen=interface
+#### listen=interface {#param_listen}
 
 
 Not specific to TLS. Allows to specify the protocol
@@ -189,7 +189,7 @@ socket= tls:1.2.3.4:5061
 ```
 
 
-#### tls_port (integer)
+#### tls_port (integer) {#param_tls_port}
 
 
 The default port to be used for all TLS related operation. Be 
@@ -216,7 +216,7 @@ modparam("proto_tls", "tls_port", 5062)
 ```
 
 
-#### tls_crlf_pingpong (integer)
+#### tls_crlf_pingpong (integer) {#param_tls_crlf_pingpong}
 
 
 Send CRLF pong (\r\n) to incoming CRLFCRLF ping messages over TLS.
@@ -236,7 +236,7 @@ modparam("proto_tls", "tls_crlf_pingpong", 0)
 ```
 
 
-#### tls_crlf_drop (integer)
+#### tls_crlf_drop (integer) {#param_tls_crlf_drop}
 
 
 Drop CRLF (\r\n) ping messages. When this parameter is enabled,
@@ -258,7 +258,7 @@ modparam("proto_tls", "tls_crlf_drop", 1)
 ```
 
 
-#### tls_max_msg_chunks (integer)
+#### tls_max_msg_chunks (integer) {#param_tls_max_msg_chunks}
 
 
 The maximum number of chunks that a SIP message is expected to
@@ -282,7 +282,7 @@ modparam("proto_tls", "tls_max_msg_chunks", 8)
 ```
 
 
-#### cert_check_on_conn_reusage (integer)
+#### cert_check_on_conn_reusage (integer) {#param_tls_cert_check_on_conn_reusage}
 
 
 This parameter turns on or off the extra checking/matching of the
@@ -312,7 +312,7 @@ modparam("proto_tls", "cert_check_on_conn_reusage", 1)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_tls_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -344,7 +344,7 @@ modparam("proto_tls", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_on (int)
+#### trace_on (int) {#param_trace_on}
 
 
 This controls whether tracing for tls is on or not. You still need to define
@@ -362,7 +362,7 @@ modparam("proto_tls", "trace_on", 1)
 ```
 
 
-#### trace_filter_route (string)
+#### trace_filter_route (string) {#param_trace_filter_route}
 
 
 Define the name of a route in which you can filter which connections will
@@ -414,7 +414,7 @@ route[tls_filter] {
 ```
 
 
-#### tls_handshake_timeout (integer)
+#### tls_handshake_timeout (integer) {#param_tls_handshake_timeout}
 
 
 Sets the timeout (in milliseconds) for the SSL handshake sequence to complete.
@@ -439,7 +439,7 @@ modparam("proto_tls", "tls_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### tls_send_timeout (integer)
+#### tls_send_timeout (integer) {#param_tls_send_timeout}
 
 
 Sets the timeout (in milliseconds) for the send operations to complete
@@ -462,7 +462,7 @@ modparam("proto_tls", "tls_send_timeout", 200) # number of milliseconds
 ```
 
 
-#### tls_async (integer)
+#### tls_async (integer) {#param_tls_async}
 
 
 If the TLS connect and write operations should be done in an
@@ -552,10 +552,10 @@ modparam("proto_tls", "tls_async_handshake_timeout", 100)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### tls_trace
+#### tls_trace {#mi_tls_trace}
 
 
 Name: *tls_trace*
@@ -736,10 +736,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -771,7 +771,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -797,10 +797,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Zero King ([@l2dy](https://github.com/l2dy)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

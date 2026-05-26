@@ -52,7 +52,7 @@ None.
 ### Parameters
 
 
-#### default_expires (int)
+#### default_expires (int) {#presence_reginfo.p.default_expires}
 
 
 The default expires value used when missing from SUBSCRIBE
@@ -73,7 +73,7 @@ The default expires value used when missing from SUBSCRIBE
 ```
 
 
-#### aggregate_presentities (int)
+#### aggregate_presentities (int) {#presence_reginfo.p.aggregate_presentities}
 
 
 Whether to aggregate in a single notify body all registration 
@@ -101,10 +101,10 @@ Whether to aggregate in a single notify body all registration
 None to be used in configuration file.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -125,7 +125,7 @@ None to be used in configuration file.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -140,10 +140,10 @@ None to be used in configuration file.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Carsten Bock.

@@ -6,7 +6,7 @@ description: "The time needed when writing a new OpenSIPS module unfortunately i
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The time needed when writing a new OpenSIPS module
@@ -54,7 +54,7 @@ On the Lua side, you have access to opensips functions and
     for further informations.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -98,7 +98,7 @@ On OpenBSD systems, at least the following packages should be
 - Lua
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 #### luafilename (string)
@@ -150,7 +150,7 @@ Change the default memory allocator for the lua module.
 - malloc
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### lua_exec(func, [param])
@@ -186,10 +186,10 @@ if (lua_exec("mongo_alias")) {
 Logs informations about memory.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### watch
+#### watch {#mi_watch}
 
 
 Name: *watch*
@@ -401,10 +401,10 @@ Sets the value of a script variable.
 Add header to the reply.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -432,7 +432,7 @@ Add header to the reply.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -454,10 +454,10 @@ Add header to the reply.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Arnaud Chong + Eric Gouyer.

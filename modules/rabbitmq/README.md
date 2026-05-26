@@ -6,7 +6,7 @@ description: "*RabbitMQ* ([http://www.rabbitmq.com/](http://www.rabbitmq.com/)) 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 *RabbitMQ*
@@ -21,7 +21,7 @@ Using this module you can send AMQP messages to a RabbitMQ server.
 		as well the RabbitMQ extensions.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -43,10 +43,10 @@ The following libraries or applications must be installed before running
 - *librabbitmq-dev*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### server_id (string)
+#### server_id (string) {#param_server_id}
 
 
 Specify configuration for a RabbitMQ server. It contains a set
@@ -117,7 +117,7 @@ modparam("rabbitmq", "server_id","[ID3] uri = amqps://127.0.0.1; tls_domain=rmq"
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for broker connections.
@@ -149,7 +149,7 @@ modparam("rabbitmq", "use_tls", 1)
 ```
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 The maximally allowed duration (in milliseconds) for the establishment
@@ -167,7 +167,7 @@ aram("rabbitmq", "connect_timeout", 1000)
 ```
 
 
-#### timeout (integer)
+#### timeout (integer) {#param_timeout}
 
 
 Indicates the timeout (in milliseconds) of any command (i.e. publish)
@@ -193,11 +193,11 @@ modparam("rabbitmq", "timeout", 1000) # timeout after 1s
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### rabbitmq_publish(server_id, routing_key, message 
-					[, [content_type [, headers, headers_vals]]])
+					[, [content_type [, headers, headers_vals]]]) {#func_rabbitmq_publish}
 
 
 Sends a publish message to a RabbitMQ server.
@@ -254,10 +254,10 @@ The function has the following parameters:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -282,7 +282,7 @@ The function has the following parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -301,10 +301,10 @@ The function has the following parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

@@ -6,7 +6,7 @@ description: "This module provides a minimal web user interface for the OpenSIPS
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a minimal web user interface for the OpenSIPS's
@@ -27,7 +27,7 @@ Features to be added in the future:
 - possibility to authenticate connections.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -39,10 +39,10 @@ The following modules must be loaded before this module:
 - *httpd* module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### root(string)
+#### root(string) {#param_root}
 
 
 Specifies the root path for the HTTP requests.
@@ -64,7 +64,7 @@ modparam("mi_html", "root", "opensips_mi")
 ```
 
 
-#### http_method(integer)
+#### http_method(integer) {#param_http_method}
 
 
 Specifies the HTTP request method to be used:
@@ -87,7 +87,7 @@ modparam("mi_html", "http_method", 1)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -115,7 +115,7 @@ modparam("mi_html", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_bwlist (string)
+#### trace_bwlist (string) {#param_trace_bwlist}
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -158,7 +158,7 @@ modparam("mi_html", "trace_bwlist", "w: sip_trace")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -175,10 +175,10 @@ Commands with large responses (like ul_dump) will fail if the
 Future realeases of the httpd module will address this issue.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -207,7 +207,7 @@ Future realeases of the httpd module will address this issue.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -230,10 +230,10 @@ Future realeases of the httpd module will address this issue.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

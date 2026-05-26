@@ -6,7 +6,7 @@ description: "This module provides an RFC 6733 Diameter peer implementation, bei
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides an RFC 6733 Diameter peer implementation, being
@@ -20,7 +20,7 @@ Any module that wishes to use it has to do the following:
 - *make a bind call with a proper Diameter-specific URL, e.g. "diameter:freeDiameter-client.conf"*
 
 
-### Diameter Client
+### Diameter Client {#diameter_client}
 
 
 The module implements the core AAA OpenSIPS interface, thus offering
@@ -36,7 +36,7 @@ In addition to the RADIUS client's auth and accounting features, the
 		be sent using the [dm send request](#func_dm_send_request) function.
 
 
-### Diameter Server
+### Diameter Server {#diameter_server}
 
 
 Starting with OpenSIPS **3.5**, the Diameter
@@ -61,7 +61,7 @@ Finally, once the request information is processed and the answer AVPs
 		to have when inter-operating with other Diameter peer implementations.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -87,10 +87,10 @@ The following libraries must be installed before running
 - *libfdproto* v1.2.1 or higher
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### fd_log_level (integer)
+#### fd_log_level (integer) {#param_fd_log_level}
 
 
 This parameter measures the *quietness* of the logging
@@ -117,7 +117,7 @@ modparam("aaa_diameter", "fd_log_level", 0)
 ```
 
 
-#### realm (string)
+#### realm (string) {#param_realm}
 
 
 The unique realm to be used by all participating Diameter peers.
@@ -134,7 +134,7 @@ modparam("aaa_diameter", "realm", "opensips.org")
 ```
 
 
-#### peer_identity (string)
+#### peer_identity (string) {#param_peer_identity}
 
 
 The identity (realm subdomain) of the Diameter server peer, to which
@@ -153,7 +153,7 @@ modparam("aaa_diameter", "peer_identity", "server")
 ```
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 URL of the diameter client: the configuration file, with an optional
@@ -179,7 +179,7 @@ modparam("aaa_diameter", "aaa_url", "diameter:freeDiameter-client.conf;extra-avp
 ```
 
 
-#### answer_timeout (integer)
+#### answer_timeout (integer) {#param_answer_timeout}
 
 
 Time, in milliseconds, after which a [dm send request](#func_dm_send_request)
@@ -198,10 +198,10 @@ modparam("aaa_diameter", "answer_timeout", 5000)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])
+#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv]) {#func_dm_send_request}
 
 
 Perform a blocking Diameter request over to the interconnected peer
@@ -338,7 +338,7 @@ $json(avps) := $var(rpl_avps);
 ```
 
 
-#### dm_send_answer(avps_json, [is_error])
+#### dm_send_answer(avps_json, [is_error]) {#func_dm_send_answer}
 
 
 Send back a Diameter answer message to the interconnected peer in a
@@ -409,7 +409,7 @@ event_route [E_DM_REQUEST] {
 ### Exported Asyncronous Functions
 
 
-#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])
+#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv]) {#afunc_dm_send_request}
 
 
 Similar to [dm send request](#func_dm_send_request) but performs an asynchronous Diameter request.
@@ -453,10 +453,10 @@ route[dm_reply] {
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_DM_REQUEST
+#### E_DM_REQUEST {#event_dm_request}
 
 
 This event is raised whenever the *aaa_diameter*
@@ -486,10 +486,10 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 		this event can be successfully consumed through any other EVI-compatible delivery channel ☺️
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -514,7 +514,7 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -533,10 +533,10 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

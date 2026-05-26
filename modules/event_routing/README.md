@@ -6,7 +6,7 @@ description: "The Event (based) Routing module, or shortly the EBR module, provi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Event (based) Routing module, or shortly the EBR module, provides a 
@@ -56,7 +56,7 @@ With the help of the EBR support, more advanced routing scenarios are
 	the [Examples](#Examples) section.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -78,16 +78,16 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 This module does not provide any script parameters.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### notify_on_event(event, filter, route, timeout)
+#### notify_on_event(event, filter, route, timeout) {#func_notify_on_event}
 
 
 This function creates a subscription to a given Event. A filter can be
@@ -152,7 +152,7 @@ route[reg_done] {
 ### Exported Asynchronous Functions
 
 
-#### wait_for_event(event,filter,timeout)
+#### wait_for_event(event,filter,timeout) {#afunc_wait_for_event}
 
 
 Similar to the *notify_on_event*, this function
@@ -183,7 +183,7 @@ route[resume_call] {
 ```
 
 
-### Usage Examples
+### Usage Examples {#Examples}
 
 
 #### Push Notification
@@ -369,10 +369,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -400,7 +400,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -422,10 +422,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

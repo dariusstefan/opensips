@@ -6,7 +6,7 @@ description: "This module allows one to limit the duration of calls and automati
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module allows one to limit the duration of calls and automatically
@@ -97,7 +97,7 @@ Callcontrol is invoked by calling the call_control() function for the
             create potential problems in call rating engines.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -122,7 +122,7 @@ The following libraries or applications must be installed before
 ### Exported parameters
 
 
-#### disable (int)
+#### disable (int) {#param_disable}
 
 
 Boolean flag that specifies if callcontrol should be disabled. This
@@ -147,7 +147,7 @@ modparam("call_control", "disable", 1)
 ```
 
 
-#### socket_name (string)
+#### socket_name (string) {#param_socket_name}
 
 
 It is the path to the filesystem socket where the callcontrol
@@ -169,7 +169,7 @@ modparam("call_control", "socket_name", "/run/callcontrol/socket")
 ```
 
 
-#### socket_timeout (int)
+#### socket_timeout (int) {#param_socket_timeout}
 
 
 How much time (in milliseconds) to wait for an answer from the
@@ -190,7 +190,7 @@ modparam("call_control", "socket_timeout", 500)
 ```
 
 
-#### signaling_ip_avp (string)
+#### signaling_ip_avp (string) {#param_signaling_ip_avp}
 
 
 Specification of the AVP which holds the IP address from where
@@ -227,7 +227,7 @@ modparam("call_control", "signaling_ip_avp", "$avp(cc_signaling_ip)")
 ```
 
 
-#### canonical_uri_avp (string)
+#### canonical_uri_avp (string) {#param_canonical_uri_avp}
 
 
 Specification of the AVP which holds an optional application defined
@@ -252,7 +252,7 @@ modparam("call_control", "canonical_uri_avp", "$avp(cc_can_uri)")
 ```
 
 
-#### diverter_avp (string)
+#### diverter_avp (string) {#param_diverter_avp}
 
 
 Specification of the AVP which holds an optional
@@ -293,7 +293,7 @@ route {
 ```
 
 
-#### prepaid_account_flag (string)
+#### prepaid_account_flag (string) {#param_prepaid_account_flag}
 
 
 The flag that is used to specify whether the account making the call is
@@ -320,7 +320,7 @@ modparam("call_control", "prepaid_account_flag", "PP_ACC_FLAG")
 ```
 
 
-#### call_limit_avp (string)
+#### call_limit_avp (string) {#param_call_limit_avp}
 
 
 Specification of the AVP which holds an optional application defined
@@ -343,7 +343,7 @@ modparam("call_control", "call_limit_avp", "$avp(cc_call_limit)")
 ```
 
 
-#### call_token_avp (string)
+#### call_token_avp (string) {#param_call_token_avp}
 
 
 Specification of the AVP which holds an optional application defined
@@ -370,7 +370,7 @@ $avp(cc_call_token) := $RANDOM;
 ```
 
 
-#### init (string)
+#### init (string) {#param_init}
 
 
 This parameter is used to describe custom call control initialize messages. It represents a
@@ -406,7 +406,7 @@ modparam("call_control", "init", "call-id=$ci to=$tu from=$fu
 ```
 
 
-#### start (string)
+#### start (string) {#param_start}
 
 
 This parameter is used to describe custom call control start messages. It represents a
@@ -442,7 +442,7 @@ modparam("call_control", "start", "call-id=$ci to=$tu from=$fu
 ```
 
 
-#### stop (string)
+#### stop (string) {#param_stop}
 
 
 This parameter is used to describe custom call control stop messages. It represents a
@@ -478,10 +478,10 @@ modparam("call_control", "stop", "call-id=$ci to=$tu from=$fu
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### call_control()
+#### call_control() {#func_call_control}
 
 
 Trigger the use of callcontrol for the dialog started by the INVITE
@@ -570,10 +570,10 @@ t_relay();
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -605,7 +605,7 @@ t_relay();
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -631,10 +631,10 @@ t_relay();
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Zero King ([@l2dy](https://github.com/l2dy)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Irina-Maria Stanescu.

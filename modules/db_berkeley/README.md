@@ -6,14 +6,14 @@ description: "This is a module which integrates the Berkeley DB into OpenSIPS. I
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module which integrates the Berkeley DB into OpenSIPS.
 		It implements the DB API defined in OpenSIPS.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before running
 - *Berkeley Berkeley DB 4.6* - an embedded database.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### auto_reload (integer)
+#### auto_reload (integer) {#param_auto_reload}
 
 
 The auto-reload will close and reopen a Berkeley DB when the
@@ -60,7 +60,7 @@ modparam("db_berkeley", "auto_reload", 1)
 ```
 
 
-#### log_enable (integer)
+#### log_enable (integer) {#param_log_enable}
 
 
 The log_enable boolean controls when to create journal files.
@@ -89,7 +89,7 @@ modparam("db_berkeley", "log_enable", 1)
 ```
 
 
-#### journal_roll_interval (integer seconds)
+#### journal_roll_interval (integer seconds) {#param_journal_roll_interval}
 
 
 The journal_roll_interval will close and open a new log file. 
@@ -111,16 +111,16 @@ modparam("db_berkeley", "journal_roll_interval", 3600)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### bdb_reload
+#### bdb_reload {#mi_bdb_reload}
 
 
 Causes db_berkeley module to re-read the contents of specified table (or dbenv).
@@ -499,10 +499,10 @@ The Berkeley DB does not nativly support an autoincrement (or sequence) mechanis
 	are the id columns in the tables.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -534,7 +534,7 @@ The Berkeley DB does not nativly support an autoincrement (or sequence) mechanis
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -560,10 +560,10 @@ The Berkeley DB does not nativly support an autoincrement (or sequence) mechanis
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Anonymous, William Quan.

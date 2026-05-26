@@ -6,7 +6,7 @@ description: "This is a module that enables media streams to be proxied via an R
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module that enables media streams to be proxied
@@ -65,7 +65,7 @@ IMPORTANT: if you use multiple sets, take care and use the same set for
 		set only once before rtpengine_offer() or rtpengine_manage() call.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -91,7 +91,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### rtpengine_sock (string)
+#### rtpengine_sock (string) {#param_rtpengine_sock}
 
 
 Definition of socket(s) used to connect to (a set) RTP proxy. It may
@@ -122,7 +122,7 @@ modparam("rtpengine", "rtpengine_sock",
 ```
 
 
-#### rtpengine_disable_tout (integer)
+#### rtpengine_disable_tout (integer) {#param_rtpengine_disable_tout}
 
 
 Once an RTP proxy was found unreachable and marked as disabled, the rtpengine
@@ -143,7 +143,7 @@ modparam("rtpengine", "rtpengine_disable_tout", 20)
 ```
 
 
-#### rtpengine_tout (integer)
+#### rtpengine_tout (integer) {#param_rtpengine_tout}
 
 
 Timeout value in waiting for reply from RTP proxy.
@@ -162,7 +162,7 @@ modparam("rtpengine", "rtpengine_tout", 2)
 ```
 
 
-#### rtpengine_retr (integer)
+#### rtpengine_retr (integer) {#param_rtpengine_retr}
 
 
 How many times the module should retry to send and receive after
@@ -182,7 +182,7 @@ modparam("rtpengine", "rtpengine_retr", 2)
 ```
 
 
-#### rtpengine_timer_interval (integer)
+#### rtpengine_timer_interval (integer) {#param_rtpengine_timer_interval}
 
 
 Frequency to scan rtpengine sets for disabled node probing. Probing is done
@@ -205,7 +205,7 @@ modparam("rtpengine", "rtpengine_timer_interval", 1)
 ```
 
 
-#### notification_sock (string)
+#### notification_sock (string) {#param_notification_sock}
 
 
 An UDP socket formatted as *IP:port*
@@ -230,7 +230,7 @@ modparam("rtpengine", "notification_sock", "127.0.0.1:9999")
 ```
 
 
-#### extra_id_pv (string)
+#### extra_id_pv (string) {#param_extra_id_pv}
 
 
 The parameter sets the PV definition to use when the "via-branch=extra"
@@ -251,7 +251,7 @@ modparam("rtpengine", "extra_id_pv", "$avp(extra_id)")
 ```
 
 
-#### setid_avp (string)
+#### setid_avp (string) {#param_setid_avp}
 
 
 The parameter defines an AVP that, if set,
@@ -274,7 +274,7 @@ modparam("rtpengine", "setid_avp", "$avp(setid)")
 ```
 
 
-#### error_pv (string)
+#### error_pv (string) {#param_error_pv}
 
 
 The parameter defines a variable that shall be populated
@@ -294,7 +294,7 @@ modparam("rtpengine", "error_pv", "$var(rtpengine_error)")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database URL, used to load RTPEngines sockets
@@ -318,7 +318,7 @@ modparam("rtpengine", "db_url",
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The table where the RTPEngines sockets are stored.
@@ -338,7 +338,7 @@ modparam("rtpengine", "db_table", "rtpengine_new")
 ```
 
 
-#### socket_column (string)
+#### socket_column (string) {#param_socket_column}
 
 
 The name of the rtpengine socket column in the database table.
@@ -357,7 +357,7 @@ modparam("rtpengine", "socket_column", "sock")
 ```
 
 
-#### set_column (string)
+#### set_column (string) {#param_set_column}
 
 
 The name of the rtpengine set column in the database table.
@@ -379,7 +379,7 @@ modparam("rtpengine", "set_column", "set_new")
 ### Exported Functions
 
 
-#### rtpengine_use_set(setid)
+#### rtpengine_use_set(setid) {#func_rtpengine_use_set}
 
 
 Sets the ID of the RTP proxy set to be used for the next
@@ -402,7 +402,7 @@ rtpengine_offer();
 ```
 
 
-#### rtpengine_offer([flags[, sock_var[, sdp_pvar[, body]]]])
+#### rtpengine_offer([flags[, sock_var[, sdp_pvar[, body]]]]) {#func_rtpengine_offer}
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -701,7 +701,7 @@ rtpengine_offer("... codec-mask-PCMA codec-strip-opus transcode-opus ...");
 ```
 
 
-#### rtpengine_answer([flags[, sock_pvar[, sdp_pvar[, body]]]])
+#### rtpengine_answer([flags[, sock_pvar[, sdp_pvar[, body]]]]) {#func_rtpengine_answer}
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -724,7 +724,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 See rtpengine_offer() function example above for examples.
 
 
-#### rtpengine_delete([flags[, sock_var]])
+#### rtpengine_delete([flags[, sock_var]]) {#func_rtpengine_delete}
 
 
 Tears down the RTPEngine session for the current call.
@@ -747,7 +747,7 @@ rtpengine_delete();
 ```
 
 
-#### rtpengine_manage([flags[, sock_var[, sdp_var[, body]]]])
+#### rtpengine_manage([flags[, sock_var[, sdp_var[, body]]]]) {#func_rtpengine_manage}
 
 
 Manage the RTPEngine session - it combines the functionality of
@@ -785,7 +785,7 @@ rtpengine_manage();
 ```
 
 
-#### rtpengine_start_recording([flags [, sock_var]])
+#### rtpengine_start_recording([flags [, sock_var]]) {#func_rtpengine_start_recording}
 
 
 This function will send a signal to the RTP proxy to record
@@ -816,7 +816,7 @@ rtpengine_start_recording();
 ```
 
 
-#### rtpengine_stop_recording([flags [, sock_var]])
+#### rtpengine_stop_recording([flags [, sock_var]]) {#func_rtpengine_stop_recording}
 
 
 This function will send a signal to the RTP proxy to stop
@@ -847,7 +847,7 @@ rtpengine_stop_recording();
 ```
 
 
-#### rtpengine_play_media(flags, [duration_spec[, sock_var[, sockvar]]])
+#### rtpengine_play_media(flags, [duration_spec[, sock_var[, sockvar]]]) {#func_rtpengine_play_media}
 
 
 This function will start playing a media file to one of the endpoints.
@@ -911,7 +911,7 @@ if (is_method("INVITE") && has_totag()) {
 ```
 
 
-#### rtpengine_stop_media([flags[, sockvar]])
+#### rtpengine_stop_media([flags[, sockvar]]) {#func_rtpengine_stop_media}
 
 
 This function will stop playing a media file previously started
@@ -937,7 +937,7 @@ if (is_method("INVITE") && $rs == 200)
 ```
 
 
-#### rtpengine_block_media([flags[, sockvar]])
+#### rtpengine_block_media([flags[, sockvar]]) {#func_rtpengine_block_media}
 
 
 This function will block the media sent from one of the endpoints.
@@ -959,7 +959,7 @@ rtpengine_block_media();
 ```
 
 
-#### rtpengine_unblock_media([flags[, sockvar]])
+#### rtpengine_unblock_media([flags[, sockvar]]) {#func_rtpengine_unblock_media}
 
 
 This function will resume/unblock the media sent from one of the endpoints.
@@ -981,7 +981,7 @@ rtpengine_unblock_media();
 ```
 
 
-#### rtpengine_block_dtmf([flags[, sockvar]])
+#### rtpengine_block_dtmf([flags[, sockvar]]) {#func_rtpengine_block_dtmf}
 
 
 This function will block the DTMF media sent from one of the endpoints.
@@ -1003,7 +1003,7 @@ rtpengine_block_dtmf();
 ```
 
 
-#### rtpengine_unblock_dtmf([flags[, sockvar]])
+#### rtpengine_unblock_dtmf([flags[, sockvar]]) {#func_rtpengine_unblock_dtmf}
 
 
 This function will resume/unblock the DTMF media sent from one of the endpoints.
@@ -1025,7 +1025,7 @@ rtpengine_unblock_dtmf();
 ```
 
 
-#### rtpengine_start_forwarding([flags[, sockvar]])
+#### rtpengine_start_forwarding([flags[, sockvar]]) {#func_rtpengine_start_forwarding}
 
 
 This function will start forwarding the media to a TLS destination specified
@@ -1048,7 +1048,7 @@ rtpengine_start_forwarding();
 ```
 
 
-#### rtpengine_stop_forwarding([flags[, sockvar]])
+#### rtpengine_stop_forwarding([flags[, sockvar]]) {#func_rtpengine_stop_forwarding}
 
 
 This function will stop forwarding of the media previously started using the
@@ -1069,7 +1069,7 @@ rtpengine_stop_forwarding();
 ```
 
 
-#### rtpengine_play_dtmf(code, [flags[, sockvar]])
+#### rtpengine_play_dtmf(code, [flags[, sockvar]]) {#func_rtpengine_play_dtmf}
 
 
 This function instructs RTP to send the DTMF *code*
@@ -1101,10 +1101,10 @@ rtpengine_play_dtmf("0"); # send the 0 code upstream
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $rtpstat
+#### $rtpstat {#pv_rtpstat_0}
 
 
 Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP proxy
@@ -1122,7 +1122,7 @@ Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP p
 ```
 
 
-#### $rtpstat(STAT)[index]
+#### $rtpstat(STAT)[index] {#pv_rtpstat}
 
 
 Returnes one of the pre-fined statistics listed below:
@@ -1213,7 +1213,7 @@ Returnes one of the pre-fined statistics listed below:
 ```
 
 
-#### $rtpquery
+#### $rtpquery {#pv_rtpquery}
 
 
 Does a Query command to the RTP proxy and returns the answer in a JSON format.
@@ -1238,10 +1238,10 @@ You can use a *$json()* variable to parse
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rtpengine_enable
+#### rtpengine_enable {#mi_rtpengine_enable}
 
 
 Enables/disables a RTP proxy.
@@ -1274,7 +1274,7 @@ $ opensips-cli -x mi rtpengine_enable url=udp:192.168.2.133:8081 enable=1 setid=
 ```
 
 
-#### rtpengine_show
+#### rtpengine_show {#mi_rtpengine_show}
 
 
 Displays all the RTP proxies and their information: set and
@@ -1295,7 +1295,7 @@ $ opensips-cli -x mi rtpengine_show
 ```
 
 
-#### rtpengine_reload
+#### rtpengine_reload {#mi_rtpengine_reload}
 
 
 Reloads all rtpengine sets from the database. Used only when the
@@ -1326,7 +1326,7 @@ $ opensips-cli -x mi rtpengine_reload type=soft
 ```
 
 
-#### teardown
+#### teardown {#mi_teardown}
 
 
 Terminates the SIP dialog by the SIP Call-ID given as parameter.
@@ -1356,10 +1356,10 @@ $ opensips-cli -x mi teardown Y2IwYjQ2YmE2ZDg5MWVkNDNkZGIwZjAzNGM1ZDY0ZDQ
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_RTPENGINE_NOTIFICATION
+#### E_RTPENGINE_NOTIFICATION {#event_E_RTPENGINE_NOTIFICATION}
 
 
 This event is raised when a notification is received from RTPengine.
@@ -1384,7 +1384,7 @@ For a DTMF event received, you will also get the following nodes:
 - *volume* - volume of the tone
 
 
-#### E_RTPENGINE_STATUS
+#### E_RTPENGINE_STATUS {#event_E_RTPENGINE_STATUS}
 
 
 This event is raised when a RTPEngine server changes it's status to
@@ -1457,10 +1457,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1492,7 +1492,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1518,10 +1518,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), John Burke ([@john08burke](https://github.com/john08burke)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Flavio E. Goncalves, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Richard Fuchs.

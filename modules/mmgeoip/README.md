@@ -6,7 +6,7 @@ description: "This module is a lightweight wrapper for the MaxMind GeoIP API. It
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is a lightweight wrapper for the MaxMind GeoIP
@@ -27,7 +27,7 @@ The module is compatible with both legacy GeoIP and the
 		newer GeoIP2 APIs and databases.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -63,10 +63,10 @@ IMPORTANT: If the selected library is not installed the module won't compile.
 	  		prioritizing libmaxminddb.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### mmgeoip_city_db_path (string)
+#### mmgeoip_city_db_path (string) {#param_mmgeoip_city_db_path}
 
 
 Path to either a GeoLite or GeoIP City database file.
@@ -87,7 +87,7 @@ modparam("mmgeoip", "mmgeoip_city_db_path",
 ```
 
 
-#### cache_type (string)
+#### cache_type (string) {#param_cache_type}
 
 
 Databse memory caching options. The following options are available:
@@ -123,10 +123,10 @@ modparam("mmgeoip", "cache_type","MEM_CACHE_CHECK")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mmg_lookup([fields,]src,dst)
+#### mmg_lookup([fields,]src,dst) {#func_mmg_lookup}
 
 
 Looks up information specified by `field` associated with
@@ -198,10 +198,10 @@ It is not currently possible to load an updated location
 	  database without first stalling the server.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -230,7 +230,7 @@ It is not currently possible to load an updated location
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -253,10 +253,10 @@ It is not currently possible to load an updated location
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Kobi Eshun ([@ekobi](https://github.com/ekobi)).

@@ -6,7 +6,7 @@ description: "The qos module provides a way to keep track of per dialog SDP sess
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The qos module provides a way to keep track of
@@ -53,7 +53,7 @@ An SDP session can be established in one of the following
 	not implemented yet.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -77,10 +77,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### qos_flag (string)
+#### qos_flag (string) {#param_qos_flag}
 
 
 Keeping with OpenSIPS, the module will not do
@@ -123,7 +123,7 @@ route {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 There are no exported functions that could be used in scripts.
@@ -135,7 +135,7 @@ There are no exported functions that could be used in scripts.
 There are no exported statistics for the qos module.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
 There are no exported MI functions for the qos module.
@@ -143,7 +143,7 @@ There are no exported MI functions for the qos module.
 	of a dialog.
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
 There are no exported pseudo-variables for the qos module.
@@ -205,10 +205,10 @@ Meaning of the parameters is as follows:
 			the callback function.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -236,7 +236,7 @@ Meaning of the parameters is as follows:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -258,10 +258,10 @@ Meaning of the parameters is as follows:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

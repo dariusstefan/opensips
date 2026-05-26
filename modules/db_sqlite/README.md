@@ -6,14 +6,14 @@ description: "This is a module which provides SQLite support for OpenSIPS. It im
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module which provides SQLite support for OpenSIPS.
 		It implements the DB API defined in OpenSIPS.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -45,10 +45,10 @@ The following libraries or applications must be installed before running
 - *libsqlite3-dev* - the development libraries of sqlite.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### alloc_limit (integer)
+#### alloc_limit (integer) {#param_alloc_limit}
 
 
 Since the library does not support a function to return the number of rows
@@ -73,7 +73,7 @@ modparam("db_sqlite", "alloc_limit", 25)
 ```
 
 
-#### load_extension (string)
+#### load_extension (string) {#param_load_extension}
 
 
 This parameter enables extension loading, similiar to ".load" functionality in sqlite3,
@@ -99,7 +99,7 @@ modparam("db_sqlite", "load_extension", "/usr/lib/sqlite3/pcre.so;sqlite3_extens
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -119,10 +119,10 @@ Because it dependes on an external library, the sqlite module is not
 			make install include_modules="db_sqlite"'.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -154,7 +154,7 @@ Because it dependes on an external library, the sqlite module is not
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -180,10 +180,10 @@ Because it dependes on an external library, the sqlite module is not
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

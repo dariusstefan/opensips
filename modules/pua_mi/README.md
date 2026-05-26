@@ -6,7 +6,7 @@ description: "The pua_mi offers the possibility to publish presence information 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The pua_mi offers the possibility to publish presence
@@ -22,7 +22,7 @@ Using this module you can create independent applications/scripts to
 	        server.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -44,10 +44,10 @@ The following libraries or applications must be installed before running
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### presence_server (str)
+#### presence_server (str) {#param_presence_server}
 
 
 The the address of the presence server. If set, it will be
@@ -65,17 +65,17 @@ modparam("pua_mi", "presence_server", "sip:pa@opensips.org:5075")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
 		in configuration script.
 
 
-### Exported MI functions
+### Exported MI functions {#exported_mi_functions}
 
 
-#### pua_publish
+#### pua_publish {#mi_pua_publish}
 
 
 Command parameters:
@@ -117,7 +117,7 @@ opensips-cli -x mi pua_publish sip:system@opensips.org 3600 presence application
 ```
 
 
-#### pua_subscribe
+#### pua_subscribe {#mi_pua_subscribe}
 
 
 Command parameters:
@@ -142,10 +142,10 @@ opensips-cli -x mi pua_subscribe sip:system@opensips.org sip:400@opensips.org pr
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -177,7 +177,7 @@ opensips-cli -x mi pua_subscribe sip:system@opensips.org sip:400@opensips.org pr
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -203,10 +203,10 @@ opensips-cli -x mi pua_subscribe sip:system@opensips.org sip:400@opensips.org pr
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Anca Vamanu, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

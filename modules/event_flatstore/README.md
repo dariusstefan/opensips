@@ -6,7 +6,7 @@ description: "The *event_flatstore* module provides a logging facility for diffe
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *event_flatstore*
@@ -31,7 +31,7 @@ Meanings:
 - *path_to_file* - path to the file where the logged events will be appended to. The file will be created if it does not exist. It must be a valid path and not a directory.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -53,10 +53,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### max_open_sockets (integer)
+#### max_open_sockets (integer) {#param_max_open_sockets}
 
 
 Defines the maximum number of simultaneously opened files by the
@@ -78,7 +78,7 @@ modparam("event_flatstore", "max_open_sockets", 200)
 ```
 
 
-#### delimiter (string)
+#### delimiter (string) {#param_delimiter}
 
 
 Sets the separator between the parameters of the event in the logging file.
@@ -97,7 +97,7 @@ modparam("event_flatstore", "delimiter", ";")
 ```
 
 
-#### file_permissions (string)
+#### file_permissions (string) {#param_file_permissions}
 
 
 Sets the permissions for the newly created logs. It
@@ -117,7 +117,7 @@ modparam("event_flatstore", "file_permissions", "664")
 ```
 
 
-#### suppress_event_name (int)
+#### suppress_event_name (int) {#param_suppress_event_name}
 
 
 Suppresses the name of the event in the log file.
@@ -136,16 +136,16 @@ modparam("event_flatstore", "suppress_event_name", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No exported functions to be used in the configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### evi_flat_rotate
+#### evi_flat_rotate {#mi_evi_flat_rotate}
 
 
 It makes the processes reopen the file specified as a parameter to the command in order to be compatible with a logrotate command. If the function is not called after the mv command is executed, the module will continue to write in the renamed file.
@@ -166,10 +166,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -196,7 +196,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -217,10 +217,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)).

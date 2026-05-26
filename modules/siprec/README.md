@@ -6,7 +6,7 @@ description: "This module provides the means to do calls recording using an exte
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides the means to do calls recording using an
@@ -29,7 +29,7 @@ The work for this module has been sponsored by the [OrecX Company](http://www.or
 		fully integrated with the OrecX Call Recording products.
 
 
-### How it works
+### How it works {#siprec_how_it_works}
 
 
 The full architecture of a SIP Media Recording platform is
@@ -67,7 +67,7 @@ The SRS can respond with negative reply, indicating that the session
 Full examples of call flows can be found in [RFC 8068](https://tools.ietf.org/html/rfc8068).
 
 
-### Media Handling
+### Media Handling {#siprec_media_handling}
 
 
 Since OpenSIPS is a SIP Proxy, it does not have any Media Capabilities
@@ -80,7 +80,7 @@ Since OpenSIPS is a SIP Proxy, it does not have any Media Capabilities
 		Servers.
 
 
-### SRS Failover
+### SRS Failover {#siprec_srs_failover}
 
 
 The *siprec* module supports failover between
@@ -92,7 +92,7 @@ The *siprec* module supports failover between
 		In the latter case the call is not recorded at all.
 
 
-### Limitations
+### Limitations {#siprec_limitations}
 
 
 This module only implements the SRC
@@ -120,10 +120,10 @@ Although this module provides all the necessary tools to do calls
 			implemented in further releases.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#siprec_modules_dependencies}
 
 
 The following modules must be loaded before this module:
@@ -136,7 +136,7 @@ The following modules must be loaded before this module:
 - *B2B_ENTITIES* - Back-2-Back module used for communicating with the SRS.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#siprec_external_dependencies}
 
 
 The following libraries or applications must be installed before
@@ -146,10 +146,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### skip_failover_codes (string)
+#### skip_failover_codes (string) {#param_skip_failover_codes}
 
 
 A regular expression used to specify the codes that should prevent
@@ -177,10 +177,10 @@ modparam("siprec", "skip_failover_codes", "[34][0-9][0-9]")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### siprec_start_recording(srs)
+#### siprec_start_recording(srs) {#func_siprec_start_recording}
 
 
 Calling this function on an initial
@@ -286,7 +286,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### siprec_pause_recording()
+#### siprec_pause_recording() {#func_siprec_pause_recording}
 
 
 Pauses the recording for the ongoing call. Should be called after
@@ -310,7 +310,7 @@ This function can be used from any route.
 ```
 
 
-#### siprec_resume_recording()
+#### siprec_resume_recording() {#func_siprec_resume_recording}
 
 
 Resumes the recording for the ongoing call. Should be called after
@@ -334,10 +334,10 @@ This function can be used from any route.
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $siprec
+#### $siprec {#pv_siprec}
 
 
 Used to modify/describe different siprec sessions
@@ -396,10 +396,10 @@ Settings that can be provisioned:
 					*session* tag.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -426,7 +426,7 @@ Settings that can be provisioned:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -447,10 +447,10 @@ Settings that can be provisioned:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Seyed Mehran Siadati, Norman Brandinger ([@NormB](https://github.com/NormB)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

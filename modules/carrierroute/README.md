@@ -6,7 +6,7 @@ description: "A module which provides routing, balancing and blacklisting capabi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 A module which provides routing, balancing and blacklisting capabilities.
@@ -59,7 +59,7 @@ If you want to use this module in failure routes, then you need to call
 		derived failure routing descisions with the carrierfailureroute table.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -86,10 +86,10 @@ The following libraries or applications must be installed before running
 				( http://www.nongnu.org/confuse/ )
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Url to the database containing the routing data.
@@ -109,7 +109,7 @@ modparam("carrierroute", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 Name of the table where the routing data is stored.
@@ -129,7 +129,7 @@ modparam("carrierroute", "db_table", "carrierroute")
 ```
 
 
-#### id_column (string)
+#### id_column (string) {#param_id_column}
 
 
 Name of the column containing the id identifier.
@@ -149,7 +149,7 @@ modparam("carrierroute", "id_column", "id")
 ```
 
 
-#### carrier_column (string)
+#### carrier_column (string) {#param_carrier_column}
 
 
 Name of the column containing the  carrier id.
@@ -169,7 +169,7 @@ modparam("carrierroute", "carrier_column", "carrier")
 ```
 
 
-#### scan_prefix_column (string)
+#### scan_prefix_column (string) {#param_scan_prefix_column}
 
 
 Name of column containing the scan prefixes. Scan prefixes define
@@ -194,7 +194,7 @@ modparam("carrierroute", "scan_prefix_column", "scan_prefix")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 Name of column containing the rule domain. You can define several routing
@@ -216,7 +216,7 @@ modparam("carrierroute", "domain_column", "domain")
 ```
 
 
-#### flags_column (string)
+#### flags_column (string) {#param_flags_column}
 
 
 Name of the column containing the flags.
@@ -236,7 +236,7 @@ modparam("carrierroute", "flags_column", "flags")
 ```
 
 
-#### mask_column (string)
+#### mask_column (string) {#param_mask_column}
 
 
 Name of the column containing the flags mask.
@@ -256,7 +256,7 @@ modparam("carrierroute", "mask_column", "mask")
 ```
 
 
-#### prob_column (string)
+#### prob_column (string) {#param_prob_column}
 
 
 Name of column containing probability. The probability value is used to 
@@ -287,7 +287,7 @@ modparam("carrierroute", "prob_column", "prob")
 ```
 
 
-#### rewrite_host_column (string)
+#### rewrite_host_column (string) {#param_rewrite_host_column}
 
 
 Name of column containing rewrite host value. An empty field represents a
@@ -309,7 +309,7 @@ modparam("carrierroute", "rewrite_host_column", "rewrite_host")
 ```
 
 
-#### strip_column (string)
+#### strip_column (string) {#param_strip_column}
 
 
 Name of the column containing the number of digits to be stripped of the
@@ -330,7 +330,7 @@ modparam("carrierroute", "strip_column", "strip")
 ```
 
 
-#### comment_column (string)
+#### comment_column (string) {#param_comment_column}
 
 
 Name of the column containing an optional comment (useful in large routing tables)
@@ -351,7 +351,7 @@ modparam("carrierroute", "comment_column", "description")
 ```
 
 
-#### carrier_table (string)
+#### carrier_table (string) {#param_carrier_table}
 
 
 The name of the table containing the existing carriers, consisting
@@ -372,7 +372,7 @@ modparam("carrierroute", "carrier_table", "route_tree")
 ```
 
 
-#### rewrite_prefix_column (string)
+#### rewrite_prefix_column (string) {#param_rewrite_prefix_column}
 
 
 Name of column containing rewrite prefixes. Here you can define a rewrite
@@ -393,7 +393,7 @@ modparam("carrierroute", "rewrite_prefix_column", "rewrite_prefix")
 ```
 
 
-#### rewrite_suffix_column (string)
+#### rewrite_suffix_column (string) {#param_rewrite_suffix_column}
 
 
 Name of column containing rewrite suffixes. Here you can define a rewrite
@@ -414,7 +414,7 @@ modparam("carrierroute", "rewrite_suffix_column", "rewrite_suffix")
 ```
 
 
-#### carrier_id_col (string)
+#### carrier_id_col (string) {#param_carrier_id_col}
 
 
 The name of the column in the carrier table containing the carrier id.
@@ -434,7 +434,7 @@ modparam("carrierroute", "carrier_id_col", "id")
 ```
 
 
-#### carrier_name_col (string)
+#### carrier_name_col (string) {#param_carrier_name_col}
 
 
 The name of the column in the carrier table containing the carrier name.
@@ -454,7 +454,7 @@ modparam("carrierroute", "carrier_name_col", "carrier")
 ```
 
 
-#### subscriber_table (string)
+#### subscriber_table (string) {#param_subscriber_table}
 
 
 The name of the table containing the subscribers
@@ -474,7 +474,7 @@ modparam("carrierroute", "subscriber_table", "subscriber")
 ```
 
 
-#### subscriber_user_col (string)
+#### subscriber_user_col (string) {#param_subscriber_user_col}
 
 
 The name of the column in the subscriber table containing the usernames.
@@ -494,7 +494,7 @@ modparam("carrierroute", "subscriber_user_col", "username")
 ```
 
 
-#### subscriber_domain_col (string)
+#### subscriber_domain_col (string) {#param_subscriber_domain_col}
 
 
 The name of the column in the subscriber table containing the domain of 
@@ -515,7 +515,7 @@ modparam("carrierroute", "subscriber_domain_col", "domain")
 ```
 
 
-#### subscriber_carrier_col (string)
+#### subscriber_carrier_col (string) {#param_subscriber_carrier_col}
 
 
 The name of the column in the subscriber table containing the carrier id
@@ -536,7 +536,7 @@ modparam("carrierroute", "subscriber_carrier_col", "cr_preferred_carrier")
 ```
 
 
-#### config_source (string)
+#### config_source (string) {#param_config_source}
 
 
 Specifies whether the module loads its config data from a file or from a
@@ -557,7 +557,7 @@ modparam("carrierroute", "config_source", "file")
 ```
 
 
-#### config_file (string)
+#### config_file (string) {#param_config_file}
 
 
 Specifies the path to the config file.
@@ -577,7 +577,7 @@ modparam("carrierroute", "config_file", "/etc/opensips/carrierroute.conf")
 ```
 
 
-#### default_tree (string)
+#### default_tree (string) {#param_default_tree}
 
 
 The name of the carrier tree used per default (if the current
@@ -598,7 +598,7 @@ modparam("carrierroute", "default_tree", "default")
 ```
 
 
-#### use_domain (int)
+#### use_domain (int) {#param_use_domain}
 
 
 When using tree lookup per user, this parameter specifies whether
@@ -619,7 +619,7 @@ modparam("carrierroute", "use_domain", 0)
 ```
 
 
-#### fallback_default (int)
+#### fallback_default (int) {#param_fallback_default}
 
 
 This parameter defines the behaviour when using user-based tree
@@ -642,7 +642,7 @@ modparam("carrierroute", "fallback_default", 1)
 ```
 
 
-#### db_failure_table (string)
+#### db_failure_table (string) {#param_db_failure_table}
 
 
 Name of the table where the failure routing data is stored.
@@ -662,7 +662,7 @@ modparam("carrierroute", "db_failure_table", "carrierfailureroute")
 ```
 
 
-#### failure_id_column (string)
+#### failure_id_column (string) {#param_failure_id_column}
 
 
 Name of the column containing the id identifier.
@@ -682,7 +682,7 @@ modparam("carrierroute", "failure_id_column", "id")
 ```
 
 
-#### failure_carrier_column (string)
+#### failure_carrier_column (string) {#param_failure_carrier_column}
 
 
 Name of the column containing the carrier id.
@@ -702,7 +702,7 @@ modparam("carrierroute", "failure_carrier_column", "carrier")
 ```
 
 
-#### failure_scan_prefix_column (string)
+#### failure_scan_prefix_column (string) {#param_failure_scan_prefix_column}
 
 
 Name of column containing the scan prefixes. Scan prexies
@@ -727,7 +727,7 @@ modparam("carrierroute", "failure_scan_prefix_column", "scan_prefix")
 ```
 
 
-#### failure_domain_column (string)
+#### failure_domain_column (string) {#param_failure_domain_column}
 
 
 Name of column containing the rule domain. You can define
@@ -750,7 +750,7 @@ modparam("carrierroute", "failure_domain_column", "domain")
 ```
 
 
-#### failure_host_name_column (string)
+#### failure_host_name_column (string) {#param_failure_host_name_column}
 
 
 Name of the column containing the host name of the last routing
@@ -771,7 +771,7 @@ modparam("carrierroute", "failure_host_name_column", "host_name")
 ```
 
 
-#### failure_reply_code_column (string)
+#### failure_reply_code_column (string) {#param_failure_reply_code_column}
 
 
 Name of the column containing the reply code.
@@ -791,7 +791,7 @@ modparam("carrierroute", "failure_reply_code_column", "reply_code")
 ```
 
 
-#### failure_flags_column (string)
+#### failure_flags_column (string) {#param_failure_flags_column}
 
 
 Name of the column containing the flags.
@@ -811,7 +811,7 @@ modparam("carrierroute", "failure_flags_column", "flags")
 ```
 
 
-#### failure_mask_column (string)
+#### failure_mask_column (string) {#param_failure_mask_column}
 
 
 Name of the column containing the flags mask.
@@ -831,7 +831,7 @@ modparam("carrierroute", "failure_mask_column", "mask")
 ```
 
 
-#### failure_next_domain_column (string)
+#### failure_next_domain_column (string) {#param_failure_next_domain_column}
 
 
 Name of the column containing the next routing domain.
@@ -851,7 +851,7 @@ modparam("carrierroute", "failure_next_domain_column", "next_domain")
 ```
 
 
-#### failure_comment_column (string)
+#### failure_comment_column (string) {#param_failure_comment_column}
 
 
 Name of the column containing an optional comment.
@@ -871,7 +871,7 @@ modparam("carrierroute", "failure_comment_column", "description")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 Previous versions of carrierroute had some more function. All the
@@ -908,7 +908,7 @@ cr_tree_rewrite_uri(tree, domain)
 ```
 
 
-#### cr_user_carrier(user, domain, dst_avp)
+#### cr_user_carrier(user, domain, dst_avp) {#func_cr_user_carrier}
 
 
 This function loads the carrier and stores it in an AVP.
@@ -931,7 +931,7 @@ Parameters:
 				  store the carrier id
 
 
-#### cr_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])
+#### cr_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp]) {#func_cr_route}
 
 
 This function searches for the longest match for the user given
@@ -967,7 +967,7 @@ Parameters:
 				where to store the rewritten host
 
 
-#### cr_prime_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp])
+#### cr_prime_route(carrier, domain, prefix_matching, rewrite_user, hash_source, [dst_avp]) {#func_cr_prime_route}
 
 
 This function searches for the longest match for the user given
@@ -1004,7 +1004,7 @@ Meaning of the parameters is as follows:
 				where to store the rewritten host
 
 
-#### cr_next_domain(carrier, domain, prefix_matching, host, reply_code, dst_avp)
+#### cr_next_domain(carrier, domain, prefix_matching, host, reply_code, dst_avp) {#func_cr_next_domain}
 
 
 This function searches for the longest match for the user given
@@ -1036,7 +1036,7 @@ Meaning of the parameters is as follows:
 - *dst_avp (var)* - AVP where to store the next routing domain.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
 All commands understand the "-?" parameter to print a short help message.
@@ -1045,7 +1045,7 @@ All commands understand the "-?" parameter to print a short help message.
 		like "-d prox*").
 
 
-#### cr_reload_routes
+#### cr_reload_routes {#mi_cr_reload_routes}
 
 
 This command reloads the routing data from the data source.
@@ -1091,7 +1091,7 @@ opensips-cli -x mi cr_replace_host "-d proxy -p 49 -h proxy1 -t proxy2"
 ```
 
 
-#### cr_deactivate_host
+#### cr_deactivate_host {#mi_cr_deactivate_host}
 
 
 This command deactivates the specified host, i.e. it sets its status to 0.
@@ -1149,7 +1149,7 @@ opensips-cli -x mi cr_activate_host "-d proxy -p 49 -h proxy1"
 ```
 
 
-#### cr_add_host
+#### cr_add_host {#mi_cr_add_host}
 
 
 This command adds a route rule, it is only usable in file mode. Following options
@@ -1180,7 +1180,7 @@ opensips-cli -x mi cr_add_host "-d proxy -p 49 -h proxy1 -w 0.25"
 ```
 
 
-#### cr_delete_host
+#### cr_delete_host {#mi_cr_delete_host}
 
 
 This command delete the specified hosts or rules, i.e. remove 
@@ -1531,10 +1531,10 @@ ALTER TABLE subscriber ADD cr_preferred_carrier int(10) default NULL;
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1566,7 +1566,7 @@ ALTER TABLE subscriber ADD cr_preferred_carrier int(10) default NULL;
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1592,10 +1592,10 @@ ALTER TABLE subscriber ADD cr_preferred_carrier int(10) default NULL;
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon, Hardy Kahl, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Edson Gellert Schubert, Carsten Bock, Jonas Appel.

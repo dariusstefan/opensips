@@ -6,7 +6,7 @@ description: "This module helps developers to benchmark their module functions. 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module helps developers to benchmark their module functions. By adding
@@ -28,7 +28,7 @@ Important note: as this benchmarking is intended to measure the time
 		failure route)!!
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -50,10 +50,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable (int)
+#### enable (int) {#param_enable}
 
 
 Even when the module is loaded, benchmarking is not enabled
@@ -80,7 +80,7 @@ modparam("benchmark", "enable", 1)
 ```
 
 
-#### granularity (int)
+#### granularity (int) {#param_granularity}
 
 
 Logging normally is not done for every reference to the log_timer()
@@ -104,7 +104,7 @@ modparam("benchmark", "granularity", 500)
 ```
 
 
-#### loglevel (int)
+#### loglevel (int) {#param_loglevel}
 
 
 Set the log level for the benchmark logs. These levels should be used:
@@ -135,10 +135,10 @@ modparam("benchmark", "loglevel", 4)
 This will set the logging level to L_DBG.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### bm_start_timer(name)
+#### bm_start_timer(name) {#func_bm_start_timer}
 
 
 Start timer "name". A later call to
@@ -155,7 +155,7 @@ bm_start_timer("test");
 ```
 
 
-#### bm_log_timer(name)
+#### bm_log_timer(name) {#func_bm_log_timer}
 
 
 This function logs the timer with the given ID. The following data are
@@ -203,13 +203,13 @@ bm_log_timer("test");
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
 Exported pseudo-variables are listed in the next sections.
 
 
-#### $BM_time_diff
+#### $BM_time_diff {#pv_BM_time_diff}
 
 
 *$BM_time_diff* - the time difference
@@ -218,10 +218,10 @@ Exported pseudo-variables are listed in the next sections.
 			was called.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### bm_enable_global
+#### bm_enable_global {#mi_bm_enable_global}
 
 
 Enables/disables the module.
@@ -243,7 +243,7 @@ MI FIFO Command Format:
 ```
 
 
-#### bm_enable_timer
+#### bm_enable_timer {#mi_bm_enable_timer}
 
 
 Enable or disable a single timer.
@@ -269,7 +269,7 @@ opensips-cli -x mi bm_enable_timer test 1
 ```
 
 
-#### bm_granularity
+#### bm_granularity {#mi_bm_granularity}
 
 
 Modifies the benchmarking granularity.
@@ -291,7 +291,7 @@ MI FIFO Command Format:
 ```
 
 
-#### bm_loglevel
+#### bm_loglevel {#mi_bm_loglevel}
 
 
 Modifies the module log level.
@@ -313,7 +313,7 @@ MI FIFO Command Format:
 ```
 
 
-#### bm_poll_results
+#### bm_poll_results {#mi_bm_poll_results}
 
 
 Returns the current and global results for each timer. This command is only available if the "granularity" variable is set to 0. It can be used to get results in stable time intervals instead of every N messages. Each timer will have 2 nodes - the local and the global values. Format of the values is the same as the one normally used in logfile. This way of getting the results allows to interface with external graphing applications like Munin.
@@ -422,10 +422,10 @@ bmb.bm_log(id);
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -457,7 +457,7 @@ bmb.bm_log(id);
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -483,10 +483,10 @@ bmb.bm_log(id);
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Stanislaw Pitucha, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).

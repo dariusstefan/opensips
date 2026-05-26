@@ -6,7 +6,7 @@ description: "Useful extensions for the server configuration."
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Useful extensions for the server configuration.
@@ -50,7 +50,7 @@ It can also hash the config file used from the server with a (weak)
 	"check_config_hash" and "get_config_hash".
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The module depends on the following modules (in the other words the
@@ -60,10 +60,10 @@ The module depends on the following modules (in the other words the
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### initial_probability (string)
+#### initial_probability (string) {#param_initial_probability}
 
 
 The initial value of the probability.
@@ -83,7 +83,7 @@ modparam("cfgutils", "initial_probability", 15)
 ```
 
 
-#### hash_file (string)
+#### hash_file (string) {#param_hash_file}
 
 
 The config file name for that a hash value should be calculated on startup.
@@ -103,7 +103,7 @@ modparam("cfgutils", "hash_file", "/etc/opensips/opensips.cfg")
 ```
 
 
-#### shv_hash_size (integer)
+#### shv_hash_size (integer) {#param_shv_hash_size}
 
 
 The size of the hash table used to store the shared variables ($shv).
@@ -120,7 +120,7 @@ modparam("cfgutils", "shv_hash_size", 1024)
 ```
 
 
-#### shvset (string)
+#### shvset (string) {#param_shvset}
 
 
 Set the value of a shared variable ($shv(name)). The parameter
@@ -153,7 +153,7 @@ modparam("cfgutils", "shvset", "pstngw=s:sip:10.10.10.10")
 ```
 
 
-#### varset (string)
+#### varset (string) {#param_varset}
 
 
 Set the value of a script variable ($var(name)). The parameter
@@ -186,7 +186,7 @@ modparam("cfgutils", "varset", "gw=s:sip:11.11.11.11;transport=tcp")
 ```
 
 
-#### lock_pool_size (integer)
+#### lock_pool_size (integer) {#param_lock_pool_size}
 
 
 The number of dynamic script locks to be allocated at OpenSIPS startup. This
@@ -210,10 +210,10 @@ modparam("cfgutils", "lock_pool_size", 64)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### rand_event([probability])
+#### rand_event([probability]) {#func_rand_event}
 
 
 Generates a random floating point value between 0 - 100 and returns
@@ -243,7 +243,7 @@ if (rand_event()) {
 ```
 
 
-#### rand_set_prob(probability)
+#### rand_set_prob(probability) {#func_rand_set_prob}
 
 
 Set the "probability" of the decision.
@@ -265,7 +265,7 @@ rand_set_prob(4);
 ```
 
 
-#### rand_reset_prob()
+#### rand_reset_prob() {#func_rand_reset_prob}
 
 
 Reset the probability back to the
@@ -282,7 +282,7 @@ rand_reset_prob();
 ```
 
 
-#### rand_get_prob()
+#### rand_get_prob() {#func_rand_get_prob}
 
 
 Return the current probability setting, e.g. for logging purposes.
@@ -298,7 +298,7 @@ rand_get_prob();
 ```
 
 
-#### sleep(time)
+#### sleep(time) {#func_sleep}
 
 
 Waits "time" seconds.
@@ -328,7 +328,7 @@ sleep($var(secs));
 ```
 
 
-#### usleep(time)
+#### usleep(time) {#func_usleep}
 
 
 Waits "time" micro-seconds.
@@ -355,7 +355,7 @@ usleep(500000); # sleep half a sec
 ```
 
 
-#### abort()
+#### abort() {#func_abort}
 
 
 Debugging function that aborts the server. Depending on the
@@ -377,7 +377,7 @@ abort();
 ```
 
 
-#### pkg_status()
+#### pkg_status() {#func_pkg_status}
 
 
 Debugging function that dumps the status for the private (PKG) memory.
@@ -401,7 +401,7 @@ pkg_status();
 ```
 
 
-#### shm_status()
+#### shm_status() {#func_shm_status}
 
 
 Debugging function that dumps the status for the shared (SHM) memory.
@@ -425,7 +425,7 @@ shm_status();
 ```
 
 
-#### set_count(var_to_count, ret_var)
+#### set_count(var_to_count, ret_var) {#func_set_count}
 
 
 Counts the number of values of a given variable.
@@ -451,7 +451,7 @@ set_count($avp(dids), $var(num_dids));
 ```
 
 
-#### set_select_weight(int_list_var)
+#### set_select_weight(int_list_var) {#func_set_select_weight}
 
 
 This function selects an element from a set formed by the integer
@@ -476,7 +476,7 @@ $var(next_gw_idx) = set_select_weight($avp(gw_success_rates));
 ```
 
 
-#### ts_usec_delta(t1_sec, t1_usec, t2_sec, t2_usec, [delta_str], [delta_int])
+#### ts_usec_delta(t1_sec, t1_usec, t2_sec, t2_usec, [delta_str], [delta_int]) {#func_ts_usec_delta}
 
 
 This function returns the absolute difference between the two given
@@ -505,7 +505,7 @@ ts_usec_delta($var(t1s), 300, 10, $var(t2us), $var(diff_str));
 ```
 
 
-#### check_time_rec(time_string, [timestamp])
+#### check_time_rec(time_string, [timestamp]) {#func_check_time_rec}
 
 
 The function returns a positive value if the specified time recurrence string
@@ -584,7 +584,7 @@ if (check_time_rec("20121101T000000||p30d"))
 ```
 
 
-#### get_static_lock(key)
+#### get_static_lock(key) {#func_get_static_lock}
 
 
 Acquire the static lock which corresponds to "key".  In case the
@@ -624,7 +624,7 @@ release_static_lock("Zone_1");
 ```
 
 
-#### release_static_lock(key)
+#### release_static_lock(key) {#func_release_static_lock}
 
 
 Release the static lock corresponding to "key". Nothing will happen if
@@ -655,7 +655,7 @@ release_static_lock("Zone_1");
 ```
 
 
-#### get_dynamic_lock(key)
+#### get_dynamic_lock(key) {#func_get_dynamic_lock}
 
 
 Acquire the dynamic lock corresponding to "key".  In case the lock is
@@ -703,7 +703,7 @@ if (!release_dynamic_lock($ci) {
 ```
 
 
-#### release_dynamic_lock(key)
+#### release_dynamic_lock(key) {#func_release_dynamic_lock}
 
 
 Release the dynamic lock corresponding to "key".  Nothing will happen
@@ -738,7 +738,7 @@ if (!release_dynamic_lock($ci) {
 ```
 
 
-#### strings_share_lock(key1, key2)
+#### strings_share_lock(key1, key2) {#func_strings_share_lock}
 
 
 A function used to test if two strings will generate the same hash value.
@@ -795,7 +795,7 @@ if (!release_dynamic_lock($avp(foo)) {
 ```
 
 
-#### get_accurate_time(sec, usec, [str_sec_usec])
+#### get_accurate_time(sec, usec, [str_sec_usec]) {#func_get_accurate_time}
 
 
 Fetch the current Unix time epoch with microsecond precision.
@@ -827,7 +827,7 @@ xlog("Current Unix timestamp: $var(sec) s, $var(usec) us\n");
 
 
 #### shuffle_avps(name)
-				
+				 {#func_shuffle_avps}
 
 
 Randomly shuffles AVPs with *name*.
@@ -862,7 +862,7 @@ if(shuffle_avps( $avp(foo) ))
 ### Exported Asyncronous Functions
 
 
-#### sleep(seconds)
+#### sleep(seconds) {#afunc_sleep}
 
 
 Waits a number of seconds. This function does exactly the same as
@@ -892,7 +892,7 @@ route[after_sleep] {
 ```
 
 
-#### usleep(seconds)
+#### usleep(seconds) {#afunc_usleep}
 
 
 Waits a number of micro-seconds. This function does exactly the same as
@@ -922,10 +922,10 @@ route[after_usleep] {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rand_set_prop
+#### rand_set_prop {#mi_rand_set_prop}
 
 
 Set the probability value to the given parameter.
@@ -948,7 +948,7 @@ $ opensips-cli -x mi rand_set_prob 10
 ```
 
 
-#### rand_reset_prob
+#### rand_reset_prob {#mi_rand_reset_prob}
 
 
 Reset the probability value to the inital start value.
@@ -967,7 +967,7 @@ $ opensips-cli -x mi rand_reset_prob
 ```
 
 
-#### rand_get_prob
+#### rand_get_prob {#mi_rand_get_prob}
 
 
 Return the actual probability setting.
@@ -987,7 +987,7 @@ The actual probability is 50 percent.
 ```
 
 
-#### check_config_hash
+#### check_config_hash {#mi_check_config_hash}
 
 
 Check if the actual config file hash is identical to the stored one.
@@ -1009,7 +1009,7 @@ The actual config file hash is identical to the stored one.
 ```
 
 
-#### get_config_hash
+#### get_config_hash {#mi_get_config_hash}
 
 
 Return the stored config file hash.
@@ -1030,7 +1030,7 @@ $ opensips-cli -x mi get_config_hash
 ```
 
 
-#### shv_set
+#### shv_set {#mi_shv_set}
 
 
 Set the value of a shared variable ($shv(name)).
@@ -1057,7 +1057,7 @@ $ opensips-cli -x mi shv_set debug int 0
 ```
 
 
-#### shv_get
+#### shv_get {#mi_shv_get}
 
 
 Get the value of a shared variable ($shv(name)).
@@ -1081,10 +1081,10 @@ $ opensips-cli -x mi shv_get
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $env(name)
+#### $env(name) {#pv_env}
 
 
 This PV provides access to the environment variable 'name'.
@@ -1101,7 +1101,7 @@ xlog("PATH environment variable is $env(PATH)\n");
 ```
 
 
-#### $RANDOM
+#### $RANDOM {#pv_RANDOM}
 
 
 Returns a random value from the [0 - 2^31) range.
@@ -1125,7 +1125,7 @@ exit;
 ```
 
 
-#### $ctime(name)
+#### $ctime(name) {#pv_ctime}
 
 
 The PV provides access to broken-down time attributes.
@@ -1158,7 +1158,7 @@ if ($ctime(year) == 2008) {
 ```
 
 
-#### $shv(name)
+#### $shv(name) {#pv_shv}
 
 
 It is a class of pseudo-variables stored in shared memory. The
@@ -1184,10 +1184,10 @@ if ($shv(debug) == 1) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1219,7 +1219,7 @@ if ($shv(debug) == 1) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1245,10 +1245,10 @@ if ($shv(debug) == 1) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Anca Vamanu, Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Elena-Ramona Modroiu, Konstantin Bokarius, Edson Gellert Schubert.

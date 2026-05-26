@@ -6,7 +6,7 @@ description: "The purpose of this module is to simplify the usage of different R
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The purpose of this module is to simplify the usage of different
@@ -38,7 +38,7 @@ This is not a stand-alone module that communicates directly with RTP relays,
 		and implement their specific communication protocol.
 
 
-### Multiple Branches
+### Multiple Branches {#branches}
 
 
 The module is able to handle RTP relay for multiple branches, with
@@ -73,7 +73,7 @@ When the call gets answered and a single branch remains active,
 		branches remain active throughout the call.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -98,10 +98,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### rtp_relay_engage(engine, [set])
+#### rtp_relay_engage(engine, [set]) {#func_rtp_relay_engage}
 
 
 Engages the RTP Relay *engine* for the current initial
@@ -154,10 +154,10 @@ if (is_method("INVITE") && !has_totag()) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rtp_relay_list
+#### rtp_relay_list {#mi_rtp_relay_list}
 
 
 Lists all the RTP Relay sessions engaged.
@@ -192,7 +192,7 @@ $ opensips-cli -x mi rtp_relay_list rtpproxy udp:127.0.0.1:2222
 ```
 
 
-#### rtp_relay_update
+#### rtp_relay_update {#mi_rtp_relay_update}
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -255,7 +255,7 @@ $ opensips-cli -x mi rtp_relay_update rtpproxy
 ```
 
 
-#### rtp_relay_update_callid
+#### rtp_relay_update_callid {#mi_rtp_relay_update_callid}
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -309,10 +309,10 @@ $ opensips-cli -x mi rtp_relay_update_callid callid=1-3758963@127.0.0.1 \
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $rtp_relay
+#### $rtp_relay {#pv_rtp_relay}
 
 
 Is used to provision the RTP back-end flags for the
@@ -356,7 +356,7 @@ For each UAC/peer, there are several flags that can be
 					as an integer, it is used to disable RTP relay for this UAC.
 
 
-#### $rtp_relay_peer
+#### $rtp_relay_peer {#pv_rtp_relay_peer}
 
 
 This variable has the same meaning and parameters as the
@@ -365,7 +365,7 @@ This variable has the same meaning and parameters as the
 				current one. All other fields are similar.
 
 
-#### $rtp_relay_ctx()
+#### $rtp_relay_ctx() {#pv_rtp_relay_ctx}
 
 
 This variable can be used to provide information about the
@@ -391,10 +391,10 @@ The following settings can be used:
 					when the relay session is terminated.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -418,7 +418,7 @@ The following settings can be used:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -436,10 +436,10 @@ The following settings can be used:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

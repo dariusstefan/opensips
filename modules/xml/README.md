@@ -6,7 +6,7 @@ description: "This module exposes a script variable that provides basic parsing 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module exposes a script variable that provides basic parsing and manipulation of XML documents or blocks of XML data. The variable provides ways to access entire XML elements, their text content or their attributes. You can modify the content and attributes as well as adding or removing nodes in the XML tree.
@@ -15,7 +15,7 @@ This module exposes a script variable that provides basic parsing and manipulati
 The processing does not take into account any DTDs or schemas in terms of validation.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -30,16 +30,16 @@ This module does not depend on other modules.
 - *libxml2* Most Linux and BSD distributions include libxml but the library can also be downloaded from: xmlsoft.org
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 The module does not export any parameters.
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $xml(path)
+#### $xml(path) {#pv_xml}
 
 
 This module exports the *$xml(path)* variable.
@@ -171,16 +171,16 @@ xlog("$xml(my_doc/doc/$var(my_list)/item[$var(my_idx)].attr/$var(my_attr))\n");
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export any script functions.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -205,7 +205,7 @@ The module does not export any script functions.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -224,10 +224,10 @@ The module does not export any script functions.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

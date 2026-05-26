@@ -6,7 +6,7 @@ description: "*RabbitMQ* ([http://www.rabbitmq.com/](http://www.rabbitmq.com/)) 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 *RabbitMQ*
@@ -33,7 +33,7 @@ The event payload is formated as a JSON-RPC notification, with the event
 		the *params* field.
 
 
-### RabbitMQ socket syntax
+### RabbitMQ socket syntax {#socket_syntax}
 
 
 *'rabbitmq:' [user[':'password] '@' host [':' port] '/' [params '?'] routing_key*
@@ -71,7 +71,7 @@ Meanings:
 						try to create it.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -93,10 +93,10 @@ The following libraries or applications must be installed before
 - *librabbitmq-dev*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### heartbeat (integer)
+#### heartbeat (integer) {#param_heartbeat}
 
 
 Enables heartbeat support for the AMQP communication. If the
@@ -120,7 +120,7 @@ modparam("event_rabbitmq", "heartbeat", 3)
 ```
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 The maximally allowed duration (in milliseconds) for the establishment
@@ -141,7 +141,7 @@ modparam("event_rabbitmq", "connect_timeout", 1000)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for broker connections.
@@ -173,7 +173,7 @@ modparam("event_rabbitmq", "use_tls", 1)
 ```
 
 
-#### timeout (integer)
+#### timeout (integer) {#param_timeout}
 
 
 Indicates the timeout (in milliseconds) of any command (i.e. publish)
@@ -199,7 +199,7 @@ modparam("event_rabbitmq", "timeout", 1000) # timeout after 1s
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -472,10 +472,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -507,7 +507,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -533,10 +533,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

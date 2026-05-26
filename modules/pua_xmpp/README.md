@@ -6,7 +6,7 @@ description: "This module is a gateway for presence between SIP and XMPP."
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is a gateway for presence between SIP and XMPP.
@@ -16,7 +16,7 @@ It translates one format into another and uses xmpp, pua and presence
 		modules to manage the transmition of presence state information.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -40,10 +40,10 @@ The following libraries or applications must be installed before running
 - *libxml*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### server_address(str)
+#### server_address(str) {#param_server_address}
 
 
 The IP address of the server.
@@ -59,7 +59,7 @@ modparam("pua_xmpp", "server_address", "sip:sa@opensips.org:5060")
 ```
 
 
-#### presence_server (str)
+#### presence_server (str) {#param_presence_server}
 
 
 The the address of the presence server. If set, it will be
@@ -77,13 +77,13 @@ modparam("pua_xmpp", "presence_server", "sip:pa@opensips.org:5075")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 Functions exported to be used in configuration file.
 
 
-#### pua_xmpp_notify()
+#### pua_xmpp_notify() {#func_pua_xmpp_notify}
 
 
 Function that handles Notify messages addressed to a user from
@@ -110,7 +110,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### pua_xmpp_req_winfo(request_uri, expires)
+#### pua_xmpp_req_winfo(request_uri, expires) {#func_pua_xmpp_req_winfo}
 
 
 Function called when a Subscribe addressed to a user from a
@@ -165,10 +165,10 @@ Instead of "sip-xmpp.siphub.ro"  in the example you should use the value
 The module provides no function to be used in other OpenSIPS modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -200,7 +200,7 @@ The module provides no function to be used in other OpenSIPS modules.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -226,10 +226,10 @@ The module provides no function to be used in other OpenSIPS modules.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

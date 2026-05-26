@@ -5,7 +5,7 @@ title: "db_cachedb Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 #### The idea
@@ -19,7 +19,7 @@ The db_cachedb module will expose the same front db api, however it will run on 
 				and integration of the currently existing OpenSIPS modules in a distributed environment.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -41,7 +41,7 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 #### cachedb_url (str)
@@ -124,10 +124,10 @@ Since the NoSQL backends do not usually have a strict schema involved,
 				For example, for the MongoDB cluster, 'version' is a reserved keyword, so one would have to change the default version table that OpenSIPS uses ( via the 'db_version_table' global parameter ) and then manually insert the version number with something like db.my_version_table.insert({table_version : NumberInt(5), table_name : "address"})
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -154,7 +154,7 @@ Since the NoSQL backends do not usually have a strict schema involved,
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -175,10 +175,10 @@ Since the NoSQL backends do not usually have a strict schema involved,
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

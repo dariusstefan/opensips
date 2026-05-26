@@ -6,7 +6,7 @@ description: "cpl_c modules implements a CPL (Call Processing Language) interpre
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 cpl_c modules implements a CPL (Call Processing Language) 
@@ -14,7 +14,7 @@ cpl_c modules implements a CPL (Call Processing Language)
 		SIP REGISTER method is present.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -48,10 +48,10 @@ The following libraries or applications must be installed
 					DOM manipulation.*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 A SQL URL have to be given to the module for knowing where the 
@@ -73,7 +73,7 @@ modparam("cpl_c","db_url","dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 Indicates the name of the table that store the CPL scripts. 
@@ -95,7 +95,7 @@ modparam("cpl_c","cpl_table","cpl")
 ```
 
 
-#### username_column (string)
+#### username_column (string) {#param_username_column}
 
 
 Indicates the name of the column used for storing the username.
@@ -114,7 +114,7 @@ modparam("cpl_c","username_column","username")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 Indicates the name of the column used for storing the domain.
@@ -133,7 +133,7 @@ modparam("cpl_c","domain_column","domain")
 ```
 
 
-#### cpl_xml_column (string)
+#### cpl_xml_column (string) {#param_cpl_xml_column}
 
 
 Indicates the name of the column used for storing the 
@@ -153,7 +153,7 @@ modparam("cpl_c","cpl_xml_column","cpl_xml")
 ```
 
 
-#### cpl_bin_column (string)
+#### cpl_bin_column (string) {#param_cpl_bin_column}
 
 
 Indicates the name of the column used for storing the 
@@ -173,7 +173,7 @@ modparam("cpl_c","cpl_bin_column","cpl_bin")
 ```
 
 
-#### cpl_dtd_file (string)
+#### cpl_dtd_file (string) {#param_cpl_dtd_file}
 
 
 Points to the DTD file describing the CPL grammar. The file 
@@ -195,7 +195,7 @@ modparam("cpl_c","cpl_dtd_file","/etc/opensips/cpl-06.dtd")
 ```
 
 
-#### log_dir (string)
+#### log_dir (string) {#param_log_dir}
 
 
 Points to a directory where should be created all the log file 
@@ -217,7 +217,7 @@ modparam("cpl_c","log_dir","/var/log/opensips/cpl")
 ```
 
 
-#### proxy_recurse (int)
+#### proxy_recurse (int) {#param_proxy_recurse}
 
 
 Tells for how many time is allow to have recurse for PROXY CPL 
@@ -241,7 +241,7 @@ modparam("cpl_c","proxy_recurse",2)
 ```
 
 
-#### proxy_route (string)
+#### proxy_route (string) {#param_proxy_route}
 
 
 Before doing proxy (forward), a script route can be executed.
@@ -262,7 +262,7 @@ modparam("cpl_c","proxy_route", "1")
 ```
 
 
-#### case_sensitive (int)
+#### case_sensitive (int) {#param_case_sensitive}
 
 
 Tells if the username matching should be perform case 
@@ -283,7 +283,7 @@ modparam("cpl_c","case_sensitive",1)
 ```
 
 
-#### realm_prefix (string)
+#### realm_prefix (string) {#param_realm_prefix}
 
 
 Defines a prefix for the domain part which should be ignored 
@@ -303,7 +303,7 @@ modparam("cpl_c","realm_prefix","sip.")
 ```
 
 
-#### lookup_domain (string)
+#### lookup_domain (string) {#param_lookup_domain}
 
 
 Used by lookup tag to indicate where to perform user location.
@@ -328,7 +328,7 @@ modparam("cpl_c","lookup_domain","location")
 ```
 
 
-#### lookup_append_branches (int)
+#### lookup_append_branches (int) {#param_lookup_append_branches}
 
 
 Tells if the lookup tag should append branches (to do parallel
@@ -351,7 +351,7 @@ modparam("cpl_c","lookup_append_branches",1)
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 Indicates if the domain part of the URI should be used in 
@@ -372,10 +372,10 @@ modparam("cpl_c","use_domain",1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### cpl_run_script(type,mode)
+#### cpl_run_script(type,mode) {#func_cpl_run_script}
 
 
 Starts the execution of the CPL script. The user name is 
@@ -454,7 +454,7 @@ cpl_run_script("incoming","force_stateful");
 ```
 
 
-#### cpl_process_register()
+#### cpl_process_register() {#func_cpl_process_register}
 
 
 This function MUST be called only for REGISTER requests. It 
@@ -493,7 +493,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### cpl_process_register_norpl()
+#### cpl_process_register_norpl() {#func_cpl_process_register_norpl}
 
 
 Same as "cpl_process_register" without 
@@ -523,10 +523,10 @@ if ($rm=="REGISTER") {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### LOAD_CPL
+#### LOAD_CPL {#mi_LOAD_CPL}
 
 
 For the given user, loads the XML cpl file, compiles it into 
@@ -551,7 +551,7 @@ MI FIFO Command format:
 ```
 
 
-#### REMOVE_CPL
+#### REMOVE_CPL {#mi_REMOVE_CPL}
 
 
 For the given user, removes the entire database record 
@@ -576,7 +576,7 @@ MI FIFO Command format:
 ```
 
 
-#### GET_CPL
+#### GET_CPL {#mi_GET_CPL}
 
 
 For the given user, returns the CPL script in XML format.
@@ -618,10 +618,10 @@ Before running OpenSIPS with cpl_c, you have to setup the database
 			project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -653,7 +653,7 @@ Before running OpenSIPS with cpl_c, you have to setup the database
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -679,10 +679,10 @@ Before running OpenSIPS with cpl_c, you have to setup the database
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Jesus Rodrigues, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

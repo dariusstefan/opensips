@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed to wor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed to work with a 
@@ -32,7 +32,7 @@ This module is an implementation of a cache system designed to work with a
 				supported by MySQL*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -51,10 +51,10 @@ The following libraries or applications must be installed before running
 - *none:*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The url of the Database  that OpenSIPS will connect to in order
@@ -94,7 +94,7 @@ cache_store("sql:2nd-postgres","counter","10");
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The table of the Database  that OpenSIPS will connect to in order
@@ -112,7 +112,7 @@ modparam("cachedb_sql", "db_table","my_table");
 ```
 
 
-#### key_column (string)
+#### key_column (string) {#param_key_column}
 
 
 The column where the key will be stored
@@ -129,7 +129,7 @@ modparam("cachedb_sql", "key_column","some_name");
 ```
 
 
-#### value_column (string)
+#### value_column (string) {#param_value_column}
 
 
 The column where the value will be stored
@@ -146,7 +146,7 @@ modparam("cachedb_sql", "value_column","some_name");
 ```
 
 
-#### counter_column (string)
+#### counter_column (string) {#param_counter_column}
 
 
 The column where the counter value will be stored
@@ -163,7 +163,7 @@ modparam("cachedb_sql", "counter_column","some_name");
 ```
 
 
-#### expires_column (string)
+#### expires_column (string) {#param_expires_column}
 
 
 The column where the expires will be stored
@@ -180,7 +180,7 @@ modparam("cachedb_sql", "expires_column","some_name");
 ```
 
 
-#### cache_clean_period (int)
+#### cache_clean_period (int) {#param_cache_clean_period}
 
 
 The interval in seconds at which the expired keys will be removed from
@@ -198,7 +198,7 @@ modparam("cachedb_sql", "cache_clean_period",10);
 ```
 
 
-#### Exported Functions
+#### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
@@ -215,10 +215,10 @@ It was replaced with the "cachedb_url" parameter.
 			See the documentation for the usage of the "cachedb_url" parameter.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -247,7 +247,7 @@ It was replaced with the "cachedb_url" parameter.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -270,10 +270,10 @@ It was replaced with the "cachedb_url" parameter.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

@@ -3,10 +3,10 @@ title: "mid_registrar Module"
 description: "The *mid_registrar* is a mid-component of a SIP platform, designed to work between end users and the platform's main registration component. It opens up new possibilities for leveraging existing infrastructure in order to continue to grow (as subscribers and as registration traffic) wh..."
 ---
 
-## Admin Guide
+## Admin Guide {#sec-admin-guide}
 
 
-### Overview
+### Overview {#overview}
 
 
 The *mid_registrar* is a mid-component of a SIP
@@ -32,7 +32,7 @@ Acting as a registration front-end to the main SIP registrar, the
 				accepting the contact states and expirations it decides.
 
 
-#### Path Support (RFC 3327)
+#### Path Support (RFC 3327) {#rfc-3327-support}
 
 
 The mid_registrar module includes SIP Path header field support
@@ -74,7 +74,7 @@ The whole process is transparent to the user, so no
 		"p0" / "p1" / "p2" flags when calling *mid_registrar_save()*.
 
 
-#### GRUU Support (RFC 5627)
+#### GRUU Support (RFC 5627) {#rfc-5627-support}
 
 
 The mid_registrar module includes support for Globally Routable User
@@ -113,7 +113,7 @@ As the GRUU will be present in the contact header of the initial
 		indication in the RURI.
 
 
-#### SIP Push Notification Support (RFC 8599)
+#### SIP Push Notification Support (RFC 8599) {#rfc-8599-support}
 
 
 The mid_registrar module includes support for standards-based SIP Push
@@ -172,13 +172,13 @@ For more information or examples, refer to the documentation of the
 		"SIP Push Notification" topic.
 
 
-### Working modes
+### Working modes {#sec-working-modes}
 
 
 The mid_registrar may function in one of several modes:
 
 
-#### Contact mirroring (default)
+#### Contact mirroring (default) {#sec-mirror-mode}
 
 
 In "contact mirroring" mode, the mid-registrar will only insert itself
@@ -196,7 +196,7 @@ A possible usage of this mode, for example, would be to clone
 		new services (like adding IM/messaging routing).
 
 
-#### Contact throttling
+#### Contact throttling {#sec-device-throttling-mode}
 
 
 In "contact throttling" mode, the mid-registrar can significantly
@@ -236,7 +236,7 @@ The main practical use for this mode is registration traffic conversion.
 		media handling.
 
 
-#### AOR throttling
+#### AOR throttling {#sec-user-throttling-mode}
 
 
 In "AOR throttling" mode, the mid-registrar helps with handling multiple
@@ -286,7 +286,7 @@ The main practical uses for this mode are registration traffic conversion
 		platform, such as advanced SIP calling features and/or media handling.
 
 
-### Auto-Insertion Into Future SIP Flows
+### Auto-Insertion Into Future SIP Flows {#sip-flow-insertion}
 
 
 A defining feature of the mid-registrar is that it must be easy to
@@ -309,10 +309,10 @@ Additionally, in modes "0" and "1", each Contact will be assigned an
 		controls how this information is included.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#sec-module-dependencies}
 
 
 The following modules must be loaded before this module:
@@ -325,7 +325,7 @@ The following modules must be loaded before this module:
 				if [pn enable](#param_pn_enable) is set to *true*.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#sec-external-dependencies}
 
 
 The following libraries or applications must be installed before
@@ -335,10 +335,10 @@ The following libraries or applications must be installed before
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### mode (integer)
+#### mode (integer) {#param_mode}
 
 
 Working mode of the module.
@@ -405,7 +405,7 @@ modparam("mid_registrar", "mode", 2)
 ```
 
 
-#### contact_id_insertion (integer)
+#### contact_id_insertion (integer) {#param_contact_id_insertion}
 
 
 Only relevant in a "mirroring" or "contact throttling"
@@ -432,7 +432,7 @@ modparam("mid_registrar", "contact_id_insertion", "ct-username")
 ```
 
 
-#### contact_id_param (string)
+#### contact_id_param (string) {#param_contact_id_param}
 
 
 Only relevant in a "mirroring" or "contact throttling"
@@ -455,7 +455,7 @@ modparam("mid_registrar", "contact_id_param", "ctid")
 ```
 
 
-#### at_escape_str (string)
+#### at_escape_str (string) {#param_at_escape_str}
 
 
 Only relevant when in "AoR throttling" [mode](#param_mode)
@@ -484,7 +484,7 @@ modparam("mid_registrar", "at_escape_str", "___")
 ```
 
 
-#### outgoing_expires (integer)
+#### outgoing_expires (integer) {#param_outgoing_expires}
 
 
 Only relevant in Contact/AOR throttling modes. Sets a minimal
@@ -502,7 +502,7 @@ modparam("mid_registrar", "outgoing_expires", 3600)
 ```
 
 
-#### received_avp (string)
+#### received_avp (string) {#param_received_avp}
 
 
 The module will store the value of the AVP configured by this
@@ -527,7 +527,7 @@ modparam("mid_registrar", "received_avp", "$avp(rcv)")
 ```
 
 
-#### received_param (string)
+#### received_param (string) {#param_received_param}
 
 
 The name of the parameter that will be appended to Contacts of
@@ -549,7 +549,7 @@ modparam("mid_registrar", "received_param", "rcv")
 ```
 
 
-#### extra_contact_params_avp (string)
+#### extra_contact_params_avp (string) {#param_extra_contact_params_avp}
 
 
 An AVP specification. This AVP is evaluated during
@@ -574,7 +574,7 @@ $avp(extra_ct_params) = ";transport=tls";
 ```
 
 
-#### attr_avp (string)
+#### attr_avp (string) {#param_attr_avp}
 
 
 AVP to store specific additional information for each registration.
@@ -619,7 +619,7 @@ branch_route [parallel_fork] {
 ```
 
 
-#### min_expires (integer)
+#### min_expires (integer) {#param_min_expires}
 
 
 The minimum expires value of a Contact, values lower than this
@@ -637,7 +637,7 @@ modparam("mid_registrar", "min_expires", 600)
 ```
 
 
-#### default_expires (integer)
+#### default_expires (integer) {#param_default_expires}
 
 
 If the processed message contains neither Expires HFs nor expires
@@ -656,7 +656,7 @@ modparam("mid_registrar", "default_expires", 1800)
 ```
 
 
-#### max_expires (integer)
+#### max_expires (integer) {#param_max_expires}
 
 
 The maximum expires value of a Contact, values higher than this
@@ -674,7 +674,7 @@ modparam("mid_registrar", "max_expires", 7200)
 ```
 
 
-#### default_q (integer)
+#### default_q (integer) {#param_default_q}
 
 
 Sets the default *"q"* value for new contacts.
@@ -696,7 +696,7 @@ modparam("mid_registrar", "default_q", 380)
 ```
 
 
-#### tcp_persistent_flag (string)
+#### tcp_persistent_flag (string) {#param_tcp_persistent_flag}
 
 
 Specifies the message flag to be used to control the
@@ -719,7 +719,7 @@ modparam("mid_registrar", "tcp_persistent_flag", "TCP_PERSIST_REGISTRATIONS")
 ```
 
 
-#### realm_prefix (string)
+#### realm_prefix (string) {#param_realm_prefix}
 
 
 In multi-domain user location scenarios
@@ -749,7 +749,7 @@ modparam("mid_registrar", "realm_prefix", "sip.")
 ```
 
 
-#### case_sensitive (integer)
+#### case_sensitive (integer) {#param_case_sensitive}
 
 
 If set to 1, then AOR comparison will be case
@@ -768,7 +768,7 @@ modparam("mid_registrar", "case_sensitive", 0)
 ```
 
 
-#### expires_max_deviation (integer)
+#### expires_max_deviation (integer) {#param_expires_max_deviation}
 
 
 Set this parameter in order to add a random +/- deviation up to
@@ -797,7 +797,7 @@ modparam("
 ```
 
 
-#### max_contacts (integer)
+#### max_contacts (integer) {#param_max_contacts}
 
 
 The parameter can be used to limit the number of contacts per
@@ -821,7 +821,7 @@ modparam("
 ```
 
 
-#### max_username_len (integer)
+#### max_username_len (integer) {#param_max_username_len}
 
 
 The maximum length of the "username" part of an Address-of-Record SIP URI.
@@ -838,7 +838,7 @@ modparam("
 ```
 
 
-#### max_domain_len (integer)
+#### max_domain_len (integer) {#param_max_domain_len}
 
 
 The maximum length of the "domain" part of an Address-of-Record SIP URI.
@@ -855,7 +855,7 @@ modparam("
 ```
 
 
-#### max_aor_len (integer)
+#### max_aor_len (integer) {#param_max_aor_len}
 
 
 The maximum length of an Address-of-Record SIP URI.
@@ -872,7 +872,7 @@ modparam("
 ```
 
 
-#### max_contact_len (integer)
+#### max_contact_len (integer) {#param_max_contact_len}
 
 
 The maximum length of a Contact header field SIP URI.
@@ -889,7 +889,7 @@ modparam("
 ```
 
 
-#### retry_after (integer)
+#### retry_after (integer) {#param_retry_after}
 
 
 The mid-registrar can generate 5xx replies to registrations in various
@@ -915,7 +915,7 @@ modparam("mid_registrar", "retry_after", 30)
 ```
 
 
-#### disable_gruu (integer)
+#### disable_gruu (integer) {#param_disable_gruu}
 
 
 Globally disable GRUU handling.
@@ -932,7 +932,7 @@ modparam("mid_registrar", "disable_gruu", 0)
 ```
 
 
-#### gruu_secret (string)
+#### gruu_secret (string) {#param_gruu_secret}
 
 
 The string that will be used in XORing when generating
@@ -950,7 +950,7 @@ modparam("mid_registrar", "gruu_secret", "my_secret")
 ```
 
 
-#### pn_enable (boolean)
+#### pn_enable (boolean) {#param_pn_enable}
 
 
 Enable SIP Push Notification support ([RFC 8599](https://tools.ietf.org/html/rfc8599)).
@@ -973,7 +973,7 @@ modparam("
 ```
 
 
-#### pn_providers (string)
+#### pn_providers (string) {#param_pn_providers}
 
 
 A list of supported Push Notification providers.  While only three
@@ -994,7 +994,7 @@ modparam("
 ```
 
 
-#### pn_ct_match_params (string)
+#### pn_ct_match_params (string) {#param_pn_ct_match_params}
 
 
 The minimally required list of RFC 8599 parameters (custom ones are
@@ -1029,7 +1029,7 @@ modparam("
 ```
 
 
-#### pn_pnsreg_interval (integer)
+#### pn_pnsreg_interval (integer) {#param_pn_pnsreg_interval}
 
 
 For devices capable of waking up and refreshing their binding on
@@ -1052,7 +1052,7 @@ modparam("
 ```
 
 
-#### pn_trigger_interval (integer)
+#### pn_trigger_interval (integer) {#param_pn_trigger_interval}
 
 
 If a binding refresh REGISTER request from a given SIP endpoint does
@@ -1083,7 +1083,7 @@ modparam("
 ```
 
 
-#### pn_skip_pn_interval (integer)
+#### pn_skip_pn_interval (integer) {#param_pn_skip_pn_interval}
 
 
 Following a successful (re)registration of a contact, this setting
@@ -1104,7 +1104,7 @@ modparam("
 ```
 
 
-#### pn_refresh_timeout (integer)
+#### pn_refresh_timeout (integer) {#param_pn_refresh_timeout}
 
 
 This timeout starts counting following a *mid_registrar_lookup()* or a
@@ -1140,7 +1140,7 @@ modparam("
 ```
 
 
-#### pn_enable_purr (boolean)
+#### pn_enable_purr (boolean) {#param_pn_enable_purr}
 
 
 Enable the SIP Push Notification mechanism for long-lived dialogs.
@@ -1174,10 +1174,10 @@ modparam("
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mid_registrar_save(domain[, flags[, aor[, outgoing_expires[, ownership_tag]]]])
+#### mid_registrar_save(domain[, flags[, aor[, outgoing_expires[, ownership_tag]]]]) {#func_mid_registrar_save}
 
 
 Function to be called when handling REGISTER requests. This function
@@ -1365,7 +1365,7 @@ if (is_method("REGISTER")) {
 ```
 
 
-#### mid_registrar_lookup(domain[, [flags][, [aor]]])
+#### mid_registrar_lookup(domain[, [flags][, [aor]]]) {#func_mid_registrar_lookup}
 
 
 Function to be called when receiving requests from the main registrar
@@ -1527,7 +1527,7 @@ This function can only be used from the request route.
 
 
 #### pn_process_purr(domain)
-		
+		 {#afunc_pn_process_purr}
 
 
 Perform mid-dialog request processing, according to RFC 8599.  For
@@ -1597,10 +1597,10 @@ route [resume_route] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1629,7 +1629,7 @@ route [resume_route] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1652,10 +1652,10 @@ route [resume_route] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

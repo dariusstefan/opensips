@@ -6,7 +6,7 @@ description: "The module enables the handling of the \"as-feature-event\" event 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module enables the handling of the "as-feature-event" event package (as
@@ -34,7 +34,7 @@ Note that the module does not automatically cache or persist any feature informa
 	    as this is left for the script writer to implement in the routes triggered by the module.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -52,10 +52,10 @@ The following modules must be loaded before this module:
 - *libxml2-dev*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### get_route (string)
+#### get_route (string) {#param_get_route}
 
 
 The name of the script route to be run in order to retrieve the status
@@ -75,7 +75,7 @@ modparam("presence_dfks", "get_route", "dfks_get")
 ```
 
 
-#### set_route (string)
+#### set_route (string) {#param_set_route}
 
 
 The name of the script route to be run when a feature status update
@@ -95,16 +95,16 @@ modparam("presence_dfks", "set_route", "dfks_set")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dfks_set_feature
+#### dfks_set_feature {#mi_dfks_set_feature}
 
 
 Triggers the sending of NOTIFY messages containing a feature status update
@@ -157,10 +157,10 @@ ringCount/4 forwardTo/sip:bob@10.0.0.11
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $dfks(field)
+#### $dfks(field) {#pv_dfks}
 
 
 This pseudo-variable can be used in the routes triggered by the module
@@ -225,10 +225,10 @@ route[dfks_get] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -252,7 +252,7 @@ route[dfks_get] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -270,10 +270,10 @@ route[dfks_get] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

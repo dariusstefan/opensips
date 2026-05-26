@@ -6,7 +6,7 @@ description: "This module provides the logic to convert a multi-stream SDP call,
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides the logic to convert a multi-stream
@@ -31,7 +31,7 @@ The logic is implemented on top of the B2B module, and
 		parameter.
 
 
-### Use Cases
+### Use Cases {#use-cases}
 
 
 A common scenario where this module can become useful is
@@ -56,10 +56,10 @@ Another use case is balancing multiple streams to different
 		recording.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#b2b_sdp_demux_modules_dependencies}
 
 
 The following modules must be loaded before this module:
@@ -69,7 +69,7 @@ The following modules must be loaded before this module:
 				used for handing server and client side calls.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#b2b_sdp_demux_external_dependencies}
 
 
 The following libraries or applications must be installed before
@@ -79,10 +79,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### client_bye_mode (string)
+#### client_bye_mode (string) {#param_client_bye_mode}
 
 
 This parameter indicates how a BYE coming from the
@@ -121,10 +121,10 @@ modparam("b2b_sdp_demux", "client_bye_mode", "terminate")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### b2b_sdp_demux(URI[, [headers][, streams]])
+#### b2b_sdp_demux(URI[, [headers][, streams]]) {#func_b2b_sdp_demux}
 
 
 Engages the B2B SDP De-Multiplexing scenario for the
@@ -176,10 +176,10 @@ if (!has_totag() && is_method("INVITE")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -200,7 +200,7 @@ if (!has_totag() && is_method("INVITE")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -215,10 +215,10 @@ if (!has_totag() && is_method("INVITE")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

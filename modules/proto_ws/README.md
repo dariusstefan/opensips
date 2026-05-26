@@ -6,7 +6,7 @@ description: "The WebSocket protocol ([RFC 6455](http://tools.ietf.org/html/rfc6
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The WebSocket protocol ([RFC 6455](http://tools.ietf.org/html/rfc6455))
@@ -53,7 +53,7 @@ socket=ws:127.0.0.1:5060	# change with the listening IP and port
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -75,10 +75,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### ws_port (integer)
+#### ws_port (integer) {#param_ws_port}
 
 
 The default port to be used for all WS related operation. Be careful
@@ -104,7 +104,7 @@ modparam("proto_ws", "ws_port", 8080)
 ```
 
 
-#### ws_send_timeout (integer)
+#### ws_send_timeout (integer) {#param_ws_send_timeout}
 
 
 Time in milliseconds after a WebSocket connection will be closed if it is
@@ -125,7 +125,7 @@ modparam("proto_ws", "ws_send_timeout", 200)
 ```
 
 
-#### ws_max_msg_chunks (integer)
+#### ws_max_msg_chunks (integer) {#param_ws_max_msg_chunks}
 
 
 The maximum number of chunks in which a SIP message is expected to
@@ -149,7 +149,7 @@ modparam("proto_ws", "ws_max_msg_chunks", 8)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -181,7 +181,7 @@ modparam("proto_ws", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_on (int)
+#### trace_on (int) {#param_trace_on}
 
 
 This controls whether tracing for ws is on or not. You still need to define
@@ -199,7 +199,7 @@ modparam("proto_ws", "trace_on", 1)
 ```
 
 
-#### trace_filter_route (string)
+#### trace_filter_route (string) {#param_trace_filter_route}
 
 
 Define the name of a route in which you can filter which connections will
@@ -251,7 +251,7 @@ route[ws_filter] {
 ```
 
 
-#### require_origin (int)
+#### require_origin (int) {#param_require_origin}
 
 
 Controls whether the module should require the Origin header or not.
@@ -267,10 +267,10 @@ modparam("proto_ws", "require_origin", no)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### ws_trace
+#### ws_trace {#mi_ws_trace}
 
 
 Name: *ws_trace*
@@ -312,10 +312,10 @@ Yes, starting with OpenSIPS 2.2, it can act as a WebSocket client.
 No, WebSocket fragmentation mechanism is not supported.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -347,7 +347,7 @@ No, WebSocket fragmentation mechanism is not supported.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -373,10 +373,10 @@ No, WebSocket fragmentation mechanism is not supported.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

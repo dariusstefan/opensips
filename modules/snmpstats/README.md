@@ -6,7 +6,7 @@ description: "The SNMPStats module provides an SNMP management interface to Open
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The SNMPStats module provides an SNMP management interface
@@ -152,7 +152,7 @@ To request for this data, you will need to query the master agent. The
 	your request.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -200,10 +200,10 @@ The following libraries or applications must be installed before running
 			the SNMPStats module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### sipEntityType (String)
+#### sipEntityType (String) {#param_sipEntityType}
 
 
 This parameter describes the entity type for this OpenSIPS instance,
@@ -231,7 +231,7 @@ Note that as the above example shows, you can define this parameter
 		can take on more than one role.
 
 
-#### MsgQueueMinorThreshold (Integer)
+#### MsgQueueMinorThreshold (Integer) {#param_MsgQueueMinorThreshold}
 
 
 The SNMPStats module monitors the number of bytes waiting to be
@@ -257,7 +257,7 @@ If this parameter is not set, then there will be no minor alarm
 		monitoring.
 
 
-#### MsgQueueMajorThreshold (Integer)
+#### MsgQueueMajorThreshold (Integer) {#param_MsgQueueMajorThreshold}
 
 
 The SNMPStats module monitors the number of bytes waiting to be
@@ -283,7 +283,7 @@ If this parameter is not set, then there will be no major alarm
 		monitoring.
 
 
-#### dlg_minor_threshold (Integer)
+#### dlg_minor_threshold (Integer) {#param_dlg_minor_threshold}
 
 
 The SNMPStats module monitors the number of active dialogs.  If the
@@ -308,7 +308,7 @@ If this parameter is not set, then there will be no minor alarm
 		monitoring.
 
 
-#### dlg_major_threshold (Integer)
+#### dlg_major_threshold (Integer) {#param_dlg_major_threshold}
 
 
 The SNMPStats module monitors the number of active dialogs.  If
@@ -333,7 +333,7 @@ If this parameter is not set, then there will be no major alarm
 		monitoring.
 
 
-#### snmpgetPath (String)
+#### snmpgetPath (String) {#param_snmpgetPath}
 
 
 The SNMPStats module provides the openserSIPServiceStartTime scalar.
@@ -356,7 +356,7 @@ modparam("snmpstats", "snmpgetPath",     "/my/custom/path/")
 ```
 
 
-#### snmpCommunity (String)
+#### snmpCommunity (String) {#param_snmpCommunity}
 
 
 The SNMPStats module provides the openserSIPServiceStartTime scalar.
@@ -379,7 +379,7 @@ modparam("snmpstats", "snmpCommunity", "customCommunityString")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 Currently, there are no exported functions.
@@ -761,10 +761,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -796,7 +796,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -822,10 +822,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jeffrey Magder.

@@ -6,7 +6,7 @@ description: "This module offers support for instant message conference. It foll
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module offers support for instant message conference. It
@@ -26,7 +26,7 @@ To ease the integration in the configuration file, the interpreter of
 	messages and commands.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -49,10 +49,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 The database url.
@@ -71,7 +71,7 @@ modparam("imc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### rooms_table (str)
+#### rooms_table (str) {#param_rooms_table}
 
 
 The name of the table storing IMC rooms.
@@ -90,7 +90,7 @@ modparam("imc", "rooms_table", "rooms")
 ```
 
 
-#### members_table (str)
+#### members_table (str) {#param_members_table}
 
 
 The name of the table storing IMC members.
@@ -109,7 +109,7 @@ modparam("imc", "rooms_table", "members")
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The power of 2 to get the size of the hash table used for storing
@@ -129,7 +129,7 @@ modparam("imc", "hash_size", 8)
 ```
 
 
-#### imc_cmd_start_char (str)
+#### imc_cmd_start_char (str) {#param_imc_cmd_start_char}
 
 
 The character which indicates that the body of the message is a command.
@@ -148,7 +148,7 @@ modparam("imc", "imc_cmd_start_char", "#")
 ```
 
 
-#### outbound_proxy (str)
+#### outbound_proxy (str) {#param_outbound_proxy}
 
 
 The SIP address used as next hop when sending the message. Very
@@ -171,10 +171,10 @@ modparam("imc", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### imc_manager()
+#### imc_manager() {#func_imc_manager}
 
 
 Handles Message method.It detects if the body of the message is a
@@ -199,10 +199,10 @@ if(is_method("MESSAGE)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### imc_list_rooms
+#### imc_list_rooms {#mi_imc_list_rooms}
 
 
 Lists of the IM Conferencing rooms.
@@ -223,7 +223,7 @@ MI FIFO Command Format:
 ```
 
 
-#### imc_list_members
+#### imc_list_members {#mi_imc_list_members}
 
 
 Listing of the members in IM Conferencing rooms.
@@ -250,7 +250,7 @@ MI FIFO Command Format:
 ### Exported Statistics
 
 
-#### active_rooms
+#### active_rooms {#stat_active_rooms}
 
 
 Number of active IM Conferencing rooms.
@@ -354,10 +354,10 @@ Before running OpenSIPS with IMC, you have to setup the database
 		project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -389,7 +389,7 @@ Before running OpenSIPS with IMC, you have to setup the database
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -415,10 +415,10 @@ Before running OpenSIPS with IMC, you have to setup the database
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu.

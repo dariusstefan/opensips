@@ -6,7 +6,7 @@ description: "This is a module which provides Oracle connectivity for OpenSIPS. 
 ## User's Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module which provides Oracle connectivity for OpenSIPS.
@@ -17,7 +17,7 @@ This is a module which provides Oracle connectivity for OpenSIPS.
 		file before compilation.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -39,10 +39,10 @@ The following libraries or applications must be installed before running
 - *instantclient-sdk-10.2.0.3* - the development headers and libraries of OCI.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### timeout (fixedpoint)
+#### timeout (fixedpoint) {#param_timeout}
 
 
 Timeout value for any operation with BD.
@@ -78,7 +78,7 @@ modparam("db_oracle", "timeout", 0)
 ```
 
 
-#### reconnect (fixedpoint)
+#### reconnect (fixedpoint) {#param_reconnect}
 
 
 Timeout value for connect (create session) operation.
@@ -100,7 +100,7 @@ modparam("db_oracle", "reconnect", 0.5)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -134,10 +134,10 @@ For working with opensips-cli tool, should be able to print the 'query'
 		with Oracle and formats printing taking these into account.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -169,7 +169,7 @@ For working with opensips-cli tool, should be able to print the 'query'
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -195,10 +195,10 @@ For working with opensips-cli tool, should be able to print the 'query'
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon.
