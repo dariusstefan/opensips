@@ -115,7 +115,7 @@ Essential mechanics behind the Push Notification (PN) support:
 				registrar can simultaneously handle both SIP PN compliant
 				and standard SIP User Agents
 - OpenSIPS will raise a
-				[E_UL_CONTACT_REFRESH](/modules/usrloc#event_E_UL_CONTACT_REFRESH)
+				[E_UL_CONTACT_REFRESH](usrloc#event_E_UL_CONTACT_REFRESH)
 				event any time a Push Notification needs to be sent to a
 				PN-enabled contact.  The event includes the PN coordinates of
 				the contact -- they may be found in the Contact URI ('uri'
@@ -123,7 +123,7 @@ Essential mechanics behind the Push Notification (PN) support:
 				transformation. From here onwards, it is up to the script
 				developer to trigger the Push Notification (e.g. possibly by
 				sending an HTTP POST with the
-				[rest_client](/modules/rest_client) module), thus forcing
+				[rest_client](rest_client) module), thus forcing
 				a re-registration from the device.
 - REGISTER processing is unchanged -- PN-enabled UAs are saved
 				just as regular UAs, with the former ones additionally having
@@ -695,7 +695,7 @@ Enable SIP Push Notification support ([RFC 8599](https://tools.ietf.org/html/rfc
 			[pn ct match params](#param_pn_ct_match_params) will be matched against
 			existing bindings using only these parameters.  Otherwise,
 			the module will attempt to match them as usual, using the current
-			usrloc [matching_mode](/modules/usrloc#param_matching_mode).
+			usrloc [matching_mode](usrloc#param_matching_mode).
 
 
 *Default value is **false**.*
@@ -796,11 +796,11 @@ If a binding refresh REGISTER request from a given SIP endpoint does
 			not arrive within at least [pn trigger interval](#param_pn_trigger_interval)
 			seconds prior to expiration (e.g. because the device does not
 			support *";+sip.pnsreg"* or because of other
-			error conditions), the [E_UL_CONTACT_REFRESH](/modules/usrloc#event_E_UL_CONTACT_REFRESH)
+			error conditions), the [E_UL_CONTACT_REFRESH](usrloc#event_E_UL_CONTACT_REFRESH)
 			usrloc event will be triggered.
 
 
-Once [E_UL_CONTACT_REFRESH](/modules/usrloc#event_E_UL_CONTACT_REFRESH)
+Once [E_UL_CONTACT_REFRESH](usrloc#event_E_UL_CONTACT_REFRESH)
 			is triggered, the script writer should use
 			the RFC 8599 parameters from the Contact URI in order to generate a
 			Push Notification request to the PN provider of the device, in
@@ -1480,7 +1480,7 @@ Perform mid-dialog request processing, according to RFC 8599.  For
 		such requests, search the R-URI and topmost Route header field URI for
 		a *";pn-purr"* parameter value that both matches the
 		OpenSIPS PURR format and corresponds to an usrloc registration. Once a
-		usrloc contact is located, trigger an [E_UL_CONTACT_REFRESH](/modules/usrloc#event_E_UL_CONTACT_REFRESH)
+		usrloc contact is located, trigger an [E_UL_CONTACT_REFRESH](usrloc#event_E_UL_CONTACT_REFRESH)
 		event and place the request on async hold for at most
 		[pn refresh timeout](#param_pn_refresh_timeout) seconds, until a matching
 		REGISTER request arrives.
