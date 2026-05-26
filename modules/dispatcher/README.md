@@ -640,12 +640,12 @@ capability in order to mark nodes as eligible for becoming data donors during an
 arbitrary sync request. Consequently, the cluster must have *at least
 one node* marked with the **"seed"** value
 as the *clusterer.flags* column/property in order to be fully functional.
-Consult the [clusterer - Capabilities](/modules/clusterer#capabilities)
+Consult the [clusterer - Capabilities](clusterer#capabilities)
 chapter for more details.
 
 
 For more info on how to define and populate a cluster (with OpenSIPS 
-		nodes) see the [clusterer](/modules/clusterer) module.
+		nodes) see the [clusterer](clusterer) module.
 
 
 *Default value is "0 (none)".*
