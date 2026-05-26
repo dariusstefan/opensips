@@ -120,7 +120,7 @@ The "dst_node_csv" functions as a list of remote cluster nodes to try.
 
 
 At the time of writing, the only module using the new bridge replication
-		feature is [ratelimit](ratelimit#bridge_replication),
+		feature is [ratelimit](../ratelimit#bridge_replication),
 		in order to optimize its "CPS pipes broadcasting" replication mechanism.
 
 

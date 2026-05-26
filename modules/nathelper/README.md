@@ -181,13 +181,13 @@ The name of the Attribute-Value-Pair (AVP) used to store the URI
 		by the [fix nated register](#func_fix_nated_register) function and this data
 		may then be also picked up by the registrar module, which will attach a
 		"Received=" attribute to the registration.  Do not forget to change the
-		value of corresponding parameter in the [registrar](registrar)
+		value of corresponding parameter in the [registrar](../registrar)
 		module whenever you change the value of this parameter.
 
 
 > **Note:** You must set this parameter if you use [fix nated register](#func_fix_nated_register).
 		Additionally, if you are using registrar, you must also set its symmetric
-		[received_avp](registrar#received_avp) module parameter
+		[received_avp](../registrar#received_avp) module parameter
 		to the **same value**.
 
 
@@ -683,7 +683,7 @@ The function creates a URI consisting of the source IP, port and
 		protocol and stores it in the [received avp](#param_received_avp) AVP. The URI will
 		be appended as "received" parameter to Contact in 200 OK and
 		may also be stored in the user location database if the same AVP
-		is also configured for the [registrar](registrar) module.
+		is also configured for the [registrar](../registrar) module.
 
 
 This function can be used from REQUEST_ROUTE.
