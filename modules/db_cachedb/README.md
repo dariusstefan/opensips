@@ -44,14 +44,14 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `cachedb_url` (str)
+#### cachedb_url (str)
 
 
 The URL for the CacheDB back-end to be used. It can be set more than one time.
 
 
 **Example: Set
-                    `cachedb_url` parameter**
+                    cachedb_url parameter**
 
 
 ```opensips
@@ -65,7 +65,7 @@ modparam("db_cachedb","cachedb_url","mongodb:mycluster://127.0.0.1:27017/db.col"
 ### Examples of Usage
 
 
-#### `Distributed Subscriber Base`
+#### Distributed Subscriber Base
 
 
 In order to achieve such a setup, one would have to  set the db_url parameter of the auth_db module to point to the DB_CACHEDB URL.
@@ -97,7 +97,7 @@ The same mechanism/setup can be used to run other modules ( like usrloc, dialog,
 ### Current Limitations
 
 
-#### `CacheDB modules integration`
+#### CacheDB modules integration
 
 
 Currently the only cachedb_* module that implements this functionality is the cachedb_mongodb module, so currently you can only emulate SQL queries to a MongoDB instance/cluster.
@@ -105,7 +105,7 @@ Currently the only cachedb_* module that implements this functionality is the ca
 				There are plans to also extend this functionality to other cachedb_* backends, like Cassandra and CouchBase.
 
 
-#### `Extensive Testing Needed`
+#### Extensive Testing Needed
 
 
 Since there are many OpenSIPS modules that currently use the DB interface, it wasn't feasible to test all scenarios with all modules, and there still might be some incompatibilities.  
@@ -113,7 +113,7 @@ Since there are many OpenSIPS modules that currently use the DB interface, it wa
 				The module was tested with some regularily used modules ( like usrloc, dialog, permissions, drouting ), but more testing is very much welcome, and feedback is appreciated.
 
 
-#### `CacheDB Specific 'schema' and other incompatibilities`
+#### CacheDB Specific 'schema' and other incompatibilities
 
 
 Since the NoSQL backends do not usually have a strict schema involved,

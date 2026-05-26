@@ -87,7 +87,7 @@ This module does not provide any script parameters.
 ### Exported Functions
 
 
-#### `notify_on_event(event, filter, route, timeout)`
+#### notify_on_event(event, filter, route, timeout)
 
 
 This function creates a subscription to a given Event. A filter can be
@@ -135,7 +135,7 @@ Parameters:
 			lifetime, a subscription may be notified several or zero times.
 
 
-**Example: `notify_on_event()` usage**
+**Example: notify_on_event() usage**
 
 
 ```opensips
@@ -149,7 +149,7 @@ route[reg_done] {
 ```
 
 
-#### `wait_for_event(event,filter,timeout)`
+#### wait_for_event(event,filter,timeout)
 
 
 Exactly as the async [afunc wait for event](#afunc_wait_for_event) function,
@@ -164,7 +164,7 @@ The function return 1 upon success (an event was received), -1 in error
 This function can be used from any type of route.
 
 
-**Example: `wait_for_event` usage**
+**Example: wait_for_event usage**
 
 
 ```opensips
@@ -183,7 +183,7 @@ if ($rc>0) {
 ### Exported Asynchronous Functions
 
 
-#### `wait_for_event(event,filter,timeout)`
+#### wait_for_event(event,filter,timeout)
 
 
 Similar to the *notify_on_event*, this function
@@ -196,7 +196,7 @@ The meaning of the parameters is the same as for
 		*notify_on_event*.
 
 
-**Example: `wait_for_event` usage**
+**Example: wait_for_event usage**
 
 
 ```opensips
@@ -217,7 +217,7 @@ route[resume_call] {
 ### Usage Examples
 
 
-#### `Push Notification`
+#### Push Notification
 
 
 We use *notify_on_event* to capture the events on
@@ -280,7 +280,7 @@ route[fork_call]
 ```
 
 
-#### `Call pickup`
+#### Call pickup
 
 
 The scenario is Alice calling to bob, Bob does not pickup and Charlie

@@ -151,7 +151,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `my_node_id`
+#### my_node_id
 
 
 The id of the local instance. This parameter must be equal to one of the
@@ -161,7 +161,7 @@ The id of the local instance. This parameter must be equal to one of the
 *No default value. This parameter must be explicitly set to a value greater than zero.*
 
 
-**Example: Set `my_node_id` parameter**
+**Example: Set my_node_id parameter**
 
 
 ```opensips
@@ -172,7 +172,7 @@ modparam("clusterer", "my_node_id", 1)
 ```
 
 
-#### `db_mode`
+#### db_mode
 
 
 Specifies whether the node information for the local instance,
@@ -190,7 +190,7 @@ If DB mode is enabled, only the nodes defined in the database will be
 *Default value is "1"*
 
 
-**Example: Set `db_mode` parameter**
+**Example: Set db_mode parameter**
 
 
 ```opensips
@@ -201,7 +201,7 @@ modparam("clusterer", "db_mode", 0)
 ```
 
 
-#### `db_url`
+#### db_url
 
 
 The database url.
@@ -210,7 +210,7 @@ The database url.
 *Default value is "NULL".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -222,7 +222,7 @@ modparam("clusterer", "db_url",
 ```
 
 
-#### `db_table`
+#### db_table
 
 
 The name of the table storing the clustering information.
@@ -231,7 +231,7 @@ The name of the table storing the clustering information.
 *Default value is "clusterer".*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -242,7 +242,7 @@ modparam("clusterer", "db_table", "clusterer")
 ```
 
 
-#### `db_bridge_table`
+#### db_bridge_table
 
 
 The name of the table storing the inter-cluster bridge definitions.
@@ -251,7 +251,7 @@ The name of the table storing the inter-cluster bridge definitions.
 *Default value is "clusterer_bridge".*
 
 
-**Example: Set `db_bridge_table` parameter**
+**Example: Set db_bridge_table parameter**
 
 
 ```opensips
@@ -262,7 +262,7 @@ modparam("clusterer", "db_bridge_table", "clusterer_bridge")
 ```
 
 
-#### `sharing_tag`
+#### sharing_tag
 
 
 The definition of a sharing tag. The sharing tag is 
@@ -281,7 +281,7 @@ The format for this value is "tag_name / cluster_id = active/backup".
 Multiple definitions of this parameter are allowed. The default value is "none".
 
 
-**Example: Set `sharing_tag` parameter**
+**Example: Set sharing_tag parameter**
 
 
 ```opensips
@@ -292,7 +292,7 @@ modparam("clusterer", "sharing_tag", "node/10=backup")
 ```
 
 
-#### `my_node_info`
+#### my_node_info
 
 
 Node specification similar to the information provided by a row in
@@ -313,7 +313,7 @@ This parameter is required if [db mode](#param_db_mode) is set
 			the local instance in the dynamic node learning process.
 
 
-**Example: Set `my_node_info` parameter**
+**Example: Set my_node_info parameter**
 
 
 ```opensips
@@ -324,7 +324,7 @@ modparam("clusterer", "my_node_info", "cluster_id=1, url=bin:192.168.0.5:5566")
 ```
 
 
-#### `neighbor_node_info`
+#### neighbor_node_info
 
 
 Node specification similar to the information provided by a row in
@@ -348,7 +348,7 @@ This parameter should be set at least once if
 			the node topology is by other nodes connecting to the local instance.
 
 
-**Example: Set `neighbor_node_info` parameter**
+**Example: Set neighbor_node_info parameter**
 
 
 ```opensips
@@ -359,7 +359,7 @@ modparam("clusterer", "neighbor_node_info", "cluster_id=1,node_id=2,url=bin:192.
 ```
 
 
-#### `ping_interval`
+#### ping_interval
 
 
 The interval in seconds between regular pings sent to a neighbour node.
@@ -368,7 +368,7 @@ The interval in seconds between regular pings sent to a neighbour node.
 *Default value is "4"*
 
 
-**Example: Set `ping_interval` parameter**
+**Example: Set ping_interval parameter**
 
 
 ```opensips
@@ -379,7 +379,7 @@ modparam("clusterer", "ping_interval", 1)
 ```
 
 
-#### `ping_timeout`
+#### ping_timeout
 
 
 The time in milliseconds to wait for a reply to a previously sent ping before retrying or considering the link with the neighbour node down. This is also the interval between successive retries if the send fails.
@@ -388,7 +388,7 @@ The time in milliseconds to wait for a reply to a previously sent ping before re
 *Default value is "1000"*
 
 
-**Example: Set `ping_timeout` parameter**
+**Example: Set ping_timeout parameter**
 
 
 ```opensips
@@ -399,7 +399,7 @@ modparam("clusterer", "ping_timeout", 500)
 ```
 
 
-#### `node_timeout`
+#### node_timeout
 
 
 The time in seconds to wait before pinging is restarted for a failed node.
@@ -408,7 +408,7 @@ The time in seconds to wait before pinging is restarted for a failed node.
 *Default value is "60"*
 
 
-**Example: Set `node_timeout` parameter**
+**Example: Set node_timeout parameter**
 
 
 ```opensips
@@ -419,7 +419,7 @@ modparam("clusterer", "node_timeout", 10)
 ```
 
 
-#### `seed_fallback_interval`
+#### seed_fallback_interval
 
 
 Only relevant for "seed" nodes.  The time, in seconds, to wait
@@ -430,7 +430,7 @@ Only relevant for "seed" nodes.  The time, in seconds, to wait
 *Default value is "5".*
 
 
-**Example: Set `seed_fallback_interval` parameter**
+**Example: Set seed_fallback_interval parameter**
 
 
 ```opensips
@@ -441,7 +441,7 @@ modparam("clusterer", "seed_fallback_interval", 10)
 ```
 
 
-#### `sync_timeout`
+#### sync_timeout
 
 
 The inteval, in seconds, since the last sync data packet received
@@ -452,7 +452,7 @@ The inteval, in seconds, since the last sync data packet received
 *Default value is "15".*
 
 
-**Example: Set `sync_timeout` parameter**
+**Example: Set sync_timeout parameter**
 
 
 ```opensips
@@ -463,7 +463,7 @@ modparam("clusterer", "sync_timeout", 5)
 ```
 
 
-#### `sync_packet_size`
+#### sync_packet_size
 
 
 The maximum size of the BIN packets sent while doing data synchronization. This is only a suggested value as the actual size of the packets may be slightly larger.
@@ -472,7 +472,7 @@ The maximum size of the BIN packets sent while doing data synchronization. This 
 *Default value is "65535".*
 
 
-**Example: Set `sync_packet_size` parameter**
+**Example: Set sync_packet_size parameter**
 
 
 ```opensips
@@ -483,7 +483,7 @@ modparam("clusterer", "sync_packet_size", 32765)
 ```
 
 
-#### `dispatch_jobs`
+#### dispatch_jobs
 
 
 Enables the dispatching of jobs(processing replicated data packets)
@@ -503,7 +503,7 @@ Nevertheless there are cases where the "thundering herd" problem occurs
 *Default value is "1" (enabled).*
 
 
-**Example: Set `dispatch_jobs` parameter**
+**Example: Set dispatch_jobs parameter**
 
 
 ```opensips
@@ -514,7 +514,7 @@ modparam("clusterer", "dispatch_jobs", 0)
 ```
 
 
-#### `id_col`
+#### id_col
 
 
 The name of the column storing an id for the table rows.
@@ -523,7 +523,7 @@ The name of the column storing an id for the table rows.
 *Default value is "id".*
 
 
-**Example: Set `id_col` parameter**
+**Example: Set id_col parameter**
 
 
 ```opensips
@@ -534,7 +534,7 @@ modparam("clusterer", "id_col", "id")
 ```
 
 
-#### `cluster_id_col`
+#### cluster_id_col
 
 
 The name of the column to store the id of a cluster.
@@ -543,7 +543,7 @@ The name of the column to store the id of a cluster.
 *Default value is "cluster_id".*
 
 
-**Example: Set `cluster_id_col` parameter**
+**Example: Set cluster_id_col parameter**
 
 
 ```opensips
@@ -554,7 +554,7 @@ modparam("clusterer", "cluster_id_col", "cluster_id")
 ```
 
 
-#### `node_id_col`
+#### node_id_col
 
 
 The name of the column to store the id of an instance. The values must be greater than 0.
@@ -563,7 +563,7 @@ The name of the column to store the id of an instance. The values must be greate
 *Default value is "node_id".*
 
 
-**Example: Set `node_id_col` parameter**
+**Example: Set node_id_col parameter**
 
 
 ```opensips
@@ -574,7 +574,7 @@ modparam("clusterer", "node_id_col", "node_id")
 ```
 
 
-#### `url_col`
+#### url_col
 
 
 The name of the column containing the instance url. The values must be greater than 0.
@@ -583,7 +583,7 @@ The name of the column containing the instance url. The values must be greater t
 *Default value is "url".*
 
 
-**Example: Set `url_col` parameter**
+**Example: Set url_col parameter**
 
 
 ```opensips
@@ -594,7 +594,7 @@ modparam("clusterer", "url_col", "url")
 ```
 
 
-#### `state_col`
+#### state_col
 
 
 The name of the column storing the state of the node(enabled/disabled).
@@ -603,7 +603,7 @@ The name of the column storing the state of the node(enabled/disabled).
 *Default value is "state".*
 
 
-**Example: Set `state_col` parameter**
+**Example: Set state_col parameter**
 
 
 ```opensips
@@ -614,7 +614,7 @@ modparam("clusterer", "state_col", "state")
 ```
 
 
-#### `no_ping_retries_col`
+#### no_ping_retries_col
 
 
 The name of the column containing the maximum number of ping retries before the link with the neighbour node is considered down.
@@ -623,7 +623,7 @@ The name of the column containing the maximum number of ping retries before the 
 *Default value is "no_ping_retries".*
 
 
-**Example: Set `no_ping_retries_col` parameter**
+**Example: Set no_ping_retries_col parameter**
 
 
 ```opensips
@@ -634,7 +634,7 @@ modparam("clusterer", "no_ping_retries_col", "no_ping_retries")
 ```
 
 
-#### `priority_col`
+#### priority_col
 
 
 The name of the column storing the node priority to be chosen as next hop in case of same length(number of hops) paths when rerouting messages.
@@ -643,7 +643,7 @@ The name of the column storing the node priority to be chosen as next hop in cas
 *Default value is "priority".*
 
 
-**Example: Set `priority_col` parameter**
+**Example: Set priority_col parameter**
 
 
 ```opensips
@@ -654,7 +654,7 @@ modparam("clusterer", "priority_col", "priority")
 ```
 
 
-#### `sip_addr_col`
+#### sip_addr_col
 
 
 The name of the column containing a SIP address for the node.
@@ -663,7 +663,7 @@ The name of the column containing a SIP address for the node.
 *Default value is "sip_addr".*
 
 
-**Example: Set `sip_addr_col` parameter**
+**Example: Set sip_addr_col parameter**
 
 
 ```opensips
@@ -674,7 +674,7 @@ modparam("clusterer", "sip_addr_col", "sip_addr")
 ```
 
 
-#### `flags_col`
+#### flags_col
 
 
 The name of the column containing the node flags.
@@ -683,7 +683,7 @@ The name of the column containing the node flags.
 *Default value is "flags".*
 
 
-**Example: Set `flags_col` parameter**
+**Example: Set flags_col parameter**
 
 
 ```opensips
@@ -694,7 +694,7 @@ modparam("clusterer", "flags_col", "flags")
 ```
 
 
-#### `description_col`
+#### description_col
 
 
 The name of the column containing a node description.
@@ -703,7 +703,7 @@ The name of the column containing a node description.
 *Default value is "description".*
 
 
-**Example: Set `description_col` parameter**
+**Example: Set description_col parameter**
 
 
 ```opensips
@@ -714,7 +714,7 @@ modparam("clusterer", "description_col", "description")
 ```
 
 
-#### `enable_stats` (integer)
+#### enable_stats (integer)
 
 
 If the statistics support should be enabled or not. Via statistic
@@ -725,7 +725,7 @@ If the statistics support should be enabled or not. Via statistic
 *Default value is "1 (enabled)".*
 
 
-**Example: Set `enable_stats` parameter**
+**Example: Set enable_stats parameter**
 
 
 ```opensips
@@ -736,7 +736,7 @@ modparam("clusterer", "enable_stats", 0)
 ```
 
 
-#### `enable_rerouting` (integer)
+#### enable_rerouting (integer)
 
 
 If packets should be rerouted via another node if a direct route
@@ -748,7 +748,7 @@ If packets should be rerouted via another node if a direct route
 *Default value is "1 (enabled)".*
 
 
-**Example: Set `enable_rerouting` parameter**
+**Example: Set enable_rerouting parameter**
 
 
 ```opensips
@@ -762,7 +762,7 @@ modparam("clusterer", "enable_rerouting", 0)
 ### Exported Functions
 
 
-#### `cluster_send_req(cluster_id, dst_id, msg, [tag])`
+#### cluster_send_req(cluster_id, dst_id, msg, [tag])
 
 
 This function is used to send a generic, request-like message, containing custom data, to a specific node in a cluster, directly from the script. The message is not a "request" per se but according to the logic on the receiving side, that node can send back a reply. In order to correlate a received reply with the request sent out, the function returns, through the *tag* parameter, a randomly generated communication tag, which is sent along in the the original message, that can be checked against the tag received in a reply.
@@ -809,7 +809,7 @@ route[rpl_resume] {
 ```
 
 
-#### `cluster_send_rpl(cluster_id, dst_id, msg, tag)`
+#### cluster_send_rpl(cluster_id, dst_id, msg, tag)
 
 
 This function is used to send a generic, reply-like message, containing custom data, to a specific node in a cluster, directly from the script. The message is marked as a "reply" so this function should ony be used for replying to a previously request-like message received. In order for the other node, which initially sent a request, to be able to correlate it with this reply, a communication tag, received along with the request, should be passed to the function.
@@ -849,7 +849,7 @@ event_route[E_CLUSTERER_REQ_RECEIVED] {
 ```
 
 
-#### `cluster_broadcast_req(cluster_id, msg, [tag], [include_self])`
+#### cluster_broadcast_req(cluster_id, msg, [tag], [include_self])
 
 
 This function has a similar behaviour to the `cluster_send_req()` function with the exception that the message is sent to all the nodes in the specified cluster.
@@ -885,7 +885,7 @@ cluster_broadcast_req($var(cl_id), $var(share_data), , true);
 ```
 
 
-#### `cluster_check_addr(cluster_id, ip, addr_type)`
+#### cluster_check_addr(cluster_id, ip, addr_type)
 
 
 This function checks whether the given IP address belongs
@@ -927,7 +927,7 @@ if (cluster_check_addr(1, $si)) {
 ### Exported MI Functions
 
 
-#### `clusterer:reload`
+#### clusterer:reload
 
 
 Replaces obsolete MI command: *clusterer_reload*.
@@ -951,7 +951,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `clusterer:list`
+#### clusterer:list
 
 
 Replaces obsolete MI command: *clusterer_list*.
@@ -966,7 +966,7 @@ Name: *clusterer:list*
 Parameters:*none*
 
 
-**Example: `clusterer:list` usage**
+**Example: clusterer:list usage**
 
 
 ```
@@ -991,7 +991,7 @@ $ opensips-cli -x mi clusterer:list
 ```
 
 
-#### `clusterer:list_topology`
+#### clusterer:list_topology
 
 
 Replaces obsolete MI command: *clusterer_list_topology*.
@@ -1009,7 +1009,7 @@ Name: *clusterer:list_topology*
 Parameters:*none*
 
 
-**Example: `clusterer:list_topology` usage**
+**Example: clusterer:list_topology usage**
 
 
 ```
@@ -1038,7 +1038,7 @@ $ opensips-cli -x mi clusterer:list_topology
 ```
 
 
-#### `clusterer:set_status`
+#### clusterer:set_status
 
 
 Replaces obsolete MI command: *clusterer_set_status*.
@@ -1071,7 +1071,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `clusterer:remove_node`
+#### clusterer:remove_node
 
 
 Replaces obsolete MI command: *clusterer_remove_node*.
@@ -1107,7 +1107,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `clusterer:send_mi`
+#### clusterer:send_mi
 
 
 Replaces obsolete MI command: *cluster_send_mi*.
@@ -1142,7 +1142,7 @@ opensips-cli -x mi clusterer:send_mi 1 3 lb_reload
 ```
 
 
-#### `clusterer:broadcast_mi`
+#### clusterer:broadcast_mi
 
 
 Replaces obsolete MI command: *cluster_broadcast_mi*.
@@ -1176,7 +1176,7 @@ opensips-cli -x mi clusterer:broadcast_mi 1 dr_reload partition_5
 ```
 
 
-#### `clusterer:list_cap`
+#### clusterer:list_cap
 
 
 Replaces obsolete MI command: *clusterer_list_cap*.
@@ -1191,7 +1191,7 @@ Name: *clusterer:list_cap*
 Parameters:*none*
 
 
-**Example: `clusterer:list_cap` usage**
+**Example: clusterer:list_cap usage**
 
 
 ```
@@ -1218,7 +1218,7 @@ $ opensips-cli -x mi clusterer:list_cap
 ```
 
 
-#### `clusterer:set_cap_status`
+#### clusterer:set_cap_status
 
 
 Replaces obsolete MI command: *clusterer_set_cap_status*.
@@ -1251,7 +1251,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `clusterer:shtag_set_active`
+#### clusterer:shtag_set_active
 
 
 Replaces obsolete MI command: *clusterer_shtag_set_active*.
@@ -1280,7 +1280,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `clusterer:list_shtags`
+#### clusterer:list_shtags
 
 
 Replaces obsolete MI command: *clusterer_list_shtags*.
@@ -1307,7 +1307,7 @@ MI FIFO Command Format:
 ### Exported Script Variables
 
 
-#### `$cluster.sh_tag`
+#### $cluster.sh_tag
 
 
 This is a read/write variable that allows access to the
@@ -1342,7 +1342,7 @@ A NULL value may returned only as a result of an internal error
 ### Exported Events
 
 
-#### `E_CLUSTERER_REQ_RECEIVED`
+#### E_CLUSTERER_REQ_RECEIVED
 
 
 This event is raised when a generic, request-like, clusterer message is received. This type of message is sent directly from the script and not by an OpenSIPS module.
@@ -1357,7 +1357,7 @@ Parameters:
 - *tag* - The communication tag of this message, generated by the source node. This could be used to send a reply corresponding to the received message by providing the tag to the `cluster_send_rpl()` function.
 
 
-#### `E_CLUSTERER_RPL_RECEIVED`
+#### E_CLUSTERER_RPL_RECEIVED
 
 
 This event is raised when a generic, reply-like, clusterer message is received. This type of message is sent directly from the script and not by an OpenSIPS module.
@@ -1372,7 +1372,7 @@ Parameters:
 - *tag* - The communication tag of this message. This could be used to match the received reply with a request sent with the `cluster_send_req()` or `cluster_broadcast_req()` functions.
 
 
-#### `E_CLUSTERER_NODE_STATE_CHANGED`
+#### E_CLUSTERER_NODE_STATE_CHANGED
 
 
 This event is raised when the state of a node changes in terms of
@@ -1388,7 +1388,7 @@ Parameters:
 				the possible values: 0 - down, 1 - up.
 
 
-#### `E_CLUSTERER_SHARING_TAG_CHANGED`
+#### E_CLUSTERER_SHARING_TAG_CHANGED
 
 
 This event is raised when the state of a sharing tag changes.
@@ -1412,7 +1412,7 @@ Parameters:
 The module provides the *clusterer* Status/Report group.
 
 
-#### `sharing_tags`
+#### sharing_tags
 
 
 The *sharing_tags* identifier is provided for reporting state
@@ -1441,7 +1441,7 @@ The *sharing_tags* identifier is provided for reporting state
 ```
 
 
-#### `node_states`
+#### node_states
 
 
 The *node_states* identifier is used for reporting node state
@@ -1470,7 +1470,7 @@ The *node_states* identifier is used for reporting node state
 ```
 
 
-#### `cap:[capability_name]`
+#### cap:[capability_name]
 
 
 Each capability registered to the clusterer module has a corresponding
@@ -1649,19 +1649,19 @@ Starting the two OpenSIPS instances with the above configurations provides
 ### Exported Statistics
 
 
-#### `clusterer_nodes`
+#### clusterer_nodes
 
 
 Returns the total number of cluster nodes.
 
 
-#### `clusterer_nodes_up`
+#### clusterer_nodes_up
 
 
 Returns the total number of cluster nodes in the UP state.
 
 
-#### `clusterer_nodes_down`
+#### clusterer_nodes_down
 
 
 Returns the total number of cluster nodes not in the UP state.
@@ -1673,7 +1673,7 @@ Returns the total number of cluster nodes not in the UP state.
 ### Available Functions
 
 
-#### `get_nodes(cluster_id)`
+#### get_nodes(cluster_id)
 
 
 This function will return a list of all the reachable nodes(if the direct link is down/probing, a path through intermediary nodes is considered) in the specified cluster.
@@ -1702,7 +1702,7 @@ Meaning of the parameters is as follows:
 - *int cluster_id* - the cluster id
 
 
-#### `free_nodes(list)`
+#### free_nodes(list)
 
 
 This function will free the lits of nodes returned by *get_nodes*.
@@ -1714,7 +1714,7 @@ Meaning of the parameters is as follows:
 - *clusterer_node_t *list* - list header
 
 
-#### `set_state(cluster_id, state)`
+#### set_state(cluster_id, state)
 
 
 This function sets the state(enabled/disabled) of the current node in the specified cluster.
@@ -1730,7 +1730,7 @@ Meaning of the parameters is as follows:
   - *STATE_ENABLED*
 
 
-#### `check_addr(cluster_id, su)`
+#### check_addr(cluster_id, su)
 
 
 This function checks if a given address belongs to one of the nodes in the cluster.
@@ -1743,13 +1743,13 @@ Meaning of the parameters is as follows:
 - *union sockaddr_union* su* - socket address
 
 
-#### `get_my_id()`
+#### get_my_id()
 
 
 This function will return the id of the current node.
 
 
-#### `send_to(packet, cluster_id, node_id)`
+#### send_to(packet, cluster_id, node_id)
 
 
 This functon will send the given BIN packet to the specified node in the cluster. If the direct link is down/probing, it will send the packet to an intermediary node if the destination node is reachable through another path in the cluster topology.
@@ -1772,7 +1772,7 @@ The function returns one of the following:
 - *CLUSTERER_SEND_ERR* - destination node or valid next hop appear to be reachable but send failed
 
 
-#### `send_all(packet, cluster_id)`
+#### send_all(packet, cluster_id)
 
 
 Send the given BIN packet to all the nodes in the specified cluster. The function operates similarly to *send_to*.
@@ -1794,7 +1794,7 @@ The function returns one of the following:
 - *CLUSTERER_SEND_ERR* - send failed for all nodes in the cluster
 
 
-#### `get_next_hop(cluster_id, node_id)`
+#### get_next_hop(cluster_id, node_id)
 
 
 This function returns the next hop from the computed shortest path to the given destination node in the specified cluster. This is the node that is the actual destination for the *send_to* and *send_all* functions when the direct link with the intended destination is down. The function returns the same structure as *get_nodes*.
@@ -1807,7 +1807,7 @@ Meaning of the parameters is as follows:
 - *int node_id* - the node id of the destination for which the next hop is returned.
 
 
-#### `free_next_hop(next_hop)`
+#### free_next_hop(next_hop)
 
 
 This function will free the next hop returned by *get_next_hop*.
@@ -1819,7 +1819,7 @@ Meaning of the parameters is as follows:
 - *clusterer_node_t *next_hop* - next hop to be freed
 
 
-#### `register_module(mod_name, cb, auth_check, accept_clusters_ids, no_accept_clusters)`
+#### register_module(mod_name, cb, auth_check, accept_clusters_ids, no_accept_clusters)
 
 
 This function registers an OpenSIPS module in order to receive BIN packets and cluster notifications. A certain module can accept packets from multiple clusters and provides a single callback function that will be called for each received packet. This function will also be called to notify cluster events like nodes becoming reachable/unreachable.

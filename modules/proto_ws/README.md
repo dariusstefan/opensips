@@ -78,7 +78,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `ws_port` (integer)
+#### ws_port (integer)
 
 
 The default port to be used for all WS related operation. Be careful
@@ -94,7 +94,7 @@ If you want to change only the listening port for WS, use the port
 *Default value is 80.*
 
 
-**Example: Set `ws_port` parameter**
+**Example: Set ws_port parameter**
 
 
 ```opensips
@@ -104,7 +104,7 @@ modparam("proto_ws", "ws_port", 8080)
 ```
 
 
-#### `ws_send_timeout` (integer)
+#### ws_send_timeout (integer)
 
 
 Time in milliseconds after a WebSocket connection will be closed if it is
@@ -115,7 +115,7 @@ Time in milliseconds after a WebSocket connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set `ws_send_timeout` parameter**
+**Example: Set ws_send_timeout parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("proto_ws", "ws_send_timeout", 200)
 ```
 
 
-#### `ws_max_msg_chunks` (integer)
+#### ws_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a SIP message is expected to
@@ -139,7 +139,7 @@ The maximum number of chunks in which a SIP message is expected to
 *Default value is 4.*
 
 
-**Example: Set `ws_max_msg_chunks` parameter**
+**Example: Set ws_max_msg_chunks parameter**
 
 
 ```opensips
@@ -149,7 +149,7 @@ modparam("proto_ws", "ws_max_msg_chunks", 8)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -169,7 +169,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -181,7 +181,7 @@ modparam("proto_ws", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_on` (int)
+#### trace_on (int)
 
 
 This controls whether tracing for ws is on or not. You still need to define
@@ -189,7 +189,7 @@ This controls whether tracing for ws is on or not. You still need to define
 			controlled using mi function [mi trace](#mi_trace).
 
 
-**Example: Set `trace_on` parameter**
+**Example: Set trace_on parameter**
 
 
 ```opensips
@@ -199,7 +199,7 @@ modparam("proto_ws", "trace_on", 1)
 ```
 
 
-#### `trace_filter_route` (string)
+#### trace_filter_route (string)
 
 
 Define the name of a route in which you can filter which connections will
@@ -227,7 +227,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-**Example: Set `trace_filter_route` parameter**
+**Example: Set trace_filter_route parameter**
 
 
 ```opensips
@@ -251,13 +251,13 @@ route[ws_filter] {
 ```
 
 
-#### `require_origin` (int)
+#### require_origin (int)
 
 
 Controls whether the module should require the Origin header or not.
 
 
-**Example: Set `require_origin` parameter**
+**Example: Set require_origin parameter**
 
 
 ```opensips
@@ -270,7 +270,7 @@ modparam("proto_ws", "require_origin", no)
 ### Exported MI Functions
 
 
-#### `ws:trace`
+#### ws:trace
 
 
 Replaces obsolete MI command: *ws_trace*.

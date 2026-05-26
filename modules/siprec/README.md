@@ -149,7 +149,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `skip_failover_codes` (string)
+#### skip_failover_codes (string)
 
 
 A regular expression used to specify the codes that should prevent
@@ -159,7 +159,7 @@ A regular expression used to specify the codes that should prevent
 *By default any negative reply generates a failover.*
 
 
-**Example: Set `skip_failover_codes` parameter**
+**Example: Set skip_failover_codes parameter**
 
 
 ```opensips
@@ -180,7 +180,7 @@ modparam("siprec", "skip_failover_codes", "[34][0-9][0-9]")
 ### Exported Events
 
 
-#### `E_SIPREC_START`
+#### E_SIPREC_START
 
 
 This event is raised when a SIPREC call is established and a call
@@ -201,7 +201,7 @@ Parameters:
 - *instance* - the SIPREC instance this event is triggered for;
 
 
-#### `E_SIPREC_STOP`
+#### E_SIPREC_STOP
 
 
 This event is raised when a SIPREC call is terminated.
@@ -214,7 +214,7 @@ This event exposes the same parameters as the
 ### Exported Functions
 
 
-#### `siprec_start_recording(srs[, instance])`
+#### siprec_start_recording(srs[, instance])
 
 
 Calling this function on an initial
@@ -258,7 +258,7 @@ The function returns false when an internal error is triggered
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Use `siprec_start_recording()` function with a single SRS**
+**Example: Use siprec_start_recording() function with a single SRS**
 
 
 ```opensips
@@ -273,7 +273,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with multiple SRS servers**
+**Example: Use siprec_start_recording() function with multiple SRS servers**
 
 
 ```opensips
@@ -288,7 +288,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom XML values for participants**
+**Example: Use siprec_start_recording() function with custom XML values for participants**
 
 
 ```
@@ -303,7 +303,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom headers**
+**Example: Use siprec_start_recording() function with custom headers**
 
 
 ```
@@ -315,7 +315,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom group and session extensions**
+**Example: Use siprec_start_recording() function with custom group and session extensions**
 
 
 ```
@@ -324,7 +324,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### `siprec_pause_recording([instance])`
+#### siprec_pause_recording([instance])
 
 
 Pauses the recording for the ongoing call. Should be called after
@@ -343,7 +343,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `siprec_pause_recording()`**
+**Example: Use siprec_pause_recording()**
 
 
 ```opensips
@@ -357,7 +357,7 @@ This function can be used from any route.
 ```
 
 
-#### `siprec_resume_recording([instance])`
+#### siprec_resume_recording([instance])
 
 
 Resumes the recording for the ongoing call. Should be called after
@@ -376,7 +376,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `siprec_resume_recording()`**
+**Example: Use siprec_resume_recording()**
 
 
 ```opensips
@@ -390,7 +390,7 @@ This function can be used from any route.
 ```
 
 
-#### `siprec_stop_recording([instance])`
+#### siprec_stop_recording([instance])
 
 
 Stops the recording for the ongoing call. Should be called for SIPREC
@@ -409,7 +409,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `siprec_stop_recording()`**
+**Example: Use siprec_stop_recording()**
 
 
 ```opensips
@@ -423,7 +423,7 @@ This function can be used from any route.
 ```
 
 
-#### `siprec_send_indialog([hdrs[, body]])`
+#### siprec_send_indialog([hdrs[, body]])
 
 
 Sends an arbitrary in-dialog request to the SRS.
@@ -445,7 +445,7 @@ Parameters:
 					instance.
 
 
-**Example: Use `siprec_send_indialog()`**
+**Example: Use siprec_send_indialog()**
 
 
 ```opensips
@@ -461,7 +461,7 @@ Parameters:
 ### Exported Pseudo-Variables
 
 
-#### `$siprec`
+#### $siprec
 
 
 Used to modify/describe different siprec sessions

@@ -221,7 +221,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `nat_bflag` (string)
+#### nat_bflag (string)
 
 
 The name of the branch flag to be used as NAT marker (if the contact
@@ -232,7 +232,7 @@ The name of the branch flag to be used as NAT marker (if the contact
 *Default value is NULL (not set).*
 
 
-**Example: Set `nat_bflag` parameter**
+**Example: Set nat_bflag parameter**
 
 
 ```opensips
@@ -242,7 +242,7 @@ modparam("usrloc", "nat_bflag", "NAT_BFLAG")
 ```
 
 
-#### `contact_id_column` (string)
+#### contact_id_column (string)
 
 
 Name of the column holding the unique contact IDs.
@@ -251,7 +251,7 @@ Name of the column holding the unique contact IDs.
 *Default value is "contact_id".*
 
 
-**Example: Set `contact_id_column` parameter**
+**Example: Set contact_id_column parameter**
 
 
 ```opensips
@@ -261,7 +261,7 @@ modparam("usrloc", "contact_id_column", "ctid")
 ```
 
 
-#### `user_column` (string)
+#### user_column (string)
 
 
 Name of column containing usernames.
@@ -270,7 +270,7 @@ Name of column containing usernames.
 *Default value is "username".*
 
 
-**Example: Set `user_column` parameter**
+**Example: Set user_column parameter**
 
 
 ```opensips
@@ -280,7 +280,7 @@ modparam("usrloc", "user_column", "username")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 Name of column containing domains.
@@ -289,7 +289,7 @@ Name of column containing domains.
 *Default value is "domain".*
 
 
-**Example: Set `user_column` parameter**
+**Example: Set user_column parameter**
 
 
 ```opensips
@@ -299,7 +299,7 @@ modparam("usrloc", "domain_column", "domain")
 ```
 
 
-#### `contact_column` (string)
+#### contact_column (string)
 
 
 Name of column containing contacts.
@@ -308,7 +308,7 @@ Name of column containing contacts.
 *Default value is "contact".*
 
 
-**Example: Set `contact_column` parameter**
+**Example: Set contact_column parameter**
 
 
 ```opensips
@@ -318,7 +318,7 @@ modparam("usrloc", "contact_column", "contact")
 ```
 
 
-#### `expires_column` (string)
+#### expires_column (string)
 
 
 Name of column containing expires value.
@@ -327,7 +327,7 @@ Name of column containing expires value.
 *Default value is "expires".*
 
 
-**Example: Set `expires_column` parameter**
+**Example: Set expires_column parameter**
 
 
 ```opensips
@@ -337,7 +337,7 @@ modparam("usrloc", "expires_column", "expires")
 ```
 
 
-#### `q_column` (string)
+#### q_column (string)
 
 
 Name of column containing q values.
@@ -346,7 +346,7 @@ Name of column containing q values.
 *Default value is "q".*
 
 
-**Example: Set `q_column` parameter**
+**Example: Set q_column parameter**
 
 
 ```opensips
@@ -356,7 +356,7 @@ modparam("usrloc", "q_column", "q")
 ```
 
 
-#### `callid_column` (string)
+#### callid_column (string)
 
 
 Name of column containing callid values.
@@ -365,7 +365,7 @@ Name of column containing callid values.
 *Default value is "callid".*
 
 
-**Example: Set `callid_column` parameter**
+**Example: Set callid_column parameter**
 
 
 ```opensips
@@ -375,7 +375,7 @@ modparam("usrloc", "callid_column", "callid")
 ```
 
 
-#### `cseq_column` (string)
+#### cseq_column (string)
 
 
 Name of column containing cseq numbers.
@@ -384,7 +384,7 @@ Name of column containing cseq numbers.
 *Default value is "cseq".*
 
 
-**Example: Set `cseq_column` parameter**
+**Example: Set cseq_column parameter**
 
 
 ```opensips
@@ -394,7 +394,7 @@ modparam("usrloc", "cseq_column", "cseq")
 ```
 
 
-#### `methods_column` (string)
+#### methods_column (string)
 
 
 Name of column containing supported methods.
@@ -403,7 +403,7 @@ Name of column containing supported methods.
 *Default value is "methods".*
 
 
-**Example: Set `methods_column` parameter**
+**Example: Set methods_column parameter**
 
 
 ```opensips
@@ -413,7 +413,7 @@ modparam("usrloc", "methods_column", "methods")
 ```
 
 
-#### `flags_column` (string)
+#### flags_column (string)
 
 
 Name of column to save the internal flags of the record.
@@ -422,7 +422,7 @@ Name of column to save the internal flags of the record.
 *Default value is "flags".*
 
 
-**Example: Set `flags_column` parameter**
+**Example: Set flags_column parameter**
 
 
 ```opensips
@@ -432,7 +432,7 @@ modparam("usrloc", "flags_column", "flags")
 ```
 
 
-#### `cflags_column` (string)
+#### cflags_column (string)
 
 
 Name of column to save the branch/contact flags of the record.
@@ -441,7 +441,7 @@ Name of column to save the branch/contact flags of the record.
 *Default value is "cflags".*
 
 
-**Example: Set `cflags_column` parameter**
+**Example: Set cflags_column parameter**
 
 
 ```opensips
@@ -451,7 +451,7 @@ modparam("usrloc", "cflags_column", "cflags")
 ```
 
 
-#### `user_agent_column` (string)
+#### user_agent_column (string)
 
 
 Name of column containing user-agent values.
@@ -460,7 +460,7 @@ Name of column containing user-agent values.
 *Default value is "user_agent".*
 
 
-**Example: Set `user_agent_column` parameter**
+**Example: Set user_agent_column parameter**
 
 
 ```opensips
@@ -470,7 +470,7 @@ modparam("usrloc", "user_agent_column", "user_agent")
 ```
 
 
-#### `received_column` (string)
+#### received_column (string)
 
 
 Name of column containing the source IP, port, and protocol from the REGISTER
@@ -480,7 +480,7 @@ Name of column containing the source IP, port, and protocol from the REGISTER
 *Default value is "received".*
 
 
-**Example: Set `received_column` parameter**
+**Example: Set received_column parameter**
 
 
 ```opensips
@@ -490,7 +490,7 @@ modparam("usrloc", "received_column", "received")
 ```
 
 
-#### `socket_column` (string)
+#### socket_column (string)
 
 
 Name of column containing the received socket information (IP:port)
@@ -500,7 +500,7 @@ Name of column containing the received socket information (IP:port)
 *Default value is "socket".*
 
 
-**Example: Set `socket_column` parameter**
+**Example: Set socket_column parameter**
 
 
 ```opensips
@@ -510,7 +510,7 @@ modparam("usrloc", "socket_column", "socket")
 ```
 
 
-#### `path_column` (string)
+#### path_column (string)
 
 
 Name of column containing the Path header.
@@ -519,7 +519,7 @@ Name of column containing the Path header.
 *Default value is "path".*
 
 
-**Example: Set `path_column` parameter**
+**Example: Set path_column parameter**
 
 
 ```opensips
@@ -529,7 +529,7 @@ modparam("usrloc", "path_column", "path")
 ```
 
 
-#### `sip_instance_column` (string)
+#### sip_instance_column (string)
 
 
 Name of column containing the SIP instance.
@@ -538,7 +538,7 @@ Name of column containing the SIP instance.
 *Default value is "NULL".*
 
 
-**Example: Set `sip_instance_column` parameter**
+**Example: Set sip_instance_column parameter**
 
 
 ```opensips
@@ -548,7 +548,7 @@ modparam("usrloc", "sip_instance_column", "sip_instance")
 ```
 
 
-#### `kv_store_column` (string)
+#### kv_store_column (string)
 
 
 Name of column containing generic key-value data.
@@ -557,7 +557,7 @@ Name of column containing generic key-value data.
 *Default value is "kv_store".*
 
 
-**Example: Set `kv_store_column` parameter**
+**Example: Set kv_store_column parameter**
 
 
 ```opensips
@@ -567,7 +567,7 @@ modparam("usrloc", "kv_store_column", "json_data")
 ```
 
 
-#### `attr_column` (string)
+#### attr_column (string)
 
 
 Name of column containing additional registration-related information.
@@ -576,7 +576,7 @@ Name of column containing additional registration-related information.
 *Default value is "attr".*
 
 
-**Example: Set `attr_column` parameter**
+**Example: Set attr_column parameter**
 
 
 ```opensips
@@ -586,7 +586,7 @@ modparam("usrloc", "attr_column", "attributes")
 ```
 
 
-#### `use_domain` (boolean)
+#### use_domain (boolean)
 
 
 Denotes whether the *domain* part of the user should
@@ -597,7 +597,7 @@ Denotes whether the *domain* part of the user should
 *Default value is *true* (enabled).*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -607,7 +607,7 @@ modparam("usrloc", "use_domain", true)
 ```
 
 
-#### `desc_time_order` (integer)
+#### desc_time_order (integer)
 
 
 If the user's contacts should be kept timestamp ordered; otherwise the
@@ -618,7 +618,7 @@ If the user's contacts should be kept timestamp ordered; otherwise the
 *Default value is "0 (false)".*
 
 
-**Example: Set `desc_time_order` parameter**
+**Example: Set desc_time_order parameter**
 
 
 ```opensips
@@ -628,7 +628,7 @@ modparam("usrloc", "desc_time_order", 1)
 ```
 
 
-#### `timer_interval` (integer)
+#### timer_interval (integer)
 
 
 Number of seconds between two timer runs.  During each run, the module
@@ -645,7 +645,7 @@ Number of seconds between two timer runs.  During each run, the module
 *Default value is 60.*
 
 
-**Example: Set `timer_interval` parameter**
+**Example: Set timer_interval parameter**
 
 
 ```opensips
@@ -655,7 +655,7 @@ modparam("usrloc", "timer_interval", 120)
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 URL of the database that should be used.
@@ -664,7 +664,7 @@ URL of the database that should be used.
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -674,7 +674,7 @@ modparam("usrloc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 URL of a NoSQL database to be used. Only required in a
@@ -685,7 +685,7 @@ URL of a NoSQL database to be used. Only required in a
 *Default value is "none".*
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -695,7 +695,7 @@ modparam("usrloc", "cachedb_url", "mongodb://10.0.0.4:27017/opensipsDB.userlocat
 ```
 
 
-#### `working_mode_preset` (string)
+#### working_mode_preset (string)
 
 
 A pre-defined working mode for the usrloc module.  Setting this
@@ -764,7 +764,7 @@ Refer to section
 *Default value is "single-instance-no-db".*
 
 
-**Example: Set `working_mode_preset` parameter**
+**Example: Set working_mode_preset parameter**
 
 
 ```opensips
@@ -774,7 +774,7 @@ modparam("usrloc", "working_mode_preset", "full-sharing-cachedb-cluster")
 ```
 
 
-#### `cluster_mode` (string)
+#### cluster_mode (string)
 
 
 **This parameter will get overridden if either
@@ -818,7 +818,7 @@ This parameter may take the following values:
 *Default value is *"none" (single instance mode)*.*
 
 
-**Example: Set `cluster_mode` parameter**
+**Example: Set cluster_mode parameter**
 
 
 ```opensips
@@ -828,7 +828,7 @@ modparam("usrloc", "cluster_mode", "federation-cachedb")
 ```
 
 
-#### `restart_persistency` (string)
+#### restart_persistency (string)
 
 
 **This parameter will get overridden if either
@@ -870,7 +870,7 @@ This parameter may take the following values:
 			*"none" (no restart persistency)*.*
 
 
-**Example: Set `restart_persistency` parameter**
+**Example: Set restart_persistency parameter**
 
 
 ```opensips
@@ -880,7 +880,7 @@ modparam("usrloc", "restart_persistency", "sync-from-cluster")
 ```
 
 
-#### `sql_write_mode` (string)
+#### sql_write_mode (string)
 
 
 **This parameter will get overridden if either
@@ -917,7 +917,7 @@ This parameter may take the following values:
 *Default value is *"none" (no added SQL writes)*.*
 
 
-**Example: Set `sql_write_mode` parameter**
+**Example: Set sql_write_mode parameter**
 
 
 ```opensips
@@ -927,7 +927,7 @@ modparam("usrloc", "sql_write_mode", "write-back")
 ```
 
 
-#### `matching_mode` (integer)
+#### matching_mode (integer)
 
 
 What contact matching algorithm to be used. Refer to section
@@ -947,7 +947,7 @@ The parameter may take the following values:
 *Default value is *0 (CONTACT_ONLY)*.*
 
 
-**Example: Set `matching_mode` parameter**
+**Example: Set matching_mode parameter**
 
 
 ```opensips
@@ -957,7 +957,7 @@ modparam("usrloc", "matching_mode", 1)
 ```
 
 
-#### `cseq_delay` (integer)
+#### cseq_delay (integer)
 
 
 Delay (in seconds) for accepting as retransmissions register requests
@@ -976,7 +976,7 @@ A value of 0 disable the retransmission detection.
 *Default value is "20 seconds".*
 
 
-**Example: Set `cseq_delay` parameter**
+**Example: Set cseq_delay parameter**
 
 
 ```opensips
@@ -986,7 +986,7 @@ modparam("usrloc", "cseq_delay", 5)
 ```
 
 
-#### `location_cluster` (integer)
+#### location_cluster (integer)
 
 
 Specifies the cluster ID which this instance will send to and receive
@@ -1011,7 +1011,7 @@ More details on the user location distribution mechanisms are
 		available under [distributed sip user location](#distributed-sip-user-location).
 
 
-**Example: Setting the `location_cluster` parameter**
+**Example: Setting the location_cluster parameter**
 
 
 ```opensips
@@ -1021,7 +1021,7 @@ modparam("usrloc", "location_cluster", 1)
 ```
 
 
-#### `ha_cluster` (integer)
+#### ha_cluster (integer)
 
 
 Only relevant in **"federation-cachedb"**
@@ -1033,7 +1033,7 @@ Only relevant in **"federation-cachedb"**
 Default value is 0 (disabled).
 
 
-**Example: Setting the `ha_cluster` parameter**
+**Example: Setting the ha_cluster parameter**
 
 
 ```opensips
@@ -1043,7 +1043,7 @@ modparam("usrloc", "ha_cluster", 4)
 ```
 
 
-#### `ha_shtag` (string)
+#### ha_shtag (string)
 
 
 Only relevant in **"federation-cachedb"**
@@ -1055,7 +1055,7 @@ Only relevant in **"federation-cachedb"**
 Default value is NULL (disabled).
 
 
-**Example: Setting the `ha_shtag` parameter**
+**Example: Setting the ha_shtag parameter**
 
 
 ```opensips
@@ -1065,7 +1065,7 @@ modparam("usrloc", "ha_shtag", "vip2")
 ```
 
 
-#### `skip_replicated_db_ops` (int)
+#### skip_replicated_db_ops (int)
 
 
 Prevent OpenSIPS from performing any DB-related contact operations
@@ -1081,7 +1081,7 @@ More details on the user location replication mechanism are available
 		in [distributed sip user location](#distributed-sip-user-location)
 
 
-**Example: Setting the `skip_replicated_db_ops`
+**Example: Setting the skip_replicated_db_ops
 			parameter**
 
 
@@ -1092,7 +1092,7 @@ modparam("usrloc", "skip_replicated_db_ops", 1)
 ```
 
 
-#### `max_contact_delete` (int)
+#### max_contact_delete (int)
 
 
 Relevant only in WRITE_THROUGH or WRITE_BACK schemes. The maximum
@@ -1103,7 +1103,7 @@ Relevant only in WRITE_THROUGH or WRITE_BACK schemes. The maximum
 Default value is "10"
 
 
-**Example: Setting the `max_contact_delete`
+**Example: Setting the max_contact_delete
 			parameter**
 
 
@@ -1114,7 +1114,7 @@ modparam("usrloc", "max_contact_delete", 10)
 ```
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 The number of entries of the hash table used by usrloc to store the
@@ -1126,7 +1126,7 @@ The number of entries of the hash table used by usrloc to store the
 *Default value is "9".*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -1136,7 +1136,7 @@ modparam("usrloc", "hash_size", 10)
 ```
 
 
-#### `regen_broken_contactid` (integer)
+#### regen_broken_contactid (integer)
 
 
 Since version 2.2, **contact_id** concept
@@ -1152,7 +1152,7 @@ Since version 2.2, **contact_id** concept
 *Default value is "0(not enabled)"*
 
 
-**Example: Set `regen_broken_contactid` parameter**
+**Example: Set regen_broken_contactid parameter**
 
 
 ```opensips
@@ -1162,7 +1162,7 @@ modparam("usrloc", "regen_broken_contactid", 1)
 ```
 
 
-#### `latency_event_min_us` (integer)
+#### latency_event_min_us (integer)
 
 
 Defines a minimal pinging latency threshold, in microseconds, past
@@ -1178,7 +1178,7 @@ If both [latency event min us](#param_latency_event_min_us) and
 *Default value is "0 (no bottom limit set)".*
 
 
-**Example: Set `latency_event_min_us` parameter**
+**Example: Set latency_event_min_us parameter**
 
 
 ```opensips
@@ -1189,7 +1189,7 @@ modparam("usrloc", "latency_event_min_us", 425000)
 ```
 
 
-#### `latency_event_min_us_delta` (integer)
+#### latency_event_min_us_delta (integer)
 
 
 Defines a minimal, absolute pinging latency difference, in
@@ -1207,7 +1207,7 @@ If both [latency event min us](#param_latency_event_min_us) and
 *Default value is "0 (no minimal latency delta set)".*
 
 
-**Example: Set `latency_event_min_us_delta` parameter**
+**Example: Set latency_event_min_us_delta parameter**
 
 
 ```opensips
@@ -1218,7 +1218,7 @@ modparam("usrloc", "latency_event_min_us_delta", 300000)
 ```
 
 
-#### `pinging_mode` (string)
+#### pinging_mode (string)
 
 
 Depending on the [cluster mode](#param_cluster_mode), the module
@@ -1262,7 +1262,7 @@ Notice that only the **"full-sharing"**
 			for those modes will be silently discarded.
 
 
-**Example: Set `pinging_mode` parameter**
+**Example: Set pinging_mode parameter**
 
 
 ```opensips
@@ -1273,7 +1273,7 @@ modparam("usrloc", "pinging_mode", "ownership")
 ```
 
 
-#### `mi_dump_kv_store` (integer)
+#### mi_dump_kv_store (integer)
 
 
 Enable in order to include the "KV-Store" field in all usrloc MI
@@ -1285,7 +1285,7 @@ Enable in order to include the "KV-Store" field in all usrloc MI
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `mi_dump_kv_store` parameter**
+**Example: Set mi_dump_kv_store parameter**
 
 
 ```opensips
@@ -1296,7 +1296,7 @@ modparam("usrloc", "mi_dump_kv_store", 1)
 ```
 
 
-#### `contact_refresh_timer` (boolean)
+#### contact_refresh_timer (boolean)
 
 
 Enable a timer which will periodically scan a sorted list of contacts
@@ -1309,7 +1309,7 @@ Enable a timer which will periodically scan a sorted list of contacts
 *Default value is "false (disabled)".*
 
 
-**Example: Set `contact_refresh_timer` parameter**
+**Example: Set contact_refresh_timer parameter**
 
 
 ```opensips
@@ -1322,7 +1322,7 @@ modparam("usrloc", "contact_refresh_timer", true)
 ### Exported Functions
 
 
-#### `ul_add_key(domain, aor, key_name, [key_value])`
+#### ul_add_key(domain, aor, key_name, [key_value])
 
 
 Append a Key/Value to the Key-Value-Store of a Usrloc-Record.
@@ -1348,7 +1348,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: `ul_add_key` usage**
+**Example: ul_add_key usage**
 
 
 ```
@@ -1358,7 +1358,7 @@ ul_add_key("location", "$tU@$td", "service_route", "$hdr(Service-Route)");
 ```
 
 
-#### `ul_get_key(domain, aor, key_name, destination)`
+#### ul_get_key(domain, aor, key_name, destination)
 
 
 Retrieve a Key/Value from the Key-Value-Store of a Usrloc-Record.
@@ -1383,7 +1383,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: `ul_get_key` usage**
+**Example: ul_get_key usage**
 
 
 ```
@@ -1395,7 +1395,7 @@ if (ul_get_key("location", "$tU@$td", "service_route", $avp(service_route))) {
 ```
 
 
-#### `ul_del_key(domain, aor, key_name)`
+#### ul_del_key(domain, aor, key_name)
 
 
 Deletes a Key/Value from the Key-Value-Store of a Usrloc-Record.
@@ -1418,7 +1418,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: `ul_del_key` usage**
+**Example: ul_del_key usage**
 
 
 ```
@@ -1431,7 +1431,7 @@ ul_del_key("location", "$tU@$td", "service_route");
 ### Exported MI Functions
 
 
-#### `usrloc:rm`
+#### usrloc:rm
 
 
 Replaces obsolete MI command: *ul_rm*.
@@ -1450,7 +1450,7 @@ Parameters:
 				is on).
 
 
-#### `usrloc:rm_contact`
+#### usrloc:rm_contact
 
 
 Replaces obsolete MI command: *ul_rm_contact*.
@@ -1470,7 +1470,7 @@ Parameters:
 - *contact* - exact contact to be removed
 
 
-#### `usrloc:dump`
+#### usrloc:dump
 
 
 Replaces obsolete MI command: *ul_dump*.
@@ -1487,7 +1487,7 @@ Parameters:
 				done (only AOR and contacts, with no other details)
 
 
-#### `usrloc:flush`
+#### usrloc:flush
 
 
 Replaces obsolete MI command: *ul_flush*.
@@ -1498,7 +1498,7 @@ Force a flush of all pending usrloc cache changes to the database.
 		[timer interval](#param_timer_interval) seconds.
 
 
-#### `usrloc:add`
+#### usrloc:add
 
 
 Replaces obsolete MI command: *ul_add*.
@@ -1528,7 +1528,7 @@ Parameters:
 				of each method's value, see the "request_method" internal enum.
 
 
-#### `usrloc:show_contact`
+#### usrloc:show_contact
 
 
 Replaces obsolete MI command: *ul_show_contact*.
@@ -1547,7 +1547,7 @@ Parameters:
 				is on).
 
 
-#### `usrloc:sync`
+#### usrloc:sync
 
 
 Replaces obsolete MI command: *ul_sync*.
@@ -1574,7 +1574,7 @@ Parameters:
 				[use domain](#param_use_domain) option is on).
 
 
-#### `usrloc:cluster_sync`
+#### usrloc:cluster_sync
 
 
 Replaces obsolete MI command: *ul_cluster_sync*.
@@ -1634,7 +1634,7 @@ Total number of AOR existing in the USRLOC memory cache for all
 ### Exported Events
 
 
-#### `E_UL_AOR_INSERT`
+#### E_UL_AOR_INSERT
 
 
 This event is raised when a new AOR is inserted in the USRLOC
@@ -1648,7 +1648,7 @@ Parameters:
 - *aor* - The AOR of the inserted record.
 
 
-#### `E_UL_AOR_DELETE`
+#### E_UL_AOR_DELETE
 
 
 This event is raised when a new AOR is deleted from the USRLOC
@@ -1662,7 +1662,7 @@ Parameters:
 - *aor* - The AOR of the deleted record.
 
 
-#### `E_UL_CONTACT_INSERT`
+#### E_UL_CONTACT_INSERT
 
 
 This event is raised when a new contact is inserted in any of the
@@ -1716,7 +1716,7 @@ Parameters:
 				string)!
 
 
-#### `E_UL_CONTACT_DELETE`
+#### E_UL_CONTACT_DELETE
 
 
 This event is raised when a contact is deleted from an
@@ -1729,7 +1729,7 @@ Parameters: same as the
 			[E UL CONTACT INSERT](#event_E_UL_CONTACT_INSERT) event
 
 
-#### `E_UL_CONTACT_UPDATE`
+#### E_UL_CONTACT_UPDATE
 
 
 This event is raised when a contact's info is updated by receiving
@@ -1740,7 +1740,7 @@ Parameters: same as the
 			[E UL CONTACT INSERT](#event_E_UL_CONTACT_INSERT) event
 
 
-#### `E_UL_CONTACT_REFRESH`
+#### E_UL_CONTACT_REFRESH
 
 
 This event may only be raised for RFC 8599 (Push Notification)
@@ -1808,7 +1808,7 @@ Using the *req_callid*, if a dialog has been
 				functions of the dialog module.
 
 
-#### `E_UL_LATENCY_UPDATE`
+#### E_UL_LATENCY_UPDATE
 
 
 This event is raised when a contact pinging latency matches either
@@ -1828,7 +1828,7 @@ Parameters: same as the
 ### Available Functions
 
 
-#### `ul_register_domain(name)`
+#### ul_register_domain(name)
 
 
 The function registers a new domain. Domain is just another name for
@@ -1848,8 +1848,8 @@ Meaning of the parameters is as follows:
 				(also called table) to be registered.
 
 
-#### `
-				ul_insert_urecord(domain, aor, rec, is_replicated)`
+#### 
+				ul_insert_urecord(domain, aor, rec, is_replicated)
 
 
 The function creates a new record structure and inserts it in the
@@ -1872,8 +1872,8 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `
-				ul_delete_urecord(domain, aor, is_replicated)`
+#### 
+				ul_delete_urecord(domain, aor, is_replicated)
 
 
 The function deletes all the contacts bound with the given Address
@@ -1892,7 +1892,7 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `ul_get_urecord(domain, aor)`
+#### ul_get_urecord(domain, aor)
 
 
 The function returns pointer to record with given Address of Record.
@@ -1909,7 +1909,7 @@ Meaning of the parameters is as follows:
 			record.
 
 
-#### `ul_lock_udomain(domain)`
+#### ul_lock_udomain(domain)
 
 
 The function lock the specified domain, it means, that no other
@@ -1925,7 +1925,7 @@ Meaning of the parameters is as follows:
 - *udomain_t* domain* - Domain to be locked.
 
 
-#### `ul_unlock_udomain(domain)`
+#### ul_unlock_udomain(domain)
 
 
 Unlock the specified domain previously locked by ul_lock_udomain.
@@ -1938,8 +1938,8 @@ Meaning of the parameters is as follows:
 			unlocked.
 
 
-#### `
-				ul_release_urecord(record, is_replicated)`
+#### 
+				ul_release_urecord(record, is_replicated)
 
 
 Do some sanity checks - if all contacts have been removed, delete
@@ -1956,8 +1956,8 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `ul_insert_ucontact(record, contact,
-		contact_info, contact, is_replicated)`
+#### ul_insert_ucontact(record, contact,
+		contact_info, contact, is_replicated)
 
 
 The function inserts a new contact in the given record with
@@ -1977,8 +1977,8 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `ul_delete_ucontact
-			(record, contact, is_replicated)`
+#### ul_delete_ucontact
+			(record, contact, is_replicated)
 
 
 The function deletes given contact from record.
@@ -1998,8 +1998,8 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `ul_delete_ucontact_from_id
-			(domain, contact_id)`
+#### ul_delete_ucontact_from_id
+			(domain, contact_id)
 
 
 The function deletes a contact with the given contact_id from
@@ -2017,7 +2017,7 @@ Meaning of the parameters is as follows:
 			identifying the contact to be deleted.
 
 
-#### `ul_get_ucontact(record, contact)`
+#### ul_get_ucontact(record, contact)
 
 
 The function tries to find contact with given Contact URI and
@@ -2035,8 +2035,8 @@ Meaning of the parameters is as follows:
 			contact.
 
 
-#### `ul_get_domain_ucontacts
-			(domain, buf, len, flags)`
+#### ul_get_domain_ucontacts
+			(domain, buf, len, flags)
 
 
 The function retrieves all contacts of all registered users from the
@@ -2072,8 +2072,8 @@ Meaning of the parameters is as follows:
 			be set.
 
 
-#### `ul_get_all_ucontacts
-			(buf, len, flags)`
+#### ul_get_all_ucontacts
+			(buf, len, flags)
 
 
 The function retrieves all contacts of all registered users and
@@ -2105,8 +2105,8 @@ Meaning of the parameters is as follows:
 			be set.
 
 
-#### `ul_update_ucontact(record, contact,
-				contact_info, is_replicated)`
+#### ul_update_ucontact(record, contact,
+				contact_info, is_replicated)
 
 
 The function updates contact with new values.
@@ -2125,8 +2125,8 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### `ul_bind_ursloc( api )
-			`
+#### ul_bind_ursloc( api )
+			
 
 
 The function imports all functions that are exported by the
@@ -2140,8 +2140,8 @@ Meaning of the parameters is as follows:
 - *usrloc_api_t* api* - USRLOC API
 
 
-#### `ul_register_ulcb(type ,callback, param)
-			`
+#### ul_register_ulcb(type ,callback, param)
+			
 
 
 The function register with USRLOC a callback function to be called
@@ -2159,8 +2159,8 @@ Meaning of the parameters is as follows:
 			passed to the callback each time when it is called.
 
 
-#### `ul_get_num_users()
-			`
+#### ul_get_num_users()
+			
 
 
 The function loops through all domains summing up the number of users.

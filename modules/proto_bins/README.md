@@ -53,7 +53,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `bins_port` (integer)
+#### bins_port (integer)
 
 
 The default port to be used by all BINS listeners.
@@ -62,7 +62,7 @@ The default port to be used by all BINS listeners.
 *Default value is 5556.*
 
 
-**Example: Set `bins_port` parameter**
+**Example: Set bins_port parameter**
 
 
 ```opensips
@@ -72,7 +72,7 @@ modparam("proto_bins", "bins_port", 5557)
 ```
 
 
-#### `bins_handshake_timeout` (integer)
+#### bins_handshake_timeout (integer)
 
 
 Sets the timeout (in milliseconds) for the SSL/TLS handshake
@@ -89,7 +89,7 @@ The timeout is invoked during acceptance of a new connection
 *Default value is 100.*
 
 
-**Example: Set `bins_handshake_timeout` variable**
+**Example: Set bins_handshake_timeout variable**
 
 
 ```
@@ -99,7 +99,7 @@ param("proto_tls", "bins_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### `bins_send_timeout` (integer)
+#### bins_send_timeout (integer)
 
 
 Sets the timeout (in milliseconds) for blocking send operations
@@ -113,7 +113,7 @@ The send timeout is invoked for all TLS write operations,
 *Default value is 100 ms.*
 
 
-**Example: Set `bins_send_timeout` parameter**
+**Example: Set bins_send_timeout parameter**
 
 
 ```opensips
@@ -123,7 +123,7 @@ modparam("proto_bins", "bins_send_timeout", 200)
 ```
 
 
-#### `bins_max_msg_chunks` (integer)
+#### bins_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a BINS message is
@@ -138,7 +138,7 @@ The maximum number of chunks in which a BINS message is
 *Default value is 32.*
 
 
-**Example: Set `bins_max_msg_chunks` parameter**
+**Example: Set bins_max_msg_chunks parameter**
 
 
 ```opensips
@@ -148,7 +148,7 @@ modparam("proto_bins", "bins_max_msg_chunks", 8)
 ```
 
 
-#### `bins_async` (integer)
+#### bins_async (integer)
 
 
 Specifies whether the TCP/TLS connect and write operations
@@ -160,7 +160,7 @@ Specifies whether the TCP/TLS connect and write operations
 *Default value is 1 (enabled).*
 
 
-**Example: Set `bins_async` parameter**
+**Example: Set bins_async parameter**
 
 
 ```opensips
@@ -170,7 +170,7 @@ modparam("proto_bins", "bins_async", 0)
 ```
 
 
-#### `bins_async_max_postponed_chunks` (integer)
+#### bins_async_max_postponed_chunks (integer)
 
 
 If bins_async is enabled, this specifies the maximum number of
@@ -182,7 +182,7 @@ If bins_async is enabled, this specifies the maximum number of
 *Default value is 32.*
 
 
-**Example: Set `bins_async_max_postponed_chunks` parameter**
+**Example: Set bins_async_max_postponed_chunks parameter**
 
 
 ```opensips
@@ -192,7 +192,7 @@ modparam("proto_bins", "bins_async_max_postponed_chunks", 16)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -212,7 +212,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -224,7 +224,7 @@ modparam("proto_bins", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_on` (int)
+#### trace_on (int)
 
 
 This controls whether tracing for tls is on or not. You still need to define
@@ -232,7 +232,7 @@ This controls whether tracing for tls is on or not. You still need to define
 			controlled using mi function [mi trace](#mi_trace).
 
 
-**Example: Set `trace_on` parameter**
+**Example: Set trace_on parameter**
 
 
 ```opensips
@@ -245,7 +245,7 @@ modparam("proto_bins", "trace_on", 1)
 ### Exported MI Functions
 
 
-#### `bins:trace`
+#### bins:trace
 
 
 Replaces obsolete MI command: *tls_trace*.

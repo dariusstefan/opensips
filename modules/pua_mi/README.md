@@ -47,14 +47,14 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `presence_server` (str)
+#### presence_server (str)
 
 
 The the address of the presence server. If set, it will be
 		used as outbound proxy when sending PUBLISH requests.
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -75,7 +75,7 @@ The module does not export functions to be used
 ### Exported MI functions
 
 
-#### `pua_mi:publish`
+#### pua_mi:publish
 
 
 Replaces obsolete MI command: *pua_publish*.
@@ -110,7 +110,7 @@ Command parameters:
 		is provided, the *content_type* parameter is also required.
 
 
-**Example: `pua_mi:publish` FIFO example**
+**Example: pua_mi:publish FIFO example**
 
 
 ```
@@ -120,7 +120,7 @@ opensips-cli -x mi pua_mi:publish sip:system@opensips.org 3600 presence applicat
 ```
 
 
-#### `pua_mi:subscribe`
+#### pua_mi:subscribe
 
 
 Replaces obsolete MI command: *pua_subscribe*.
@@ -138,7 +138,7 @@ Command parameters:
 					- Relative time in seconds for the desired validity of the subscription.
 
 
-**Example: `pua_mi:subscribe` FIFO example**
+**Example: pua_mi:subscribe FIFO example**
 
 
 ```

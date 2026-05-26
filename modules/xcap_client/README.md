@@ -61,7 +61,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `periodical_query`(int)
+#### periodical_query(int)
 
 
 A flag to disable periodical query as an update method for
@@ -77,7 +77,7 @@ To disable it set this parameter to 0.
 *Default value is "1".*
 
 
-**Example: Set `periodical_query` parameter**
+**Example: Set periodical_query parameter**
 
 
 ```opensips
@@ -87,7 +87,7 @@ modparam("xcap_client", "periodical_query", 0)
 ```
 
 
-#### `query_period`(int)
+#### query_period(int)
 
 
 Should be set if periodical query is not disabled. 
@@ -101,7 +101,7 @@ To disable it set this parameter to 0.
 *Default value is "100".*
 
 
-**Example: Set `query_period` parameter**
+**Example: Set query_period parameter**
 
 
 ```opensips
@@ -120,7 +120,7 @@ None to be used in configuration file.
 ### Exported MI Functions
 
 
-#### `refreshXcapDoc`
+#### refreshXcapDoc
 
 
 MI command that should be sent by an xcap server when a
@@ -157,13 +157,13 @@ The module exports a number of functions that allow selecting
 		and the document in question is retrieved.
 
 
-### `bind_xcap_client_api(xcap_client_api_t* api)`
+### bind_xcap_client_api(xcap_client_api_t* api)
 
 
 This function allows binding the needed functions.
 
 
-**Example: `xcap_client_api` structure**
+**Example: xcap_client_api structure**
 
 
 ```
@@ -188,7 +188,7 @@ typedef struct xcap_client_api {
 ```
 
 
-### `get_elem`
+### get_elem
 
 
 Field type:
@@ -274,7 +274,7 @@ If the intention is to retrieve the whole document this argument must
 		be NULL.
 
 
-### `register_xcb`
+### register_xcb
 
 
 Field type:

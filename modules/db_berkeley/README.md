@@ -38,7 +38,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `auto_reload` (integer)
+#### auto_reload (integer)
 
 
 The auto-reload will close and reopen a Berkeley DB when the
@@ -49,7 +49,7 @@ The auto-reload will close and reopen a Berkeley DB when the
 *Default value is 0 (1 - on / 0 - off).*
 
 
-**Example: Set `auto_reload` parameter**
+**Example: Set auto_reload parameter**
 
 
 ```opensips
@@ -60,7 +60,7 @@ modparam("db_berkeley", "auto_reload", 1)
 ```
 
 
-#### `log_enable` (integer)
+#### log_enable (integer)
 
 
 The log_enable boolean controls when to create journal files.
@@ -78,7 +78,7 @@ The log_enable boolean controls when to create journal files.
 *Default value is 0 (1 - on / 0 - off).*
 
 
-**Example: Set `log_enable` parameter**
+**Example: Set log_enable parameter**
 
 
 ```opensips
@@ -89,7 +89,7 @@ modparam("db_berkeley", "log_enable", 1)
 ```
 
 
-#### `journal_roll_interval` (integer seconds)
+#### journal_roll_interval (integer seconds)
 
 
 The journal_roll_interval will close and open a new log file. 
@@ -100,7 +100,7 @@ The journal_roll_interval will close and open a new log file.
 *Default value is 0 (off).*
 
 
-**Example: Set `journal_roll_interval` parameter**
+**Example: Set journal_roll_interval parameter**
 
 
 ```opensips
@@ -120,7 +120,7 @@ No function exported to be used from configuration file.
 ### Exported MI Functions
 
 
-#### `db_berkeley:reload`
+#### db_berkeley:reload
 
 
 Replaces obsolete MI command: *bdb_reload*.

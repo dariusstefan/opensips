@@ -48,7 +48,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `alloc_limit` (integer)
+#### alloc_limit (integer)
 
 
 Since the library does not support a function to return the number of rows
@@ -63,7 +63,7 @@ Since the library does not support a function to return the number of rows
 *Default value is 10.*
 
 
-**Example: Set `alloc_limit` parameter**
+**Example: Set alloc_limit parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ modparam("db_sqlite", "alloc_limit", 25)
 ```
 
 
-#### `load_extension` (string)
+#### load_extension (string)
 
 
 This parameter enables extension loading, similiar to ".load" functionality in sqlite3,
@@ -88,7 +88,7 @@ This parameter enables extension loading, similiar to ".load" functionality in s
 *By default, no extension is loaded.*
 
 
-**Example: Set `load_extension` parameter**
+**Example: Set load_extension parameter**
 
 
 ```opensips
@@ -99,7 +99,7 @@ modparam("db_sqlite", "load_extension", "/usr/lib/sqlite3/pcre.so;sqlite3_extens
 ```
 
 
-#### `busy_timeout` (integer)
+#### busy_timeout (integer)
 
 
 This parameter sets the default busy_handler for the SQLite library, that sleeps for 
@@ -114,7 +114,7 @@ This parameter sets the default busy_handler for the SQLite library, that sleeps
 *Default value is 500.*
 
 
-**Example: Set `busy_timeout` parameter**
+**Example: Set busy_timeout parameter**
 
 
 ```opensips
@@ -124,7 +124,7 @@ modparam("db_sqlite", "busy_timeout", 5000)
 ```
 
 
-#### `exec_pragma` (string)
+#### exec_pragma (string)
 
 
 This parameter allows configuring an SQLite database with "PRAGMA" statements, (read 
@@ -138,7 +138,7 @@ This parameter allows configuring an SQLite database with "PRAGMA" statements, (
 *By default, no PRAGMA statements are executed.*
 
 
-**Example: Set `exec_pragma` parameter**
+**Example: Set exec_pragma parameter**
 
 
 ```opensips

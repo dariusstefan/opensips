@@ -149,7 +149,7 @@ Don't forget to always run the server using this command:
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -184,7 +184,7 @@ Syntax for *cachedb_url*
 *"dynamodb:///tableName?region=regionName"*
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips

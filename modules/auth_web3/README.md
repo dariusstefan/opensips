@@ -216,7 +216,7 @@ Look for log messages indicating network usage:
 ## Functions
 
 
-### `web3_www_authenticate(realm, method)`
+### web3_www_authenticate(realm, method)
 
 
 Performs Web3-based authentication for WWW-Authenticate challenges.
@@ -265,7 +265,7 @@ if (is_method("REGISTER")) {
 ```
 
 
-### `web3_proxy_authenticate(realm, method)`
+### web3_proxy_authenticate(realm, method)
 
 
 Performs Web3-based authentication for Proxy-Authenticate challenges.
@@ -314,7 +314,7 @@ if (is_method("INVITE")) {
 ## Parameters
 
 
-### `authentication_rpc_url` (string)
+### authentication_rpc_url (string)
 
 
 RPC URL for the blockchain network (e.g., Oasis Sapphire testnet or mainnet).
@@ -333,7 +333,7 @@ modparam("auth_web3", "authentication_rpc_url", "https://testnet.sapphire.oasis.
 ```
 
 
-### `authentication_contract_address` (string)
+### authentication_contract_address (string)
 
 
 Address of the smart contract that handles authentication verification.
@@ -352,7 +352,7 @@ modparam("auth_web3", "authentication_contract_address", "0xE773BB79689379d32Ad1
 ```
 
 
-### `ens_rpc_url` (string)
+### ens_rpc_url (string)
 
 
 RPC URL for the Ethereum network used for ENS resolution.
@@ -371,7 +371,7 @@ modparam("auth_web3", "ens_rpc_url", "https://eth-mainnet.g.alchemy.com/v2/YOUR_
 ```
 
 
-### `ens_registry_address` (string)
+### ens_registry_address (string)
 
 
 Address of the ENS registry contract on Ethereum mainnet.
@@ -390,7 +390,7 @@ modparam("auth_web3", "ens_registry_address", "0x00000000000C2E074eC69A0dFb2997B
 ```
 
 
-### `contract_debug_mode` (integer)
+### contract_debug_mode (integer)
 
 
 Enable debug logging for blockchain contract interactions.
@@ -409,7 +409,7 @@ modparam("auth_web3", "contract_debug_mode", 1)
 ```
 
 
-### `rpc_timeout` (integer)
+### rpc_timeout (integer)
 
 
 Timeout in seconds for blockchain RPC calls.
@@ -434,7 +434,7 @@ modparam("auth_web3", "rpc_timeout", 15)
 The module provides a C-level API for other OpenSIPS modules to use Web3 authentication.
 
 
-### `bind_web3_auth(api)`
+### bind_web3_auth(api)
 
 
 Binds the Web3 authentication API to a module interface structure.

@@ -40,7 +40,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The URL of database where the table containing speed dial records.
@@ -49,7 +49,7 @@ The URL of database where the table containing speed dial records.
 *Default value is mysql://opensipsro:opensipsro@localhost/opensips.*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -59,7 +59,7 @@ modparam("speeddial", "db_url", "mysql://user:xxx@localhost/db_name")
 ```
 
 
-#### `user_column` (string)
+#### user_column (string)
 
 
 The name of column storing the user name of the owner of the speed dial
@@ -69,7 +69,7 @@ The name of column storing the user name of the owner of the speed dial
 *Default value is "username".*
 
 
-**Example: Set `user_column` parameter**
+**Example: Set user_column parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("speeddial", "user_column", "userid")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 The name of column storing the domain of the owner of the speed dial
@@ -89,7 +89,7 @@ The name of column storing the domain of the owner of the speed dial
 *Default value is  "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -99,7 +99,7 @@ modparam("speeddial", "domain_column", "userdomain")
 ```
 
 
-#### `sd_user_column` (string)
+#### sd_user_column (string)
 
 
 The name of the column storing the user part of the short dial address.
@@ -108,7 +108,7 @@ The name of the column storing the user part of the short dial address.
 *Default value is  "sd_username".*
 
 
-**Example: Set `sd_user_column` parameter**
+**Example: Set sd_user_column parameter**
 
 
 ```opensips
@@ -118,7 +118,7 @@ modparam("speeddial", "sd_user_column", "short_user")
 ```
 
 
-#### `sd_domain_column` (string)
+#### sd_domain_column (string)
 
 
 The name of the column storing the domain of the short dial address.
@@ -127,7 +127,7 @@ The name of the column storing the domain of the short dial address.
 *Default value is  "sd_domain".*
 
 
-**Example: Set `sd_domain_column` parameter**
+**Example: Set sd_domain_column parameter**
 
 
 ```opensips
@@ -137,7 +137,7 @@ modparam("speeddial", "sd_domain_column", "short_domain")
 ```
 
 
-#### `new_uri_column` (string)
+#### new_uri_column (string)
 
 
 The name of the column containing the URI that will be use to replace
@@ -147,7 +147,7 @@ The name of the column containing the URI that will be use to replace
 *Default value is "new_uri".*
 
 
-**Example: Set `new_uri_column` parameter**
+**Example: Set new_uri_column parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("speeddial", "new_uri_column", "real_uri")
 ```
 
 
-#### `domain_prefix` (string)
+#### domain_prefix (string)
 
 
 If the domain of the owner (From URI) starts with the value of this parameter, then
@@ -167,7 +167,7 @@ If the domain of the owner (From URI) starts with the value of this parameter, t
 *Default value is NULL.*
 
 
-**Example: Set `domain_prefix` parameter**
+**Example: Set domain_prefix parameter**
 
 
 ```opensips
@@ -177,7 +177,7 @@ modparam("speeddial", "domain_prefix", "tel.")
 ```
 
 
-#### `use_domain` (int)
+#### use_domain (int)
 
 
 The parameter specifies wheter or not to use the domain when searching a
@@ -188,7 +188,7 @@ The parameter specifies wheter or not to use the domain when searching a
 *Default value is 0.*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -201,7 +201,7 @@ modparam("speeddial", "use_domain", 1)
 ### Exported Functions
 
 
-#### `sd_lookup(table [, owner])`
+#### sd_lookup(table [, owner])
 
 
 The function lookups the short dial number from R-URI in 'table' and replaces the R-URI with associated address.
@@ -219,7 +219,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `sd_lookup` usage**
+**Example: sd_lookup usage**
 
 
 ```

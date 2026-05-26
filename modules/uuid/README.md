@@ -42,7 +42,7 @@ The module does not export any parameters.
 ### Exported Pseudo-Variables
 
 
-#### `$uuid(version)`
+#### $uuid(version)
 
 
 The *$uuid* variable returns a newly generated UUID.
@@ -71,9 +71,9 @@ xlog("generated uuid v7: $uuid(7)\n");
 ### Exported Functions
 
 
-#### `
+#### 
 				uuid(out_var, [version], [namespace], [name])
-				`
+				
 
 
 Generates a new UUID.

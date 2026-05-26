@@ -31,13 +31,13 @@ None.
 ### Exported Parameters
 
 
-#### `db_url (string)`
+#### db_url (string)
 
 
 Mandatory URL to the SQL database.
 
 
-**Example: Setting the `db_url` parameter**
+**Example: Setting the db_url parameter**
 
 
 ```opensips
@@ -45,7 +45,7 @@ modparam("tcp_mgm", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ```
 
 
-#### `db_table (string)`
+#### db_table (string)
 
 
 The name of the table holding the TCP paths (rules).
@@ -54,7 +54,7 @@ The name of the table holding the TCP paths (rules).
 Default value is *"tcp_mgm"*.
 
 
-**Example: Setting the `db_table` parameter**
+**Example: Setting the db_table parameter**
 
 
 ```opensips
@@ -62,13 +62,13 @@ modparam("tcp_mgm", "db_table", "tcp_mgm")
 ```
 
 
-#### `[column-name]_col (string)`
+#### [column-name]_col (string)
 
 
 Use a different name for column *"column-name"*.
 
 
-**Example: Setting the `[column-name]_col` parameter**
+**Example: Setting the [column-name]_col parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("tcp_mgm", "connect_timeout_col", "connect_to")
 ### Exported MI Functions
 
 
-#### `tcp_mgm:reload`
+#### tcp_mgm:reload
 
 
 Replaces obsolete MI command: *tcp_reload*.

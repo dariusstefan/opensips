@@ -88,7 +88,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `mode` (string/integer)
+#### mode (string/integer)
 
 
 This parameter can be used to change the mode that the module
@@ -117,7 +117,7 @@ This parameter can be used to change the mode that the module
 *Default value is "0 (auto mode using parameters)".*
 
 
-**Example: Set `mode` parameter**
+**Example: Set mode parameter**
 
 
 ```opensips
@@ -127,7 +127,7 @@ modparam("callops", "mode", "manual") # use your own logic
 ```
 
 
-#### `match_param` (string)
+#### match_param (string)
 
 
 The parameter used to match the different calls together. This is
@@ -139,7 +139,7 @@ The parameter used to match the different calls together. This is
 *Default value is "osid".*
 
 
-**Example: Set `match_param` parameter**
+**Example: Set match_param parameter**
 
 
 ```opensips
@@ -152,7 +152,7 @@ modparam("callops", "match_param", "call")
 ### Exported Functions
 
 
-#### `call_blind_replace(callid[, leg])`
+#### call_blind_replace(callid[, leg])
 
 
 When *manual mode* is used, this function is
@@ -175,7 +175,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-**Example: Use `call_blind_replace()` function to match
+**Example: Use call_blind_replace() function to match
 					an existing leg.**
 
 
@@ -191,7 +191,7 @@ if (!has_totag() && is_method("INVITE")) {
 ```
 
 
-#### `call_transfer_notify()`
+#### call_transfer_notify()
 
 
 When *manual mode* is used, this function should
@@ -206,7 +206,7 @@ Note that if the function successfully handles the NOTIFY request,
 This function can be used from a request route, failure route and local route.
 
 
-**Example: Use `call_transfer_notify()` function to handle
+**Example: Use call_transfer_notify() function to handle
 					NOTIFY refer requests.**
 
 
@@ -220,7 +220,7 @@ if (has_totag() && is_method("NOTIFY") && loose_route()) {
 ```
 
 
-#### `call_transfer(leg, destination)` or
+#### call_transfer(leg, destination) or
 
 
 This function triggers a blind call transfer by sending a REFER
@@ -241,7 +241,7 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-**Example: Use `call_transfer()` function to do a blind
+**Example: Use call_transfer() function to do a blind
 					transfer of the caller to a new destination.**
 
 
@@ -255,7 +255,7 @@ if (has_totag() && && loose_route()) {
 ```
 
 
-#### `call_transfer(leg, transfer_callid, transfer_leg[, destination])` or
+#### call_transfer(leg, transfer_callid, transfer_leg[, destination]) or
 
 
 This function triggers an attended call transfer by sending a REFER
@@ -283,7 +283,7 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-**Example: Use `call_transfer()` function to do an
+**Example: Use call_transfer() function to do an
 					attended transfer of the caller to the callee of a different call.**
 
 
@@ -300,7 +300,7 @@ if (has_totag() && && loose_route()) {
 ### Exported MI Functions
 
 
-#### `callops:transfer`
+#### callops:transfer
 
 
 Replaces obsolete MI command: *call_transfer*.
@@ -378,7 +378,7 @@ opensips-cli -x mi callops:transfer \
 ```
 
 
-#### `callops:hold`
+#### callops:hold
 
 
 Replaces obsolete MI command: *call_hold*.
@@ -426,7 +426,7 @@ opensips-cli -x mi callops:hold \
 ```
 
 
-#### `callops:unhold`
+#### callops:unhold
 
 
 Replaces obsolete MI command: *call_unhold*.
@@ -476,7 +476,7 @@ opensips-cli -x mi callops:unhold \
 ### Exported Events
 
 
-#### `E_CALL_TRANSFER`
+#### E_CALL_TRANSFER
 
 
 This event is triggered during a call transfer scenario.
@@ -525,7 +525,7 @@ Parameters:
 					the success or failure of the call.
 
 
-#### `E_CALL_HOLD`
+#### E_CALL_HOLD
 
 
 Triggered during the process of putting a call on hold, or resuming

@@ -52,7 +52,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 An SQL database URL which the module will use in order to
@@ -62,7 +62,7 @@ An SQL database URL which the module will use in order to
 *Default value is "NULL" (DB support disabled).*
 
 
-**Example: Setting the `db_url` parameter**
+**Example: Setting the db_url parameter**
 
 
 ```opensips
@@ -72,7 +72,7 @@ modparam("freeswitch_scripting", "db_url", "dbdriver://username:password@dbhost/
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 The SQL table name for this module.
@@ -81,7 +81,7 @@ The SQL table name for this module.
 *Default value is "freeswitch".*
 
 
-**Example: Setting the `db_table` parameter**
+**Example: Setting the db_table parameter**
 
 
 ```opensips
@@ -91,7 +91,7 @@ modparam("freeswitch_scripting", "db_table", "freeswitch_sockets")
 ```
 
 
-#### `db_col_username` (string)
+#### db_col_username (string)
 
 
 The SQL column name for the "username" ESL connect information.
@@ -100,7 +100,7 @@ The SQL column name for the "username" ESL connect information.
 *Default value is "username".*
 
 
-**Example: Setting the `db_col_username` parameter**
+**Example: Setting the db_col_username parameter**
 
 
 ```opensips
@@ -110,7 +110,7 @@ modparam("freeswitch_scripting", "db_col_username", "user")
 ```
 
 
-#### `db_col_password` (string)
+#### db_col_password (string)
 
 
 The SQL column name for the "password" ESL connect information.
@@ -119,7 +119,7 @@ The SQL column name for the "password" ESL connect information.
 *Default value is "password".*
 
 
-**Example: Setting the `db_col_password` parameter**
+**Example: Setting the db_col_password parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("freeswitch_scripting", "db_col_password", "pass")
 ```
 
 
-#### `db_col_ip` (string)
+#### db_col_ip (string)
 
 
 The SQL column name for the "ip" ESL connect information.
@@ -138,7 +138,7 @@ The SQL column name for the "ip" ESL connect information.
 *Default value is "ip".*
 
 
-**Example: Setting the `db_col_ip` parameter**
+**Example: Setting the db_col_ip parameter**
 
 
 ```opensips
@@ -148,7 +148,7 @@ modparam("freeswitch_scripting", "db_col_ip", "ip_addr")
 ```
 
 
-#### `db_col_port` (string)
+#### db_col_port (string)
 
 
 The SQL column name for the "port" ESL connect information.
@@ -157,7 +157,7 @@ The SQL column name for the "port" ESL connect information.
 *Default value is "port".*
 
 
-**Example: Setting the `db_col_port` parameter**
+**Example: Setting the db_col_port parameter**
 
 
 ```opensips
@@ -167,7 +167,7 @@ modparam("freeswitch_scripting", "db_col_port", "tcp_port")
 ```
 
 
-#### `db_col_events` (string)
+#### db_col_events (string)
 
 
 The SQL column name for the comma-separated, case-sensitive FreeSWITCH
@@ -177,7 +177,7 @@ The SQL column name for the comma-separated, case-sensitive FreeSWITCH
 *Default value is "events_csv".*
 
 
-**Example: Setting the `db_col_events` parameter**
+**Example: Setting the db_col_events parameter**
 
 
 ```opensips
@@ -187,7 +187,7 @@ modparam("freeswitch_scripting", "db_col_events", "fs_events")
 ```
 
 
-#### `fs_subscribe` (string)
+#### fs_subscribe (string)
 
 
 Add a FreeSWITCH ESL URL to which OpenSIPS will connect at startup.
@@ -199,7 +199,7 @@ Add a FreeSWITCH ESL URL to which OpenSIPS will connect at startup.
 *This parameter can be set multiple times.*
 
 
-**Example: Setting the `fs_subscribe` parameter**
+**Example: Setting the fs_subscribe parameter**
 
 
 ```opensips
@@ -213,7 +213,7 @@ modparam("freeswitch_scripting", "fs_subscribe", ":ClueCon@10.0.0.11:8021?DTMF,B
 ### Exported Functions
 
 
-#### `freeswitch_esl(command, freeswitch_url[, response_var])`
+#### freeswitch_esl(command, freeswitch_url[, response_var])
 
 
 Run an arbitrary command on an arbitrary FreeSWITCH ESL socket. The
@@ -256,8 +256,8 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `
-				*freeswitch_esl()*` usage**
+**Example: 
+				*freeswitch_esl()* usage**
 
 
 ```opensips
@@ -356,7 +356,7 @@ Replaces the current set* of FreeSWITCH ESL sockets along with their respective
 ### Exported Events
 
 
-#### `E_FREESWITCH`
+#### E_FREESWITCH
 
 
 This event is raised when OpenSIPS receives an ESL event notification from

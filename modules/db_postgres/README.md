@@ -39,7 +39,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `exec_query_threshold` (integer)
+#### exec_query_threshold (integer)
 
 
 If queries take longer than 'exec_query_threshold' microseconds, warning
@@ -49,7 +49,7 @@ If queries take longer than 'exec_query_threshold' microseconds, warning
 *Default value is 0 - disabled.*
 
 
-**Example: Set `exec_query_threshold` parameter**
+**Example: Set exec_query_threshold parameter**
 
 
 ```opensips
@@ -59,7 +59,7 @@ modparam("db_postgres", "exec_query_threshold", 60000)
 ```
 
 
-#### `max_db_queries` (integer)
+#### max_db_queries (integer)
 
 
 The maximum number of database queries to be executed. 
@@ -69,7 +69,7 @@ The maximum number of database queries to be executed.
 *Default value is 2.*
 
 
-**Example: Set `max_db_queries` parameter**
+**Example: Set max_db_queries parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("db_postgres", "max_db_queries", 2)
 ```
 
 
-#### `timeout` (integer)
+#### timeout (integer)
 
 
 The number of seconds the PostgreSQL library waits to connect and query
@@ -97,7 +97,7 @@ The number of seconds the PostgreSQL library waits to connect and query
 *Default value is 5.*
 
 
-**Example: Set `timeout` parameter**
+**Example: Set timeout parameter**
 
 
 ```opensips
@@ -107,7 +107,7 @@ modparam("db_postgres", "timeout", 2)
 ```
 
 
-#### `use_tls` (integer)
+#### use_tls (integer)
 
 
 Parameter to control the way the SSL support is used when connecting
@@ -157,7 +157,7 @@ Also, you can *NOT* enable TLS for the connection
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the `use_tls` parameter**
+**Example: Set the use_tls parameter**
 
 
 ```opensips

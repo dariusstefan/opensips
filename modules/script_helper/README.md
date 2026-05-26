@@ -62,7 +62,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `use_dialog` (integer)
+#### use_dialog (integer)
 
 
 Enables dialog support. Note that the dialog module must be loaded before
@@ -72,7 +72,7 @@ Enables dialog support. Note that the dialog module must be loaded before
 Default value is 0 (disabled)
 
 
-**Example: Setting `use_dialog`**
+**Example: Setting use_dialog**
 
 
 ```opensips
@@ -82,7 +82,7 @@ modparam("script_helper", "use_dialog", 1)
 ```
 
 
-#### `create_dialog_flags` (string)
+#### create_dialog_flags (string)
 
 
 Flags used when creating dialogs. For details on these flags, please refer
@@ -92,7 +92,7 @@ Flags used when creating dialogs. For details on these flags, please refer
 Default value is "" (no flags are set)
 
 
-**Example: Setting `create_dialog_flags`**
+**Example: Setting create_dialog_flags**
 
 
 ```opensips
@@ -102,7 +102,7 @@ modparam("script_helper", "create_dialog_flags", "options-ping-caller,options-pi
 ```
 
 
-#### `sequential_route` (string)
+#### sequential_route (string)
 
 
 Optional route to be run just before sequential requests are relayed.
@@ -113,7 +113,7 @@ Optional route to be run just before sequential requests are relayed.
 By default, this parameter is not set
 
 
-**Example: Setting `sequential_route`**
+**Example: Setting sequential_route**
 
 
 ```opensips

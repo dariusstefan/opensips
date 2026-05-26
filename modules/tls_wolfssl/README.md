@@ -60,7 +60,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-TLS.
 
 
-#### `try_use_ktls` (integer)
+#### try_use_ktls (integer)
 
 
 Try to use KTLS for RX and TX ( dependent on Kernel support and loaded modules https://docs.kernel.org/networking/tls-offload.htm )
@@ -71,7 +71,7 @@ Try to use KTLS for RX and TX ( dependent on Kernel support and loaded modules h
 Default value is *0*.
 
 
-**Example: Set `try_use_ktls` variable**
+**Example: Set try_use_ktls variable**
 
 
 ```opensips

@@ -39,7 +39,7 @@ The module does not export any parameters.
 ### Exported Pseudo-Variables
 
 
-#### `$xml(path)`
+#### $xml(path)
 
 
 This module exports the *$xml(path)* variable.

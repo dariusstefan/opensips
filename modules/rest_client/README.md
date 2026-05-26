@@ -48,7 +48,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `curl_timeout` (integer)
+#### curl_timeout (integer)
 
 
 The maximum allowed time for any HTTP(S) transfer to complete.  This
@@ -60,7 +60,7 @@ The maximum allowed time for any HTTP(S) transfer to complete.  This
 *Default value is "20" seconds.*
 
 
-**Example: Setting the `curl_timeout` parameter**
+**Example: Setting the curl_timeout parameter**
 
 
 ```opensips
@@ -70,7 +70,7 @@ modparam("rest_client", "curl_timeout", 10)
 ```
 
 
-#### `connection_timeout` (integer)
+#### connection_timeout (integer)
 
 
 The maximum allowed time to establish a connection with the server.
@@ -79,7 +79,7 @@ The maximum allowed time to establish a connection with the server.
 *Default value is "20" seconds.*
 
 
-**Example: Setting the `connection_timeout` parameter**
+**Example: Setting the connection_timeout parameter**
 
 
 ```opensips
@@ -89,7 +89,7 @@ modparam("rest_client", "connection_timeout", 4)
 ```
 
 
-#### `connect_poll_interval` (integer)
+#### connect_poll_interval (integer)
 
 
 Only relevant with async requests.  Allows complete control over how
@@ -102,7 +102,7 @@ Only relevant with async requests.  Allows complete control over how
 *Default value is "20" milliseconds.*
 
 
-**Example: Setting the `connect_poll_interval` parameter**
+**Example: Setting the connect_poll_interval parameter**
 
 
 ```opensips
@@ -112,7 +112,7 @@ modparam("rest_client", "connect_poll_interval", 2)
 ```
 
 
-#### `max_async_transfers` (integer)
+#### max_async_transfers (integer)
 
 
 Maximum number of asynchronous HTTP transfers *a single*
@@ -124,7 +124,7 @@ Maximum number of asynchronous HTTP transfers *a single*
 *Default value is "100".*
 
 
-**Example: Setting the `max_async_transfers` parameter**
+**Example: Setting the max_async_transfers parameter**
 
 
 ```opensips
@@ -134,7 +134,7 @@ modparam("rest_client", "max_async_transfers", 300)
 ```
 
 
-#### `max_transfer_size` (integer)
+#### max_transfer_size (integer)
 
 
 The maximum allowed size of a single transfer (download).  Reaching
@@ -146,7 +146,7 @@ The maximum allowed size of a single transfer (download).  Reaching
 *Default value is "10240" (KB).*
 
 
-**Example: Setting the `max_transfer_size` parameter**
+**Example: Setting the max_transfer_size parameter**
 
 
 ```opensips
@@ -156,7 +156,7 @@ modparam("rest_client", "max_transfer_size", 64)
 ```
 
 
-#### `ssl_verifypeer` (integer)
+#### ssl_verifypeer (integer)
 
 
 Set this to 0 in order to disable the verification of the remote peer's
@@ -167,7 +167,7 @@ Set this to 0 in order to disable the verification of the remote peer's
 *Default value is "1" (enabled).*
 
 
-**Example: Setting the `ssl_verifypeer` parameter**
+**Example: Setting the ssl_verifypeer parameter**
 
 
 ```opensips
@@ -177,7 +177,7 @@ modparam("rest_client", "ssl_verifypeer", 0)
 ```
 
 
-#### `ssl_verifyhost` (integer)
+#### ssl_verifyhost (integer)
 
 
 Set this to 0 in order to disable the verification that the remote peer
@@ -187,7 +187,7 @@ Set this to 0 in order to disable the verification that the remote peer
 *Default value is "1" (enabled).*
 
 
-**Example: Setting the `ssl_verifyhost` parameter**
+**Example: Setting the ssl_verifyhost parameter**
 
 
 ```opensips
@@ -197,13 +197,13 @@ modparam("rest_client", "ssl_verifyhost", 0)
 ```
 
 
-#### `ssl_capath` (integer)
+#### ssl_capath (integer)
 
 
 An optional path for CA certificates to be used for host verifications.
 
 
-**Example: Setting the `ssl_capath` parameter**
+**Example: Setting the ssl_capath parameter**
 
 
 ```opensips
@@ -213,7 +213,7 @@ modparam("rest_client", "ssl_capath", "/home/opensips/ca_certificates")
 ```
 
 
-#### `curl_http_version` (integer)
+#### curl_http_version (integer)
 
 
 Use a specific HTTP version for all requests. Possible values:
@@ -239,7 +239,7 @@ Use a specific HTTP version for all requests. Possible values:
 			this setting was inspired (read: pilfered) from*
 
 
-**Example: Setting the `curl_http_version` parameter**
+**Example: Setting the curl_http_version parameter**
 
 
 ```opensips
@@ -249,7 +249,7 @@ modparam("rest_client", "curl_http_version", 3)
 ```
 
 
-#### `enable_expect_100` (boolean)
+#### enable_expect_100 (boolean)
 
 
 Include a "Expect: 100-continue" HTTP header field whenever the body
@@ -261,7 +261,7 @@ Include a "Expect: 100-continue" HTTP header field whenever the body
 *Default value is "false" (disabled).*
 
 
-**Example: Setting the `enable_expect_100` parameter**
+**Example: Setting the enable_expect_100 parameter**
 
 
 ```opensips
@@ -271,7 +271,7 @@ modparam("rest_client", "enable_expect_100", true)
 ```
 
 
-#### `no_concurrent_connects` (boolean)
+#### no_concurrent_connects (boolean)
 
 
 Set to *true* in order to only allow one OpenSIPS
@@ -296,7 +296,7 @@ This parameter may be useful in order to prevent system outages caused
 *Default value is "false" (disabled).*
 
 
-**Example: Setting the `no_concurrent_connects` parameter**
+**Example: Setting the no_concurrent_connects parameter**
 
 
 ```opensips
@@ -306,7 +306,7 @@ modparam("rest_client", "no_concurrent_connects", true)
 ```
 
 
-#### `curl_conn_lifetime` (integer)
+#### curl_conn_lifetime (integer)
 
 
 Only relevant when [no concurrent connects](#param_no_concurrent_connects) is enabled.
@@ -327,7 +327,7 @@ The parameter denotes the lifetime, in seconds, of TCP connections kept
 *Default value is *0* (disabled).*
 
 
-**Example: Setting the `curl_conn_lifetime` parameter**
+**Example: Setting the curl_conn_lifetime parameter**
 
 
 ```opensips
@@ -340,7 +340,7 @@ modparam("rest_client", "curl_conn_lifetime", 1800)
 ### Exported Functions
 
 
-#### `rest_get(url, body_pv, [ctype_pv], [retcode_pv])`
+#### rest_get(url, body_pv, [ctype_pv], [retcode_pv])
 
 
 Perform a blocking HTTP GET on the given *url* and
@@ -386,7 +386,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `rest_get` usage**
+**Example: rest_get usage**
 
 
 ```opensips
@@ -411,9 +411,9 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### `rest_post(url, send_body, [send_ctype],
+#### rest_post(url, send_body, [send_ctype],
 				recv_body_pv, [recv_ctype_pv], [retcode_pv])
-		`
+		
 
 
 Perform a blocking HTTP POST on the given *url*.
@@ -468,7 +468,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `rest_post` usage**
+**Example: rest_post usage**
 
 
 ```opensips
@@ -491,9 +491,9 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### `rest_put(url, send_body, [send_ctype],
+#### rest_put(url, send_body, [send_ctype],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		`
+		
 
 
 Perform a blocking HTTP PUT on the given *url*.
@@ -547,7 +547,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `rest_put` usage**
+**Example: rest_put usage**
 
 
 ```opensips
@@ -570,7 +570,7 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### `rest_append_hf(txt)`
+#### rest_append_hf(txt)
 
 
 Append *txt* to the HTTP headers of the subsequent request.
@@ -591,7 +591,7 @@ Parameters
 This function can be used from any route.
 
 
-**Example: `rest_append_hf` usage**
+**Example: rest_append_hf usage**
 
 
 ```
@@ -605,7 +605,7 @@ $var(rc) = rest_get("http://getcredit.org/?account=$fU", $var(credit));
 ```
 
 
-#### `rest_init_client_tls(tls_client_domain)`
+#### rest_init_client_tls(tls_client_domain)
 
 
 Force a specific TLS domain to be used at most once, during the next
@@ -626,7 +626,7 @@ Parameters
 This function can be used from any route.
 
 
-**Example: `rest_init_client_tls` usage**
+**Example: rest_init_client_tls usage**
 
 
 ```opensips
@@ -642,8 +642,8 @@ if (!rest_get("https://example.com"))
 ### Exported Asynchronous Functions
 
 
-#### `rest_get(url, body_pv[, [ctype_pv][, [retcode_pv]]])
-		`
+#### rest_get(url, body_pv[, [ctype_pv][, [retcode_pv]]])
+		
 
 
 Perform an asynchronous HTTP GET.  This function behaves exactly the same as
@@ -653,7 +653,7 @@ Perform an asynchronous HTTP GET.  This function behaves exactly the same as
 		entire content of the HTTP response is available.
 
 
-**Example: `async rest_get` usage**
+**Example: async rest_get usage**
 
 
 ```opensips
@@ -682,9 +682,9 @@ route [resume] {
 ```
 
 
-#### `rest_post(url, send_body_pv, [send_ctype_pv],
+#### rest_post(url, send_body_pv, [send_ctype_pv],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		`
+		
 
 
 Perform an asynchronous HTTP POST.  This function behaves exactly the same as
@@ -694,7 +694,7 @@ Perform an asynchronous HTTP POST.  This function behaves exactly the same as
 		response is available.
 
 
-**Example: `async rest_post` usage**
+**Example: async rest_post usage**
 
 
 ```opensips
@@ -722,9 +722,9 @@ route [resume] {
 ```
 
 
-#### `rest_put(url, send_body_pv, [send_ctype_pv],
+#### rest_put(url, send_body_pv, [send_ctype_pv],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		`
+		
 
 
 Perform an asynchronous HTTP PUT.  This function behaves exactly the same as
@@ -734,7 +734,7 @@ Perform an asynchronous HTTP PUT.  This function behaves exactly the same as
 		response is available.
 
 
-**Example: `async rest_put` usage**
+**Example: async rest_put usage**
 
 
 ```opensips
@@ -774,7 +774,7 @@ The module also provides a way for encoding and decoding parameters
 			method curl_easy_escape (or curl_escape for libcurl < 7.15.4).
 
 
-#### `{rest.escape}`
+#### {rest.escape}
 
 
 The result of this transformation is to produce percent encoded string value which can be safely used in URI construction.
@@ -783,7 +783,7 @@ The result of this transformation is to produce percent encoded string value whi
 There are no parameters for this transformation.
 
 
-**Example: `rest.escape` usage**
+**Example: rest.escape usage**
 
 
 ```opensips
@@ -799,7 +799,7 @@ $var(rc) = rest_get("https://call-info.org/?id=$(ci{rest.escape})", $var(body_pv
 ```
 
 
-#### `{rest.unescape}`
+#### {rest.unescape}
 
 
 The result of this transformation is to decode percent encoded string values.
@@ -808,7 +808,7 @@ The result of this transformation is to decode percent encoded string values.
 There are no parameters for this transformation.
 
 
-**Example: `rest.unescape` usage**
+**Example: rest.unescape usage**
 
 
 ```opensips

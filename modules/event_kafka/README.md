@@ -91,7 +91,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `broker_id` (string)
+#### broker_id (string)
 
 
 This parameter specifies the configuration for a Kafka broker
@@ -112,7 +112,7 @@ The *key=callid* property does not have an effect for
 This parameter can be set multiple times.
 
 
-**Example: Set `broker_id` parameter**
+**Example: Set broker_id parameter**
 
 
 ```opensips
@@ -125,8 +125,8 @@ modparam("event_kafka", "broker_id", "[k1]127.0.0.1:9092/topic1?g.linger.ms=100&
 ### Exported Functions
 
 
-#### `kafka_publish(broker_id, message, [key], 
-				[report_route])`
+#### kafka_publish(broker_id, message, [key], 
+				[report_route])
 
 
 Publishes a message to a Kafka broker (or cluster). As the actual
@@ -164,7 +164,7 @@ The function has the following parameters:
 					*$avp(kafka_msg)* - message payload
 
 
-**Example: `kafka_publish()` function usage**
+**Example: kafka_publish() function usage**
 
 
 ```opensips

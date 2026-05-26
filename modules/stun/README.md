@@ -110,7 +110,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `primary_ip` (str)
+#### primary_ip (str)
 
 
 The IP of an interface which is configured as an UDP SIP listener
@@ -127,7 +127,7 @@ By default, the *primary_ip* and the advertised
 
 
 **Example: Set
-					`primary_ip` parameter**
+					primary_ip parameter**
 
 
 ```opensips
@@ -141,7 +141,7 @@ modparam("stun", "primary_ip", "192.168.0.100 / 64.50.46.78")
 ```
 
 
-#### `primary_port` (str)
+#### primary_port (str)
 
 
 The port configured (together with the *primary_ip*) as an UDP SIP
@@ -156,7 +156,7 @@ By default, the *primary_port* and the advertised
 			This may be changed with an optional "/ adv_port" string.
 
 
-**Example: Set `primary_port` parameter**
+**Example: Set primary_port parameter**
 
 
 ```opensips
@@ -170,7 +170,7 @@ modparam("stun", "primary_port", "5060 / 5062")
 ```
 
 
-#### `alternate_ip` (str)
+#### alternate_ip (str)
 
 
 Another IP from another interface. This is a mandatory parameter.
@@ -194,7 +194,7 @@ By default, the *alternate_ip* and the advertised
 
 
 **Example: Set
-					`alternate_ip` parameter**
+					alternate_ip parameter**
 
 
 ```opensips
@@ -208,7 +208,7 @@ modparam("stun", "alternate_ip", "192.168.0.100 / 64.78.46.50")
 ```
 
 
-#### `alternate_port` (str)
+#### alternate_port (str)
 
 
 The port used by the STUN server for the second interface.
@@ -233,7 +233,7 @@ By default, the *alternate_port* and the advertised
 
 
 **Example: Set
-					`alternate_port` parameter**
+					alternate_port parameter**
 
 
 ```opensips
@@ -247,7 +247,7 @@ modparam("stun", "alternate_port", "5060 / 5062")
 ```
 
 
-#### `use_listeners_as_primary` (int)
+#### use_listeners_as_primary (int)
 
 
 Setting this parameter to *1* will allow all
@@ -264,7 +264,7 @@ The default value is *0* (disabled).
 
 
 **Example: Set
-					`use_listeners_as_primary` parameter**
+					use_listeners_as_primary parameter**
 
 
 ```opensips

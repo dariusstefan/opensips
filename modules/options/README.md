@@ -48,7 +48,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `accept` (string)
+#### accept (string)
 
 
 This parameter is the content of the Accept header field. If
@@ -62,7 +62,7 @@ This parameter is the content of the Accept header field. If
 *Default value is "*/*".*
 
 
-**Example: Set `accept` parameter**
+**Example: Set accept parameter**
 
 
 ```opensips
@@ -72,7 +72,7 @@ modparam("options", "accept", "application/*")
 ```
 
 
-#### `accept_encoding` (string)
+#### accept_encoding (string)
 
 
 This parameter is the content of the Accept-Encoding header field.
@@ -84,7 +84,7 @@ This parameter is the content of the Accept-Encoding header field.
 *Default value is "".*
 
 
-**Example: Set `accept_encoding` parameter**
+**Example: Set accept_encoding parameter**
 
 
 ```opensips
@@ -94,7 +94,7 @@ modparam("options", "accept_encoding", "gzip")
 ```
 
 
-#### `accept_language` (string)
+#### accept_language (string)
 
 
 This parameter is the content of the Accept-Language header field.
@@ -108,7 +108,7 @@ This parameter is the content of the Accept-Language header field.
 *Default value is "en".*
 
 
-**Example: Set `accept_language` parameter**
+**Example: Set accept_language parameter**
 
 
 ```opensips
@@ -118,7 +118,7 @@ modparam("options", "accept_language", "de")
 ```
 
 
-#### `support` (string)
+#### support (string)
 
 
 This parameter is the content of the Support header field.
@@ -130,7 +130,7 @@ This parameter is the content of the Support header field.
 *Default value is "".*
 
 
-**Example: Set `support` parameter**
+**Example: Set support parameter**
 
 
 ```opensips
@@ -143,7 +143,7 @@ modparam("options", "support", "100rel")
 ### Exported Functions
 
 
-#### `options_reply()`
+#### options_reply()
 
 
 This function checks if the request method is OPTIONS and
@@ -169,7 +169,7 @@ The check for the request method and the missing username is
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `options_reply` usage**
+**Example: options_reply usage**
 
 
 ```opensips

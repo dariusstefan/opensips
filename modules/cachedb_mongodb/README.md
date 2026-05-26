@@ -91,7 +91,7 @@ sudo yum install json-c-devel mongo-c-driver-devel
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -106,7 +106,7 @@ The URL syntax is identical to the one used by MongoDB, including
 			please refer to [the official MongoDB connect string documentation](https://docs.mongodb.com/manual/reference/connection-string/).
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```
@@ -128,7 +128,7 @@ cache_fetch("mongodb:instance1", "key", $avp(10));
 ```
 
 
-#### `exec_threshold` (int)
+#### exec_threshold (int)
 
 
 The maximum number of microseconds that a mongodb query can last.
@@ -138,7 +138,7 @@ The maximum number of microseconds that a mongodb query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set `exec_threshold` parameter**
+**Example: Set exec_threshold parameter**
 
 
 ```opensips
@@ -149,7 +149,7 @@ modparam("cachedb_mongodb", "exec_threshold", 100000)
 ```
 
 
-#### `compat_mode_2.4` (int)
+#### compat_mode_2.4 (int)
 
 
 Switch the module into compatibility mode for MongoDB 2.4 servers.
@@ -165,7 +165,7 @@ Caveat: only the minimally required raw query options are
 *Default value is "0 (disabled)".*
 
 
-**Example: Setting the `compat_mode_2.4` parameter**
+**Example: Setting the compat_mode_2.4 parameter**
 
 
 ```opensips
@@ -176,7 +176,7 @@ modparam("cachedb_mongodb", "compat_mode_2.4", 1)
 ```
 
 
-#### `compat_mode_3.0` (int)
+#### compat_mode_3.0 (int)
 
 
 Switch the module into compatibility mode for MongoDB 2.6/3.0 servers.
@@ -192,7 +192,7 @@ Caveat: only the minimally required options for "find" raw queries are
 *Default value is "0 (disabled)".*
 
 
-**Example: Setting the `compat_mode_3.0` parameter**
+**Example: Setting the compat_mode_3.0 parameter**
 
 
 ```opensips

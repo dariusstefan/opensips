@@ -204,7 +204,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `partition` (string)
+#### partition (string)
 
 
 Specify a new dialplan partition (data source).  This parameter may
@@ -220,7 +220,7 @@ Note: OpenSIPS will validate each partition, so make sure to add any
 		through the 'db_url' property.
 
 
-**Example: Defining the `'pstn'` partition**
+**Example: Defining the 'pstn' partition**
 
 
 ```opensips
@@ -251,7 +251,7 @@ modparam("dialplan", "partition", "default: pstn")
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The default DB connection of the module, overriding the global
@@ -262,7 +262,7 @@ The default DB connection of the module, overriding the global
 *Default value is NULL (not set).*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -273,7 +273,7 @@ modparam("dialplan", "db_url", "mysql://user:passwd@localhost/db")
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 The default name of the table from which to load translation rules.
@@ -284,7 +284,7 @@ The default name of the table from which to load translation rules.
 *Default value is "dialplan".*
 
 
-**Example: Set `table_name` parameter**
+**Example: Set table_name parameter**
 
 
 ```opensips
@@ -295,7 +295,7 @@ modparam("dialplan", "table_name", "my_table")
 ```
 
 
-#### `dpid_col` (string)
+#### dpid_col (string)
 
 
 The column name to store the dialplan ID group.
@@ -304,7 +304,7 @@ The column name to store the dialplan ID group.
 *Default value is "dpid".*
 
 
-**Example: Set `dpid_col` parameter**
+**Example: Set dpid_col parameter**
 
 
 ```opensips
@@ -315,7 +315,7 @@ modparam("dialplan", "dpid_col", "column_name")
 ```
 
 
-#### `pr_col` (string)
+#### pr_col (string)
 
 
 The column name to store the priority of the corresponding rule from
@@ -325,7 +325,7 @@ The column name to store the priority of the corresponding rule from
 *Default value is "pr".*
 
 
-**Example: Set `pr_col` parameter**
+**Example: Set pr_col parameter**
 
 
 ```opensips
@@ -336,7 +336,7 @@ modparam("dialplan", "pr_col", "column_name")
 ```
 
 
-#### `match_op_col` (string)
+#### match_op_col (string)
 
 
 The column name to store the type of matching of the rule.
@@ -345,7 +345,7 @@ The column name to store the type of matching of the rule.
 *Default value is "match_op".*
 
 
-**Example: Set `match_op_col` parameter**
+**Example: Set match_op_col parameter**
 
 
 ```opensips
@@ -356,7 +356,7 @@ modparam("dialplan", "match_op_col", "column_name")
 ```
 
 
-#### `match_exp_col` (string)
+#### match_exp_col (string)
 
 
 The column name to store the rule match expression.
@@ -365,7 +365,7 @@ The column name to store the rule match expression.
 *Default value is "match_exp".*
 
 
-**Example: Set `match_exp_col` parameter**
+**Example: Set match_exp_col parameter**
 
 
 ```opensips
@@ -376,7 +376,7 @@ modparam("dialplan", "match_exp_col", "column_name")
 ```
 
 
-#### `match_flags_col` (string)
+#### match_flags_col (string)
 
 
 The column name to store various matching flags. Currently
@@ -386,7 +386,7 @@ The column name to store various matching flags. Currently
 *Default value is "match_flags".*
 
 
-**Example: Set `match_flags_col` parameter**
+**Example: Set match_flags_col parameter**
 
 
 ```opensips
@@ -397,7 +397,7 @@ modparam("dialplan", "match_flags_col", "column_name")
 ```
 
 
-#### `subst_exp_col` (string)
+#### subst_exp_col (string)
 
 
 The column name to store the rule's substitution expression.
@@ -406,7 +406,7 @@ The column name to store the rule's substitution expression.
 *Default value is "subst_exp".*
 
 
-**Example: Set `subs_exp_col` parameter**
+**Example: Set subs_exp_col parameter**
 
 
 ```opensips
@@ -417,7 +417,7 @@ modparam("dialplan", "subst_exp_col", "column_name")
 ```
 
 
-#### `repl_exp_col` (string)
+#### repl_exp_col (string)
 
 
 The column name to store the rule's replacement expression.
@@ -426,7 +426,7 @@ The column name to store the rule's replacement expression.
 *Default value is "repl_exp".*
 
 
-**Example: Set `repl_exp_col` parameter**
+**Example: Set repl_exp_col parameter**
 
 
 ```opensips
@@ -437,7 +437,7 @@ modparam("dialplan", "repl_exp_col", "column_name")
 ```
 
 
-#### `timerec_col` (integer)
+#### timerec_col (integer)
 
 
 The column name that indicates an additional time recurrence check 
@@ -452,7 +452,7 @@ The column name that indicates an additional time recurrence check
 *Default value is "timerec".*
 
 
-**Example: Set `timerec_col` parameter**
+**Example: Set timerec_col parameter**
 
 
 ```opensips
@@ -463,7 +463,7 @@ modparam("dialplan", "timerec_col", "month_match")
 ```
 
 
-#### `disabled_col` (integer)
+#### disabled_col (integer)
 
 
 The column name that indicates if the dialplan rule is disabled.
@@ -472,7 +472,7 @@ The column name that indicates if the dialplan rule is disabled.
 *Default value is "disabled".*
 
 
-**Example: Set `disabled_col` parameter**
+**Example: Set disabled_col parameter**
 
 
 ```opensips
@@ -483,7 +483,7 @@ modparam("dialplan", "disabled_col", "disabled_column")
 ```
 
 
-#### `attrs_col` (string)
+#### attrs_col (string)
 
 
 The column name to store rule-specific attributes.
@@ -492,7 +492,7 @@ The column name to store rule-specific attributes.
 *Default value is "attrs".*
 
 
-**Example: Set `attrs_col` parameter**
+**Example: Set attrs_col parameter**
 
 
 ```opensips
@@ -506,7 +506,7 @@ modparam("dialplan", "attrs_col", "column_name")
 ### Exported Functions
 
 
-#### `dp_translate(id, input, [out_var], [attrs_var], [partition])`
+#### dp_translate(id, input, [out_var], [attrs_var], [partition])
 
 
 Will try to translate the src string into dest string according to
@@ -532,7 +532,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, LOCAL_ROUTE,
 	BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: `dp_translate` usage**
+**Example: dp_translate usage**
 
 
 ```opensips
@@ -544,7 +544,7 @@ xlog("translated into '$var(out)' \n");
 ```
 
 
-**Example: `dp_translate` usage**
+**Example: dp_translate usage**
 
 
 ```opensips
@@ -557,7 +557,7 @@ xlog("translated to var $var(y) with attributes: '$var(attrs)'\n");
 ```
 
 
-**Example: `dp_translate` usage**
+**Example: dp_translate usage**
 
 
 ```opensips
@@ -570,7 +570,7 @@ xlog("matched with attributes '$avp(attrs) against example_partition'\n");
 ```
 
 
-**Example: `dp_translate` usage**
+**Example: dp_translate usage**
 
 
 ```opensips
@@ -585,7 +585,7 @@ xlog("'$var(in)' matched against partition '$var(part)'\n")
 ### Exported MI Functions
 
 
-#### `dialplan:reload`
+#### dialplan:reload
 
 
 Replaces obsolete MI command: *dp_reload*.
@@ -614,7 +614,7 @@ MI DATAGRAM Command Format:
 ```
 
 
-#### `dialplan:translate`
+#### dialplan:translate
 
 
 Replaces obsolete MI command: *dp_translate*.
@@ -646,7 +646,7 @@ MI DATAGRAM Command Format:
 ```
 
 
-#### `dialplan:show_partition`
+#### dialplan:show_partition
 
 
 Replaces obsolete MI command: *dp_show_partition*.
@@ -682,7 +682,7 @@ The module provides the "dialplan" Status/Report group, where each
 	dialplan partition is defined as a separate SR identifier.
 
 
-#### `[partition_name]`
+#### [partition_name]
 
 
 The status of these identifiers reflects the readiness/status of the 

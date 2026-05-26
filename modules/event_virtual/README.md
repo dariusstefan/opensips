@@ -68,7 +68,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `failover_timeout` (integer)
+#### failover_timeout (integer)
 
 
 The minimum duration in seconds that a failed subscriber is
@@ -79,7 +79,7 @@ The minimum duration in seconds that a failed subscriber is
 *Default value is "30".*
 
 
-**Example: Setting the `failover_timeout` parameter**
+**Example: Setting the failover_timeout parameter**
 
 
 ```opensips

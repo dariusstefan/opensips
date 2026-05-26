@@ -122,7 +122,7 @@ The following libraries or applications must be installed before
 ### Exported parameters
 
 
-#### `disable` (int)
+#### disable (int)
 
 
 Boolean flag that specifies if callcontrol should be disabled. This
@@ -136,7 +136,7 @@ Boolean flag that specifies if callcontrol should be disabled. This
 *Default value is "0".*
 
 
-**Example: Setting the `disable` parameter**
+**Example: Setting the disable parameter**
 
 
 ```opensips
@@ -147,7 +147,7 @@ modparam("call_control", "disable", 1)
 ```
 
 
-#### `socket_name` (string)
+#### socket_name (string)
 
 
 It is the path to the filesystem socket where the callcontrol
@@ -158,7 +158,7 @@ It is the path to the filesystem socket where the callcontrol
             "/run/callcontrol/socket".*
 
 
-**Example: Setting the `socket_name` parameter**
+**Example: Setting the socket_name parameter**
 
 
 ```opensips
@@ -169,7 +169,7 @@ modparam("call_control", "socket_name", "/run/callcontrol/socket")
 ```
 
 
-#### `socket_timeout` (int)
+#### socket_timeout (int)
 
 
 How much time (in milliseconds) to wait for an answer from the
@@ -179,7 +179,7 @@ How much time (in milliseconds) to wait for an answer from the
 *Default value is "500" (ms).*
 
 
-**Example: Setting the `socket_timeout` parameter**
+**Example: Setting the socket_timeout parameter**
 
 
 ```opensips
@@ -190,7 +190,7 @@ modparam("call_control", "socket_timeout", 500)
 ```
 
 
-#### `signaling_ip_avp` (string)
+#### signaling_ip_avp (string)
 
 
 Specification of the AVP which holds the IP address from where
@@ -216,7 +216,7 @@ This is used by the rating engine which finds the rates to apply to a
 *Default value is "$avp(cc_signaling_ip)".*
 
 
-**Example: Setting the `signaling_ip_avp` parameter**
+**Example: Setting the signaling_ip_avp parameter**
 
 
 ```opensips
@@ -227,7 +227,7 @@ modparam("call_control", "signaling_ip_avp", "$avp(cc_signaling_ip)")
 ```
 
 
-#### `canonical_uri_avp` (string)
+#### canonical_uri_avp (string)
 
 
 Specification of the AVP which holds an optional application defined
@@ -241,7 +241,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_can_uri)".*
 
 
-**Example: Setting the `canonical_uri_avp` parameter**
+**Example: Setting the canonical_uri_avp parameter**
 
 
 ```opensips
@@ -252,7 +252,7 @@ modparam("call_control", "canonical_uri_avp", "$avp(cc_can_uri)")
 ```
 
 
-#### `diverter_avp` (string)
+#### diverter_avp (string)
 
 
 Specification of the AVP which holds an optional
@@ -275,7 +275,7 @@ This is useful when a destination diverts a call, thus becoming the
 *Default value is "$avp(diverter)".*
 
 
-**Example: Setting the `diverter_avp` parameter**
+**Example: Setting the diverter_avp parameter**
 
 
 ```opensips
@@ -293,7 +293,7 @@ route {
 ```
 
 
-#### `prepaid_account_flag` (string)
+#### prepaid_account_flag (string)
 
 
 The flag that is used to specify whether the account making the call is
@@ -309,7 +309,7 @@ The flag that is used to specify whether the account making the call is
 *Default value is NULL (undefined).*
 
 
-**Example: Setting the `prepaid_account_flag` parameter**
+**Example: Setting the prepaid_account_flag parameter**
 
 
 ```opensips
@@ -320,7 +320,7 @@ modparam("call_control", "prepaid_account_flag", "PP_ACC_FLAG")
 ```
 
 
-#### `call_limit_avp` (string)
+#### call_limit_avp (string)
 
 
 Specification of the AVP which holds an optional application defined
@@ -332,7 +332,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_limit)".*
 
 
-**Example: Setting the `call_limit_avp` parameter**
+**Example: Setting the call_limit_avp parameter**
 
 
 ```opensips
@@ -343,7 +343,7 @@ modparam("call_control", "call_limit_avp", "$avp(cc_call_limit)")
 ```
 
 
-#### `call_token_avp` (string)
+#### call_token_avp (string)
 
 
 Specification of the AVP which holds an optional application defined
@@ -357,7 +357,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_token)".*
 
 
-**Example: Setting the `call_token_avp` parameter**
+**Example: Setting the call_token_avp parameter**
 
 
 ```opensips
@@ -370,7 +370,7 @@ $avp(cc_call_token) := $RANDOM;
 ```
 
 
-#### `init` (string)
+#### init (string)
 
 
 This parameter is used to describe custom call control initialize messages. It represents a
@@ -393,7 +393,7 @@ If the parameter is not set, the default initialize message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the `init` parameter**
+**Example: Setting the init parameter**
 
 
 ```opensips
@@ -406,7 +406,7 @@ modparam("call_control", "init", "call-id=$ci to=$tu from=$fu
 ```
 
 
-#### `start` (string)
+#### start (string)
 
 
 This parameter is used to describe custom call control start messages. It represents a
@@ -429,7 +429,7 @@ If the parameter is not set, the default start message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the `start` parameter**
+**Example: Setting the start parameter**
 
 
 ```opensips
@@ -442,7 +442,7 @@ modparam("call_control", "start", "call-id=$ci to=$tu from=$fu
 ```
 
 
-#### `stop` (string)
+#### stop (string)
 
 
 This parameter is used to describe custom call control stop messages. It represents a
@@ -465,7 +465,7 @@ If the parameter is not set, the default stop message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the `stop` parameter**
+**Example: Setting the stop parameter**
 
 
 ```opensips
@@ -481,7 +481,7 @@ modparam("call_control", "stop", "call-id=$ci to=$tu from=$fu
 ### Exported Functions
 
 
-#### `call_control()`
+#### call_control()
 
 
 Trigger the use of callcontrol for the dialog started by the INVITE
@@ -512,7 +512,7 @@ This function has the following return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Using the `call_control` function**
+**Example: Using the call_control function**
 
 
 ```opensips

@@ -41,7 +41,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url`(str)
+#### db_url(str)
 
 
 The database url.
@@ -50,7 +50,7 @@ The database url.
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -61,7 +61,7 @@ modparam("xcap", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `xcap_table`(str)
+#### xcap_table(str)
 
 
 The name of the db table where XCAP documents are stored.
@@ -70,7 +70,7 @@ The name of the db table where XCAP documents are stored.
 *Default value is "xcap".*
 
 
-**Example: Set `xcap_table` parameter**
+**Example: Set xcap_table parameter**
 
 
 ```opensips
@@ -81,7 +81,7 @@ modparam("xcap", "xcap_table", "xcap")
 ```
 
 
-#### `integrated_xcap_server` (int)
+#### integrated_xcap_server (int)
 
 
 This parameter is a flag for the type of XCAP server or servers 
@@ -95,7 +95,7 @@ This parameter is a flag for the type of XCAP server or servers
 *Default value is "0".*
 
 
-**Example: Set `integrated_xcap_server` parameter**
+**Example: Set integrated_xcap_server parameter**
 
 
 ```opensips
@@ -119,13 +119,13 @@ The module exports a number of parameters and functions that are used
             in several other modules.
 
 
-### `bind_xcap_api(xcap_api_t* api)`
+### bind_xcap_api(xcap_api_t* api)
 
 
 This function allows binding the needed functions.
 
 
-**Example: `xcap_api` structure**
+**Example: xcap_api structure**
 
 
 ```
@@ -143,7 +143,7 @@ typedef struct xcap_api {
 ```
 
 
-### `normalize_xcap_uri`
+### normalize_xcap_uri
 
 
 This function normalizes a SIP URI found in a XCAP document. It un-escapes it and
@@ -158,7 +158,7 @@ Parameters:
 				the URI that needs to be normalized
 
 
-### `parse_xcap_uri`
+### parse_xcap_uri
 
 
 This function parses the given XCAP URI.
@@ -190,7 +190,7 @@ Parameters:
   ```
 
 
-### `get_xcap_doc`
+### get_xcap_doc
 
 
 This function queries the local DB for the required XCAP document. It will return the document and its
@@ -217,19 +217,19 @@ Parameters:
 				reference to the storage for the returned document's etag
 
 
-### `db_url`
+### db_url
 
 
 URL of the database to which the XCAP mdoules witll connect.
 
 
-### `xcap_table`
+### xcap_table
 
 
 Name of the table used to store XCAP documents. Defaults to 'xcap'.
 
 
-### `integrated_server`
+### integrated_server
 
 
 Boolean flag indicating if the XCAP server has access to the local database or

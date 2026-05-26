@@ -44,7 +44,7 @@ The module depends on the following modules (in the other words the
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 This is URL of the database to be used.
@@ -62,7 +62,7 @@ modparam("domain", "db_url", "mysql://ser:pass@db_host/ser")
 ```
 
 
-#### `db_mode` (integer)
+#### db_mode (integer)
 
 
 Database mode: 0 means non-caching, 1 means caching.
@@ -79,7 +79,7 @@ modparam("domain", "db_mode", 1)   # Use caching
 ```
 
 
-#### `domain_table` (string)
+#### domain_table (string)
 
 
 Name of table containing names of local domains that the proxy is 
@@ -98,7 +98,7 @@ modparam("domain", "domain_table", "new_name")
 ```
 
 
-#### `domain_col` (string)
+#### domain_col (string)
 
 
 Name of column containing domains in domain table.
@@ -115,7 +115,7 @@ modparam("domain", "domain_col", "domain_name")
 ```
 
 
-#### `attrs_col` (string)
+#### attrs_col (string)
 
 
 Name of column containing attributes in domain table.
@@ -132,7 +132,7 @@ modparam("domain", "attrs_col", "attributes")
 ```
 
 
-#### `subdomain_col` (int)
+#### subdomain_col (int)
 
 
 Name of the "accept_subdomain" column in the domain table.
@@ -154,7 +154,7 @@ modparam("domain", "subdomain_col", "has_subdomain")
 ### Exported Functions
 
 
-#### `is_from_local([attrs_var])`
+#### is_from_local([attrs_var])
 
 
 Checks based on domain table if host part of From header uri is
@@ -185,7 +185,7 @@ if (is_from_local($var(attrs))) {
 ```
 
 
-#### `is_uri_host_local([attrs_var])`
+#### is_uri_host_local([attrs_var])
 
 
 If called from route or failure route block, checks
@@ -221,7 +221,7 @@ if (is_uri_host_local($var(attrs))) {
 ```
 
 
-#### `is_domain_local(domain, [attrs_var])`
+#### is_domain_local(domain, [attrs_var])
 
 
 This function checks if the domain contained in the first parameter is local.
@@ -283,7 +283,7 @@ if (is_domain_local($avp(some_avp), $avp(attrs))) {
 ### Exported MI Functions
 
 
-#### `domain:reload`
+#### domain:reload
 
 
 Replaces obsolete MI command: *domain_reload*.
@@ -308,7 +308,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `domain:dump`
+#### domain:dump
 
 
 Replaces obsolete MI command: *domain_dump*.
@@ -352,7 +352,7 @@ The module provides is_domain_local API
 ### Available Functions
 
 
-#### `is_domain_local(domain)`
+#### is_domain_local(domain)
 
 
 Checks if domain given in str* parameter is local.

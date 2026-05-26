@@ -120,7 +120,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `script_name` (string)
+#### script_name (string)
 
 
 The script that contains the Python module.
@@ -129,7 +129,7 @@ The script that contains the Python module.
 *Default value is "/usr/local/etc/opensips/handler.py".*
 
 
-**Example: Set `script_name` parameter**
+**Example: Set script_name parameter**
 
 
 ```opensips
@@ -139,7 +139,7 @@ modparam("python", "script_name", "/usr/local/bin/opensips_handler.py")
 ```
 
 
-#### `mod_init_function` (string)
+#### mod_init_function (string)
 
 
 The method used to initialize the Python module and return the object.
@@ -148,7 +148,7 @@ The method used to initialize the Python module and return the object.
 *Default value is "mod_init".*
 
 
-**Example: Set `mod_init_function` parameter**
+**Example: Set mod_init_function parameter**
 
 
 ```opensips
@@ -158,7 +158,7 @@ modparam("python", "mod_init_function", "module_initializer")
 ```
 
 
-#### `child_init_method` (string)
+#### child_init_method (string)
 
 
 The method called for each child process.
@@ -167,7 +167,7 @@ The method called for each child process.
 *Default value is "child_init".*
 
 
-**Example: Set `child_init_method` parameter**
+**Example: Set child_init_method parameter**
 
 
 ```opensips
@@ -180,7 +180,7 @@ modparam("python", "child_init_method", "child_initializer")
 ### Exported Functions
 
 
-#### `python_exec(method_name [, extra_args])`
+#### python_exec(method_name [, extra_args])
 
 
 This function is used to execute a method from the Python module
