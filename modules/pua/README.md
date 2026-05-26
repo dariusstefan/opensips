@@ -1,0 +1,693 @@
+---
+title: "Presence User Agent Module"
+description: "This module offer the internal support for OpenSIPS to act as a Presence User Agent client, by sending Subscribe and Publish messages."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This module offer the internal support for OpenSIPS to act as a 
+		Presence User Agent client, by sending Subscribe and Publish messages.
+
+
+Note that the module does NOT provide any functionality to be used
+	directly from the script, but it is providing this PUA client support
+	(via an internal API) for other event-specific modules to do PUA 
+	client operations.
+
+
+Some of modules build on top of the PUA module are pua_mi, pua_usrloc,
+		 pua_dialoginfo, pua_bla and pua_xmpp.
+		 The pua_mi offer the possibility to publish any kind of information
+		 or subscribing to a resource through fifo. The pua_usrloc module calls
+		 a function exported by pua modules to publish elementary presence
+		 information, such as basic status "open" or "closed", for clients that
+		 do not implement client-to-server presence.
+		 The pua_dialoginfo provideds BLF support, by publishing the status of
+		 the participants into a call (like ringing, established, terminated).
+		 Through pua_bla , BRIDGED LINE APPEARANCE features are added to 
+		 OpenSIPs.
+		 The pua_xmpp module represents a gateway between SIP and XMPP, so 
+		 that jabber and SIP clients can exchange presence information.
+
+
+The module use cache to store presentity list and writes to database
+		on timer to be able to recover upon restart.
+
+
+Notice: This module must not be used in no fork mode (the locking 
+		mechanism used may cause deadlock in no fork mode).
+
+
+### PUA clustering {#pua_clustering}
+
+
+Starting 3.2, the module was extended with clustering support also. This 
+	means multiple OpenSIPS instance, configured with PUA module, may work 
+	together. For example, the publishing for a certain presentity may be done 
+	via different node (PUA OpenSIPS instance) in the cluster.
+
+
+The clustering support is a mixture of DB sharing and OpenSIPS clustering.
+	The OpenSIPS clustering layer is used for broadcasting notifications with 
+	the cluster when a presentity is modified by one of the nodes (so that, 
+	the other nodes in cluster may refresh the presentity via DB.
+
+
+The shared DB is used by sharing between the nodes the actual presentity
+	data. A node caches into memory only the presentities created by the node
+	or the presentitites the node worked with. A presentity record may be
+	loaded into memory (from DB) if the node needs to perform an operation 
+	with that presentity.
+
+
+IMPORTANT: because the actual presentity data is shared between the nodes
+	via DB (the clustering layer is used for notifications only), it is
+	important to set a very low update interval for the DB (for data being
+	flushed from memoryc cache into DB), to get the DB content updated as 
+	realtime as possible. See the the [update period](#param_update_period),
+	module parameter, with recomanded values like 2-5 seconds.
+
+
+On the OpenSIPS clustering layer, the PUA module use the sharing-tags
+	mechanism in order to control (between all the nodes in the cluster) which
+	node is responsible for performing the expiring operation on the
+	presentity (like sending the PUBLISH with expires 0).
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *a database modules*.
+- *tm*.
+- *clusterer*, if the cluster_id 
+				module parameter is set and clustering support activated.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+		OpenSIPS with this module loaded:
+
+
+- *libxml*.
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### hash_size (int) {#param_hash_size}
+
+
+The size of the hash table used for storing Subscribe and 
+		Publish information. 
+        This parameter will be used as the power of 2 when computing table size.
+
+
+*Default value is "9".*
+
+
+**Example: Set hash_size parameter**
+
+
+```opensips
+...
+modparam("pua", "hash_size", 11)
+...
+```
+
+
+#### db_url (str) {#param_db_url}
+
+
+Database url.
+
+
+*Default value is ">mysql://opensips:opensipsrw@localhost/opensips".*
+
+
+**Example: Set db_url parameter**
+
+
+```opensips
+...
+modparam("pua", "db_url" "dbdriver://username:password@dbhost/dbname")
+...
+```
+
+
+#### db_table (str) {#param_db_table}
+
+
+The name of the database table.
+
+
+*Default value is "pua".*
+
+
+**Example: Set db_table parameter**
+
+
+```opensips
+...
+modparam("pua", "db_table", "pua")
+...
+```
+
+
+#### min_expires (int) {#param_min_expires}
+
+
+The inferior expires limit for both Publish and Subscribe.
+
+
+*Default value is "300".*
+
+
+**Example: Set min_expires parameter**
+
+
+```opensips
+...
+modparam("pua", "min_expires", 0)
+...
+```
+
+
+#### default_expires (int) {#param_default_expires}
+
+
+The default expires value used in case this information is not provisioned.
+
+
+*Default value is "3600".*
+
+
+**Example: Set default_expires parameter**
+
+
+```opensips
+...
+modparam("pua", "default_expires", 3600)
+...
+```
+
+
+#### update_period (int) {#param_update_period}
+
+
+The interval at which the information in database and hash table
+		should be updated. In the case of the hash table updating is 
+		deleting expired messages.
+
+
+*Default value is "30".*
+
+
+IMPORTANT - if you use clustering support for this module, set a low
+		value here, like 2-5, see the clustering chapter above.
+
+
+**Example: Set update_period parameter**
+
+
+```opensips
+...
+modparam("pua", "update_period", 100)
+...
+```
+
+
+#### cluster_id (int) {#param_cluster_id}
+
+
+The cluster ID where the PUA data should be replicated/shared.
+		This parameter is to be used only if clustering mode is needed.
+		In order to understand the concept of a cluster ID, please see the 
+		*clusterer* module.
+
+
+For more on PUA clustering see the 
+		[pua clustering](#pua_clustering) chapter.
+
+
+*Default value is "None".*
+
+
+**Example: Set cluster_id parameter**
+
+
+```opensips
+...
+modparam("pua", "cluster_id", 10)
+...
+```
+
+
+#### cluster_sharing_tag (int) {#param_cluster_sharing_tag}
+
+
+The clustering share-tag to be used by the PUA module when creating
+		any new presentity record. The tag will by used to decide which
+		OpenSIPS instance (owning the tag as active) will be responsible
+		for expiring this presentity.
+		This parameter is to be used only if clustering mode is needed.
+		In order to understand the concept of sharing TAG, please see the 
+		*clusterer* module.
+
+
+For more on PUA clustering see the 
+		[pua clustering](#pua_clustering) chapter.
+
+
+*Default value is "NULL".*
+
+
+**Example: Set cluster_sharing_tag parameter**
+
+
+```opensips
+...
+modparam("pua", "cluster_sharing_tag", "vip")
+...
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### pua_update_contact() {#func_pua_update_contact}
+
+
+The remote target can be updated by the Contact of a subsequent in
+		dialog request. In the PUA watcher case (sending a SUBSCRIBE messages),
+		this means that the remote target for the following Subscribe messages
+		can be updated at any time by the contact of a Notify message. 
+		If this function is called on request route on receiving a Notify
+		message, it will try to update the stored remote target.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+*Return code:*
+
+
+- *1 - if success*.
+- *-1 - if error*.
+
+
+**Example: pua_update_contact usage**
+
+
+```
+...
+if($rm=="NOTIFY")
+    pua_update_contact();
+...
+```
+
+
+### Installation
+
+
+The module requires 1 table in OpenSIPS database: pua. The SQL 
+	syntax to create it can be found in presence_xml-create.sql     
+	script in the database directories in the opensips/scripts folder.
+	You can also find the complete database documentation on the
+	project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
+
+
+## Developer Guide
+
+
+The module provides the following functions that can be used
+		in other OpenSIPS modules.
+
+
+### bind_pua(pua_api_t* api)
+
+
+This function binds the pua modules and fills the structure 
+				with the two exported function.
+
+
+**Example: pua_api structure**
+
+
+```
+...
+typedef struct pua_api {
+	send_subscribe_t send_subscribe;
+	send_publish_t send_publish;
+	query_dialog_t is_dialog;
+	register_puacb_t register_puacb;
+	add_pua_event_t add_event;
+} pua_api_t;
+...
+```
+
+
+### send_publish
+
+
+Field type:
+
+
+```
+...
+typedef int (*send_publish_t)(publ_info_t* publ);
+...
+				
+```
+
+
+This function receives as a parameter a structure with Publish 
+			required information and sends a Publish message.
+
+
+The structure received as a parameter:
+
+
+```
+...
+typedef struct publ_info
+
+  str id;             /*  (optional )a value unique for one combination
+                          of pres_uri and flag */
+  str* pres_uri;      /*  the presentity uri */	
+  str* body;          /*  the body of the Publish message; 
+                          can be NULL in case of an update expires*/ 	
+  int  expires;       /*  the expires value that will be used in
+                          Publish Expires header*/	
+  int flag;           /*  it can be : INSERT_TYPE or UPDATE_TYPE
+                          if missing it will be established according 
+                          to the result of the search in hash table*/ 	
+  int source_flag;    /*  flag identifying the resource ;
+                          supported values: UL_PUBLISH, MI_PUBLISH,
+                          BLA_PUBLISH, XMPP_PUBLISH*/
+  int event;          /*  the event flag;
+                          supported values: PRESENCE_EVENT, BLA_EVENT,
+                          MWI_EVENT */
+  str content_type;   /*  the content_type of the body if present
+                          (optional if the same as the default value
+                          for that event)*/
+  str* etag;          /*  (optional) the value of the etag the request
+                          should match */
+  str* extra_headers  /*  (optional) extra_headers that should be added
+                          to Publish msg*/
+  publrpl_cb_t* cbrpl;/*  callback function to be called when receiving
+                          the reply for the sent request */
+  void* cbparam;      /*  extra parameter for tha callback function */
+
+  str outbound_proxy; /*  the outbound proxy to be used when sending
+							the Publish request*/
+
+}publ_info_t;
+...
+		
+```
+
+
+The callback function type:
+
+
+```
+...
+typedef int (publrpl_cb_t)(struct sip_msg* reply, void*  extra_param);
+...
+		
+```
+
+
+### send_subscribe
+
+
+Field type:
+
+
+```
+...
+typedef int (*send_subscribe_t)(subs_info_t* subs);
+...
+```
+
+
+This function receives as a parameter a structure with Subscribe 
+			required information and sends a Subscribe message.
+
+
+The structure received as a parameter:
+
+
+```
+...
+typedef struct subs_info
+
+  str id;              /*  an id value unique for one combination
+                           of pres_uri and flag */
+  str* pres_uri;       /*  the presentity uri */	
+  str* watcher_uri;    /*  the watcher uri */
+  str* contact;        /*  the uri that will be used in
+                           Contact header*/  
+  str* remote_target;  /*  the uri that will be used as R-URI
+                           for the Subscribe message(not compulsory;
+                           if not set the value of the pres_uri field
+                           is used) */
+  str* outbound_proxy; /*  the outbound_proxy to use when sending the 
+                           Subscribe request*/
+  int event;           /*  the event flag; supported value: 
+                           PRESENCE_EVENT, BLA_EVENT, PWINFO_EVENT*/ 
+  int expires;         /*  the expires value that will be used in
+                           Subscribe Expires header */	
+  int flag;            /*  it can be : INSERT_TYPE or UPDATE_TYPE
+                           not compulsory */	
+  int source_flag;     /*  flag identifying the resource ;
+                           supported values:  MI_SUBSCRIBE, 
+                           BLA_SUBSCRIBE, XMPP_SUBSCRIBE,
+                           XMPP_INITIAL_SUBS */
+}subs_info_t;
+...
+```
+
+
+### is_dialog
+
+
+Field type:
+
+
+```
+...
+typedef int  (*query_dialog_t)(ua_pres_t* presentity);
+...
+				
+```
+
+
+This function checks is the parameter corresponds to a stored
+			Subscribe initiated dialog.
+
+
+**Example: pua_is_dialog usage example**
+
+
+```
+...	
+	if(pua_is_dialog(dialog) < 0)
+	{
+		LM_ERR("querying dialog\n");
+		goto error;
+	}
+...	
+```
+
+
+### register_puacb
+
+
+Field type:
+
+
+```
+...
+typedef int (*register_puacb_t)(int types, pua_cb f, void* param );
+...
+				
+```
+
+
+This function registers a callback to be called on receiving the reply message
+			for a sent Subscribe request.
+			The type parameter should be set the same as the source_flag for that request.
+			The function registered as callback for pua should be of type pua_cb , which is:
+			typedef void (pua_cb)(ua_pres_t* hentity, struct msg_start * fl);
+			The parameters are the dialog structure for that request and the first line of the
+			reply message.
+
+
+**Example: register_puacb usage example**
+
+
+```
+...
+	if(pua.register_puacb(XMPP_SUBSCRIBE, Sipreply2Xmpp, NULL) & 0)
+	{
+		LM_ERR("Could not register callback\n");
+		return -1;
+	}
+...	
+	
+```
+
+
+### add_event
+
+
+Field type:
+
+
+```
+...
+typedef int (*add_pua_event_t)(int ev_flag, char* name, 
+   char* content_type,evs_process_body_t* process_body);
+
+- ev_flag     : an event flag defined as a macro in pua module		
+- name        : the event name to be used in Event request headers
+- content_type: the default content_type for Publish body for 
+                that event (NULL if winfo event)
+- process_body: function that processes the received body before 
+                using it to construct the PUBLISH request
+                (NULL if winfo event)
+...
+				
+```
+
+
+This function allows registering new events to the pua module.
+			Now there are 4 events supported by the pua module: presence, 
+			presence;winfo, message-summary, dialog;sla. These events are registered
+			from within the pua module.
+
+
+Filed type for process_body:
+
+
+```
+...
+typedef int (evs_process_body_t)(struct publ_info* publ, 
+  str** final_body, int ver, str* tuple);
+- publ      : the structure received as a parameter in send_publish 
+              function ( initial body found in publ->body)
+- final_body: the pointer where the result(final_body) should be stored 
+- ver       : a counter for the sent Publish requests
+              (used for winfo events)
+- tuple     : a unique identifier for the resource;
+              if an initial Publish it should be returned as a result
+              and it will be stored  for that record, otherwise it will
+              be given as a parameter;    
+...
+				
+```
+
+
+**Example: add_event usage example**
+
+
+```
+...
+	if(pua.add_event((PRESENCE_EVENT, "presence", "application/pidf+xml", 
+				pres_process_body) & 0)
+	{
+		LM_ERR("Could not register new event\n");
+		return -1;
+	}
+...	
+	
+```
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Anca Vamanu | 276 | 106 | 11549 | 4540 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 70 | 52 | 1100 | 546 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 21 | 11 | 256 | 383 |
+| 4. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 17 | 13 | 230 | 109 |
+| 5. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 12 | 8 | 144 | 97 |
+| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 10 | 7 | 76 | 83 |
+| 7. | Edson Gellert Schubert | 10 | 1 | 0 | 501 |
+| 8. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | 8 | 5 | 243 | 31 |
+| 9. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 7 | 4 | 86 | 76 |
+| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 6 | 4 | 30 | 20 |
+
+
+**All remaining contributors**: Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Denis Bilenko, Vallimamod Abdullah, Alex Hermann, Damien Sandras ([@dsandras](https://github.com/dsandras)), Sergio Gutierrez, Konstantin Bokarius, Elena-Ramona Modroiu, John Riordan, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), UnixDev, Zero King ([@l2dy](https://github.com/l2dy)), Stanislaw Pitucha, Dan Pascu ([@danpascu](https://github.com/danpascu)), Julien Blache.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2007 - Jan 2023 |
+| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Sep 2021 |
+| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - Jan 2021 |
+| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jul 2020 |
+| 5. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
+| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Nov 2010 - Feb 2016 |
+| 8. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
+| 9. | Damien Sandras ([@dsandras](https://github.com/dsandras)) | Sep 2013 - Sep 2013 |
+| 10. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | Oct 2012 - Aug 2013 |
+
+
+**All remaining contributors**: Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Vallimamod Abdullah, Alex Hermann, Stanislaw Pitucha, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), John Riordan, UnixDev, Sergio Gutierrez, Denis Bilenko, Henning Westerholt ([@henningw](https://github.com/henningw)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Konstantin Bokarius, Edson Gellert Schubert, Julien Blache, Elena-Ramona Modroiu.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2006 Voice Sistem SRL

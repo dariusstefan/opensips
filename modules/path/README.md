@@ -1,0 +1,262 @@
+---
+title: "path Module"
+description: "This module is designed to be used at intermediate sip proxies like loadbalancers in front of registrars and proxies. It provides functions for inserting a Path header including a parameter for passing forward the received-URI of a registration to the next hop. It also provides a mechanism ..."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This module is designed to be used at intermediate sip proxies like loadbalancers in front of
+		registrars and proxies. It provides functions for inserting a Path header including a parameter for
+		passing forward the received-URI of a registration to the next hop. It also provides a mechanism
+		for evaluating this parameter in subsequent requests and to set the destination URI according to it.
+
+
+#### Path insertion for registrations
+
+
+For registrations in a scenario like "[UAC] -> [P1] -> [REG]", 
+			the "path" module can be used at the intermediate proxy P1 to insert a Path
+			header into the message before forwarding it to the registrar REG. Two functions
+			can be used to achieve this:
+
+
+- *add_path(...)* adds a Path header in the form of
+					"Path: <sip:1.2.3.4;lr>" to the message using the address
+					of the outgoing interface. A port is only added if it's not the default
+					port 5060.
+If a username is passed to the function, it is also included in the Path
+					URI, like "Path: <sip:username@1.2.3.4;lr>".
+- *add_path_received(...)* also add a Path header in the
+					same form as above, but also adds a parameter indicating the received-URI
+					of the message, like 
+					"Path: <sip:1.2.3.4;received=sip:2.3.4.5:1234;lr>". This
+					is especially useful if the proxy does NAT detection and wants to pass
+					the NAT'ed address to the registrar.
+If the function is called with a username, it's included in the Path URI too.
+
+
+#### Outbound routing to NAT'ed UACs
+
+
+If the NAT'ed address of an UAC is passed to the registrar, the registrar routes back
+			subsequent requests using the Path header of the registration as Route header of the
+			current request. If the intermediate proxy had inserted a Path header including the
+			"received" parameter during the registration, this parameter will show up
+			in the Route header of the new request as well, allowing the intermediate proxy to route
+			to this address instead of the one propagated in the Route URI for tunneling through NAT.
+			This behaviour can be activated by setting the module parameter "use_received".
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- The "rr" module is needed for outbound routing according to the "received"
+				parameter.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before 
+		running OpenSIPS with this module loaded:
+
+
+- *None*.
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### use_received (int) {#param_use_received}
+
+
+If set to 1, the "received" parameter of the first Route URI is evaluated and
+		used as destination-URI if present.
+
+
+*Default value is 0.*
+
+
+**Example: Set use_received parameter**
+
+
+```opensips
+...
+modparam("path", "use_received", 1)
+...
+```
+
+
+#### enable_double_path (integer) {#param_enable_double_path}
+
+
+There are some situations when the server needs to insert two 
+		Path header fields instead of one. For example when using 
+		two disconnected networks or doing cross-protocol forwarding from 
+		UDP->TCP. This parameter enables inserting of 2
+		Paths.
+
+
+*Default value is 1 (yes).*
+
+
+**Example: Set enable_double_path parameter**
+
+
+```opensips
+...
+modparam("path", "enable_double_path", 0)
+...
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### add_path([user]) {#func_add_path}
+
+
+This function adds a Path header in the form 
+		"Path: <sip:user@1.2.3.4;lr>".
+
+
+Meaning of the parameters is as follows:
+
+
+- *user* (string, optional) -
+			The username to be inserted as user part.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: add_path(user) usage**
+
+
+```opensips
+...
+if (!add_path("loadbalancer")) {
+	sl_send_reply(503, "Internal Path Error");
+	...
+};
+...
+```
+
+
+#### add_path_received([user]) {#func_add_path_received}
+
+
+This function adds a Path header in the form 
+		"Path: <sip:user@1.2.3.4;received=sip:2.3.4.5:1234;lr>", setting
+		'user' as username part of address, it's own 
+		outgoing address as domain-part, and the address the request has been received from as
+		received-parameter.
+
+
+Meaning of the parameters is as follows:
+
+
+- *user* (string, optional) -
+			The username to be inserted as user part.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: add_path_received(user) usage**
+
+
+```opensips
+...
+if (!add_path_received("inbound")) {
+	sl_send_reply(503, "Internal Path Error");
+	...
+};
+...
+```
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 20 | 16 | 239 | 79 |
+| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 17 | 11 | 96 | 265 |
+| 3. | Andreas Granig | 13 | 4 | 863 | 22 |
+| 4. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 12 | 10 | 25 | 21 |
+| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 10 | 8 |
+| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 6 | 3 | 35 | 104 |
+| 7. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 4 | 2 | 5 | 32 |
+| 8. | Ancuta Onofrei | 3 | 1 | 12 | 12 |
+| 9. | Konstantin Bokarius | 3 | 1 | 2 | 5 |
+| 10. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
+
+
+**All remaining contributors**: Edson Gellert Schubert, Elena-Ramona Modroiu.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2010 - Sep 2019 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2006 - Jul 2019 |
+| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
+| 4. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jun 2018 |
+| 6. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | Nov 2006 - Mar 2008 |
+| 7. | Konstantin Bokarius | Mar 2008 - Mar 2008 |
+| 8. | Edson Gellert Schubert | Feb 2008 - Feb 2008 |
+| 9. | Henning Westerholt ([@henningw](https://github.com/henningw)) | Apr 2007 - Dec 2007 |
+| 10. | Ancuta Onofrei | Sep 2007 - Sep 2007 |
+
+
+**All remaining contributors**: Andreas Granig, Elena-Ramona Modroiu.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Andreas Granig.
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2006 Inode GmbH

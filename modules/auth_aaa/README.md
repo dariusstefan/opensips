@@ -1,0 +1,437 @@
+---
+title: "Auth_aaa Module"
+description: "This module contains functions that are used to perform digest authentication and some URI checks against an AAA server. In order to perform the authentication, the proxy will pass along the credentials to the AAA server which will in turn send a reply containing result of the authenti..."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This module contains functions that are used to perform digest 
+		authentication and some URI checks against an AAA server.
+		In order to perform the authentication, the proxy will pass along the 
+		credentials to the AAA server which will in turn send a reply 
+		containing result of the authentication. So basically the whole
+		authentication is done in the AAA server. Before sending the request 
+		to the AAA server we perform some sanity checks over the 
+		credentials to make sure that only well formed credentials will get to 
+		the server.
+
+
+### Additional Credentials
+
+
+When performing authentication, the AAA server may include in the
+		response additional credentials. This scheme is very useful in fetching
+		additional user information from the AAA server without making
+		extra queries.
+
+
+The additional credentials are embedded in the AAA reply as AVPs 
+		"SIP-AVP". The syntax of the value is:
+
+
+- *value = SIP_AVP_NAME SIP_AVP_VALUE*
+- *SIP_AVP_NAME = STRING_NAME | '#'ID_NUMBER*
+- *SIP_AVP_VALUE = ':'STRING_VALUE | '#'NUMBER_VALUE*
+
+
+All additional credentials will be stored as OpenSIPS AVPs
+		(SIP_AVP_NAME = SIP_AVP_VALUE).
+
+
+The RPID value may be fetch via this mechanism.
+
+
+**Example: "SIP-AVP" AAA AVP examples**
+
+
+```
+....
+"email:joe@yahoo.com"
+    - STRING NAME AVP (email) with STRING VALUE (joe@yahoo.com)
+"#14:joe@yahoo.com"
+    - ID AVP (14) with STRING VALUE (joe@yahoo.com)
+"age#28"
+    - STRING NAME AVP (age) with INTEGER VALUE (28)
+"#14#28"
+    - ID AVP (14) with INTEGER VALUE (28)
+....
+		
+```
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+The module depends on the following modules (in the other words 
+			the listed modules must be loaded before this module):
+
+
+- *auth* -- Authentication framework,
+				only if the auth functions are used from script
+- *an aaa implementing module* -- for 
+				example aaa_radius
+
+
+#### External Libraries or Applications
+
+
+This module does not depend on any external library.
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### aaa_url (string) {#param_aaa_url}
+
+
+This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
+
+
+The syntax for the url is the following: "name_of_the_aaa_protocol_used:path_of_the_configuration_file"
+
+
+**Example: aaa_url parameter usage**
+
+
+```opensips
+		
+modparam("auth_aaa", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
+		
+```
+
+
+#### auth_service_type (integer) {#param_auth_service_type}
+
+
+This is the value of the Service-Type aaa attribute to be used when
+		performing an authentication operation.
+		The default should be fine for most people. See your aaa client 
+		include files for numbers to be put in this parameter if you need 
+		to change it.
+
+
+Default value is "15".
+
+
+**Example: auth_service_type parameter usage**
+
+
+```opensips
+		
+modparam("auth_aaa", "auth_service_type", 15)
+		
+```
+
+
+#### check_service_type (integer) {#param_check_service_type}
+
+
+AAA service type used by `aaa_does_uri_exist` and
+		`aaa_does_uri_user_exist` checks.
+
+
+*Default value is 10 (Call-Check).*
+
+
+**Example: Set check_service_type parameter**
+
+
+```opensips
+...
+modparam("auth_aaa", "check_service_type", 11)
+...
+```
+
+
+#### use_ruri_flag (string) {#param_use_ruri_flag}
+
+
+When this parameter is set to the value other than "NULL" and the
+		request being authenticated has flag with matching number set
+		via setflag() function, use Request URI instead of uri parameter
+		value from the Authorization / Proxy-Authorization header field
+		to perform AAA authentication.  This is intended to provide
+		workaround for misbehaving NAT / routers / ALGs that alter request
+		in the transit, breaking authentication.  At the time of this
+		writing, certain versions of Linksys WRT54GL are known to do that.
+
+
+Default value is "NULL" (not set).
+
+
+**Example: use_ruri_flag parameter usage**
+
+
+```opensips
+		
+modparam("auth_aaa", "use_ruri_flag", "USE_RURI_FLAG")
+		
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### aaa_www_authorize(realm, [uri_user]) {#func_aaa_www_authorize}
+
+
+The function verifies credentials according to 
+		[RFC2617](http://www.ietf.org/rfc/rfc2617.txt). If 
+		the credentials are verified successfully then the function will 
+		succeed and mark the credentials as authorized (marked credentials can 
+		be later used by some other functions). If the function was unable to 
+		verify the credentials for some reason then it will fail and
+		the script should call
+		`www_challenge`
+		which will challenge the user again.
+
+
+Negative codes may be interpreted as follows:
+
+
+- *-5 (generic error)* - some generic error
+			occurred and no reply was sent out;
+- *-4 (no credentials)* - credentials were not
+			found in request;
+- *-3 (stale nonce)* - stale nonce;
+
+
+This function will, in fact, perform sanity checks over the received 
+		credentials and then pass them along to the aaa server which will 
+		verify the credentials and return whether they are valid or not.
+
+
+Meaning of the parameter is as follows:
+
+
+- *realm (string)* - Realm is a opaque string that 
+			the user agent should present to the user so he can decide what 
+			username and password to use. Usually this is domain of the host 
+			the server is running on.
+If an empty string "" is used then the server will 
+			generate it from the request. In case of REGISTER requests To 
+			header field domain will be used (because this header field 
+			represents a user being registered), for all other messages From 
+			header field domain will be used.
+The string may contain pseudo variables.
+- *uri_user (string, optional)* -
+			value passed to the Radius server as value of the SIP-URI-User
+			check item.  If this parameter is not present, the server will
+			generate the SIP-URI-User check item value from the username part
+			of the To header field URI.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: aaa_www_authorize usage**
+
+
+```
+		
+...
+if (!aaa_www_authorize("siphub.net"))
+	www_challenge("siphub.net", "auth");
+...
+```
+
+
+#### aaa_proxy_authorize(realm, [uri_user]) {#func_aaa_proxy_authorize}
+
+
+The function verifies credentials according to 
+		[RFC2617](http://www.ietf.org/rfc/rfc2617.txt). If 
+		the credentials are verified successfully then the function will 
+		succeed and mark the credentials as authorized (marked credentials can 
+		be later used by some other functions). If the function was unable to 
+		verify the credentials for some reason then it will fail and the script 
+		should call `proxy_challenge` which 
+		will challenge the user again. For more about the negative return 
+		codes, see the above function.
+
+
+This function will, in fact, perform sanity checks over the received 
+		credentials and then pass them along to the aaa server which will 
+		verify the credentials and return whether they are valid or not.
+
+
+Meaning of the parameters is as follows:
+
+
+- *realm (string)* - Realm is a opaque string that
+			the user agent should present to the user so he can decide what 
+			username and password to use.  This is usually
+			one of the domains the proxy is responsible for.
+			If an empty string "" is used then the server will 
+			generate realm from host part of From header field URI.
+The string may contain pseudo variables.
+- *uri_user (string, optional)* -
+			value passed to the Radius server as value of the SIP-URI-User
+			check item.  If this parameter is not present, the server will
+			generate the SIP-URI-User check item value from the username part
+			of the To header field URI.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: proxy_authorize usage**
+
+
+```
+		
+...
+if (!aaa_proxy_authorize(""))    # Realm and URI user will be autogenerated
+	proxy_challenge("", "auth");
+...
+if (!aaa_proxy_authorize($pd, $pU))    # Realm and URI user are taken
+	proxy_challenge($pd, "auth");  # from P-Preferred-Identity
+                                       # header field
+...
+```
+
+
+#### aaa_does_uri_exist([sip_uri]) {#func_aaa_does_uri_exist}
+
+
+Checks from Radius if the SIP URI stored in the "sip_uri" parameter
+		(or user@host part of the Request-URI if "sip_uri" is not given)
+		belongs to a local user. Can be used to decide if 404 or 480 should
+		be returned after lookup has failed.   If yes, loads AVP
+		based on SIP-AVP reply items returned from Radius.  Each
+		SIP-AVP reply item must have a string value of form:
+
+
+- *value = SIP_AVP_NAME SIP_AVP_VALUE*
+- *SIP_AVP_NAME = STRING_NAME | '#'ID_NUMBER*
+- *SIP_AVP_VALUE = ':'STRING_VALUE | '#'NUMBER_VALUE*
+
+
+Returns 1 if Radius returns Access-Accept, -1 if Radius
+		returns Access-Reject, and -2 in case of internal
+		error.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: aaa_does_uri_exist usage**
+
+
+```
+...
+if (aaa_does_uri_exist()) {
+	...
+};
+...
+```
+
+
+#### aaa_does_uri_user_exist([sip_uri]) {#func_aaa_does_uri_user_exist}
+
+
+Similar to aaa_does_uri_exist, but check is done
+		based only on Request-URI user part or user stored in "sip_uri".
+		The user should thus be unique among all users, such as an
+		E.164 number.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: aaa_does_uri_user_exist usage**
+
+
+```
+...
+if (aaa_does_uri_user_exist()) {
+	...
+};
+...
+```
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Jan Janak ([@janakj](https://github.com/janakj)) | 87 | 24 | 3294 | 2182 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 44 | 31 | 892 | 255 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 23 | 19 | 96 | 142 |
+| 4. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 15 | 13 | 67 | 55 |
+| 5. | Irina-Maria Stanescu | 15 | 8 | 185 | 299 |
+| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 11 | 6 | 167 | 171 |
+| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 12 | 14 |
+| 8. | Juha Heinanen ([@juha-h](https://github.com/juha-h)) | 8 | 5 | 142 | 53 |
+| 9. | Andrei Pelinescu-Onciul | 7 | 5 | 8 | 2 |
+| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 7 | 2 | 55 | 213 |
+
+
+**All remaining contributors**: Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Henning Westerholt ([@henningw](https://github.com/henningw)), Ancuta Onofrei, Anatoly Pidruchny, Peter Nixon, Konstantin Bokarius, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jan 2013 - Jun 2021 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jun 2005 - May 2020 |
+| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - Sep 2019 |
+| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
+| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 6. | Irina-Maria Stanescu | Aug 2009 - Apr 2010 |
+| 7. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | Oct 2005 - Mar 2008 |
+| 8. | Konstantin Bokarius | Mar 2008 - Mar 2008 |
+| 9. | Edson Gellert Schubert | Feb 2008 - Feb 2008 |
+| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Dec 2003 - Feb 2008 |
+
+
+**All remaining contributors**: Juha Heinanen ([@juha-h](https://github.com/juha-h)), Henning Westerholt ([@henningw](https://github.com/henningw)), Ancuta Onofrei, Anatoly Pidruchny, Peter Nixon, Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Jan Janak ([@janakj](https://github.com/janakj)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2005-2009 Voice Sistem SRL
+
+
+Copyright © 2002-2003 FhG FOKUS

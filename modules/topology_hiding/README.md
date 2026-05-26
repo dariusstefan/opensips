@@ -1,0 +1,390 @@
+---
+title: "topology_hiding Module"
+description: "This is a module which provides topology hiding capabilities. The module can work on top of the dialog module, or as a standalone module ( thus alowing topology hiding for all types of requests )"
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This is a module which provides topology hiding capabilities.
+		The module can work on top of the dialog module, or as a standalone module ( thus alowing topology hiding for all
+		types of requests )
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *TM - Transaction Module*.
+- *Dialog Module*, if "force_dialog"
+				module parameter is enabled, or a dialog is created from the
+				configuration script.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+		OpenSIPS with this module loaded:
+
+
+- *None*
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### th_callid_passwd (string) {#param_th_callid_passwd}
+
+
+The string password that will be used for encoding/decoding the callid in case of topology_hiding with callid mangling.
+
+
+*Default value is ""OpenSIPS""*
+
+
+**Example: Set th_callid_passwd parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_callid_passwd", "my_topo_hiding_secret")
+...
+```
+
+
+#### th_callid_prefix (string) {#param_th_callid_prefix}
+
+
+The prefix that will be used for detecting callids which have been encoded by the dialog topology hiding. Make sure to change this value in case your SIP path contains multiple OpenSIPS boxes with topology hiding.
+
+
+*Default value is ""DLGCH_""*
+
+
+**Example: Set th_callid_prefix parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_callid_prefix", "MYCALLIDPREFIX_")
+...
+```
+
+
+#### th_passed_contact_uri_params (string) {#param_th_passed_contact_uri_params}
+
+
+List of semicolon-separated Contact URI parameters that will be passed from one side to the other for topology hiding calls. To be used when end-to-end functionality uses such Contact URI parameters.
+
+
+*Default value is "empty" - do not pass any parameters*
+
+
+**Example: Set th_passed_contact_uri_params parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_passed_contact_uri_params", "paramname1;myparam;custom_param")
+...
+```
+
+
+#### th_passed_contact_params (string) {#param_th_passed_contact_params}
+
+
+List of semicolon-separated Contact header parameters that will be passed from one side to the other for topology hiding calls. To be used when end-to-end functionality uses such Contact header parameters.
+
+
+*Default value is "empty" - do not pass any parameters*
+
+
+**Example: Set th_passed_contact_params parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_passed_contact_params", "paramname1;myparam;custom_param")
+...
+```
+
+
+#### force_dialog (int) {#param_force_dialog}
+
+
+If set to 1, the module will internally create the dialog ( if not already created ). This will only work for INVITE based dialogs, and the dialog module must be loaded.
+
+
+*Default value is "0"*
+
+
+**Example: Set force_dialog parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "force_dialog", 1)
+...
+```
+
+
+#### th_contact_encode_passwd (string) {#param_th_contact_encode_passwd}
+
+
+When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. The parameter configures the string password that will be used for encoding/decoding that specific param .
+
+
+*Default value is ""ToPoCtPaSS""*
+
+
+**Example: Set th_contact_encode_passwd parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_contact_encode_passwd", "my_topoh_passwd")
+...
+```
+
+
+#### th_contact_encode_param (string) {#param_th_contact_encode_param}
+
+
+When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. The parameter configures the respective parameter name.
+
+
+*Default value is ""thinfo""*
+
+
+**Example: Set th_contact_encode_param parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_contact_encode_param", "customparam")
+...
+```
+
+
+#### th_contact_encode_scheme (string) {#param_th_contact_encode_scheme}
+
+
+When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. This parameter configures the encoding scheme to be used for the data stored in
+			the Contact URI param. Possible values are:
+
+
+- *base64*
+- *base32*
+
+
+*Default value is ""base64""*
+
+
+**Example: Set th_contact_encode_scheme parameter**
+
+
+```opensips
+...
+modparam("topology_hiding", "th_contact_encode_scheme", "base32")
+...
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### topology_hiding() {#func_topology_hiding}
+
+
+By calling this function on an initial request, the modules will
+			hide the topology, meaning that it will strip and restore all the Via,
+			Record-Route and Route headers and it will replace the contact with the
+			IP address of the interface where the request was received.
+
+
+You must note however, that the detection of the future in-dialog requests(BYE, reInvite, etc.)
+			for these dialogs on which topology hiding is applied, is not done automatically.
+			Without topology hiding and only normal dialog, the detection was
+			done when loose_route was called. But now, for this dialogs where topology
+			hiding is applied, the in dialog requests reaching OpenSIPS won't have any Route headers
+			and the RURI will point to OpenSIPS machine.
+			So, to be able to match the in-dialog requests to the corresponding dialog, a script
+			function must be called. It's name is *topology_hiding_match* and you can read
+			it's description above.
+			The in-dialog topology requests are requests with a to tag,
+			RURI pointing to opensips and with a method specific to a
+			Invite dialog. For this kind of requests you should call
+			topology_hiding_match() function. If the request is successfully matched and fixed as according to the topology hiding logic,the function returns success.
+
+
+Optionally,the function also receives a string parameter, which holds string flags.
+			Current options for the string flags are :
+
+
+- *U* - Propagate the Username in the Contact header URI
+- *D* - Dialog ID (DID) is pushed into Contact username, rather than URI param. This option makes sense only when using topology hiding with dialog support.
+- *a* - Preserve the advertised Contact header advertised to the caller throughout the entire dialog.
+- *A* - Preserve the advertised Contact header advertised to the callee throughout the entire dialog.
+- *D* - Dialog ID (DID) is pushed into Contact username, rather than URI param. This option makes sense only when using topology hiding with dialog support.
+- *C* - Encode the callid header
+There are many cases where propagating the callid towards the callee side is not a good idea, since sometimes the callid contains the IP of the actual caller side, thus revealing part of the network topology.
+When using the "C" flag, the callid will be automatically encoded / decoded, transparent for the script writer - inside OpenSIPS (script,MI functions, etc ) all the variables related to the callid will represent the callid value for the caller side. If the callid for the callee side is needed, refer to the $TH_callee_callid pvar.
+*Note:* Changing the callid of the call using the "C" flag is only
+						available when doing topology_hiding with *dialog support*. Using this
+						flag without dialog support will not change the callid at all!.
+
+
+**Example: topology_hiding usage**
+
+
+```opensips
+...
+if(!has_totag() && is_method("INVITE")) {
+	topology_hiding();
+}
+...
+...
+if(!has_totag() && is_method("INVITE")) {
+	topology_hiding("U");
+}
+...
+```
+
+
+**Example: Calling topology_hiding_match() function for topology hiding sequential requests**
+
+
+```opensips
+...
+if (has_totag())
+        if(topology_hiding_match())
+        {
+                xlog("Found a request $rm belonging to an existing topology hiding dialog\n");
+                route(relay);
+                exit;
+        }
+}
+...
+```
+
+
+#### topology_hiding_match([dlg_match_mode]) {#func_topology_hiding_match}
+
+
+This function is to be used to match and fix a sequential request
+		belong to an existing topology hiding dialog.
+
+
+With regards to dialog matching (including the optional parameter),
+		this function behaves identically to match_dialog(). Please see the
+		dialog module documentation for further details regarding dialog
+		matching options.
+
+
+The function returns true if a topology hiding dialog exists for the request and the request has been successfully fixed.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: topology_hiding_match_dialog() usage**
+
+
+```opensips
+...
+    if (has_totag()) {
+        if (!topology_hiding_match() ) {
+            xlog(" cannot match request to a dialog \n");
+	    send_reply(404,"Not found");
+        } else
+		route(RELAY);
+    }
+...
+```
+
+
+### Exported Pseudo-Variables {#exported_pseudo_variables}
+
+
+#### $TH_callee_callid {#pv_TH_callee_callid}
+
+
+Read only variable that will contain the callid as it is propagated towards the callee side, in case topology_hiding("C") is called.
+
+
+NULL will be returned if there is no topology hiding dialog for the request or if topology_hiding with callid encoding was not used for the current dialog.
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 31 | 8 | 2700 | 25 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 27 | 21 | 264 | 154 |
+| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 25 | 21 | 146 | 88 |
+| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 15 | 13 | 80 | 53 |
+| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 6 | 82 | 72 |
+| 6. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | 4 | 2 | 3 | 15 |
+| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 4 | 2 | 2 | 2 |
+| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 3 | 1 | 2 | 2 |
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2015 - Dec 2023 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Jun 2023 |
+| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Jan 2021 |
+| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2015 - May 2020 |
+| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Feb 2020 |
+| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jan 2020 |
+| 7. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Sep 2019 - Sep 2019 |
+| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Feb 2015 - Mar 2016 |
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2015 OpenSIPS Foundation
