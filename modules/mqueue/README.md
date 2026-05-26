@@ -1,0 +1,381 @@
+---
+title: "mqueue Module"
+description: "The mqueue module offers a generic message queue system in shared memory for inter-process communication using the config file. One example of usage is to send time consuming operations to one or several timer processes that consumes items in the queue, without affecting SIP message handl..."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+The mqueue module offers a generic message queue system in shared
+		memory for inter-process communication using the config file.
+		One example of usage is to send time consuming operations to one or
+		several timer processes that consumes items in the queue, without
+		affecting SIP message handling in the socket-listening process.
+
+
+There can be many defined queues. Access to queued values is done via
+		pseudo variables.
+
+
+### Dependencies
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *None*.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before
+		running OpenSIPS with this module loaded:
+
+
+- *None*.
+
+
+### Exported Parameters
+
+
+#### `db_url` (str)
+
+
+The URL to connect to database for loading values
+		in mqueue table at start up and/or saving values at shutdown.
+
+
+*Default value is NULL (do not connect).*
+
+
+**Example: Set `db_url` parameter**
+
+
+```opensips
+...
+modparam("mqueue", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
+
+# Example of table in sqlite,
+# you have the set the fields to support the length according
+# to the data that will be present in the mqueue
+CREATE TABLE mqueue_name (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+key character varying(64) DEFAULT "" NOT NULL,
+val character varying(4096) DEFAULT "" NOT NULL
+);
+...
+```
+
+
+#### `mqueue` (string)
+
+
+Definition of a memory queue
+
+
+*Default value is "none".*
+
+
+Value must be a list of parameters: attr=value;...
+
+
+- Mandatory attributes:
+
+  - *name*: name of the queue.
+- Optional attributes:
+
+  - *size*: size of the queue.
+				Specifies the maximum number of items in queue.
+				If exceeded the oldest one is removed.
+				If not set the queue will be limitless.
+  - *dbmode*: If set to 1, the content of the
+				queue is written to database table when the SIP server is
+				stopped (i.e., ensure persistency over restarts).
+				If set to 2, it is written at shutdown but not read at startup.
+				If set to 3, it is read at sartup but not written at shutdown.
+				Default value is 0 (no db table interaction).
+  - *addmode*: how to add new (key,value) pairs.
+					
+					
+						*0*:
+						Will push all new (key,value) pairs at the end of
+						the queue. (default)
+					
+					
+						*1*:
+						Will keep oldest (key,value) pair in the queue,
+						based on the key.
+					
+					
+						*2*:
+						Will keep newest (key,value) pair in the queue,
+						based on the key.
+
+
+The parameter can be set many times, each holding the
+		definition of one queue.
+
+
+**Example: Set `mqueue` parameter**
+
+
+```opensips
+...
+modparam("mqueue", "mqueue", "name=myq;size=20;")
+modparam("mqueue", "mqueue", "name=myq;size=10000;addmode=2")
+modparam("mqueue", "mqueue", "name=qaz")
+modparam("mqueue", "mqueue", "name=qaz;addmode=1")
+...
+```
+
+
+### Exported Functions
+
+
+#### `mq_add(queue, key, value)`
+
+
+Add a new item (key, value) in the queue. If max size of queue is
+		exceeded, the oldest one is removed.
+
+
+**Example: `mq_add` usage**
+
+
+```
+...
+mq_add("myq", "$rU", "call from $fU");
+...
+```
+
+
+#### `mq_fetch(queue)`
+
+
+Take oldest item from queue and fill $mqk(queue) and
+		$mqv(queue) pseudo variables.
+
+
+Return: true on success (1); false on failure (-1) or
+		no item fetched (-2).
+
+
+**Example: `mq_fetch` usage**
+
+
+```opensips
+...
+while(mq_fetch("myq"))
+{
+	xlog("$mqk(myq) - $mqv(myq)\n");
+}
+...
+```
+
+
+#### `mq_pv_free(queue)`
+
+
+Free the item fetched in pseudo-variables. It is optional,
+		a new fetch frees the previous values.
+
+
+**Example: `mq_pv_free` usage**
+
+
+```
+...
+mq_pv_free("myq");
+...
+```
+
+
+#### `mq_size(queue)`
+
+
+Returns the current number of elements in the mqueue.
+
+
+If the mqueue is empty, the function returns -1. If the
+		mqueue is not found, the function returns -2.
+
+
+**Example: `mq_size` usage**
+
+
+```opensips
+...
+$var(q_size) = mq_size("queue");
+xlog("L_INFO", "Size of queue is: $var(q_size)\n");
+...
+```
+
+
+### Exported MI Functions
+
+
+#### mqueue:get_size
+
+
+Replaces obsolete MI command: *mq_get_size*.
+
+
+Get the size of a memory queue.
+
+
+Parameters:
+
+
+- name
+
+
+**Example: `mqueue:get_size` usage**
+
+
+```
+...
+opensips-cli -x mqueue:get_size xyz
+...
+```
+
+
+#### mqueue:fetch
+
+
+Replaces obsolete MI command: *mq_fetch*.
+
+
+Fetch one (or up to limit) key-value pair from a memory queue.
+
+
+Parameters:
+
+
+- name
+- limit
+limit
+
+
+**Example: `mqueue:fetch` usage**
+
+
+```
+...
+opensips-cli -x mqueue:fetch xyz
+...
+```
+
+
+#### mqueue:get_sizes
+
+
+Replaces obsolete MI command: *mq_get_sizes*.
+
+
+Get the size for all memory queues.
+
+
+Parameters: none
+
+
+**Example: `mqueue:get_sizes` usage**
+
+
+```
+...
+opensips-cli -x mqueue:get_sizes
+...
+```
+
+
+### Exported Pseudo-Variables
+
+
+#### `$mqk(mqueue)`
+
+
+The variable is read-only and returns the most recent item key
+			fetched from the specified mqueue.
+
+
+#### `$mqv(mqueue)`
+
+
+The variable is read-only and returns the most recent item value
+			fetched from the specified mqueue.
+
+
+#### `$mq_size(mqueue)`
+
+
+The variable is read-only and returns the size of the specified
+			mqueue.
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 19 | 2 | 1843 | 34 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 6 | 4 | 105 | 34 |
+| 3. | Alexandra Titoc | 3 | 1 | 13 | 9 |
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2025 - Mar 2026 |
+| 2. | Alexandra Titoc | Sep 2024 - Sep 2024 |
+| 3. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Feb 2024 - Feb 2024 |
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2010 Elena-Ramona Modroiu
+
+
+Copyright © 2018-2020 Julien chavanton, Flowroute
+
+
+Copyright © 2024 Ovidiu Sas, [VoIP Embedded, Inc.](http://www.voipembedded.com)
