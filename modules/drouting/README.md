@@ -224,7 +224,7 @@ More on time recurrence:
 	
 	<timezone>|<dtstart>|<dtend>|<duration>|<freq>|<until>|<interval>|<byday>|<bymonthday>|<byyearday>|<byweekno>|<bymonth>
 	
-	, identical to the input of the [check_time_rec()](cfgutils#func_check_time_rec)
+	, identical to the input of the [check_time_rec()](../cfgutils#func_check_time_rec)
 	function of the *cfgutils* module, including the optional
 	use of logical operators linking multiple such strings into a larger expression.
 - When an attribute is not specified, the corresponding place must be left
@@ -881,12 +881,12 @@ capability in order to mark nodes as eligible for becoming data donors during an
 arbitrary sync request. Consequently, the cluster must have *at least
 one node* marked with the **"seed"** value
 as the *clusterer.flags* column/property in order to be fully functional.
-Consult the [clusterer - Capabilities](clusterer#capabilities)
+Consult the [clusterer - Capabilities](../clusterer#capabilities)
 chapter for more details.
 
 
 For more info on how to define and populate a cluster (with OpenSIPS 
-		nodes) see the [clusterer](clusterer) module.
+		nodes) see the [clusterer](../clusterer) module.
 
 
 *Default value is "0 (none)".*
