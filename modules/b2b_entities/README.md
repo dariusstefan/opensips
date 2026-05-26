@@ -1,0 +1,1089 @@
+---
+title: "B2B_ENTITIES"
+description: "The B2BUA implementation in OpenSIPS is separated in two layers: a lower one(coded in this module)- which implements the basic functions of a UAS and UAC a upper one - which represents the logic engine of B2BUA, responsible of actually implementing the B2BUA services using ..."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+The B2BUA implementation in OpenSIPS is separated in two layers:
+
+
+- 
+- 
+
+
+This module stores records corresponding to the dialogs in which the B2BUA
+		is involved. It exports an API to be called from other modules which offers functions for
+		creating a new dialog record, for sending requests or replies in one dialog and will also
+		notify the upper level module when a request or reply is received inside one stored dialog.
+
+		The records are separated in two types: b2b server entities and b2b client entities depending
+		on the mode they are created. An entity created for a received initial message will be a server entity,
+		while a entity that will send an initial request(create a new dialog) will be a b2b client entity.
+		The name corresponds to the behavior in the first transaction - if UAS - server entity and if UAC - client entity.
+
+		This module does not implement a B2BUA alone, but needs a B2B logic implementing module.
+
+
+The module is able to respond to authentication challanges if the
+		uac_auth module is loaded first.  The list of credentials for
+		b2b authentication is also provided by the uac_auth module.
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+- *tm*
+- *a db module*
+- *uac_auth*
+				(mandatory if authentication is required)
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+		OpenSIPS with this module loaded:
+
+
+- *none*
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### server_hsize (int) {#param_server_hsize}
+
+
+The size of the hash table that stores the b2b server entities.
+			It is the 2 logarithmic value of the real size.
+
+
+*Default value is "9"*
+		 (512 records).
+
+
+**Example: Set server_hsize parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "server_hsize", 10)
+...
+	
+```
+
+
+#### client_hsize (int) {#param_client_hsize}
+
+
+The size of the hash table that stores the b2b client entities.
+			It is the 2 logarithmic value of the real size.
+
+
+*Default value is "9"*
+		 (512 records).
+
+
+**Example: Set client_hsize parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "client_hsize", 10)
+...
+	
+```
+
+
+#### script_req_route (str) {#param_script_req_route}
+
+
+The name of the b2b script route that will be called when
+			B2B requests are received.
+
+
+**Example: Set script_req_route parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "script_req_route", "b2b_request")
+...
+	
+```
+
+
+#### script_reply_route (str) {#param_script_reply_route}
+
+
+The name of the b2b script route that will be called when
+			B2B replies are received.
+
+
+**Example: Set script_repl_route parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "script_reply_route", "b2b_reply")
+...
+	
+```
+
+
+#### db_url (str) {#param_db_url}
+
+
+Database URL. It is not compulsory, if not set
+			data is not stored in database.
+
+
+**Example: Set db_url parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensips")
+...
+	
+```
+
+
+#### cachedb_url (str) {#param_cachedb_url}
+
+
+URL of a NoSQL database to be used. Only Redis is supported
+			at the moment.
+
+
+**Example: Set cachedb_url parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "cachedb_url", "redis://localhost:6379/")
+...
+	
+```
+
+
+#### cachedb_key_prefix (string) {#param_cachedb_key_prefix}
+
+
+Prefix to use for every key set in the NoSQL database.
+
+
+*Default value is "b2be$".*
+
+
+**Example: Set cachedb_key_prefix parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "cachedb_key_prefix", "b2b")
+...
+```
+
+
+#### update_period (int) {#param_update_period}
+
+
+The time interval at which to update the info in database.
+
+
+*Default value is "100".*
+
+
+**Example: Set update_period parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "update_period", 60)
+...
+	
+```
+
+
+#### b2b_key_prefix (string) {#param_b2b_key_prefix}
+
+
+The string to use when generating the key ( it is inserted
+			in the SIP messages as callid or to tag. It is useful to set
+			this prefix if you use more instances of opensips B2BUA cascaded
+			in the same architecture. Sometimes opensips B2BUA looks at the
+			callid or totag to see if it has the format it uses to determine
+			if the request was sent by it.
+
+
+*Default value is "B2B".*
+
+
+**Example: Set b2b_key_prefix parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "b2b_key_prefix", "B2B1")
+...
+	
+```
+
+
+#### db_mode (int) {#param_db_mode}
+
+
+The B2B modules have support for the 3 type of database storage
+
+
+- 
+- 
+- 
+
+
+*Default value is "2" (WRITE BACK).*
+
+
+**Example: Set db_mode parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "db_mode", 1)
+...
+	
+```
+
+
+#### db_table (str) {#param_db_table}
+
+
+The name of the table that will be used for storing B2B entities
+
+
+*Default value is "b2b_entities"*
+
+
+**Example: Set db_table parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "db_table", "some table name")
+...
+	
+```
+
+
+#### cluster_id (int) {#param_cluster_id}
+
+
+The ID of the cluster this instance belongs to. Setting this parameter
+		enables clustering support for the OpenSIPS B2BUA by replicating the
+		B2B entities (B2B dialogs) between instances. This also ensures restart
+		persistency through the *clusterer* module's
+		data "sync" mechanism.
+
+
+This OpenSIPS cluster exposes the **"b2be-entities-repl"**
+capability in order to mark nodes as eligible for becoming data donors during an
+arbitrary sync request. Consequently, the cluster must have *at least
+one node* marked with the **"seed"** value
+as the *clusterer.flags* column/property in order to be fully functional.
+Consult the [clusterer - Capabilities](clusterer#capabilities)
+chapter for more details.
+
+
+*Default value is "0" (clustering disabled)*
+
+
+**Example: Set cluster_id parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "cluster_id", 10)
+...
+	
+```
+
+
+#### passthru_prack (int) {#passthru_prack_id}
+
+
+This parameter allows to control, whether a PRACK should be generated locally (=0)
+		or if we request it to be end-to-end (=1).
+
+
+*Default value is "0" (generate PRACK locally)*
+
+
+**Example: Set passthru_prack parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "passthru_prack", 1)
+...
+	
+```
+
+
+#### advertised_contact (str) {#param_advertised_contact}
+
+
+Contact to use in generated messages for UA session started with the
+		[mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+**Example: Set advertised_contact parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "advertised_contact", "opensips@10.10.10.10:5060")
+...
+	
+```
+
+
+#### ua_default_timeout (str) {#param_ua_default_timeout}
+
+
+Default timeout, in seconds, for UA session started with the
+		[ua session server init](#func_ua_session_server_init) function or the
+		[mi ua session client start](#mi_ua_session_client_start) MI function. After this
+		interval a BYE will be sent and the session will be deleted.
+
+
+If not set the default is 43200 (12 hours).
+
+
+**Example: Set ua_default_timeout parameter**
+
+
+```opensips
+...
+modparam("b2b_entities", "ua_default_timeout", 7200)
+...
+	
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### ua_session_server_init([key], [flags]) {#func_ua_session_server_init}
+
+
+This function initializes a new UA session by processing an initial INVITE.
+		Further requests/replies received belonging to this session will only
+		be handled via the [E UA SESSION](#event_E_UA_SESSION) event.
+
+
+Parameters:
+
+
+- *key (var, optional)* - Variable to return the
+				b2b entity key of the new UA session.
+- *flags (string, optional)* - configures options
+				for this UA session via the following flags:
+				
+					*t[nn]* - maximum duration of
+					this session in seconds. After this timeout a BYE
+					will be sent and the session will be deleted. If this
+					is not set, the default timeout, configured with
+					[ua default timeout](#param_ua_default_timeout) will be used.
+					Example: *t3600*
+					*a* - report the receving of ACK requests
+					via the [E UA SESSION](#event_E_UA_SESSION) event.
+					*r* - report the receving of replies via
+					the [E UA SESSION](#event_E_UA_SESSION) event.
+					*d* - disable the automatic sending of ACK
+					upon receving a 200 OK reply for INVITE (in case of UAC session)
+					or re-INVITE.
+					*h* - provide the headers of the SIP request/reply
+					in the [E UA SESSION](#event_E_UA_SESSION) event.
+					*b* - provide the body of the SIP request/reply
+					in the [E UA SESSION](#event_E_UA_SESSION) event.
+					*n* - do not trigger the
+					[E UA SESSION](#event_E_UA_SESSION) event (with event_type
+					*NEW*)  for initial INVITES
+					handled with this function.
+
+
+This function can be used from REQUEST_ROUTE.
+
+
+**Example: ua_session_server_init usage**
+
+
+```opensips
+...
+if(is_method("INVITE") && !has_totag()) {
+   ua_session_server_init($var(b2b_key), "arhb");
+
+   ua_session_reply($var(b2b_key), "INVITE", 200, "OK", $var(my_sdp));
+   
+   exit;
+}
+...
+		
+```
+
+
+#### ua_session_update(key, method, [body], [extra_headers], [content_type]) {#func_ua_session_update}
+
+
+Sends a sequential request for a UA session started with the 
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Parameters:
+
+
+- *key (string)* - b2b entity key of the UA session.
+- *method (string)* - name of the SIP method for this
+				request.
+- *body (string, optional)* - body to include in the
+				SIP message.
+- *extra_headers (string, optional)* - extra headers
+				to include in the SIP message.
+- *content_type (string, optional)* - Content-Type
+				header. If the parameter is missing and a body is provided,
+				"Content-Type: application/sdp" will be used.
+
+
+This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
+
+
+**Example: ua_session_update usage**
+
+
+```
+...
+ua_session_update($var(b2b_key), "OPTIONS");
+...
+		
+```
+
+
+#### ua_session_reply(key, method, code, [reason], [body], [extra_headers], [content_type]) {#func_ua_session_reply}
+
+
+Sends a reply for a UA session started with the 
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Parameters:
+
+
+- *key (string)* - b2b entity key of the UA session.
+- *method (string)* - name of the SIP method that is
+				replied to.
+- *code (int)* - reply code.
+- *reason (string, optional)* - reply reason string.
+- *body (string, optional)* - body to include in the
+				SIP message.
+- *extra_headers (string, optional)* - extra headers
+				to include in the SIP message.
+- *content_type (string, optional)* - Content-Type header.
+				If the parameter is missing and a body is provided,
+				"Content-Type: application/sdp" will be used.
+
+
+This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
+
+
+**Example: ua_session_reply usage**
+
+
+```
+...
+ua_session_reply($var(b2b_key), "INVITE", 180, "Ringing");
+...
+		
+```
+
+
+#### ua_session_terminate(key, [extra_headers]) {#func_ua_session_terminate}
+
+
+Terminate a UA session started with the
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Parameters:
+
+
+- *key (string)* - b2b entity key of the UA session.
+- *extra_headers (string, optional)* - extra headers
+				to include in the SIP message
+
+
+This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
+
+
+**Example: ua_session_terminate usage**
+
+
+```
+...
+ua_session_terminate($var(b2b_key));
+...
+		
+```
+
+
+### Exported MI Functions {#exported_mi_functions}
+
+
+#### b2be_list {#mi_b2be_list}
+
+
+This command can be used to list the internals of the b2b entities.
+
+
+Name: *b2be_list*
+
+
+Parameters: *none*
+
+
+MI FIFO Command Format:
+
+
+```
+	opensips-cli -x mi b2be_list
+	
+```
+
+
+#### ua_session_client_start {#mi_ua_session_client_start}
+
+
+This command starts a new UAC session by sending an initial INVITE.
+		Further requests/replies received belonging to this session will only
+		be handled via the [E UA SESSION](#event_E_UA_SESSION) event.
+
+
+Name: *ua_session_client_start*
+
+
+Parameters:
+
+
+- *ruri* - Request URI
+- *to* - To URI; can also be specified as:
+				*display_name,uri* in order to set a Display Name,
+				eg. *Alice,sip:alice@opensips.org*.
+- *from* - From URI; can also be specified as:
+				*display_name,uri* in order to set a Display Name,
+				eg. *Alice,sip:alice@opensips.org*
+- *proxy (optional)* - URI of the
+				outbound proxy to send the INVITE to
+- *body (optional)* - message body
+- *content_type (optional)* - Content Type
+				header to use. If missing and a body is provided,
+				"Content-Type: application/sdp" will be used.
+- *extra_headers (optional)* - extra headers
+- *flags (optional)* - flags with the same meaning
+				as for the *flags* paramater of
+				[ua session server init](#func_ua_session_server_init).
+- *socket (optional)* - OpenSIPS sending socket
+
+
+opensips-cli Command Format:
+
+
+```
+opensips-cli -x mi ua_session_client_start ruri=sip:bob@opensips.org \
+to=sip:bob@opensips.org from=sip:alice@opensips.org flags=arhb
+```
+
+
+#### ua_session_update {#mi_ua_session_update}
+
+
+Sends a sequential request for a UA session started with the
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Name: *ua_session_update*
+
+
+Parameters:
+
+
+- *key* - b2b entity key of the UA session.
+- *method* - name of the SIP method for this
+				request.
+- *body (optional)* - body to include in the
+				SIP message.
+- *extra_headers (optional)* - extra headers
+				to include in the SIP message.
+- *content_type (string)* - Content-Type header.
+				If the parameter is missing and a body is provided,
+				"Content-Type: application/sdp" will be used.
+
+
+opensips-cli Command Format:
+
+
+```
+opensips-cli -x mi ua_session_update key=B2B.436.1925389.1649338095 method=OPTIONS
+```
+
+
+#### ua_session_reply {#mi_ua_session_reply}
+
+
+Sends a reply for a UA session started with the
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Name: *ua_session_reply*
+
+
+Parameters:
+
+
+- *key* - b2b entity key of the UA session.
+- *method* - name of the SIP method that is
+				replied to.
+- *code* - reply code
+- *reason* - reply reason string
+- *body (optional)* - body to include in the
+				SIP message
+- *extra_headers (optional)* - extra headers
+				to include in the SIP message
+- *content_type (optional)* - Content-Type header.
+				If the parameter is missing and a body is provided,
+				"Content-Type: application/sdp" will be used.
+
+
+opensips-cli Command Format:
+
+
+```
+opensips-cli -x mi ua_session_reply key=B2B.436.1925389.1649338095 method=OPTIONS code=200 reason=OK
+```
+
+
+#### ua_session_terminate {#mi_ua_session_terminate}
+
+
+Terminate a UA session started with the
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Name: *ua_session_terminate*
+
+
+Parameters:
+
+
+- *key* - b2b entity key of the UA session.
+- *extra_headers (optional)* - extra headers
+				to include in the SIP message
+
+
+opensips-cli Command Format:
+
+
+```
+opensips-cli -x mi ua_session_terminate key=B2B.436.1925389.1649338095
+```
+
+
+#### ua_session_list {#mi_ua_session_list}
+
+
+List information about UA sessions started with
+		[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Name: *ua_session_list*
+
+
+Parameters:
+
+
+- *key (optional)* - b2b entity key of the UA session
+				to list. If missing, all sessions will be listed.
+
+
+MI FIFO Command Format:
+
+
+```
+	opensips-cli -x mi ua_session_list
+	
+```
+
+
+### Exported Events {#exported_events}
+
+
+#### E_UA_SESSION {#event_E_UA_SESSION}
+
+
+This event is triggered for requests/replies belonging to an ongoing UA
+			session started with the
+			[ua session server init](#func_ua_session_server_init) function or
+		the [mi ua session client start](#mi_ua_session_client_start) MI function.
+
+
+Note that replies will not be reported at all unless the
+			*r* flag was set when initiating the UA session. Also
+			ACK requests are only reported if the *a* flag was set.
+
+
+Parameters:
+
+
+- *key* - b2b entity key of the UA session.
+- *entity_type* - indicates whether this is a
+				*UAS* or *UAc* entity.
+- *event_type* - the type of event:
+				
+					*NEW* - for initial INVITE requests,
+						handled with the [ua session server init](#func_ua_session_server_init)
+						function.
+					*EARLY* - for 1xx provisional
+						responses
+					*ANSWERED* - for 2xx successful
+						responses
+					*REJECTED* - for 3xx-6xx failure
+						responses
+					*UPDATED* - for any sequential requests,
+						including ACK but excluding BYE/CANCEL
+					*TERMINATED* - for BYE or CANCEL
+						requests
+- *status* - the reply status code if the message is
+				a SIP reply
+- *reason* - the reply reason if the message is
+				a SIP reply
+- *method* - the SIP method name
+- *body* - SIP message body
+- *headers* - full list of all SIP headers in the
+				message.
+
+
+## Developer Guide
+
+
+The module provides an API that can be used from other
+		OpenSIPS modules. The API offers the functions for creating and handing dialogs.
+		A dialog can be created on a receipt initial message, and this will correspond to
+		a b2b server entity, or initiated by the server and in this case a client entity
+		will be created in b2b_entities module.
+
+
+### b2b_load_api(b2b_api_t* api)
+
+
+This function binds the b2b_entities modules and fills the structure 
+				the exported functions that will be described in detail.
+
+
+**Example: b2b_api_t structure**
+
+
+```
+...
+typedef struct b2b_api {
+	b2b_server_new_t          server_new;
+	b2b_client_new_t          client_new;
+
+	b2b_send_request_t        send_request;
+	b2b_send_reply_t          send_reply;
+
+	b2b_entity_delete_t       entity_delete;
+
+	b2b_restore_linfo_t       restore_logic_info;
+	b2b_update_b2bl_param_t   update_b2bl_param;
+}b2b_api_t;
+...
+```
+
+
+### server_new
+
+
+Field type:
+
+
+```
+...
+typedef str* (*b2b_server_new_t) (struct sip_msg* , str* local_contact,
+		b2b_notify_t , str *mod_name, str* logic_key, struct b2b_tracer *tracer,
+		void *param, b2b_param_free_cb free_param);
+...
+```
+
+
+This function asks the b2b_entities modules to create a new server 
+			entity record. The internal processing actually extracts the dialog information
+			from the message and constructs a record that will be stored in a hash table.
+			The second parameters is a pointer to a function that the b2b_entities module
+			will call when a event will come for that dialog (a request or reply). The third
+			parameter is a pointer to a value that will be stored and given as a parameter
+			when the notify function will be called(it has to be allocated in shared memory).
+
+
+The return value is an identifier for the record that will be mentioned when 
+			calling other functions that represent actions in the dialog(send request,
+			send reply).
+
+
+The notify function has the following prototype:
+
+
+```
+...
+typedef int (*b2b_notify_t)(struct sip_msg* msg, str* id, int type, void* param);
+...
+```
+
+
+This function is called when a request or reply is received for a dialog 
+		handled by b2b_entities. The first parameter is the message, the second is the
+		identifier for the dialog, the third is a flag that says which is the type of
+		the message(it has two possible values - B2B_REQUEST and B2B_REPLY). The last
+		parameter is the parameter by the upper module when the entity was created.
+
+
+### client_new
+
+
+Field type:
+
+
+```
+...
+typedef str* (*b2b_client_new_t) (client_info_t* , b2b_notify_t b2b_cback,
+				b2b_add_dlginfo_t add_dlginfo_f, str *mod_name, str *logic_key,
+				struct b2b_tracer *tracer, void *param, b2b_param_free_cb free_param);
+...
+```
+
+
+This function asks the b2b_entities modules to create a new client 
+			entity record and also create a new dialog by sending an initial message. 
+			The parameters are all the values needed for the initial request to which
+			the notify function and parameter are added.
+			The b2b_cback parameter is a pointer to the callback that must be called when
+			an event happens(receiving a reply or request) in the dialog created with
+			this function.
+			The add_dlginfo_f parameter is also a function pointer to a callback that will
+			be called when a final success response will be received for the created dialog.
+			The callback will receive as parameter the complete dialog information for the
+			record. It should be stored and used when calling send_request or send_reply functions.
+
+
+The return value is an identifier for the record that will be mentioned when 
+			calling other functions that represent actions in the dialog(send request,
+			send reply).
+
+
+### send_request
+
+
+Field type:
+
+
+```
+...
+typedef int (*b2b_send_request_t)(enum b2b_entity_type ,str* b2b_key, str* method,
+		str* extra_headers, str* body, b2b_dlginfo_t*);
+...
+```
+
+
+This function asks the b2b_entities modules to send a request inside a b2b dialog
+			identified by b2b_key. The first parameter is the entity type and can have two values:
+			B2B_SERVER and B2B_CLIENT. The second is the identifier returned by the create 
+			function(server_new or client_new) and the next are the informations needed for
+			the new request: method, extra_headers, body.
+			The last parameter contains the dialog information - callid, to tag, from tag. These
+			are needed to make a perfect match to of b2b_entities record for which a new request
+			must be sent.
+
+
+The return value is 0 for success and a negative value for error.
+
+
+### send_reply
+
+
+Field type:
+
+
+```
+...
+typedef int (*b2b_send_reply_t)(enum b2b_entity_type et, str* b2b_key, int code, str* text,
+		str* body, str* extra_headers, b2b_dlginfo_t* dlginfo);
+...
+```
+
+
+This function asks the b2b_entities modules to send a reply inside a b2b dialog
+			identified by b2b_key. The first parameter is the entity type and can have two values:
+			B2B_SERVER and B2B_CLIENT. The second is the identifier returned by the create 
+			function(server_new or client_new) and the next are the informations needed for
+			the new reply: code, text, body, extra_headers. The last parameter contains the
+			dialog information used for matching the right record.
+
+
+The return value is 0 for success and a negative value for error.
+
+
+### entity_delete
+
+
+Field type:
+
+
+```
+...
+typedef void (*b2b_entity_delete_t)(enum b2b_entity_type et, str* b2b_key,
+	 b2b_dlginfo_t* dlginfo);
+...
+```
+
+
+This function must be called by the upper level function to delete the
+		records in b2b_entities. The records are not cleaned up by the b2b_entities
+		module and the upper level module must take care to delete them.
+
+
+### restore_logic_info
+
+
+Field type:
+
+
+```
+...
+typedef int (*b2b_restore_linfo_t)(enum b2b_entity_type type, str* key,
+		b2b_notify_t cback, void *param, b2b_param_free_cb free_param);
+...
+```
+
+
+This function is used at startup when loading the data from the database to
+			restore the pointer to the callback function.
+
+
+### update_b2bl_param
+
+
+Field type:
+
+
+```
+...
+typedef int (*b2b_update_b2bl_param_t)(enum b2b_entity_type type, str* key,
+		str* param, int replicate);
+...
+```
+
+
+This function can be used to change the logic param stored for an 
+			entity ( useful in case an entity is moved between logic records).
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Anca Vamanu | 181 | 94 | 6839 | 1860 |
+| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 127 | 63 | 5504 | 1156 |
+| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 87 | 71 | 798 | 508 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 61 | 52 | 518 | 202 |
+| 5. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 57 | 42 | 987 | 348 |
+| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 22 | 18 | 99 | 128 |
+| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 6 | 4 | 74 | 47 |
+| 8. | Carsten Bock | 6 | 4 | 66 | 40 |
+| 9. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | 6 | 3 | 166 | 29 |
+| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 24 | 17 |
+
+
+**All remaining contributors**: Stanislaw Pitucha, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Giedrius, [@DMOsipov](https://github.com/DMOsipov), Stéphane Alnet ([@shimaore](https://github.com/shimaore)), Henk Hesselink, Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Ibrahim Shahzad, Walter Doekes ([@wdoekes](https://github.com/wdoekes)).
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2010 - Mar 2026 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Aug 2009 - Feb 2026 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jan 2026 |
+| 4. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Nov 2010 - Nov 2025 |
+| 5. | Ibrahim Shahzad | Jul 2025 - Jul 2025 |
+| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jun 2023 |
+| 7. | Giedrius | Apr 2023 - Apr 2023 |
+| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Feb 2023 |
+| 9. | Carsten Bock | Mar 2022 - Apr 2022 |
+| 10. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Jan 2013 - Feb 2022 |
+
+
+**All remaining contributors**: Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), [@DMOsipov](https://github.com/DMOsipov), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Stéphane Alnet ([@shimaore](https://github.com/shimaore)), Anca Vamanu, Henk Hesselink, Stanislaw Pitucha.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu.
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2009 Anca-Maria Vamanu
+
+
+Copyright © 2022 [ng-voice GmbH](https://www.ng-voice.com)

@@ -1,0 +1,263 @@
+---
+title: "Python Module"
+description: "This module can be used to efficiently run Python code directly from the OpenSIPS script, without executing the *python* interpreter."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This module can be used to efficiently run Python code directly from
+		the OpenSIPS script, without executing the *python*
+		interpreter.
+
+
+The module provides the means to load a python module and run
+		its functions. Each function has to receive the SIP message as
+		parameter, and optionally some extra arguments passed from the
+		script.
+
+
+In order to run Python functions, one has to load the module
+		that contains them, by specifying the script name using the
+		*script_name* parameter. The module has to contain
+		the following components:
+
+
+- A class that contains all the methods that can be invoked from the
+		script.
+- A method within the class that is called when a SIP child is created.
+		The method should receive an integer parameter, which represents the
+		rank of the child, and must return 0 or positive in case the function
+		was executed successfully, or negative otherwise. The name of this
+		method is specified by the *child_init_method*
+		parameter.
+- A global function that initializes the Python module and returns an
+		object from the class whose functions will be invoked by the script.
+		The name of the global function is indicated by the
+		*mod_init_method* parameter.
+
+
+A minimal example of a Python script that satisfies these requirements
+		is:
+
+
+```
+	def mod_init():
+		return SIPMsg()
+
+	class SIPMsg:
+        def child_init(self, rank):
+	        return 0
+		
+```
+
+
+A function from the object returned above can be executed from the
+		script using the *python_exec()* script function. The
+		python method has to receive the following parameters:
+
+
+- The SIP message, that has the structure detailed below
+- Optionally, a string passed from the script
+
+
+The SIP message received as parameter by the function has the following
+		fields and methods:
+
+
+- *Type* - the type of the message, either
+		*SIP_REQUEST* or *SIP_REPLY*
+- *Method* - the method of the message
+- *Status* - the status of the message, available only
+		for replies
+- *RURI* - the R-URI of the message, available only for
+		requests
+- *src_address* - the (IP, port) tuple representing
+		source address of the message
+- *dst_address* - the (IP, port) tuple representing
+		the destination address (OpenSIPS address) of the message
+- *copy()* - copies the current SIP message in a new
+		object
+- *rewrite_ruri()* - changes the R-URI of the message;
+		available only for requests
+- *set_dst_uri()* - sets the destination URI of the
+		message; available only for requests
+- *getHeader()* - returns the header of a message
+- *call_function()* - calls built-in script function
+		or function exported by other module
+- *get_pseudoVar(name)* - returns the value of the
+		the pseudo-variable specified by the *name* as
+		Unicode string.
+- *set_pseudoVar(name, value)* - sets pseudo-variable
+		using Unicode string *value*.
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *None*.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before 
+		running OpenSIPS with this module loaded:
+
+
+- *python-dev* - provides the Python bindings.
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### script_name (string) {#param_script_name}
+
+
+The script that contains the Python module.
+
+
+*Default value is "/usr/local/etc/opensips/handler.py".*
+
+
+**Example: Set script_name parameter**
+
+
+```opensips
+...
+modparam("python", "script_name", "/usr/local/bin/opensips_handler.py")
+...
+```
+
+
+#### mod_init_function (string) {#param_mod_init_function}
+
+
+The method used to initialize the Python module and return the object.
+
+
+*Default value is "mod_init".*
+
+
+**Example: Set mod_init_function parameter**
+
+
+```opensips
+...
+modparam("python", "mod_init_function", "module_initializer")
+...
+```
+
+
+#### child_init_method (string) {#param_child_init_method}
+
+
+The method called for each child process.
+
+
+*Default value is "child_init".*
+
+
+**Example: Set child_init_method parameter**
+
+
+```opensips
+...
+modparam("python", "child_init_method", "child_initializer")
+...
+```
+
+
+### Exported Functions {#exported_functions}
+
+
+#### python_exec(method_name [, extra_args]) {#func_python_exec}
+
+
+This function is used to execute a method from the Python module
+				loaded.
+
+
+This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
+				FAILURE_ROUTE and BRANCH_ROUTE.
+
+
+Meaning of the parameters is as follows:
+
+
+- *method_name* (string) - name of the method called
+- *extra_args* (string, optional) - extra arguments that can
+					be passed from the script to the python function.
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 22 | 10 | 1319 | 23 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 14 | 502 | 101 |
+| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 13 | 9 | 204 | 113 |
+| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 10 | 7 | 35 | 62 |
+| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 7 | 5 | 38 | 50 |
+| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 5 | 3 | 7 | 7 |
+| 7. | importos | 3 | 1 | 104 | 4 |
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jul 2014 - Apr 2026 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Mar 2015 - Sep 2025 |
+| 3. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Aug 2025 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Oct 2024 |
+| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Dec 2009 - Feb 2023 |
+| 6. | importos | Nov 2020 - Nov 2020 |
+| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Nov 2019 |
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** importos, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2009 Sippy Software, Inc.

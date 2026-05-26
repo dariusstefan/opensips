@@ -1,0 +1,203 @@
+---
+title: "cachedb_memcached Module"
+description: "This module is an implementation of a cache system designed to work with a memcached server. It uses libmemcached client library to connect to several memcached servers that store data. It uses the Key-Value interface exported from the core."
+---
+
+## Admin Guide
+
+
+### Overview {#overview}
+
+
+This module is an implementation of a cache system designed to work with a 
+		memcached server. It uses libmemcached client library to connect to several memcached
+		servers that store data. It uses the Key-Value interface exported from the core.
+
+
+### Advantages
+
+
+- *memory costs are no longer on the server*
+- *many servers may be used so the memory
+				is virtually unlimited*
+- *the cache is persistent so a restart
+				of the server will not affect the cache*
+- *memcached is an open-source project so
+				it can be used to exchange data
+				 with various other applications*
+- *servers may be grouped together
+				(e.g. for security purposes : some can be
+				 inside a private network, some can be in
+				 a public one)*
+
+
+### Limitations
+
+
+- *keys (in key:value pairs) may not contain spaces or control characters*
+
+
+### Dependencies {#dependencies}
+
+
+#### OpenSIPS Modules
+
+
+None.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+		OpenSIPS with this module loaded:
+
+
+- *libmemcached:*
+libmemcached can be downloaded from: http://tangent.org/552/libmemcached.html.
+				Download the archive, extract sources, run ./configure, make,sudo make install.
+...
+				wget http://download.tangent.org/libmemcached-0.31.tar.gz 
+				tar -xzvf libmemcached-0.31.tar.gz
+				cd libmemcached-0.31
+				./configure
+				make
+				sudo make install
+				...
+
+
+### Exported Parameters {#exported_parameters}
+
+
+#### cachedb_url (string) {#param_cachedb_url}
+
+
+The urls of the server groups that OpenSIPS will connect to in order
+			to use the from script cache_store,cache_fetch, etc operations.
+			It can be set more than one time.
+			The prefix part of the URL will be the identifier that will be used
+			from the script.
+
+
+**Example: Set cachedb_url parameter**
+
+
+```opensips
+...
+modparam("cachedb_memcached", "cachedb_url","memcached:group1://localhost:9999,127.0.0.1/");
+modparam("cachedb_memcached", "cachedb_url","memcached:y://random_url:8888/");
+...
+	
+```
+
+
+**Example: Use memcached servers**
+
+
+```
+...
+cache_store("memcached:group1","key","$ru value");
+cache_fetch("memcached:y","key",$avp(10));
+cache_remove("memcached:group1","key");
+...
+	
+```
+
+
+#### exec_threshold (int) {#param_exec_threshold}
+
+
+The maximum number of microseconds that a local cache query can last.
+			Anything above the threshold will trigger a warning message to the log
+
+
+*Default value is "0 ( unlimited - no warnings )".*
+
+
+**Example: Set exec_threshold parameter**
+
+
+```opensips
+...
+modparam("cachedb_memcached", "exec_threshold", 100000)
+...
+	
+```
+
+
+#### Exported Functions {#exported_functions}
+
+
+The module does not export functions to be used
+		in configuration script.
+
+
+## Contributors {#contributors}
+
+
+### By Commit Statistics {#contrib_commit_statistics}
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 22 | 13 | 859 | 63 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 12 | 10 | 28 | 16 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 12 | 9 | 71 | 91 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 7 | 5 | 5 | 7 |
+| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 3 | 3 |
+| 6. | Julián Moreno Patiño | 3 | 1 | 1 | 1 |
+| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
+| 8. | rdondeti | 2 | 1 | 5 | 0 |
+| 9. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 2 | 1 | 1 | 0 |
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity {#contrib_commit_activity}
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | rdondeti | Mar 2026 - Mar 2026 |
+| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2013 - Mar 2020 |
+| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Sep 2019 |
+| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Apr 2019 |
+| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2017 |
+| 8. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
+| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Oct 2011 - May 2014 |
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation {#documentation}
+
+
+### Contributors {#documentation_contributors}
+
+
+**Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2009 Andrei Dragus
+
+
+Copyright © 2009 Voice Sistem SRL
