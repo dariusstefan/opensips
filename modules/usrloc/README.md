@@ -1651,8 +1651,8 @@ Parameters:
 Using the *req_callid*, if a dialog has been
 				created for the pending request, this dialog may be temporarily
 				loaded inside the event_route using the
-				[load_dialog_ctx()](dialog#func_load_dialog_ctx) and
-				[unload_dialog_ctx()](dialog#func_unload_dialog_ctx)
+				[load_dialog_ctx()](../dialog#func_load_dialog_ctx) and
+				[unload_dialog_ctx()](../dialog#func_unload_dialog_ctx)
 				functions of the dialog module.
 
 
