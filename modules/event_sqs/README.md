@@ -6,7 +6,7 @@ description: "The event_sqs module is an implementation of an Amazon SQS produce
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The event_sqs module is an implementation of an Amazon SQS producer.
@@ -15,7 +15,7 @@ The event_sqs module is an implementation of an Amazon SQS producer.
 		[https://aws.amazon.com/sqs/](https://aws.amazon.com/sqs/)
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -67,10 +67,10 @@ Here you can find some cli commands such as create-queue, send/receive-message, 
 		[https://docs.aws.amazon.com/cli/latest/reference/sqs/](https://docs.aws.amazon.com/cli/latest/reference/sqs/)
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### queue_url (string)
+#### queue_url (string) {#param_queue_url}
 
 
 This parameter specifies the configuration for an SQS queue that can be used
@@ -109,10 +109,10 @@ modparam("event_sqs", "queue_url",
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sqs_publish_message(queue_id, message)
+#### sqs_publish_message(queue_id, message) {#func_sqs_publish_message}
 
 
 Publishes a message to an SQS queue. As the actual 
@@ -181,10 +181,10 @@ Finally, to send a message, raise the subscribed event with the desired message 
   ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -205,7 +205,7 @@ Finally, to send a message, raise the subscribed event with the desired message 
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -220,10 +220,10 @@ Finally, to send a message, raise the subscribed event with the desired message 
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexandra Titoc.

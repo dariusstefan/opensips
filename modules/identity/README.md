@@ -6,13 +6,13 @@ description: "This module adds support for SIP Identity (see RFC 4474)."
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module adds support for SIP Identity (see RFC 4474).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -34,10 +34,10 @@ The following libraries or applications must be installed before running
 - *openssl (libssl)*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### privKey (string)
+#### privKey (string) {#param_privKey}
 
 
 Filename of private RSA-key of authentication service. This file must be in PEM format.
@@ -53,7 +53,7 @@ modparam("identity", "privKey", "/etc/openser/privkey.pem")
 ```
 
 
-#### authCert (string)
+#### authCert (string) {#param_authCert}
 
 
 Filename of certificate which belongs to `privKey`. This file must be in PEM format.
@@ -69,7 +69,7 @@ modparam("identity", "authCert", "/etc/openser/cert.pem")
 ```
 
 
-#### certUri (string)
+#### certUri (string) {#param_certUri}
 
 
 URI from which the certificate of the authentication service can be acquired. This string will be placed in the Identity-Info header.
@@ -85,7 +85,7 @@ modparam("identity", "certUri", "http://www.myserver.com/cert.pem")
 ```
 
 
-#### verCert (string)
+#### verCert (string) {#param_verCert}
 
 
 Path containing certificates for the verifier. Certificates must be in PEM format. The URI in the Identity-Info header field is used to find the corresponding certificate for the request. For this purpose the verifier replaces every character which is not alphanumeric, no "_" and no "." with a "-". A "." at the beginning of the URI is forbidden. If the URI is "http://www.test.com/cert.pem" the verifier will look for the file "http---www.test.com-cert.pem", for example.
@@ -102,7 +102,7 @@ modparam("identity", "verCert", "/etc/openser/verCert/")
 ```
 
 
-#### caList (string)
+#### caList (string) {#param_caList}
 
 
 File containing all trusted (root) certificates for the verifier. Certificates must be in PEM format.
@@ -118,7 +118,7 @@ modparam("identity", "caList", "/etc/openser/caList.pem")
 ```
 
 
-#### crlList (string)
+#### crlList (string) {#param_crlList}
 
 
 File containing certificate revocation lists (crls) for the verifier. Setting this parameter is only necessary if `useCrls` is set to "1".
@@ -134,7 +134,7 @@ modparam("identity", "crlList", "/etc/openser/crls.pem")
 ```
 
 
-#### useCrls (integer)
+#### useCrls (integer) {#param_useCrls}
 
 
 Switch to decide whether to use revocation lists ("1") or not ("0").
@@ -153,10 +153,10 @@ modparam("identity", "useCrls", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### authservice()
+#### authservice() {#func_authservice}
 
 
 This function performs the steps of an authentication service. Before you call this function, you have to ensure
@@ -239,7 +239,7 @@ route(1); #forward with ($retcode=1) or without ($retcode!=1) Identity header
 ```
 
 
-#### verifier()
+#### verifier() {#func_verifier}
 
 
 This function performs the steps of an verifier. The returned code tells you the result of the verification:
@@ -331,10 +331,10 @@ exit;
 - Authentication service and verifier use the original request. Changes resulting from message processing in OpenSER script are ignored.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -366,7 +366,7 @@ exit;
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -392,10 +392,10 @@ exit;
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Alexander Christ.

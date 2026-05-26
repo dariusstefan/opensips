@@ -6,7 +6,7 @@ description: "The B2BUA implementation in OpenSIPS is separated in two layers: a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The B2BUA implementation in OpenSIPS is separated in two layers:
@@ -34,7 +34,7 @@ The module is able to respond to authentication challanges if the
 		b2b authentication is also provided by the uac_auth module.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -56,10 +56,10 @@ The following libraries or applications must be installed before running
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### server_hsize (int)
+#### server_hsize (int) {#param_server_hsize}
 
 
 The size of the hash table that stores the b2b server entities.
@@ -81,7 +81,7 @@ modparam("b2b_entities", "server_hsize", 10)
 ```
 
 
-#### client_hsize (int)
+#### client_hsize (int) {#param_client_hsize}
 
 
 The size of the hash table that stores the b2b client entities.
@@ -103,7 +103,7 @@ modparam("b2b_entities", "client_hsize", 10)
 ```
 
 
-#### script_req_route (str)
+#### script_req_route (str) {#param_script_req_route}
 
 
 The name of the b2b script route that will be called when
@@ -121,7 +121,7 @@ modparam("b2b_entities", "script_req_route", "b2b_request")
 ```
 
 
-#### script_reply_route (str)
+#### script_reply_route (str) {#param_script_reply_route}
 
 
 The name of the b2b script route that will be called when
@@ -139,7 +139,7 @@ modparam("b2b_entities", "script_reply_route", "b2b_reply")
 ```
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 Database URL. It is not compulsory, if not set
@@ -157,7 +157,7 @@ modparam("b2b_entities", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensi
 ```
 
 
-#### cachedb_url (str)
+#### cachedb_url (str) {#param_cachedb_url}
 
 
 URL of a NoSQL database to be used. Only Redis is supported
@@ -175,7 +175,7 @@ modparam("b2b_entities", "cachedb_url", "redis://localhost:6379/")
 ```
 
 
-#### cachedb_key_prefix (string)
+#### cachedb_key_prefix (string) {#param_cachedb_key_prefix}
 
 
 Prefix to use for every key set in the NoSQL database.
@@ -194,7 +194,7 @@ modparam("b2b_entities", "cachedb_key_prefix", "b2b")
 ```
 
 
-#### update_period (int)
+#### update_period (int) {#param_update_period}
 
 
 The time interval at which to update the info in database.
@@ -214,7 +214,7 @@ modparam("b2b_entities", "update_period", 60)
 ```
 
 
-#### b2b_key_prefix (string)
+#### b2b_key_prefix (string) {#param_b2b_key_prefix}
 
 
 The string to use when generating the key ( it is inserted
@@ -239,7 +239,7 @@ modparam("b2b_entities", "b2b_key_prefix", "B2B1")
 ```
 
 
-#### db_mode (int)
+#### db_mode (int) {#param_db_mode}
 
 
 The B2B modules have support for the 3 type of database storage
@@ -264,7 +264,7 @@ modparam("b2b_entities", "db_mode", 1)
 ```
 
 
-#### db_table (str)
+#### db_table (str) {#param_db_table}
 
 
 The name of the table that will be used for storing B2B entities
@@ -284,7 +284,7 @@ modparam("b2b_entities", "db_table", "some table name")
 ```
 
 
-#### cluster_id (int)
+#### cluster_id (int) {#param_cluster_id}
 
 
 The ID of the cluster this instance belongs to. Setting this parameter
@@ -317,7 +317,7 @@ modparam("b2b_entities", "cluster_id", 10)
 ```
 
 
-#### passthru_prack (int)
+#### passthru_prack (int) {#passthru_prack_id}
 
 
 This parameter allows to control, whether a PRACK should be generated locally (=0)
@@ -338,7 +338,7 @@ modparam("b2b_entities", "passthru_prack", 1)
 ```
 
 
-#### advertised_contact (str)
+#### advertised_contact (str) {#param_advertised_contact}
 
 
 Contact to use in generated messages for UA session started with the
@@ -356,7 +356,7 @@ modparam("b2b_entities", "advertised_contact", "opensips@10.10.10.10:5060")
 ```
 
 
-#### ua_default_timeout (str)
+#### ua_default_timeout (str) {#param_ua_default_timeout}
 
 
 Default timeout, in seconds, for UA session started with the
@@ -379,10 +379,10 @@ modparam("b2b_entities", "ua_default_timeout", 7200)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ua_session_server_init([key], [flags], [extra_params])
+#### ua_session_server_init([key], [flags], [extra_params]) {#func_ua_session_server_init}
 
 
 This function initializes a new UA session by processing an initial INVITE.
@@ -444,7 +444,7 @@ if(is_method("INVITE") && !has_totag()) {
 ```
 
 
-#### ua_session_update(key, method, [body], [extra_headers], [content_type])
+#### ua_session_update(key, method, [body], [extra_headers], [content_type]) {#func_ua_session_update}
 
 
 Sends a sequential request for a UA session started with the 
@@ -481,7 +481,7 @@ ua_session_update($var(b2b_key), "OPTIONS");
 ```
 
 
-#### ua_session_reply(key, method, code, [reason], [body], [extra_headers], [content_type])
+#### ua_session_reply(key, method, code, [reason], [body], [extra_headers], [content_type]) {#func_ua_session_reply}
 
 
 Sends a reply for a UA session started with the 
@@ -520,7 +520,7 @@ ua_session_reply($var(b2b_key), "INVITE", 180, "Ringing");
 ```
 
 
-#### ua_session_terminate(key, [extra_headers])
+#### ua_session_terminate(key, [extra_headers]) {#func_ua_session_terminate}
 
 
 Terminate a UA session started with the
@@ -550,10 +550,10 @@ ua_session_terminate($var(b2b_key));
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### b2b_entities:list
+#### b2b_entities:list {#mi_list}
 
 
 Replaces obsolete MI command: *b2be_list*.
@@ -577,7 +577,7 @@ MI FIFO Command Format:
 ```
 
 
-#### ua_session_client_start
+#### ua_session_client_start {#mi_ua_session_client_start}
 
 
 This command starts a new UAC session by sending an initial INVITE.
@@ -620,7 +620,7 @@ to=sip:bob@opensips.org from=sip:alice@opensips.org flags=arhb
 ```
 
 
-#### ua_session_update
+#### ua_session_update {#mi_ua_session_update}
 
 
 Sends a sequential request for a UA session started with the
@@ -654,7 +654,7 @@ opensips-cli -x mi ua_session_update key=B2B.436.1925389.1649338095 method=OPTIO
 ```
 
 
-#### ua_session_reply
+#### ua_session_reply {#mi_ua_session_reply}
 
 
 Sends a reply for a UA session started with the
@@ -690,7 +690,7 @@ opensips-cli -x mi ua_session_reply key=B2B.436.1925389.1649338095 method=OPTION
 ```
 
 
-#### ua_session_terminate
+#### ua_session_terminate {#mi_ua_session_terminate}
 
 
 Terminate a UA session started with the
@@ -717,7 +717,7 @@ opensips-cli -x mi ua_session_terminate key=B2B.436.1925389.1649338095
 ```
 
 
-#### ua_session_list
+#### ua_session_list {#mi_ua_session_list}
 
 
 List information about UA sessions started with
@@ -744,10 +744,10 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_UA_SESSION
+#### E_UA_SESSION {#event_E_UA_SESSION}
 
 
 This event is triggered for requests/replies belonging to an ongoing UA
@@ -1020,10 +1020,10 @@ This function can be used to change the logic param stored for an
 			entity ( useful in case an entity is moved between logic records).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1055,7 +1055,7 @@ This function can be used to change the logic param stored for an
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1081,10 +1081,10 @@ This function can be used to change the logic param stored for an
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu.

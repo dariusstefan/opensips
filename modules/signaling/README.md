@@ -6,7 +6,7 @@ description: "The SIGNALING module comes as a wrapper over tm and sl modules and
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The SIGNALING module comes as a wrapper over 
@@ -42,7 +42,7 @@ Moreover, this module offers the possibility of loading only one
 	module only because the send reply interface requires it.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -65,16 +65,16 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 - *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### send_reply(code, reason)
+#### send_reply(code, reason) {#func_send_reply}
 
 
 For the current request, a reply is sent back having the given code 
@@ -106,10 +106,10 @@ send_reply($err.rcode, $err.rreason);
 ```
 
 
-### Exported Variables
+### Exported Variables {#exported_pseudo_variables}
 
 
-#### $sig_local_totag
+#### $sig_local_totag {#pv_sig_local_totag}
 
 
 This variable returns the local To-tag that will be used
@@ -146,10 +146,10 @@ send_reply(); # or sl_send_reply();
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -176,7 +176,7 @@ send_reply(); # or sl_send_reply();
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -197,10 +197,10 @@ send_reply(); # or sl_send_reply();
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), zhangst, Anca Vamanu.

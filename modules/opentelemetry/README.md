@@ -6,7 +6,7 @@ description: "The *opentelemetry* module provides OpenTelemetry tracing for Open
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *opentelemetry* module provides OpenTelemetry
@@ -35,7 +35,7 @@ The local SIP span convention emitted by this module is documented in
 		`modules/opentelemetry/semantic-convention/sip-spans.md`.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -58,10 +58,10 @@ The following libraries or applications must be installed before
 				with the OTLP/HTTP exporter enabled.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable (integer)
+#### enable (integer) {#param_enable}
 
 
 Enables or disables OpenTelemetry tracing at startup. It can also be
@@ -86,7 +86,7 @@ modparam("opentelemetry", "enable", 1)
 ```
 
 
-#### proc_profiling (integer)
+#### proc_profiling (integer) {#param_proc_profiling}
 
 
 If enabled, the module will also profile/trace the OpenSIPS processes,
@@ -106,7 +106,7 @@ modparam("opentelemetry", "proc_profiling", 1)
 ```
 
 
-#### log_level (integer)
+#### log_level (integer) {#param_log_level}
 
 
 Log level threshold used by the OpenTelemetry log consumer when
@@ -126,7 +126,7 @@ modparam("opentelemetry", "log_level", 3)
 ```
 
 
-#### use_batch (integer)
+#### use_batch (integer) {#param_use_batch}
 
 
 Selects the OpenTelemetry span processor. When enabled, the module uses
@@ -146,7 +146,7 @@ modparam("opentelemetry", "use_batch", 0)
 ```
 
 
-#### service_name (string)
+#### service_name (string) {#param_service_name}
 
 
 Sets the OpenTelemetry "service.name" resource attribute.
@@ -165,7 +165,7 @@ modparam("opentelemetry", "service_name", "edge-proxy")
 ```
 
 
-#### exporter_endpoint (string)
+#### exporter_endpoint (string) {#param_exporter_endpoint}
 
 
 Overrides the OTLP/HTTP exporter endpoint. If empty, the OpenTelemetry
@@ -185,10 +185,10 @@ modparam("opentelemetry", "exporter_endpoint", "http://127.0.0.1:4318/v1/traces"
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### opentelemetry:enable
+#### opentelemetry:enable {#mi_enable}
 
 
 Replaces obsolete MI command: *otel_enable*.
@@ -219,10 +219,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -245,7 +245,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -262,10 +262,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Your Name.

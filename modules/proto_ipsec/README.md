@@ -101,7 +101,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### port (integer)
+#### port (integer) {#param_port}
 
 
 Default IPSec port used when no prot is being specified in the
@@ -121,7 +121,7 @@ modparam("proto_ipsec", "port", 5100)
 ```
 
 
-#### min_spi (integer)
+#### min_spi (integer) {#param_min_spi}
 
 
 This parameter represents the minimum value for the Security
@@ -144,7 +144,7 @@ modparam("proto_ipsec", "min_spi", 10000)
 ```
 
 
-#### max_spi (integer)
+#### max_spi (integer) {#param_max_spi}
 
 
 This parameter represents the maximum value for the Security
@@ -167,7 +167,7 @@ modparam("proto_ipsec", "max_spi", 20000)
 ```
 
 
-#### temporary_timeout (integer)
+#### temporary_timeout (integer) {#param_temporary_timeout}
 
 
 Sets the timeout (in seconds) a temporary security association
@@ -194,7 +194,7 @@ param("proto_ipsec", "temporary_timeout", 10) # number of seconds
 ```
 
 
-#### default_client_port (integer)
+#### default_client_port (integer) {#param_default_client_port}
 
 
 Default port value to be used when we act as clients in the
@@ -215,7 +215,7 @@ modparam("proto_ipsec", "default_client_port", 5100)
 ```
 
 
-#### default_server_port (integer)
+#### default_server_port (integer) {#param_default_server_port}
 
 
 Default port value to be used when we act as server in the
@@ -236,7 +236,7 @@ modparam("proto_ipsec", "default_server_port", 6100)
 ```
 
 
-#### allowed_algorithms (string)
+#### allowed_algorithms (string) {#param_allowed_algorithms}
 
 
 Whitelists the authentication and encryption algorithms
@@ -281,7 +281,7 @@ modparam("proto_ipsec", "allowed_algorithms", "hmac-sha-1-96=null,aes-gmac=aes-g
 ```
 
 
-#### disable_deprecated_algorithms (integer)
+#### disable_deprecated_algorithms (integer) {#param_disable_deprecated_algorithms}
 
 
 Indicates whether we should ignore deprecated algorithms,
@@ -307,10 +307,10 @@ modparam("proto_ipsec", "disable_deprecated_algorithms", yes)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ipsec_create([port_server], [port_client], [algos])
+#### ipsec_create([port_server], [port_client], [algos]) {#func_ipsec_create}
 
 
 Creates an IPSec SA/tunnel according to the
@@ -361,10 +361,10 @@ onreply_route[ipsec] {
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $ipsec
+#### $ipsec {#pv_ipsec}
 
 
 Populated for a request that is being received over
@@ -405,7 +405,7 @@ xlog("Using $ipsec(ip):$ipsec(port-c) and $ipsec(ip):$ipsec(port-s) socket\n");
 ```
 
 
-#### $ipsec_ue
+#### $ipsec_ue {#pv_ipsec_ue}
 
 
 Populated for a request that is being received over
@@ -446,10 +446,10 @@ xlog("Using $ipsec_ue(ip):$ipsec_ue(port-c) and $ipsec_ue(ip):$ipsec_ue(port-s) 
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -472,7 +472,7 @@ xlog("Using $ipsec_ue(ip):$ipsec_ue(port-c) and $ipsec_ue(ip):$ipsec_ue(port-s) 
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -489,10 +489,10 @@ xlog("Using $ipsec_ue(ip):$ipsec_ue(port-c) and $ipsec_ue(ip):$ipsec_ue(port-s) 
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

@@ -6,7 +6,7 @@ description: "This module is an implementation of a local cache system designed 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a local cache system designed as
@@ -16,7 +16,7 @@ This module is an implementation of a local cache system designed as
 		collection. One collection can be shared between multiple urls.
 
 
-### Clustering
+### Clustering {#clustering}
 
 
 Cachedb_local clustering is a mechanism used to mirror local cache changes
@@ -54,7 +54,7 @@ In addition to the event-driven replication, an OpenSIPS instance will first
 			and constistency over the cluster nodes is not guaranteed.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -77,10 +77,10 @@ The following libraries or applications must be installed before running
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 URLs of local cache groups to be used used for the script and MI cacheDB
@@ -124,7 +124,7 @@ cache_store("local:group2", ...)
 ```
 
 
-#### cache_collections (string)
+#### cache_collections (string) {#param_cache_collections}
 
 
 Using this parameter, collections(hash tables) and their sizes can be defined. Each
@@ -157,7 +157,7 @@ modparam("cachedb_local", "cache_collections", "collection1/r; collection2/r = 5
 ```
 
 
-#### cache_clean_period (int)
+#### cache_clean_period (int) {#param_cache_clean_period}
 
 
 The time interval in seconds at which to go through all the
@@ -178,7 +178,7 @@ modparam("cachedb_local", "cache_clean_period", 1200)
 ```
 
 
-#### cluster_id (int)
+#### cluster_id (int) {#param_cluster_id}
 
 
 Specifies the cluster ID which this instance will send to and receive
@@ -208,7 +208,7 @@ modparam("cachedb_local", "cluster_id", 1)
 ```
 
 
-#### cluster_persistency (string)
+#### cluster_persistency (string) {#param_cluster_persistency}
 
 
 Controls the behavior of the OpenSIPS local cachedb clustering following a restart.
@@ -243,7 +243,7 @@ modparam("cachedb_local", "cluster_persistency", "sync-from-cluster")
 ```
 
 
-#### enable_restart_persistency (int)
+#### enable_restart_persistency (int) {#param_enable_restart_persistency}
 
 
 Enable restart persistency using the persistent memory mechanism. Data is
@@ -271,10 +271,10 @@ modparam("cachedb_local", "enable_restart_persistency", yes)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### cache_remove_chunk([collection,] glob)
+#### cache_remove_chunk([collection,] glob) {#func_cache_remove_chunk}
 
 
 Remove all keys from local cache that match the *glob* pattern
@@ -305,10 +305,10 @@ This function can be used from all routes
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### cachedb_local:remove_chunk
+#### cachedb_local:remove_chunk {#mi_remove_chunk}
 
 
 Replaces obsolete MI command: *cache_remove_chunk*.
@@ -334,7 +334,7 @@ opensips-cli -x mi cachedb_local:remove_chunk "keyprefix*" collection
 ```
 
 
-#### cachedb_local:fetch_chunk
+#### cachedb_local:fetch_chunk {#mi_fetch_chunk}
 
 
 Replaces obsolete MI command: *cache_fetch_chunk*.
@@ -385,10 +385,10 @@ The parameter was removed because it was redundant. Since the
 			setting the default collection size using cache_collections paramter.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -420,7 +420,7 @@ The parameter was removed because it was redundant. Since the
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -446,10 +446,10 @@ The parameter was removed because it was redundant. Since the
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Dragus, Anca Vamanu.

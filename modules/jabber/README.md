@@ -6,7 +6,7 @@ description: "This is new version of Jabber module that integrates XODE XML pars
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is new version of Jabber module that integrates XODE 
@@ -179,7 +179,7 @@ For someone who is in Yahoo network the destination must be:
 		account--is something like sending messages to yourself.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -203,10 +203,10 @@ The following libraries or applications must be installed before running
 - *Expat* library.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 SQL URL of database.
@@ -225,7 +225,7 @@ modparam("jabber", "db_url", "mysql://username:password@host/sip_jab")
 ```
 
 
-#### jaddress (string)
+#### jaddress (string) {#param_jaddress}
 
 
 IP or hostname of Jabber server -- it must be the same as the value from <host>
@@ -245,7 +245,7 @@ modparam("jabber", "jaddress", "1.2.3.4")
 ```
 
 
-#### jport (integer)
+#### jport (integer) {#param_jport}
 
 
 Port number of Jabber server.
@@ -264,7 +264,7 @@ modparam("jabber", "jport", 1234)
 ```
 
 
-#### jdomain (string)
+#### jdomain (string) {#param_jdomain}
 
 
 Format: jabber.sipserver.com=<delim>. If the destination is for Jabber network
@@ -290,7 +290,7 @@ modparam("jabber", "jdomain", "jabber.sipserver.com=*")
 ```
 
 
-#### aliases (string)
+#### aliases (string) {#param_aliases}
 
 
 Aliases for IM networks.
@@ -323,7 +323,7 @@ modparam("jabber", "aliases", "1;msn.x.com=%")
 ```
 
 
-#### proxy (string)
+#### proxy (string) {#param_proxy}
 
 
 Outbound proxy address.
@@ -349,7 +349,7 @@ modparam("jabber", "proxy", "10.0.0.1:5060 sipserver.com:5060")
 ```
 
 
-#### registrar (string)
+#### registrar (string) {#param_registrar}
 
 
 The address in whose behalf the INFO and ERROR messages are sent.
@@ -368,7 +368,7 @@ modparam("jabber", "registrar", "jabber_gateway@127.0.0.1")
 ```
 
 
-#### workers (integer)
+#### workers (integer) {#param_workers}
 
 
 Number of workers.
@@ -387,7 +387,7 @@ modparam("jabber", "workers", 2)
 ```
 
 
-#### max_jobs (integer)
+#### max_jobs (integer) {#param_max_jobs}
 
 
 Maximum jobs per worker.
@@ -406,7 +406,7 @@ modparam("jabber", "max_jobs", 10)
 ```
 
 
-#### cache_time (integer)
+#### cache_time (integer) {#param_cache_time}
 
 
 Cache time of a Jabber connection.
@@ -425,7 +425,7 @@ modparam("jabber", "cache_time", 600)
 ```
 
 
-#### delay_time (integer)
+#### delay_time (integer) {#param_delay_time}
 
 
 Time to keep a SIP message (in seconds).
@@ -444,7 +444,7 @@ modparam("jabber", "delay_time", 90)
 ```
 
 
-#### sleep_time (integer)
+#### sleep_time (integer) {#param_sleep_time}
 
 
 Time between expired Jabber connections checking (in seconds).
@@ -463,7 +463,7 @@ modparam("jabber", "sleep_time", 20)
 ```
 
 
-#### check_time (integer)
+#### check_time (integer) {#param_check_time}
 
 
 Time between checking the status of JabberGW workers (in seconds).
@@ -482,7 +482,7 @@ modparam("jabber", "check_time", 20)
 ```
 
 
-#### priority (str)
+#### priority (str) {#param_priority}
 
 
 Presence priority for Jabber gateway.
@@ -501,10 +501,10 @@ modparam("jabber", "priority", "3")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### jab_send_message()
+#### jab_send_message() {#func_jab_send_message}
 
 
 Converts SIP MESSAGE message to a Jabber message and sends it to Jabber server.
@@ -523,7 +523,7 @@ jab_send_message();
 ```
 
 
-#### jab_join_jconf()
+#### jab_join_jconf() {#func_jab_join_jconf}
 
 
 Join a Jabber conference--the nickname, room name and conference server address
@@ -544,7 +544,7 @@ jab_join_jconf();
 ```
 
 
-#### jab_exit_jconf()
+#### jab_exit_jconf() {#func_jab_exit_jconf}
 
 
 Leave a Jabber conference--the nickname, room name and conference server address
@@ -564,7 +564,7 @@ jab_exit_jconf();
 ```
 
 
-#### jab_go_online()
+#### jab_go_online() {#func_jab_go_online}
 
 
 Register to the Jabber server with associated Jabber ID of the SIP user.
@@ -583,7 +583,7 @@ jab_go_online();
 ```
 
 
-#### jab_go_offline()
+#### jab_go_offline() {#func_jab_go_offline}
 
 
 Log off from Jabber server the associated Jabber ID of the SIP user.
@@ -602,10 +602,10 @@ jab_go_offline();
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -637,7 +637,7 @@ jab_go_offline();
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -663,10 +663,10 @@ jab_go_offline();
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

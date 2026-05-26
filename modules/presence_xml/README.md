@@ -6,7 +6,7 @@ description: "The module does specific handling for notify-subscribe events usin
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module does specific handling for notify-subscribe events using xml bodies.
@@ -20,7 +20,7 @@ This module takes the xcap permission rule documents from xcap_table.
 	in RFC 4745 and RFC 5025.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -48,10 +48,10 @@ The following libraries or applications must be installed before running
 - *libxml-dev*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### force_active (int)
+#### force_active (int) {#param_force_active}
 
 
 This parameter is used for permissions when handling Subscribe messages.
@@ -81,7 +81,7 @@ modparam("presence_xml", "force_active", 1)
 ```
 
 
-#### pidf_manipulation (int)
+#### pidf_manipulation (int) {#param_pidf_manipulation}
 
 
 Setting this parameter to 1 enables the features described in RFC 4827.
@@ -106,7 +106,7 @@ modparam("presence_xml", "pidf_manipulation", 1)
 ```
 
 
-#### xcap_server (str)
+#### xcap_server (str) {#param_xcap_server}
 
 
 The address of the xcap servers used for storage.
@@ -126,7 +126,7 @@ modparam("presence_xml", "xcap_server", "xcap_server.ag.org")
 ```
 
 
-#### pres_rules_auid (str)
+#### pres_rules_auid (str) {#param_pres_rules_auid}
 
 
 This parameter should be configured if you are using the non integrated xcap
@@ -143,7 +143,7 @@ modparam("presence_xml", "pres_rules_auid", "org.openmobilealliance.pres-rules")
 ```
 
 
-#### pres_rules_filename (str)
+#### pres_rules_filename (str) {#param_pres_rules_filename}
 
 
 This parameter should be configured if you are using the non integrated xcap
@@ -160,7 +160,7 @@ modparam("presence_xml", "pres_rules_filename", "pres-rules")
 ```
 
 
-#### generate_offline_body (str)
+#### generate_offline_body (str) {#param_generate_offline_body}
 
 
 This parameter should be set to 0 if you want to prevent OpenSIPS from automatically
@@ -178,7 +178,7 @@ modparam("presence_xml", "generate_offline_body", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None to be used in configuration file.
@@ -200,10 +200,10 @@ The module requires 1 table in OpenSIPS database: xcap. The SQL
 The module exports no function to be used in other OpenSIPS modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -235,7 +235,7 @@ The module exports no function to be used in other OpenSIPS modules.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -261,10 +261,10 @@ The module exports no function to be used in other OpenSIPS modules.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)).

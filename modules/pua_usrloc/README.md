@@ -6,7 +6,7 @@ description: "The pua_usrloc is the connector between usrloc and pua modules. It
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The pua_usrloc is the connector between usrloc and pua modules.
@@ -20,7 +20,7 @@ Using this module, phones which have no support for presence can
 		be seen as online/offline.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -43,10 +43,10 @@ The following libraries or applications must be installed before running
 - *libxml*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_domain (str)
+#### default_domain (str) {#param_default_domain}
 
 
 The default domain to use when constructing the presentity
@@ -66,7 +66,7 @@ modparam("pua_usrloc", "default_domain", "opensips.org")
 ```
 
 
-#### entity_prefix (str)
+#### entity_prefix (str) {#param_entity_prefix}
 
 
 The prefix when construstructing entity attribute to be added to
@@ -87,7 +87,7 @@ modparam("pua_usrloc", "entity_prefix", "pres")
 ```
 
 
-#### presence_server (str)
+#### presence_server (str) {#param_presence_server}
 
 
 The the address of the presence server. If set, it will be
@@ -105,10 +105,10 @@ modparam("pua_usrloc", "presence_server", "sip:pa@opensips.org:5075")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### pua_set_publish()
+#### pua_set_publish() {#func_pua_set_publish}
 
 
 The function is used to mark REGISTER requests that have to
@@ -127,10 +127,10 @@ if(is_method("REGISTER") && $fu=~"john@opensips.org")
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -162,7 +162,7 @@ if(is_method("REGISTER") && $fu=~"john@opensips.org")
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -188,10 +188,10 @@ if(is_method("REGISTER") && $fu=~"john@opensips.org")
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.

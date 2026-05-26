@@ -6,7 +6,7 @@ description: "The Exec module enables the execution of external commands from th
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Exec module enables the execution of external commands from the
@@ -40,7 +40,7 @@ NOTE: Any environment variables which are given to the exec module
 		throwing scripting errors.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -62,10 +62,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### setvars (integer)
+#### setvars (integer) {#param_setvars}
 
 
 Set to 1 to enable setting all above-mentioned environment variables
@@ -89,7 +89,7 @@ modparam("exec", "setvars", 1)
 ```
 
 
-#### time_to_kill (integer)
+#### time_to_kill (integer) {#param_time_to_kill}
 
 
 If set, this parameter specifies the longest time (in seconds) that a
@@ -120,10 +120,10 @@ modparam("exec", "time_to_kill", 20)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### exec(command, [stdin], [stdout], [stderr], [envavp])
+#### exec(command, [stdin], [stdout], [stderr], [envavp]) {#func_exec}
 
 
 Executes an external command. The input is passed to the standard input of the new
@@ -195,7 +195,7 @@ exec("/home/../myscript.sh", "this is my $var(input) for exec\n", , , $avp(env))
 ### Exported Asyncronous Functions
 
 
-#### exec(command, [stdin], [stdout], [stderr], [envavp])
+#### exec(command, [stdin], [stdout], [stderr], [envavp]) {#afunc_exec}
 
 
 Executes an external command. This function does exactly the same as
@@ -243,10 +243,10 @@ When imposing an execution timeout using
 		"/bin/dash" is one of these troublesome shell environments.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -278,7 +278,7 @@ When imposing an execution timeout using
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -304,10 +304,10 @@ When imposing an execution timeout using
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Dror Wald, Dan Pascu ([@danpascu](https://github.com/danpascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

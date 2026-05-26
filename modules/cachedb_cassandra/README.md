@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed to wor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed to work with
@@ -39,7 +39,7 @@ The underlying client library is compatible with Cassandra versions 2.1+.
 - *keys (in key:value pairs) may not contain spaces or control characters*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -63,10 +63,10 @@ The DataStax C/C++ driver for Cassandra and the libuv dependency
 				can be downloaded from: [http://downloads.datastax.com/cpp-driver/](http://downloads.datastax.com/cpp-driver/).
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The urls of the server groups that OpenSIPS will connect to in order
@@ -114,7 +114,7 @@ cache_remove("cassandra:cluster1","key");
 ```
 
 
-#### connect_timeout (int)
+#### connect_timeout (int) {#param_connect_timeout}
 
 
 The timeout in ms that will be triggered in case a connection attempt fails.
@@ -134,7 +134,7 @@ modparam("cachedb_cassandra", "connect_timeout",1000);
 ```
 
 
-#### query_timeout (int)
+#### query_timeout (int) {#param_query_timeout}
 
 
 The timeout in ms that will be triggered in case a Cassandra query takes too long.
@@ -154,7 +154,7 @@ modparam("cachedb_cassandra", "query_timeout",1000);
 ```
 
 
-#### wr_consistency_level (int)
+#### wr_consistency_level (int) {#param_wr_consistency_level}
 
 
 The consistency level desired for write operations.
@@ -186,7 +186,7 @@ modparam("cachedb_cassandra", "wr_consistency_level", "each_quorum");
 ```
 
 
-#### rd_consistency_level (int)
+#### rd_consistency_level (int) {#param_rd_consistency_level}
 
 
 The consistency level desired for write operations.
@@ -218,7 +218,7 @@ modparam("cachedb_cassandra", "rd_consistency_level", "quorum");
 ```
 
 
-#### exec_threshold (int)
+#### exec_threshold (int) {#param_exec_threshold}
 
 
 A cassandra cache query that lasts more than this threshold will
@@ -244,7 +244,7 @@ modparam("cachedb_cassandra", "exec_threshold", 100000)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
@@ -270,10 +270,10 @@ The table required for supporting the cache_add()/cache_sub()/cache_counter_fetc
 - *opensipsval* - with type "counter"
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -305,7 +305,7 @@ The table required for supporting the cache_add()/cache_sub()/cache_counter_fetc
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -331,10 +331,10 @@ The table required for supporting the cache_add()/cache_sub()/cache_counter_fetc
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Norman Brandinger ([@NormB](https://github.com/NormB)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

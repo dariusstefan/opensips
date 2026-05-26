@@ -6,7 +6,7 @@ description: "This module is used by OpenSIPS to communicate with RTPProxy, a me
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is used by OpenSIPS to communicate with RTPProxy, a media
@@ -124,7 +124,7 @@ To enable timeout notification there are several steps that you must follow:
 				https://opensips.org/pub/rtpproxy/
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -150,10 +150,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### rtpproxy_sock (string)
+#### rtpproxy_sock (string) {#param_rtpproxy_sock}
 
 
 Definition of socket(s) used to connect to (a set) RTPProxy. It may 
@@ -195,7 +195,7 @@ modparam("rtpproxy", "rtpproxy_sock", "2 == udp:localhost:22223|8.8.8.8")
 ```
 
 
-#### rtpproxy_disable_tout (integer)
+#### rtpproxy_disable_tout (integer) {#param_rtpproxy_disable_tout}
 
 
 Once RTPProxy was found unreachable and marked as disable, rtpproxy
@@ -216,7 +216,7 @@ modparam("rtpproxy", "rtpproxy_disable_tout", 20)
 ```
 
 
-#### rtpproxy_timeout (string)
+#### rtpproxy_timeout (string) {#param_rtpproxy_timeout}
 
 
 Timeout value in waiting for reply from RTPProxy.
@@ -235,7 +235,7 @@ modparam("rtpproxy", "rtpproxy_timeout", "0.2")
 ```
 
 
-#### rtpproxy_autobridge (integer)
+#### rtpproxy_autobridge (integer) {#param_rtpproxy_autobridge}
 
 
 Enable auto-bridging feature. Does not properly function when doing serial/parallel forking!
@@ -254,7 +254,7 @@ modparam("rtpproxy", "rtpproxy_autobridge", 1)
 ```
 
 
-#### rtpproxy_retr (integer)
+#### rtpproxy_retr (integer) {#param_rtpproxy_retr}
 
 
 How many times rtpproxy should retry to send and receive after
@@ -274,7 +274,7 @@ modparam("rtpproxy", "rtpproxy_retr", 2)
 ```
 
 
-#### default_set (integer)
+#### default_set (integer) {#param_default_set}
 
 
 The parameter indicates the default RTPProxy set to be used when
@@ -296,7 +296,7 @@ modparam("rtpproxy", "default_set", 1)
 ```
 
 
-#### nortpproxy_str (string)
+#### nortpproxy_str (string) {#param_nortpproxy_str}
 
 
 The parameter sets the SDP attribute used by rtpproxy to mark
@@ -322,7 +322,7 @@ modparam("rtpproxy", "nortpproxy_str", "a=sdpmangled:yes\r\n")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The database url. This parameter should be set if you want to 
@@ -348,7 +348,7 @@ modparam("rtpproxy", "db_url",
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The name of the database table containing definitions of
@@ -368,7 +368,7 @@ modparam("rtpproxy", "db_table", "nh_sockets")
 ```
 
 
-#### rtpp_socket_col (string)
+#### rtpp_socket_col (string) {#param_rtpp_socket_col}
 
 
 The name rtpp socket column in the database table.
@@ -387,7 +387,7 @@ modparam("rtpproxy", "rtpp_socket_col", "rtpp_socket")
 ```
 
 
-#### set_id_col (string)
+#### set_id_col (string) {#param_set_id_col}
 
 
 The name set id column in the database table.
@@ -406,7 +406,7 @@ modparam("rtpproxy", "set_id_col", "rtpp_set_id")
 ```
 
 
-#### rtpp_notify_socket (string)
+#### rtpp_notify_socket (string) {#param_rtpp_notify_socket}
 
 
 The socket OpenSIPS listens for notifications from RTPProxy.
@@ -431,7 +431,7 @@ modparam("rtpproxy", "rtpp_notify_socket", "/tmp/rtpproxy.unix")
 ```
 
 
-#### generated_sdp_port_min (integer)
+#### generated_sdp_port_min (integer) {#param_generated_sdp_port_min}
 
 
 When RTPProxy module needs to generate an SDP body,
@@ -452,7 +452,7 @@ modparam("rtpproxy", "generated_sdp_port_min", 10000)
 ```
 
 
-#### generated_sdp_port_max (integer)
+#### generated_sdp_port_max (integer) {#param_generated_sdp_port_max}
 
 
 When RTPProxy module needs to generate an SDP body,
@@ -473,7 +473,7 @@ modparam("rtpproxy", "generated_sdp_port_max", 30000)
 ```
 
 
-#### generated_sdp_media_ip (string)
+#### generated_sdp_media_ip (string) {#param_generated_sdp_media_ip}
 
 
 When RTPProxy module needs to generate an SDP body,
@@ -495,10 +495,10 @@ modparam("rtpproxy", "generated_sdp_media_ip", "10.0.0.1")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### rtpproxy_engage([[flags][, [ip_address][, [set_id][, [sock_var][, ret_var]]]]])
+#### rtpproxy_engage([[flags][, [ip_address][, [set_id][, [sock_var][, ret_var]]]]]) {#func_rtpproxy_engage}
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -620,7 +620,7 @@ if (is_method("INVITE") && has_totag()) {
 ```
 
 
-#### rtpproxy_offer([[flags][, [ip_address][, [set_id][, [sock_var][, [ret_var][, [body_var][, [bind_local]]]]]]]])
+#### rtpproxy_offer([[flags][, [ip_address][, [set_id][, [sock_var][, [ret_var][, [body_var][, [bind_local]]]]]]]]) {#func_rtpproxy_offer}
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -690,7 +690,7 @@ onreply_route[2]
 ```
 
 
-#### rtpproxy_answer([[flags][, [ip_address][, [set_id][, [sock_var][, [ret_var][, [body_var][, [bind_local]]]]]]]])
+#### rtpproxy_answer([[flags][, [ip_address][, [set_id][, [sock_var][, [ret_var][, [body_var][, [bind_local]]]]]]]]) {#func_rtpproxy_answer}
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -713,7 +713,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 See rtpproxy_offer() function example above for example.
 
 
-#### rtpproxy_unforce([[set_id][, sock_var]])
+#### rtpproxy_unforce([[set_id][, sock_var]]) {#func_rtpproxy_unforce}
 
 
 Tears down the RTPProxy session for the current call.
@@ -741,7 +741,7 @@ rtpproxy_unforce();
 
 
 #### rtpproxy_stream2uac(prompt_name, count[, [set_id][, sock_var]]),
-	    rtpproxy_stream2uas(prompt_name, count[, [set_id][, sock_var]])
+	    rtpproxy_stream2uas(prompt_name, count[, [set_id][, sock_var]]) {#rtpproxy_stream2xxx}
 
 
 Instruct the RTPproxy to stream prompt/announcement pre-encoded with
@@ -804,7 +804,7 @@ Meaning of the parameters is as follows:
 
 
 #### rtpproxy_stop_stream2uac([[set_id][, sock_var]]),
-	    rtpproxy_stop_stream2uas([[set_id][, sock_var]])
+	    rtpproxy_stop_stream2uas([[set_id][, sock_var]]) {#rtpproxy_stop_stream2xxx}
 
 
 Stop streaming of announcement/prompt/MOH started previously by the
@@ -824,7 +824,7 @@ Meaning of the parameters is as follows:
 These functions can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-#### rtpproxy_start_recording([[set_id][, [sock_var][, [flags][, [destination][, mediastream]]]]])
+#### rtpproxy_start_recording([[set_id][, [sock_var][, [flags][, [destination][, mediastream]]]]]) {#func_rtpproxy_start_recording}
 
 
 This command will send a signal to the RTP-Proxy to record 
@@ -873,7 +873,7 @@ rtpproxy_start_recording(,,,"udp:127.0.0.1:60000", 1);
 ```
 
 
-#### rtpproxy_stats(up_pvar, down_var, sent_var, fail_var[, [set_id][, sock_var]])
+#### rtpproxy_stats(up_pvar, down_var, sent_var, fail_var[, [set_id][, sock_var]]) {#func_rtpproxy_stats}
 
 
 This command gathers call RTP statistics from RTP-Proxy.
@@ -911,7 +911,7 @@ xlog("RTP statistics for $ci: up=$var(up) down=$var(down) sent=$var(sent) fail=$
 ```
 
 
-#### rtpproxy_all_stats(stats_avp[, [set_id][, sock_var]])
+#### rtpproxy_all_stats(stats_avp[, [set_id][, sock_var]]) {#func_rtpproxy_all_stats}
 
 
 This command gathers all RTP statistics available from RTP-Proxy.
@@ -975,10 +975,10 @@ xlog("RTP statistics for $ci: dropped=$(avp(stats)[4])\n");
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rtpproxy:enable
+#### rtpproxy:enable {#mi_enable}
 
 
 Replaces obsolete MI command: *rtpproxy_enable*.
@@ -1017,7 +1017,7 @@ $ opensips-cli -x mi rtpproxy:enable udp:192.168.2.133:8081 0 3
 ```
 
 
-#### rtpproxy:show
+#### rtpproxy:show {#mi_show}
 
 
 Replaces obsolete MI command: *rtpproxy_show*.
@@ -1041,7 +1041,7 @@ $ opensips-cli -x mi rtpproxy:show
 ```
 
 
-#### rtpproxy:reload
+#### rtpproxy:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *rtpproxy_reload*.
@@ -1067,10 +1067,10 @@ $ opensips-cli -x mi rtpproxy:reload
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_RTPPROXY_STATUS
+#### E_RTPPROXY_STATUS {#event_E_RTPPROXY_STATUS}
 
 
 This event is raised when a RTPProxy server changes it's status to
@@ -1087,7 +1087,7 @@ Parameters:
 				*inactive* if the instance was deactivated.
 
 
-#### E_RTPPROXY_DTMF
+#### E_RTPPROXY_DTMF {#event_E_RTPPROXY_DTMF}
 
 
 This event is raised when a RTPProxy server sends a DTMF
@@ -1151,10 +1151,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1186,7 +1186,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1212,10 +1212,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Mikko Lehto, Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

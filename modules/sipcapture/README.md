@@ -6,7 +6,7 @@ description: "Offer a possibility to store incoming/outgoing SIP messages in dat
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Offer a possibility to store incoming/outgoing SIP messages in database.
@@ -35,7 +35,7 @@ opensips-cli -x mi sipcapture:capture on
 opensips-cli -x mi sipcapture:capture off
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -62,7 +62,7 @@ The following libraries or applications must be installed before running
 ### Parameters
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 Database URL.
@@ -81,7 +81,7 @@ modparam("sipcapture", "db_url", "mysql://user:passwd@host/dbname")
 ```
 
 
-#### table_name (str)
+#### table_name (str) {#param_table_name}
 
 
 Name of the table's name where to store the SIP messages. Since
@@ -106,7 +106,7 @@ modparam("sipcapture", "table_name", "homer_%m_%d")
 ```
 
 
-#### rtcp_table_name (str)
+#### rtcp_table_name (str) {#param_rtcp_table_name}
 
 
 Name of the table's name where to store packets captured
@@ -132,7 +132,7 @@ modparam("sipcapture", "rtcp_table_name", "homer_%m_%d_%H")
 ```
 
 
-#### capture_on (integer)
+#### capture_on (integer) {#param_capture_on}
 
 
 Parameter to enable/disable capture globaly (on(1)/off(0))
@@ -151,7 +151,7 @@ modparam("sipcapture", "capture_on", 1)
 ```
 
 
-#### hep_capture_on (integer)
+#### hep_capture_on (integer) {#param_hep_capture_on}
 
 
 Parameter to enable/disable capture of HEP (on(1)/off(0))
@@ -170,7 +170,7 @@ modparam("sipcapture", "hep_capture_on", 1)
 ```
 
 
-#### max_async_queries (integer)
+#### max_async_queries (integer) {#param_max_async_queries}
 
 
 Parameter to set the maximum number of 'INSERT' queries of captured
@@ -194,7 +194,7 @@ modparam("sipcapture", "max_async_queries", 3)
 ```
 
 
-#### raw_ipip_capture_on (integer)
+#### raw_ipip_capture_on (integer) {#param_raw_ipip_capture_on}
 
 
 Parameter to enable/disable IPIP capturing (on(1)/off(0))
@@ -213,7 +213,7 @@ modparam("sipcapture", "raw_ipip_capture_on", 1)
 ```
 
 
-#### raw_moni_capture_on (integer)
+#### raw_moni_capture_on (integer) {#param_raw_moni_capture_on}
 
 
 Parameter to enable/disable monitoring/mirroring port capturing (on(1)/off(0))
@@ -235,7 +235,7 @@ modparam("sipcapture", "raw_moni_capture_on", 1)
 ```
 
 
-#### raw_socket_listen (string)
+#### raw_socket_listen (string) {#param_raw_socket_listen}
 
 
 Parameter indicate an listen IP address of RAW socket for IPIP capturing.
@@ -264,7 +264,7 @@ modparam("sipcapture", "raw_socket_listen", "10.0.0.1:5060")
 ```
 
 
-#### raw_interface (string)
+#### raw_interface (string) {#param_raw_interface}
 
 
 Name of the interface to bind on the raw socket.
@@ -283,7 +283,7 @@ modparam("sipcapture", "raw_interface", "eth0")
 ```
 
 
-#### raw_sock_children (integer)
+#### raw_sock_children (integer) {#param_raw_sock_children}
 
 
 Parameter define how much children must be created to listen the raw socket.
@@ -302,7 +302,7 @@ modparam("sipcapture", "raw_sock_children", 6)
 ```
 
 
-#### promiscuous_on (integer)
+#### promiscuous_on (integer) {#param_promiscuous_on}
 
 
 Parameter to enable/disable promiscuous mode on the raw socket.
@@ -322,7 +322,7 @@ modparam("sipcapture", "promiscuous_on", 1)
 ```
 
 
-#### raw_moni_bpf_on (integer)
+#### raw_moni_bpf_on (integer) {#param_raw_moni_bpf_on}
 
 
 Activate Linux Socket Filter (LSF based on BPF) on the mirroring interface.
@@ -343,7 +343,7 @@ modparam("sipcapture", "raw_moni_bpf_on", 1)
 ```
 
 
-#### capture_node (str)
+#### capture_node (str) {#param_capture_node}
 
 
 Name of the capture node.
@@ -362,7 +362,7 @@ modparam("sipcapture", "capture_node", "homer03")
 ```
 
 
-#### hep_route (string)
+#### hep_route (string) {#param_hep_route}
 
 
 Specifies what path your hep messages should take. Possible
@@ -399,10 +399,10 @@ route[my_hep_route] {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sip_capture([table_name], [custom_field1], [custom_field2], [custom_field3])
+#### sip_capture([table_name], [custom_field1], [custom_field2], [custom_field3]) {#func_sip_capture}
 
 
 Save the message into the database.
@@ -441,7 +441,7 @@ if (is_method("REGISTER"))
 ```
 
 
-#### report_capture(correlation_id, [table_name], [proto_type])
+#### report_capture(correlation_id, [table_name], [proto_type]) {#func_report_capture}
 
 
 Save the message into the database. If you want set the protocol type you have to define
@@ -493,7 +493,7 @@ This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,BRANCH_
 ```
 
 
-#### hep_set(chunk_id, chunk_data, [data_type], [vendor_id])
+#### hep_set(chunk_id, chunk_data, [data_type], [vendor_id]) {#func_hep_set}
 
 
 Set a hep chunk. If not exists, it shall be added.
@@ -661,7 +661,7 @@ hep_set("32", "192.168.5.14", "inet4-addr", "3")
 ```
 
 
-#### hep_get(chunk_id, data_type, [chunk_data_pv], [vendor_id_pv])
+#### hep_get(chunk_id, data_type, [chunk_data_pv], [vendor_id_pv]) {#func_hep_get}
 
 
 Set a hep chunk. If not exists, it shall be added.
@@ -704,7 +704,7 @@ hep_set("31", "uint32", $var(data), $var(vid))
 ```
 
 
-#### hep_del(chunk_id)
+#### hep_del(chunk_id) {#func_hep_del}
 
 
 Removes a hep chunk.
@@ -732,7 +732,7 @@ hep_del("25"); /* removes chunk with chunk id 25 */
 ```
 
 
-#### hep_relay()
+#### hep_relay() {#func_hep_relay}
 
 
 Relay a message statefully to destination indicated in current URI.
@@ -761,7 +761,7 @@ if (!hep_relay()) {
 ```
 
 
-#### hep_resume_sip()
+#### hep_resume_sip() {#func_hep_resume_sip}
 
 
 Break hep route execution and resume into the main request route.
@@ -793,7 +793,7 @@ route[my_hep_route] {
 ### Exported Async Functions
 
 
-#### sip_capture()
+#### sip_capture() {#afunc_sip_capture}
 
 
 Save the message inside the database. The query is being done
@@ -820,10 +820,10 @@ route[capture_resume] {
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $hep_net
+#### $hep_net {#pv_hep_net}
 
 
 Holds layer 3 and 4 information(IP addresses and ports) about
@@ -867,7 +867,7 @@ Possible values for it's name are the following:
 ```
 
 
-#### HEPVERSION (string, int)
+#### HEPVERSION (string, int) {#pv_HEPVERSION}
 
 
 Holds the version of the hep packet received on the interface.
@@ -896,7 +896,7 @@ Holds the version of the hep packet received on the interface.
 ### MI Commands
 
 
-#### sipcapture:capture
+#### sipcapture:capture {#mi_capture}
 
 
 Replaces obsolete MI command: *sip_capture*.
@@ -952,10 +952,10 @@ Before running OpenSIPS with sipcapture, you have to setup the database
 		3. Mirroring port capturing works only on Linux.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -987,7 +987,7 @@ Before running OpenSIPS with sipcapture, you have to setup the database
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1013,10 +1013,10 @@ Before running OpenSIPS with sipcapture, you have to setup the database
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Alexandr Dubovikov ([@adubovikov](https://github.com/adubovikov)).

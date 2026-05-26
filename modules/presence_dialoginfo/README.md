@@ -6,7 +6,7 @@ description: "The module enables the handling of \"Event: dialog\" (as defined i
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module enables the handling of "Event: dialog" (as defined 
@@ -136,7 +136,7 @@ Known issues:
 					but not very smart.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -154,10 +154,10 @@ The following modules must be loaded before this module:
 None.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### force_single_dialog (int)
+#### force_single_dialog (int) {#param_force_single_dialog}
 
 
 By default the module aggregates all available dialog info
@@ -190,16 +190,16 @@ modparam("presence_dialoginfo", "force_single_dialog", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None to be used in configuration file.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -231,7 +231,7 @@ None to be used in configuration file.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -257,10 +257,10 @@ None to be used in configuration file.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.

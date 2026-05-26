@@ -6,7 +6,7 @@ description: "This module implements a secure Binary communication protocol over
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements a secure Binary communication protocol
@@ -26,7 +26,7 @@ socket= bins:127.0.0.1:5557	# change the listening IP and port
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -50,10 +50,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### bins_port (integer)
+#### bins_port (integer) {#param_bins_port}
 
 
 The default port to be used by all BINS listeners.
@@ -72,7 +72,7 @@ modparam("proto_bins", "bins_port", 5557)
 ```
 
 
-#### bins_handshake_timeout (integer)
+#### bins_handshake_timeout (integer) {#param_bins_handshake_timeout}
 
 
 Sets the timeout (in milliseconds) for the SSL/TLS handshake
@@ -99,7 +99,7 @@ param("proto_tls", "bins_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### bins_send_timeout (integer)
+#### bins_send_timeout (integer) {#param_bins_send_timeout}
 
 
 Sets the timeout (in milliseconds) for blocking send operations
@@ -123,7 +123,7 @@ modparam("proto_bins", "bins_send_timeout", 200)
 ```
 
 
-#### bins_max_msg_chunks (integer)
+#### bins_max_msg_chunks (integer) {#param_bins_max_msg_chunks}
 
 
 The maximum number of chunks in which a BINS message is
@@ -148,7 +148,7 @@ modparam("proto_bins", "bins_max_msg_chunks", 8)
 ```
 
 
-#### bins_async (integer)
+#### bins_async (integer) {#param_bins_async}
 
 
 Specifies whether the TCP/TLS connect and write operations
@@ -170,7 +170,7 @@ modparam("proto_bins", "bins_async", 0)
 ```
 
 
-#### bins_async_max_postponed_chunks (integer)
+#### bins_async_max_postponed_chunks (integer) {#param_bins_async_max_postponed_chunks}
 
 
 If bins_async is enabled, this specifies the maximum number of
@@ -192,7 +192,7 @@ modparam("proto_bins", "bins_async_max_postponed_chunks", 16)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -224,7 +224,7 @@ modparam("proto_bins", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_on (int)
+#### trace_on (int) {#param_trace_on}
 
 
 This controls whether tracing for tls is on or not. You still need to define
@@ -242,10 +242,10 @@ modparam("proto_bins", "trace_on", 1)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### bins:trace
+#### bins:trace {#mi_trace}
 
 
 Replaces obsolete MI command: *tls_trace*.
@@ -275,10 +275,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -303,7 +303,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -322,10 +322,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

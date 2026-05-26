@@ -6,14 +6,14 @@ description: "This module adds support for implementing STIR/SHAKEN (RFC 8224, R
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module adds support for implementing STIR/SHAKEN (RFC 8224, RFC 8588)
 	Authentication and Verification services in OpenSIPS.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before running
 - *wolfssl (libwolfssl)*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### auth_date_freshness (integer)
+#### auth_date_freshness (integer) {#param_auth_date_freshness}
 
 
 The maximum number of seconds that the value in the Date header field
@@ -62,7 +62,7 @@ modparam("stir_shaken", "auth_date_freshness", 300)
 ```
 
 
-#### verify_date_freshness (integer)
+#### verify_date_freshness (integer) {#param_verify_date_freshness}
 
 
 The maximum number of seconds that the value in the Date header field can be
@@ -94,7 +94,7 @@ modparam("stir_shaken", "verify_date_freshness", 300)
 ```
 
 
-#### ca_list (string)
+#### ca_list (string) {#param_ca_list}
 
 
 Path to a file containing trusted CA certificates for the verifier.
@@ -111,7 +111,7 @@ modparam("stir_shaken", "ca_list", "/stir_certs/ca_list.pem")
 ```
 
 
-#### ca_dir (string)
+#### ca_dir (string) {#param_ca_dir}
 
 
 Path to a directory containing trusted CA certificates for the verifier.
@@ -130,7 +130,7 @@ modparam("stir_shaken", "ca_dir", "/stir_certs/cas")
 ```
 
 
-#### crl_list (string)
+#### crl_list (string) {#param_crl_list}
 
 
 Path to a file containing certificate revocation lists (CRLs) for the verifier.
@@ -146,7 +146,7 @@ modparam("stir_shaken", "crl_list", "/stir_certs/crl_list.pem")
 ```
 
 
-#### crl_dir (string)
+#### crl_dir (string) {#param_crl_dir}
 
 
 Path to a directory containing certificate revocation lists (CRLs) for
@@ -165,7 +165,7 @@ modparam("stir_shaken", "crl_dir", "/stir_certs/crls")
 ```
 
 
-#### e164_strict_mode (integer)
+#### e164_strict_mode (integer) {#param_e164_strict_mode}
 
 
 Require a leading *"+"* to be present in
@@ -189,7 +189,7 @@ modparam("stir_shaken", "e164_strict_mode", 1)
 ```
 
 
-#### e164_max_length (integer)
+#### e164_max_length (integer) {#param_e164_max_length}
 
 
 This parameter allows the 15-digit number length restriction of the E.164
@@ -211,7 +211,7 @@ modparam("stir_shaken", "e164_max_length", 16)
 ```
 
 
-#### require_date_hdr (integer)
+#### require_date_hdr (integer) {#param_require_date_hdr}
 
 
 Specifies whether the Date header is mandatory when doing verification
@@ -242,10 +242,10 @@ modparam("stir_shaken", "require_date_hdr", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### stir_shaken_auth(attest, origid, cert, pkey, x5u, [orig], [dest], [out])
+#### stir_shaken_auth(attest, origid, cert, pkey, x5u, [orig], [dest], [out]) {#func_stir_shaken_auth}
 
 
 This function performs the steps of an authentication service. Before
@@ -326,7 +326,7 @@ stir_shaken_auth("A", "4437c7eb-8f7a-4f0e-a863-f53a0e60251a",
 ```
 
 
-#### stir_shaken_verify(cert, err_code, err_reason, [orig], [dest])
+#### stir_shaken_verify(cert, err_code, err_reason, [orig], [dest]) {#func_stir_shaken_verify}
 
 
 This function performs the steps of an verification service.
@@ -384,7 +384,7 @@ if ($var(rc) < -1) {
 ```
 
 
-#### stir_shaken_check()
+#### stir_shaken_check() {#func_stir_shaken_check}
 
 
 This function checks the Identity header in order to validate the
@@ -418,7 +418,7 @@ if (stir_shaken_check()) {
 ```
 
 
-#### stir_shaken_check_cert()
+#### stir_shaken_check_cert() {#func_stir_shaken_check_cert}
 
 
 This function checks if the current time falls within the given
@@ -451,7 +451,7 @@ if (!stir_shaken_check_cert($var(cert))) {
 ```
 
 
-#### stir_shaken_disengagement(token)
+#### stir_shaken_disengagement(token) {#stir_shaken_disengagement}
 
 
 This function add P-Identity-Bypass header with token value at the end of SIP headers.
@@ -486,10 +486,10 @@ if ( is_method("INVITE") && !has_totag()) {
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $identity(field)
+#### $identity(field) {#pv_identity}
 
 
 This is a read-only pseudo-variable that provides access to the
@@ -527,10 +527,10 @@ This is a read-only pseudo-variable that provides access to the
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### stir_shaken:ca_reload
+#### stir_shaken:ca_reload {#mi_ca_reload}
 
 
 Replaces obsolete MI command: *stir_shaken_ca_reload*.
@@ -557,7 +557,7 @@ opensips-cli -x mi stir_shaken:ca_reload
 ```
 
 
-#### stir_shaken:crl_reload
+#### stir_shaken:crl_reload {#mi_crl_reload}
 
 
 Replaces obsolete MI command: *stir_shaken_crl_reload*.
@@ -584,10 +584,10 @@ opensips-cli -x mi stir_shaken:crl_reload
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -619,7 +619,7 @@ opensips-cli -x mi stir_shaken:crl_reload
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -645,10 +645,10 @@ opensips-cli -x mi stir_shaken:crl_reload
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), MonkeyTester, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

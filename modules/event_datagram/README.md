@@ -6,7 +6,7 @@ description: "This is a module which provides a UNIX/UDP SOCKET transport layer 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module which provides a UNIX/UDP SOCKET transport layer 
@@ -33,7 +33,7 @@ An UDP socket should follow this syntax:
 		*'udp:' address ':' port*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -55,13 +55,13 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 No parameter exported by this module.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -147,10 +147,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -175,7 +175,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -194,10 +194,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

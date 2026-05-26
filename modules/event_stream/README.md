@@ -6,7 +6,7 @@ description: "This module provides a TCP transport layer implementation for the 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a TCP transport layer implementation for the Event
@@ -68,7 +68,7 @@ The JSON-RPC command is built as it follows:
 				contains values, the parameters will be sent as an array.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -90,10 +90,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### reliable_mode (integer)
+#### reliable_mode (integer) {#param_reliable_mode}
 
 
 This parameter controls the way the
@@ -127,7 +127,7 @@ modparam("event_stream", "reliable_mode", yes)
 ```
 
 
-#### timeout (integer)
+#### timeout (integer) {#param_timeout}
 
 
 Specified the amount of milliseconds the module
@@ -157,7 +157,7 @@ modparam("event_stream", "timeout", 200)
 ```
 
 
-#### event_param (string)
+#### event_param (string) {#param_event_param}
 
 
 By default, the name of the event subscribed to is not
@@ -181,7 +181,7 @@ modparam("event_stream", "event_param", "opensips_event")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -322,10 +322,10 @@ route {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -352,7 +352,7 @@ route {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -373,10 +373,10 @@ route {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

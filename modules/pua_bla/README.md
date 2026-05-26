@@ -6,14 +6,14 @@ description: "The pua_bla module enables Bridged Line Appearances support accord
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The pua_bla module enables Bridged Line Appearances support according to 
 		 the specifications in draft-anil-sipping-bla-03.txt.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -37,10 +37,10 @@ The following libraries or applications must be installed before running
 - *libxml*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_domain(str)
+#### default_domain(str) {#param_default_domain}
 
 
 The default domain for the registered users to be used when
@@ -60,7 +60,7 @@ modparam("pua_bla", "default_domain", "opensips.org")
 ```
 
 
-#### header_name(str)
+#### header_name(str) {#param_header_name}
 
 
 The name of the header to be added to Publish requests.
@@ -82,7 +82,7 @@ modparam("pua_bla", "header_name", "Sender")
 ```
 
 
-#### outbound_proxy(str)
+#### outbound_proxy(str) {#param_outbound_proxy}
 
 
 The outbound_proxy uri to be used when sending Subscribe requests.
@@ -101,7 +101,7 @@ modparam("pua_bla", "outbound_proxy", "sip:proxy@opensips.org")
 ```
 
 
-#### server_address(str)
+#### server_address(str) {#param_server_address}
 
 
 The IP address of the server.
@@ -117,7 +117,7 @@ modparam("pua_bla", "server_address", "sip:bla@160.34.23.12")
 ```
 
 
-#### presence_server(str)
+#### presence_server(str) {#param_presence_server}
 
 
 The address of the presence server - will be used as
@@ -138,10 +138,10 @@ modparam("pua_bla", "presence_server", "sip:pa@opensips.org")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### bla_set_flag()
+#### bla_set_flag() {#func_bla_set_flag}
 
 
 The function is used to mark REGISTER requests made to a BLA AOR.
@@ -160,7 +160,7 @@ if(is_method("REGISTER") && $tu=~"bla_aor@opensips.org")
 ```
 
 
-#### bla_handle_notify()
+#### bla_handle_notify() {#func_bla_handle_notify}
 
 
 The function handles Notify requests sent from phones on the
@@ -183,10 +183,10 @@ if(is_method("NOTIFY") && $tu=~"bla_aor@opensips.org")
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -218,7 +218,7 @@ if(is_method("NOTIFY") && $tu=~"bla_aor@opensips.org")
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -244,10 +244,10 @@ if(is_method("NOTIFY") && $tu=~"bla_aor@opensips.org")
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

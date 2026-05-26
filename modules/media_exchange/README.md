@@ -6,7 +6,7 @@ description: "This module provides the means to exchange media SDP between diffe
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides the means to exchange media SDP between different
@@ -55,10 +55,10 @@ This module can provide different functionalities and can be used in various
 			Media Server to the participants of an ongoing call.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#media_exchange_modules_dependencies}
 
 
 The following modules must be loaded before this module:
@@ -72,7 +72,7 @@ The following modules must be loaded before this module:
 					manipulating calls with the Media Server.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#media_exchange_external_dependencies}
 
 
 The following libraries or applications must be installed before
@@ -82,10 +82,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### media_fork_to_uri(URI[, leg][, headers][, medianum][, instance])
+#### media_fork_to_uri(URI[, leg][, headers][, medianum][, instance]) {#func_media_fork_to_uri}
 
 
 Behaves as a B2B user agent client to initiate a call to a SIP
@@ -133,7 +133,7 @@ if (!has_totag() && is_method("INVITE"))
 ```
 
 
-#### media_fork_from_call(callid[, leg][, medianum][, instance])
+#### media_fork_from_call(callid[, leg][, medianum][, instance]) {#func_media_fork_from_call}
 
 
 Starts streaming the media of an existing proxied call, identified
@@ -204,7 +204,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-#### media_fork_pause([leg][, medianum][, instance])
+#### media_fork_pause([leg][, medianum][, instance]) {#func_media_fork_pause}
 
 
 Pauses an existing RTP media streaming session. This function does
@@ -243,7 +243,7 @@ if (has_totag() && is_method("INVITE"))
 ```
 
 
-#### media_fork_resume([leg][, medianum][, instance])
+#### media_fork_resume([leg][, medianum][, instance]) {#func_media_fork_resume}
 
 
 Resumes the RTP media stream of an existing session/call. This function
@@ -281,7 +281,7 @@ if (has_totag() && is_method("INVITE"))
 ```
 
 
-#### media_exchange_from_uri(URI[, leg][, body][, headers][, nohold])
+#### media_exchange_from_uri(URI[, leg][, body][, headers][, nohold]) {#func_media_exchange_from_uri}
 
 
 Originates a call to the specified URI. The SDP in the response is
@@ -331,7 +331,7 @@ if (has_totag() && is_method("INVITE") && is_audio_on_hold())
 ```
 
 
-#### media_exchange_to_call(callid[, leg][, nohold])
+#### media_exchange_to_call(callid[, leg][, nohold]) {#func_media_exchange_to_call}
 
 
 Pushes the SDP of a new call received in an existing proxied
@@ -377,7 +377,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-#### media_terminate([leg][, nohold][, instance])
+#### media_terminate([leg][, nohold][, instance]) {#func_media_terminate}
 
 
 Terminates an ongoing media session exchange, whether the media is
@@ -427,7 +427,7 @@ if (has_totag() && is_method("INVITE") && !is_audio_on_hold())
 ```
 
 
-#### media_handle_indialog()
+#### media_handle_indialog() {#func_media_handle_indialog}
 
 
 Searches for an existing media session started for any leg,
@@ -480,10 +480,10 @@ if (has_totag() && loose_route()) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### media_exchange:fork_from_call_to_uri
+#### media_exchange:fork_from_call_to_uri {#mi_fork_from_call_to_uri}
 
 
 Replaces obsolete MI command: *media_fork_from_call_to_uri*.
@@ -533,7 +533,7 @@ opensips-cli -x mi media_exchange:fork_from_call_to_uri \
 ```
 
 
-#### media_exchange:from_call_to_uri
+#### media_exchange:from_call_to_uri {#mi_from_call_to_uri}
 
 
 Replaces obsolete MI command: *media_exchange_from_call_to_uri*.
@@ -579,7 +579,7 @@ opensips-cli -x mi media_exchange:from_call_to_uri \
 ```
 
 
-#### media_exchange:from_call_to_uri_body
+#### media_exchange:from_call_to_uri_body {#mi_from_call_to_uri_body}
 
 
 Replaces obsolete MI command: *media_exchange_from_call_to_uri_body*.
@@ -593,7 +593,7 @@ MI command that does the same thing as the
 		[mi from call to uri](#mi_from_call_to_uri).
 
 
-#### media_exchange:terminate
+#### media_exchange:terminate {#mi_terminate}
 
 
 Replaces obsolete MI command: *media_terminate*.
@@ -640,10 +640,10 @@ opensips-cli -x mi media_exchange:terminate \
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -670,7 +670,7 @@ opensips-cli -x mi media_exchange:terminate \
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -691,10 +691,10 @@ opensips-cli -x mi media_exchange:terminate \
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

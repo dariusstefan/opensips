@@ -6,7 +6,7 @@ description: "The emergency module provides emergency call treatment for OpenSIP
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The emergency module provides emergency call treatment for OpenSIPS, following the architecture i2 specification of the American entity NENA. (National Emergency Number Association). The NENA solution routes the emergency call to a closer gateway (ESGW) and this forward the call to a PSAP(call center responsible for answering emergency calls) that serves the area of ​​the caller, so this must consider the handling and transport of caller location information in the SIP protocol.
@@ -40,7 +40,7 @@ The emergency module allows the OpenSIPS play the role of a Call Server, a Proxy
 		The Call Server uses this information to treat the call. When the emergency call ends, it must notify the Redirect Server that inform to VPC to release the resources.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -64,10 +64,10 @@ The following libraries or applications must be installed before
 - *libcurl*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The database url must be specified.
@@ -87,7 +87,7 @@ modparam("emergency", "db_url", "mysql://opensips:opensipsrw@localhost/opensips�
 ```
 
 
-#### db_table_routing (string)
+#### db_table_routing (string) {#param_db_table_routing}
 
 
 The name of the db table storing routing information to emergency calls.
@@ -107,7 +107,7 @@ modparam("emergency", "db_table_routing", "emergency_routing")
 ```
 
 
-#### db_table_report (string)
+#### db_table_report (string) {#param_db_table_report}
 
 
 The name of the db table that stores the emergency call report.
@@ -127,7 +127,7 @@ modparam("emergency", "db_table_report", "emergency_report")
 ```
 
 
-#### db_table_provider (string)
+#### db_table_provider (string) {#param_db_table_provider}
 
 
 The name of the db table that stores the nodes information of organization involved in emergency calls.
@@ -147,7 +147,7 @@ modparam("emergency", "db_table_provider", "emergency_service_provider")
 ```
 
 
-#### proxy_role (integer)
+#### proxy_role (integer) {#param_proxy_role}
 
 
 This parameter define what role the opensips will take to treat emergency   
@@ -188,7 +188,7 @@ modparam("emergency", "proxy_role", 0))
 ```
 
 
-#### url_vpc (string)
+#### url_vpc (string) {#param_url_vpc}
 
 
 The VPC url that opensips request the routing information to emergency 
@@ -209,7 +209,7 @@ modparam("emergency", "url_vpc", “192.168.0.103:5060”)
 ```
 
 
-#### emergency_codes (string)
+#### emergency_codes (string) {#param_emergency_codes}
 
 
 Local emergency number. Opensips uses this number to recognize a emergency 
@@ -233,7 +233,7 @@ modparam("emergency", "emergency_codes", “911-us emegency code”)
 ```
 
 
-#### timer_interval (interger)
+#### timer_interval (interger) {#param_timer_interval}
 
 
 Sets the time interval polling to make the copy in memory of the 
@@ -254,7 +254,7 @@ modparam("emergency","timer_interval",20)
 ```
 
 
-#### contingency_hostname (string)
+#### contingency_hostname (string) {#param_contingency_hostname}
 
 
 The contingency_hostname is the url of the server que will route the call 
@@ -275,7 +275,7 @@ modparam("emergency","contingency_hostname",“176.34,29.102:5060”)
 ```
 
 
-#### emergency_call_server (string)
+#### emergency_call_server (string) {#param_emergency_call_server}
 
 
 The emergency_call_server is the url of the Routing Proxy/Redirect Server
@@ -298,10 +298,10 @@ modparam("emergency","emergency_call_server",“124.78.29.123:5060”)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### emergency_call()
+#### emergency_call() {#func_emergency_call}
 
 
 Checks whether the incoming call is an emergency call, case it is treats, and  
@@ -333,7 +333,7 @@ This function can be used from the *REQUEST* routes.
 ```
 
 
-#### failure()
+#### failure() {#func_failure}
 
 
 This function is used when trying to route the emergency call to the 
@@ -364,10 +364,10 @@ This function can be used from the *FAILURE* routes.
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -399,7 +399,7 @@ This function can be used from the *FAILURE* routes.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -425,10 +425,10 @@ This function can be used from the *FAILURE* routes.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Evandro Villaron ([@evillaron](https://github.com/evillaron)).

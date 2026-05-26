@@ -6,7 +6,7 @@ description: "The B2BUA implementation in OpenSIPS is separated in two layers: a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The B2BUA implementation in OpenSIPS is separated in two layers:
@@ -36,7 +36,7 @@ High Availability for B2B sessions can be achieved by enabling the clustering su
 	[cluster_id](https://opensips.org/docs/modules/3.1.x/b2b_entities.html#param_cluster_id) modparam from *b2b_entities*).
 
 
-### Scenario Logic
+### Scenario Logic {#scenario_logic}
 
 
 After initializing a B2B session, the call legs will be handled by the b2b_logic
@@ -58,7 +58,7 @@ Some messages will be handled automatically by the module and will not enter the
 		same effects as calling [b2b handle reply](#func_b2b_handle_reply) from such a route if it were defined.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -73,10 +73,10 @@ Some messages will be handled automatically by the module and will not enter the
 No libraries or applications required before running OpenSIPS with this module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The size of the hash table that stores the session entities.
@@ -97,7 +97,7 @@ modparam("b2b_logic", "hash_size", 10)
 ```
 
 
-#### script_req_route (str)
+#### script_req_route (str) {#param_script_req_route}
 
 
 The name of the script route to be called when requests belonging to
@@ -115,7 +115,7 @@ modparam("b2b_logic", "script_req_route", "b2b_request")
 ```
 
 
-#### script_reply_route (str)
+#### script_reply_route (str) {#param_script_reply_route}
 
 
 The name of the script route to be called when replies belonging to
@@ -133,7 +133,7 @@ modparam("b2b_logic", "script_reply_route", "b2b_reply")
 ```
 
 
-#### cleanup_period (int)
+#### cleanup_period (int) {#param_cleanup_period}
 
 
 The time interval at which to search for an hanged b2b context.
@@ -156,7 +156,7 @@ modparam("b2b_logic", "cleanup_period", 60)
 ```
 
 
-#### custom_headers_regexp (str)
+#### custom_headers_regexp (str) {#param_custom_headers_regexp}
 
 
 Regexp to search SIP header by names that should be passed
@@ -203,7 +203,7 @@ modparam("b2b_logic", "custom_headers_regexp", "/^x-/i")
 ```
 
 
-#### custom_headers (str)
+#### custom_headers (str) {#param_custom_headers}
 
 
 A list of SIP header names delimited by ';' that should be passed
@@ -240,7 +240,7 @@ modparam("b2b_logic", "custom_headers", "User-Agent;Date")
 ```
 
 
-#### custom_contact_header_params (str)
+#### custom_contact_header_params (str) {#param_custom_contact_header_param}
 
 
 A list of Contact header parameters, delimited by ';', that should
@@ -267,7 +267,7 @@ modparam("b2b_logic", "custom_contact_header_params", "audio;video")
 ```
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 Database URL.
@@ -284,7 +284,7 @@ modparam("b2b_logic", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensips"
 ```
 
 
-#### cachedb_url (str)
+#### cachedb_url (str) {#param_cachedb_url}
 
 
 URL of a NoSQL database to be used. Only Redis is supported
@@ -302,7 +302,7 @@ modparam("b2b_logic", "cachedb_url", "redis://localhost:6379/")
 ```
 
 
-#### cachedb_key_prefix (string)
+#### cachedb_key_prefix (string) {#param_cachedb_key_prefix}
 
 
 Prefix to use for every key set in the NoSQL database.
@@ -322,7 +322,7 @@ modparam("b2b_logic", "cachedb_key_prefix", "b2b")
 ```
 
 
-#### update_period (int)
+#### update_period (int) {#param_update_period}
 
 
 The time interval at which to update the info in database.
@@ -342,7 +342,7 @@ modparam("b2b_logic", "update_period", 60)
 ```
 
 
-#### max_duration (int)
+#### max_duration (int) {#param_max_duration}
 
 
 The maximum duration of a call. This value is applied as the default
@@ -368,7 +368,7 @@ modparam("b2b_logic", "max_duration", 7200)
 ```
 
 
-#### contact_user (int)
+#### contact_user (int) {#param_contact_user}
 
 
 If set to 1, adds user from From: header to generated Contact:
@@ -388,7 +388,7 @@ modparam("b2b_logic", "contact_user", 1)
 ```
 
 
-#### b2bl_from_spec_param (string)
+#### b2bl_from_spec_param (string) {#param_b2bl_from_spec_param}
 
 
 The name of the pseudo variable for storing the new
@@ -418,7 +418,7 @@ route{
 ```
 
 
-#### server_address (str)
+#### server_address (str) {#param_server_address}
 
 
 The IP address of the machine that will be used as Contact in
@@ -453,7 +453,7 @@ modparam("b2b_logic", "server_address", "sip:$socket_in(advertised_ip):$socket_i
 ```
 
 
-#### init_callid_hdr (str)
+#### init_callid_hdr (str) {#param_init_callid_hdr}
 
 
 The module offers the possibility to insert the original callid in a header
@@ -472,7 +472,7 @@ modparam("b2b_logic", "init_callid_hdr", "Init-CallID")
 ```
 
 
-#### db_mode (int)
+#### db_mode (int) {#param_db_mode}
 
 
 The B2B modules have support for the 3 type of database storage
@@ -497,7 +497,7 @@ modparam("b2b_logic", "db_mode", 1)
 ```
 
 
-#### db_table (str)
+#### db_table (str) {#param_db_table}
 
 
 Name of the database table to be used
@@ -517,7 +517,7 @@ modparam("b2b_logic", "db_table", "some_table_name")
 ```
 
 
-#### b2bl_th_init_timeout (int)
+#### b2bl_th_init_timeout (int) {#param_b2bl_th_init_timeout}
 
 
 Call setup timeout for topology hiding scenario.
@@ -537,7 +537,7 @@ modparam("b2b_logic", "b2bl_th_init_timeout", 60)
 ```
 
 
-#### b2bl_early_update (int)
+#### b2bl_early_update (int) {#param_b2bl_early_update}
 
 
 Allow bridging of calls in early stage by issuing a "UPDATE" request
@@ -561,7 +561,7 @@ modparam("b2b_logic", "b2bl_early_update", 1)
 ```
 
 
-#### old_entity_term_delay (int)
+#### old_entity_term_delay (int) {#param_old_entity_term_delay}
 
 
 When the *b2b_bridge_request* is being used with the
@@ -585,11 +585,11 @@ modparam("b2b_logic", "old_entity_term_delay", 2) # delay the BYE with 2 seconds
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### b2b_init_request(id, [flags], [req_route],
-			[reply_route])
+			[reply_route]) {#func_b2b_init_request}
 
 
 This function initializes a new B2B session based on an initial INVITE.
@@ -658,7 +658,7 @@ if(is_method("INVITE") && !has_totag() && prepaid_user()) {
 
 
 #### b2b_server_new(id, [adv_contact], [extra_hdrs],
-			[extra_hdr_bodies])
+			[extra_hdr_bodies]) {#func_b2b_server_new}
 
 
 This function creates a new server entity (dialog where OpenSIPS acts as a UAS)
@@ -700,7 +700,7 @@ if(is_method("INVITE") && !has_totag()) {
 
 
 #### b2b_client_new(id, dest_uri, [proxy], [from_dname],
-			[adv_contact], [extra_hdrs], [extra_hdr_bodies], [flags])
+			[adv_contact], [extra_hdrs], [extra_hdr_bodies], [flags]) {#func_b2b_client_new}
 
 
 This function creates a new client entity (dialog where OpenSIPS acts as a UAC)
@@ -749,7 +749,7 @@ b2b_client_new("client1", "sip:alice@opensips.org");
 ```
 
 
-#### b2b_bridge(entity1, entity2, [provmedia_uri], [flags])
+#### b2b_bridge(entity1, entity2, [provmedia_uri], [flags]) {#func_b2b_bridge}
 
 
 This function bridges two entities, in the context of an existing B2B session
@@ -814,7 +814,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### b2b_bridge_retry(new_entity)
+#### b2b_bridge_retry(new_entity) {#func_b2b_bridge_retry}
 
 
 This function can be used to retry a failed bridging action by contacting
@@ -852,7 +852,7 @@ route[b2b_logic_reply] {
 ```
 
 
-#### b2b_pass_request()
+#### b2b_pass_request() {#func_b2b_pass_request}
 
 
 This function passes a request belonging to an existing B2B session
@@ -881,7 +881,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### b2b_handle_reply([flags])
+#### b2b_handle_reply([flags]) {#func_b2b_handle_reply}
 
 
 This function processes the received reply by taking the appropriate actions
@@ -920,7 +920,7 @@ route[b2b_logic_reply] {
 ```
 
 
-#### b2b_send_reply(code, reason[, headers[, body]])
+#### b2b_send_reply(code, reason[, headers[, body]]) {#func_b2b_send_reply}
 
 
 This function sends a reply to the entity that sent the current
@@ -955,7 +955,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### b2b_delete_entity()
+#### b2b_delete_entity() {#func_b2b_delete_entity}
 
 
 This function deletes the entity that sent the current request.
@@ -981,7 +981,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### b2b_end_dlg_leg()
+#### b2b_end_dlg_leg() {#func_b2b_end_dlg_leg}
 
 
 This function sends a BYE request to the entity that sent
@@ -1009,7 +1009,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### b2b_bridge_request(b2bl_key,entity_no, [adv_contact], [flags])
+#### b2b_bridge_request(b2bl_key,entity_no, [adv_contact], [flags]) {#func_b2b_bridge_request}
 
 
 This function will bridge an initial INVITE with one of the
@@ -1058,7 +1058,7 @@ if ($rU == "pickup") {
 #### b2b_trigger_scenario(scenario, [params], peer1,
 			[extra_headers_peer1], [extra_headers_contents_peer1],
 			peer2
-			[extra_headers_peer2], [extra_headers_contents_peer2])
+			[extra_headers_peer2], [extra_headers_contents_peer2]) {#func_b2b_trigger_scenario}
 
 
 This function triggers a certain scenario from routing script, e.g.
@@ -1118,10 +1118,10 @@ if(is_method("REFER") && !has_totag()) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### b2b_logic:trigger_scenario
+#### b2b_logic:trigger_scenario {#mi_trigger_scenario}
 
 
 Replaces obsolete MI command: *b2b_trigger_scenario*.
@@ -1163,7 +1163,7 @@ MI FIFO Command Format:
 ```
 
 
-#### b2b_logic:bridge
+#### b2b_logic:bridge {#mi_bridge}
 
 
 Replaces obsolete MI command: *b2b_bridge*.
@@ -1212,7 +1212,7 @@ opensips-cli Command Format:
 ```
 
 
-#### b2b_logic:list
+#### b2b_logic:list {#mi_list}
 
 
 Replaces obsolete MI command: *b2b_list*.
@@ -1236,7 +1236,7 @@ MI FIFO Command Format:
 ```
 
 
-#### b2b_logic:terminate_call
+#### b2b_logic:terminate_call {#mi_terminate_call}
 
 
 Replaces obsolete MI command: *b2b_terminate_call*.
@@ -1265,10 +1265,10 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $b2b_logic.key
+#### $b2b_logic.key {#b2b_logic.key}
 
 
 This is a read-only variable that returns the b2b_logic key of the
@@ -1298,7 +1298,7 @@ local_route {
 ```
 
 
-#### $b2b_logic.entity(field)[idx]
+#### $b2b_logic.entity(field)[idx] {#b2b_logic.entity}
 
 
 This is a read-only variable that returns information about the
@@ -1358,7 +1358,7 @@ route[b2b_request] {
 ```
 
 
-#### $b2b_logic.ctx(key)
+#### $b2b_logic.ctx(key) {#b2b_logic.ctx}
 
 
 This is a read-write variable that provides access to a custom
@@ -1402,7 +1402,7 @@ route[b2b_reply] {
 ```
 
 
-#### $b2b_logic.scenario(key)
+#### $b2b_logic.scenario(key) {#b2b_logic.scenario}
 
 
 This is a read-only variable that returns the scenario ID of the ongoing
@@ -1431,7 +1431,7 @@ route[b2b_logic_request] {
 ```
 
 
-#### $b2b_logic.peer(b2b_key)
+#### $b2b_logic.peer(b2b_key) {#b2b_logic.peer}
 
 
 This is a read-only variable that returns the peer discussing with
@@ -1665,10 +1665,10 @@ The second argument is the b2bl_key of an existing call.
 The third argument is the entity identifier.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1700,7 +1700,7 @@ The third argument is the entity identifier.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1726,10 +1726,10 @@ The third argument is the entity identifier.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Norman Brandinger ([@NormB](https://github.com/NormB)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).

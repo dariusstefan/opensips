@@ -6,7 +6,7 @@ description: "The Perl Virtual Database (VDB) provides a virtualization framewor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Perl Virtual Database (VDB) provides a virtualization framework
@@ -39,7 +39,7 @@ This configuration options tells acc module that it should use the
 		to relay the database requests.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -62,13 +62,13 @@ The following libraries or applications must be installed before running
 				module documentation).
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 *None*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 *None*.
@@ -294,10 +294,10 @@ The standard Adapter/VTab pattern lets the user choose between three options on 
 				a reference to the object).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -329,7 +329,7 @@ The standard Adapter/VTab pattern lets the user choose between three options on 
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -355,10 +355,10 @@ The standard Adapter/VTab pattern lets the user choose between three options on 
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Bastian Friedrich.

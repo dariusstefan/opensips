@@ -6,7 +6,7 @@ description: "The presence_xcapdiff is an OpenSIPS module that adds support for 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The presence_xcapdiff is an OpenSIPS module that adds support for the
@@ -31,7 +31,7 @@ The module is intended to be used with the OpenXCAP server (www.openxcap.org),
       with any XCAP server.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -59,10 +59,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -90,7 +90,7 @@ The following libraries or applications must be installed before
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -112,10 +112,10 @@ The following libraries or applications must be installed before
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Denis Bilenko.

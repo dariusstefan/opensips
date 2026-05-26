@@ -6,7 +6,7 @@ description: "This module provides a function to answer OPTIONS requests which a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a function to answer OPTIONS requests which 
@@ -22,7 +22,7 @@ To answer OPTIONS request directed to your server is the easiest
 		on the network layer).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -45,10 +45,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### accept (string)
+#### accept (string) {#param_accept}
 
 
 This parameter is the content of the Accept header field. If
@@ -72,7 +72,7 @@ modparam("options", "accept", "application/*")
 ```
 
 
-#### accept_encoding (string)
+#### accept_encoding (string) {#param_accept_encoding}
 
 
 This parameter is the content of the Accept-Encoding header field.
@@ -94,7 +94,7 @@ modparam("options", "accept_encoding", "gzip")
 ```
 
 
-#### accept_language (string)
+#### accept_language (string) {#param_accept_language}
 
 
 This parameter is the content of the Accept-Language header field.
@@ -118,7 +118,7 @@ modparam("options", "accept_language", "de")
 ```
 
 
-#### support (string)
+#### support (string) {#param_support}
 
 
 This parameter is the content of the Support header field.
@@ -140,10 +140,10 @@ modparam("options", "support", "100rel")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### options_reply()
+#### options_reply() {#func_options_reply}
 
 
 This function checks if the request method is OPTIONS and
@@ -183,10 +183,10 @@ if (is_myself("$rd")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -218,7 +218,7 @@ if (is_myself("$rd")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -244,10 +244,10 @@ if (is_myself("$rd")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Nils Ohlmeier.

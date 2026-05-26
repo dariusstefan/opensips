@@ -6,7 +6,7 @@ description: "The *config* module enables dynamic, runtime configuration of Open
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *config*
@@ -34,7 +34,7 @@ All configuration variables are stored in OpenSIPS' internal
 				the database.
 
 
-#### Restart Persistent Memory
+#### Restart Persistent Memory {#restart_persistent_memory}
 
 
 By default, the configuration cache is initialized
@@ -58,7 +58,7 @@ If needed, you can still manually re-initialize the cache from the
 			database by running the [mi reload](#mi_reload) MI command.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -80,10 +80,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database URL used to load the initial configuration values,
@@ -104,7 +104,7 @@ modparam("config", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 Name of the table where configuration entries are stored.
@@ -123,7 +123,7 @@ modparam("config", "table_name", "configuration")
 ```
 
 
-#### name_column (string)
+#### name_column (string) {#param_name_column}
 
 
 Name of the column storing configuration variable names.
@@ -142,7 +142,7 @@ modparam("config", "name_column", "key")
 ```
 
 
-#### value_column (string)
+#### value_column (string) {#param_value_column}
 
 
 Name of the column storing configuration variable values.
@@ -161,7 +161,7 @@ modparam("config", "value_column", "val")
 ```
 
 
-#### description_column (string)
+#### description_column (string) {#param_description_column}
 
 
 Name of the column storing variable descriptions.
@@ -180,7 +180,7 @@ modparam("config", "description_column", "desc")
 ```
 
 
-#### enable_restart_persistency (integer)
+#### enable_restart_persistency (integer) {#param_enable_rpm}
 
 
 Enables restart persistency. Check the
@@ -200,7 +200,7 @@ modparam("config", "restart_persistent_memory", yes)
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 Size of the internal hash table used to store config variables.
@@ -221,10 +221,10 @@ modparam("config", "hash_size", 32)
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pv}
 
 
-#### $config(name)
+#### $config(name) {#pv_config}
 
 
 Returns the value of the given config variable by name.
@@ -243,7 +243,7 @@ Returns the value of the given config variable by name.
 ```
 
 
-#### $config.description(name)
+#### $config.description(name) {#pv_config_desc}
 
 
 Returns the description of a config variable if available.
@@ -263,10 +263,10 @@ This variable is read-only.
 ```
 
 
-### MI Commands
+### MI Commands {#mi_commands}
 
 
-#### config:reload
+#### config:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *config_reload*.
@@ -286,7 +286,7 @@ MI FIFO Command Format:
 ```
 
 
-#### config:list
+#### config:list {#mi_list}
 
 
 Replaces obsolete MI command: *config_list*.
@@ -311,7 +311,7 @@ MI FIFO Command Format:
 ```
 
 
-#### config:push
+#### config:push {#mi_push}
 
 
 Replaces obsolete MI command: *config_push*.
@@ -341,7 +341,7 @@ MI FIFO Command Format:
 ```
 
 
-#### config:push_bulk
+#### config:push_bulk {#mi_push_bulk}
 
 
 Replaces obsolete MI command: *config_push_bulk*.
@@ -384,7 +384,7 @@ MI FIFO Command Format:
 The command returns the number of values successfully pushed.
 
 
-#### config:flush
+#### config:flush {#mi_flush}
 
 
 Replaces obsolete MI command: *config_flush*.
@@ -415,10 +415,10 @@ MI FIFO Command Format:
 The command returns the number of values successfully flushed.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -438,7 +438,7 @@ The command returns the number of values successfully flushed.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -452,10 +452,10 @@ The command returns the number of values successfully flushed.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

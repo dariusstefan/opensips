@@ -6,7 +6,7 @@ description: "This module contains functions that are used to perform digest aut
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module contains functions that are used to perform digest 
@@ -63,7 +63,7 @@ The RPID value may be fetch via this mechanism.
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -85,10 +85,10 @@ The module depends on the following modules (in the other words
 This module does not depend on any external library.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -107,7 +107,7 @@ modparam("auth_aaa", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### auth_service_type (integer)
+#### auth_service_type (integer) {#param_auth_service_type}
 
 
 This is the value of the Service-Type aaa attribute to be used when
@@ -130,7 +130,7 @@ modparam("auth_aaa", "auth_service_type", 15)
 ```
 
 
-#### check_service_type (integer)
+#### check_service_type (integer) {#param_check_service_type}
 
 
 AAA service type used by `aaa_does_uri_exist` and
@@ -150,7 +150,7 @@ modparam("auth_aaa", "check_service_type", 11)
 ```
 
 
-#### use_ruri_flag (string)
+#### use_ruri_flag (string) {#param_use_ruri_flag}
 
 
 When this parameter is set to the value other than "NULL" and the
@@ -176,10 +176,10 @@ modparam("auth_aaa", "use_ruri_flag", "USE_RURI_FLAG")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### aaa_www_authorize(realm, [uri_user])
+#### aaa_www_authorize(realm, [uri_user]) {#func_aaa_www_authorize}
 
 
 The function verifies credentials according to 
@@ -243,7 +243,7 @@ if (!aaa_www_authorize("siphub.net"))
 ```
 
 
-#### aaa_proxy_authorize(realm, [uri_user])
+#### aaa_proxy_authorize(realm, [uri_user]) {#func_aaa_proxy_authorize}
 
 
 The function verifies credentials according to 
@@ -298,7 +298,7 @@ if (!aaa_proxy_authorize($pd, $pU))    # Realm and URI user are taken
 ```
 
 
-#### aaa_does_uri_exist([sip_uri])
+#### aaa_does_uri_exist([sip_uri]) {#func_aaa_does_uri_exist}
 
 
 Checks from Radius if the SIP URI stored in the "sip_uri" parameter
@@ -334,7 +334,7 @@ if (aaa_does_uri_exist()) {
 ```
 
 
-#### aaa_does_uri_user_exist([sip_uri])
+#### aaa_does_uri_user_exist([sip_uri]) {#func_aaa_does_uri_user_exist}
 
 
 Similar to aaa_does_uri_exist, but check is done
@@ -358,10 +358,10 @@ if (aaa_does_uri_user_exist()) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -393,7 +393,7 @@ if (aaa_does_uri_user_exist()) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -419,10 +419,10 @@ if (aaa_does_uri_user_exist()) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Jan Janak ([@janakj](https://github.com/janakj)).

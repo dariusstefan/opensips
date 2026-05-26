@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed to wor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed to work with a
@@ -49,7 +49,7 @@ OpenSIPS will auto-detect availability of the RedisJSON support when necessary a
 		the appropriate messages.
 
 
-### Redis Cluster Support (Topology)
+### Redis Cluster Support (Topology) {#cluster_support}
 
 
 When connecting to a Redis Cluster, the module automatically detects
@@ -138,7 +138,7 @@ If the braces are empty (*{}*) or there is no
 - *keys (in key:value pairs) may not contain spaces or control characters*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -168,10 +168,10 @@ If TLS connections are enabled via the [use tls](#param_use_tls) modparam,
 				*hiredis* needs to be compiled with TLS support.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -206,7 +206,7 @@ cache_remove("redis:cluster1", "key");
 ```
 
 
-##### Authentication
+##### Authentication {#cachedb_url_auth}
 
 
 The module supports three authentication modes based on the URL format:
@@ -234,7 +234,7 @@ When connecting to a Redis Cluster with authentication, all discovered
 			cluster nodes use the same credentials from the URL.
 
 
-##### Unix Socket
+##### Unix Socket {#cachedb_url_unix_socket}
 
 
 Starting with this version, the module supports connecting to a
@@ -283,7 +283,7 @@ The [mi redis cluster info](#mi_redis_cluster_info) MI command will display
 			works normally with Unix socket connections.
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -305,7 +305,7 @@ modparam("cachedb_redis", "connect_timeout",1000)
 ```
 
 
-#### query_timeout (integer)
+#### query_timeout (integer) {#param_query_timeout}
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -327,7 +327,7 @@ modparam("cachedb_redis", "query_timeout",1000)
 ```
 
 
-#### shutdown_on_error (integer)
+#### shutdown_on_error (integer) {#param_shutdown_on_error}
 
 
 By setting this parameter to 1, OpenSIPS will abort startup if
@@ -350,7 +350,7 @@ modparam("cachedb_redis", "shutdown_on_error", 1)
 ```
 
 
-#### lazy_connect (integer)
+#### lazy_connect (integer) {#param_lazy_connect}
 
 
 By setting this parameter to 1, OpenSIPS will defer establishing
@@ -382,7 +382,7 @@ modparam("cachedb_redis", "lazy_connect", 1)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for Redis connections.
@@ -421,7 +421,7 @@ modparam("cachedb_redis", "cachedb_url","redis:tls_group://localhost:6379/?tls_d
 ```
 
 
-#### ftsearch_index_name (string)
+#### ftsearch_index_name (string) {#param_ftsearch_index_name}
 
 
 Only relevant with *RedisJSON* and
@@ -443,7 +443,7 @@ modparam("cachedb_redis", "ftsearch_index_name", "ix::usrloc")
 ```
 
 
-#### ftsearch_json_prefix (string)
+#### ftsearch_json_prefix (string) {#param_ftsearch_json_prefix}
 
 
 Only relevant with *RedisJSON* and
@@ -465,7 +465,7 @@ modparam("cachedb_redis", "ftsearch_json_prefix", "userlocation:")
 ```
 
 
-#### ftsearch_max_results (integer)
+#### ftsearch_max_results (integer) {#param_ftsearch_max_results}
 
 
 Only relevant with *RedisJSON* and
@@ -487,7 +487,7 @@ modparam("cachedb_redis", "ftsearch_max_results", 100)
 ```
 
 
-#### redis_keepalive (integer)
+#### redis_keepalive (integer) {#param_redis_keepalive}
 
 
 TCP keepalive interval in seconds for Redis connections. When set
@@ -520,7 +520,7 @@ modparam("cachedb_redis", "redis_keepalive", 0)
 ```
 
 
-#### ftsearch_json_mset_expire (integer)
+#### ftsearch_json_mset_expire (integer) {#param_ftsearch_json_mset_expire}
 
 
 Only relevant with *RedisJSON* and
@@ -543,17 +543,17 @@ modparam("cachedb_redis", "ftsearch_json_mset_expire", 7200)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
 		in configuration script.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### redis_cluster_info
+#### redis_cluster_info {#mi_redis_cluster_info}
 
 
 Displays detailed information about all Redis connections managed
@@ -615,7 +615,7 @@ opensips-cli -x mi redis_cluster_info group=local
 ```
 
 
-#### redis_cluster_refresh
+#### redis_cluster_refresh {#mi_redis_cluster_refresh}
 
 
 Forces an immediate topology refresh on Redis Cluster connections.
@@ -655,7 +655,7 @@ opensips-cli -x mi redis_cluster_refresh group=local
 ```
 
 
-#### redis_ping_nodes
+#### redis_ping_nodes {#mi_redis_ping_nodes}
 
 
 Sends a PING command to each Redis node and reports per-node
@@ -700,24 +700,24 @@ opensips-cli -x mi redis_ping_nodes group=local
 ```
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
-#### redis_queries
+#### redis_queries {#stat_redis_queries}
 
 
 Total number of successful Redis queries executed across all
 			connections and processes.
 
 
-#### redis_queries_failed
+#### redis_queries_failed {#stat_redis_queries_failed}
 
 
 Total number of failed Redis queries (NULL replies from hiredis
 			or Redis error responses other than MOVED).
 
 
-#### redis_moved
+#### redis_moved {#stat_redis_moved}
 
 
 Total number of MOVED redirections received from Redis Cluster
@@ -726,7 +726,7 @@ Total number of MOVED redirections received from Redis Cluster
 			correct node.
 
 
-#### redis_topology_refreshes
+#### redis_topology_refreshes {#stat_redis_topology_refreshes}
 
 
 Total number of cluster topology refreshes performed (via
@@ -778,10 +778,10 @@ Here are a couple examples of running some Redis queries :
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -813,7 +813,7 @@ Here are a couple examples of running some Redis queries :
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -839,10 +839,10 @@ Here are a couple examples of running some Redis queries :
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Debian, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

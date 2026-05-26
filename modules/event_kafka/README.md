@@ -6,7 +6,7 @@ description: "This module is an implementation of an [Apache Kafka](https://kafk
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of an
@@ -16,7 +16,7 @@ This module is an implementation of an
 		publish messages to Kafka brokers.
 
 
-### Kafka socket syntax
+### Kafka socket syntax {#kafka_socket_syntax}
 
 
 *'kafka:' brokers '/' topic ['?' properties]*
@@ -60,7 +60,7 @@ The record published to Kafka will also include the Call-ID of the current
 		provided in the event socket.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -88,10 +88,10 @@ The following libraries or applications must be installed before
 			repositories.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### broker_id (string)
+#### broker_id (string) {#param_broker_id}
 
 
 This parameter specifies the configuration for a Kafka broker
@@ -122,11 +122,11 @@ modparam("event_kafka", "broker_id", "[k1]127.0.0.1:9092/topic1?g.linger.ms=100&
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### kafka_publish(broker_id, message, [key], 
-				[report_route])
+				[report_route]) {#func_kafka_publish}
 
 
 Publishes a message to a Kafka broker (or cluster). As the actual
@@ -191,10 +191,10 @@ The function has the following parameters:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -220,7 +220,7 @@ The function has the following parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -240,10 +240,10 @@ The function has the following parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

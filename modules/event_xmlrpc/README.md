@@ -6,7 +6,7 @@ description: "This module is an implementation of an XMLRPC client used to notif
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of an XMLRPC client used to notify
@@ -45,7 +45,7 @@ Meanings:
 						XMLRPC server.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -67,10 +67,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### use_struct_param (integer)
+#### use_struct_param (integer) {#param_use_struct_param}
 
 
 When raising an event, pack the name and value of the
@@ -93,7 +93,7 @@ modparam("event_xmlrpc", "use_struct_param", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -142,10 +142,10 @@ Content-length: 240.
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -172,7 +172,7 @@ Content-length: 240.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -193,10 +193,10 @@ Content-length: 240.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

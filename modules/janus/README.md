@@ -3,10 +3,10 @@ title: "JANUS Module"
 description: "The *\"janus\"* module is a C driver for the Janus websocket protocol. It can interact with one or more Janus servers either by issuing commands to them, or by receiving events from them."
 ---
 
-## Admin Guide
+## Admin Guide {#sec-admin-guide}
 
 
-### Overview
+### Overview {#overview}
 
 
 The *"janus"* module is a C driver for the
@@ -19,10 +19,10 @@ This driver can be seen as a centralized Janus connection manager.
 	It will connect to each Janus server, establish the connection hanler ID and the clients can be transparent from the connection handler ID point of view, simply passing the desired Janus commands that they want to run.
 
 
-### External Libraries or Applications
+### External Libraries or Applications {#sec-external-dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#sec-module-dependencies}
 
 
 The following modules must be loaded together with this module:
@@ -38,10 +38,10 @@ The following libraries or applications must be installed before
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### janus_send_timeout (integer)
+#### janus_send_timeout (integer) {#param_janus_send_timeout}
 
 
 Time in milliseconds after a Janus WebSocket connection will be closed if it is not available for blocking writing in this interval (and OpenSIPS wants to send something on it).
@@ -60,7 +60,7 @@ modparam("janus", "janus_send_timeout", 2000)
 ```
 
 
-#### janus_max_msg_chunks (integer)
+#### janus_max_msg_chunks (integer) {#param_janus_max_msg_chunks}
 
 
 The maximum number of chunks in which a Janus message is expected to arrive via WebSocket. If a received packet is more fragmented than this, the connection is dropped
@@ -79,7 +79,7 @@ modparam("janus", "janus_max_msg_chunks", 8)
 ```
 
 
-#### janus_cmd_timeout (integer)
+#### janus_cmd_timeout (integer) {#param_janus_cmd_timeout}
 
 
 The maximally allowed duration for the execution of an Janus command.
@@ -99,7 +99,7 @@ modparam("janus", "janus_cmd_timeout", 3000)
 ```
 
 
-#### janus_cmd_polling_itv (integer)
+#### janus_cmd_polling_itv (integer) {#param_janus_cmd_polling_itv}
 
 
 The sleep interval used when polling for an Janus command response. Since the
@@ -121,7 +121,7 @@ modparam("janus", "janus_cmd_polling_itv", 3000)
 ```
 
 
-#### janus_ping_interval (integer)
+#### janus_ping_interval (integer) {#param_janus_ping_interval}
 
 
 The time interval at which OpenSIPS will do keepalive pinging on the Janus connect
@@ -140,7 +140,7 @@ modparam("janus", "janus_ping_interval", 10)
 ```
 
 
-#### janus_db_url (string)
+#### janus_db_url (string) {#param_janus_db_url}
 
 
 The DB URL from where OpenSIPS will load the list of Janus connection
@@ -159,7 +159,7 @@ modparam("janus", "janus_db_url", "mysql://root@localhost/opensips")
 ```
 
 
-#### janus_db_table (string)
+#### janus_db_table (string) {#param_janus_db_table}
 
 
 The DB Table from where OpenSIPS will load the list of Janus connection
@@ -178,10 +178,10 @@ modparam("janus", "janus_db_table", "my_janus_table")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### janus_send_requeest(janus_id, janus_command[, response_var])
+#### janus_send_requeest(janus_id, janus_command[, response_var]) {#func_janus_send_request}
 
 
 Run an arbitrary command on an arbitrary Janus socket. The
@@ -243,10 +243,10 @@ This function can be used from any route.
 ```
 
 
-#### Exported Events
+#### Exported Events {#exported_events}
 
 
-##### E_JANUS_EVENT
+##### E_JANUS_EVENT {#event_E_JANUS_EVENT}
 
 
 This event is raised when a notification is received from a Janus server.
@@ -284,10 +284,10 @@ event_route[E_JANUS_EVENT] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -313,7 +313,7 @@ event_route[E_JANUS_EVENT] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -333,10 +333,10 @@ event_route[E_JANUS_EVENT] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

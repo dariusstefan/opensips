@@ -6,7 +6,7 @@ description: "The module provides a simple mechanism for DOS protection - DOS ba
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module provides a simple mechanism for DOS protection - DOS based
@@ -46,7 +46,7 @@ There are 2 ways of using this module (as detecting flood attacks and
 				detected, the module will automatically drop the packages.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -68,10 +68,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### sampling_time_unit (integer)
+#### sampling_time_unit (integer) {#param_sampling_time_unit}
 
 
 Time period used for sampling (or the sampling accuracy ;-) ). The
@@ -98,7 +98,7 @@ modparam("pike", "sampling_time_unit", 10)
 ```
 
 
-#### reqs_density_per_unit (integer)
+#### reqs_density_per_unit (integer) {#param_reqs_density_per_unit}
 
 
 How many requests should be allowed per sampling_time_unit before
@@ -120,7 +120,7 @@ modparam("pike", "reqs_density_per_unit", 30)
 ```
 
 
-#### remove_latency (integer)
+#### remove_latency (integer) {#param_remove_latency}
 
 
 For how long the IP address will be kept in memory after the last
@@ -148,7 +148,7 @@ modparam("pike", "remove_latency", 130)
 ```
 
 
-#### check_route (integer)
+#### check_route (integer) {#param_check_route}
 
 
 The name of the script route to be triggers (in automatic way) when a
@@ -180,7 +180,7 @@ route[pike]{
 ```
 
 
-#### pike_log_level (integer)
+#### pike_log_level (integer) {#param_pike_log_level}
 
 
 Log level to be used by module to auto report the blocking (only first
@@ -200,10 +200,10 @@ modparam("pike", "pike_log_level", -1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### pike_check_req()
+#### pike_check_req() {#func_pike_check_req}
 
 
 Process the source IP of the current request and returns false if
@@ -236,10 +236,10 @@ if (!pike_check_req()) { exit; };
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### pike:list
+#### pike:list {#mi_list}
 
 
 Replaces obsolete MI command: *pike_list*.
@@ -263,7 +263,7 @@ MI FIFO Command Format:
 ```
 
 
-#### pike:rm
+#### pike:rm {#mi_rm}
 
 
 Replaces obsolete MI command: *pike_rm*.
@@ -290,10 +290,10 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_PIKE_BLOCKED
+#### E_PIKE_BLOCKED {#event_E_PIKE_BLOCKED}
 
 
 This event is raised when the *pike* module
@@ -306,7 +306,7 @@ Parameters:
 - *ip* - the IP address that has been blocked.
 
 
-### Provided Status/Report Identifiers
+### Provided Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "pike" Status/Report group, only with
@@ -382,10 +382,10 @@ So, for IPv4 (n = 4) will be 3x and for IPv6 (n = 16) will be 9x. The minimum nu
 	to turn an address red is x.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -417,7 +417,7 @@ So, for IPv4 (n = 4) will be 3x and for IPv6 (n = 16) will be 9x. The minimum nu
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -443,10 +443,10 @@ So, for IPv4 (n = 4) will be 3x and for IPv6 (n = 16) will be 9x. The minimum nu
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Julián Moreno Patiño, Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Norman Brandinger ([@NormB](https://github.com/NormB)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

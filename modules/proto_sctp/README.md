@@ -6,7 +6,7 @@ description: "The **proto_sctp** module is an optional transport module (shared 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The **proto_sctp** module is an optional transport module (shared library) which
@@ -17,7 +17,7 @@ The **proto_sctp** module is an optional transport module (shared library) which
 Once loaded, you will be able to define *"sctp:"* listeners in your script.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -39,10 +39,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### sctp_port (integer)
+#### sctp_port (integer) {#param_sctp_port}
 
 
 The default port to be used for all SCTP related operation. Be careful
@@ -80,10 +80,10 @@ You need to load the "proto_sctp" module. In your script, make sure
 			after setting the **[mpath](https://opensips.org/Documentation/Script-CoreParameters-2-1#toc74)**.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -110,7 +110,7 @@ You need to load the "proto_sctp" module. In your script, make sure
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -131,10 +131,10 @@ You need to load the "proto_sctp" module. In your script, make sure
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

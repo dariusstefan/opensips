@@ -6,7 +6,7 @@ description: "This module is an implementation of a cachedb system designed to w
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cachedb system designed to work with 
@@ -109,7 +109,7 @@ For additional information about the table format and TTL options, follow these 
 - *item size limit:each item has a size limit of 400KB, which cannot be increased.*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -146,10 +146,10 @@ Don't forget to always run the server using this command:
 			in the directory where you extracted *DynamoDBLocal.jar*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -221,17 +221,17 @@ cache_remove("dynamodb", "counter1");
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
 		in configuration script.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -252,7 +252,7 @@ The module does not export functions to be used
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -267,10 +267,10 @@ The module does not export functions to be used
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexandra Titoc.

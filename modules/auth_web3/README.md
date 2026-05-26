@@ -2,7 +2,7 @@
 title: "The Web3 Auth Module"
 ---
 
-## Overview
+## Overview {#auth_web3-overview}
 
 
 The *auth_web3* module provides Web3-based authentication 
@@ -14,7 +14,7 @@ This module integrates with the Oasis Sapphire blockchain network to verify
             SIP digest authentication responses and resolve ENS names to wallet addresses.
 
 
-### Dependencies
+### Dependencies {#auth_web3-dependencies}
 
 
 The following modules must be loaded before this module:
@@ -30,7 +30,7 @@ External libraries or applications:
 - *OpenSSL* - For cryptographic operations
 
 
-### ENS Technical Details
+### ENS Technical Details {#auth_web3-ens-technical}
 
 
 The module supports ENS (Ethereum Name Service) authentication with the following features:
@@ -42,7 +42,7 @@ The module supports ENS (Ethereum Name Service) authentication with the followin
 - *Resolver Path* - Follows standard ENS resolver contract pattern
 
 
-### Authentication Function Comparison
+### Authentication Function Comparison {#auth_web3-comparison}
 
 
 The following table compares the authentication functions:
@@ -54,7 +54,7 @@ The following table compares the authentication functions:
 | web3_proxy_authenticate | Proxy-Authorization | Proxy authentication | proxy_challenge |
 
 
-## Multi-Network Configuration
+## Multi-Network Configuration {#auth_web3-multinetwork}
 
 
 The auth_web3 module supports dual-network authentication, allowing ENS resolution
@@ -63,10 +63,10 @@ The auth_web3 module supports dual-network authentication, allowing ENS resoluti
             happens on Oasis Sapphire.
 
 
-### Network Operation Modes
+### Network Operation Modes {#auth_web3-network-modes}
 
 
-#### Single Network Mode (Fallback)
+#### Single Network Mode (Fallback) {#auth_web3-single-network}
 
 
 When web3_ens_rpc_url is not configured, all blockchain operations use
@@ -84,7 +84,7 @@ modparam("auth_web3", "web3_authentication_contract_address", "0xYourContract")
 ```
 
 
-#### Dual Network Mode
+#### Dual Network Mode {#auth_web3-dual-network}
 
 
 When web3_ens_rpc_url is configured, ENS resolution queries use the
@@ -105,10 +105,10 @@ modparam("auth_web3", "web3_ens_registry_address", "0x00000000000C2E074eC69A0dFb
 ```
 
 
-### Common Network Configurations
+### Common Network Configurations {#auth_web3-common-configs}
 
 
-#### Production Setup
+#### Production Setup {#auth_web3-production-config}
 
 
 Production deployments typically use Ethereum mainnet for ENS and
@@ -132,7 +132,7 @@ modparam("auth_web3", "web3_contract_debug_mode", 0)
 ```
 
 
-#### Testing Setup
+#### Testing Setup {#auth_web3-testing-config}
 
 
 For testing and development, use Sepolia testnet for ENS and
@@ -156,7 +156,7 @@ modparam("auth_web3", "web3_contract_debug_mode", 1)
 ```
 
 
-### ENS Resolution Process
+### ENS Resolution Process {#auth_web3-ens-resolution}
 
 
 The module implements standard ENS resolution with automatic Name Wrapper detection:
@@ -172,7 +172,7 @@ This follows the standard ENS resolution pattern (EIP-137) and supports both
                 wrapped and unwrapped domains across all Ethereum networks.
 
 
-### Benefits of Multi-Network Configuration
+### Benefits of Multi-Network Configuration {#auth_web3-benefits}
 
 
 - *Network Separation* - Keep ENS queries on Ethereum while using Oasis for authentication
@@ -182,7 +182,7 @@ This follows the standard ENS resolution pattern (EIP-137) and supports both
 - *Backward Compatibility* - Existing single-network setups continue to work
 
 
-### Troubleshooting Multi-Network Setup
+### Troubleshooting Multi-Network Setup {#auth_web3-troubleshooting}
 
 
 *Common Issues:*
@@ -213,10 +213,10 @@ Look for log messages indicating network usage:
 - Oasis call using main RPC: [url]
 
 
-## Functions
+## Functions {#auth_web3-functions}
 
 
-### web3_www_authenticate(realm, method)
+### web3_www_authenticate(realm, method) {#web3_www_authenticate}
 
 
 Performs Web3-based authentication for WWW-Authenticate challenges.
@@ -265,7 +265,7 @@ if (is_method("REGISTER")) {
 ```
 
 
-### web3_proxy_authenticate(realm, method)
+### web3_proxy_authenticate(realm, method) {#web3_proxy_authenticate}
 
 
 Performs Web3-based authentication for Proxy-Authenticate challenges.
@@ -311,10 +311,10 @@ if (is_method("INVITE")) {
 ```
 
 
-## Parameters
+## Parameters {#auth_web3-parameters}
 
 
-### authentication_rpc_url (string)
+### authentication_rpc_url (string) {#authentication_rpc_url}
 
 
 RPC URL for the blockchain network (e.g., Oasis Sapphire testnet or mainnet).
@@ -333,7 +333,7 @@ modparam("auth_web3", "authentication_rpc_url", "https://testnet.sapphire.oasis.
 ```
 
 
-### authentication_contract_address (string)
+### authentication_contract_address (string) {#authentication_contract_address}
 
 
 Address of the smart contract that handles authentication verification.
@@ -352,7 +352,7 @@ modparam("auth_web3", "authentication_contract_address", "0xE773BB79689379d32Ad1
 ```
 
 
-### ens_rpc_url (string)
+### ens_rpc_url (string) {#ens_rpc_url}
 
 
 RPC URL for the Ethereum network used for ENS resolution.
@@ -371,7 +371,7 @@ modparam("auth_web3", "ens_rpc_url", "https://eth-mainnet.g.alchemy.com/v2/YOUR_
 ```
 
 
-### ens_registry_address (string)
+### ens_registry_address (string) {#ens_registry_address}
 
 
 Address of the ENS registry contract on Ethereum mainnet.
@@ -390,7 +390,7 @@ modparam("auth_web3", "ens_registry_address", "0x00000000000C2E074eC69A0dFb2997B
 ```
 
 
-### contract_debug_mode (integer)
+### contract_debug_mode (integer) {#contract_debug_mode}
 
 
 Enable debug logging for blockchain contract interactions.
@@ -409,7 +409,7 @@ modparam("auth_web3", "contract_debug_mode", 1)
 ```
 
 
-### rpc_timeout (integer)
+### rpc_timeout (integer) {#rpc_timeout}
 
 
 Timeout in seconds for blockchain RPC calls.
@@ -428,13 +428,13 @@ modparam("auth_web3", "rpc_timeout", 15)
 ```
 
 
-## C API
+## C API {#auth_web3-c-api}
 
 
 The module provides a C-level API for other OpenSIPS modules to use Web3 authentication.
 
 
-### bind_web3_auth(api)
+### bind_web3_auth(api) {#bind_web3_auth}
 
 
 Binds the Web3 authentication API to a module interface structure.
@@ -472,7 +472,7 @@ if (bind_web3_auth(&web3_api) < 0) {
 ```
 
 
-## FAQ
+## FAQ {#auth_web3-faq}
 
 
 **Q: What is Web3 authentication and how does it work?**

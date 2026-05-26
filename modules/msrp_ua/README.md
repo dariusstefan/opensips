@@ -6,7 +6,7 @@ description: "This module implements an User Agent capable of establishing messa
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements an User Agent capable of establishing messaging
@@ -23,7 +23,7 @@ The module makes use of the *proto_msrp* module for
     	for the SIP UAC/UAS functionalities.
 
 
-### Usage from Script and External API
+### Usage from Script and External API {#usage_script_external}
 
 
 In order to start a SIP call carying MSRP from OpenSIPS you can use the
@@ -49,7 +49,7 @@ You can send MSRP messages to the peer with the
     [mi send message](#mi_send_message) MI function.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -72,10 +72,10 @@ The following libraries or applications must be installed
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The size of the hash table that stores the MSRP session
@@ -97,7 +97,7 @@ modparam("msrp_ua", "hash_size", 16)
 ```
 
 
-#### cleanup_interval (int)
+#### cleanup_interval (int) {#param_cleanup_interval}
 
 
 The interval between full iterations of the sessions table
@@ -118,7 +118,7 @@ modparam("msrp_ua", "cleanup_interval", 30)
 ```
 
 
-#### max_duration (integer)
+#### max_duration (integer) {#param_max_duration}
 
 
 The maximum duration of a call. If set to 0, there will be no limitation.
@@ -137,7 +137,7 @@ modparam("msrp_ua", "max_duration", 7200)
 ```
 
 
-#### my_uri (string)
+#### my_uri (string) {#param_my_uri}
 
 
 The MSRP URI of the OpenSIPS endpoint. This URI will be advertised in the SDP
@@ -162,7 +162,7 @@ modparam("msrp_ua", "my_uri", "msrp://opensips.org:2855;tcp")
 ```
 
 
-#### advertised_contact (string)
+#### advertised_contact (string) {#param_advertised_contact}
 
 
 Contact to be used in the generated SIP requests. For sessions answered
@@ -184,7 +184,7 @@ modparam("msrp_ua", "advertised_contact", "sip:oss@opensips.org")
 ```
 
 
-#### relay_uri (string)
+#### relay_uri (string) {#param_relay_uri}
 
 
 URI of an MSRP relay to use for both accepted and initiated
@@ -209,10 +209,10 @@ modparam("msrp_ua", "relay_uri", "msrp://opensips.org:2856;tcp")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### msrp_ua_answer(content_types)
+#### msrp_ua_answer(content_types) {#func_msrp_ua_answer}
 
 
 This functions answers an initial INVITE offering a new MSRP
@@ -245,10 +245,10 @@ if (!has_totag() && is_method("INVITE")) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### msrp_ua:send_message
+#### msrp_ua:send_message {#mi_send_message}
 
 
 Replaces obsolete MI command: *msrp_ua_send_message*.
@@ -295,7 +295,7 @@ opensips-cli -x mi msrp_ua:send_message \
 ```
 
 
-#### msrp_ua:start_session
+#### msrp_ua:start_session {#mi_start_session}
 
 
 Replaces obsolete MI command: *msrp_ua_start_session*.
@@ -336,7 +336,7 @@ opensips-cli -x mi msrp_ua:start_session \
 ```
 
 
-#### msrp_ua:list_sessions
+#### msrp_ua:list_sessions {#mi_list_sessions}
 
 
 Replaces obsolete MI command: *msrp_ua_list_sessions*.
@@ -363,7 +363,7 @@ opensips-cli -x mi msrp_ua:list_sessions
 ```
 
 
-#### msrp_ua:end_session
+#### msrp_ua:end_session {#mi_end_session}
 
 
 Replaces obsolete MI command: *msrp_ua_end_session*.
@@ -392,10 +392,10 @@ opensips-cli -x mi msrp_ua:end_session \
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_MSRP_SESSION_NEW
+#### E_MSRP_SESSION_NEW {#event_E_MSRP_SESSION_NEW}
 
 
 This event is triggered when a new MSRP session is successfully
@@ -417,7 +417,7 @@ Parameters:
 				by the peer in the *accept-types* SDP attribute.
 
 
-#### E_MSRP_SESSION_END
+#### E_MSRP_SESSION_END {#event_E_MSRP_SESSION_END}
 
 
 This event is triggered when an ongoing MSRP session is terminted (session
@@ -432,7 +432,7 @@ Parameters:
 				("session-id" part of the MSRP URI).
 
 
-#### E_MSRP_MSG_RECEIVED
+#### E_MSRP_MSG_RECEIVED {#event_E_MSRP_MSG_RECEIVED}
 
 
 This event is triggered when receiving a new, non-empty MSRP SEND
@@ -448,7 +448,7 @@ Parameters:
 - *body* - The actual message body.
 
 
-#### E_MSRP_REPORT_RECEIVED
+#### E_MSRP_REPORT_RECEIVED {#event_E_MSRP_REPORT_RECEIVED}
 
 
 This event is triggered when:
@@ -474,7 +474,7 @@ Parameters:
 ## Developer Guide
 
 
-### Overview
+### Overview {#devel_overview}
 
 
 In order to answer a SIP session carying MSRP the [init uas](#func_init_uas)
@@ -502,7 +502,7 @@ Received MSRP requests, transaction responses and local send timeouts will be
 ### Available Functions
 
 
-#### init_uas(msg, accept_types, hdl)
+#### init_uas(msg, accept_types, hdl) {#func_init_uas}
 
 
 This function will intialize a MSRP UA session based on a received SIP
@@ -598,7 +598,7 @@ typedef int (*msrp_ua_rpl_cb_f)(struct msrp_msg *rpl, void *hdl_param);
 ```
 
 
-#### init_uac(accept_types, from_uri, to_uri, ruri, hdl)
+#### init_uac(accept_types, from_uri, to_uri, ruri, hdl) {#func_init_uac}
 
 
 This function will intialize a MSRP UA session by sending a SIP INVITE to
@@ -621,7 +621,7 @@ Meaning of the parameters is as follows:
                 level notifications.
 
 
-#### end_session(session_id)
+#### end_session(session_id) {#func_end_session}
 
 
 This function terminates an MSRP session.
@@ -633,7 +633,7 @@ Meaning of the parameters is as follows:
 - *str *session_id* - MSRP UA session ID.
 
 
-#### send_message(session_id, mime, body, failure_report, success_report)
+#### send_message(session_id, mime, body, failure_report, success_report) {#func_send_message}
 
 
 This functions sends an MSRP SEND request to the peer.
@@ -665,10 +665,10 @@ enum msrp_failure_report_type {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -694,7 +694,7 @@ enum msrp_failure_report_type {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -714,10 +714,10 @@ enum msrp_failure_report_type {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

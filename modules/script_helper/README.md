@@ -6,7 +6,7 @@ description: "The purpose of the **Script Helper module** is to simplify the scr
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The purpose of the **Script Helper module**
@@ -37,7 +37,7 @@ Currently, the module may be further configured to embed the following
 - an additional route to be run before relaying sequential requests
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -59,10 +59,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### use_dialog (integer)
+#### use_dialog (integer) {#param_use_dialog}
 
 
 Enables dialog support. Note that the dialog module must be loaded before
@@ -82,7 +82,7 @@ modparam("script_helper", "use_dialog", 1)
 ```
 
 
-#### create_dialog_flags (string)
+#### create_dialog_flags (string) {#param_create_dialog_flags}
 
 
 Flags used when creating dialogs. For details on these flags, please refer
@@ -102,7 +102,7 @@ modparam("script_helper", "create_dialog_flags", "options-ping-caller,options-pi
 ```
 
 
-#### sequential_route (string)
+#### sequential_route (string) {#param_sequential_route}
 
 
 Optional route to be run just before sequential requests are relayed.
@@ -134,10 +134,10 @@ route [sequential_handling]
 The Max-Forwards header is currently not handled at all.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -162,7 +162,7 @@ The Max-Forwards header is currently not handled at all.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -181,10 +181,10 @@ The Max-Forwards header is currently not handled at all.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

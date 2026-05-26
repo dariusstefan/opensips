@@ -6,7 +6,7 @@ description: "The *rate_cacher* module provides a means of caching and real-time
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *rate_cacher* module provides a means of caching
@@ -14,7 +14,7 @@ The *rate_cacher* module provides a means of caching
 	It also allows for real-time cost-based routing and cost-based filtering.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -36,10 +36,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### vendors_db_url (str)
+#### vendors_db_url (str) {#vendor_db_url}
 
 
 The DB URL for querying the Vendors used by the module
@@ -58,7 +58,7 @@ modparam("rate_cacher", "vendors_db_url", "mysql://opensips:opensipsrw@localhost
 ```
 
 
-#### vendors_db_table (str)
+#### vendors_db_table (str) {#vendors_db_table}
 
 
 The DB Table for querying the Vendors used by the module
@@ -77,7 +77,7 @@ modparam("rate_cacher", "vendors_db_table", "my_vendors_view")
 ```
 
 
-#### vendors_hash_size (int)
+#### vendors_hash_size (int) {#vendors_hash_size}
 
 
 The size of the hash table internally used to keep the vendors. A
@@ -98,7 +98,7 @@ modparam("rate_cacher", "vendors_hash_size", 1024)
 ```
 
 
-#### clients_db_url (str)
+#### clients_db_url (str) {#clients_db_url}
 
 
 The DB URL for querying the Clients used by the module
@@ -117,7 +117,7 @@ modparam("rate_cacher", "clients_db_url", "mysql://opensips:opensipsrw@localhost
 ```
 
 
-#### clients_db_table (str)
+#### clients_db_table (str) {#clients_db_table}
 
 
 The DB Table for querying the Clients used by the module
@@ -136,7 +136,7 @@ modparam("rate_cacher", "clients_db_table", "my_clients_view")
 ```
 
 
-#### clients_hash_size (int)
+#### clients_hash_size (int) {#clients_hash_size}
 
 
 The size of the hash table internally used to keep the clients. A
@@ -157,7 +157,7 @@ modparam("rate_cacher", "clients_hash_size", 1024)
 ```
 
 
-#### rates_db_url (str)
+#### rates_db_url (str) {#rates_db_url}
 
 
 The DB URL for querying the Ratesheets used by the module
@@ -176,7 +176,7 @@ modparam("rate_cacher", "rates_db_url", "mysql://opensips:opensipsrw@localhost/o
 ```
 
 
-#### rates_db_table (str)
+#### rates_db_table (str) {#rates_db_table}
 
 
 The DB Table for querying the Ratesheets used by the module
@@ -195,10 +195,10 @@ modparam("rate_cacher", "rates_db_table", "my_clients_view")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### get_client_price(client_id,is_wholesale,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)
+#### get_client_price(client_id,is_wholesale,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar) {#get_client_price}
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function will matched the dialled number against the client's ratesheet and return the matched prefix, destination, price, minimum and increment.
@@ -250,7 +250,7 @@ if (get_client_price("my_client",1,"4072794242",$var(prefix),$var(dest),$var(pri
 ```
 
 
-#### get_vendor_price(vendor_id,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar)
+#### get_vendor_price(vendor_id,dialled_no,prefix_pvar,destination_pvar,price_pvar,minimum_pvar,increment_pvar) {#get_vendor_price}
 
 
 For a call originating going to the provided vendor ID, going to dialled_no, the function will matched the dialled number against the vendor's ratesheet and return the matched prefix, destination, price, minimum and increment.
@@ -299,7 +299,7 @@ if (get_vendor_price("my_vendor","4072794242",$var(prefix),$var(dest),$var(price
 ```
 
 
-#### cost_based_filtering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)
+#### cost_based_filtering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv) {#cost_based_filtering}
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function removes the Vendors ( from the vendor_csv list ) which do not pass the desired_margin condition, and sets the out_vendor_csv variable to the list of Vendor that meet the margin condition, while maintaining the initial order provided in the vendor_csv variable.
@@ -358,7 +358,7 @@ if (cost_based_filtering("$avp(client_id)","$avp(is_ws)","$avp(carrierlist)","$a
 ```
 
 
-#### cost_based_ordering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv)
+#### cost_based_ordering(client_id,is_wholesale,vendors_csv,dialled_no,desired_margin,out_vendor_csv) {#cost_based_ordering}
 
 
 For a call originating from the provided Client ID, on a wholesale or retail quality, going to dialled_no, the function removes the Vendors ( from the vendor_csv list ) which do not pass the desired_margin condition, and sets th out_vendor_csv variable to the list of Vendor that meet the margin condition, in descending order of their margin ( from most profitable Vendor to least profitable Vendor that still meets the margin condition )
@@ -417,10 +417,10 @@ if (cost_based_ordering("$avp(client_id)","$avp(is_ws)","$avp(carrierlist)","$av
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rate_cacher:addVendor
+#### rate_cacher:addVendor {#mi_addVendor}
 
 
 Replaces obsolete MI command: *rc_addVendor*.
@@ -448,7 +448,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:deleteVendor
+#### rate_cacher:deleteVendor {#mi_deleteVendor}
 
 
 Replaces obsolete MI command: *rc_deleteVendor*.
@@ -476,7 +476,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:reloadVendorRate
+#### rate_cacher:reloadVendorRate {#mi_reloadVendorRate}
 
 
 Replaces obsolete MI command: *rc_reloadVendorRate*.
@@ -505,7 +505,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:deleteVendorRate
+#### rate_cacher:deleteVendorRate {#mi_deleteVendorRate}
 
 
 Replaces obsolete MI command: *rc_deleteVendorRate*.
@@ -533,7 +533,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:getVendorPrice
+#### rate_cacher:getVendorPrice {#mi_getVendorPrice}
 
 
 Replaces obsolete MI command: *rc_getVendorPrice*.
@@ -570,7 +570,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:addClient
+#### rate_cacher:addClient {#mi_addClient}
 
 
 Replaces obsolete MI command: *rc_addClient*.
@@ -598,7 +598,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:deleteClient
+#### rate_cacher:deleteClient {#mi_deleteClient}
 
 
 Replaces obsolete MI command: *rc_deleteClient*.
@@ -626,7 +626,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:reloadClientRate
+#### rate_cacher:reloadClientRate {#mi_reloadClientRate}
 
 
 Replaces obsolete MI command: *rc_reloadClientRate*.
@@ -656,7 +656,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:deleteClientRate
+#### rate_cacher:deleteClientRate {#mi_deleteClientRate}
 
 
 Replaces obsolete MI command: *rc_deleteClientRate*.
@@ -685,7 +685,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rate_cacher:getClientPrice
+#### rate_cacher:getClientPrice {#mi_getClientPrice}
 
 
 Replaces obsolete MI command: *rc_getClientPrice*.
@@ -724,10 +724,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -752,7 +752,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -771,10 +771,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Callum, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
