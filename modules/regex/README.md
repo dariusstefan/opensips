@@ -1,0 +1,587 @@
+---
+title: "Regex Module"
+description: "This module offers matching operations against regular expressions using the powerful [PCRE](http://www.pcre.org/) library."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+This module offers matching operations against regular expressions using the
+			powerful [PCRE](http://www.pcre.org/) library.
+
+
+A text file containing regular expressions categorized in groups is compiled
+			when the module is loaded, storing the compiled PCRE objects in an array. A
+			function to match a string or pseudo-variable against any of these groups is
+			provided. The text file can be modified and reloaded at any time via a MI command.
+			The module also offers a function to perform a PCRE matching operation against a
+			regular expression provided as function parameter.
+
+
+For a detailed list of PCRE features read the
+			[man page](http://www.pcre.org/pcre.txt) of the library.
+
+
+### Dependencies
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *No dependencies on other OpenSIPS modules*.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+				OpenSIPS with this module loaded:
+
+
+- *libpcre-dev - the development libraries of [PCRE](http://www.pcre.org/)*.
+
+
+### Exported Parameters
+
+
+#### `file` (string)
+
+
+Text file containing the regular expression groups. It must be set in order
+				to enable the group matching function.
+
+
+*Default value is "NULL".*
+
+
+**Example: Set `file` parameter**
+
+
+```opensips
+...
+modparam("regex", "file", "/etc/opensips/regex_groups")
+...
+```
+
+
+#### `max_groups` (int)
+
+
+Max number of regular expression groups in the text file.
+
+
+*Default value is "20".*
+
+
+**Example: Set `max_groups` parameter**
+
+
+```opensips
+...
+modparam("regex", "max_groups", 40)
+...
+```
+
+
+#### `group_max_size` (int)
+
+
+Max content size of a group in the text file.
+
+
+*Default value is "8192".*
+
+
+**Example: Set `group_max_size` parameter**
+
+
+```opensips
+...
+modparam("regex", "group_max_size", 16384)
+...
+```
+
+
+#### `pcre_caseless` (int)
+
+
+If this options is set, matching is done caseless. It is equivalent to
+				Perl's /i option, and it can be changed within a pattern by a (?i) or
+				(?-i) option setting.
+
+
+*Default value is "0".*
+
+
+**Example: Set `pcre_caseless` parameter**
+
+
+```opensips
+...
+modparam("regex", "pcre_caseless", 1)
+...
+```
+
+
+#### `pcre_multiline` (int)
+
+
+By default, PCRE treats the subject string as consisting of a single line
+				of characters (even if it actually contains newlines). The "start of line"
+				metacharacter (^) matches only at the start of the string, while the "end
+				of line" metacharacter ($) matches only at the end of the string, or before
+				a terminating newline.
+
+
+When this option is set, the "start of line" and "end of line" constructs
+				match immediately following or immediately before internal newlines in the
+				subject string, respectively, as well as at the very start and end. This is
+				equivalent to Perl's /m option, and it can be changed within a pattern by a
+				(?m) or (?-m) option setting. If there are no newlines in a subject string,
+				or no occurrences of ^ or $ in a pattern, setting this option has no effect.
+
+
+*Default value is "0".*
+
+
+**Example: Set `pcre_multiline` parameter**
+
+
+```opensips
+...
+modparam("regex", "pcre_multiline", 1)
+...
+```
+
+
+#### `pcre_dotall` (int)
+
+
+If this option is set, a dot metacharater in the pattern matches all characters,
+				including those that indicate newline. Without it, a dot does not match when
+				the current position is at a newline. This option is equivalent to Perl's /s
+				option, and it can be changed within a pattern by a (?s) or (?-s) option setting.
+
+
+*Default value is "0".*
+
+
+**Example: Set `pcre_dotall` parameter**
+
+
+```opensips
+...
+modparam("regex", "pcre_dotall", 1)
+...
+```
+
+
+#### `pcre_extended` (int)
+
+
+If this option is set, whitespace data characters in the pattern are totally
+				ignored except when escaped or inside a character class. Whitespace does not
+				include the VT character (code 11). In addition, characters between an
+				unescaped # outside a character class and the next newline, inclusive, are
+				also ignored. This is equivalent to Perl's /x option, and it can be changed
+				within a pattern by a (?x) or (?-x) option setting.
+
+
+*Default value is "0".*
+
+
+**Example: Set `pcre_extended` parameter**
+
+
+```opensips
+...
+modparam("regex", "pcre_extended", 1)
+...
+```
+
+
+### Exported Functions
+
+
+#### `pcre_match (string, pcre_regex)`
+
+
+Matches the given string parameter against the regular expression pcre_regex,
+				which is compiled into a PCRE object. Returns TRUE if it matches, FALSE
+				otherwise.
+
+
+Meaning of the parameters is as follows:
+
+
+- *string* - String to compare.
+- *pcre_regex* (string) - Regular expression to be compiled
+						in a PCRE object.
+
+
+NOTE: To use the "end of line" symbol '$' in the pcre_regex parameter use '$$'.
+
+
+This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
+				BRANCH_ROUTE and LOCAL_ROUTE.
+
+
+**Example: `pcre_match` usage (forcing case insensitive)**
+
+
+```opensips
+...
+if (pcre_match("$ua", "(?i)^twinkle")) {
+    xlog("L_INFO", "User-Agent matches\n");
+}
+...
+```
+
+
+**Example: `pcre_match` usage (using "end of line" symbol)**
+
+
+```opensips
+...
+if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
+    xlog("L_INFO", "RURI username matches\n");
+}
+...
+```
+
+
+#### `pcre_match_group (string [, group])`
+
+
+It uses the groups readed from the text file
+				(see [file format id](#file-format-id)) to match the given string
+				parameter against the compiled regular expression in group number group.
+				Returns TRUE if it matches, FALSE otherwise.
+
+
+Meaning of the parameters is as follows:
+
+
+- *string* - String to compare.
+- *group* (int) - group to use in the operation.
+						If not specified then 0 (the first group) is used.
+
+
+This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
+				BRANCH_ROUTE and LOCAL_ROUTE.
+
+
+**Example: `pcre_match_group` usage**
+
+
+```opensips
+...
+if (pcre_match_group($rU, 2)) {
+    xlog("L_INFO", "RURI username matches group 2\n");
+}
+...
+```
+
+
+### Exported MI Functions
+
+
+#### `regex_reload`
+
+
+Causes regex module to re-read the content of the text file
+				and re-compile the regular expressions. The number of groups
+				in the file can be modified safely.
+
+
+Name: *regex_reload*
+
+
+Parameters: *none*
+
+
+MI FIFO Command Format:
+
+
+```
+...
+opensips-cli -x mi regex_reload
+...
+```
+
+
+#### `regex_match`
+
+
+Matches the given string parameter against the regular expression pcre_regex.
+				Returns "Match" if it matches, "Not Match" otherwise.
+
+
+Name: *regex_match*
+
+
+Parameters:
+
+
+- string
+- pcre_regex
+
+
+MI FIFO Command Format:
+
+
+```
+...
+opensips-cli -x mi regex_match string="1234" pcre_regex="^1234$"
+"Match"
+opensips-cli -x mi regex_match string="1234" pcre_regex="^1235$"
+"Not Match"
+...
+```
+
+
+#### `regex_match_group`
+
+
+It uses the groups readed from the text file to match the given string parameter against the compiled
+				regular expression in group number group. Returns "Match" if it matches, "Not Match" otherwise.
+
+
+Name: *regex_match_group*
+
+
+Parameters:
+
+
+- string
+- group
+
+
+MI FIFO Command Format:
+
+
+```
+...
+opensips-cli -x mi regex_match_group string="1234" group="0"
+"Match"
+opensips-cli -x mi regex_match_group string="1234" group="1"
+"Not Match"
+...
+```
+
+
+### Installation and Running
+
+
+#### File format
+
+
+The file contains regular expressions categorized in groups. Each
+				group starts with "[number]" line. Lines starting by space, tab,
+				CR, LF or # (comments) are ignored. Each regular expression must
+				take up just one line, this means that a regular expression can't
+				be splitted in various lines.
+
+
+An example of the file format would be the following:
+
+
+**Example: regex file**
+
+
+```
+### List of User-Agents publishing presence status
+[0]
+
+# Softphones
+^Twinkle/1
+^X-Lite
+^eyeBeam
+^Bria
+^SIP Communicator
+^Linphone
+
+# Deskphones
+^Snom
+
+# Others
+^SIPp
+^PJSUA
+
+
+### Blacklisted source IP's
+[1]
+
+^190\.232\.250\.226$
+^122\.5\.27\.125$
+^86\.92\.112\.
+
+
+### Free PSTN destinations in Spain
+[2]
+
+^1\d{3}$
+^((\+|00)34)?900\d{6}$
+```
+
+
+The module compiles the text above to the following regular
+				expressions:
+
+
+```
+group 0: ((^Twinkle/1)|(^X-Lite)|(^eyeBeam)|(^Bria)|(^SIP Communicator)|
+          (^Linphone)|(^Snom)|(^SIPp)|(^PJSUA))
+group 1: ((^190\.232\.250\.226$)|(^122\.5\.27\.125$)|(^86\.92\.112\.))
+group 2: ((^1\d{3}$)|(^((\+|00)34)?900\d{6}$))
+```
+
+
+The first group can be used to avoid auto-generated PUBLISH (pua_usrloc
+				module) for UA's already supporting presence:
+
+
+**Example: Using with pua_usrloc**
+
+
+```opensips
+route[REGISTER] {
+    if (! pcre_match_group("$ua", 0)) {
+        xlog("L_INFO", "Auto-generated PUBLISH for $fu ($ua)\n");
+        pua_set_publish();
+    }
+    save("location");
+    exit;
+}
+```
+
+
+NOTE: It's important to understand that the numbers in each group
+				header ([number]) must start by 0. If not, the real group number
+				will not match the number appearing in the file. For example, the
+				following text file:
+
+
+**Example: Incorrect groups file**
+
+
+```
+[1]
+^aaa
+^bbb
+
+[2]
+^ccc
+^ddd
+```
+
+
+will generate the following regular expressions:
+
+
+```
+group 0: ((^aaa)|(^bbb))
+group 1: ((^ccc)|(^ddd))
+```
+
+
+Note that the real index doesn't match the group number in the file. This
+				is, compiled group 0 always points to the first group in the file, regardless
+				of its number in the file. In fact, the group number appearing in the file is
+				used for nothing but for delimiting different groups.
+
+
+NOTE: A line containing a regular expression cannot start by '[' since it
+				would be treated as a new group. The same for lines starting by space, tab,
+				or '#' (they would be ignored by the parser). As a workaround, using brackets
+				would work:
+
+
+```
+[0]
+([0-9]{9})
+( #abcde)
+( qwerty)
+```
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 17 | 15 | 117 | 38 |
+| 2. | Iñaki Baz Castillo | 15 | 3 | 1242 | 2 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 12 | 10 | 25 | 42 |
+| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 6 | 63 | 88 |
+| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 8 | 6 | 12 | 7 |
+| 6. | MonkeyTester | 6 | 3 | 188 | 14 |
+| 7. | Norman Brandinger ([@NormB](https://github.com/NormB)) | 5 | 3 | 4 | 4 |
+| 8. | Steve Ayre | 4 | 2 | 60 | 44 |
+| 9. | Ken Rice | 4 | 2 | 5 | 5 |
+| 10. | Sergio Gutierrez | 3 | 1 | 19 | 1 |
+
+
+**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Marius Zbihlei.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Sep 2011 - Feb 2026 |
+| 2. | Steve Ayre | Sep 2025 - Sep 2025 |
+| 3. | Ken Rice | Sep 2025 - Sep 2025 |
+| 4. | MonkeyTester | Aug 2023 - Aug 2023 |
+| 5. | Norman Brandinger ([@NormB](https://github.com/NormB)) | Apr 2023 - Apr 2023 |
+| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
+| 8. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Feb 2009 - Apr 2019 |
+| 9. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Nov 2018 |
+| 10. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Jan 2013 - Jan 2013 |
+
+
+**All remaining contributors**: Marius Zbihlei, Iñaki Baz Castillo, Anca Vamanu, Sergio Gutierrez.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** MonkeyTester, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Iñaki Baz Castillo.
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2009 Iñaki Baz Castillo

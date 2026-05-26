@@ -1,0 +1,291 @@
+---
+title: "cachedb_sql Module"
+description: "This module is an implementation of a cache system designed to work with a regular SQL-based server. It uses the internal DB interface to connect to the back-end, and also implements the Key-Value interface exported from the core."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+This module is an implementation of a cache system designed to work with a 
+		regular SQL-based server. It uses the internal DB interface to connect
+		to the back-end, and also implements the Key-Value interface exported from the core.
+
+
+### Advantages
+
+
+- *memory costs are no longer on the server*
+- *the cache is 100% persistent. A restart
+					of OpenSIPS server will not affect the DB. The DB is also
+				persistent so it can also be restarted without loss of information.*
+- *Multiple OpenSIPS instances can easily share key-value information
+				via a regular SQL-based database*
+
+
+### Limitations
+
+
+- *The module's counter operations ( ADD and SUB ) are currently only 
+				supported by MySQL*
+
+
+### Dependencies
+
+
+#### OpenSIPS Modules
+
+
+None.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before running
+		OpenSIPS with this module loaded:
+
+
+- *none:*
+
+
+### Exported Parameters
+
+
+#### `cachedb_url` (string)
+
+
+The url of the Database  that OpenSIPS will connect to in order
+			to use the from script cache_store,cache_fetch, etc operations.
+
+
+The format to follow is : sql:[conn_id]-dburl
+
+
+The parameter can be set multiple times to create multiple connections accessible from the OpenSIPS script.
+
+
+**Example: Set `db_url` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "cachedb_url", "sql:1st-mysql://root:vlad@localhost/opensips_sql")
+...
+	
+```
+
+
+**Example: Usage example**
+
+
+```opensips
+...
+modparam("cachedb_sql", "cachedb_url", "sql:1st-mysql://root:vlad@localhost/opensips_sql")
+modparam("cachedb_sql", "cachedb_url", "sql:2nd-postgres://root:vlad@localhost/opensips_pg")
+...
+...
+cache_store("sql:1st-mysql","key","$ru value");
+cache_store("sql:2nd-postgres","counter","10");
+...
+	
+```
+
+
+#### `db_table` (string)
+
+
+The table of the Database  that OpenSIPS will connect to in order
+			to use the from script cache_store,cache_fetch, etc operations.
+
+
+**Example: Set `db_url` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "db_table","my_table");
+...
+	
+```
+
+
+#### `key_column` (string)
+
+
+The column where the key will be stored
+
+
+**Example: Set `key_column` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "key_column","some_name");
+...
+	
+```
+
+
+#### `value_column` (string)
+
+
+The column where the value will be stored
+
+
+**Example: Set `value_column` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "value_column","some_name");
+...
+	
+```
+
+
+#### `counter_column` (string)
+
+
+The column where the counter value will be stored
+
+
+**Example: Set `counter_column` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "counter_column","some_name");
+...
+	
+```
+
+
+#### `expires_column` (string)
+
+
+The column where the expires will be stored
+
+
+**Example: Set `expires_column` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "expires_column","some_name");
+...
+	
+```
+
+
+#### `cache_clean_period` (int)
+
+
+The interval in seconds at which the expired keys will be removed from
+			the database. Default value is 60 ( seconds )
+
+
+**Example: Set `cache_clean_period` parameter**
+
+
+```opensips
+...
+modparam("cachedb_sql", "cache_clean_period",10);
+...
+	
+```
+
+
+#### Exported Functions
+
+
+The module does not export functions to be used
+		in configuration script.
+
+
+## Frequently Asked Questions
+
+
+**Q: What happened with the old "db_url" module parameter?**
+
+
+It was replaced with the "cachedb_url" parameter.
+			See the documentation for the usage of the "cachedb_url" parameter.
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 16 | 5 | 1001 | 87 |
+| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 11 | 9 | 42 | 59 |
+| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 7 | 5 | 4 | 2 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 5 | 3 | 5 | 2 |
+| 5. | Alexandra Titoc | 4 | 2 | 4 | 3 |
+| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 1 | 2 |
+| 7. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | 3 | 1 | 2 | 2 |
+| 8. | Julián Moreno Patiño | 3 | 1 | 2 | 2 |
+| 9. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
+| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 2 | 1 | 1 | 0 |
+
+
+**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Alexandra Titoc | Sep 2024 - Sep 2024 |
+| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 3. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Apr 2022 - Apr 2022 |
+| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Apr 2021 |
+| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Sep 2019 |
+| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Apr 2019 |
+| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2017 |
+| 9. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
+| 10. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
+
+
+**All remaining contributors**: Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

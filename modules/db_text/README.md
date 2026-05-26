@@ -1,0 +1,580 @@
+---
+title: "db_text Module"
+description: "The module implements a simplified database engine based on text files. It can be used by OpenSIPS DB interface instead of other database module (like MySQL)."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+The module implements a simplified database engine based on text
+		files. It can be used by OpenSIPS DB interface instead of other
+		database module (like MySQL).
+
+
+The module is meant for use in demos or small devices that do not
+		support other DB modules. It keeps everything in memory and if you deal
+		with large amount of data you may run quickly out of memory. Also, it
+		has not implemented all standard database facilities (like order by),
+		it includes minimal functionality to work properly with OpenSIPS
+
+
+NOTE: the timestamp is printed in an integer value from time_t
+		structure. If you use it in a system that cannot do this conversion,
+		it will fail (support for such situation is in to-do list).
+
+
+NOTE: even when is in non-caching mode, the module does not write
+		back to hard drive after changes. In this mode, the module checks if
+		the corresponding file on disk has changed, and reloads it. The write
+		on disk happens at OpenSIPS shut down.
+
+
+#### Design of db_text engine
+
+
+The db_text database system architecture:
+
+
+- a database is represented by a directory in the local file
+				system.
+				NOTE: when you use *db_text* in OpenSIPS,
+				the	database URL for modules must be the path to the directory
+				where the table-files are located, prefixed by 
+				"text://", e.g., 
+				"text:///var/dbtext/opensips". If there is no
+				"/" after "text://" then
+				"CFG_DIR/" is inserted at the beginning of the
+				database path. So, either you provide an absolute path to
+				database directory or a relative one to "CFG_DIR"
+				directory.
+- a table is represented by a text file inside database directory.
+
+
+#### Internal format of a db_text table
+
+
+First line is the definition of the columns. Each column must be
+		declared as follows:
+
+
+- the name of column must not include white spaces.
+- the format of a column definition is: 
+				*name(type,attr)*.
+- between two column definitions must be a white space, e.g., 
+				"first_name(str) last_name(str)".
+- the type of a column can be: 
+					
+					
+					*int* - integer numbers.
+					
+					
+					*double* - real numbers with two
+					decimals.
+					
+					
+					*str* - strings with maximum size of 4KB.
+- a column can have one of the attributes: 
+					
+					
+					*auto* - only for 'int' columns,
+					the maximum value in that column is incremented and stored
+					in this field if it is not provided in queries.
+					
+					
+					*null* - accept null values in column
+					fields.
+					
+					
+					if no attribute is set, the fields of the column cannot have
+					null value.
+- each other line is a row with data. The line ends with
+				"\n".
+- the fields are separated by ":".
+- no value between two ':' (or between ':' and start/end of a row)
+				means "null" value.
+- next characters must be escaped in strings: "\n",
+				"\r", "\t", ":".
+- *0* -- the zero value must be escaped too.
+
+
+**Example: Sample of a db_text table**
+
+
+```
+...
+id(int,auto) name(str) flag(double) desc(str,null)
+1:nick:0.34:a\tgood\: friend
+2:cole:-3.75:colleague
+3:bob:2.50:
+...
+```
+
+
+**Example: Minimal OpenSIPS location db_text table definition**
+
+
+```
+...
+username(str) contact(str) expires(int) q(double) callid(str) cseq(int)
+...
+```
+
+
+**Example: Minimal OpenSIPS subscriber db_text table example**
+
+
+```
+...
+username(str) password(str) ha1(str) domain(str) ha1b(str)
+suser:supasswd:xxx:alpha.org:xxx
+...
+```
+
+
+#### Existing limitations
+
+
+This database interface don't support the data insertion with
+				default values. All such values specified in the database template
+				are ignored. So its advisable to specify all data for a column at
+				insertion operations.
+
+
+### Dependencies
+
+
+#### OpenSIPS modules
+
+
+The next modules must be loaded before this module:
+
+
+- *none*.
+
+
+#### External libraries or applications
+
+
+The next libraries or applications must be installed before running
+			OpenSIPS with this module:
+
+
+- *none*.
+
+
+### Exported Parameters
+
+
+#### `db_mode` (integer)
+
+
+Set caching mode (0) or non-caching mode (1). In caching mode, data
+		is loaded at startup. In non-caching mode, the module check every time
+		a table is requested whether the corresponding file on disk has
+		changed, and if yes, will re-load table from file.
+
+
+*Default value is "0".*
+
+
+**Example: Set `db_mode` parameter**
+
+
+```opensips
+...
+modparam("db_text", "db_mode", 1)
+...
+```
+
+
+#### `buffer_size` (integer)
+
+
+Size of the buffer used to read the text file.
+
+
+*Default value is "4096".*
+
+
+**Example: Set `buffer_size` parameter**
+
+
+```opensips
+...
+modparam("db_text", "buffer_size", 8192)
+...
+```
+
+
+### Exported Functions
+
+
+*None*.
+
+
+### Exported MI Functions
+
+
+#### `dbt_dump`
+
+
+Write back to hard drive modified tables.
+
+
+Name: *dbt_dump*.
+
+
+Parameters: none
+
+
+MI FIFO Command Format:
+
+
+```
+opensips-cli -x mi dbt_dump
+		
+```
+
+
+#### `dbt_reload`
+
+
+Causes db_text module to reload cached tables from disk.
+			Depending on parameters it could be a whole cache or a specified
+			database or a single table.
+			If any table cannot be reloaded from disk - the old version
+			preserved and error reported.
+
+
+Name: *dbt_reload*.
+
+
+Parameters:
+
+
+- *db_name* (optional) - database name to reload.
+- *table_name* (optional, but cannot be present
+				without the db_name parameter) - specific table to reload.
+
+
+MI FIFO Command Format:
+
+
+```
+opensips-cli -x mi dbt_reload
+		
+```
+
+
+```
+opensips-cli -x mi dbt_reload /path/to/dbtext/database
+		
+```
+
+
+```
+opensips-cli -x mi dbt_reload /path/to/dbtext/database table_name
+		
+```
+
+
+### Installation and Running
+
+
+Compile the module and load it instead of mysql or other DB modules.
+
+
+REMINDER: when you use *db_text* in OpenSIPS,
+		the	database URL for modules must be the path to the directory
+		where the table-files are located, prefixed by
+		"text://", e.g., 
+		"text:///var/dbtext/opensips". If there is no "/"
+		after "text://" then "CFG_DIR/" is inserted
+		at the beginning of the database path. So, either you provide an
+		absolute path to database directory or a relative one to 
+		"CFG_DIR" directory.
+
+
+**Example: Load the db_text module**
+
+
+```opensips
+...
+loadmodule "/path/to/opensips/modules/db_text.so"
+...
+modparam("module_name", "database_URL", "text:///path/to/dbtext/database")
+...
+```
+
+
+#### Using db_text with basic OpenSIPS configuration
+
+
+Here are the definitions for most important table as well as a basic 
+		configuration file to use db_text with OpenSIPS. The table structures
+		may change in time and you will have to adjust next examples.
+
+
+You have to populate the table 'subscriber' by hand with user profiles 
+		in order to have authentication. To use with the given configuration
+		file, the table files must be placed in the '/tmp/opensipsdb' directory.
+
+
+**Example: Definition of 'subscriber' table (one line)**
+
+
+```
+...
+username(str) domain(str) password(str) first_name(str) last_name(str) phone(str) email_address(str) datetime_created(int) datetime_modified(int) confirmation(str) flag(str) sendnotification(str) greeting(str) ha1(str) ha1b(str) perms(str) allow_find(str) timezone(str,null) rpid(str,null)
+...
+```
+
+
+**Example: Definition of 'location' and 'aliases' tables (one line)**
+
+
+```
+...
+username(str) domain(str,null) contact(str,null) received(str) expires(int,null) q(double,null) callid(str,null) cseq(int,null) last_modified(str) flags(int) user_agent(str) socket(str) 
+...
+```
+
+
+**Example: Definition of 'version' table and sample records**
+
+
+```
+...
+table_name(str) table_version(int)
+subscriber:3
+location:6
+aliases:6
+...
+```
+
+
+**Example: Configuration file**
+
+
+```opensips
+...
+#
+# simple quick-start config script with dbtext
+#
+
+# ----------- global configuration parameters ------------------------
+
+#debug_mode=yes
+udp_workers=4
+
+check_via=no    # (cmd. line: -v)
+dns=no          # (cmd. line: -r)
+rev_dns=no      # (cmd. line: -R)
+
+socket=udp:10.100.100.1:5060
+
+# ------------------ module loading ----------------------------------
+
+# use dbtext database
+loadmodule "modules/dbtext/dbtext.so"
+
+loadmodule "modules/sl/sl.so"
+loadmodule "modules/tm/tm.so"
+loadmodule "modules/rr/rr.so"
+loadmodule "modules/maxfwd/maxfwd.so"
+loadmodule "modules/usrloc/usrloc.so"
+loadmodule "modules/registrar/registrar.so"
+loadmodule "modules/textops/textops.so"
+loadmodule "modules/textops/mi_fifo.so"
+
+# modules for digest authentication
+loadmodule "modules/auth/auth.so"
+loadmodule "modules/auth_db/auth_db.so"
+
+# ----------------- setting module-specific parameters ---------------
+
+# -- mi_fifo params --
+
+modparam("mi_fifo", "fifo_name", "/tmp/opensips_fifo")
+
+# -- usrloc params --
+
+# use dbtext database for persistent storage
+modparam("usrloc", "db_mode", 2)
+modparam("usrloc|auth_db", "db_url", "text:///tmp/opensipsdb")
+
+# -- auth params --
+#
+modparam("auth_db", "calculate_ha1", 1)
+modparam("auth_db", "password_column", "password")
+modparam("auth_db", "user_column", "username")
+modparam("auth_db", "domain_column", "domain")
+
+# -------------------------  request routing logic -------------------
+
+# main routing logic
+
+route{
+    # initial sanity checks -- messages with
+    # max_forwards==0, or excessively long requests
+    if (!mf_process_maxfwd_header("10")) {
+        sl_send_reply(483,"Too Many Hops");
+        exit;
+    };
+    if ($ml >=  65535 ) {
+        sl_send_reply(513, "Message too big");
+        exit;
+    };
+
+    # we record-route all messages -- to make sure that
+    # subsequent messages will go through our proxy; that's
+    # particularly good if upstream and downstream entities
+    # use different transport protocol
+    if (!$rm=="REGISTER") record_route();
+
+    # subsequent messages withing a dialog should take the
+    # path determined by record-routing
+    if (loose_route()) {
+        # mark routing logic in request
+        append_hf("P-hint: rr-enforced\r\n");
+        route(1);
+        exit;
+    };
+
+    if (!is_myself("$rd")) {
+        # mark routing logic in request
+        append_hf("P-hint: outbound\r\n");
+        route(1);
+        exit;
+    };
+
+    # if the request is for other domain use UsrLoc
+    # (in case, it does not work, use the following command
+    # with proper names and addresses in it)
+    if (is_myself("$rd")) {
+        if ($rm=="REGISTER") {
+            # digest authentication
+            if (!www_authorize("", "subscriber")) {
+                www_challenge("", "0");
+                exit;
+            };
+
+            save("location");
+            exit;
+        };
+
+        lookup("aliases");
+        if (!is_myself("$rd")) {
+            append_hf("P-hint: outbound alias\r\n");
+            route(1);
+            exit;
+        };
+
+        # native SIP destinations are handled using our USRLOC DB
+        if (!lookup("location")) {
+            sl_send_reply(404, "Not Found");
+            exit;
+        };
+    };
+    append_hf("P-hint: usrloc applied\r\n");
+    route(1);
+}
+
+route[1]
+{
+    # send it out now; use stateful forwarding as it works reliably
+    # even for UDP2TCP
+    if (!t_relay()) {
+        sl_reply_error();
+    };
+}
+
+
+...
+```
+
+
+## Developer Guide
+
+
+Once you have the module loaded, you can use the API specified by OpenSIPS DB
+	interface.
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 135 | 59 | 6126 | 1441 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 41 | 32 | 310 | 309 |
+| 3. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 25 | 15 | 252 | 410 |
+| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 23 | 19 | 123 | 97 |
+| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 21 | 18 | 71 | 110 |
+| 6. | Jan Janak ([@janakj](https://github.com/janakj)) | 11 | 7 | 124 | 106 |
+| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 8 | 6 | 105 | 20 |
+| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 8 | 6 | 94 | 49 |
+| 9. | Alexandra Titoc | 5 | 3 | 13 | 6 |
+| 10. | Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)) | 5 | 2 | 185 | 2 |
+
+
+**All remaining contributors**: Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Konstantin Bokarius, Razvan Pistolea, Chris Heiser, Norman Brandinger ([@NormB](https://github.com/NormB)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Andrei Pelinescu-Onciul.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Alexandra Titoc | Sep 2024 - Sep 2024 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Oct 2011 - Jul 2024 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
+| 4. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Dec 2012 - Mar 2024 |
+| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Dec 2021 |
+| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Nov 2003 - Apr 2020 |
+| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
+| 9. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
+| 10. | Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)) | Aug 2015 - Aug 2015 |
+
+
+**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Razvan Pistolea, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Chris Heiser, Edson Gellert Schubert, Norman Brandinger ([@NormB](https://github.com/NormB)), Jan Janak ([@janakj](https://github.com/janakj)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Andrei Pelinescu-Onciul.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2003-2004 FhG FOKUS
