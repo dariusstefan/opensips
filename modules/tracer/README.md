@@ -6,7 +6,7 @@ description: "Offer a possibility to store incoming/outgoing SIP messages in dat
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Offer a possibility to store incoming/outgoing SIP messages in database.
@@ -44,7 +44,7 @@ Starting with OpenSIPS 3.0 you can use the *trace_start* to
 		create dynamic dynamic tracing destinations based on some custom filters.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -76,10 +76,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### trace_on (integer)
+#### trace_on (integer) {#param_trace_on}
 
 
 Parameter to enable/disable trace (on(1)/off(0))
@@ -98,7 +98,7 @@ modparam("tracer", "trace_on", 1)
 ```
 
 
-#### trace_local_ip (str)
+#### trace_local_ip (str) {#param_trace_local_ip}
 
 
 The address to be used in the fields that specify the source address
@@ -137,7 +137,7 @@ modparam("tracer", "trace_local_ip", "10.1.1.1")
 ```
 
 
-#### trace_id (str)
+#### trace_id (str) {#param_trace_id}
 
 
 Specify a destination for the trace. This can be a hep id defined
@@ -213,7 +213,7 @@ modparam("tracer", "trace_id",
 ```
 
 
-#### syslog_default_facility (string)
+#### syslog_default_facility (string) {#param_syslog_default_facility}
 
 
 When *syslog* tracing is used, this parameter specifies
@@ -233,7 +233,7 @@ modparam("tracer", "syslog_default_facility", "LOG_DAEMON")
 ```
 
 
-#### syslog_default_level (integer)
+#### syslog_default_level (integer) {#param_syslog_default_level}
 
 
 When *syslog* tracing is used, this parameter specifies
@@ -253,7 +253,7 @@ modparam("tracer", "syslog_default_level", 2) # NOTICE
 ```
 
 
-#### file_mode (integer)
+#### file_mode (integer) {#param_file_mode}
 
 
 When *file* tracing is used, this parameter
@@ -274,10 +274,10 @@ modparam("tracer", "file_mode", 0644)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### trace(trace_id, [scope], [type], [trace_attrs], [flags], [correlation_id])
+#### trace(trace_id, [scope], [type], [trace_attrs], [flags], [correlation_id]) {#func_trace}
 
 
 This function has replaced the *sip_trace()* in OpenSIPS 3.0.
@@ -394,10 +394,10 @@ NOTE these flags are supported only by transactional and dialog tracing
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### trace
+#### trace {#mi_trace}
 
 
 Enable/disable tracing(globally or for a specific trace id) or dump
@@ -445,7 +445,7 @@ opensips-cli -x mi trace id=tid2 mode=on
 ```
 
 
-#### trace_start
+#### trace_start {#mi_trace_start}
 
 
 Creates a dynamic tracing destination based using custom filters.
@@ -504,7 +504,7 @@ MI FIFO Command to start tracing calls from user Alice to user Bob:
 ```
 
 
-#### trace_stop
+#### trace_stop {#mi_trace_stop}
 
 
 Stops OpenSIPS from sending traffic to a dynamic trace id created
@@ -552,10 +552,10 @@ ACKs related to a transaction that are leaving OpenSIPS are not
 			highly ineffective.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -587,7 +587,7 @@ ACKs related to a transaction that are leaving OpenSIPS are not
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -613,10 +613,10 @@ ACKs related to a transaction that are leaving OpenSIPS are not
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Alexandr Dubovikov ([@adubovikov](https://github.com/adubovikov)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu.

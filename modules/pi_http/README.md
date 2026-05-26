@@ -6,7 +6,7 @@ description: "This module provides an HTTP provisioning interface for OpenSIPS. 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides an HTTP provisioning interface
@@ -192,7 +192,7 @@ Features to be added in the future:
 - full subscriber provisionning with automatic ha1/ha1b fields.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -214,10 +214,10 @@ The following libraries or applications must be installed before
 - *libxml2*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### pi_http_root(string)
+#### pi_http_root(string) {#param_pi_http_root}
 
 
 Specifies the root path for pi HTTP requests.
@@ -239,7 +239,7 @@ modparam("pi_http", "pi_http_root", "opensips_pi")
 ```
 
 
-#### framework(string)
+#### framework(string) {#param_framework}
 
 
 Specifies the full path for xml framework descriptor.
@@ -258,7 +258,7 @@ modparam("pi_http", "framework", "/usr/local/etc/opensips/pi_framework.xml")
 ```
 
 
-#### pi_http_method(integrer)
+#### pi_http_method(integrer) {#param_pi_http_method}
 
 
 Specifies the HTTP request method to be used:
@@ -281,10 +281,10 @@ modparam("pi_http", "pi_http_method", 1)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### pi_reload_tbls_and_cmds
+#### pi_reload_tbls_and_cmds {#mi_pi_reload_tbls_and_cmds}
 
 
 Reloads the layout of the provisioning interface from the framework file.
@@ -305,10 +305,10 @@ opensips-cli -x mi pi_reload_tbls_and_cmds
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -340,7 +340,7 @@ opensips-cli -x mi pi_reload_tbls_and_cmds
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -366,10 +366,10 @@ opensips-cli -x mi pi_reload_tbls_and_cmds
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

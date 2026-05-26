@@ -6,7 +6,7 @@ description: "This module contains all authentication related functions that nee
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module contains all authentication related functions that need
@@ -17,7 +17,7 @@ This module contains all authentication related functions that need
 		you want to use radius authentication, then use auth_radius instead.
 
 
-#### RFC 8760 Support (Strenghtened Authentication)
+#### RFC 8760 Support (Strenghtened Authentication) {#rfc-8760-support}
 
 
 Starting with OpenSIPS 3.2, the [auth](auth),
@@ -29,7 +29,7 @@ Starting with OpenSIPS 3.2, the [auth](auth),
 	        specs.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -55,10 +55,10 @@ The following libraries or applications must be installed
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 This is URL of the database to be used. Value of the parameter depends
@@ -79,7 +79,7 @@ modparam("auth_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### calculate_ha1 (integer)
+#### calculate_ha1 (integer) {#param_calculate_ha1}
 
 
 This parameter tells the server whether it should considered the
@@ -123,7 +123,7 @@ modparam("auth_db", "calculate_ha1", 1)
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 If true (not 0), domain will be also used when looking up in the
@@ -149,7 +149,7 @@ modparam("auth_db", "use_domain", 1)
 ```
 
 
-#### load_credentials (string)
+#### load_credentials (string) {#param_load_credentials}
 
 
 This parameter specifies credentials to be fetched from database when
@@ -189,7 +189,7 @@ modparam("auth_db", "load_credentials", "$avp(13)=rpid;email_address")
 ```
 
 
-#### skip_version_check (int)
+#### skip_version_check (int) {#param_skip_version_check}
 
 
 This parameter specifies not to check the auth table version. This
@@ -208,7 +208,7 @@ modparam("auth_db", "skip_version_check", 1)
 ```
 
 
-#### user_column (string)
+#### user_column (string) {#param_user_column}
 
 
 This is the name of the column in a 'SUBSCRIBER' like table holding
@@ -227,7 +227,7 @@ modparam("auth_db", "user_column", "user")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 This is the name of the column in a 'SUBSCRIBER' like table holding
@@ -247,7 +247,7 @@ modparam("auth_db", "domain_column", "domain")
 ```
 
 
-#### password_column (string)
+#### password_column (string) {#param_password_column}
 
 
 This is the name of the column in a *"subscriber"*
@@ -270,7 +270,7 @@ modparam("auth_db", "password_column", "password")
 ```
 
 
-#### hash_column_sha256 (string)
+#### hash_column_sha256 (string) {#param_hash_column_sha256}
 
 
 The name of the column holding SHA-256 HA1 hashes
@@ -288,7 +288,7 @@ modparam("auth_db", "hash_column_sha256", "ha1_sha256")
 ```
 
 
-#### hash_column_sha512t256 (string)
+#### hash_column_sha512t256 (string) {#param_hash_column_sha512t256}
 
 
 The name of the column holding SHA-512/256 HA1 hashes.
@@ -306,7 +306,7 @@ modparam("auth_db", "hash_column_sha512t256", "ha1_sha512t256")
 ```
 
 
-#### uri_user_column (string)
+#### uri_user_column (string) {#param_uri_user_column}
 
 
 Column holding usernames in an 'URI' like table.
@@ -325,7 +325,7 @@ modparam("auth_db", "uri_user_column", "username")
 ```
 
 
-#### uri_domain_column (string)
+#### uri_domain_column (string) {#param_uri_domain_column}
 
 
 Column holding domain in an 'URI' like table.
@@ -344,7 +344,7 @@ modparam("auth_db", "uri_domain_column", "domain")
 ```
 
 
-#### uri_uriuser_column (string)
+#### uri_uriuser_column (string) {#param_uri_uriuser_column}
 
 
 Column holding URI username in an 'URI' like table.
@@ -363,10 +363,10 @@ modparam("auth_db", "uri_uriuser_column", "uri_user")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### www_authorize(realm, table)
+#### www_authorize(realm, table) {#func_www_authorize}
 
 
 The function verifies the received credentials against a
@@ -426,7 +426,7 @@ if (!www_authorize("siphub.net", "subscriber"))
 ```
 
 
-#### proxy_authorize(realm, table)
+#### proxy_authorize(realm, table) {#func_proxy_authorize}
 
 
 The function verifies the received credentials against a
@@ -484,7 +484,7 @@ if (!proxy_authorize("", "subscriber"))
 ```
 
 
-#### db_is_to_authorized(table)
+#### db_is_to_authorized(table) {#func_db_is_to_authorized}
 
 
 The function checks against a  'URI' like table to see if the
@@ -521,14 +521,14 @@ if (!db_is_to_authorized("uri")) {
 ```
 
 
-#### db_is_from_authorized(table)
+#### db_is_from_authorized(table) {#func_db_is_from_authorized}
 
 
 Similar to [db is to authorized](#func_db_is_to_authorized) but instead of
 		checking the TO header URI, the FROM header URI is checked.
 
 
-#### db_does_uri_exist(uri, table)
+#### db_does_uri_exist(uri, table) {#func_db_does_uri_exist}
 
 
 Checks if the username@domain from the given URI is an existing
@@ -559,7 +559,7 @@ if (db_does_uri_exist($ru, "subscriber")) {
 ```
 
 
-#### db_get_auth_id(table, uri, auth, realm)
+#### db_get_auth_id(table, uri, auth, realm) {#func_db_get_auth_id}
 
 
 Checks given uri-string username against an 'URI' like table.
@@ -598,10 +598,10 @@ if (db_get_auth_id("uri", $ru, $avp(auth_id), $avp(auth_realm))) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -633,7 +633,7 @@ if (db_get_auth_id("uri", $ru, $avp(auth_id), $avp(auth_realm))) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -659,10 +659,10 @@ if (db_get_auth_id("uri", $ru, $avp(auth_id), $avp(auth_realm))) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Kennard White, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Jan Janak ([@janakj](https://github.com/janakj)).

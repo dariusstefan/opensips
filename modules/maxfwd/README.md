@@ -6,7 +6,7 @@ description: "The module implements all the operations regarding MaX-Forward hea
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module implements all the operations regarding MaX-Forward header 
@@ -14,7 +14,7 @@ The module implements all the operations regarding MaX-Forward header
 		the value of the existent one.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -36,10 +36,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### max_limit (integer)
+#### max_limit (integer) {#param_max_limit}
 
 
 Set an upper limit for the max-forward value in the outgoing requests.
@@ -69,10 +69,10 @@ modparam("maxfwd", "max_limit", 32)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mf_process_maxfwd_header(max_value)
+#### mf_process_maxfwd_header(max_value) {#func_mf_process_maxfwd_header}
 
 
 If no Max-Forward header is present in the received request, a header 
@@ -122,7 +122,7 @@ if (!mf_process_maxfwd_header(10) && $retcode==-1) {
 ```
 
 
-#### is_maxfwd_lt(max_value)
+#### is_maxfwd_lt(max_value) {#func_is_maxfwd_lt}
 
 
 Checks if the Max-Forward header value is less then the 
@@ -168,10 +168,10 @@ if ( is_maxfwd_lt(1) ) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -203,7 +203,7 @@ if ( is_maxfwd_lt(1) ) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -229,10 +229,10 @@ if ( is_maxfwd_lt(1) ) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Klaus Darilion, Elena-Ramona Modroiu.

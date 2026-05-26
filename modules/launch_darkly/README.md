@@ -6,7 +6,7 @@ description: "This module implements support for the [Launch Darkly](https://lau
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements support for the
@@ -18,7 +18,7 @@ This module implements support for the
 OpenSIPS uses the [server side C/C++ SDK](https://launchdarkly.com/features/sdk/) provided by Launch Darkly.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -58,10 +58,10 @@ The instructions for a quick installations of the library (note that it has to b
 ```
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### sdk_key (string)
+#### sdk_key (string) {#param_sdk_key}
 
 
 The LaunchDarkly SDK key used to connect to the service. This
@@ -78,7 +78,7 @@ modparam("launch_darkly", "sdk_key", "sdk-12345678-abcd-12ab-1234-0123456789abc"
 ```
 
 
-#### ld_log_level (string)
+#### ld_log_level (string) {#param_ld_log_level}
 
 
 The LaunchDarkly specific log level to be used by the LD SDK/libray to
@@ -111,7 +111,7 @@ modparam("launch_darkly", "ld_log_level", "LD_LOG_CRITICAL")
 ```
 
 
-#### connect_wait (integer)
+#### connect_wait (integer) {#param_connect_wait}
 
 
 The time to wait (in miliseconds) when connecting to the LD service.
@@ -132,7 +132,7 @@ modparam("launch_darkly", "connect_wait", 100)
 ```
 
 
-#### re_init_interval (integer)
+#### re_init_interval (integer) {#param_re_init_interval}
 
 
 The minimum time interval (in seconds) to try again to init 
@@ -157,10 +157,10 @@ modparam("launch_darkly", "re_init_interval", 30)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ld_feature_enabled( flag, user, [user_extra], [fallback])
+#### ld_feature_enabled( flag, user, [user_extra], [fallback]) {#func_ld_feature_enabled}
 
 
 Function to evaluate a LaunchDarkly boolean feature flag
@@ -210,10 +210,10 @@ The function has the following parameters:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -234,7 +234,7 @@ The function has the following parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -249,10 +249,10 @@ The function has the following parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

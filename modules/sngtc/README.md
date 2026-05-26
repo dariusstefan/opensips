@@ -6,7 +6,7 @@ description: "The **Sangoma transcoding module** offers the possibility of perfo
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The **Sangoma transcoding module** offers the
@@ -44,7 +44,7 @@ Since the *sngtc_node* library performs several memory
 	UDP receivers through a series of pipes.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -69,10 +69,10 @@ The following libraries or applications must be installed before running
 					this module to properly work)*.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sngtc_offer()
+#### sngtc_offer() {#func_sngtc_offer}
 
 
 The function strips off the SDP offer from a SIP INVITE, thus
@@ -103,7 +103,7 @@ The function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
 #### sngtc_callee_answer([listen_if_A], [listen_if_B])
-		
+		 {#func_sngtc_callee_answer}
 
 
 Handles the SDP offer from 200 OK responses, intersects both offers with
@@ -152,7 +152,7 @@ onreply_route[1] {
 ```
 
 
-#### sngtc_caller_answer()
+#### sngtc_caller_answer() {#func_sngtc_caller_answer}
 
 
 Attaches an SDP body to the caller's ACK request, so that it matches
@@ -185,10 +185,10 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -213,7 +213,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -232,10 +232,10 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

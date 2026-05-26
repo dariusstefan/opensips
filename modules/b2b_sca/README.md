@@ -6,7 +6,7 @@ description: "This module provides core SCA (Shared Call Appearance) functionali
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides core SCA (Shared Call Appearance) functionality
@@ -79,7 +79,7 @@ Features to be added in the future:
 - possibility to handle unlimited number of appearances.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -93,10 +93,10 @@ The following modules must be loaded before this module:
 				*b2b_logic* module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size(integer)
+#### hash_size(integer) {#param_hash_size}
 
 
 The size of the hash table internally used to keep the shared calls.
@@ -117,7 +117,7 @@ modparam("b2b_sca", "hash_size", "5")
 ```
 
 
-#### presence_server(string)
+#### presence_server(string) {#param_presence_server}
 
 
 The address of the presence server, where the PUBLISH
@@ -139,7 +139,7 @@ modparam("b2b_sca", "presence_server", "sip:opensips.org")
 ```
 
 
-#### watchers_avp_spec(string)
+#### watchers_avp_spec(string) {#param_watchers_avp_spec}
 
 
 AVP that will hold one or more watcher URI(s).
@@ -166,7 +166,7 @@ route {
 ```
 
 
-#### shared_line_spec_param(string)
+#### shared_line_spec_param(string) {#param_shared_line_spec_param}
 
 
 Mandatory parameter.
@@ -187,7 +187,7 @@ modparam("b2b_sca", "shared_line_spec_param", "$var(shared_line)")
 ```
 
 
-#### appearance_name_addr_spec_param(string)
+#### appearance_name_addr_spec_param(string) {#param_appearance_name_addr_spec_param}
 
 
 Mandatory parameter.
@@ -210,7 +210,7 @@ modparam("b2b_sca", "appearance_name_addr_spec_param", "")
 ```
 
 
-#### db_url(string)
+#### db_url(string) {#param_db_url}
 
 
 This is URL of the database to be used.
@@ -229,7 +229,7 @@ modparam("b2b_sca", "db_url", "[dbdriver]://[[username]:[password]]@[dbhost]/[db
 ```
 
 
-#### db_mode(integer)
+#### db_mode(integer) {#param_db_mode}
 
 
 The b2b_sca module can utilize database for persistent call appearance storage.
@@ -255,7 +255,7 @@ modparam("b2b_sca", "db_mode", 1)
 ```
 
 
-#### table_name(string)
+#### table_name(string) {#param_table_name}
 
 
 Identifies the table name from the defined database.
@@ -274,7 +274,7 @@ modparam("b2b_sca", "table_name", "sla")
 ```
 
 
-#### shared_line_column(string)
+#### shared_line_column(string) {#param_shared_line_column}
 
 
 The column's name in the database storing the shared call/line id.
@@ -294,7 +294,7 @@ modparam("b2b_sca", "shared_line_column", "")
 ```
 
 
-#### watchers_column(string)
+#### watchers_column(string) {#param_watchers_column}
 
 
 The column's name in the database storing the list of watchers.
@@ -314,7 +314,7 @@ modparam("b2b_sca", "watchers_column", "")
 ```
 
 
-#### app[index]_shared_entity_column(string)
+#### app[index]_shared_entity_column(string) {#param_appindex_shared_entity_column}
 
 
 The column's name in the database storing the shared entity of a
@@ -337,7 +337,7 @@ modparam("b2b_sca", "app2_shared_entity_column", "second_shared_entity")
 ```
 
 
-#### app[index]_call_state_column(string)
+#### app[index]_call_state_column(string) {#param_appindex_call_state_column}
 
 
 The column's name in the database storing the call state of a
@@ -365,7 +365,7 @@ modparam("b2b_sca", "app2_call_state_column", "second_call_state")
 ```
 
 
-#### app[index]_call_info_uri_column(string)
+#### app[index]_call_info_uri_column(string) {#param_appindex_call_info_uri_column}
 
 
 The column's name in the database storing the call info URI of a
@@ -387,7 +387,7 @@ modparam("b2b_sca", "app2_call_info_uri_column", "second_call_info_uri")
 ```
 
 
-#### app[index]_call_info_appearance_uri_column(string)
+#### app[index]_call_info_appearance_uri_column(string) {#param_appindex_call_info_appearance_uri_column}
 
 
 The column's name in the database storing the call info appearance URI
@@ -411,7 +411,7 @@ modparam("b2b_sca", "app2_call_info_appearance_uri_column", "second_call_info_ap
 ```
 
 
-#### appindex_b2bl_key_column(string)
+#### appindex_b2bl_key_column(string) {#param_appindex_b2bl_key_column}
 
 
 The column's name in the database storing the b2b_logic key of a
@@ -433,10 +433,10 @@ modparam("b2b_sca", "app2_b2bl_key_column", "second_b2bl_key")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sca_init_request(shared_line)
+#### sca_init_request(shared_line) {#func_sca_init_request}
 
 
 This is the function that must be called by the script writer
@@ -498,7 +498,7 @@ modparam("b2b_sca",
 ```
 
 
-#### sca_bridge_request(shared_line_to bridge)
+#### sca_bridge_request(shared_line_to bridge) {#func_sca_bridge_request}
 
 
 This is the function that must be called by the script writer on an initial
@@ -530,10 +530,10 @@ Meaning of the parameters:
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### sca_list
+#### sca_list {#mi_sca_list}
 
 
 It lists the appearances belonging to a shared line/call.
@@ -553,10 +553,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -583,7 +583,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -604,10 +604,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

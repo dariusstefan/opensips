@@ -5,7 +5,7 @@ title: "Dynamic Routing Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 #### Introduction
@@ -293,7 +293,7 @@ A destination can become disabled in two ways:
 - MI command
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -316,10 +316,10 @@ The following modules must be loaded before this module:
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url(str)
+#### db_url(str) {#param_db_url}
 
 
 The database url.
@@ -339,7 +339,7 @@ modparam("drouting", "db_url",
 ```
 
 
-#### drd_table(str)
+#### drd_table(str) {#param_drd_table}
 
 
 The name of the db table storing gateway addresses.
@@ -358,7 +358,7 @@ modparam("drouting", "drd_table", "dr_gateways")
 ```
 
 
-#### drr_table(str)
+#### drr_table(str) {#param_drr_table}
 
 
 The name of the db table storing routing rules.
@@ -377,7 +377,7 @@ modparam("drouting", "drr_table", "rules")
 ```
 
 
-#### drg_table(str)
+#### drg_table(str) {#param_drg_table}
 
 
 The name of the db table storing groups.
@@ -396,7 +396,7 @@ modparam("drouting", "drg_table", "groups")
 ```
 
 
-#### drc_table(str)
+#### drc_table(str) {#param_drc_table}
 
 
 The name of the db table storing definitions of the carriers that will
@@ -416,7 +416,7 @@ modparam("drouting", "drc_table", "my_dr_carriers")
 ```
 
 
-#### ruri_avp (str)
+#### ruri_avp (str) {#param_ruri_avp}
 
 
 The name of the avp for storing Request URIs to be later used
@@ -440,7 +440,7 @@ modparam("drouting", "ruri_avp", '$avp(33)')
 ```
 
 
-#### gw_id_avp (str)
+#### gw_id_avp (str) {#param_gw_id_avp}
 
 
 The name of the avp for storing the id of the current selected
@@ -466,7 +466,7 @@ modparam("drouting", "gw_id_avp", '$avp(334)')
 ```
 
 
-#### gw_priprefix_avp (str)
+#### gw_priprefix_avp (str) {#param_gw_priprefix_avp}
 
 
 The name of the avp for storing the PRI prefix of the current selected
@@ -489,7 +489,7 @@ modparam("drouting", "gw_priprefix_avp", '$avp(gw_priprefix)')
 ```
 
 
-#### rule_id_avp (str)
+#### rule_id_avp (str) {#param_rule_id_avp}
 
 
 The name of the avp for storing the id of the current matched
@@ -511,7 +511,7 @@ modparam("drouting", "rule_id_avp", '$avp(335)')
 ```
 
 
-#### rule_prefix_avp (str)
+#### rule_prefix_avp (str) {#param_rule_prefix_avp}
 
 
 The actual prefix that matched the routing rule (the part from RURI
@@ -532,7 +532,7 @@ modparam("drouting", "rule_prefix_avp", '$avp(dr_prefix)')
 ```
 
 
-#### carrier_id_avp (str)
+#### carrier_id_avp (str) {#param_carrier_id_avp}
 
 
 AVP to be populate with the ID string for the carrier the
@@ -553,7 +553,7 @@ modparam("drouting", "carrier_id_avp", '$avp(carrier_id)')
 ```
 
 
-#### gw_sock_avp (str)
+#### gw_sock_avp (str) {#param_gw_sock_avp}
 
 
 The name of the avp for storing sockets for alternative destinations
@@ -577,7 +577,7 @@ modparam("drouting", "gw_sock_avp", '$avp(77)')
 ```
 
 
-#### define_blacklist (str)
+#### define_blacklist (str) {#param_define_blacklist}
 
 
 Defines a blacklist based on a list of GW types - the blacklist will 
@@ -609,7 +609,7 @@ modparam("drouting", "define_blacklist", 'pstn:list3 = 7,8')
 ```
 
 
-#### default_group (int)
+#### default_group (int) {#param_default_group}
 
 
 Group to be used if the caller (FROM user) is not found in the GROUP
@@ -629,7 +629,7 @@ modparam("drouting", "default_group", 4)
 ```
 
 
-#### force_dns (int)
+#### force_dns (int) {#param_force_dns}
 
 
 Force DNS resolving of GW/destination names (if not IPs) during
@@ -651,7 +651,7 @@ modparam("drouting", "force_dns", 0)
 ```
 
 
-#### persistent_state (int)
+#### persistent_state (int) {#param_persistent_state}
 
 
 Specifies whether the *state* column
@@ -672,7 +672,7 @@ modparam("drouting", "persistent_state", 0)
 ```
 
 
-#### no_concurrent_reload (int)
+#### no_concurrent_reload (int) {#param_no_concurrent_reload}
 
 
 If enabled, the module will not allow do run multiple dr_reload
@@ -701,7 +701,7 @@ modparam("drouting", "no_concurrent_reload", 1)
 ```
 
 
-#### probing_interval (integer)
+#### probing_interval (integer) {#param_probing_interval}
 
 
 How often (in seconds) the probing of a destination should be done. If
@@ -722,7 +722,7 @@ modparam("drouting", "probing_interval", 60)
 ```
 
 
-#### probing_method (string)
+#### probing_method (string) {#param_probing_method}
 
 
 The SIP method to be used for the probing requests.
@@ -741,7 +741,7 @@ modparam("drouting", "probing_method", "INFO")
 ```
 
 
-#### probing_from (string)
+#### probing_from (string) {#param_probing_from}
 
 
 The FROM SIP URI to be advertised in the SIP probing requests.
@@ -760,7 +760,7 @@ modparam("drouting", "probing_from", "sip:pinger@192.168.2.10")
 ```
 
 
-#### probing_reply_codes (string)
+#### probing_reply_codes (string) {#param_probing_reply_codes}
 
 
 A comma separted list of SIP reply codes. The codes defined here
@@ -781,7 +781,7 @@ modparam("drouting", "probing_reply_codes", "501, 403")
 ```
 
 
-#### probing_socket (string)
+#### probing_socket (string) {#param_probing_socket}
 
 
 A socket description [proto:]host[:port] of the local socket
@@ -809,7 +809,7 @@ modparam("drouting", "probing_socket", "udp:192.168.1.100:5060")
 ```
 
 
-#### gw_socket_filter_mode (string)
+#### gw_socket_filter_mode (string) {#param_gw_socket_filter_mode}
 
 
 This parameter controls the gateway filtering during DB loading, or which
@@ -854,7 +854,7 @@ modparam("drouting", "gw_socket_filter_mode", "ignore")
 ```
 
 
-#### cluster_id (integer)
+#### cluster_id (integer) {#param_cluster_id}
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -903,7 +903,7 @@ modparam("drouting", "cluster_id", 9)
 ```
 
 
-#### cluster_sharing_tag (string)
+#### cluster_sharing_tag (string) {#param_cluster_sharing_tag}
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -939,7 +939,7 @@ modparam("drouting", "cluster_sharing_tag", "vip")
 ```
 
 
-#### cluster_probing_mode (string)
+#### cluster_probing_mode (string) {#param_cluster_probing_mode}
 
 
 This paramter controls how the probing/pinging should be done when
@@ -992,7 +992,7 @@ modparam("drouting", "cluster_probing_mode", "distributed")
 ```
 
 
-#### use_domain (int)
+#### use_domain (int) {#param_use_domain}
 
 
 Flag to configure whether to use domain match when querying
@@ -1012,7 +1012,7 @@ modparam("drouting", "use_domain", 0)
 ```
 
 
-#### drg_user_col (str)
+#### drg_user_col (str) {#param_drg_user_col}
 
 
 The name of the column in group db table where the username is stored.
@@ -1031,7 +1031,7 @@ modparam("drouting", "drg_user_col", "user")
 ```
 
 
-#### drg_domain_col (str)
+#### drg_domain_col (str) {#param_drg_domain_col}
 
 
 The name of the column in group db table where the domain is stored.
@@ -1050,7 +1050,7 @@ modparam("drouting", "drg_domain_col", "host")
 ```
 
 
-#### drg_grpid_col (str)
+#### drg_grpid_col (str) {#param_drg_grpid_col}
 
 
 The name of the column in group db table where the
@@ -1070,7 +1070,7 @@ modparam("drouting", "drg_grpid_col", "grpid")
 ```
 
 
-#### use_partitions (int)
+#### use_partitions (int) {#param_use_partitions}
 
 
 Flag to configure whether to use partitions for routing. If this
@@ -1092,7 +1092,7 @@ modparam("drouting", "use_partitions", 1)
 ```
 
 
-#### db_partitions_url (str)
+#### db_partitions_url (str) {#param_db_partitions_url}
 
 
 The url to the database containing partition-specific
@@ -1117,7 +1117,7 @@ modparam("drouting", "db_partitions_url", "mysql://user:password@localhost/opens
 ```
 
 
-#### db_partitions_table (str)
+#### db_partitions_table (str) {#param_db_partitions_table}
 
 
 The name of the table containing partition definitions. To be
@@ -1137,7 +1137,7 @@ modparam("drouting", "db_partitions_table", "partition_defs")
 ```
 
 
-#### partition_id_pvar (pvar)
+#### partition_id_pvar (pvar) {#param_partition_id_pvar}
 
 
 Variable which will store the name of the name partition when
@@ -1162,7 +1162,7 @@ modparam("drouting", "partition_id_pvar", "$var(matched_partition)")
 ```
 
 
-#### enable_restart_persistency (int)
+#### enable_restart_persistency (int) {#param_enable_restart_persistency}
 
 
 Parameter set to enable restart persistency for the Dynamic Routing module.
@@ -1191,7 +1191,7 @@ modparam("drouting", "enable_restart_persistency", yes)
 ```
 
 
-#### extra_prefix_chars (str)
+#### extra_prefix_chars (str) {#param_extra_prefix_chars}
 
 
 List of ASCII (0-127) characters to be additionally accepted in
@@ -1212,7 +1212,7 @@ modparam("drouting", "extra_prefix_chars", "#-%")
 ```
 
 
-#### extra_id_chars (str)
+#### extra_id_chars (str) {#param_extra_id_chars}
 
 
 A set of extra characters to be allowed in both Gateway and Carrier
@@ -1232,7 +1232,7 @@ modparam("drouting", "extra_id_chars", ":_-.")
 ```
 
 
-#### rule_tables_query (str)
+#### rule_tables_query (str) {#param_rule_tables_query}
 
 
 This parameter offers a dynamic, SQL-based way of building a set of
@@ -1269,7 +1269,7 @@ modparam("drouting", "rule_tables_query", "
 ```
 
 
-#### generate_data_checksum (int)
+#### generate_data_checksum (int) {#param_generate_data_checksum}
 
 
 If enabled, it will generate a checksum ( MD5 ) for drouting loaded data, attach that to the reload_status MI command output and to the reload generated status reports
@@ -1286,10 +1286,10 @@ modparam("drouting", "generate_data_checksum", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### do_routing([groupID], [flags], [gw_whitelist], [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
+#### do_routing([groupID], [flags], [gw_whitelist], [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_do_routing}
 
 
 Function to trigger routing of the message according to the
@@ -1357,7 +1357,7 @@ All parameters are optional. Any of them may be ignored, provided
 ```
 
 
-#### route_to_carrier( carriers, [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
+#### route_to_carrier( carriers, [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_route_to_carrier}
 
 
 Function to trigger the direct routing to a given set carriers (one 
@@ -1422,7 +1422,7 @@ if ( route_to_carrier($var(carrierId), , , $var(my_partition)) ) {
 ```
 
 
-#### route_to_gw(gw_id, [gw_attrs_var], [carrier_attrs_var], [partition])
+#### route_to_gw(gw_id, [gw_attrs_var], [carrier_attrs_var], [partition]) {#func_route_to_gw}
 
 
 Function to trigger the direct routing to a given gateway (or list of
@@ -1487,7 +1487,7 @@ if ( route_to_gw("gw1,gw2,gw3", $var(gw_attrs), , "my_partition") ) {
 ```
 
 
-#### use_next_gw( [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
+#### use_next_gw( [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_use_next_gw}
 
 
 The function takes the next available destination (set by do_routing,
@@ -1564,7 +1564,7 @@ if (use_next_gw( , ,$var(carrier_attrs), "my_partition")) {
 ```
 
 
-#### goes_to_gw( [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
+#### goes_to_gw( [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_goes_to_gw}
 
 
 Function returns true if the destination of the current request
@@ -1638,7 +1638,7 @@ if (goes_to_gw(1, , $var(gw_attrs), , "my_partition")) {
 ```
 
 
-#### is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar],  [partition])
+#### is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar],  [partition]) {#func_is_from_gw}
 
 
 The function checks if the sender of the message (source IP + source
@@ -1711,7 +1711,7 @@ if (is_from_gw(, "c", , , "outbound")) {
 ```
 
 
-#### dr_is_gw( sip_uri, [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
+#### dr_is_gw( sip_uri, [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_dr_is_gw}
 
 
 The function checks if the SIP URI hostname part stored inside the
@@ -1784,7 +1784,7 @@ if (dr_is_gw( $avp(uac), , "n", , , "partition")) {
 ```
 
 
-#### dr_disable([partition])
+#### dr_disable([partition]) {#func_dr_disable}
 
 
 Marks as disabled the last destination that was used for the current
@@ -1830,7 +1830,7 @@ if (t_check_status("(408)|(5[0-9][0-9])")) {
 ```
 
 
-#### dr_match(groupID, [flags], number, [rule_attrs_pvar], [partition])
+#### dr_match(groupID, [flags], number, [rule_attrs_pvar], [partition]) {#func_dr_match}
 
 
 The function tries to match/check the given number against the
@@ -1881,10 +1881,10 @@ if ( dr_match( 1, , $var(did) ) )
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dr_reload
+#### dr_reload {#mi_dr_reload}
 
 
 Command to reload routing rules from database.
@@ -2126,10 +2126,10 @@ Status:: 0
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_DROUTING_STATUS
+#### E_DROUTING_STATUS {#event_E_DROUTING_STATUS}
 
 
 This event is raised when the module changes the state of a gateway,
@@ -2149,14 +2149,14 @@ Parameters:
 				*active* if the gateway is enabled.
 
 
-### Exported Status/Report Identifiers
+### Exported Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "drouting" Status/Report group, where each
 	routing partition is defined as a separate SR identifier.
 
 
-#### [partition_name]
+#### [partition_name] {#sr_id_partition_name}
 
 
 The status of these identifiers reflects the readiness/status of the 
@@ -2206,7 +2206,7 @@ In terms of data reloading, the following logs will be reported:
 ```
 
 
-#### [partition_name];events
+#### [partition_name];events {#sr_id_events}
 
 
 GW/Carrier switching reporting:
@@ -2267,10 +2267,10 @@ The module provides no function to be used
 		by other OpenSIPS modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -2302,7 +2302,7 @@ The module provides no function to be used
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -2328,10 +2328,10 @@ The module provides no function to be used
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), wangdd, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Matt Lehner, Anca Vamanu, Andrei Dragus, Sergio Gutierrez.

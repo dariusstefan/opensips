@@ -5,7 +5,7 @@ title: "Trie Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 #### Introduction
@@ -14,7 +14,7 @@ title: "Trie Module"
 Trie is a module for efficiently caching and lookup of a set of prefixes ( stored in a trie data structure )
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -32,10 +32,10 @@ The following modules must be loaded before this module:
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### trie_table(str)
+#### trie_table(str) {#trie_table}
 
 
 The name of the db table storing prefix rules.
@@ -54,7 +54,7 @@ modparam("trie", "trie_table", "my_prefix_table")
 ```
 
 
-#### no_concurrent_reload (int)
+#### no_concurrent_reload (int) {#param_no_concurrent_reload}
 
 
 If enabled, the module will not allow do run multiple trie_reload
@@ -83,7 +83,7 @@ modparam("trie", "no_concurrent_reload", 1)
 ```
 
 
-#### use_partitions (int)
+#### use_partitions (int) {#param_use_partitions}
 
 
 Flag to configure whether to use partitions for tries. If this
@@ -105,7 +105,7 @@ modparam("trie", "use_partitions", 1)
 ```
 
 
-#### db_partitions_url (str)
+#### db_partitions_url (str) {#param_db_partitions_url}
 
 
 The url to the database containing partition-specific
@@ -126,7 +126,7 @@ modparam("trie", "db_partitions_url", "mysql://user:password@localhost/opensips_
 ```
 
 
-#### db_partitions_table (str)
+#### db_partitions_table (str) {#param_db_partitions_table}
 
 
 The name of the table containing partition definitions. To be
@@ -146,7 +146,7 @@ modparam("trie", "db_partitions_table", "trie_partition_defs")
 ```
 
 
-#### extra_prefix_chars (str)
+#### extra_prefix_chars (str) {#param_extra_prefix_chars}
 
 
 List of ASCII (0-127) characters to be additionally accepted in
@@ -167,10 +167,10 @@ modparam("trie", "extra_prefix_chars", "#-%")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### trie_search(number, [flags], [trie_attrs_pvar], [match_prefix_pvar], [partition])
+#### trie_search(number, [flags], [trie_attrs_pvar], [match_prefix_pvar], [partition]) {#func_trie_search}
 
 
 Function to search for an entry ( number ) in a trie.
@@ -218,10 +218,10 @@ if (trie_search("$rU","L",$avp(code_attrs),,"my_partition")) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### trie_reload
+#### trie_reload {#trie_reload}
 
 
 Command to reload trie rules from database.
@@ -357,10 +357,10 @@ The module requires some tables in the OpenSIPS database.
 	You can also find the complete database documentation on the project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -382,7 +382,7 @@ The module requires some tables in the OpenSIPS database.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -398,10 +398,10 @@ The module requires some tables in the OpenSIPS database.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

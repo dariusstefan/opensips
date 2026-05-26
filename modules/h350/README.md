@@ -6,7 +6,7 @@ description: "The OpenSIPS H350 module enables an OpenSIPS SIP proxy server to a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The OpenSIPS H350 module enables an OpenSIPS SIP proxy server to access SIP account data stored in an LDAP [RFC4510](#RFC4510) directory containing H.350 [H350](#H350) *commObjects*. ITU-T Recommendation H.350 standardizes LDAP object classes to store Real-Time Communication (RTC) account data. In particular, *H.350.4* [H350 4](#H350-4) defines an object class called *sipIdentity* that includes attribute specifications for SIP account data like SIP URI, SIP digest username/password, or service level. This allows to store SIP account data in a vendor neutral way and lets different entities, like SIP proxies, provisioning, or billing applications, access the data in a standardized format.
@@ -77,7 +77,7 @@ objectClass                   top
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -101,10 +101,10 @@ The following libraries or applications must be installed before
             (libldap-dev) are needed for compilation
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### ldap_session (string)
+#### ldap_session (string) {#param_ldap_session}
 
 
 Name of the LDAP session to be used for H.350 queries, as defined in the LDAP module configuration file.
@@ -122,7 +122,7 @@ modparam("h350", "ldap_session", "h350");
 ```
 
 
-#### base_dn (string)
+#### base_dn (string) {#param_base_dn}
 
 
 Base LDAP DN to start LDAP search for H.350 entries. For best performance, this should be set to the direct ancestor of the H.350 objects.
@@ -140,7 +140,7 @@ modparam("h350", "base_dn", "ou=h350,dc=example,dc=com");
 ```
 
 
-#### search_scope (string)
+#### search_scope (string) {#param_search_scope}
 
 
 LDAP search scope for H.350 queries, one of "one", "base", or "sub".
@@ -158,7 +158,7 @@ modparam("h350", "search_scope", "sub");
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### h350_sipuri_lookup(sip_uri)
@@ -617,10 +617,10 @@ exit;
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -649,7 +649,7 @@ exit;
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -672,10 +672,10 @@ exit;
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Christian Schlatter.

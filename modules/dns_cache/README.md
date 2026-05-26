@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed for DN
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed for DNS records.
@@ -17,7 +17,7 @@ This module is an implementation of a cache system designed for DNS records.
 		The module uses the Key-Value interface exported from the core.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -27,10 +27,10 @@ A cachedb_* type module must be loaded before loading
 		the dns_cache module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The url of the key-value back-end that will be used
@@ -51,7 +51,7 @@ modparam("dns_cache", "cachedb_url","memcached://192.168.2.130:8888/")
 ```
 
 
-#### blacklist_timeout (int)
+#### blacklist_timeout (int) {#param_blacklist_timeout}
 
 
 The number of seconds that a failed DNS query will be kept in cache.
@@ -69,7 +69,7 @@ modparam("dns_cache", "blacklist_timeout",7200) # 2 hours
 ```
 
 
-#### min_ttl (int)
+#### min_ttl (int) {#param_min_ttl}
 
 
 The minimum number of seconds that a DNS record will be kept in
@@ -91,17 +91,17 @@ modparam("dns_cache", "min_ttl",300) # 5 minutes
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
 		in configuration script.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -129,7 +129,7 @@ The module does not export functions to be used
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -151,10 +151,10 @@ The module does not export functions to be used
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Leo Smith, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

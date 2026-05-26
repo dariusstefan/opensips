@@ -6,13 +6,13 @@ description: "Module description"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Module description
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -36,10 +36,10 @@ The following libraries or applications must be installed before running
 				the module (e.g., libpq-dev).
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### exec_query_threshold (integer)
+#### exec_query_threshold (integer) {#param_exec_query_threshold}
 
 
 If queries take longer than 'exec_query_threshold' microseconds, warning
@@ -59,7 +59,7 @@ modparam("db_postgres", "exec_query_threshold", 60000)
 ```
 
 
-#### max_db_queries (integer)
+#### max_db_queries (integer) {#param_max_db_queries}
 
 
 The maximum number of database queries to be executed. 
@@ -79,7 +79,7 @@ modparam("db_postgres", "max_db_queries", 2)
 ```
 
 
-#### timeout (integer)
+#### timeout (integer) {#param_timeout}
 
 
 The number of seconds the PostgreSQL library waits to connect and query
@@ -107,7 +107,7 @@ modparam("db_postgres", "timeout", 2)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Parameter to control the way the SSL support is used when connecting
@@ -174,7 +174,7 @@ modparam("usrloc", "db_url", "postgres://root:1234@localhost/opensips?tls_domain
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 NONE
@@ -186,10 +186,10 @@ NONE
 Notes about installation and running.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -221,7 +221,7 @@ Notes about installation and running.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -247,10 +247,10 @@ Notes about installation and running.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Norman Brandinger ([@NormB](https://github.com/NormB)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Aron Podrigal, Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Jan Janak ([@janakj](https://github.com/janakj)).

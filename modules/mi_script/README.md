@@ -6,7 +6,7 @@ description: "This module provides multiple hooks to run Management Interface co
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides multiple hooks to run Management Interface
@@ -32,7 +32,7 @@ In case of failure of the MI command, JSON-RPC reply error code
 		provided, it is stored to the error description.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -55,10 +55,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### pretty_printing (int)
+#### pretty_printing (int) {#param_pretty_printing}
 
 
 Indicates whether the JSON responses stored in the return
@@ -78,7 +78,7 @@ modparam("mi_script", "pretty_printing", 1)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -106,7 +106,7 @@ modparam("mi_script", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_bwlist (string)
+#### trace_bwlist (string) {#param_trace_bwlist}
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -149,10 +149,10 @@ modparam("mi_script", "trace_bwlist", "w: sip_trace")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mi(command, [ret_var [,params_avp[, vals_avp]]])
+#### mi(command, [ret_var [,params_avp[, vals_avp]]]) {#func_mi}
 
 
 Runs an MI command in synchronous mode, blocking
@@ -297,7 +297,7 @@ mi("fs_subscribe", , $avp(params), $avp(vals));
 ### Exported Asyncronous Functions
 
 
-#### mi(command, [ret_var [,params_avp[, vals_avp]]])
+#### mi(command, [ret_var [,params_avp[, vals_avp]]]) {#afunc_mi}
 
 
 The function works is more or less the same as its
@@ -327,10 +327,10 @@ route[after_reload] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -353,7 +353,7 @@ route[after_reload] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -370,10 +370,10 @@ route[after_reload] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

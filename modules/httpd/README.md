@@ -6,7 +6,7 @@ description: "This module provides an HTTP transport layer for OpenSIPS."
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides an HTTP transport layer for OpenSIPS.
@@ -16,7 +16,7 @@ Implementation of httpd module's http server is based on
 		libmicrohttpd library.
 
 
-### Overview
+### Overview {#tlssupport}
 
 
 TLS for the http server is enabled by setting  the `tls_cert_file`
@@ -24,7 +24,7 @@ TLS for the http server is enabled by setting  the `tls_cert_file`
 			http is disabled.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -36,7 +36,7 @@ The following modules must be loaded before this module:
 - *No dependencies on other OpenSIPS modules*.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#dependencies_libs}
 
 
 The following libraries or applications must be installed before 
@@ -63,10 +63,10 @@ The following libraries or applications must be installed before
 - regression is fixed since **0.9.72** (Dec 2020)
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### ip(string)
+#### ip(string) {#param_ip}
 
 
 The IP address used by the HTTP server to listen for incoming 
@@ -86,7 +86,7 @@ modparam("httpd", "ip", "127.0.0.1")
 ```
 
 
-#### port(integer)
+#### port(integer) {#param_port}
 
 
 The port number used by the HTTP server to listen for incoming 
@@ -107,7 +107,7 @@ modparam("httpd", "port", 8000)
 ```
 
 
-#### conn_timeout(integer)
+#### conn_timeout(integer) {#param_conn_timeout}
 
 
 Auto-close TCP connections which are idle for more than the designated
@@ -133,7 +133,7 @@ modparam("httpd", "conn_timeout", 10)
 ```
 
 
-#### buf_size (integer)
+#### buf_size (integer) {#param_buf_size}
 
 
 It specifies the maximum length (in bytes) of the buffer
@@ -157,7 +157,7 @@ modparam("httpd", "buf_size", 524288)
 ```
 
 
-#### post_buf_size (integer)
+#### post_buf_size (integer) {#param_post_buf_size}
 
 
 It specifies the length (in bytes) of the POST HTTP requests
@@ -178,7 +178,7 @@ modparam("httpd", "post_buf_size", 4096)
 ```
 
 
-#### receive_buf_size (integer)
+#### receive_buf_size (integer) {#param_receive_buf_size}
 
 
 It specifies the maximum length (in bytes) of the received HTTP requests.  
@@ -198,7 +198,7 @@ modparam("httpd", "receive_buf_size", 4096)
 ```
 
 
-#### tls_cert_file (string)
+#### tls_cert_file (string) {#param_tls_cert_file}
 
 
 Public certificate file for httpd. It will be used as server-side certificate for incoming TLS connections.
@@ -217,7 +217,7 @@ modparam("httpd", "tls_cert_file", "/etc/opensips/tls/server.pem")
 ```
 
 
-#### tls_key_file (string)
+#### tls_key_file (string) {#param_tls_key_file}
 
 
 Private key of the above certificate. I must be kept in a safe place with tight permissions!
@@ -236,7 +236,7 @@ modparam("httpd", "tls_key_file", "/etc/opensips/tls/server.key")
 ```
 
 
-#### tls_ciphers (string)
+#### tls_ciphers (string) {#param_tls_ciphers}
 
 
 You can specify the list of algorithms for authentication and encryption that you allow.
@@ -263,10 +263,10 @@ modparam("httpd", "tls_ciphers", "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2")
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### httpd_list_root_path
+#### httpd_list_root_path {#mi_httpd_list_root_path}
 
 
 Lists all the registered http root paths into the httpd module.
@@ -289,7 +289,7 @@ opensips-cli -x mi httpd_list_root_path
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -350,10 +350,10 @@ Meaning of the parameters is as follows:
 			- handler to the callback method to be called during httpd process init;
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -385,7 +385,7 @@ Meaning of the parameters is as follows:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -411,10 +411,10 @@ Meaning of the parameters is as follows:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Fabian Gast ([@fgast](https://github.com/fgast)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

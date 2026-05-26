@@ -6,7 +6,7 @@ description: "This module implements TLS operations using the [openSSL](https://
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements TLS operations using the
@@ -16,7 +16,7 @@ This module implements TLS operations using the
 		*proto_tls* or *proto_wss* etc.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -49,10 +49,10 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 				*libssl-dev*
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -78,7 +78,7 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -98,10 +98,10 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

@@ -6,7 +6,7 @@ description: "This module provides the means to provision and manage dynamic soc
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides the means to provision and manage dynamic sockets
@@ -23,7 +23,7 @@ The [mi sockets list](#mi_sockets_list) MI command.
 		can be used to show all the dynamic sockets OpenSIPS is listening on.
 
 
-### Sockets
+### Sockets {#sockets}
 
 
 The module exclusively handles sockets used for SIP traffic (e.g.,
@@ -38,7 +38,7 @@ The management of dynamic sockets is divided into two behaviors,
 		dynamically.
 
 
-#### UDP handling
+#### UDP handling {#section_udp}
 
 
 All dynamically added UDP sockets are assigned to a group of dedicated
@@ -50,7 +50,7 @@ All dynamically added UDP sockets are assigned to a group of dedicated
 		extra processes.
 
 
-#### TCP handling
+#### TCP handling {#section_tcp}
 
 
 In contrast to UDP traffic handling, TCP traffic is processed in the
@@ -58,7 +58,7 @@ In contrast to UDP traffic handling, TCP traffic is processed in the
 		the existing static TCP processes.
 
 
-### Limitations
+### Limitations {#limitations}
 
 
 Although traffic processing by dynamic workers closely resembles that
@@ -90,7 +90,7 @@ Although traffic processing by dynamic workers closely resembles that
 			overlapping sockets in a short period of time.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -112,10 +112,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The database URL where the sockets are fetched from.
@@ -134,7 +134,7 @@ modparam("sockets_mgm", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The database table name where the sockets are stored.
@@ -153,7 +153,7 @@ modparam("sockets_mgm", "table_name", "sockets_def")
 ```
 
 
-#### socket_column (string)
+#### socket_column (string) {#param_socket_column}
 
 
 The database table column where the socket definition is stored.
@@ -172,7 +172,7 @@ modparam("sockets_mgm", "socket_column", "sock")
 ```
 
 
-#### advertised_column (string)
+#### advertised_column (string) {#param_advertised_column}
 
 
 The database table column where the advertised definition is stored.
@@ -191,7 +191,7 @@ modparam("advertiseds_mgm", "advertised_column", "adv")
 ```
 
 
-#### tag_column (string)
+#### tag_column (string) {#param_tag_column}
 
 
 The database table column where the tag definition is stored.
@@ -210,7 +210,7 @@ modparam("tags_mgm", "tag_column", "sock")
 ```
 
 
-#### flags_column (string)
+#### flags_column (string) {#param_flags_column}
 
 
 The database table column where the flags definition is stored.
@@ -229,7 +229,7 @@ modparam("flagss_mgm", "flags_column", "sock")
 ```
 
 
-#### tos_column (string)
+#### tos_column (string) {#param_tos_column}
 
 
 The database table column where the tos definition is stored.
@@ -248,7 +248,7 @@ modparam("toss_mgm", "tos_column", "sock")
 ```
 
 
-#### processes (integer)
+#### processes (integer) {#param_processes}
 
 
 The number of processes designated to handle UDP sockets.
@@ -267,7 +267,7 @@ modparam("sockets_mgm", "processes", 32)
 ```
 
 
-#### max_sockets (integer)
+#### max_sockets (integer) {#param_max_sockets}
 
 
 The maximum number of sockets that can be defined dynamically.
@@ -287,10 +287,10 @@ modparam("sockets_mgm", "max_sockets", 2000)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### sockets_reload
+#### sockets_reload {#mi_sockets_reload}
 
 
 MI command used to reload the sockets from the database.
@@ -307,7 +307,7 @@ MI FIFO Command Format:
 ```
 
 
-#### sockets_list
+#### sockets_list {#mi_sockets_list}
 
 
 MI command to list all the currently used dynamic sockets.
@@ -324,10 +324,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -348,7 +348,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -363,10 +363,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

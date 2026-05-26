@@ -6,7 +6,7 @@ description: "[*CGRateS*](http://www.cgrates.org/) is an open-source rating engi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 [*CGRateS*](http://www.cgrates.org/)
@@ -60,7 +60,7 @@ Usage example:
 ```
 
 
-### Accounting
+### Accounting {#accounting}
 
 
 The accounting mode is used to start and stop a CGRateS session. This can be
@@ -169,7 +169,7 @@ The module supports two different versions of CGRateS: the
 		*compat_mode* is disabled.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -192,10 +192,10 @@ The following libraries or applications must be installed before
 - *libjson*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cgrates_engine (string)
+#### cgrates_engine (string) {#param_cgrates_engine}
 
 
 This parameter is used to specify a CGRateS engine connection.
@@ -221,7 +221,7 @@ modparam("cgrates", "cgrates_engine", "127.0.0.1:2013")
 ```
 
 
-#### bind_ip (string)
+#### bind_ip (string) {#param_bind_ip}
 
 
 IP used to bind the socket that communicates with the
@@ -244,7 +244,7 @@ modparam("cgrates", "bind_ip", "10.0.0.100")
 ```
 
 
-#### max_async_connections (integer)
+#### max_async_connections (integer) {#param_max_async_connections}
 
 
 The maximum number of simultaneous asynchronous connections
@@ -264,7 +264,7 @@ modparam("cgrates", "max_async_connections", 20)
 ```
 
 
-#### retry_timeout (integer)
+#### retry_timeout (integer) {#param_retry_timeout}
 
 
 The number of seconds after which a disabled connection/engine
@@ -284,7 +284,7 @@ modparam("cgrates", "retry_timeout", 120)
 ```
 
 
-#### compat_mode (integer)
+#### compat_mode (integer) {#param_compat_mode}
 
 
 Indicates whether OpenSIPS should use the old (compat_mode)
@@ -304,10 +304,10 @@ modparam("cgrates", "compat_mode", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### cgrates_acc([flags[, account[, destination[, session]]]])
+#### cgrates_acc([flags[, account[, destination[, session]]]]) {#func_cgrates_acc}
 
 
 `cgrates_acc()` starts an accounting
@@ -388,7 +388,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### cgrates_auth([account[, destination[, session]]])
+#### cgrates_auth([account[, destination[, session]]]) {#func_cgrates_auth}
 
 
 `cgrates_auth()` does call authorization
@@ -471,7 +471,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### cgrates_cmd(command[, session])
+#### cgrates_cmd(command[, session]) {#func_cgrates_cmd}
 
 
 `cgrates_cmd()` can send
@@ -523,10 +523,10 @@ This function can be used from any route.
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $cgr(name) / $(cgr(name)[session])
+#### $cgr(name) / $(cgr(name)[session]) {#pv_cgr}
 
 
 Pseudo-variable used to set different parameters for the
@@ -613,7 +613,7 @@ When assigned with the *:=* operator,
 ```
 
 
-#### $cgr_opt(name) / $(cgr_opt(name)[session])
+#### $cgr_opt(name) / $(cgr_opt(name)[session]) {#pv_cgr_opt}
 
 
 Used to tune the request parameter of a CGRateS request when used in
@@ -653,7 +653,7 @@ Possible values at the time the documentation was written:
 ```
 
 
-#### $cgr_ret(name)
+#### $cgr_ret(name) {#pv_cgr_ret}
 
 
 Returns the reply message of a CGRateS command in script,
@@ -681,7 +681,7 @@ Returns the reply message of a CGRateS command in script,
 ### Exported Asynchronous Functions
 
 
-#### cgrates_auth([account[, destination[, session]]])
+#### cgrates_auth([account[, destination[, session]]]) {#afunc_cgrates_auth}
 
 
 Does the CGRateS authorization call in an asynchronous way. Script
@@ -738,7 +738,7 @@ route [auth_reply]
 ```
 
 
-#### cgrates_cmd(command[, session])
+#### cgrates_cmd(command[, session]) {#afunc_cgrates_cmd}
 
 
 Can run an arbitrary CGRateS command in an asynchronous way. The
@@ -822,10 +822,10 @@ route [auth_reply]
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -857,7 +857,7 @@ route [auth_reply]
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -883,10 +883,10 @@ route [auth_reply]
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

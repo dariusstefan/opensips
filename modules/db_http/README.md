@@ -6,7 +6,7 @@ description: "This module provides access to a database that is implemented as a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides access to a database that is implemented
@@ -46,7 +46,7 @@ modparam("presence", "db_url","http://user:pass@www.some.com/some/some")
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -61,10 +61,10 @@ This module does not depend on other modules.
 - *libcurl*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### SSL(int)
+#### SSL(int) {#param_SSL}
 
 
 Whether or not to use SSL.
@@ -87,7 +87,7 @@ modparam("db_http", "SSL",1)
 ```
 
 
-#### cap_raw_query(int)
+#### cap_raw_query(int) {#param_cap_raw_query}
 
 
 Whether or not the server supports raw queries.
@@ -106,7 +106,7 @@ modparam("db_http", "cap_raw_query", 1)
 ```
 
 
-#### cap_replace(int)
+#### cap_replace(int) {#param_cap_replace}
 
 
 Whether or not the server supports replace capabilities.
@@ -125,7 +125,7 @@ modparam("db_http", "cap_replace", 1)
 ```
 
 
-#### cap_insert_update(int)
+#### cap_insert_update(int) {#param_cap_insert_update}
 
 
 Whether or not the server supports insert_update capabilities.
@@ -144,7 +144,7 @@ modparam("db_http", "cap_insert_update", 1)
 ```
 
 
-#### cap_last_inserted_id(int)
+#### cap_last_inserted_id(int) {#param_cap_last_inserted_id}
 
 
 Whether or not the server supports last_inserted_id capabilities.
@@ -163,7 +163,7 @@ modparam("db_http", "cap_last_inserted_id", 1)
 ```
 
 
-#### field_delimiter (str)
+#### field_delimiter (str) {#param_field_delimiter}
 
 
 Character to be used to delimit fields in the reply.Only
@@ -183,7 +183,7 @@ modparam("db_http", "field_delimiter",";")
 ```
 
 
-#### row_delimiter (str)
+#### row_delimiter (str) {#param_row_delimiter}
 
 
 Character to be used to delimit rows in the reply.Only
@@ -203,7 +203,7 @@ modparam("db_http", "row_delimiter","\n")
 ```
 
 
-#### quote_delimiter (str)
+#### quote_delimiter (str) {#param_quote_delimiter}
 
 
 Character to be used to quote  fields that require quoting
@@ -223,7 +223,7 @@ modparam("db_http", "quote_delimiter","|")
 ```
 
 
-#### value_delimiter (str)
+#### value_delimiter (str) {#param_value_delimiter}
 
 
 The delimiter used to separate multiple fields of a single
@@ -244,7 +244,7 @@ modparam("db_http", "value_delimiter",";")
 ```
 
 
-#### timeout (int)
+#### timeout (int) {#param_timeout}
 
 
 The maximum number of milliseconds that the HTTP ops are allowed to last
@@ -263,7 +263,7 @@ modparam("db_http", "timeout",5000)
 ```
 
 
-#### disable_expect (int)
+#### disable_expect (int) {#param_disable_expect}
 
 
 Disables automatic 'Expect: 100-continue' behavior in libcurl for requests over 1024 bytes in size.
@@ -284,7 +284,7 @@ modparam("db_http", "disable_expect",1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 ### Server specifications
@@ -316,7 +316,7 @@ GET /presentity/?c=username,domain,event,expires HTTP/1.1
 ```
 
 
-#### Variables
+#### Variables {#http-variables}
 
 
 A description of all the variables. Each variable can have
@@ -549,10 +549,10 @@ The module will try to use the most secure type of
 		Basic, Digest,GSSNEGOTIATE and NTLM.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -584,7 +584,7 @@ The module will try to use the most secure type of
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -610,10 +610,10 @@ The module will try to use the most secure type of
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Stephane Alnet, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Andrei Dragus.

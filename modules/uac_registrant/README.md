@@ -6,7 +6,7 @@ description: "The module enable OpenSIPS to register itself on a remote SIP regi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module enable OpenSIPS to register itself on a remote SIP registrar.
@@ -69,7 +69,7 @@ UAC registrant states:
 				after an unREGISTER with authentication header was sent;
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -87,10 +87,10 @@ The following modules must be loaded before this module:
 None.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The size of the hash table internally used to keep the registrants.
@@ -111,7 +111,7 @@ modparam("uac_registrant", "hash_size", 2)
 ```
 
 
-#### timer_interval (integer)
+#### timer_interval (integer) {#param_timer_interval}
 
 
 Defines the periodic timer for checking the registrations status.
@@ -130,7 +130,7 @@ modparam("uac_registrant", "timer_interval", 120)
 ```
 
 
-#### failure_retry_interval (integer)
+#### failure_retry_interval (integer) {#param_failure_retry_interval}
 
 
 Defines a custom interval to retry the registration upon error/failure.
@@ -152,7 +152,7 @@ modparam("uac_registrant", "failure_retry_interval", 3600)
 ```
 
 
-#### enable_clustering (integer)
+#### enable_clustering (integer) {#param_enable_clustering}
 
 
 This parameter enables the clustering support in the module. This is
@@ -177,7 +177,7 @@ modparam("uac_registrant", "enable_clustering", 1)
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database where to load the registrants from.
@@ -196,7 +196,7 @@ modparam("uac_registrant", "db_url", "mysql://user:passw@localhost/database")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The database table that holds the registrant records.
@@ -215,7 +215,7 @@ modparam("uac_registrant", "table_name", "my_registrant")
 ```
 
 
-#### registrar_column (string)
+#### registrar_column (string) {#param_registrar_column}
 
 
 The column's name in the database storing the
@@ -236,7 +236,7 @@ modparam("uac_registrant", "registrar_column", "registrant_uri")
 ```
 
 
-#### proxy_column (string)
+#### proxy_column (string) {#param_proxy_column}
 
 
 The column's name in the database storing the
@@ -258,7 +258,7 @@ modparam("uac_registrant", "proxy_column", "proxy_uri")
 ```
 
 
-#### aor_column (string)
+#### aor_column (string) {#param_aor_column}
 
 
 The column's name in the database storing the
@@ -280,7 +280,7 @@ modparam("uac_registrant", "aor_column", "to_uri")
 ```
 
 
-#### third_party_registrant_column (string)
+#### third_party_registrant_column (string) {#param_third_party_registrant_column}
 
 
 The column's name in the database storing the
@@ -304,7 +304,7 @@ modparam("uac_registrant", "third_party_registrant_column", "from_uri")
 ```
 
 
-#### username_column (string)
+#### username_column (string) {#param_username_column}
 
 
 The column's name in the database storing the
@@ -324,7 +324,7 @@ modparam("uac_registrant", "username_column", "auth_username")
 ```
 
 
-#### password_column (string)
+#### password_column (string) {#param_password_column}
 
 
 The column's name in the database storing the
@@ -344,7 +344,7 @@ modparam("uac_registrant", "password_column", "auth_passowrd")
 ```
 
 
-#### binding_URI_column (string)
+#### binding_URI_column (string) {#param_binding_URI_column}
 
 
 The column's name in the database storing the
@@ -366,7 +366,7 @@ modparam("uac_registrant", "binding_URI_column", "contact_uri")
 ```
 
 
-#### binding_params_column (string)
+#### binding_params_column (string) {#param_binding_params_column}
 
 
 The column's name in the database storing the
@@ -406,7 +406,7 @@ modparam("uac_registrant", "binding_params_column", "contact_params")
 ```
 
 
-#### expiry_column (string)
+#### expiry_column (string) {#param_expiry_column}
 
 
 The column's name in the database storing the
@@ -426,7 +426,7 @@ modparam("uac_registrant", "expiry_column", "registration_timeout")
 ```
 
 
-#### forced_socket_column (string)
+#### forced_socket_column (string) {#param_forced_socket_column}
 
 
 The column's name in the database storing the
@@ -449,7 +449,7 @@ modparam("uac_registrant", "forced_socket_column", "fs")
 ```
 
 
-#### cluster_shtag_column (string)
+#### cluster_shtag_column (string) {#param_cluster_shtag_column}
 
 
 The column's name in the database storing the
@@ -471,7 +471,7 @@ modparam("uac_registrant", "cluster_shtag_column", "sh")
 ```
 
 
-#### state_column (string)
+#### state_column (string) {#param_state_column}
 
 
 The column's name in the database storing the current state of the
@@ -493,16 +493,16 @@ modparam("uac_registrant", "state_column", "status")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None to be used in configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### reg_list
+#### reg_list {#mi_reg_list}
 
 
 Lists the registrant records and their status.
@@ -540,7 +540,7 @@ opensips-cli -x mi reg_list sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip
 ```
 
 
-#### reg_reload
+#### reg_reload {#mi_reg_reload}
 
 
 Reloads the registrant records from the database.
@@ -578,7 +578,7 @@ opensips-cli -x mi reg_leload sip:alice@opensips.org  sip:alice@127.0.0.1:5060 s
 ```
 
 
-#### reg_enable
+#### reg_enable {#mi_reg_enable}
 
 
 Enables a specific registrant. OpenSIPS will immediately send
@@ -606,7 +606,7 @@ opensips-cli -x mi reg_enable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 s
 ```
 
 
-#### reg_disable
+#### reg_disable {#mi_reg_disable}
 
 
 Disables a specific registrant. OpenSIPS will immediately send
@@ -643,7 +643,7 @@ opensips-cli -x mi reg_disable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 
 ```
 
 
-#### reg_force_register
+#### reg_force_register {#mi_reg_force_register}
 
 
 Forces the re-registration (or registation) of a specific 
@@ -680,10 +680,10 @@ opensips-cli -x mi reg_force_register sip:alice@opensips.org  sip:alice@127.0.0.
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -715,7 +715,7 @@ opensips-cli -x mi reg_force_register sip:alice@opensips.org  sip:alice@127.0.0.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -741,10 +741,10 @@ opensips-cli -x mi reg_force_register sip:alice@opensips.org  sip:alice@127.0.0.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

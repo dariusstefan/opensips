@@ -6,7 +6,7 @@ description: "Domain module implements checks that based on domain table determi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Domain module implements checks that based on domain table determine 
@@ -31,7 +31,7 @@ Caching is implemented using a hash table. The size of the hash table
 		Its "factory default" value is 128.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The module depends on the following modules (in the other words the 
@@ -41,7 +41,7 @@ The module depends on the following modules (in the other words the
 - *database* -- Any database module
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 #### db_url (string)
@@ -151,10 +151,10 @@ modparam("domain", "subdomain_col", "has_subdomain")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### is_from_local([attrs_var])
+#### is_from_local([attrs_var]) {#func_is_from_local}
 
 
 Checks based on domain table if host part of From header uri is
@@ -185,7 +185,7 @@ if (is_from_local($var(attrs))) {
 ```
 
 
-#### is_uri_host_local([attrs_var])
+#### is_uri_host_local([attrs_var]) {#func_is_uri_host_local}
 
 
 If called from route or failure route block, checks
@@ -221,7 +221,7 @@ if (is_uri_host_local($var(attrs))) {
 ```
 
 
-#### is_domain_local(domain, [attrs_var])
+#### is_domain_local(domain, [attrs_var]) {#func_is_domain_local}
 
 
 This function checks if the domain contained in the first parameter is local.
@@ -280,10 +280,10 @@ if (is_domain_local($avp(some_avp), $avp(attrs))) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### domain_reload
+#### domain_reload {#mi_domain_reload}
 
 
 Causes domain module to re-read the contents of domain table
@@ -305,7 +305,7 @@ MI FIFO Command Format:
 ```
 
 
-#### domain_dump
+#### domain_dump {#mi_domain_dump}
 
 
 Causes domain module to dump hash indexes and domain names in
@@ -356,10 +356,10 @@ The function returns 1 if domain is local and -1 if
 		domain is not local or if an error occurred.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -391,7 +391,7 @@ The function returns 1 if domain is local and -1 if
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -417,10 +417,10 @@ The function returns 1 if domain is local and -1 if
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Dan Pascu ([@danpascu](https://github.com/danpascu)), Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).

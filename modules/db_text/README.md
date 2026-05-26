@@ -6,7 +6,7 @@ description: "The module implements a simplified database engine based on text f
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module implements a simplified database engine based on text
@@ -143,7 +143,7 @@ This database interface don't support the data insertion with
 				insertion operations.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS modules
@@ -165,10 +165,10 @@ The next libraries or applications must be installed before running
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_mode (integer)
+#### db_mode (integer) {#param_db_mode}
 
 
 Set caching mode (0) or non-caching mode (1). In caching mode, data
@@ -190,7 +190,7 @@ modparam("db_text", "db_mode", 1)
 ```
 
 
-#### buffer_size (integer)
+#### buffer_size (integer) {#param_buffer_size}
 
 
 Size of the buffer used to read the text file.
@@ -209,16 +209,16 @@ modparam("db_text", "buffer_size", 8192)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 *None*.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dbt_dump
+#### dbt_dump {#mi_dbt_dump}
 
 
 Write back to hard drive modified tables.
@@ -239,7 +239,7 @@ opensips-cli -x mi dbt_dump
 ```
 
 
-#### dbt_reload
+#### dbt_reload {#mi_dbt_reload}
 
 
 Causes db_text module to reload cached tables from disk.
@@ -504,10 +504,10 @@ Once you have the module loaded, you can use the API specified by OpenSIPS DB
 	interface.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -539,7 +539,7 @@ Once you have the module loaded, you can use the API specified by OpenSIPS DB
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -565,10 +565,10 @@ Once you have the module loaded, you can use the API specified by OpenSIPS DB
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).

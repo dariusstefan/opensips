@@ -6,7 +6,7 @@ description: "This modules is a gateway between OpenSIPS and a jabber server. It
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This modules is a gateway between OpenSIPS and a jabber server. It enables the exchange of instant messages between
@@ -58,7 +58,7 @@ A use case, for the server-mode, would look like this:
 - the "XMPP server" is running on xmpp-sip.opensips.org.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -80,10 +80,10 @@ The following libraries or applications must be installed before running
 - *libexpat1-devel* - used for parsing/building XML.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### backend (string)
+#### backend (string) {#param_backend}
 
 
 The mode you are using the module; it can be either component or server.
@@ -102,7 +102,7 @@ The mode you are using the module; it can be either component or server.
 ```
 
 
-#### xmpp_domain (string)
+#### xmpp_domain (string) {#param_xmpp_domain}
 
 
 The xmpp domain of the component or the server, depending on the mode we are in.
@@ -121,7 +121,7 @@ The xmpp domain of the component or the server, depending on the mode we are in.
 ```
 
 
-#### xmpp_host (string)
+#### xmpp_host (string) {#param_xmpp_host}
 
 
 The ip address or the name of the local jabber server, if the backend is set to "component"; or the address to bind to in the server mode.
@@ -140,7 +140,7 @@ The ip address or the name of the local jabber server, if the backend is set to 
 ```
 
 
-#### sip_domain (string)
+#### sip_domain (string) {#param_sip_domain}
 
 
 This parameter must be set only if the xmpp module is used in component mode and the domain
@@ -169,7 +169,7 @@ This parameter must be set only if the xmpp module is used in component mode and
 ```
 
 
-#### xmpp_port (integer)
+#### xmpp_port (integer) {#param_xmpp_port}
 
 
 In the component mode, this is the port of the jabber router we connect to. In the server mode, it is the transport address to bind to.
@@ -188,7 +188,7 @@ In the component mode, this is the port of the jabber router we connect to. In t
 ```
 
 
-#### xmpp_password (string)
+#### xmpp_password (string) {#param_xmpp_password}
 
 
 The password of the local jabber server.
@@ -216,7 +216,7 @@ The password of the local jabber server.
 ```
 
 
-#### outbound_proxy (string)
+#### outbound_proxy (string) {#param_outbound_proxy}
 
 
 The SIP address used as next hop when sending the message. Very
@@ -239,10 +239,10 @@ The SIP address used as next hop when sending the message. Very
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### xmpp_send_message()
+#### xmpp_send_message() {#func_xmpp_send_message}
 
 
 Converts SIP messages to XMPP(jabber) messages, in order to be relayed to a XMPP(jabber) client.
@@ -358,10 +358,10 @@ route{
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -393,7 +393,7 @@ route{
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -419,10 +419,10 @@ route{
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)).

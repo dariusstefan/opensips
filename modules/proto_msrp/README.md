@@ -99,7 +99,7 @@ modparam("proto_msrp", "max_msg_chunks", 8)
 ```
 
 
-#### tls_handshake_timeout (integer)
+#### tls_handshake_timeout (integer) {#param_tls_handshake_timeout}
 
 
 Sets the timeout (in milliseconds) for the SSL handshake sequence
@@ -127,7 +127,7 @@ param("proto_msrp", "tls_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### cert_check_on_conn_reusage (integer)
+#### cert_check_on_conn_reusage (integer) {#param_cert_check_on_conn_reusage}
 
 
 This parameter turns on or off the extra checking/matching of the
@@ -157,7 +157,7 @@ modparam("proto_msrp", "cert_check_on_conn_reusage", 1)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#trace-destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -186,7 +186,7 @@ modparam("proto_msrp", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_on (int)
+#### trace_on (int) {#trace-on}
 
 
 This controls whether tracing for MSRP is on or not. You still need
@@ -260,7 +260,7 @@ route[msrp_filter] {
 ### Exported MI Functions
 
 
-#### msrp_trace
+#### msrp_trace {#msrp-trace}
 
 
 Name: *msrp_trace*
@@ -289,10 +289,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -316,7 +316,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -334,10 +334,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

@@ -6,13 +6,13 @@ description: "The module contains record routing logic"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module contains record routing logic
 
 
-### Dialog support
+### Dialog support {#RR-dialog-id}
 
 
 OpenSIPS is basically *only* a transaction statefull 
@@ -74,7 +74,7 @@ UAC                       OpenSIPS PROXY                          UAS
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -96,10 +96,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### append_fromtag (integer)
+#### append_fromtag (integer) {#param_append_fromtag}
 
 
 If turned on, request's from-tag is appended to record-route; that's 
@@ -121,7 +121,7 @@ modparam("rr", "append_fromtag", 0)
 ```
 
 
-#### enable_double_rr (integer)
+#### enable_double_rr (integer) {#param_enable_double_rr}
 
 
 There are some situations when the server needs to insert two 
@@ -144,7 +144,7 @@ modparam("rr", "enable_double_rr", 0)
 ```
 
 
-#### add_username (integer)
+#### add_username (integer) {#param_add_username}
 
 
 If set to a non 0 value (which means yes), the username part will
@@ -164,7 +164,7 @@ modparam("rr", "add_username", 1)
 ```
 
 
-#### enable_socket_mismatch_warning (integer)
+#### enable_socket_mismatch_warning (integer) {#param_enable_socket_mismatch_warning}
 
 
 When a preset record-route header is forced in OpenSIPS config and the
@@ -188,10 +188,10 @@ modparam("rr", "enable_socket_mismatch_warning", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### loose_route()
+#### loose_route() {#func_loose_route}
 
 
 The function performs routing of SIP requests which contain a route 
@@ -256,7 +256,7 @@ loose_route();
 
 
 #### record_route() and 
-		record_route(string)
+		record_route(string) {#func_record_route}
 
 
 The function adds a new Record-Route header field. The header field 
@@ -283,7 +283,7 @@ record_route();
 ```
 
 
-#### record_route_preset(string [, string2])
+#### record_route_preset(string [, string2]) {#func_record_route_preset}
 
 
 This function will put the string into Record-Route, don't use 
@@ -317,7 +317,7 @@ record_route_preset("1.2.3.4:5090");
 ```
 
 
-#### add_rr_param(param)
+#### add_rr_param(param) {#func_add_rr_param}
 
 
 Adds a parameter to the Record-Route URI (param must be in 
@@ -347,7 +347,7 @@ add_rr_param(";nat=yes");
 ```
 
 
-#### check_route_param(re)
+#### check_route_param(re) {#func_check_route_param}
 
 
 The function checks if the URI parameters of the local Route 
@@ -378,7 +378,7 @@ if (check_route_param("nat=yes")) {
 ```
 
 
-#### is_direction(dir)
+#### is_direction(dir) {#func_is_direction}
 
 
 The function checks the flow direction of the request.
@@ -419,13 +419,13 @@ if (is_direction("upstream")) {
 ```
 
 
-#### Exported Pseudo-Variables
+#### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
 Exported pseudo-variables are listed in the next sections.
 
 
-##### $rr_params
+##### $rr_params {#pv_rr_params}
 
 
 *$rr_params* - the whole string of the Route
@@ -634,10 +634,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -669,7 +669,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -695,10 +695,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

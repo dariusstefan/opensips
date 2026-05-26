@@ -6,7 +6,7 @@ description: "This module contains functions that are used to perform digest aut
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module contains functions that are used to perform digest
@@ -70,7 +70,7 @@ The current implementation only supports the AKAv1 algorithms, with
 		error will be returned.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -92,10 +92,10 @@ The module depends on the following modules (in the other words
 This module does not depend on any external library.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_av_mgm (string)
+#### default_av_mgm (string) {#param_default_av_mgm}
 
 
 The default AV Manager used in case the functions do not provide them explicitly.
@@ -111,7 +111,7 @@ modparam("auth_aka", "default_av_mgm", "diameter") # fetch AVs through the Cx in
 ```
 
 
-#### default_qop (string)
+#### default_qop (string) {#param_default_qop}
 
 
 The default qop parameter used during challenge, if the functions
@@ -131,7 +131,7 @@ modparam("auth_aka", "default_qop", "auth,auth-int")
 ```
 
 
-#### default_algorithm (string)
+#### default_algorithm (string) {#param_default_algorithm}
 
 
 The default algorithm to be advertise during challenge, if the
@@ -157,7 +157,7 @@ modparam("auth_aka", "default_algorithm", "AKAv2-MD5")
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The size of the hash that stores the AVs for each user.
@@ -177,7 +177,7 @@ modparam("auth_aka", "hash_size", 1024)
 ```
 
 
-#### sync_timeout (integer)
+#### sync_timeout (integer) {#param_sync_timeout}
 
 
 The amount of milliseconds a synchronous call should
@@ -201,7 +201,7 @@ modparam("auth_aka", "sync_timeout", 200)
 ```
 
 
-#### async_timeout (integer)
+#### async_timeout (integer) {#param_async_timeout}
 
 
 The amount of milliseconds an asynchronous call should
@@ -228,7 +228,7 @@ modparam("auth_aka", "async_timeout", 2000)
 ```
 
 
-#### unused_timeout (integer)
+#### unused_timeout (integer) {#param_unused_timeout}
 
 
 The amount of seconds an authentication vector that has
@@ -251,7 +251,7 @@ modparam("auth_aka", "unused_timeout", 120)
 ```
 
 
-#### unused_timeout (integer)
+#### unused_timeout (integer) {#param_pending_timeout}
 
 
 The amount of seconds an authentication vector that is being
@@ -275,10 +275,10 @@ modparam("auth_aka", "pending_timeout", 10)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### aka_www_authorize([realm]])
+#### aka_www_authorize([realm]]) {#func_aka_www_authorize}
 
 
 The function verifies credentials according to
@@ -342,7 +342,7 @@ if (!aka_www_authorize("diameter", "siphub.com"))
 ```
 
 
-#### aka_proxy_authorize([realm]])
+#### aka_proxy_authorize([realm]]) {#func_aka_proxy_authorize}
 
 
 The function behaves the same as [aka www authorize](#func_aka_www_authorize),
@@ -365,7 +365,7 @@ if (!aka_proxy_authorize("siphub.com"))
 ```
 
 
-#### aka_www_challenge([av_mgm[, realm[ ,qop[, alg]]]])
+#### aka_www_challenge([av_mgm[, realm[ ,qop[, alg]]]]) {#func_aka_www_challenge}
 
 
 The function challenges a user agent. It fetches an authentication
@@ -451,7 +451,7 @@ if (!aka_www_authorize("siphub.com")) {
 ```
 
 
-#### aka_proxy_challenge([realm]])
+#### aka_proxy_challenge([realm]]) {#func_aka_proxy_challenge}
 
 
 The function behaves the same as [aka www challenge](#func_aka_www_challenge),
@@ -480,7 +480,7 @@ if (!aka_proxy_authorize("siphub.com"))
 ```
 
 
-#### aka_av_add(public_identity, private_identity, authenticate, authorize, confidentiality_key, integrity_key[, algorithms])
+#### aka_av_add(public_identity, private_identity, authenticate, authorize, confidentiality_key, integrity_key[, algorithms]) {#func_aka_av_add}
 
 
 Adds an authentication vector for the user identitied by 
@@ -526,7 +526,7 @@ aka_av_add("sip:test@siphub.com", "test@siphub.com",
 ```
 
 
-#### aka_av_drop(public_identity, private_identity, authenticate)
+#### aka_av_drop(public_identity, private_identity, authenticate) {#func_aka_av_drop}
 
 
 Drops the authentication vector corresponding to the 
@@ -562,7 +562,7 @@ aka_av_drop("sip:test@siphub.com", "test@siphub.com",
 ```
 
 
-#### aka_av_drop_all(public_identity, private_identity[, count])
+#### aka_av_drop_all(public_identity, private_identity[, count]) {#func_aka_av_drop_all}
 
 
 Drops all authentication vectors for an user identitied by 
@@ -596,7 +596,7 @@ aka_av_drop_all("sip:test@siphub.com", "test@siphub.com", $var(count));
 ```
 
 
-#### aka_av_fail(public_identity, private_identity[, count])
+#### aka_av_fail(public_identity, private_identity[, count]) {#func_aka_av_fail}
 
 
 Marks the engine that an authentication vector query for a user has
@@ -634,10 +634,10 @@ aka_av_fail("sip:test@siphub.com", "test@siphub.com", 3);
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### aka_av_add
+#### aka_av_add {#mi_aka_av_add}
 
 
 Adds an Authentication Vector through the MI interface.
@@ -681,7 +681,7 @@ $ opensips-cli -x mi aka_av_add \
 ```
 
 
-#### aka_av_drop
+#### aka_av_drop {#mi_aka_av_drop}
 
 
 Invalidates an Authentication Vector of an user identified
@@ -714,7 +714,7 @@ $ opensips-cli -x mi aka_av_drop \
 ```
 
 
-#### aka_av_drop_all
+#### aka_av_drop_all {#mi_aka_av_drop_all}
 
 
 Invalidates all Authentication Vectors of an user through the
@@ -744,7 +744,7 @@ $ opensips-cli -x mi aka_av_drop_all \
 ```
 
 
-#### aka_av_fail
+#### aka_av_fail {#mi_aka_av_fail}
 
 
 Indicates the fact that the fetching of an authentication
@@ -783,10 +783,10 @@ $ opensips-cli -x mi aka_av_drop \
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -809,7 +809,7 @@ $ opensips-cli -x mi aka_av_drop \
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -826,10 +826,10 @@ $ opensips-cli -x mi aka_av_drop \
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

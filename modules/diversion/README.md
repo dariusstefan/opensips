@@ -6,7 +6,7 @@ description: "The module implements the Diversion extensions as per draft-levy-s
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module implements the Diversion extensions as per 
@@ -21,7 +21,7 @@ The module implements the Diversion extensions as per
 		[IETF I-D tracker](https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&and;id=6002).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -40,10 +40,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### suffix (string)
+#### suffix (string) {#param_suffix}
 
 
 The suffix to be appended to the end of the header field. You can use 
@@ -62,10 +62,10 @@ modparam("diversion", "suffix", ";privacy=full")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### add_diversion(reason, [uri], [counter])
+#### add_diversion(reason, [uri], [counter]) {#func_add_diversion}
 
 
 The function adds a new diversion header field before any other 
@@ -179,10 +179,10 @@ static inline int add_diversion_helper(struct sip_msg* msg, str* s)
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -214,7 +214,7 @@ static inline int add_diversion_helper(struct sip_msg* msg, str* s)
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -240,10 +240,10 @@ static inline int add_diversion_helper(struct sip_msg* msg, str* s)
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jan Janak ([@janakj](https://github.com/janakj)).

@@ -6,7 +6,7 @@ description: "The Load-Balancer module comes to provide traffic routing based on
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Load-Balancer module comes to provide traffic routing based on load. 
@@ -62,7 +62,7 @@ A destination can become disabled in two ways:
 - MI command
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -91,10 +91,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The URL pointing to the database where the load-balancing rules 
@@ -114,7 +114,7 @@ modparam("load_balancer", "db_url", "dbdriver://username:password@dbhost/dbname"
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The name of the DB table containing the load-balancing rules.
@@ -133,7 +133,7 @@ modparam("load_balancer", "db_table", "lb")
 ```
 
 
-#### probing_interval (integer)
+#### probing_interval (integer) {#param_probing_interval}
 
 
 How often (in seconds) the probing of a destination should be done. If
@@ -154,7 +154,7 @@ modparam("load_balancer", "probing_interval", 60)
 ```
 
 
-#### probing_method (string)
+#### probing_method (string) {#param_probing_method}
 
 
 The SIP method to be used for the probing requests.
@@ -173,7 +173,7 @@ modparam("load_balancer", "probing_method", "INFO")
 ```
 
 
-#### probing_from (string)
+#### probing_from (string) {#param_probing_from}
 
 
 The FROM SIP URI to be advertised in the SIP probing requests.
@@ -192,7 +192,7 @@ modparam("load_balancer", "probing_from", "sip:pinger@192.168.2.10")
 ```
 
 
-#### probing_reply_codes (string)
+#### probing_reply_codes (string) {#param_probing_reply_codes}
 
 
 A comma separted list of SIP reply codes. The codes defined here 
@@ -213,7 +213,7 @@ modparam("load_balancer", "probing_reply_codes", "501, 403")
 ```
 
 
-#### probing_verbose (number)
+#### probing_verbose (number) {#param_probing_verbose}
 
 
 A boolean option to enable extra logging related to the 
@@ -240,7 +240,7 @@ modparam("load_balancer", "probing_verbose", 1)
 ```
 
 
-#### lb_define_blacklist (string)
+#### lb_define_blacklist (string) {#param_lb_define_blacklist}
 
 
 Defines a blacklist based on a lb group. This list will contain the IPs
@@ -264,7 +264,7 @@ modparam("load_balancer", "lb_define_blacklist", "blist2= 2,10,6")
 ```
 
 
-#### fetch_freeswitch_stats (integer)
+#### fetch_freeswitch_stats (integer) {#param_fetch_freeswitch_stats}
 
 
 If enabled, the maximum value of a resource may also consist of
@@ -322,7 +322,7 @@ modparam("load_balancer", "fetch_freeswitch_stats", 1)
 ```
 
 
-#### initial_freeswitch_load (integer)
+#### initial_freeswitch_load (integer) {#param_initial_freeswitch_load}
 
 
 This parameter is only relevant for some seconds after module startup/reload,
@@ -344,7 +344,7 @@ modparam("load_balancer", "initial_freeswitch_load", 200)
 ```
 
 
-#### cluster_id (integer)
+#### cluster_id (integer) {#param_cluster_id}
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -393,7 +393,7 @@ modparam("load_balancer", "cluster_id", 9)
 ```
 
 
-#### cluster_sharing_tag (string)
+#### cluster_sharing_tag (string) {#param_cluster_sharing_tag}
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -428,10 +428,10 @@ modparam("load_balancer", "cluster_sharing_tag", "vip")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### lb_start(grp,resources[,flags],[attrs])
+#### lb_start(grp,resources[,flags],[attrs]) {#func_lb_start}
 
 
 The function starts a new load-balancing session over the available
@@ -513,7 +513,7 @@ if (lb_start(1,"trascoding;conference")) {
 ```
 
 
-#### lb_next([attrs])
+#### lb_next([attrs]) {#func_lb_next}
 
 
 Function to be used to pull the next available (and less loaded)
@@ -570,7 +570,7 @@ if (t_check_status("(408)|(5[0-9][0-9])")) {
 ```
 
 
-#### lb_start_or_next(grp,resources[,flags],[attrs])
+#### lb_start_or_next(grp,resources[,flags],[attrs]) {#func_lb_start_or_next}
 
 
 This is just a wrapper function to simplify scripting. If there is no
@@ -578,7 +578,7 @@ This is just a wrapper function to simplify scripting. If there is no
 		session, it acts as lb_next().
 
 
-#### load_balance(grp,resources[,flags],[attrs])
+#### load_balance(grp,resources[,flags],[attrs]) {#func_load_balance}
 
 
 Old name of the lb_start_or_next() function.
@@ -587,7 +587,7 @@ Old name of the lb_start_or_next() function.
 Take care, this will become obsolete.
 
 
-#### lb_reset()
+#### lb_reset() {#func_lb_reset}
 
 
 Function to stop and flush a current LB session. To be used in 
@@ -623,7 +623,7 @@ if (t_check_status("(5[0-9][0-9])")) {
 ```
 
 
-#### lb_is_started()
+#### lb_is_started() {#func_lb_is_started}
 
 
 Function to check if there is any ongoing LB session. Returns true if
@@ -633,7 +633,7 @@ Function to check if there is any ongoing LB session. Returns true if
 This function can be used in any type of route.
 
 
-#### lb_disable_dst()
+#### lb_disable_dst() {#func_lb_disable_dst}
 
 
 Marks as disabled the last destination that was used for the current
@@ -665,7 +665,7 @@ if (t_check_status("(408)|(5[0-9][0-9])")) {
 ```
 
 
-#### lb_is_destination(ip,port,[group],[active],[attrs]])
+#### lb_is_destination(ip,port,[group],[active],[attrs]]) {#func_lb_is_destination}
 
 
 Checks if the given IP and PORT belongs to a destination configured in
@@ -705,7 +705,7 @@ if (lb_is_destination($si,$sp) ) {
 ```
 
 
-#### lb_count_call(ip,port,grp,resources[,undo])
+#### lb_count_call(ip,port,grp,resources[,undo]) {#func_lb_count_call}
 
 
 The function counts the current call as load for a given destination 
@@ -764,10 +764,10 @@ if (lb_is_destination($si,$sp) ) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### lb_reload
+#### lb_reload {#mi_lb_reload}
 
 
 Trigers the reload of the load balancing data from the DB.
@@ -782,7 +782,7 @@ MI FIFO Command Format:
 ```
 
 
-#### lb_resize
+#### lb_resize {#mi_lb_resize}
 
 
 Changes the capacity for a resource of a destination.
@@ -805,7 +805,7 @@ MI FIFO Command Format:
 ```
 
 
-#### lb_list
+#### lb_list {#mi_lb_list}
 
 
 Lists all the destinations and the maximum and current load for each 
@@ -828,7 +828,7 @@ Destination:: sip:127.0.0.1:5200 id=2 enabled=no auto-re=on
 ```
 
 
-#### lb_status
+#### lb_status {#mi_lb_status}
 
 
 Gets or sets the status (enabled or disabled) of a destination.
@@ -856,10 +856,10 @@ enable:: yes
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_LOAD_BALANCER_STATUS
+#### E_LOAD_BALANCER_STATUS {#event_E_LOAD_BALANCER_STATUS}
 
 
 This event is raised when the module changes the state of a destination,
@@ -915,10 +915,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -950,7 +950,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -976,10 +976,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), agree, Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

@@ -6,7 +6,7 @@ description: "The pua_dialoginfo retrieves dialog state information from the dia
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The pua_dialoginfo retrieves dialog state information from the 
@@ -163,7 +163,7 @@ If there are problems with the callbacks from dialog module and you want to
 		debug them you define PUA_DIALOGINFO_DEBUG in pua_dialoginfo.c and recompile.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -186,10 +186,10 @@ The following libraries or applications must be installed before running
 - *libxml*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### include_callid (int)
+#### include_callid (int) {#param_include_callid}
 
 
 If this parameter is set, the optional call-id will be put into the
@@ -209,7 +209,7 @@ modparam("pua_dialoginfo", "include_callid", 0)
 ```
 
 
-#### include_tags (int)
+#### include_tags (int) {#param_include_tags}
 
 
 If this parameter is set, the local and remote tag will be put
@@ -229,7 +229,7 @@ modparam("pua_dialoginfo", "include_tags", 0)
 ```
 
 
-#### include_localremote (int)
+#### include_localremote (int) {#param_include_localremote}
 
 
 If this parameter is set, the optional local and remote elements
@@ -250,7 +250,7 @@ modparam("pua_dialoginfo", "include_localremote", 0)
 ```
 
 
-#### caller_confirmed (int)
+#### caller_confirmed (int) {#param_caller_confirmed}
 
 
 Usually the dialog-info of the caller will be 
@@ -277,7 +277,7 @@ modparam("pua_dialoginfo", "caller_confirmed", 1)
 ```
 
 
-#### publish_on_trying (int)
+#### publish_on_trying (int) {#param_publish_on_trying}
 
 
 Usually the dialog-info of the caller will be
@@ -375,7 +375,7 @@ modparam("pua_dialoginfo", "publish_on_trying", 1)
 ```
 
 
-#### nopublish_flag (str)
+#### nopublish_flag (str) {#param_nopublish_flag}
 
 
 By default, reINVITEs will trigger a PUBLISH. They are actually
@@ -397,7 +397,7 @@ modparam("pua_dialoginfo", "nopublish_flag", "no_publish")
 ```
 
 
-#### presence_server (string)
+#### presence_server (string) {#param_presence_server}
 
 
 The address of the presence server, where the PUBLISH messages
@@ -414,7 +414,7 @@ modparam("pua_dialoginfo", "presence_server", "sip:ps@opensips.org:5060")
 ```
 
 
-#### caller_spec_param (string)
+#### caller_spec_param (string) {#param_caller_spec_param}
 
 
 The name of the pseudovariable that will hold a custom caller URI.
@@ -437,7 +437,7 @@ modparam("pua_dialoginfo", "caller_spec_param", "$avp(10)")
 ```
 
 
-#### callee_spec_param (string)
+#### callee_spec_param (string) {#param_callee_spec_param}
 
 
 The name of the pseudovariable that will hold the callee URI.
@@ -458,7 +458,7 @@ modparam("pua_dialoginfo", "callee_spec_param", "$avp(11)")
 ```
 
 
-#### osips_ps (int)
+#### osips_ps (int) {#param_osips_ps}
 
 
 It is advisable to specify if you use a different presence server
@@ -483,10 +483,10 @@ modparam("pua_dialoginfo", "osips_ps", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### dialoginfo_set([side])
+#### dialoginfo_set([side]) {#func_dialoginfo_set}
 
 
 This function must be called for INVITE messages that initialize a
@@ -514,7 +514,7 @@ Meaning of the parameters:
 ```
 
 
-#### dialoginfo_set_branch_callee(callee)
+#### dialoginfo_set_branch_callee(callee) {#func_dialoginfo_set_branch_callee}
 
 
 This function is to be used only from a branch route for setting 
@@ -551,7 +551,7 @@ branch_route[out]
 ```
 
 
-#### dialoginfo_mute_branch([side])
+#### dialoginfo_mute_branch([side]) {#func_dialoginfo_mute_branch}
 
 
 This function must be called for INVITE messages, in the branch route
@@ -582,10 +582,10 @@ Meaning of the parameters:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -617,7 +617,7 @@ Meaning of the parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -643,10 +643,10 @@ Meaning of the parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Damien Sandras ([@dsandras](https://github.com/dsandras)), Vallimamod Abdullah, Anca Vamanu, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.

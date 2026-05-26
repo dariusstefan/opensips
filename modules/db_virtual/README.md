@@ -5,7 +5,7 @@ title: "db_virtual Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 #### The idea
@@ -98,7 +98,7 @@ The timer process(probe) is a process that tries to reconnect to failed dbs from
 				It is a separate process so that when it blocks (for a timeout on the connection) it doesn't matter.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -120,7 +120,7 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 #### db_urls (str)
@@ -199,10 +199,10 @@ modparam("db_virtual", "db_max_consec_retrys", 20)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### db_get
+#### db_get {#mi_db_get}
 
 
 Return information about global state of the real dbs.
@@ -227,7 +227,7 @@ MI FIFO Command Format:
 ```
 
 
-#### db_set
+#### db_set {#mi_db_set}
 
 
 Sets the permissions for real dbs access per set per db.
@@ -267,10 +267,10 @@ MI FIFO Command Format:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -302,7 +302,7 @@ MI FIFO Command Format:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -328,10 +328,10 @@ MI FIFO Command Format:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Razvan Pistolea.

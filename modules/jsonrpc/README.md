@@ -6,7 +6,7 @@ description: "This module is an implementation of an JSON-RPC v2.0 client [http:
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of an JSON-RPC v2.0
@@ -18,7 +18,7 @@ NOTE that the current version of this module does not support TCP
 		connection reusage, nor asynchronous commands.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -40,10 +40,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 The amount of milliseconds OpenSIPS waits to connect to the the
@@ -63,7 +63,7 @@ modparam("jsonrpc", "connect_timeout", 200)
 ```
 
 
-#### write_timeout (integer)
+#### write_timeout (integer) {#param_write_timeout}
 
 
 The amount of milliseconds OpenSIPS waits to send a RPC command to
@@ -83,7 +83,7 @@ modparam("jsonrpc", "write_timeout", 300)
 ```
 
 
-#### read_timeout (integer)
+#### read_timeout (integer) {#param_read_timeout}
 
 
 The amount of milliseconds OpenSIPS waits for the JSON-RPC server
@@ -105,10 +105,10 @@ modparam("jsonrpc", "read_timeout", 300)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### jsonrpc_request(destination, method, params, ret_var)
+#### jsonrpc_request(destination, method, params, ret_var) {#func_jsonrpc_request}
 
 
 Does a JSON-RPC request to the JSON-RPC server
@@ -171,7 +171,7 @@ The function has the following return codes:
 ```
 
 
-#### jsonrpc_notification(destination, method, params)
+#### jsonrpc_notification(destination, method, params) {#func_jsonrpc_notification}
 
 
 Does a JSON-RPC notification to the JSON-RPC server
@@ -201,10 +201,10 @@ The function receives the same parameters as
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -230,7 +230,7 @@ The function receives the same parameters as
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -250,10 +250,10 @@ The function receives the same parameters as
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

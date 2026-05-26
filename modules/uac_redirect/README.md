@@ -6,7 +6,7 @@ description: "UAC REDIRECT - User Agent Client redirection - module enhance Open
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 UAC REDIRECT - User Agent Client redirection - module enhance OpenSIPS
@@ -34,7 +34,7 @@ When selecting from a 3xx branch the contacts to be used, the contacts
 		will be ordered and prioritized based on the "q" value.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -59,10 +59,10 @@ The following libraries or applications must be installed
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_filter (string)
+#### default_filter (string) {#param_default_filter}
 
 
 The default behavior in filtering contacts. It may be 
@@ -84,7 +84,7 @@ modparam("uac_redirect","default_filter","deny")
 ```
 
 
-#### deny_filter (string)
+#### deny_filter (string) {#param_deny_filter}
 
 
 The regular expression for default deny filtering. It make sens
@@ -117,7 +117,7 @@ modparam("uac_redirect","deny_filter",".*@siphub\.net")
 ```
 
 
-#### accept_filter (string)
+#### accept_filter (string) {#param_accept_filter}
 
 
 The regular expression for default accept filtering. It make sens
@@ -150,11 +150,11 @@ modparam("uac_redirect","accept_filter",".*@siphub\.net")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### set_deny_filter(filter,flags)
-					
+					 {#func_set_deny_filter}
 
 
 Sets additional deny filters. Maximum 6 may be combined. This
@@ -196,7 +196,7 @@ set_deny_filter(".*@domain1.net","");
 
 
 #### set_accept_filter(filter,flags)
-					
+					 {#func_set_accept_filter}
 
 
 Sets additional accept filters. Maximum 6 may be combined. This
@@ -237,7 +237,7 @@ set_accept_filter(".*@domain1.net","");
 ```
 
 
-#### get_redirects([max_total], [max_branch])
+#### get_redirects([max_total], [max_branch]) {#func_get_redirects}
 
 
 The function may be called only from failure routes. It will
@@ -331,10 +331,10 @@ failure_route[do_redirect] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -366,7 +366,7 @@ failure_route[do_redirect] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -392,10 +392,10 @@ failure_route[do_redirect] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Rob Gagnon ([@rgagnon24](https://github.com/rgagnon24)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).

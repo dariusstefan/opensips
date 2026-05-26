@@ -6,7 +6,7 @@ description: "This module implements a Gateway for translating between Page Mode
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements a Gateway for translating between Page Mode
@@ -17,7 +17,7 @@ The module makes use of the *msrp_ua* module's API for
     	the MSRP UAC/UAS functionalities.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -40,10 +40,10 @@ The following libraries or applications must be installed
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The size of the hash table that stores the gateway session
@@ -65,7 +65,7 @@ modparam("msrp_gateway", "hash_size", 16)
 ```
 
 
-#### cleanup_interval (int)
+#### cleanup_interval (int) {#param_cleanup_interval}
 
 
 The interval between full iterations of the sessions table
@@ -86,7 +86,7 @@ modparam("msrp_gateway", "cleanup_interval", 60)
 ```
 
 
-#### session_timeout (int)
+#### session_timeout (int) {#param_session_timeout}
 
 
 Amount of time (in seconds) since last message has been received
@@ -107,7 +107,7 @@ modparam("msrp_gateway", "session_timeout", 7200)
 ```
 
 
-#### message_timeout (int)
+#### message_timeout (int) {#param_message_timeout}
 
 
 Amount of time (in seconds) since last MESSAGE has been received
@@ -128,10 +128,10 @@ modparam("msrp_gateway", "message_timeout", 3600)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### msrp_gw_answer(key, content_types, from, to, ruri)
+#### msrp_gw_answer(key, content_types, from, to, ruri) {#func_msrp_gw_answer}
 
 
 This functions initializes a new gateway session by answering an initial
@@ -178,7 +178,7 @@ if (!has_totag() && is_method("INVITE")) {
 ```
 
 
-#### msg_to_msrp(key, content_types)
+#### msg_to_msrp(key, content_types) {#func_msg_to_msrp}
 
 
 This functions translates a SIP MESSAGE request into a MSRP SEND request.
@@ -219,10 +219,10 @@ if (is_method("MESSAGE")) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### msrp_gw_list_sessions
+#### msrp_gw_list_sessions {#mi_msrp_gw_list_sessions}
 
 
 Lists information about ongoing sessions.
@@ -246,7 +246,7 @@ opensips-cli -x mi msrp_gw_list_sessions
 ```
 
 
-#### msrp_gw_end_session
+#### msrp_gw_end_session {#mi_msrp_gw_end_session}
 
 
 Terminate an ongoing session.
@@ -270,10 +270,10 @@ opensips-cli -x mi msrp_gw_end_session alice@opensips.org-bob@opensips.org
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_MSRP_GW_SETUP_FAILED
+#### E_MSRP_GW_SETUP_FAILED {#event_E_MSRP_GW_SETUP_FAILED}
 
 
 This event is triggered when the MSRP side SIP session fails to set up,
@@ -302,10 +302,10 @@ Parameters:
 				before receiving a negative reply.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -327,7 +327,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -343,10 +343,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

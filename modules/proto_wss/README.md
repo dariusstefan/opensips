@@ -6,7 +6,7 @@ description: "The WSS (Secure WebSocket) module provides the ability to communic
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The WSS (Secure WebSocket) module provides the ability to communicate with
@@ -43,7 +43,7 @@ modparam("tls_mgm", "require_cert", "1")
 	Check the *tls_mgm* module documentation for more info.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -67,14 +67,14 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-WSS.
 
 
-#### listen=interface
+#### listen=interface {#param_listen}
 
 
 This is a global parameter that specifies what interface/IP and
@@ -92,7 +92,7 @@ socket= wss:1.2.3.4:44344
 ```
 
 
-#### wss_port (integer)
+#### wss_port (integer) {#param_wss_port}
 
 
 The default port to be used for all WSS related operation. Be 
@@ -119,7 +119,7 @@ modparam("proto_wss", "wss_port", 44344)
 ```
 
 
-#### wss_max_msg_chunks (integer)
+#### wss_max_msg_chunks (integer) {#param_wss_max_msg_chunks}
 
 
 The maximum number of chunks in which a SIP message is expected to
@@ -143,7 +143,7 @@ modparam("proto_wss", "wss_max_msg_chunks", 8)
 ```
 
 
-#### wss_resource (string)
+#### wss_resource (string) {#param_wss_resource}
 
 
 The resource queried for when a WebSocket handshake is initiated.
@@ -162,7 +162,7 @@ modparam("proto_wss", "wss_resource", "/wss")
 ```
 
 
-#### wss_handshake_timeout (integer)
+#### wss_handshake_timeout (integer) {#param_wss_handshake_timeout}
 
 
 This parameter specifies the time in milliseconds the proto_wss module
@@ -182,7 +182,7 @@ modparam("proto_wss", "wss_handshake_timeout", 300)
 ```
 
 
-#### cert_check_on_conn_reusage (integer)
+#### cert_check_on_conn_reusage (integer) {#param_tls_cert_check_on_conn_reusage}
 
 
 This parameter turns on or off the extra checking/matching of the
@@ -212,7 +212,7 @@ modparam("proto_wss", "cert_check_on_conn_reusage", 1)
 ```
 
 
-#### trace_destination (string)
+#### trace_destination (string) {#param_trace_destination}
 
 
 Trace destination as defined in the tracing module. Currently
@@ -245,7 +245,7 @@ modparam("proto_wss", "trace_destination", "hep_dest")
 ```
 
 
-#### trace_on (int)
+#### trace_on (int) {#param_trace_on}
 
 
 This controls whether tracing for wss is on or not. You still need to define
@@ -263,7 +263,7 @@ modparam("proto_wss", "trace_on", 1)
 ```
 
 
-#### trace_filter_route (string)
+#### trace_filter_route (string) {#param_trace_filter_route}
 
 
 Define the name of a route in which you can filter which connections will
@@ -315,7 +315,7 @@ route[wss_filter] {
 ```
 
 
-#### wss_tls_handshake_timeout (integer)
+#### wss_tls_handshake_timeout (integer) {#param_wss_tls_handshake_timeout}
 
 
 Sets the timeout (in milliseconds) for the SSL handshake sequence to complete.
@@ -340,7 +340,7 @@ param("proto_wss", "wss_tls_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### wss_send_timeout (integer)
+#### wss_send_timeout (integer) {#param_wss_send_timeout}
 
 
 Sets the timeout (in milliseconds) for the send operations to complete
@@ -363,7 +363,7 @@ modparam("proto_wss", "wss_send_timeout", 200) # number of milliseconds
 ```
 
 
-#### require_origin (int)
+#### require_origin (int) {#param_require_origin}
 
 
 Controls whether the module should require the Origin header or not.
@@ -379,10 +379,10 @@ modparam("proto_wss", "require_origin", no)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### wss_trace
+#### wss_trace {#mi_wss_trace}
 
 
 Name: *wss_trace*
@@ -418,10 +418,10 @@ MI FIFO Command Format:
 No, the WebSocket fragmentation mechanism is not supported.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -449,7 +449,7 @@ No, the WebSocket fragmentation mechanism is not supported.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -471,10 +471,10 @@ No, the WebSocket fragmentation mechanism is not supported.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

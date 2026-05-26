@@ -6,7 +6,7 @@ description: "The **proto_hep** module is a transport module which implements he
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The **proto_hep** module is a
@@ -32,7 +32,7 @@ socket= hep_udp:127.0.0.1:6061 		# change the listening IP
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -55,10 +55,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hep_id (str)
+#### hep_id (str) {#param_hep_id}
 
 
 Specify a destination for HEP packets and the version of
@@ -102,7 +102,7 @@ modparam("proto_hep", "hep_id", "[hep_dst] 1.2.3.4:5000")
 ```
 
 
-#### homer5_on (int)
+#### homer5_on (int) {#param_homer5_on}
 
 
 Specify how the data should be encapsulated in the HEP packet. If set to
@@ -125,7 +125,7 @@ modparam("proto_hep", "homer5_on", 0)
 ```
 
 
-#### homer5_delim (str)
+#### homer5_delim (str) {#param_homer5_delim}
 
 
 In case **homer5_on** is set
@@ -144,7 +144,7 @@ modparam("proto_hep", "homer5_delim", "##")
 ```
 
 
-#### hep_port (integer)
+#### hep_port (integer) {#param_hep_port}
 
 
 The default port to be used by all TCP/UDP/TLS listeners.
@@ -163,7 +163,7 @@ modparam("proto_hep", "hep_port", 6666)
 ```
 
 
-#### hep_send_timeout (integer)
+#### hep_send_timeout (integer) {#param_hep_send_timeout}
 
 
 Time in milliseconds after a TCP connection will be closed if it is
@@ -184,7 +184,7 @@ modparam("proto_hep", "hep_send_timeout", 200)
 ```
 
 
-#### hep_max_msg_chunks (integer)
+#### hep_max_msg_chunks (integer) {#param_hep_max_msg_chunks}
 
 
 The maximum number of chunks in which a HEP message is expected to
@@ -208,7 +208,7 @@ modparam("proto_hep", "hep_max_msg_chunks", 8)
 ```
 
 
-#### hep_async (integer)
+#### hep_async (integer) {#param_hep_async}
 
 
 Specifies whether the TCP connect and write operations should be
@@ -230,7 +230,7 @@ modparam("proto_hep", "hep_async", 0)
 ```
 
 
-#### hep_async_max_postponed_chunks (integer)
+#### hep_async_max_postponed_chunks (integer) {#param_hep_async_max_postponed_chunks}
 
 
 If *hep_async* is enabled, this specifies the
@@ -252,7 +252,7 @@ modparam("proto_hep", "hep_async_max_postponed_chunks", 16)
 ```
 
 
-#### hep_capture_id (integer)
+#### hep_capture_id (integer) {#param_hep_capture_id}
 
 
 The parameter indicate the capture agent ID for HEPv2/v3 protocol.
@@ -272,7 +272,7 @@ modparam("proto_hep", "hep_capture_id", 234)
 ```
 
 
-#### hep_retry_cooldown (integer)
+#### hep_retry_cooldown (integer) {#param_hep_retry_cooldown}
 
 
 This parameter defines how many seconds OpenSIPS should wait before retrying a TCP connection to the HEP destination after reaching the maximum number of failed attempts set by hep_max_retries.
@@ -292,7 +292,7 @@ modparam("proto_hep", "hep_retry_cooldown", 60)
 ```
 
 
-#### hep_max_retries (integer)
+#### hep_max_retries (integer) {#param_hep_max_retries}
 
 
 This parameter defines the maximum number of attempts OpenSIPS will make to establish a TCP connection with the HEP destination.
@@ -312,7 +312,7 @@ modparam("proto_hep", "hep_max_retries", 10)
 ```
 
 
-#### hep_async_local_connect_timeout (integer)
+#### hep_async_local_connect_timeout (integer) {#param_hep_async_local_connect_timeout}
 
 
 If *hep_async* is enabled, this specifies the
@@ -335,7 +335,7 @@ modparam("proto_hep", "hep_async_local_connect_timeout", 200)
 ```
 
 
-#### hep_async_local_write_timeout (integer)
+#### hep_async_local_write_timeout (integer) {#param_hep_async_local_write_timeout}
 
 
 If *hep_async* is enabled, this specifies the
@@ -358,10 +358,10 @@ modparam("proto_hep", "hep_async_local_write_timeout", 100)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### correlate(hep_id, type1, correlation1, type2, correlation2)
+#### correlate(hep_id, type1, correlation1, type2, correlation2) {#func_correlate}
 
 
 Send a hep message with an extra correlation id containing the two correlation given
@@ -453,10 +453,10 @@ Meaning of the parameters is as follows:
 Current version of hep used.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -488,7 +488,7 @@ Current version of hep used.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -514,10 +514,10 @@ Current version of hep used.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** rita7lopes, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bence Szigeti, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).

@@ -6,7 +6,7 @@ description: "This module is an implementation of a cache system designed to wor
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an implementation of a cache system designed to work with
@@ -44,7 +44,7 @@ The underlying client library is compatible with any of the following
 - *keys (in key:value pairs) may not contain spaces or control characters*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -88,10 +88,10 @@ sudo yum install json-c-devel mongo-c-driver-devel
 ```
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -128,7 +128,7 @@ cache_fetch("mongodb:instance1", "key", $avp(10));
 ```
 
 
-#### exec_threshold (int)
+#### exec_threshold (int) {#param_exec_threshold}
 
 
 The maximum number of microseconds that a mongodb query can last.
@@ -149,7 +149,7 @@ modparam("cachedb_mongodb", "exec_threshold", 100000)
 ```
 
 
-#### compat_mode_2.4 (int)
+#### compat_mode_2.4 (int) {#param_compat_mode_2.4}
 
 
 Switch the module into compatibility mode for MongoDB 2.4 servers.
@@ -176,7 +176,7 @@ modparam("cachedb_mongodb", "compat_mode_2.4", 1)
 ```
 
 
-#### compat_mode_3.0 (int)
+#### compat_mode_3.0 (int) {#param_compat_mode_3.0}
 
 
 Switch the module into compatibility mode for MongoDB 2.6/3.0 servers.
@@ -203,7 +203,7 @@ modparam("cachedb_mongodb", "compat_mode_3.0", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export functions to be used
@@ -271,10 +271,10 @@ xlog("UPDATE RAW QUERY returned $rc, output: '$avp(out)'\n");
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -306,7 +306,7 @@ xlog("UPDATE RAW QUERY returned $rc, output: '$avp(out)'\n");
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -332,10 +332,10 @@ xlog("UPDATE RAW QUERY returned $rc, output: '$avp(out)'\n");
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

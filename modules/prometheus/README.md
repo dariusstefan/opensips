@@ -6,7 +6,7 @@ description: "This module provides a HTTP interface for the [Prometheus](https:/
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a HTTP interface for the
@@ -32,7 +32,7 @@ Each exported statistic comes with a *group* label that
 		indicates the group it belongs to.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### External Libraries or Applications
@@ -50,10 +50,10 @@ The following modules must be loaded before this module:
 - *httpd* module.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### root(string)
+#### root(string) {#param_root}
 
 
 Specifies the root metrics path Promethus uses to query the stats:
@@ -73,7 +73,7 @@ modparam("prometheus", "root", "prometheus")
 ```
 
 
-#### prefix(string)
+#### prefix(string) {#param_prefix}
 
 
 Appends a prefix to each statistic exported.
@@ -92,7 +92,7 @@ modparam("prometheus", "prefix", "opensips_1")
 ```
 
 
-#### group_prefix(string)
+#### group_prefix(string) {#param_group_prefix}
 
 
 Appends a prefix to the name of the group the statistic belongs to.
@@ -111,7 +111,7 @@ modparam("prometheus", "group_prefix", "opensips")
 ```
 
 
-#### delimiter(string)
+#### delimiter(string) {#param_delimiter}
 
 
 Specifies the delimiter to be used to separate *prefix*
@@ -131,7 +131,7 @@ modparam("prometheus", "delimiter", "-")
 ```
 
 
-#### group_label(string)
+#### group_label(string) {#param_group_label}
 
 
 Specifies the label used to store the group when *group_mode* is 2.
@@ -150,7 +150,7 @@ modparam("prometheus", "group_label", "grp")
 ```
 
 
-#### group_mode(int)
+#### group_mode(int) {#param_group_mode}
 
 
 Specifies how the group of the statistic should be provisioned to
@@ -180,7 +180,7 @@ modparam("prometheus", "group_mode", 1)
 ```
 
 
-#### statistics(string)
+#### statistics(string) {#param_statistics}
 
 
 The statistics that are being exported by OpenSIPS, separated by space.
@@ -210,7 +210,7 @@ modparam("prometheus", "statistics", "active_dialogs load:")
 ```
 
 
-#### labels(string)
+#### labels(string) {#param_labels}
 
 
 Rules that define how to convert the name of a statistic
@@ -267,7 +267,7 @@ modparam("prometheus", "labels", "group: /^(.*)_(.*)$/\1:gateway=\"\2\"/")
 ```
 
 
-#### script_route(string)
+#### script_route(string) {#param_script_route}
 
 
 Specifies the route name to be used to for adding custom prometheus information.
@@ -311,10 +311,10 @@ route[my_custom_prometheus_route] {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### prometheus_declare_stat(name, [type], [help])
+#### prometheus_declare_stat(name, [type], [help]) {#func_prometheus_declare_stat}
 
 
 *NOTE:* this function can only be used in the
@@ -356,7 +356,7 @@ route[my_custom_prometheus_route] {
 ```
 
 
-#### prometheus_push_stat(value, [label_name], [label_value])
+#### prometheus_push_stat(value, [label_name], [label_value]) {#func_prometheus_push_stat}
 
 
 *NOTE:* this function can only be used in the
@@ -433,10 +433,10 @@ scrape_configs:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -462,7 +462,7 @@ scrape_configs:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -482,10 +482,10 @@ scrape_configs:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Dudu Ben Moshe, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), OpenSIPS.

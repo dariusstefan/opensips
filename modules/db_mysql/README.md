@@ -6,14 +6,14 @@ description: "This is a module which provides MySQL connectivity for OpenSIPS. I
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module which provides MySQL connectivity for OpenSIPS.
 		It implements the DB API defined in OpenSIPS.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before running
 - *libmysqlclient-dev* - the development libraries of mysql-client.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### exec_query_threshold (integer)
+#### exec_query_threshold (integer) {#param_exec_query_threshold}
 
 
 If queries take longer than 'exec_query_threshold' microseconds, warning
@@ -58,7 +58,7 @@ modparam("db_mysql", "exec_query_threshold", 60000)
 ```
 
 
-#### timeout_interval (integer)
+#### timeout_interval (integer) {#param_timeout_interval}
 
 
 Time interval after which a connection attempt (read or write request)
@@ -85,7 +85,7 @@ modparam("db_mysql", "timeout_interval", 2)
 ```
 
 
-#### max_db_queries (integer)
+#### max_db_queries (integer) {#param_max_db_queries}
 
 
 The maximum number of retries to execute a failed query due to connections problems.
@@ -105,7 +105,7 @@ modparam("db_mysql", "max_db_queries", 2)
 ```
 
 
-#### max_db_retries (integer)
+#### max_db_retries (integer) {#param_max_db_retries}
 
 
 The maximum number of database connection retries. If this parameter
@@ -125,7 +125,7 @@ modparam("db_mysql", "max_db_retries", 2)
 ```
 
 
-#### ps_max_col_size (integer)
+#### ps_max_col_size (integer) {#param_ps_max_col_size}
 
 
 The maximum size of a column's data, when fetched using prepared
@@ -150,7 +150,7 @@ modparam("db_mysql", "ps_max_col_size", 4096)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for MySQL connections.
@@ -201,7 +201,7 @@ modparam("usrloc", "db_url", "mysql://root:1234@localhost/opensips?tls_domain=do
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No function exported to be used from configuration file.
@@ -221,10 +221,10 @@ Because it dependes on an external library, the mysql module is not
 			make install include_modules="db_mysql"'.
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_MYSQL_CONNECTION
+#### E_MYSQL_CONNECTION {#event_E_MYSQL_CONNECTION}
 
 
 This event is raised when a MySQL connection is lost or recovered.
@@ -238,10 +238,10 @@ Parameters:
 				*disconnected* if the connection was lost.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -273,7 +273,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -299,10 +299,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Jan Janak ([@janakj](https://github.com/janakj)).

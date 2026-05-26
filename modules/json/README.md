@@ -6,7 +6,7 @@ description: "This module introduces a new type of variable that provides both s
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module introduces a new type of variable that provides both
@@ -28,7 +28,7 @@ Since the JSON format can have objects inside other objects
 	access these using paths.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -45,10 +45,10 @@ This module does not depend on other modules.
 				http://oss.metaparadigm.com/json-c/
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable_long_quoting (boolean)
+#### enable_long_quoting (boolean) {#param_enable_long_quoting}
 
 
 Enable this parameter if your input JSONs contain signed integers which
@@ -74,10 +74,10 @@ $var(gateway_id) = "" + $json(body/gateway_id);
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $json(id)
+#### $json(id) {#pv_json}
 
 
 The `json` variable provides
@@ -374,7 +374,7 @@ $json(object/array) := $json(array) ;
 ```
 
 
-#### $json_pretty(id)
+#### $json_pretty(id) {#pv_json_pretty}
 
 
 The `json_pretty` variable has the
@@ -383,7 +383,7 @@ The `json_pretty` variable has the
 			spaces and tabs to make the output more readable.
 
 
-#### $json_compact(id)
+#### $json_compact(id) {#pv_json_compact}
 
 
 The `json_compact` variable has the
@@ -392,12 +392,12 @@ The `json_compact` variable has the
 			without formatting spaces.
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### 
 				json_link($json(dest_id), $json(source_id))
-				
+				 {#func_json_link}
 
 
 This function can be used to link json objects together.
@@ -505,7 +505,7 @@ xlog("\nTest link :\n$json(stub)\n$json(b)\n\n");
 
 #### 
 				json_merge(main_json_var,patch_json_var,output_var))
-				
+				 {#func_json_merge}
 
 
 The function can be used to patch merge patch_json_var into main_json_var and the output will be populated into the output_var
@@ -533,10 +533,10 @@ xlog("we merged and got $var(merged_json) \n");
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -568,7 +568,7 @@ xlog("we merged and got $var(merged_json) \n");
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -594,10 +594,10 @@ xlog("we merged and got $var(merged_json) \n");
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Andrei Dragus.

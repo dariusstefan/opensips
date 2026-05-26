@@ -6,7 +6,7 @@ description: "The Status/Report module is a wrapper over the internal status/rep
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Status/Report module is a wrapper over the 
@@ -19,7 +19,7 @@ By bringing the Status/Report support into the script, it opens the
 		the logic you have there.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -41,10 +41,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### script_sr_group (string)
+#### script_sr_group (string) {#param_script_sr_group}
 
 
 Name of a new Status/Report group to be created and later used
@@ -64,10 +64,10 @@ modparam("status_report", "script_sr_group", "alarms")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sr_set_status( group, status, [details])
+#### sr_set_status( group, status, [details]) {#func_sr_set_status}
 
 
 Sets a new status (and details) for a Status/Report group.
@@ -99,7 +99,7 @@ sr_set_status( "script_caching", 1, "completed");
 ```
 
 
-#### sr_add_report( group, report)
+#### sr_add_report( group, report) {#func_sr_add_report}
 
 
 Adds a new report/log to a Status/Report group.This must have been
@@ -128,10 +128,10 @@ sr_add_report("security","IP $si detected as attacker");
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -153,7 +153,7 @@ sr_add_report("security","IP $si detected as attacker");
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -169,10 +169,10 @@ sr_add_report("security","IP $si detected as attacker");
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

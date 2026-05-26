@@ -5,7 +5,7 @@ title: "Stun Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 #### The idea
@@ -85,7 +85,7 @@ Not supported attributes:
 and associated ERROR_CODEs
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -107,10 +107,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### primary_ip (str)
+#### primary_ip (str) {#param_primary_ip}
 
 
 The IP of an interface which is configured as an UDP SIP listener
@@ -141,7 +141,7 @@ modparam("stun", "primary_ip", "192.168.0.100 / 64.50.46.78")
 ```
 
 
-#### primary_port (str)
+#### primary_port (str) {#param_primary_port}
 
 
 The port configured (together with the *primary_ip*) as an UDP SIP
@@ -170,7 +170,7 @@ modparam("stun", "primary_port", "5060 / 5062")
 ```
 
 
-#### alternate_ip (str)
+#### alternate_ip (str) {#param_alternate_ip}
 
 
 Another IP from another interface. This is a mandatory parameter.
@@ -208,7 +208,7 @@ modparam("stun", "alternate_ip", "192.168.0.100 / 64.78.46.50")
 ```
 
 
-#### alternate_port (str)
+#### alternate_port (str) {#param_alternate_port}
 
 
 The port used by the STUN server for the second interface.
@@ -247,7 +247,7 @@ modparam("stun", "alternate_port", "5060 / 5062")
 ```
 
 
-#### use_listeners_as_primary (int)
+#### use_listeners_as_primary (int) {#param_use_listeners_as_primary}
 
 
 Setting this parameter to *1* will allow all
@@ -275,10 +275,10 @@ modparam("stun","use_listeners_as_primary",1)
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -306,7 +306,7 @@ modparam("stun","use_listeners_as_primary",1)
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -328,10 +328,10 @@ modparam("stun","use_listeners_as_primary",1)
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bernard, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Pistolea.

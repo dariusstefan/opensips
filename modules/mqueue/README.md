@@ -6,7 +6,7 @@ description: "The mqueue module offers a generic message queue system in shared 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The mqueue module offers a generic message queue system in shared
@@ -20,7 +20,7 @@ There can be many defined queues. Access to queued values is done via
 		pseudo variables.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -42,10 +42,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 The URL to connect to database for loading values
@@ -74,7 +74,7 @@ val character varying(4096) DEFAULT "" NOT NULL
 ```
 
 
-#### mqueue (string)
+#### mqueue (string) {#param_mqueue}
 
 
 Definition of a memory queue
@@ -136,10 +136,10 @@ modparam("mqueue", "mqueue", "name=qaz;addmode=1")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### mq_add(queue, key, value)
+#### mq_add(queue, key, value) {#func_mq_add}
 
 
 Add a new item (key, value) in the queue. If max size of queue is
@@ -156,7 +156,7 @@ mq_add("myq", "$rU", "call from $fU");
 ```
 
 
-#### mq_fetch(queue)
+#### mq_fetch(queue) {#func_mq_fetch}
 
 
 Take oldest item from queue and fill $mqk(queue) and
@@ -180,7 +180,7 @@ while(mq_fetch("myq"))
 ```
 
 
-#### mq_pv_free(queue)
+#### mq_pv_free(queue) {#func_mq_pv_free}
 
 
 Free the item fetched in pseudo-variables. It is optional,
@@ -197,7 +197,7 @@ mq_pv_free("myq");
 ```
 
 
-#### mq_size(queue)
+#### mq_size(queue) {#func_mq_size}
 
 
 Returns the current number of elements in the mqueue.
@@ -218,10 +218,10 @@ xlog("L_INFO", "Size of queue is: $var(q_size)\n");
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### mq_get_size
+#### mq_get_size {#mi_mq_get_size}
 
 
 Get the size of a memory queue.
@@ -243,7 +243,7 @@ opensips-cli -x mq_get_size xyz
 ```
 
 
-#### mq_fetch
+#### mq_fetch {#mi_mq_fetch}
 
 
 Fetch one (or up to limit) key-value pair from a memory queue.
@@ -267,7 +267,7 @@ opensips-cli -x mq_fetch xyz
 ```
 
 
-#### mq_get_sizes
+#### mq_get_sizes {#mi_mq_get_sizes}
 
 
 Get the size for all memory queues.
@@ -286,34 +286,34 @@ opensips-cli -x mq_get_sizes
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $mqk(mqueue)
+#### $mqk(mqueue) {#pv_mqk}
 
 
 The variable is read-only and returns the most recent item key
 			fetched from the specified mqueue.
 
 
-#### $mqv(mqueue)
+#### $mqv(mqueue) {#pv_mqv}
 
 
 The variable is read-only and returns the most recent item value
 			fetched from the specified mqueue.
 
 
-#### $mq_size(mqueue)
+#### $mq_size(mqueue) {#pv_mq_size}
 
 
 The variable is read-only and returns the size of the specified
 			mqueue.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -335,7 +335,7 @@ The variable is read-only and returns the size of the specified
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -351,10 +351,10 @@ The variable is read-only and returns the size of the specified
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

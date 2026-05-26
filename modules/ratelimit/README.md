@@ -6,7 +6,7 @@ description: "This module implements rate limiting for SIP requests. In contrast
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements rate limiting for SIP requests. In contrast to
@@ -191,7 +191,7 @@ IMPORTANT NOTE: as this algorithm is diven by the load factor, the values
 		limitation are specific to this algorithm and not to the implementation.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -213,10 +213,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### timer_interval (integer)
+#### timer_interval (integer) {#param_timer_interval}
 
 
 The timer interval in seconds when the Network and Feedback algorithms
@@ -240,7 +240,7 @@ modparam("ratelimit", "timer_interval", 5)
 ```
 
 
-#### limit_per_interval (integer)
+#### limit_per_interval (integer) {#param_limit_per_interval}
 
 
 This parameter configures the way that a pipe's limit is specified
@@ -262,7 +262,7 @@ modparam("ratelimit", "limit_per_interval", 1)
 ```
 
 
-#### expire_time (integer)
+#### expire_time (integer) {#param_expire_time}
 
 
 This parameter specifies how long a pipe should be kept in memory
@@ -283,7 +283,7 @@ modparam("ratelimit", "expire_time", 1800)
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The size of the hash table internally used to keep the pipes.
@@ -304,7 +304,7 @@ modparam("ratelimit", "hash_size", 512)
 ```
 
 
-#### default_algorithm (string)
+#### default_algorithm (string) {#param_default_algorithm}
 
 
 Specifies which algorithm should be assumed in case it isn't
@@ -324,7 +324,7 @@ modparam("ratelimit", "default_algorithm", "RED")
 ```
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 Enables distributed rate limiting and specifies the backend
@@ -344,7 +344,7 @@ modparam("ratelimit", "cachedb_url", "redis://root:root@127.0.0.1/")
 ```
 
 
-#### db_prefix (string)
+#### db_prefix (string) {#param_db_prefix}
 
 
 Specifies what prefix should be added to the pipe name. This is
@@ -364,7 +364,7 @@ modparam("ratelimit", "db_prefix", "ratelimit_")
 ```
 
 
-#### repl_buffer_threshold (string)
+#### repl_buffer_threshold (string) {#param_repl_buffer_threshold}
 
 
 Used to specify the length of the buffer used by the binary
@@ -386,7 +386,7 @@ modparam("ratelimit", "repl_buffer_threshold", 500)
 ```
 
 
-#### repl_timer_interval (string)
+#### repl_timer_interval (string) {#param_repl_timer_interval}
 
 
 Timer in milliseconds, used to specify how often the module
@@ -406,7 +406,7 @@ modparam("ratelimit", "repl_timer_interval", 100)
 ```
 
 
-#### repl_timer_expire (string)
+#### repl_timer_expire (string) {#param_repl_timer_expire}
 
 
 Timer in seconds, used to specify when the counter received
@@ -428,7 +428,7 @@ modparam("ratelimit", "repl_timer_expire", 10)
 ```
 
 
-#### pipe_replication_cluster (integer)
+#### pipe_replication_cluster (integer) {#param_pipe_replication_cluster}
 
 
 Specifies the cluster ID where pipes will be replicated to and
@@ -448,7 +448,7 @@ modparam("ratelimit", "pipe_replication_cluster", 1)
 ```
 
 
-#### window_size (int)
+#### window_size (int) {#param_window_size}
 
 
 How long the history in SBT should be in seconds.
@@ -467,7 +467,7 @@ modparam("ratelimit", "window_size", 5)
 ```
 
 
-#### slot_period (int)
+#### slot_period (int) {#param_slot_period}
 
 
 Value of one slot in milliseconds. This parameter determines
@@ -490,11 +490,11 @@ modparam("ratelimit", "slot_period", 100)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### rl_check(name, limit[, algorithm])
-			
+			 {#func_rl_check}
 
 
 Check the current request against the pipe identified by name and
@@ -569,7 +569,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### rl_dec_count(name)
+#### rl_dec_count(name) {#func_rl_dec_count}
 
 
 This function decreases a counter that could have been previously
@@ -600,7 +600,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### rl_reset_count(name)
+#### rl_reset_count(name) {#func_rl_reset_count}
 
 
 This function resets a counter that could have been previously
@@ -631,7 +631,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### rl_values(ret_avp, regexp)
+#### rl_values(ret_avp, regexp) {#func_rl_values}
 
 
 Returns all the available pipes' names in the *ret_avp*
@@ -663,10 +663,10 @@ This function can be used from any route.
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### rl_list
+#### rl_list {#mi_rl_list}
 
 
 Lists the parameters and variabiles in the ratelimit module.
@@ -706,7 +706,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rl_dump_pipe
+#### rl_dump_pipe {#mi_rl_dump_pipe}
 
 
 Exposes all the details about the current runtime data (specific to the
@@ -731,7 +731,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rl_reset_pipe
+#### rl_reset_pipe {#mi_rl_reset_pipe}
 
 
 Resets the counter of a specified pipe.
@@ -756,7 +756,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rl_set_pid
+#### rl_set_pid {#mi_rl_set_pid}
 
 
 Sets the PID Controller parameters for the Feedback Algorithm.
@@ -782,7 +782,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rl_get_pid
+#### rl_get_pid {#mi_rl_get_pid}
 
 
 Gets the list of in use PID Controller parameters.
@@ -803,7 +803,7 @@ MI FIFO Command Format:
 ```
 
 
-#### rl_bin_status
+#### rl_bin_status {#mi_rl_bin_status}
 
 
 Dumps each destination used for replication, as well as
@@ -825,10 +825,10 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $rl_count(name)
+#### $rl_count(name) {#pv_rl_count}
 
 
 Returns the counter of a pipe. The variable is read-only.
@@ -837,10 +837,10 @@ Returns the counter of a pipe. The variable is read-only.
 NULL will be returned if the pipe does not exist.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -872,7 +872,7 @@ NULL will be returned if the pipe does not exist.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -898,10 +898,10 @@ NULL will be returned if the pipe does not exist.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Arnaud Boussus, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Henning Westerholt ([@henningw](https://github.com/henningw)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Edson Gellert Schubert.

@@ -6,7 +6,7 @@ description: "The SL module allows OpenSIPS to act as a stateless UA server and 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The SL module allows OpenSIPS to act as a stateless 
@@ -39,7 +39,7 @@ The ACK filtering may fail in some rare cases. If you think these
 		ACK is forwarded.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -61,10 +61,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable_stats (integer)
+#### enable_stats (integer) {#param_enable_stats}
 
 
 If the module should generate and export statistics to the core
@@ -86,10 +86,10 @@ modparam("sl", "enable_stats", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sl_send_reply(code, reason)
+#### sl_send_reply(code, reason) {#func_sl_send_reply}
 
 
 For the current request, a reply is sent back having the given code 
@@ -121,7 +121,7 @@ sl_send_reply($err.rcode, $err.rreason);
 ```
 
 
-#### sl_reply_error()
+#### sl_reply_error() {#func_sl_reply_error}
 
 
 Sends back an error reply describing the nature of the last internal 
@@ -145,64 +145,64 @@ sl_reply_error();
 ### Exported Statistics
 
 
-#### 1xx_replies
+#### 1xx_replies {#stat_1xx_replies}
 
 
 The number of 1xx_replies.
 
 
-#### 2xx_replies
+#### 2xx_replies {#stat_2xx_replies}
 
 
 The number of 2xx_replies.
 
 
-#### 3xx_replies
+#### 3xx_replies {#stat_3xx_replies}
 
 
 The number of 3xx_replies.
 
 
-#### 4xx_replies
+#### 4xx_replies {#stat_4xx_replies}
 
 
 The number of 4xx_replies.
 
 
-#### 5xx_replies
+#### 5xx_replies {#stat_5xx_replies}
 
 
 The number of 5xx_replies.
 
 
-#### 6xx_replies
+#### 6xx_replies {#stat_6xx_replies}
 
 
 The number of 6xx_replies.
 
 
-#### sent_replies
+#### sent_replies {#stat_sent_replies}
 
 
 The number of sent_replies.
 
 
-#### sent_err_replies
+#### sent_err_replies {#stat_sent_err_replies}
 
 
 The number of sent_err_replies.
 
 
-#### received_ACKs
+#### received_ACKs {#stat_received_ACKs}
 
 
 The number of received_ACKs.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -234,7 +234,7 @@ The number of received_ACKs.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -260,10 +260,10 @@ The number of received_ACKs.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

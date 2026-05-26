@@ -6,7 +6,7 @@ description: "The userblacklist module allows OpenSIPS to handle blacklists on a
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The userblacklist module allows OpenSIPS to handle blacklists
@@ -32,7 +32,7 @@ The module exports two functions, *check_blacklist*
 	blacklist cache.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -55,10 +55,10 @@ The following libraries or applications must be installed
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Url to the database containing the routing data.
@@ -78,7 +78,7 @@ modparam("userblacklist", "db_url", "dbdriver://username:password@dbhost/dbname"
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 Name of the table where the user blacklist data is stored.
@@ -98,7 +98,7 @@ modparam("userblacklist", "db_table", "userblacklist")
 ```
 
 
-#### use_domain (integer)
+#### use_domain (integer) {#param_use_domain}
 
 
 If set to non-zero value, the domain column in the userblacklist is used.
@@ -118,10 +118,10 @@ modparam("userblacklist", "use_domain", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### check_user_blacklist (user, domain, [number], [table])
+#### check_user_blacklist (user, domain, [number], [table]) {#func_check_user_blacklist}
 
 
 Finds the longest prefix that matches the request URI user (or the number
@@ -156,7 +156,7 @@ if (!check_user_blacklist("user", "domain.com"))
 ```
 
 
-#### check_blacklist (table)
+#### check_blacklist (table) {#func_check_blacklist}
 
 
 Finds the longest prefix that matches the request URI for the
@@ -184,10 +184,10 @@ if (!check_blacklist("global_blacklist")))
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### reload_blacklist
+#### reload_blacklist {#mi_reload_blacklist}
 
 
 Reload the internal global blacklist cache. This is necessary after
@@ -276,10 +276,10 @@ This table will setup user specific blacklists for certain usernames. For exampl
 		parameter is set.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -311,7 +311,7 @@ This table will setup user specific blacklists for certain usernames. For exampl
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -337,10 +337,10 @@ This table will setup user specific blacklists for certain usernames. For exampl
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Edson Gellert Schubert, Hardy Kahl.

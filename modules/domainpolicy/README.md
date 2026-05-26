@@ -6,7 +6,7 @@ description: "The Domain Policy module implements draft-lendl-domain-policy-ddds
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Domain Policy module implements draft-lendl-domain-policy-ddds-02 in
@@ -22,7 +22,7 @@ The Domain Policy module implements draft-lendl-domain-policy-ddds-02 in
 This module requires a database. No caching is implemented.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 The module depends on the following modules (in the other words the 
@@ -32,10 +32,10 @@ The module depends on the following modules (in the other words the
 - *database* -- Any database module
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 This is URL of the database to be used.
@@ -53,7 +53,7 @@ modparam("domainpolicy", "db_url", "postgresql://user:pass@db_host/opensips")
 ```
 
 
-#### dp_table (string)
+#### dp_table (string) {#param_dp_table}
 
 
 Name of table containing the local support domain policy setup.
@@ -70,7 +70,7 @@ modparam("domainpolicy", "dp_table", "supportedpolicies")
 ```
 
 
-#### dp_col_rule (string)
+#### dp_col_rule (string) {#param_dp_col_rule}
 
 
 Name of column containing the domain policy rule name which is equal
@@ -88,7 +88,7 @@ modparam("domainpolicy", "dp_col_rule", "rules")
 ```
 
 
-#### dp_col_type (string)
+#### dp_col_type (string) {#param_dp_col_type}
 
 
 Name of column containing the domain policy rule type.
@@ -108,7 +108,7 @@ modparam("domainpolicy", "dp_col_type", "type")
 ```
 
 
-#### dp_col_att (string)
+#### dp_col_att (string) {#param_dp_col_att}
 
 
 Name of column containing the AVP's name. If the rule stored in this
@@ -126,7 +126,7 @@ modparam("domainpolicy", "dp_col_att", "attribute")
 ```
 
 
-#### dp_col_val (string)
+#### dp_col_val (string) {#param_dp_col_val}
 
 
 Name of column containing the value for AVPs created by dp_can_connect().
@@ -143,7 +143,7 @@ modparam("domainpolicy", "dp_col_val", "values")
 ```
 
 
-#### port_override_avp (string)
+#### port_override_avp (string) {#param_port_override_avp}
 
 
 This parameter defines the name of the AVP where dp_apply_policy() will look
@@ -162,7 +162,7 @@ modparam("domainpolicy", "port_override_avp", "portoverride")
 ```
 
 
-#### transport_override_avp (string)
+#### transport_override_avp (string) {#param_transport_override_avp}
 
 
 Name of the AVP which contains the override transport setting.
@@ -180,7 +180,7 @@ modparam("domainpolicy", "transport_override_avp", "transportoverride")
 ```
 
 
-#### domain_replacement_avp (string)
+#### domain_replacement_avp (string) {#param_domain_replacement_avp}
 
 
 Name of the AVP which contains a domain replacement.
@@ -198,7 +198,7 @@ modparam("domainpolicy", "domain_replacement_avp", "domainreplacement")
 ```
 
 
-#### domain_prefix_avp (string)
+#### domain_prefix_avp (string) {#param_domain_prefix_avp}
 
 
 Name of the AVP which contains a domain prefix.
@@ -216,7 +216,7 @@ modparam("domainpolicy", "domain_prefix_avp", "domainprefix")
 ```
 
 
-#### domain_suffix_avp (string)
+#### domain_suffix_avp (string) {#param_domain_suffix_avp}
 
 
 Name of the AVP which contains a domain suffix.
@@ -234,7 +234,7 @@ modparam("domainpolicy", "domain_suffix_avp", "domainsuffix")
 ```
 
 
-#### send_socket_avp (string)
+#### send_socket_avp (string) {#param_send_socket_avp}
 
 
 Name of the AVP which contains a send_socket. The format of the
@@ -256,10 +256,10 @@ modparam("domainpolicy", "send_socket_avp", "sendsocket")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### dp_can_connect()
+#### dp_can_connect() {#func_dp_can_connect}
 
 
 Checks the interconnection policy of the caller. It uses the domain in the 
@@ -350,7 +350,7 @@ switch(retcode) {
 ```
 
 
-#### dp_apply_policy()
+#### dp_apply_policy() {#func_dp_apply_policy}
 
 
 This function sets the destination URI according to the policy returned
@@ -577,10 +577,10 @@ The domainpolicy table just needs to link the federation identifier
 ### Known Limitations
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -612,7 +612,7 @@ The domainpolicy table just needs to link the federation identifier
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -638,10 +638,10 @@ The domainpolicy table just needs to link the federation identifier
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Klaus Darilion.

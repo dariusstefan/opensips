@@ -6,7 +6,7 @@ description: "This module is designed to be used at intermediate sip proxies lik
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is designed to be used at intermediate sip proxies like loadbalancers in front of
@@ -51,7 +51,7 @@ If the NAT'ed address of an UAC is passed to the registrar, the registrar routes
 			This behaviour can be activated by setting the module parameter "use_received".
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -74,10 +74,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### use_received (int)
+#### use_received (int) {#param_use_received}
 
 
 If set to 1, the "received" parameter of the first Route URI is evaluated and
@@ -97,7 +97,7 @@ modparam("path", "use_received", 1)
 ```
 
 
-#### enable_double_path (integer)
+#### enable_double_path (integer) {#param_enable_double_path}
 
 
 There are some situations when the server needs to insert two 
@@ -120,10 +120,10 @@ modparam("path", "enable_double_path", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### add_path([user])
+#### add_path([user]) {#func_add_path}
 
 
 This function adds a Path header in the form 
@@ -153,7 +153,7 @@ if (!add_path("loadbalancer")) {
 ```
 
 
-#### add_path_received([user])
+#### add_path_received([user]) {#func_add_path_received}
 
 
 This function adds a Path header in the form 
@@ -186,10 +186,10 @@ if (!add_path_received("inbound")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -221,7 +221,7 @@ if (!add_path_received("inbound")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -247,10 +247,10 @@ if (!add_path_received("inbound")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Andreas Granig.

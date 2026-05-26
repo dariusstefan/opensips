@@ -5,10 +5,10 @@ title: "permissions Module"
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
-#### Call Routing
+#### Call Routing {#sec-call-routing}
 
 
 The module can be used to determine if a call has appropriate
@@ -50,7 +50,7 @@ From header field and Request-URIs are always compared with regular
 		`config/permissions.allow`.
 
 
-#### Registration Permissions
+#### Registration Permissions {#sec-registration-permissions}
 
 
 In addition to call routing it is also possible to check REGISTER
@@ -87,7 +87,7 @@ The algorithm of matching is same as described in
 		[sec call routing](#sec-call-routing).
 
 
-#### URI Permissions
+#### URI Permissions {#sec-uri-permissions}
 
 
 The module can be used to determine if request is
@@ -122,7 +122,7 @@ From URI and URI stored in pvar are always compared with regular
 		`config/permissions.allow`.
 
 
-#### Address Permissions
+#### Address Permissions {#sec-address-permissions}
 
 
 The module can be used to determine if an address (IP
@@ -147,7 +147,7 @@ Otherwise the request is rejected.
 The address database table is specified by module parameters.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -169,10 +169,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_allow_file (string)
+#### default_allow_file (string) {#param_default_allow_file}
 
 
 Default allow file used by functions without parameters. If you
@@ -193,7 +193,7 @@ modparam("permissions", "default_allow_file", "/etc/permissions.allow")
 ```
 
 
-#### default_deny_file (string)
+#### default_deny_file (string) {#param_default_deny_file}
 
 
 Default file containing deny rules. The file is used by functions
@@ -214,7 +214,7 @@ modparam("permissions", "default_deny_file", "/etc/permissions.deny")
 ```
 
 
-#### check_all_branches (integer)
+#### check_all_branches (integer) {#param_check_all_branches}
 
 
 If set then allow_routing functions will check Request-URI of all
@@ -239,7 +239,7 @@ modparam("permissions", "check_all_branches", 0)
 ```
 
 
-#### allow_suffix (string)
+#### allow_suffix (string) {#param_allow_suffix}
 
 
 Suffix to be appended to basename to create filename of the allow
@@ -264,7 +264,7 @@ modparam("permissions", "allow_suffix", ".allow")
 ```
 
 
-#### deny_suffix (string)
+#### deny_suffix (string) {#param_deny_suffix}
 
 
 Suffix to be appended to basename to create filename of the deny file
@@ -289,7 +289,7 @@ modparam("permissions", "deny_suffix", ".deny")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The URL of the database to be used for loading the data related to
@@ -319,7 +319,7 @@ modparam("permissions", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### address_table (string)
+#### address_table (string) {#param_address_table}
 
 
 Name of database table containing matching rules used by
@@ -341,7 +341,7 @@ modparam("permissions", "address_table", "pbx")
 ```
 
 
-#### partition (string)
+#### partition (string) {#param_partition}
 
 
 Specify a new IP-based checking partition (data source).  This
@@ -365,7 +365,7 @@ modparam("permissions", "partition", "
 ```
 
 
-#### grp_col (string)
+#### grp_col (string) {#param_grp_col}
 
 
 Name of address table column containing group
@@ -385,7 +385,7 @@ modparam("permissions", "grp_col", "group_id")
 ```
 
 
-#### ip_col (string)
+#### ip_col (string) {#param_ip_col}
 
 
 Name of address table column containing IP address
@@ -405,7 +405,7 @@ modparam("permissions", "ip_col", "ipess")
 ```
 
 
-#### mask_col (string)
+#### mask_col (string) {#param_mask_col}
 
 
 Name of address table column containing network mask of
@@ -426,7 +426,7 @@ modparam("permissions", "mask_col", "subnet_length")
 ```
 
 
-#### port_col (string)
+#### port_col (string) {#param_port_col}
 
 
 Name of address table column containing port
@@ -446,7 +446,7 @@ modparam("permissions", "port_col", "prt")
 ```
 
 
-#### proto_col (string)
+#### proto_col (string) {#param_proto_col}
 
 
 Name of address table column containing transport
@@ -472,7 +472,7 @@ modparam("permissions", "proto_col", "transport")
 ```
 
 
-#### pattern_col (string)
+#### pattern_col (string) {#param_pattern_col}
 
 
 Name of address table column containinga a pattern (a shell wildcard
@@ -495,7 +495,7 @@ modparam("permissions", "pattern_col", "wildcard_col")
 ```
 
 
-#### info_col (string)
+#### info_col (string) {#param_info_col}
 
 
 Name of address table column containing a string
@@ -518,11 +518,11 @@ modparam("permissions", "info_col", "info_col")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### check_address(group_id, ip,
-		port, proto [, context_info], [pattern], [partition])
+		port, proto [, context_info], [pattern], [partition]) {#func_check_address}
 
 
 Returns 1 if group id, IP address, port and protocol given as
@@ -617,7 +617,7 @@ if (check_address( 4,$si, 5700, $socket_in(proto), ,"texttest")) {
 ```
 
 
-#### check_source_address(group_id , [context_info], [pattern], [partition])
+#### check_source_address(group_id , [context_info], [pattern], [partition]) {#func_check_source_address}
 
 
 Equivalent to check_address(group_id, "$si", "$sp", "$socket_in(proto)", context_info, pattern, partition).
@@ -643,7 +643,7 @@ if (check_source_address( 4,$avp(ctx), , , $avp(my_partition))) {
 ```
 
 
-#### get_source_group(var,[partition])
+#### get_source_group(var,[partition]) {#func_get_source_group}
 
 
 Checks if an entry with the source ip/port/protocol is
@@ -680,7 +680,7 @@ if ( get_source_group( $var(group)) ) {
 ```
 
 
-#### allow_routing()
+#### allow_routing() {#func_allow_routing}
 
 
 Returns true if all pairs constructed as described in [sec call routing](#sec-call-routing) have appropriate permissions according to
@@ -704,7 +704,7 @@ if (allow_routing()) {
 ```
 
 
-#### allow_routing(basename)
+#### allow_routing(basename) {#func_allow_routing_1}
 
 
 Returns true if all pairs constructed as described in [sec call routing](#sec-call-routing) have appropriate permissions according
@@ -738,7 +738,7 @@ if (allow_routing("basename")) {
 ```
 
 
-#### allow_register(basename)
+#### allow_register(basename) {#func_allow_register}
 
 
 The function returns true if all pairs constructed as described in [sec registration permissions](#sec-registration-permissions) have appropriate permissions
@@ -777,7 +777,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### allow_uri(basename, uri)
+#### allow_uri(basename, uri) {#func_allow_uri}
 
 
 Returns true if the pair constructed as described in [sec uri permissions](#sec-uri-permissions) have appropriate permissions
@@ -815,10 +815,10 @@ if (allow_uri("basename", $avp(uri)) {  // Check URI stored in $avp(uri)
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### address_reload
+#### address_reload {#mi_address_reload}
 
 
 Causes permissions module to re-read the contents of
@@ -838,7 +838,7 @@ Parameters:
 					specified all the partitions shall be reloaded.
 
 
-#### address_dump
+#### address_dump {#mi_address_dump}
 
 
 Causes permissions module to dump contents of
@@ -853,7 +853,7 @@ Parameters:
 					specified all the partitions shall be dumped.
 
 
-#### subnet_dump
+#### subnet_dump {#mi_subnet_dump}
 
 
 Causes permissions module to dump
@@ -868,7 +868,7 @@ Parameters:
 					specified all the partitions shall be dumped.
 
 
-#### allow_uri
+#### allow_uri {#mi_allow_uri}
 
 
 Tests if (URI, Contact) pair is allowed according to
@@ -889,10 +889,10 @@ Parameters:
 						to be tested
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -924,7 +924,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -950,10 +950,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Henning Westerholt ([@henningw](https://github.com/henningw)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

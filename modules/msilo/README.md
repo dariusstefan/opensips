@@ -6,7 +6,7 @@ description: "This modules provides offline message storage for the Open SIP Ser
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This modules provides offline message storage for the Open SIP Server. It 
@@ -45,7 +45,7 @@ Another functionality provided by the modules is to send messages at
 		storing with the 'snd_time_avp'.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS modules
@@ -72,10 +72,10 @@ The following libraries or applications must be installed before
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database URL.
@@ -95,7 +95,7 @@ modparam("msilo", "db_url", "mysql://user:passwd@host.com/dbname")
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The name of table where to store the messages.
@@ -114,7 +114,7 @@ modparam("msilo", "db_table", "silo")
 ```
 
 
-#### from_address (string)
+#### from_address (string) {#param_from_address}
 
 
 The SIP address used to inform users that destination of their 
@@ -137,7 +137,7 @@ modparam("msilo", "from_address", "sip:$rU@example.org")
 ```
 
 
-#### contact_hdr (string)
+#### contact_hdr (string) {#param_contact_hdr}
 
 
 The value of the Contact header (including header name and ending
@@ -158,7 +158,7 @@ modparam("msilo", "contact_hdr", "Contact: <sip:null@example.com>\r\n")
 ```
 
 
-#### offline_message (string)
+#### offline_message (string) {#param_offline_message}
 
 
 The body of the notification message.
@@ -179,7 +179,7 @@ modparam("msilo", "offline_message", "<em>I am offline!</em>")
 ```
 
 
-#### content_type_hdr (string)
+#### content_type_hdr (string) {#param_content_type_hdr}
 
 
 The value of the Content-Type header (including header name and ending
@@ -202,7 +202,7 @@ modparam("msilo", "content_type_hdr", "Content-Type: text/html\r\n")
 ```
 
 
-#### reminder (string)
+#### reminder (string) {#param_reminder}
 
 
 The SIP address used to send reminder messages. If this value
@@ -222,7 +222,7 @@ modparam("msilo", "reminder", "sip:registrar@example.org")
 ```
 
 
-#### outbound_proxy (string)
+#### outbound_proxy (string) {#param_outbound_proxy}
 
 
 The SIP address used as next hop when sending the message. Very
@@ -244,7 +244,7 @@ modparam("msilo", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ```
 
 
-#### expire_time (int)
+#### expire_time (int) {#param_expire_time}
 
 
 Expire time of stored messages - seconds. When this time passed, the message is
@@ -264,7 +264,7 @@ modparam("msilo", "expire_time", 36000)
 ```
 
 
-#### check_time (int)
+#### check_time (int) {#param_check_time}
 
 
 Timer interval to check if dumped messages are sent OK - seconds. The module keeps
@@ -285,7 +285,7 @@ modparam("msilo", "check_time", 10)
 ```
 
 
-#### send_time (int)
+#### send_time (int) {#param_send_time}
 
 
 Timer interval in seconds to check if there are reminder messages.
@@ -309,7 +309,7 @@ modparam("msilo", "send_time", 60)
 ```
 
 
-#### clean_period (int)
+#### clean_period (int) {#param_clean_period}
 
 
 Number of "check_time" cycles when to check if
@@ -329,7 +329,7 @@ modparam("msilo", "clean_period", 3)
 ```
 
 
-#### use_contact (int)
+#### use_contact (int) {#param_use_contact}
 
 
 Turns on/off the usage of the Contact address to send notification
@@ -349,7 +349,7 @@ modparam("msilo", "use_contact", 0)
 ```
 
 
-#### sc_mid (string)
+#### sc_mid (string) {#param_sc_mid}
 
 
 The name of the column in silo table, storing message id.
@@ -368,7 +368,7 @@ modparam("msilo", "sc_mid", "other_mid")
 ```
 
 
-#### sc_from (string)
+#### sc_from (string) {#param_sc_from}
 
 
 The name of the column in silo table, storing the source address.
@@ -387,7 +387,7 @@ modparam("msilo", "sc_from", "source_address")
 ```
 
 
-#### sc_to (string)
+#### sc_to (string) {#param_sc_to}
 
 
 The name of the column in silo table, storing the destination address.
@@ -406,7 +406,7 @@ modparam("msilo", "sc_to", "destination_address")
 ```
 
 
-#### sc_uri_user (string)
+#### sc_uri_user (string) {#param_sc_uri_user}
 
 
 The name of the column in silo table, storing the user name.
@@ -425,7 +425,7 @@ modparam("msilo", "sc_uri_user", "user")
 ```
 
 
-#### sc_uri_host (string)
+#### sc_uri_host (string) {#param_sc_uri_host}
 
 
 The name of the column in silo table, storing the domain.
@@ -444,7 +444,7 @@ modparam("msilo", "sc_uri_host", "domain")
 ```
 
 
-#### sc_body (string)
+#### sc_body (string) {#param_sc_body}
 
 
 The name of the column storing the message body in silo table.
@@ -463,7 +463,7 @@ modparam("msilo", "sc_body", "message_body")
 ```
 
 
-#### sc_ctype (string)
+#### sc_ctype (string) {#param_sc_ctype}
 
 
 The name of the column in silo table, storing content type.
@@ -482,7 +482,7 @@ modparam("msilo", "sc_ctype", "content_type")
 ```
 
 
-#### sc_exp_time (string)
+#### sc_exp_time (string) {#param_sc_exp_time}
 
 
 The name of the column in silo table, storing the expire time of the message.
@@ -501,7 +501,7 @@ modparam("msilo", "sc_exp_time", "expire_time")
 ```
 
 
-#### sc_inc_time (string)
+#### sc_inc_time (string) {#param_sc_inc_time}
 
 
 The name of the column in silo table, storing the incoming time of the message.
@@ -520,7 +520,7 @@ modparam("msilo", "sc_inc_time", "incoming_time")
 ```
 
 
-#### sc_snd_time (string)
+#### sc_snd_time (string) {#param_sc_snd_time}
 
 
 The name of the column in silo table, storing the send time for the reminder.
@@ -539,7 +539,7 @@ modparam("msilo", "sc_snd_time", "send_reminder_time")
 ```
 
 
-#### snd_time_avp (str)
+#### snd_time_avp (str) {#param_snd_time_avp}
 
 
 The name of an AVP which may contain the time when to sent
@@ -564,7 +564,7 @@ modparam("msilo", "snd_time_avp", "$avp(snd_time)")
 ```
 
 
-#### add_date (int)
+#### add_date (int) {#param_add_date}
 
 
 Wheter to add as prefix the date when the message was stored.
@@ -583,7 +583,7 @@ modparam("msilo", "add_date", 0)
 ```
 
 
-#### max_messages (int)
+#### max_messages (int) {#param_max_messages}
 
 
 Maximum number of stored message for an AoR.  Value 0
@@ -603,10 +603,10 @@ modparam("msilo", "max_messages", 0)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### m_store([owner])
+#### m_store([owner]) {#func_m_store}
 
 
 The method stores certain parts of the current SIP request (it 
@@ -639,7 +639,7 @@ m_store($tu);
 ```
 
 
-#### m_dump([owner], [maxmsg])
+#### m_dump([owner], [maxmsg]) {#func_m_dump}
 
 
 The method sends stored messages for the SIP user that is going to 
@@ -677,31 +677,31 @@ m_dump($fu, 10);
 ### Exported Statistics
 
 
-#### stored_messages
+#### stored_messages {#stat_stored_messages}
 
 
 The number of messages stored by msilo.
 
 
-#### dumped_messages
+#### dumped_messages {#stat_dumped_messages}
 
 
 The number of dumped messages.
 
 
-#### failed_messages
+#### failed_messages {#stat_failed_messages}
 
 
 The number of failed dumped messages.
 
 
-#### dumped_reminders
+#### dumped_reminders {#stat_dumped_reminders}
 
 
 The number of dumped reminder messages.
 
 
-#### failed_reminders
+#### failed_reminders {#stat_failed_reminders}
 
 
 The number of failed reminder messages.
@@ -874,10 +874,10 @@ failure_route[1] {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -909,7 +909,7 @@ failure_route[1] {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -935,10 +935,10 @@ failure_route[1] {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Andrea Giordana, Jan Janak ([@janakj](https://github.com/janakj)).
