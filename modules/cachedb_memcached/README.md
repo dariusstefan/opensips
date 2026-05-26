@@ -69,7 +69,7 @@ libmemcached can be downloaded from: http://tangent.org/552/libmemcached.html.
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The urls of the server groups that OpenSIPS will connect to in order
@@ -79,7 +79,7 @@ The urls of the server groups that OpenSIPS will connect to in order
 			from the script.
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -104,7 +104,7 @@ cache_remove("memcached:group1","key");
 ```
 
 
-#### `exec_threshold` (int)
+#### exec_threshold (int)
 
 
 The maximum number of microseconds that a local cache query can last.
@@ -114,7 +114,7 @@ The maximum number of microseconds that a local cache query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set `exec_threshold` parameter**
+**Example: Set exec_threshold parameter**
 
 
 ```opensips

@@ -66,7 +66,7 @@ IMPORTANT: If the selected library is not installed the module won't compile.
 ### Exported Parameters
 
 
-#### `mmgeoip_city_db_path` (string)
+#### mmgeoip_city_db_path (string)
 
 
 Path to either a GeoLite or GeoIP City database file.
@@ -87,7 +87,7 @@ modparam("mmgeoip", "mmgeoip_city_db_path",
 ```
 
 
-#### `cache_type` (string)
+#### cache_type (string)
 
 
 Databse memory caching options. The following options are available:
@@ -126,7 +126,7 @@ modparam("mmgeoip", "cache_type","MEM_CACHE_CHECK")
 ### Exported Functions
 
 
-#### `mmg_lookup([fields,]src,dst)`
+#### mmg_lookup([fields,]src,dst)
 
 
 Looks up information specified by `field` associated with
@@ -171,7 +171,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		ONREPLY_ROUTE, BRANCH_ROUTE,ERROR_ROUTE, and LOCAL_ROUTE.
 
 
-**Example: `mmg_lookup` usage**
+**Example: mmg_lookup usage**
 
 
 ```opensips

@@ -56,7 +56,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `credential` (string)
+#### credential (string)
 
 
 Contains a multiple definition of credentials used to perform
@@ -71,7 +71,7 @@ NOTE that the password can be provided as a plain text password or
 *This parameter is required if UAC authentication is used.*
 
 
-**Example: Set `credential` parameter**
+**Example: Set credential parameter**
 
 
 ```opensips
@@ -83,7 +83,7 @@ modparam("uac_auth","credential","username:domain:0xc17ba8157756f263d07e15850420
 ```
 
 
-#### `auth_realm_avp` (string)
+#### auth_realm_avp (string)
 
 
 The definition of an AVP that might contain the realm to be used
@@ -97,7 +97,7 @@ The definition of an AVP that might contain the realm to be used
 				([auth password avp](#param_auth_password_avp)).*
 
 
-**Example: Set `auth_realm_avp` parameter**
+**Example: Set auth_realm_avp parameter**
 
 
 ```opensips
@@ -108,7 +108,7 @@ modparam("uac_auth","auth_realm_avp","$avp(10)")
 ```
 
 
-#### `auth_username_avp` (string)
+#### auth_username_avp (string)
 
 
 The definition of an AVP that might contain the username to be used
@@ -122,7 +122,7 @@ The definition of an AVP that might contain the username to be used
 				([auth password avp](#param_auth_password_avp)).*
 
 
-**Example: Set `auth_username_avp` parameter**
+**Example: Set auth_username_avp parameter**
 
 
 ```opensips
@@ -133,7 +133,7 @@ modparam("uac_auth","auth_username_avp","$avp(11)")
 ```
 
 
-#### `auth_password_avp` (string)
+#### auth_password_avp (string)
 
 
 The definition of an AVP that might contain the password to be used
@@ -150,7 +150,7 @@ The definition of an AVP that might contain the password to be used
 				([auth username avp](#param_auth_username_avp)).*
 
 
-**Example: Set `auth_password_avp` parameter**
+**Example: Set auth_password_avp parameter**
 
 
 ```opensips

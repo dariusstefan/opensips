@@ -131,7 +131,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `enable_stats` (integer)
+#### enable_stats (integer)
 
 
 If the statistics support should be enabled or
@@ -143,7 +143,7 @@ If the statistics support should be enabled or
 *Default value is "1" (enabled).*
 
 
-**Example: Set `enable_stats` parameter**
+**Example: Set enable_stats parameter**
 
 
 ```opensips
@@ -153,7 +153,7 @@ modparam("sst", "enable_stats", 0)
 ```
 
 
-#### `min_se` (integer)
+#### min_se (integer)
 
 
 The value is used to set the proxies MIN-SE
@@ -171,7 +171,7 @@ If not set and sstCheckMin() is called with the
 *Default value is "1800" seconds.*
 
 
-**Example: Set `min_se` parameter**
+**Example: Set min_se parameter**
 
 
 ```opensips
@@ -181,7 +181,7 @@ modparam("sst", "min_se", 2400)
 ```
 
 
-#### `sst_interval` (integer)
+#### sst_interval (integer)
 
 
 The sst minimum interval in Session-Expires header if OpenSIPS
@@ -195,7 +195,7 @@ Per default the interval used will be the min_se value
 *Default value is "0" seconds.*
 
 
-**Example: Set `sst_interval` parameter**
+**Example: Set sst_interval parameter**
 
 
 ```opensips
@@ -205,7 +205,7 @@ modparam("sst", "sst_interval", 2400)
 ```
 
 
-#### `reject_to_small` (integer)
+#### reject_to_small (integer)
 
 
 In the initial INVITE if the UAC has requested a
@@ -226,7 +226,7 @@ This flag if true will tell the SST module to
 *Default value is "1" (true/on).*
 
 
-**Example: Set `reject_to_small` parameter**
+**Example: Set reject_to_small parameter**
 
 
 ```opensips
@@ -236,7 +236,7 @@ modparam("sst", "reject_to_small", 0)
 ```
 
 
-#### `sst_flag` (string)
+#### sst_flag (string)
 
 
 Keeping with OpenSIPS, the module will not do
@@ -261,7 +261,7 @@ This parameter must be set of the module will
 *Default value is "Not set!".*
 
 
-**Example: Set `sst_flag` parameter**
+**Example: Set sst_flag parameter**
 
 
 ```opensips
@@ -282,7 +282,7 @@ route {
 ### Exported Functions
 
 
-#### `sstCheckMin(send_reply_flag)`
+#### sstCheckMin(send_reply_flag)
 
 
 Check the current Session-Expires / MIN-SE values
@@ -307,7 +307,7 @@ Meaning of the parameters is as follows:
 			to compare the MIN_SE header value to.
 
 
-**Example: `sstCheckMin` usage**
+**Example: sstCheckMin usage**
 
 
 ```opensips
@@ -335,7 +335,7 @@ route {
 ### Exported Statistics
 
 
-#### `expired_sst`
+#### expired_sst
 
 
 Number of dialogs which got expired session timer.

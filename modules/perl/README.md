@@ -141,7 +141,7 @@ Although SuSE delivers a lot of perl modules, others may have to be fetched
 ### Exported Parameters
 
 
-#### `filename` (string)
+#### filename (string)
 
 
 This is the file name of your script. This may be set once only, but it may include an arbitary
@@ -151,7 +151,7 @@ This is the file name of your script. This may be set once only, but it may incl
 *May not be empty!*
 
 
-**Example: Set `filename` parameter**
+**Example: Set filename parameter**
 
 
 ```opensips
@@ -161,7 +161,7 @@ modparam("perl", "filename", "/home/john/opensips/myperl.pl")
 ```
 
 
-#### `modpath` (string)
+#### modpath (string)
 
 
 The path to the Perl modules included (OpenSIPS.pm et.al). It is not absolutely
@@ -171,7 +171,7 @@ The path to the Perl modules included (OpenSIPS.pm et.al). It is not absolutely
 			is the standard behavior, though.
 
 
-**Example: Set `modpath` parameter**
+**Example: Set modpath parameter**
 
 
 ```opensips
@@ -184,7 +184,7 @@ modparam("perl", "modpath", "/usr/local/lib/opensips/perl/")
 ### Exported Functions
 
 
-#### `perl_exec_simple(func, [param])`
+#### perl_exec_simple(func, [param])
 
 
 Calls a perl function *without* passing it the current SIP message.
@@ -204,7 +204,7 @@ The function returns *1* if the perl function was successfully called
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE and BRANCH_ROUTE.
 
 
-**Example: `perl_exec_simple()` usage**
+**Example: perl_exec_simple() usage**
 
 
 ```
@@ -216,7 +216,7 @@ if ($rm=="INVITE") {
 ```
 
 
-#### `perl_exec(func, [param])`
+#### perl_exec(func, [param])
 
 
 Calls a perl function *with* passing it the current SIP message.
@@ -236,7 +236,7 @@ The function returns back to the OpenSIPS script the value returned by the perl 
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE and BRANCH_ROUTE.
 
 
-**Example: `perl_exec()` usage**
+**Example: perl_exec() usage**
 
 
 ```

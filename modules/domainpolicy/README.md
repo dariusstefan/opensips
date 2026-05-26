@@ -35,7 +35,7 @@ The module depends on the following modules (in the other words the
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 This is URL of the database to be used.
@@ -53,7 +53,7 @@ modparam("domainpolicy", "db_url", "postgresql://user:pass@db_host/opensips")
 ```
 
 
-#### `dp_table` (string)
+#### dp_table (string)
 
 
 Name of table containing the local support domain policy setup.
@@ -70,7 +70,7 @@ modparam("domainpolicy", "dp_table", "supportedpolicies")
 ```
 
 
-#### `dp_col_rule` (string)
+#### dp_col_rule (string)
 
 
 Name of column containing the domain policy rule name which is equal
@@ -88,7 +88,7 @@ modparam("domainpolicy", "dp_col_rule", "rules")
 ```
 
 
-#### `dp_col_type` (string)
+#### dp_col_type (string)
 
 
 Name of column containing the domain policy rule type.
@@ -108,7 +108,7 @@ modparam("domainpolicy", "dp_col_type", "type")
 ```
 
 
-#### `dp_col_att` (string)
+#### dp_col_att (string)
 
 
 Name of column containing the AVP's name. If the rule stored in this
@@ -126,7 +126,7 @@ modparam("domainpolicy", "dp_col_att", "attribute")
 ```
 
 
-#### `dp_col_val` (string)
+#### dp_col_val (string)
 
 
 Name of column containing the value for AVPs created by dp_can_connect().
@@ -143,7 +143,7 @@ modparam("domainpolicy", "dp_col_val", "values")
 ```
 
 
-#### `port_override_avp` (string)
+#### port_override_avp (string)
 
 
 This parameter defines the name of the AVP where dp_apply_policy() will look
@@ -162,7 +162,7 @@ modparam("domainpolicy", "port_override_avp", "portoverride")
 ```
 
 
-#### `transport_override_avp` (string)
+#### transport_override_avp (string)
 
 
 Name of the AVP which contains the override transport setting.
@@ -180,7 +180,7 @@ modparam("domainpolicy", "transport_override_avp", "transportoverride")
 ```
 
 
-#### `domain_replacement_avp` (string)
+#### domain_replacement_avp (string)
 
 
 Name of the AVP which contains a domain replacement.
@@ -198,7 +198,7 @@ modparam("domainpolicy", "domain_replacement_avp", "domainreplacement")
 ```
 
 
-#### `domain_prefix_avp` (string)
+#### domain_prefix_avp (string)
 
 
 Name of the AVP which contains a domain prefix.
@@ -216,7 +216,7 @@ modparam("domainpolicy", "domain_prefix_avp", "domainprefix")
 ```
 
 
-#### `domain_suffix_avp` (string)
+#### domain_suffix_avp (string)
 
 
 Name of the AVP which contains a domain suffix.
@@ -234,7 +234,7 @@ modparam("domainpolicy", "domain_suffix_avp", "domainsuffix")
 ```
 
 
-#### `send_socket_avp` (string)
+#### send_socket_avp (string)
 
 
 Name of the AVP which contains a send_socket. The format of the
@@ -259,7 +259,7 @@ modparam("domainpolicy", "send_socket_avp", "sendsocket")
 ### Exported Functions
 
 
-#### `dp_can_connect()`
+#### dp_can_connect()
 
 
 Checks the interconnection policy of the caller. It uses the domain in the 
@@ -350,7 +350,7 @@ switch(retcode) {
 ```
 
 
-#### `dp_apply_policy()`
+#### dp_apply_policy()
 
 
 This function sets the destination URI according to the policy returned

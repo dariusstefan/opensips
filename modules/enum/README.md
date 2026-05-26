@@ -113,7 +113,7 @@ The module depends on the following modules (in the other words the
 ### Exported Parameters
 
 
-#### `domain_suffix` (string)
+#### domain_suffix (string)
 
 
 The domain suffix to be added to the domain name obtained from
@@ -132,7 +132,7 @@ modparam("enum", "domain_suffix", "e1234.arpa.")
 ```
 
 
-#### `tel_uri_params` (string)
+#### tel_uri_params (string)
 
 
 A string whose contents is appended to each new tel URI in the 
@@ -154,7 +154,7 @@ modparam("enum", "tel_uri_params", ";npdi")
 ```
 
 
-#### `i_enum_suffix` (string)
+#### i_enum_suffix (string)
 
 
 The domain suffix to be used for i_enum_query() lookups.
@@ -172,7 +172,7 @@ modparam("enum", "i_enum_suffix", "e1234.arpa.")
 ```
 
 
-#### `isn_suffix` (string)
+#### isn_suffix (string)
 
 
 The domain suffix to be used for isn_query() lookups. Can
@@ -190,7 +190,7 @@ modparam("enum", "isn_suffix", "freenum.org.")
 ```
 
 
-#### `branchlabel` (string)
+#### branchlabel (string)
 
 
 This parameter determines which label i_enum_query() will use
@@ -208,7 +208,7 @@ modparam("enum", "branchlabel", "i")
 ```
 
 
-#### `bl_algorithm` (string)
+#### bl_algorithm (string)
 
 
 This parameter determines which algorithm i_enum_query() will use
@@ -268,7 +268,7 @@ modparam("enum", "bl_algorithm", "txt")
 ### Exported Functions
 
 
-#### `enum_query([suffix], [service], [number])`
+#### enum_query([suffix], [service], [number])
 
 
 The function performs an ENUM query on a given E.164 "number" (or R-URI
@@ -292,7 +292,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `enum_query` usage**
+**Example: enum_query usage**
 
 
 ```
@@ -319,7 +319,7 @@ enum_query("e164.arpa.", "+sip+voice:sip");
 ```
 
 
-#### `i_enum_query([suffix], [service])`
+#### i_enum_query([suffix], [service])
 
 
 The function performs an enum query and rewrites the Request-URI with
@@ -341,7 +341,7 @@ See ftp://ftp.rfc-editor.org/in-notes/internet-drafts/draft-haberler-carrier-enu
         for the rationale behind this function.
 
 
-#### `isn_query([suffix], [service])`
+#### isn_query([suffix], [service])
 
 
 The function performs a ISN query and rewrites the Request-URI with 
@@ -366,7 +366,7 @@ See ftp://www.ietf.org/rfc/rfc3872.txt and
 			regarding the ITAD part of the ISN string.
 
 
-**Example: `isn_query` usage**
+**Example: isn_query usage**
 
 
 ```
@@ -383,7 +383,7 @@ isn_query("freenum.org.", "voice");
 ```
 
 
-#### `is_from_user_enum([suffix], [service])`
+#### is_from_user_enum([suffix], [service])
 
 
 Checks if the user part of from URI
@@ -403,7 +403,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `is_from_user_enum` usage**
+**Example: is_from_user_enum usage**
 
 
 ```

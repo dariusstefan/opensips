@@ -42,7 +42,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `th_callid_passwd` (string)
+#### th_callid_passwd (string)
 
 
 The string password that will be used for encoding/decoding the callid in case of topology_hiding with callid mangling.
@@ -51,7 +51,7 @@ The string password that will be used for encoding/decoding the callid in case o
 *Default value is ""OpenSIPS""*
 
 
-**Example: Set `th_callid_passwd` parameter**
+**Example: Set th_callid_passwd parameter**
 
 
 ```opensips
@@ -61,7 +61,7 @@ modparam("topology_hiding", "th_callid_passwd", "my_topo_hiding_secret")
 ```
 
 
-#### `th_callid_prefix` (string)
+#### th_callid_prefix (string)
 
 
 The prefix that will be used for detecting callids which have been encoded by the dialog topology hiding. Make sure to change this value in case your SIP path contains multiple OpenSIPS boxes with topology hiding.
@@ -70,7 +70,7 @@ The prefix that will be used for detecting callids which have been encoded by th
 *Default value is ""DLGCH_""*
 
 
-**Example: Set `th_callid_prefix` parameter**
+**Example: Set th_callid_prefix parameter**
 
 
 ```opensips
@@ -80,7 +80,7 @@ modparam("topology_hiding", "th_callid_prefix", "MYCALLIDPREFIX_")
 ```
 
 
-#### `th_passed_contact_uri_params` (string)
+#### th_passed_contact_uri_params (string)
 
 
 List of semicolon-separated Contact URI parameters that will be passed from one side to the other for topology hiding calls. To be used when end-to-end functionality uses such Contact URI parameters.
@@ -89,7 +89,7 @@ List of semicolon-separated Contact URI parameters that will be passed from one 
 *Default value is "empty" - do not pass any parameters*
 
 
-**Example: Set `th_passed_contact_uri_params` parameter**
+**Example: Set th_passed_contact_uri_params parameter**
 
 
 ```opensips
@@ -99,7 +99,7 @@ modparam("topology_hiding", "th_passed_contact_uri_params", "paramname1;myparam;
 ```
 
 
-#### `th_passed_contact_params` (string)
+#### th_passed_contact_params (string)
 
 
 List of semicolon-separated Contact header parameters that will be passed from one side to the other for topology hiding calls. To be used when end-to-end functionality uses such Contact header parameters.
@@ -108,7 +108,7 @@ List of semicolon-separated Contact header parameters that will be passed from o
 *Default value is "empty" - do not pass any parameters*
 
 
-**Example: Set `th_passed_contact_params` parameter**
+**Example: Set th_passed_contact_params parameter**
 
 
 ```opensips
@@ -118,7 +118,7 @@ modparam("topology_hiding", "th_passed_contact_params", "paramname1;myparam;cust
 ```
 
 
-#### `force_dialog` (int)
+#### force_dialog (int)
 
 
 If set to 1, the module will internally create the dialog ( if not already created ). This will only work for INVITE based dialogs, and the dialog module must be loaded.
@@ -127,7 +127,7 @@ If set to 1, the module will internally create the dialog ( if not already creat
 *Default value is "0"*
 
 
-**Example: Set `force_dialog` parameter**
+**Example: Set force_dialog parameter**
 
 
 ```opensips
@@ -137,7 +137,7 @@ modparam("topology_hiding", "force_dialog", 1)
 ```
 
 
-#### `th_contact_encode_passwd` (string)
+#### th_contact_encode_passwd (string)
 
 
 When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. The parameter configures the string password that will be used for encoding/decoding that specific param .
@@ -146,7 +146,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""ToPoCtPaSS""*
 
 
-**Example: Set `th_contact_encode_passwd` parameter**
+**Example: Set th_contact_encode_passwd parameter**
 
 
 ```opensips
@@ -156,7 +156,7 @@ modparam("topology_hiding", "th_contact_encode_passwd", "my_topoh_passwd")
 ```
 
 
-#### `th_contact_encode_param` (string)
+#### th_contact_encode_param (string)
 
 
 When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. The parameter configures the respective parameter name.
@@ -165,7 +165,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""thinfo""*
 
 
-**Example: Set `th_contact_encode_param` parameter**
+**Example: Set th_contact_encode_param parameter**
 
 
 ```opensips
@@ -175,7 +175,7 @@ modparam("topology_hiding", "th_contact_encode_param", "customparam")
 ```
 
 
-#### `th_contact_encode_scheme` (string)
+#### th_contact_encode_scheme (string)
 
 
 When not relying on the dialog module ( due to script writer preference or simply when doing topo hiding for non INVITE dialogs ), the module will store the needed information in a Contact URI param. This parameter configures the encoding scheme to be used for the data stored in
@@ -189,7 +189,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""base64""*
 
 
-**Example: Set `th_contact_encode_scheme` parameter**
+**Example: Set th_contact_encode_scheme parameter**
 
 
 ```opensips
@@ -202,7 +202,7 @@ modparam("topology_hiding", "th_contact_encode_scheme", "base32")
 ### Exported Functions
 
 
-#### `topology_hiding()`
+#### topology_hiding()
 
 
 By calling this function on an initial request, the modules will
@@ -243,7 +243,7 @@ When using the "C" flag, the callid will be automatically encoded / decoded, tra
 						flag without dialog support will not change the callid at all!.
 
 
-**Example: `topology_hiding` usage**
+**Example: topology_hiding usage**
 
 
 ```opensips
@@ -260,7 +260,7 @@ if(!has_totag() && is_method("INVITE")) {
 ```
 
 
-**Example: `Calling topology_hiding_match() function for topology hiding sequential requests`**
+**Example: Calling topology_hiding_match() function for topology hiding sequential requests**
 
 
 ```opensips
@@ -277,7 +277,7 @@ if (has_totag())
 ```
 
 
-#### `topology_hiding_match([dlg_match_mode])`
+#### topology_hiding_match([dlg_match_mode])
 
 
 This function is to be used to match and fix a sequential request
@@ -296,7 +296,7 @@ The function returns true if a topology hiding dialog exists for the request and
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `topology_hiding_match_dialog()` usage**
+**Example: topology_hiding_match_dialog() usage**
 
 
 ```opensips
@@ -315,7 +315,7 @@ This function can be used from REQUEST_ROUTE.
 ### Exported Pseudo-Variables
 
 
-#### `$TH_callee_callid`
+#### $TH_callee_callid
 
 
 Read only variable that will contain the callid as it is propagated towards the callee side, in case topology_hiding("C") is called.

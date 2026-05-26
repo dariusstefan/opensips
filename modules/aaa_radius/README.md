@@ -68,7 +68,7 @@ IMPORTANT: If the selected library is not installed the module won't compile.
 ### Exported Parameters
 
 
-#### `sets (string)`
+#### sets (string)
 
 
 Sets of Radius AVPs to be used when building custom RADIUS requests (set of input RADIUS AVPs)
@@ -88,7 +88,7 @@ The right-hand side of the assignment must be a script pseudo variable or
 			a script AVP. For more information about them see [CookBooks - Scripting Variables](https://opensips.org/Resources/DocsCoreVar15).
 
 
-**Example: Set `sets` parameter**
+**Example: Set sets parameter**
 
 
 ```opensips
@@ -108,7 +108,7 @@ modparam("aaa_radius","sets","set2 = (Sip-Group = $var(sipgrup)) ")
 ```
 
 
-#### `radius_config (string)`
+#### radius_config (string)
 
 
 Radiusclient configuration file.
@@ -118,7 +118,7 @@ This parameter is optional. It must be set only if the radius_send_acct
 			and radius_send_auth functions are used.
 
 
-**Example: Set `radius_config` parameter**
+**Example: Set radius_config parameter**
 
 
 ```opensips
@@ -128,7 +128,7 @@ modparam("aaa_radius", "radius_config", "/etc/radiusclient-ng/radiusclient.conf"
 ```
 
 
-#### `syslog_name (string)`
+#### syslog_name (string)
 
 
 Enable logging of the client library to syslog, using the given log name.
@@ -143,7 +143,7 @@ This parameter is optional. Radius client libraries will try to use syslog
 By default this parameter is not set (no logging).
 
 
-**Example: Set `syslog_name` parameter**
+**Example: Set syslog_name parameter**
 
 
 ```opensips
@@ -153,7 +153,7 @@ modparam("aaa_radius", "syslog_name", "aaa-radius")
 ```
 
 
-#### `fetch_all_values (integer)`
+#### fetch_all_values (integer)
 
 
 For the output sets, this parameter controls if all the values (for the same
@@ -166,7 +166,7 @@ By default this parameter is disabled (set to 0) for backward compatibility
 		reasons.
 
 
-**Example: Set `fetch_all_values` parameter**
+**Example: Set fetch_all_values parameter**
 
 
 ```opensips
@@ -179,7 +179,7 @@ modparam("aaa_radius", "fetch_all_values", 1)
 ### Exported Functions
 
 
-#### `radius_send_auth(input_set_name, output_set_name)`
+#### radius_send_auth(input_set_name, output_set_name)
 
 
 This function can be used from the script to make custom
@@ -212,7 +212,7 @@ The function return TRUE (retcode 1) if authentication was
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: `radius_send_auth` usage**
+**Example: radius_send_auth usage**
 
 
 ```opensips
@@ -235,7 +235,7 @@ switch ($rc) {
 ```
 
 
-#### `radius_send_acct(input_set_name)`
+#### radius_send_acct(input_set_name)
 
 
 This function can be used from the script to make custom
@@ -254,7 +254,7 @@ The set must be defined using the "sets" exported parameter.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: `radius_send_acct` usage**
+**Example: radius_send_acct usage**
 
 
 ```
@@ -269,7 +269,7 @@ radius_send_acct("set1");
 ### Exported Async Functions
 
 
-#### `radius_send_auth(input_set_name, output_set_name)`
+#### radius_send_auth(input_set_name, output_set_name)
 
 
 This function can be used from the script to make custom
@@ -299,7 +299,7 @@ The function return TRUE (retcode 1) if authentication was
 			authentication was rejected or denied by RADIUS server.
 
 
-**Example: `radius_send_auth` usage**
+**Example: radius_send_auth usage**
 
 
 ```opensips
@@ -326,7 +326,7 @@ switch ($rc) {
 ```
 
 
-#### `radius_send_acct(input_set_name)`
+#### radius_send_acct(input_set_name)
 
 
 This function can be used from the script to make custom
@@ -345,7 +345,7 @@ The set must be defined using the "sets" exported parameter.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: `radius_send_acct` usage**
+**Example: radius_send_acct usage**
 
 
 ```opensips

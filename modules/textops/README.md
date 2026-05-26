@@ -61,7 +61,7 @@ The following libraries or applications must be installed before
 ### Exported Functions
 
 
-#### `search(re)`
+#### search(re)
 
 
 Searches for the re in the message.
@@ -77,7 +77,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `search` usage**
+**Example: search usage**
 
 
 ```
@@ -87,7 +87,7 @@ if ( search("[Ss][Ii][Pp]") ) { /*....*/ };
 ```
 
 
-#### `search_body(re)`
+#### search_body(re)
 
 
 Searches for the re in the body of the message.
@@ -103,7 +103,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `search_body` usage**
+**Example: search_body usage**
 
 
 ```
@@ -113,7 +113,7 @@ if ( search_body("[Ss][Ii][Pp]") ) { /*....*/ };
 ```
 
 
-#### `search_append(re, txt)`
+#### search_append(re, txt)
 
 
 Searches for the first match of re and appends txt after it.
@@ -130,7 +130,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `search_append` usage**
+**Example: search_append usage**
 
 
 ```
@@ -140,7 +140,7 @@ search_append("[Oo]pen[Ss]er", " SIP Proxy");
 ```
 
 
-#### `search_append_body(re, txt)`
+#### search_append_body(re, txt)
 
 
 Searches for the first match of re in the body of the message
@@ -158,7 +158,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `search_append_body` usage**
+**Example: search_append_body usage**
 
 
 ```
@@ -168,7 +168,7 @@ search_append_body("[Oo]pen[Ss]er", " SIP Proxy");
 ```
 
 
-#### `replace(re, txt)`
+#### replace(re, txt)
 
 
 Replaces the first occurrence of re with txt.
@@ -185,7 +185,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `replace` usage**
+**Example: replace usage**
 
 
 ```
@@ -195,7 +195,7 @@ replace("opensips", "Open SIP Server");
 ```
 
 
-#### `replace_body(re, txt)`
+#### replace_body(re, txt)
 
 
 Replaces the first occurrence of re in the body of the message
@@ -213,7 +213,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `replace_body` usage**
+**Example: replace_body usage**
 
 
 ```
@@ -223,7 +223,7 @@ replace_body("opensips", "Open SIP Server");
 ```
 
 
-#### `replace_all(re, txt)`
+#### replace_all(re, txt)
 
 
 Replaces all occurrence of re with txt.
@@ -240,7 +240,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `replace_all` usage**
+**Example: replace_all usage**
 
 
 ```
@@ -250,7 +250,7 @@ replace_all("opensips", "Open SIP Server");
 ```
 
 
-#### `replace_body_all(re, txt)`
+#### replace_body_all(re, txt)
 
 
 Replaces all occurrence of re in the body of the message
@@ -268,7 +268,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `replace_body_all` usage**
+**Example: replace_body_all usage**
 
 
 ```
@@ -278,7 +278,7 @@ replace_body_all("opensips", "Open SIP Server");
 ```
 
 
-#### `replace_body_atonce(re, txt)`
+#### replace_body_atonce(re, txt)
 
 
 Replaces all occurrence of re in the body of the message
@@ -296,7 +296,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `replace_body_atonce` usage**
+**Example: replace_body_atonce usage**
 
 
 ```
@@ -308,7 +308,7 @@ if(has_body() && replace_body_atonce("^.+$", ""))
 ```
 
 
-#### `subst('/re/repl/flags')`
+#### subst('/re/repl/flags')
 
 
 Replaces re with repl (sed or perl like).
@@ -329,7 +329,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `subst` usage**
+**Example: subst usage**
 
 
 ```
@@ -344,7 +344,7 @@ if ( subst('/^To:(.*)sip:[^@]*@[a-zA-Z0-9.]+(.*)$/t:\1$avp(sip_address)\2/ig') )
 ```
 
 
-#### `subst_uri('/re/repl/flags')`
+#### subst_uri('/re/repl/flags')
 
 
 Runs the re substitution on the message uri (like subst but works
@@ -366,7 +366,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `subst_uri` usage**
+**Example: subst_uri usage**
 
 
 ```
@@ -383,7 +383,7 @@ if (subst_uri('/^sip:([0-9]+)@(.*)$/sip:$avp(uri_prefix)\1@\2;orig_uri=\0/i')){$
 ```
 
 
-#### `subst_user('/re/repl/flags')`
+#### subst_user('/re/repl/flags')
 
 
 Runs the re substitution on the message uri (like subst_uri but works
@@ -405,7 +405,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `subst` usage**
+**Example: subst usage**
 
 
 ```
@@ -421,7 +421,7 @@ if (subst_user('/(.*)3642$/$avp(user_prefix)\13642/')){$
 ```
 
 
-#### `subst_body('/re/repl/flags')`
+#### subst_body('/re/repl/flags')
 
 
 Replaces re with repl (sed or perl like) in the body of the message.
@@ -442,7 +442,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `subst_body` usage**
+**Example: subst_body usage**
 
 
 ```opensips

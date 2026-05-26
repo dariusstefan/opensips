@@ -308,7 +308,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `keepalive_interval` (integer)
+#### keepalive_interval (integer)
 
 
 The time interval (in seconds) required to send a keepalive message to
@@ -320,7 +320,7 @@ The time interval (in seconds) required to send a keepalive message to
 *Default value is "60".*
 
 
-**Example: Setting the `keepalive_interval` parameter**
+**Example: Setting the keepalive_interval parameter**
 
 
 ```opensips
@@ -331,7 +331,7 @@ modparam("nat_traversal", "keepalive_interval", 90)
 ```
 
 
-#### `keepalive_method` (string)
+#### keepalive_method (string)
 
 
 What SIP method to use to send keepalive messages. Typical methods
@@ -357,7 +357,7 @@ What SIP method to use to send keepalive messages. Typical methods
 *Default value is "NOTIFY".*
 
 
-**Example: Setting the `keepalive_method` parameter**
+**Example: Setting the keepalive_method parameter**
 
 
 ```opensips
@@ -368,7 +368,7 @@ modparam("nat_traversal", "keepalive_method", "OPTIONS")
 ```
 
 
-#### `keepalive_from` (string)
+#### keepalive_from (string)
 
 
 Indicates what SIP URI to use in the From header of the keepalive
@@ -382,7 +382,7 @@ Indicates what SIP URI to use in the From header of the keepalive
           being the actual IP of the outgoing interface.*
 
 
-**Example: Setting the `keepalive_from` parameter**
+**Example: Setting the keepalive_from parameter**
 
 
 ```opensips
@@ -393,7 +393,7 @@ modparam("nat_traversal", "keepalive_from", "sip:keepalive@my-domain.com")
 ```
 
 
-#### `keepalive_extra_headers` (string)
+#### keepalive_extra_headers (string)
 
 
 Specifies extra headers that should be added to the keepalive messages
@@ -405,7 +405,7 @@ Specifies extra headers that should be added to the keepalive messages
 *Default value is undefined (send no extra headers).*
 
 
-**Example: Setting the `keepalive_extra_headers` parameter**
+**Example: Setting the keepalive_extra_headers parameter**
 
 
 ```opensips
@@ -416,7 +416,7 @@ modparam("nat_traversal", "keepalive_extra_headers", "User-Agent: OpenSIPS\r\nX-
 ```
 
 
-#### `keepalive_state_file` (string)
+#### keepalive_state_file (string)
 
 
 Specifies a filename where information about the NAT endpoints and the
@@ -438,7 +438,7 @@ The value of this parameter can be either a relative path, in which
 *Default value is undefined "keepalive_state".*
 
 
-**Example: Setting the `keepalive_state_file` parameter**
+**Example: Setting the keepalive_state_file parameter**
 
 
 ```opensips
@@ -449,7 +449,7 @@ modparam("nat_traversal", "keepalive_state_file", "/run/opensips/keepalive_state
 ```
 
 
-#### `cluster_id` (integer)
+#### cluster_id (integer)
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -471,7 +471,7 @@ For more info on how to define and populate a cluster (with OpenSIPS
 *Default value is "0 (none)".*
 
 
-**Example: Set `cluster_id` parameter**
+**Example: Set cluster_id parameter**
 
 
 ```opensips
@@ -482,7 +482,7 @@ modparam("nat_traversal", "cluster_id", 9)
 ```
 
 
-#### `cluster_sharing_tag` (string)
+#### cluster_sharing_tag (string)
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -503,7 +503,7 @@ This is an optional parameter. If not set, all the nodes in the cluster
 *Default value is "empty (none)".*
 
 
-**Example: Set `cluster_sharing_tag` parameter**
+**Example: Set cluster_sharing_tag parameter**
 
 
 ```opensips
@@ -518,7 +518,7 @@ modparam("nat_traversal", "cluster_sharing_tag", "vip")
 ### Exported Functions
 
 
-#### `client_nat_test(type)`
+#### client_nat_test(type)
 
 
 Check if the client is behind NAT. What tests are performed is
@@ -546,7 +546,7 @@ For example calling client_nat_test(3) will perform test 1 and
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: Using the `client_nat_test` function**
+**Example: Using the client_nat_test function**
 
 
 ```
@@ -559,7 +559,7 @@ if (client_nat_test(3)) {
 ```
 
 
-#### `fix_contact()`
+#### fix_contact()
 
 
 Will replace the IP and port in the Contact header with the
@@ -570,7 +570,7 @@ Will replace the IP and port in the Contact header with the
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE.
 
 
-**Example: Using the `fix_contact` function**
+**Example: Using the fix_contact function**
 
 
 ```
@@ -583,7 +583,7 @@ if (client_nat_test(3)) {
 ```
 
 
-#### `nat_keepalive()`
+#### nat_keepalive()
 
 
 Trigger keepalive functionality for the source address of the request.
@@ -608,7 +608,7 @@ Trigger keepalive functionality for the source address of the request.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Using the `nat_keepalive` function**
+**Example: Using the nat_keepalive function**
 
 
 ```
@@ -626,25 +626,25 @@ if (($rm=="REGISTER" || $rm=="SUBSCRIBE" ||
 ### Exported Statistics
 
 
-#### `keepalive_endpoints`
+#### keepalive_endpoints
 
 
 Indicates the total number of NAT endpoints that are being kept alive.
 
 
-#### `registered_endpoints`
+#### registered_endpoints
 
 
 Indicates how many of the NAT endpoints are kept alive for registrations.
 
 
-#### `subscribed_endpoints`
+#### subscribed_endpoints
 
 
 Indicates how many of the NAT endpoints are kept alive for subscriptions.
 
 
-#### `dialog_endpoints`
+#### dialog_endpoints
 
 
 Indicates how many of the NAT endpoints are kept alive for taking part
@@ -654,7 +654,7 @@ Indicates how many of the NAT endpoints are kept alive for taking part
 ### Exported Pseudo-Variables
 
 
-#### `$keepalive.socket(nat_endpoint)`
+#### $keepalive.socket(nat_endpoint)
 
 
 Returns the local socket used to send messages to the given NAT
@@ -689,7 +689,7 @@ This can be useful to restore the sending socket when relaying messages
         with it.
 
 
-**Example: Using `$keepalive.socket` in multi-proxy environments**
+**Example: Using $keepalive.socket in multi-proxy environments**
 
 
 ```opensips
@@ -707,7 +707,7 @@ if ($rm=="INVITE" && $hdr(X-Scope)=="nat-relay") {
 ```
 
 
-#### `$source_uri`
+#### $source_uri
 
 
 Returns the URI specification from where a request was received in the
@@ -730,7 +730,7 @@ Another use for this pseudo-variable is in multi-proxy environments to
         this user agent.
 
 
-**Example: Using `$source_uri` to set the received AVP on registrars**
+**Example: Using $source_uri to set the received AVP on registrars**
 
 
 ```opensips
@@ -772,7 +772,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-**Example: Using `$source_uri` in multi-proxy environments**
+**Example: Using $source_uri in multi-proxy environments**
 
 
 ```opensips
@@ -794,7 +794,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### `$nat_traversal.track_dialog`
+#### $nat_traversal.track_dialog
 
 
 Returns a boolean value (0 or 1) indicating if dialog tracking will

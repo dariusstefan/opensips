@@ -71,7 +71,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `sampling_time_unit` (integer)
+#### sampling_time_unit (integer)
 
 
 Time period used for sampling (or the sampling accuracy ;-) ). The
@@ -88,7 +88,7 @@ IMPORTANT: a too small value may lead to performance penalties due
 *Default value is 2.*
 
 
-**Example: Set `sampling_time_unit` parameter**
+**Example: Set sampling_time_unit parameter**
 
 
 ```opensips
@@ -98,7 +98,7 @@ modparam("pike", "sampling_time_unit", 10)
 ```
 
 
-#### `reqs_density_per_unit` (integer)
+#### reqs_density_per_unit (integer)
 
 
 How many requests should be allowed per sampling_time_unit before
@@ -110,7 +110,7 @@ How many requests should be allowed per sampling_time_unit before
 *Default value is 30.*
 
 
-**Example: Set `reqs_density_per_unit` parameter**
+**Example: Set reqs_density_per_unit parameter**
 
 
 ```opensips
@@ -120,7 +120,7 @@ modparam("pike", "reqs_density_per_unit", 30)
 ```
 
 
-#### `remove_latency` (integer)
+#### remove_latency (integer)
 
 
 For how long the IP address will be kept in memory after the last
@@ -138,7 +138,7 @@ For how long the IP address will be kept in memory after the last
 *Default value is 120.*
 
 
-**Example: Set `remove_latency` parameter**
+**Example: Set remove_latency parameter**
 
 
 ```opensips
@@ -148,7 +148,7 @@ modparam("pike", "remove_latency", 130)
 ```
 
 
-#### `check_route` (integer)
+#### check_route (integer)
 
 
 The name of the script route to be triggers (in automatic way) when a
@@ -164,7 +164,7 @@ By defining this parameter, the automatic checking mode is enabled.
 *Default value is NONE (no auto mode).*
 
 
-**Example: Set `check_route` parameter**
+**Example: Set check_route parameter**
 
 
 ```opensips
@@ -180,7 +180,7 @@ route[pike]{
 ```
 
 
-#### `pike_log_level` (integer)
+#### pike_log_level (integer)
 
 
 Log level to be used by module to auto report the blocking (only first
@@ -190,7 +190,7 @@ Log level to be used by module to auto report the blocking (only first
 *Default value is 1 (L_WARN).*
 
 
-**Example: Set `pike_log_level` parameter**
+**Example: Set pike_log_level parameter**
 
 
 ```opensips
@@ -203,7 +203,7 @@ modparam("pike", "pike_log_level", -1)
 ### Exported Functions
 
 
-#### `pike_check_req()`
+#### pike_check_req()
 
 
 Process the source IP of the current request and returns false if
@@ -226,7 +226,7 @@ Return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `pike_check_req` usage**
+**Example: pike_check_req usage**
 
 
 ```
@@ -239,7 +239,7 @@ if (!pike_check_req()) { exit; };
 ### Exported MI Functions
 
 
-#### `pike_list`
+#### pike_list
 
 
 Lists the nodes in the pike tree.
@@ -260,7 +260,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `pike_rm`
+#### pike_rm
 
 
 Remove a node from the pike tree by IP address.
@@ -287,7 +287,7 @@ MI FIFO Command Format:
 ### Exported Events
 
 
-#### `E_PIKE_BLOCKED`
+#### E_PIKE_BLOCKED
 
 
 This event is raised when the *pike* module

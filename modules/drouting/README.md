@@ -319,7 +319,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `db_url`(str)
+#### db_url(str)
 
 
 The database url.
@@ -328,7 +328,7 @@ The database url.
 *Default value is "NULL".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -339,7 +339,7 @@ modparam("drouting", "db_url",
 ```
 
 
-#### `drd_table`(str)
+#### drd_table(str)
 
 
 The name of the db table storing gateway addresses.
@@ -348,7 +348,7 @@ The name of the db table storing gateway addresses.
 *Default value is "dr_gateways".*
 
 
-**Example: Set `drd_table` parameter**
+**Example: Set drd_table parameter**
 
 
 ```opensips
@@ -358,7 +358,7 @@ modparam("drouting", "drd_table", "dr_gateways")
 ```
 
 
-#### `drr_table`(str)
+#### drr_table(str)
 
 
 The name of the db table storing routing rules.
@@ -367,7 +367,7 @@ The name of the db table storing routing rules.
 *Default value is "dr_rules".*
 
 
-**Example: Set `drr_table` parameter**
+**Example: Set drr_table parameter**
 
 
 ```opensips
@@ -377,7 +377,7 @@ modparam("drouting", "drr_table", "rules")
 ```
 
 
-#### `drg_table`(str)
+#### drg_table(str)
 
 
 The name of the db table storing groups.
@@ -386,7 +386,7 @@ The name of the db table storing groups.
 *Default value is "dr_groups".*
 
 
-**Example: Set `drg_table` parameter**
+**Example: Set drg_table parameter**
 
 
 ```opensips
@@ -396,7 +396,7 @@ modparam("drouting", "drg_table", "groups")
 ```
 
 
-#### `drc_table`(str)
+#### drc_table(str)
 
 
 The name of the db table storing definitions of the carriers that will
@@ -406,7 +406,7 @@ The name of the db table storing definitions of the carriers that will
 *Default value is "dr_carriers".*
 
 
-**Example: Set `drc_table` parameter**
+**Example: Set drc_table parameter**
 
 
 ```opensips
@@ -416,7 +416,7 @@ modparam("drouting", "drc_table", "my_dr_carriers")
 ```
 
 
-#### `ruri_avp` (str)
+#### ruri_avp (str)
 
 
 The name of the avp for storing Request URIs to be later used
@@ -428,7 +428,7 @@ The name of the avp for storing Request URIs to be later used
 		containing the AVP (as fetched from the database) if `use_partitions` parameter is 1.*
 
 
-**Example: Set `ruri_avp` parameter**
+**Example: Set ruri_avp parameter**
 
 
 ```opensips
@@ -440,7 +440,7 @@ modparam("drouting", "ruri_avp", '$avp(33)')
 ```
 
 
-#### `gw_id_avp` (str)
+#### gw_id_avp (str)
 
 
 The name of the avp for storing the id of the current selected
@@ -454,7 +454,7 @@ The name of the avp for storing the id of the current selected
 		containing the AVP (as fetched from the database) if `use_partitions` parameter is 1.*
 
 
-**Example: Set `gw_id_avp` parameter**
+**Example: Set gw_id_avp parameter**
 
 
 ```opensips
@@ -466,7 +466,7 @@ modparam("drouting", "gw_id_avp", '$avp(334)')
 ```
 
 
-#### `gw_priprefix_avp` (str)
+#### gw_priprefix_avp (str)
 
 
 The name of the avp for storing the PRI prefix of the current selected
@@ -478,7 +478,7 @@ The name of the avp for storing the PRI prefix of the current selected
 *Default value is "NULL".*
 
 
-**Example: Set `gw_priprefix_avp` parameter**
+**Example: Set gw_priprefix_avp parameter**
 
 
 ```opensips
@@ -489,7 +489,7 @@ modparam("drouting", "gw_priprefix_avp", '$avp(gw_priprefix)')
 ```
 
 
-#### `rule_id_avp` (str)
+#### rule_id_avp (str)
 
 
 The name of the avp for storing the id of the current matched
@@ -499,7 +499,7 @@ The name of the avp for storing the id of the current matched
 *Default value is "NULL".*
 
 
-**Example: Set `rule_id_avp` parameter**
+**Example: Set rule_id_avp parameter**
 
 
 ```opensips
@@ -511,7 +511,7 @@ modparam("drouting", "rule_id_avp", '$avp(335)')
 ```
 
 
-#### `rule_prefix_avp` (str)
+#### rule_prefix_avp (str)
 
 
 The actual prefix that matched the routing rule (the part from RURI
@@ -521,7 +521,7 @@ The actual prefix that matched the routing rule (the part from RURI
 *Default value is "NULL".*
 
 
-**Example: Set `rule_prefix_avp` parameter**
+**Example: Set rule_prefix_avp parameter**
 
 
 ```opensips
@@ -532,7 +532,7 @@ modparam("drouting", "rule_prefix_avp", '$avp(dr_prefix)')
 ```
 
 
-#### `carrier_id_avp` (str)
+#### carrier_id_avp (str)
 
 
 AVP to be populate with the ID string for the carrier the
@@ -542,7 +542,7 @@ AVP to be populate with the ID string for the carrier the
 *Default value is "NULL".*
 
 
-**Example: Set `carrier_id_avp` parameter**
+**Example: Set carrier_id_avp parameter**
 
 
 ```opensips
@@ -553,7 +553,7 @@ modparam("drouting", "carrier_id_avp", '$avp(carrier_id)')
 ```
 
 
-#### `gw_sock_avp` (str)
+#### gw_sock_avp (str)
 
 
 The name of the avp for storing sockets for alternative destinations
@@ -565,7 +565,7 @@ The name of the avp for storing sockets for alternative destinations
 		containing the AVP (as fetched from the database) if `use_partitions` parameter is 1.*
 
 
-**Example: Set `gw_sock_avp` parameter**
+**Example: Set gw_sock_avp parameter**
 
 
 ```opensips
@@ -577,7 +577,7 @@ modparam("drouting", "gw_sock_avp", '$avp(77)')
 ```
 
 
-#### `define_blacklist` (str)
+#### define_blacklist (str)
 
 
 Defines a blacklist based on a list of GW types - the blacklist will 
@@ -595,7 +595,7 @@ Multiple instances of this param are allowed.
 *Default value is "NULL".*
 
 
-**Example: Set `define_blacklist` parameter**
+**Example: Set define_blacklist parameter**
 
 
 ```opensips
@@ -609,7 +609,7 @@ modparam("drouting", "define_blacklist", 'pstn:list3 = 7,8')
 ```
 
 
-#### `default_group` (int)
+#### default_group (int)
 
 
 Group to be used if the caller (FROM user) is not found in the GROUP
@@ -619,7 +619,7 @@ Group to be used if the caller (FROM user) is not found in the GROUP
 *Default value is "NONE".*
 
 
-**Example: Set `default_group` parameter**
+**Example: Set default_group parameter**
 
 
 ```opensips
@@ -629,7 +629,7 @@ modparam("drouting", "default_group", 4)
 ```
 
 
-#### `force_dns` (int)
+#### force_dns (int)
 
 
 Force DNS resolving of GW/destination names (if not IPs) during
@@ -640,7 +640,7 @@ Force DNS resolving of GW/destination names (if not IPs) during
 *Default value is "1 (enabled)".*
 
 
-**Example: Set `force_dns` parameter**
+**Example: Set force_dns parameter**
 
 
 ```opensips
@@ -651,7 +651,7 @@ modparam("drouting", "force_dns", 0)
 ```
 
 
-#### `persistent_state` (int)
+#### persistent_state (int)
 
 
 Specifies whether the *state* column
@@ -661,7 +661,7 @@ Specifies whether the *state* column
 *Default value is "1" (enabled).*
 
 
-**Example: Set the `persistent_state` parameter**
+**Example: Set the persistent_state parameter**
 
 
 ```opensips
@@ -672,7 +672,7 @@ modparam("drouting", "persistent_state", 0)
 ```
 
 
-#### `no_concurrent_reload` (int)
+#### no_concurrent_reload (int)
 
 
 If enabled, the module will not allow do run multiple dr_reload
@@ -690,7 +690,7 @@ If you have a large routing set (millions of rules/prefixes), you
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `no_concurrent_reload` parameter**
+**Example: Set no_concurrent_reload parameter**
 
 
 ```opensips
@@ -701,7 +701,7 @@ modparam("drouting", "no_concurrent_reload", 1)
 ```
 
 
-#### `probing_interval` (integer)
+#### probing_interval (integer)
 
 
 How often (in seconds) the probing of a destination should be done. If
@@ -712,7 +712,7 @@ How often (in seconds) the probing of a destination should be done. If
 *Default value is "30".*
 
 
-**Example: Set `probing_interval` parameter**
+**Example: Set probing_interval parameter**
 
 
 ```opensips
@@ -722,7 +722,7 @@ modparam("drouting", "probing_interval", 60)
 ```
 
 
-#### `probing_method` (string)
+#### probing_method (string)
 
 
 The SIP method to be used for the probing requests.
@@ -731,7 +731,7 @@ The SIP method to be used for the probing requests.
 *Default value is ""OPTIONS"".*
 
 
-**Example: Set `probing_method` parameter**
+**Example: Set probing_method parameter**
 
 
 ```opensips
@@ -741,7 +741,7 @@ modparam("drouting", "probing_method", "INFO")
 ```
 
 
-#### `probing_from` (string)
+#### probing_from (string)
 
 
 The FROM SIP URI to be advertised in the SIP probing requests.
@@ -750,7 +750,7 @@ The FROM SIP URI to be advertised in the SIP probing requests.
 *Default value is ""sip:prober@localhost"".*
 
 
-**Example: Set `probing_from` parameter**
+**Example: Set probing_from parameter**
 
 
 ```opensips
@@ -760,7 +760,7 @@ modparam("drouting", "probing_from", "sip:pinger@192.168.2.10")
 ```
 
 
-#### `probing_reply_codes` (string)
+#### probing_reply_codes (string)
 
 
 A comma separted list of SIP reply codes. The codes defined here
@@ -771,7 +771,7 @@ A comma separted list of SIP reply codes. The codes defined here
 *Default value is "NULL".*
 
 
-**Example: Set `probing_reply_codes` parameter**
+**Example: Set probing_reply_codes parameter**
 
 
 ```opensips
@@ -781,7 +781,7 @@ modparam("drouting", "probing_reply_codes", "501, 403")
 ```
 
 
-#### `probing_socket` (string)
+#### probing_socket (string)
 
 
 A socket description [proto:]host[:port] of the local socket
@@ -799,7 +799,7 @@ For probing gateway the highest priority has socket from gateway
 *Default value is "NULL".*
 
 
-**Example: Set `probing_socket` parameter**
+**Example: Set probing_socket parameter**
 
 
 ```opensips
@@ -809,7 +809,7 @@ modparam("drouting", "probing_socket", "udp:192.168.1.100:5060")
 ```
 
 
-#### `gw_socket_filter_mode` (string)
+#### gw_socket_filter_mode (string)
 
 
 This parameter controls the gateway filtering during DB loading, or which
@@ -838,7 +838,7 @@ The supported filtering modes are:
 *Default value is ""all"".*
 
 
-**Example: Set `gw_socket_filter_mode` parameter**
+**Example: Set gw_socket_filter_mode parameter**
 
 
 ```opensips
@@ -854,7 +854,7 @@ modparam("drouting", "gw_socket_filter_mode", "ignore")
 ```
 
 
-#### `cluster_id` (integer)
+#### cluster_id (integer)
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -892,7 +892,7 @@ For more info on how to define and populate a cluster (with OpenSIPS
 *Default value is "0 (none)".*
 
 
-**Example: Set `cluster_id` parameter**
+**Example: Set cluster_id parameter**
 
 
 ```opensips
@@ -903,7 +903,7 @@ modparam("drouting", "cluster_id", 9)
 ```
 
 
-#### `cluster_sharing_tag` (string)
+#### cluster_sharing_tag (string)
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -926,7 +926,7 @@ This is an optional parameter. If not set, all the nodes in the cluster
 *Default value is "empty (none)".*
 
 
-**Example: Set `cluster_sharing_tag` parameter**
+**Example: Set cluster_sharing_tag parameter**
 
 
 ```opensips
@@ -939,7 +939,7 @@ modparam("drouting", "cluster_sharing_tag", "vip")
 ```
 
 
-#### `cluster_probing_mode` (string)
+#### cluster_probing_mode (string)
 
 
 This paramter controls how the probing/pinging should be done when
@@ -975,7 +975,7 @@ The supported probing modes are:
 *Default value is ""all"".*
 
 
-**Example: Set `cluster_probing_mode` parameter**
+**Example: Set cluster_probing_mode parameter**
 
 
 ```opensips
@@ -992,7 +992,7 @@ modparam("drouting", "cluster_probing_mode", "distributed")
 ```
 
 
-#### `use_domain` (int)
+#### use_domain (int)
 
 
 Flag to configure whether to use domain match when querying
@@ -1002,7 +1002,7 @@ Flag to configure whether to use domain match when querying
 *Default value is "1".*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -1012,7 +1012,7 @@ modparam("drouting", "use_domain", 0)
 ```
 
 
-#### `drg_user_col` (str)
+#### drg_user_col (str)
 
 
 The name of the column in group db table where the username is stored.
@@ -1021,7 +1021,7 @@ The name of the column in group db table where the username is stored.
 *Default value is "username".*
 
 
-**Example: Set `drg_user_col` parameter**
+**Example: Set drg_user_col parameter**
 
 
 ```opensips
@@ -1031,7 +1031,7 @@ modparam("drouting", "drg_user_col", "user")
 ```
 
 
-#### `drg_domain_col` (str)
+#### drg_domain_col (str)
 
 
 The name of the column in group db table where the domain is stored.
@@ -1040,7 +1040,7 @@ The name of the column in group db table where the domain is stored.
 *Default value is "domain".*
 
 
-**Example: Set `drg_domain_col` parameter**
+**Example: Set drg_domain_col parameter**
 
 
 ```opensips
@@ -1050,7 +1050,7 @@ modparam("drouting", "drg_domain_col", "host")
 ```
 
 
-#### `drg_grpid_col` (str)
+#### drg_grpid_col (str)
 
 
 The name of the column in group db table where the
@@ -1060,7 +1060,7 @@ The name of the column in group db table where the
 *Default value is "groupid".*
 
 
-**Example: Set `drg_grpid_col` parameter**
+**Example: Set drg_grpid_col parameter**
 
 
 ```opensips
@@ -1070,7 +1070,7 @@ modparam("drouting", "drg_grpid_col", "grpid")
 ```
 
 
-#### `use_partitions` (int)
+#### use_partitions (int)
 
 
 Flag to configure whether to use partitions for routing. If this
@@ -1082,7 +1082,7 @@ Flag to configure whether to use partitions for routing. If this
 *Default value is "0".*
 
 
-**Example: Set `use_partitions` parameter**
+**Example: Set use_partitions parameter**
 
 
 ```opensips
@@ -1092,7 +1092,7 @@ modparam("drouting", "use_partitions", 1)
 ```
 
 
-#### `db_partitions_url` (str)
+#### db_partitions_url (str)
 
 
 The url to the database containing partition-specific
@@ -1107,7 +1107,7 @@ The url to the database containing partition-specific
 *Default value is ""NULL"".*
 
 
-**Example: Set `db_partitions_url` parameter**
+**Example: Set db_partitions_url parameter**
 
 
 ```opensips
@@ -1117,7 +1117,7 @@ modparam("drouting", "db_partitions_url", "mysql://user:password@localhost/opens
 ```
 
 
-#### `db_partitions_table` (str)
+#### db_partitions_table (str)
 
 
 The name of the table containing partition definitions. To be
@@ -1127,7 +1127,7 @@ The name of the table containing partition definitions. To be
 *Default value is "dr_partitions".*
 
 
-**Example: Set `db_partitions_table` parameter**
+**Example: Set db_partitions_table parameter**
 
 
 ```opensips
@@ -1137,7 +1137,7 @@ modparam("drouting", "db_partitions_table", "partition_defs")
 ```
 
 
-#### `partition_id_pvar` (pvar)
+#### partition_id_pvar (pvar)
 
 
 Variable which will store the name of the name partition when
@@ -1152,7 +1152,7 @@ NOTE: The variable must be WRITABLE!
 *Default value is "null(not used)".*
 
 
-**Example: Set `partition_id_pvar` parameter**
+**Example: Set partition_id_pvar parameter**
 
 
 ```opensips
@@ -1162,7 +1162,7 @@ modparam("drouting", "partition_id_pvar", "$var(matched_partition)")
 ```
 
 
-#### `enable_restart_persistency` (int)
+#### enable_restart_persistency (int)
 
 
 Parameter set to enable restart persistency for the Dynamic Routing module.
@@ -1181,7 +1181,7 @@ NOTE: A reload will update the cached data.
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `enable_restart_persistency` parameter**
+**Example: Set enable_restart_persistency parameter**
 
 
 ```opensips
@@ -1191,7 +1191,7 @@ modparam("drouting", "enable_restart_persistency", yes)
 ```
 
 
-#### `extra_prefix_chars` (str)
+#### extra_prefix_chars (str)
 
 
 List of ASCII (0-127) characters to be additionally accepted in
@@ -1202,7 +1202,7 @@ List of ASCII (0-127) characters to be additionally accepted in
 *Default value is "NULL".*
 
 
-**Example: Set `extra_prefix_chars` parameter**
+**Example: Set extra_prefix_chars parameter**
 
 
 ```opensips
@@ -1212,7 +1212,7 @@ modparam("drouting", "extra_prefix_chars", "#-%")
 ```
 
 
-#### `extra_id_chars` (str)
+#### extra_id_chars (str)
 
 
 A set of extra characters to be allowed in both Gateway and Carrier
@@ -1222,7 +1222,7 @@ A set of extra characters to be allowed in both Gateway and Carrier
 *Default value is "_-.".*
 
 
-**Example: Set `extra_id_chars` parameter**
+**Example: Set extra_id_chars parameter**
 
 
 ```opensips
@@ -1232,7 +1232,7 @@ modparam("drouting", "extra_id_chars", ":_-.")
 ```
 
 
-#### `rule_tables_query` (str)
+#### rule_tables_query (str)
 
 
 This parameter offers a dynamic, SQL-based way of building a set of
@@ -1252,7 +1252,7 @@ This parameter may be set multiple times (each definition creates
 			a new mapping).
 
 
-**Example: Set the `rule_tables_query` parameter**
+**Example: Set the rule_tables_query parameter**
 
 
 ```opensips
@@ -1269,13 +1269,13 @@ modparam("drouting", "rule_tables_query", "
 ```
 
 
-#### `generate_data_checksum` (int)
+#### generate_data_checksum (int)
 
 
 If enabled, it will generate a checksum ( MD5 ) for drouting loaded data, attach that to the reload_status MI command output and to the reload generated status reports
 
 
-**Example: Set the `generate_data_checksum` parameter**
+**Example: Set the generate_data_checksum parameter**
 
 
 ```opensips
@@ -1289,7 +1289,7 @@ modparam("drouting", "generate_data_checksum", 1)
 ### Exported Functions
 
 
-#### `do_routing([groupID], [flags], [gw_whitelist], [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])`
+#### do_routing([groupID], [flags], [gw_whitelist], [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
 
 
 Function to trigger routing of the message according to the
@@ -1348,7 +1348,7 @@ All parameters are optional. Any of them may be ignored, provided
 			wildcard sign to force routing over all partitions.
 
 
-**Example: `do_routing` usage**
+**Example: do_routing usage**
 
 
 ```
@@ -1357,7 +1357,7 @@ All parameters are optional. Any of them may be ignored, provided
 ```
 
 
-#### `route_to_carrier( carriers, [gw_attrs_pvar], [carrier_attrs_pvar], [partition])`
+#### route_to_carrier( carriers, [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
 
 
 Function to trigger the direct routing to a given set carriers (one 
@@ -1390,7 +1390,7 @@ If you set `use_partitions` parameter to 1 you must
 					function.
 
 
-**Example: `route_to_carrier` usage**
+**Example: route_to_carrier usage**
 
 
 ```opensips
@@ -1422,7 +1422,7 @@ if ( route_to_carrier($var(carrierId), , , $var(my_partition)) ) {
 ```
 
 
-#### `route_to_gw(gw_id, [gw_attrs_var], [carrier_attrs_var], [partition])`
+#### route_to_gw(gw_id, [gw_attrs_var], [carrier_attrs_var], [partition])
 
 
 Function to trigger the direct routing to a given gateway (or list of
@@ -1453,7 +1453,7 @@ If you set `use_partitions` parameter to 1 you must
 					function.
 
 
-**Example: `route_to_gw` usage**
+**Example: route_to_gw usage**
 
 
 ```opensips
@@ -1487,7 +1487,7 @@ if ( route_to_gw("gw1,gw2,gw3", $var(gw_attrs), , "my_partition") ) {
 ```
 
 
-#### `use_next_gw( [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])`
+#### use_next_gw( [rule_attrs_pvar], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
 
 
 The function takes the next available destination (set by do_routing,
@@ -1530,7 +1530,7 @@ The function returns true only if a new RURI was set. False
 					function.
 
 
-**Example: `use_next_gw` usage**
+**Example: use_next_gw usage**
 
 
 ```opensips
@@ -1564,7 +1564,7 @@ if (use_next_gw( , ,$var(carrier_attrs), "my_partition")) {
 ```
 
 
-#### `goes_to_gw( [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])`
+#### goes_to_gw( [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
 
 
 Function returns true if the destination of the current request
@@ -1618,7 +1618,7 @@ It may take the following optional parameters:
 				function.
 
 
-**Example: `goes_to_gw` usage**
+**Example: goes_to_gw usage**
 
 
 ```opensips
@@ -1638,7 +1638,7 @@ if (goes_to_gw(1, , $var(gw_attrs), , "my_partition")) {
 ```
 
 
-#### `is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar],  [partition])`
+#### is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar],  [partition])
 
 
 The function checks if the sender of the message (source IP + source
@@ -1692,7 +1692,7 @@ It may take the following optional parameters:
 				function.
 
 
-**Example: `is_from_gw` usage**
+**Example: is_from_gw usage**
 
 
 ```
@@ -1711,7 +1711,7 @@ if (is_from_gw(, "c", , , "outbound")) {
 ```
 
 
-#### `dr_is_gw( sip_uri, [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])`
+#### dr_is_gw( sip_uri, [type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition])
 
 
 The function checks if the SIP URI hostname part stored inside the
@@ -1766,7 +1766,7 @@ It may take the following optional parameters:
 				function.
 
 
-**Example: `dr_is_gw` usage**
+**Example: dr_is_gw usage**
 
 
 ```
@@ -1784,7 +1784,7 @@ if (dr_is_gw( $avp(uac), , "n", , , "partition")) {
 ```
 
 
-#### `dr_disable([partition])`
+#### dr_disable([partition])
 
 
 Marks as disabled the last destination that was used for the current
@@ -1812,7 +1812,7 @@ It may take the following parameters:
 				function.
 
 
-**Example: `dr_disable()` usage**
+**Example: dr_disable() usage**
 
 
 ```
@@ -1830,7 +1830,7 @@ if (t_check_status("(408)|(5[0-9][0-9])")) {
 ```
 
 
-#### `dr_match(groupID, [flags], number, [rule_attrs_pvar], [partition])`
+#### dr_match(groupID, [flags], number, [rule_attrs_pvar], [partition])
 
 
 The function tries to match/check the given number against the
@@ -1867,7 +1867,7 @@ The parameters are:
 			ONLY if the "use_partition" module parameter is turned on.
 
 
-**Example: `dr_match` usage**
+**Example: dr_match usage**
 
 
 ```opensips
@@ -1884,7 +1884,7 @@ if ( dr_match( 1, , $var(did) ) )
 ### Exported MI Functions
 
 
-#### `dr_reload`
+#### dr_reload
 
 
 Command to reload routing rules from database.
@@ -1918,7 +1918,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `dr_gw_status`
+#### dr_gw_status
 
 
 Gets the status (enabled or disabled) of one or multiple gateways. The function
@@ -1946,7 +1946,7 @@ Gets the status (enabled or disabled) of one or multiple gateways. The function
 					*gw_id* is provided.
 
 
-**Example: `dr_gw_status` usage when `use_partitions` is set to 0**
+**Example: dr_gw_status usage when use_partitions is set to 0**
 
 
 ```
@@ -1960,7 +1960,7 @@ Enabled:: Inactive
 ```
 
 
-**Example: `dr_gw_status` usage when `use_partitions`is set to 1**
+**Example: dr_gw_status usage when use_partitionsis set to 1**
 
 
 ```
@@ -1974,7 +1974,7 @@ enabled:: inactive
 ```
 
 
-#### `dr_carrier_status`
+#### dr_carrier_status
 
 
 Gets the status (enabled or disabled) of one or multiple carriers. The function
@@ -2002,7 +2002,7 @@ Gets the status (enabled or disabled) of one or multiple carriers. The function
 					*carrier_id* is provided.
 
 
-**Example: `dr_carrier_status` usage when `use_partitions` is 0**
+**Example: dr_carrier_status usage when use_partitions is 0**
 
 
 ```
@@ -2014,7 +2014,7 @@ Enabled:: yes
 ```
 
 
-**Example: `dr_carrier_status` usage when `use_partitions` is 1**
+**Example: dr_carrier_status usage when use_partitions is 1**
 
 
 ```
@@ -2026,7 +2026,7 @@ Enabled:: yes
 ```
 
 
-#### `dr_reload_status`
+#### dr_reload_status
 
 
 Gets the time of the last reload for any partition.
@@ -2043,7 +2043,7 @@ Gets the time of the last reload for any partition.
 							reload for the given partition.
 
 
-**Example: `dr_reload_status` usage when `use_partitions` is 0**
+**Example: dr_reload_status usage when use_partitions is 0**
 
 
 ```
@@ -2052,7 +2052,7 @@ Date:: Tue Aug 12 12:26:00 2014
 ```
 
 
-**Example: `dr_reload_status` usage when `use_partitions` is 1**
+**Example: dr_reload_status usage when use_partitions is 1**
 
 
 ```
@@ -2064,7 +2064,7 @@ Partition:: part_test Date=Tue Aug 12 12:24:13 2014
 ```
 
 
-#### `dr_number_routing`
+#### dr_number_routing
 
 
 Gets the matched prefix along with the list of the gateways / carriers to which a number
@@ -2098,7 +2098,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `dr_enable_probing`
+#### dr_enable_probing
 
 
 Enables/disables gateway probing or returns the current gateway
@@ -2112,7 +2112,7 @@ Parameters:
 				0 - disable gateway probing
 
 
-**Example: `dr_enable_probing` usage**
+**Example: dr_enable_probing usage**
 
 
 ```
@@ -2128,7 +2128,7 @@ Status:: 0
 ### Exported Events
 
 
-#### `E_DROUTING_STATUS`
+#### E_DROUTING_STATUS
 
 
 This event is raised when the module changes the state of a gateway,
@@ -2155,7 +2155,7 @@ The module provides the "drouting" Status/Report group, where each
 	routing partition is defined as a separate SR identifier.
 
 
-#### `[partition_name]`
+#### [partition_name]
 
 
 The status of these identifiers reflects the readiness/status of the 
@@ -2205,7 +2205,7 @@ In terms of data reloading, the following logs will be reported:
 ```
 
 
-#### `[partition_name];events`
+#### [partition_name];events
 
 
 GW/Carrier switching reporting:

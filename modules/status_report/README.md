@@ -44,7 +44,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `script_sr_group` (string)
+#### script_sr_group (string)
 
 
 Name of a new Status/Report group to be created and later used
@@ -67,7 +67,7 @@ modparam("status_report", "script_sr_group", "alarms")
 ### Exported Functions
 
 
-#### `sr_set_status( group, status, [details])`
+#### sr_set_status( group, status, [details])
 
 
 Sets a new status (and details) for a Status/Report group.
@@ -89,7 +89,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `sr_set_status` usage**
+**Example: sr_set_status usage**
 
 
 ```
@@ -99,7 +99,7 @@ sr_set_status( "script_caching", 1, "completed");
 ```
 
 
-#### `sr_add_report( group, report)`
+#### sr_add_report( group, report)
 
 
 Adds a new report/log to a Status/Report group.This must have been
@@ -118,7 +118,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `sr_add_report` usage**
+**Example: sr_add_report usage**
 
 
 ```

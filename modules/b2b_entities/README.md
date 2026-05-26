@@ -59,7 +59,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `server_hsize` (int)
+#### server_hsize (int)
 
 
 The size of the hash table that stores the b2b server entities.
@@ -70,7 +70,7 @@ The size of the hash table that stores the b2b server entities.
 		 (512 records).
 
 
-**Example: Set `server_hsize` parameter**
+**Example: Set server_hsize parameter**
 
 
 ```opensips
@@ -81,7 +81,7 @@ modparam("b2b_entities", "server_hsize", 10)
 ```
 
 
-#### `client_hsize` (int)
+#### client_hsize (int)
 
 
 The size of the hash table that stores the b2b client entities.
@@ -92,7 +92,7 @@ The size of the hash table that stores the b2b client entities.
 		 (512 records).
 
 
-**Example: Set `client_hsize` parameter**
+**Example: Set client_hsize parameter**
 
 
 ```opensips
@@ -103,14 +103,14 @@ modparam("b2b_entities", "client_hsize", 10)
 ```
 
 
-#### `script_req_route` (str)
+#### script_req_route (str)
 
 
 The name of the b2b script route that will be called when
 			B2B requests are received.
 
 
-**Example: Set `script_req_route` parameter**
+**Example: Set script_req_route parameter**
 
 
 ```opensips
@@ -121,14 +121,14 @@ modparam("b2b_entities", "script_req_route", "b2b_request")
 ```
 
 
-#### `script_reply_route` (str)
+#### script_reply_route (str)
 
 
 The name of the b2b script route that will be called when
 			B2B replies are received.
 
 
-**Example: Set `script_repl_route` parameter**
+**Example: Set script_repl_route parameter**
 
 
 ```opensips
@@ -139,14 +139,14 @@ modparam("b2b_entities", "script_reply_route", "b2b_reply")
 ```
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 Database URL. It is not compulsory, if not set
 			data is not stored in database.
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -157,14 +157,14 @@ modparam("b2b_entities", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensi
 ```
 
 
-#### `cachedb_url` (str)
+#### cachedb_url (str)
 
 
 URL of a NoSQL database to be used. Only Redis is supported
 			at the moment.
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -175,7 +175,7 @@ modparam("b2b_entities", "cachedb_url", "redis://localhost:6379/")
 ```
 
 
-#### `cachedb_key_prefix` (string)
+#### cachedb_key_prefix (string)
 
 
 Prefix to use for every key set in the NoSQL database.
@@ -184,7 +184,7 @@ Prefix to use for every key set in the NoSQL database.
 *Default value is "b2be$".*
 
 
-**Example: Set `cachedb_key_prefix` parameter**
+**Example: Set cachedb_key_prefix parameter**
 
 
 ```opensips
@@ -194,7 +194,7 @@ modparam("b2b_entities", "cachedb_key_prefix", "b2b")
 ```
 
 
-#### `update_period` (int)
+#### update_period (int)
 
 
 The time interval at which to update the info in database.
@@ -203,7 +203,7 @@ The time interval at which to update the info in database.
 *Default value is "100".*
 
 
-**Example: Set `update_period` parameter**
+**Example: Set update_period parameter**
 
 
 ```opensips
@@ -214,7 +214,7 @@ modparam("b2b_entities", "update_period", 60)
 ```
 
 
-#### `b2b_key_prefix` (string)
+#### b2b_key_prefix (string)
 
 
 The string to use when generating the key ( it is inserted
@@ -228,7 +228,7 @@ The string to use when generating the key ( it is inserted
 *Default value is "B2B".*
 
 
-**Example: Set `b2b_key_prefix` parameter**
+**Example: Set b2b_key_prefix parameter**
 
 
 ```opensips
@@ -239,7 +239,7 @@ modparam("b2b_entities", "b2b_key_prefix", "B2B1")
 ```
 
 
-#### `db_mode` (int)
+#### db_mode (int)
 
 
 The B2B modules have support for the 3 type of database storage
@@ -253,7 +253,7 @@ The B2B modules have support for the 3 type of database storage
 *Default value is "2" (WRITE BACK).*
 
 
-**Example: Set `db_mode` parameter**
+**Example: Set db_mode parameter**
 
 
 ```opensips
@@ -264,7 +264,7 @@ modparam("b2b_entities", "db_mode", 1)
 ```
 
 
-#### `db_table` (str)
+#### db_table (str)
 
 
 The name of the table that will be used for storing B2B entities
@@ -273,7 +273,7 @@ The name of the table that will be used for storing B2B entities
 *Default value is "b2b_entities"*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -284,7 +284,7 @@ modparam("b2b_entities", "db_table", "some table name")
 ```
 
 
-#### `cluster_id` (int)
+#### cluster_id (int)
 
 
 The ID of the cluster this instance belongs to. Setting this parameter
@@ -306,7 +306,7 @@ chapter for more details.
 *Default value is "0" (clustering disabled)*
 
 
-**Example: Set `cluster_id` parameter**
+**Example: Set cluster_id parameter**
 
 
 ```opensips
@@ -317,7 +317,7 @@ modparam("b2b_entities", "cluster_id", 10)
 ```
 
 
-#### `passthru_prack` (int)
+#### passthru_prack (int)
 
 
 This parameter allows to control, whether a PRACK should be generated locally (=0)
@@ -327,7 +327,7 @@ This parameter allows to control, whether a PRACK should be generated locally (=
 *Default value is "0" (generate PRACK locally)*
 
 
-**Example: Set `passthru_prack` parameter**
+**Example: Set passthru_prack parameter**
 
 
 ```opensips
@@ -338,14 +338,14 @@ modparam("b2b_entities", "passthru_prack", 1)
 ```
 
 
-#### `advertised_contact` (str)
+#### advertised_contact (str)
 
 
 Contact to use in generated messages for UA session started with the
 		[mi ua session client start](#mi_ua_session_client_start) MI function.
 
 
-**Example: Set `advertised_contact` parameter**
+**Example: Set advertised_contact parameter**
 
 
 ```opensips
@@ -356,7 +356,7 @@ modparam("b2b_entities", "advertised_contact", "opensips@10.10.10.10:5060")
 ```
 
 
-#### `ua_default_timeout` (str)
+#### ua_default_timeout (str)
 
 
 Default timeout, in seconds, for UA session started with the
@@ -368,7 +368,7 @@ Default timeout, in seconds, for UA session started with the
 If not set the default is 43200 (12 hours).
 
 
-**Example: Set `ua_default_timeout` parameter**
+**Example: Set ua_default_timeout parameter**
 
 
 ```opensips
@@ -382,7 +382,7 @@ modparam("b2b_entities", "ua_default_timeout", 7200)
 ### Exported Functions
 
 
-#### `ua_session_server_init([key], [flags])`
+#### ua_session_server_init([key], [flags])
 
 
 This function initializes a new UA session by processing an initial INVITE.
@@ -424,7 +424,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `ua_session_server_init` usage**
+**Example: ua_session_server_init usage**
 
 
 ```opensips
@@ -441,7 +441,7 @@ if(is_method("INVITE") && !has_totag()) {
 ```
 
 
-#### `ua_session_update(key, method, [body], [extra_headers], [content_type])`
+#### ua_session_update(key, method, [body], [extra_headers], [content_type])
 
 
 Sends a sequential request for a UA session started with the 
@@ -467,7 +467,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
 
 
-**Example: `ua_session_update` usage**
+**Example: ua_session_update usage**
 
 
 ```
@@ -478,7 +478,7 @@ ua_session_update($var(b2b_key), "OPTIONS");
 ```
 
 
-#### `ua_session_reply(key, method, code, [reason], [body], [extra_headers], [content_type])`
+#### ua_session_reply(key, method, code, [reason], [body], [extra_headers], [content_type])
 
 
 Sends a reply for a UA session started with the 
@@ -506,7 +506,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
 
 
-**Example: `ua_session_reply` usage**
+**Example: ua_session_reply usage**
 
 
 ```
@@ -517,7 +517,7 @@ ua_session_reply($var(b2b_key), "INVITE", 180, "Ringing");
 ```
 
 
-#### `ua_session_terminate(key, [extra_headers])`
+#### ua_session_terminate(key, [extra_headers])
 
 
 Terminate a UA session started with the
@@ -536,7 +536,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE, EVENT_ROUTE.
 
 
-**Example: `ua_session_terminate` usage**
+**Example: ua_session_terminate usage**
 
 
 ```
@@ -550,7 +550,7 @@ ua_session_terminate($var(b2b_key));
 ### Exported MI Functions
 
 
-#### `b2be_list`
+#### b2be_list
 
 
 This command can be used to list the internals of the b2b entities.
@@ -571,7 +571,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `ua_session_client_start`
+#### ua_session_client_start
 
 
 This command starts a new UAC session by sending an initial INVITE.
@@ -614,7 +614,7 @@ to=sip:bob@opensips.org from=sip:alice@opensips.org flags=arhb
 ```
 
 
-#### `ua_session_update`
+#### ua_session_update
 
 
 Sends a sequential request for a UA session started with the
@@ -648,7 +648,7 @@ opensips-cli -x mi ua_session_update key=B2B.436.1925389.1649338095 method=OPTIO
 ```
 
 
-#### `ua_session_reply`
+#### ua_session_reply
 
 
 Sends a reply for a UA session started with the
@@ -684,7 +684,7 @@ opensips-cli -x mi ua_session_reply key=B2B.436.1925389.1649338095 method=OPTION
 ```
 
 
-#### `ua_session_terminate`
+#### ua_session_terminate
 
 
 Terminate a UA session started with the
@@ -711,7 +711,7 @@ opensips-cli -x mi ua_session_terminate key=B2B.436.1925389.1649338095
 ```
 
 
-#### `ua_session_list`
+#### ua_session_list
 
 
 List information about UA sessions started with
@@ -741,7 +741,7 @@ MI FIFO Command Format:
 ### Exported Events
 
 
-#### `E_UA_SESSION`
+#### E_UA_SESSION
 
 
 This event is triggered for requests/replies belonging to an ongoing UA
@@ -796,14 +796,14 @@ The module provides an API that can be used from other
 		will be created in b2b_entities module.
 
 
-### `b2b_load_api(b2b_api_t* api)`
+### b2b_load_api(b2b_api_t* api)
 
 
 This function binds the b2b_entities modules and fills the structure 
 				the exported functions that will be described in detail.
 
 
-**Example: `b2b_api_t` structure**
+**Example: b2b_api_t structure**
 
 
 ```
@@ -824,7 +824,7 @@ typedef struct b2b_api {
 ```
 
 
-### `server_new`
+### server_new
 
 
 Field type:
@@ -870,7 +870,7 @@ This function is called when a request or reply is received for a dialog
 		parameter is the parameter by the upper module when the entity was created.
 
 
-### `client_new`
+### client_new
 
 
 Field type:
@@ -903,7 +903,7 @@ The return value is an identifier for the record that will be mentioned when
 			send reply).
 
 
-### `send_request`
+### send_request
 
 
 Field type:
@@ -930,7 +930,7 @@ This function asks the b2b_entities modules to send a request inside a b2b dialo
 The return value is 0 for success and a negative value for error.
 
 
-### `send_reply`
+### send_reply
 
 
 Field type:
@@ -955,7 +955,7 @@ This function asks the b2b_entities modules to send a reply inside a b2b dialog
 The return value is 0 for success and a negative value for error.
 
 
-### `entity_delete`
+### entity_delete
 
 
 Field type:
@@ -974,7 +974,7 @@ This function must be called by the upper level function to delete the
 		module and the upper level module must take care to delete them.
 
 
-### `restore_logic_info`
+### restore_logic_info
 
 
 Field type:
@@ -992,7 +992,7 @@ This function is used at startup when loading the data from the database to
 			restore the pointer to the callback function.
 
 
-### `update_b2bl_param`
+### update_b2bl_param
 
 
 Field type:

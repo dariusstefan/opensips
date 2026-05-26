@@ -39,7 +39,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `max_limit` (integer)
+#### max_limit (integer)
 
 
 Set an upper limit for the max-forward value in the outgoing requests.
@@ -59,7 +59,7 @@ The range of values stretches from 1 to 256, which is the maximum
 *Default value is "256".*
 
 
-**Example: Set `max_limit` parameter**
+**Example: Set max_limit parameter**
 
 
 ```opensips
@@ -72,7 +72,7 @@ modparam("maxfwd", "max_limit", 32)
 ### Exported Functions
 
 
-#### `mf_process_maxfwd_header(max_value)`
+#### mf_process_maxfwd_header(max_value)
 
 
 If no Max-Forward header is present in the received request, a header 
@@ -107,7 +107,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `mx_process_maxfwd_header` usage**
+**Example: mx_process_maxfwd_header usage**
 
 
 ```opensips
@@ -122,7 +122,7 @@ if (!mf_process_maxfwd_header(10) && $retcode==-1) {
 ```
 
 
-#### `is_maxfwd_lt(max_value)`
+#### is_maxfwd_lt(max_value)
 
 
 Checks if the Max-Forward header value is less then the 
@@ -153,7 +153,7 @@ Meaning of the parameters is as follows:
 			Max-Forward.value against (as less than).
 
 
-**Example: `is_maxfwd_lt` usage**
+**Example: is_maxfwd_lt usage**
 
 
 ```opensips

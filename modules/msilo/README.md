@@ -75,7 +75,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Database URL.
@@ -95,7 +95,7 @@ modparam("msilo", "db_url", "mysql://user:passwd@host.com/dbname")
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 The name of table where to store the messages.
@@ -114,7 +114,7 @@ modparam("msilo", "db_table", "silo")
 ```
 
 
-#### `from_address` (string)
+#### from_address (string)
 
 
 The SIP address used to inform users that destination of their 
@@ -137,7 +137,7 @@ modparam("msilo", "from_address", "sip:$rU@example.org")
 ```
 
 
-#### `contact_hdr` (string)
+#### contact_hdr (string)
 
 
 The value of the Contact header (including header name and ending
@@ -158,7 +158,7 @@ modparam("msilo", "contact_hdr", "Contact: <sip:null@example.com>\r\n")
 ```
 
 
-#### `offline_message` (string)
+#### offline_message (string)
 
 
 The body of the notification message.
@@ -179,7 +179,7 @@ modparam("msilo", "offline_message", "<em>I am offline!</em>")
 ```
 
 
-#### `content_type_hdr` (string)
+#### content_type_hdr (string)
 
 
 The value of the Content-Type header (including header name and ending
@@ -202,7 +202,7 @@ modparam("msilo", "content_type_hdr", "Content-Type: text/html\r\n")
 ```
 
 
-#### `reminder` (string)
+#### reminder (string)
 
 
 The SIP address used to send reminder messages. If this value
@@ -222,7 +222,7 @@ modparam("msilo", "reminder", "sip:registrar@example.org")
 ```
 
 
-#### `outbound_proxy` (string)
+#### outbound_proxy (string)
 
 
 The SIP address used as next hop when sending the message. Very
@@ -244,7 +244,7 @@ modparam("msilo", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ```
 
 
-#### `expire_time` (int)
+#### expire_time (int)
 
 
 Expire time of stored messages - seconds. When this time passed, the message is
@@ -264,7 +264,7 @@ modparam("msilo", "expire_time", 36000)
 ```
 
 
-#### `check_time` (int)
+#### check_time (int)
 
 
 Timer interval to check if dumped messages are sent OK - seconds. The module keeps
@@ -285,7 +285,7 @@ modparam("msilo", "check_time", 10)
 ```
 
 
-#### `send_time` (int)
+#### send_time (int)
 
 
 Timer interval in seconds to check if there are reminder messages.
@@ -309,7 +309,7 @@ modparam("msilo", "send_time", 60)
 ```
 
 
-#### `clean_period` (int)
+#### clean_period (int)
 
 
 Number of "check_time" cycles when to check if
@@ -329,7 +329,7 @@ modparam("msilo", "clean_period", 3)
 ```
 
 
-#### `use_contact` (int)
+#### use_contact (int)
 
 
 Turns on/off the usage of the Contact address to send notification
@@ -349,7 +349,7 @@ modparam("msilo", "use_contact", 0)
 ```
 
 
-#### `sc_mid` (string)
+#### sc_mid (string)
 
 
 The name of the column in silo table, storing message id.
@@ -368,7 +368,7 @@ modparam("msilo", "sc_mid", "other_mid")
 ```
 
 
-#### `sc_from` (string)
+#### sc_from (string)
 
 
 The name of the column in silo table, storing the source address.
@@ -387,7 +387,7 @@ modparam("msilo", "sc_from", "source_address")
 ```
 
 
-#### `sc_to` (string)
+#### sc_to (string)
 
 
 The name of the column in silo table, storing the destination address.
@@ -406,7 +406,7 @@ modparam("msilo", "sc_to", "destination_address")
 ```
 
 
-#### `sc_uri_user` (string)
+#### sc_uri_user (string)
 
 
 The name of the column in silo table, storing the user name.
@@ -425,7 +425,7 @@ modparam("msilo", "sc_uri_user", "user")
 ```
 
 
-#### `sc_uri_host` (string)
+#### sc_uri_host (string)
 
 
 The name of the column in silo table, storing the domain.
@@ -444,7 +444,7 @@ modparam("msilo", "sc_uri_host", "domain")
 ```
 
 
-#### `sc_body` (string)
+#### sc_body (string)
 
 
 The name of the column storing the message body in silo table.
@@ -463,7 +463,7 @@ modparam("msilo", "sc_body", "message_body")
 ```
 
 
-#### `sc_ctype` (string)
+#### sc_ctype (string)
 
 
 The name of the column in silo table, storing content type.
@@ -482,7 +482,7 @@ modparam("msilo", "sc_ctype", "content_type")
 ```
 
 
-#### `sc_exp_time` (string)
+#### sc_exp_time (string)
 
 
 The name of the column in silo table, storing the expire time of the message.
@@ -501,7 +501,7 @@ modparam("msilo", "sc_exp_time", "expire_time")
 ```
 
 
-#### `sc_inc_time` (string)
+#### sc_inc_time (string)
 
 
 The name of the column in silo table, storing the incoming time of the message.
@@ -520,7 +520,7 @@ modparam("msilo", "sc_inc_time", "incoming_time")
 ```
 
 
-#### `sc_snd_time` (string)
+#### sc_snd_time (string)
 
 
 The name of the column in silo table, storing the send time for the reminder.
@@ -539,7 +539,7 @@ modparam("msilo", "sc_snd_time", "send_reminder_time")
 ```
 
 
-#### `snd_time_avp` (str)
+#### snd_time_avp (str)
 
 
 The name of an AVP which may contain the time when to sent
@@ -564,7 +564,7 @@ modparam("msilo", "snd_time_avp", "$avp(snd_time)")
 ```
 
 
-#### `add_date` (int)
+#### add_date (int)
 
 
 Wheter to add as prefix the date when the message was stored.
@@ -583,7 +583,7 @@ modparam("msilo", "add_date", 0)
 ```
 
 
-#### `max_messages` (int)
+#### max_messages (int)
 
 
 Maximum number of stored message for an AoR.  Value 0
@@ -606,7 +606,7 @@ modparam("msilo", "max_messages", 0)
 ### Exported Functions
 
 
-#### `m_store([owner])`
+#### m_store([owner])
 
 
 The method stores certain parts of the current SIP request (it 
@@ -628,7 +628,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `m_store` usage**
+**Example: m_store usage**
 
 
 ```
@@ -639,7 +639,7 @@ m_store($tu);
 ```
 
 
-#### `m_dump([owner], [maxmsg])`
+#### m_dump([owner], [maxmsg])
 
 
 The method sends stored messages for the SIP user that is going to 
@@ -662,7 +662,7 @@ This function can be used from REQUEST_ROUTE, STARTUP_ROUTE,
 		TIMER_ROUTE, EVENT_ROUTE
 
 
-**Example: `m_dump` usage**
+**Example: m_dump usage**
 
 
 ```

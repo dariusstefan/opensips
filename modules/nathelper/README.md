@@ -86,7 +86,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `natping_interval` (integer)
+#### natping_interval (integer)
 
 
 Period of time in seconds between sending the NAT pings to all
@@ -101,7 +101,7 @@ Period of time in seconds between sending the NAT pings to all
 *Default value is 0.*
 
 
-**Example: Set `natping_interval` parameter**
+**Example: Set natping_interval parameter**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("nathelper", "natping_interval", 10)
 ```
 
 
-#### `ping_nated_only` (integer)
+#### ping_nated_only (integer)
 
 
 If this variable is set then only contacts that have
@@ -122,7 +122,7 @@ If this variable is set then only contacts that have
 *Default value is 0.*
 
 
-**Example: Set `ping_nated_only` parameter**
+**Example: Set ping_nated_only parameter**
 
 
 ```opensips
@@ -132,7 +132,7 @@ modparam("nathelper", "ping_nated_only", 1)
 ```
 
 
-#### `natping_partitions` (integer)
+#### natping_partitions (integer)
 
 
 How many partitions/chunks to be used for sending the pingings.
@@ -144,7 +144,7 @@ How many partitions/chunks to be used for sending the pingings.
 		*Maximum allowed value is 8.*
 
 
-**Example: Set `natping_partitions` parameter**
+**Example: Set natping_partitions parameter**
 
 
 ```opensips
@@ -154,7 +154,7 @@ modparam("nathelper", "natping_partitions", 4)
 ```
 
 
-#### `natping_socket` (string)
+#### natping_socket (string)
 
 
 Spoof the natping's source-ip to this address. Works only for IPv4.
@@ -163,7 +163,7 @@ Spoof the natping's source-ip to this address. Works only for IPv4.
 *Default value is NULL.*
 
 
-**Example: Set `natping_socket` parameter**
+**Example: Set natping_socket parameter**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("nathelper", "natping_socket", "192.168.1.1:5006")
 ```
 
 
-#### `received_avp` (str)
+#### received_avp (str)
 
 
 The name of the Attribute-Value-Pair (AVP) used to store the URI
@@ -194,7 +194,7 @@ The name of the Attribute-Value-Pair (AVP) used to store the URI
 *Default value is "NULL" (disabled).*
 
 
-**Example: Set `received_avp` parameter**
+**Example: Set received_avp parameter**
 
 
 ```opensips
@@ -204,7 +204,7 @@ modparam("nathelper", "received_avp", "$avp(received)")
 ```
 
 
-#### `force_socket` (string)
+#### force_socket (string)
 
 
 Sending socket to be used for pinging contacts without local socket
@@ -217,7 +217,7 @@ Sending socket to be used for pinging contacts without local socket
 *Default value is "NULL".*
 
 
-**Example: Set `force_socket` parameter**
+**Example: Set force_socket parameter**
 
 
 ```opensips
@@ -227,7 +227,7 @@ modparam("nathelper", "force_socket", "localhost:33333")
 ```
 
 
-#### `sipping_bflag` (string)
+#### sipping_bflag (string)
 
 
 What branch flag should be used by the module to identify NATed
@@ -238,7 +238,7 @@ What branch flag should be used by the module to identify NATed
 *Default value is NULL (disabled).*
 
 
-**Example: Set `sipping_bflag` parameter**
+**Example: Set sipping_bflag parameter**
 
 
 ```opensips
@@ -248,7 +248,7 @@ modparam("nathelper", "sipping_bflag", "SIPPING_ENABLE")
 ```
 
 
-#### `remove_on_timeout_bflag` (string)
+#### remove_on_timeout_bflag (string)
 
 
 What branch flag to be used in order to activate usrloc contact removal when
@@ -258,7 +258,7 @@ What branch flag to be used in order to activate usrloc contact removal when
 *Default value is NULL (disabled).*
 
 
-**Example: Set `remove_on_timeout_bflag` parameter**
+**Example: Set remove_on_timeout_bflag parameter**
 
 
 ```opensips
@@ -268,7 +268,7 @@ modparam("nathelper", "remove_on_timeout_bflag", "SIPPING_RTO")
 ```
 
 
-#### `sipping_latency_flag` (string)
+#### sipping_latency_flag (string)
 
 
 The branch flag which will be used in order to enable contact pinging
@@ -279,7 +279,7 @@ The branch flag which will be used in order to enable contact pinging
 *Default value is NULL (disabled).*
 
 
-**Example: Set `sipping_latency_flag` parameter**
+**Example: Set sipping_latency_flag parameter**
 
 
 ```opensips
@@ -289,7 +289,7 @@ modparam("nathelper", "sipping_latency_flag", "SIPPING_CALC_LATENCY")
 ```
 
 
-#### `sipping_ignore_rpl_codes` (CSV string)
+#### sipping_ignore_rpl_codes (CSV string)
 
 
 A comma-separated list of SIP reply status codes to contact pings which
@@ -303,7 +303,7 @@ A comma-separated list of SIP reply status codes to contact pings which
 *Default value is "NULL" (all reply status codes are accepted).*
 
 
-**Example: Set `sipping_ignore_rpl_codes` parameter**
+**Example: Set sipping_ignore_rpl_codes parameter**
 
 
 ```opensips
@@ -313,7 +313,7 @@ modparam("nathelper", "sipping_ignore_rpl_codes", "408, 480, 404")
 ```
 
 
-#### `sipping_from` (string)
+#### sipping_from (string)
 
 
 The parameter sets the SIP URI to be used in generating the SIP
@@ -325,7 +325,7 @@ The parameter sets the SIP URI to be used in generating the SIP
 *Default value is "NULL".*
 
 
-**Example: Set `sipping_from` parameter**
+**Example: Set sipping_from parameter**
 
 
 ```opensips
@@ -335,7 +335,7 @@ modparam("nathelper", "sipping_from", "sip:pinger@siphub.net")
 ```
 
 
-#### `sipping_method` (string)
+#### sipping_method (string)
 
 
 The parameter sets the SIP method to be used in generating the SIP
@@ -345,7 +345,7 @@ The parameter sets the SIP method to be used in generating the SIP
 *Default value is "OPTIONS".*
 
 
-**Example: Set `sipping_method` parameter**
+**Example: Set sipping_method parameter**
 
 
 ```opensips
@@ -355,7 +355,7 @@ modparam("nathelper", "sipping_method", "INFO")
 ```
 
 
-#### `nortpproxy_str` (string)
+#### nortpproxy_str (string)
 
 
 The parameter sets the SDP attribute used by nathelper to mark
@@ -371,7 +371,7 @@ If empty string, no marker will be added or checked.
 *Default value is "a=nortpproxy:yes\r\n".*
 
 
-**Example: Set `nortpproxy_str` parameter**
+**Example: Set nortpproxy_str parameter**
 
 
 ```opensips
@@ -381,7 +381,7 @@ modparam("nathelper", "nortpproxy_str", "a=sdpmangled:yes\r\n")
 ```
 
 
-#### `natping_tcp` (integer)
+#### natping_tcp (integer)
 
 
 If the flag is set, TCP/TLS clients will also be pinged with
@@ -391,7 +391,7 @@ If the flag is set, TCP/TLS clients will also be pinged with
 *Default value is 0 (not set).*
 
 
-**Example: Set `natping_tcp` parameter**
+**Example: Set natping_tcp parameter**
 
 
 ```opensips
@@ -401,7 +401,7 @@ modparam("nathelper", "natping_tcp", 1)
 ```
 
 
-#### `oldip_skip` (string)
+#### oldip_skip (string)
 
 
 Parameter which specifies whether old media ip and old origin ip
@@ -413,7 +413,7 @@ Parameter which specifies whether old media ip and old origin ip
 *Default value is 0 (not set).*
 
 
-**Example: Set `oldip_skip` parameter**
+**Example: Set oldip_skip parameter**
 
 
 ```opensips
@@ -423,7 +423,7 @@ modparam("nathelper", "oldip_skip", "oc")
 ```
 
 
-#### `ping_threshold` (int)
+#### ping_threshold (int)
 
 
 If a contact does not respond in *ping_threshold*
@@ -434,7 +434,7 @@ If a contact does not respond in *ping_threshold*
 *Default value is 3 (seconds).*
 
 
-**Example: Set `ping_threshold` parameter**
+**Example: Set ping_threshold parameter**
 
 
 ```opensips
@@ -444,7 +444,7 @@ modparam("nathelper", "ping_threshold", 10)
 ```
 
 
-#### `max_pings_lost` (int)
+#### max_pings_lost (int)
 
 
 Number of unresponded pings after which the contact shall be removed
@@ -454,7 +454,7 @@ Number of unresponded pings after which the contact shall be removed
 *Default value is 3 (pings).*
 
 
-**Example: Set `max_pings_lost` parameter**
+**Example: Set max_pings_lost parameter**
 
 
 ```opensips
@@ -464,7 +464,7 @@ modparam("nathelper", "max_pings_lost", 5)
 ```
 
 
-#### `cluster_id` (integer)
+#### cluster_id (integer)
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -486,7 +486,7 @@ For more info on how to define and populate a cluster (with OpenSIPS
 *Default value is "0 (none)".*
 
 
-**Example: Set `cluster_id` parameter**
+**Example: Set cluster_id parameter**
 
 
 ```opensips
@@ -497,7 +497,7 @@ modparam("nathelper", "cluster_id", 9)
 ```
 
 
-#### `cluster_sharing_tag` (string)
+#### cluster_sharing_tag (string)
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -518,7 +518,7 @@ This is an optional parameter. If not set, all the nodes in the cluster
 *Default value is "empty (none)".*
 
 
-**Example: Set `cluster_sharing_tag` parameter**
+**Example: Set cluster_sharing_tag parameter**
 
 
 ```opensips
@@ -533,7 +533,7 @@ modparam("nathelper", "cluster_sharing_tag", "vip")
 ### Exported Functions
 
 
-#### `fix_nated_contact([uri_params])`
+#### fix_nated_contact([uri_params])
 
 
 Rewrites the URI Contact HF to contain request's
@@ -555,7 +555,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `fix_nated_contact` usage**
+**Example: fix_nated_contact usage**
 
 
 ```
@@ -569,7 +569,7 @@ if (search("User-Agent: Cisco ATA.*") {
 ```
 
 
-#### `fix_nated_sdp(flags [, ip_address [, sdp_fields]])`
+#### fix_nated_sdp(flags [, ip_address [, sdp_fields]])
 
 
 Alters the SDP information in orer to facilitate NAT traversal. What
@@ -617,7 +617,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `fix_nated_sdp` usage**
+**Example: fix_nated_sdp usage**
 
 
 ```
@@ -632,7 +632,7 @@ if (search("User-Agent: Cisco ATA.*")
 ```
 
 
-#### `add_rcv_param([flag])`,
+#### add_rcv_param([flag]),
 
 
 Add received parameter to Contact header fields or Contact URI.
@@ -657,7 +657,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `add_rcv_paramer` usage**
+**Example: add_rcv_paramer usage**
 
 
 ```
@@ -669,7 +669,7 @@ add_rcv_param(1); # add the parameter to the Contact URI
 ```
 
 
-#### `fix_nated_register()`
+#### fix_nated_register()
 
 
 The function creates a URI consisting of the source IP, port and
@@ -682,7 +682,7 @@ The function creates a URI consisting of the source IP, port and
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `fix_nated_register` usage**
+**Example: fix_nated_register usage**
 
 
 ```
@@ -692,7 +692,7 @@ fix_nated_register();
 ```
 
 
-#### `nat_uac_test(flags)`
+#### nat_uac_test(flags)
 
 
 Determines whether the received SIP message originated behind a NAT,
@@ -732,7 +732,7 @@ The *flags* (string) parameter denotes a
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `nat_uac_test` usage**
+**Example: nat_uac_test usage**
 
 
 ```opensips
@@ -747,7 +747,7 @@ if (nat_uac_test("private-contact,private-sdp"))
 ### Exported MI Functions
 
 
-#### `nh_enable_ping`
+#### nh_enable_ping
 
 
 Gets or sets the natpinging status.
@@ -761,7 +761,7 @@ Parameters:
 					parameter value greater than 0 or disables natping if parameter value is 0.
 
 
-**Example: `nh_enable_ping` usage**
+**Example: nh_enable_ping usage**
 
 
 ```

@@ -58,7 +58,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Url to the database containing the routing data.
@@ -67,7 +67,7 @@ Url to the database containing the routing data.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("userblacklist", "db_url", "dbdriver://username:password@dbhost/dbname"
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 Name of the table where the user blacklist data is stored.
@@ -87,7 +87,7 @@ Name of the table where the user blacklist data is stored.
 *Default value is "userblacklist".*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -98,7 +98,7 @@ modparam("userblacklist", "db_table", "userblacklist")
 ```
 
 
-#### `use_domain` (integer)
+#### use_domain (integer)
 
 
 If set to non-zero value, the domain column in the userblacklist is used.
@@ -107,7 +107,7 @@ If set to non-zero value, the domain column in the userblacklist is used.
 *Default value is "0".*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -121,7 +121,7 @@ modparam("userblacklist", "use_domain", 0)
 ### Exported Functions
 
 
-#### `check_user_blacklist (user, domain, [number], [table])`
+#### check_user_blacklist (user, domain, [number], [table])
 
 
 Finds the longest prefix that matches the request URI user (or the number
@@ -142,7 +142,7 @@ Parameters:
 	    		the defalut is used.
 
 
-**Example: `check_user_blacklist` usage**
+**Example: check_user_blacklist usage**
 
 
 ```opensips
@@ -156,7 +156,7 @@ if (!check_user_blacklist("user", "domain.com"))
 ```
 
 
-#### `check_blacklist (table)`
+#### check_blacklist (table)
 
 
 Finds the longest prefix that matches the request URI for the
@@ -170,7 +170,7 @@ Parameters:
 - *table* (string)
 
 
-**Example: `check_blacklist` usage**
+**Example: check_blacklist usage**
 
 
 ```opensips
@@ -187,14 +187,14 @@ if (!check_blacklist("global_blacklist")))
 ### Exported MI Functions
 
 
-#### `reload_blacklist`
+#### reload_blacklist
 
 
 Reload the internal global blacklist cache. This is necessary after
 		the database tables for the global blacklist have been changed.
 
 
-**Example: `reload_blacklists` usage**
+**Example: reload_blacklists usage**
 
 
 ```

@@ -58,7 +58,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `hep_id` (str)
+#### hep_id (str)
 
 
 Specify a destination for HEP packets and the version of
@@ -87,7 +87,7 @@ NO default value. If **hep_id** the module
 		can't be used for HEP tracing.
 
 
-**Example: Set `hep_id` parameter**
+**Example: Set hep_id parameter**
 
 
 ```opensips
@@ -102,7 +102,7 @@ modparam("proto_hep", "hep_id", "[hep_dst] 1.2.3.4:5000")
 ```
 
 
-#### `homer5_on` (int)
+#### homer5_on (int)
 
 
 Specify how the data should be encapsulated in the HEP packet. If set to
@@ -117,7 +117,7 @@ Specify how the data should be encapsulated in the HEP packet. If set to
 Default value 1, HOMER5 format.
 
 
-**Example: Set `homer5_on` parameter**
+**Example: Set homer5_on parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("proto_hep", "homer5_on", 0)
 ```
 
 
-#### `homer5_delim` (str)
+#### homer5_delim (str)
 
 
 In case **homer5_on** is set
@@ -136,7 +136,7 @@ In case **homer5_on** is set
 Default value ":".
 
 
-**Example: Set `homer5_on` parameter**
+**Example: Set homer5_on parameter**
 
 
 ```opensips
@@ -144,7 +144,7 @@ modparam("proto_hep", "homer5_delim", "##")
 ```
 
 
-#### `hep_port` (integer)
+#### hep_port (integer)
 
 
 The default port to be used by all TCP/UDP/TLS listeners.
@@ -153,7 +153,7 @@ The default port to be used by all TCP/UDP/TLS listeners.
 *Default value is 5656.*
 
 
-**Example: Set `hep_port` parameter**
+**Example: Set hep_port parameter**
 
 
 ```opensips
@@ -163,7 +163,7 @@ modparam("proto_hep", "hep_port", 6666)
 ```
 
 
-#### `hep_send_timeout` (integer)
+#### hep_send_timeout (integer)
 
 
 Time in milliseconds after a TCP connection will be closed if it is
@@ -174,7 +174,7 @@ Time in milliseconds after a TCP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set `hep_send_timeout` parameter**
+**Example: Set hep_send_timeout parameter**
 
 
 ```opensips
@@ -184,7 +184,7 @@ modparam("proto_hep", "hep_send_timeout", 200)
 ```
 
 
-#### `hep_max_msg_chunks` (integer)
+#### hep_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a HEP message is expected to
@@ -198,7 +198,7 @@ The maximum number of chunks in which a HEP message is expected to
 *Default value is 32.*
 
 
-**Example: Set `hep_max_msg_chunks` parameter**
+**Example: Set hep_max_msg_chunks parameter**
 
 
 ```opensips
@@ -208,7 +208,7 @@ modparam("proto_hep", "hep_max_msg_chunks", 8)
 ```
 
 
-#### `hep_async` (integer)
+#### hep_async (integer)
 
 
 Specifies whether the TCP connect and write operations should be
@@ -220,7 +220,7 @@ Specifies whether the TCP connect and write operations should be
 *Default value is 1 (enabled).*
 
 
-**Example: Set `hep_async` parameter**
+**Example: Set hep_async parameter**
 
 
 ```opensips
@@ -230,7 +230,7 @@ modparam("proto_hep", "hep_async", 0)
 ```
 
 
-#### `hep_async_max_postponed_chunks` (integer)
+#### hep_async_max_postponed_chunks (integer)
 
 
 If *hep_async* is enabled, this specifies the
@@ -242,7 +242,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 32.*
 
 
-**Example: Set `hep_async_max_postponed_chunks` parameter**
+**Example: Set hep_async_max_postponed_chunks parameter**
 
 
 ```opensips
@@ -252,7 +252,7 @@ modparam("proto_hep", "hep_async_max_postponed_chunks", 16)
 ```
 
 
-#### `hep_capture_id` (integer)
+#### hep_capture_id (integer)
 
 
 The parameter indicate the capture agent ID for HEPv2/v3 protocol.
@@ -262,7 +262,7 @@ The parameter indicate the capture agent ID for HEPv2/v3 protocol.
 *Default value is "1".*
 
 
-**Example: Set `hep_capture_id` parameter**
+**Example: Set hep_capture_id parameter**
 
 
 ```opensips
@@ -272,7 +272,7 @@ modparam("proto_hep", "hep_capture_id", 234)
 ```
 
 
-#### `hep_async_local_connect_timeout` (integer)
+#### hep_async_local_connect_timeout (integer)
 
 
 If *hep_async* is enabled, this specifies the
@@ -285,7 +285,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 100 ms.*
 
 
-**Example: Set `hep_async_local_connect_timeout` parameter**
+**Example: Set hep_async_local_connect_timeout parameter**
 
 
 ```opensips
@@ -295,7 +295,7 @@ modparam("proto_hep", "hep_async_local_connect_timeout", 200)
 ```
 
 
-#### `hep_async_local_write_timeout` (integer)
+#### hep_async_local_write_timeout (integer)
 
 
 If *hep_async* is enabled, this specifies the
@@ -308,7 +308,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 10 ms.*
 
 
-**Example: Set `hep_async_local_write_timeout` parameter**
+**Example: Set hep_async_local_write_timeout parameter**
 
 
 ```opensips
@@ -321,7 +321,7 @@ modparam("proto_hep", "hep_async_local_write_timeout", 100)
 ### Exported Functions
 
 
-#### `correlate(hep_id, type1, correlation1, type2, correlation2)`
+#### correlate(hep_id, type1, correlation1, type2, correlation2)
 
 
 Send a hep message with an extra correlation id containing the two correlation given
@@ -349,7 +349,7 @@ Meaning of the parameters is as follows:
 				the second extra correlation id that will be put in the extra correlation chunk.
 
 
-**Example: `correlate` usage**
+**Example: correlate usage**
 
 
 ```
@@ -367,8 +367,8 @@ Meaning of the parameters is as follows:
 ### Available Functions
 
 
-#### `pack_hep(from, to, proto, payload, plen, retbuf, retlen)
-			`
+#### pack_hep(from, to, proto, payload, plen, retbuf, retlen)
+			
 
 
 The function packs connection details and sip message into HEP message. It's
@@ -389,8 +389,8 @@ Meaning of the parameters is as follows:
 - *int *retlen* HEP message buffer length
 
 
-#### `register_hep_cb(cb)
-			`
+#### register_hep_cb(cb)
+			
 
 
 The function register callbacks to be called whenever a HEP message
@@ -406,8 +406,8 @@ Meaning of the parameters is as follows:
 - *hep_cb_t cb* HEP callback
 
 
-#### `hep_version
-			`
+#### hep_version
+			
 
 
 Current version of hep used.

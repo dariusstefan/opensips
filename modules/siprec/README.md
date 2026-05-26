@@ -149,7 +149,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `skip_failover_codes` (string)
+#### skip_failover_codes (string)
 
 
 A regular expression used to specify the codes that should prevent
@@ -159,7 +159,7 @@ A regular expression used to specify the codes that should prevent
 *By default any negative reply generates a failover.*
 
 
-**Example: Set `skip_failover_codes` parameter**
+**Example: Set skip_failover_codes parameter**
 
 
 ```opensips
@@ -180,7 +180,7 @@ modparam("siprec", "skip_failover_codes", "[34][0-9][0-9]")
 ### Exported Functions
 
 
-#### `siprec_start_recording(srs)`
+#### siprec_start_recording(srs)
 
 
 Calling this function on an initial
@@ -220,7 +220,7 @@ The function returns false when an internal error is triggered
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Use `siprec_start_recording()` function with a single SRS**
+**Example: Use siprec_start_recording() function with a single SRS**
 
 
 ```opensips
@@ -235,7 +235,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with multiple SRS servers**
+**Example: Use siprec_start_recording() function with multiple SRS servers**
 
 
 ```opensips
@@ -250,7 +250,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom XML values for participants**
+**Example: Use siprec_start_recording() function with custom XML values for participants**
 
 
 ```
@@ -265,7 +265,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom headers**
+**Example: Use siprec_start_recording() function with custom headers**
 
 
 ```
@@ -277,7 +277,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-**Example: Use `siprec_start_recording()` function with custom group and session extensions**
+**Example: Use siprec_start_recording() function with custom group and session extensions**
 
 
 ```
@@ -286,7 +286,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### `siprec_pause_recording()`
+#### siprec_pause_recording()
 
 
 Pauses the recording for the ongoing call. Should be called after
@@ -296,7 +296,7 @@ Pauses the recording for the ongoing call. Should be called after
 This function can be used from any route.
 
 
-**Example: Use `siprec_pause_recording()`**
+**Example: Use siprec_pause_recording()**
 
 
 ```opensips
@@ -310,7 +310,7 @@ This function can be used from any route.
 ```
 
 
-#### `siprec_resume_recording()`
+#### siprec_resume_recording()
 
 
 Resumes the recording for the ongoing call. Should be called after
@@ -320,7 +320,7 @@ Resumes the recording for the ongoing call. Should be called after
 This function can be used from any route.
 
 
-**Example: Use `siprec_resume_recording()`**
+**Example: Use siprec_resume_recording()**
 
 
 ```opensips
@@ -337,7 +337,7 @@ This function can be used from any route.
 ### Exported Pseudo-Variables
 
 
-#### `$siprec`
+#### $siprec
 
 
 Used to modify/describe different siprec sessions

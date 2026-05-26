@@ -58,7 +58,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `pretty_printing` (int)
+#### pretty_printing (int)
 
 
 Indicates whether the JSON responses stored in the return
@@ -68,7 +68,7 @@ Indicates whether the JSON responses stored in the return
 *Default value is "0 - no pretty-printing".*
 
 
-**Example: Set `pretty_printing` parameter**
+**Example: Set pretty_printing parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("mi_script", "pretty_printing", 1)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -94,7 +94,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -106,7 +106,7 @@ modparam("mi_script", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_bwlist` (string)
+#### trace_bwlist (string)
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -133,7 +133,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -152,7 +152,7 @@ modparam("mi_script", "trace_bwlist", "w: sip_trace")
 ### Exported Functions
 
 
-#### `mi(command, [ret_var [,params_avp[, vals_avp]]])`
+#### mi(command, [ret_var [,params_avp[, vals_avp]]])
 
 
 Runs an MI command in synchronous mode, blocking
@@ -220,7 +220,7 @@ To specify *array values*, enclose your
 					*"__array(HEARTBEAT BACKGROUND_JOB)"*
 
 
-**Example: `mi` without params**
+**Example: mi without params**
 
 
 ```
@@ -230,7 +230,7 @@ mi("shm_check");
 ```
 
 
-**Example: `mi` with params in command**
+**Example: mi with params in command**
 
 
 ```
@@ -241,7 +241,7 @@ mi("cache_remove local password_user1");
 ```
 
 
-**Example: `mi` with return**
+**Example: mi with return**
 
 
 ```
@@ -251,7 +251,7 @@ mi("ds_list", $var(ret));
 ```
 
 
-**Example: `mi` without return but with indexed params**
+**Example: mi without return but with indexed params**
 
 
 ```
@@ -266,7 +266,7 @@ mi("cache_remove local password_user1");
 ```
 
 
-**Example: `mi` with return and named parameters**
+**Example: mi with return and named parameters**
 
 
 ```
@@ -280,7 +280,7 @@ mi("dlg_list", $var(dlg), $avp(params), $avp(vals));
 ```
 
 
-**Example: `mi` without return, with an array parameter value**
+**Example: mi without return, with an array parameter value**
 
 
 ```
@@ -297,7 +297,7 @@ mi("fs_subscribe", , $avp(params), $avp(vals));
 ### Exported Asyncronous Functions
 
 
-#### `mi(command, [ret_var [,params_avp[, vals_avp]]])`
+#### mi(command, [ret_var [,params_avp[, vals_avp]]])
 
 
 The function works is more or less the same as its
@@ -312,7 +312,7 @@ The function works is more or less the same as its
 			asynchronously cannot be traced through hep.
 
 
-**Example: `async mi call` usage**
+**Example: async mi call usage**
 
 
 ```opensips

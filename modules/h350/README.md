@@ -113,7 +113,7 @@ Name of the LDAP session to be used for H.350 queries, as defined in the LDAP mo
 Default value: ""
 
 
-**Example: `ldap_session` parameter usage**
+**Example: ldap_session parameter usage**
 
 
 ```opensips
@@ -131,7 +131,7 @@ Base LDAP DN to start LDAP search for H.350 entries. For best performance, this 
 Default value: ""
 
 
-**Example: `base_dn` parameter usage**
+**Example: base_dn parameter usage**
 
 
 ```opensips
@@ -149,7 +149,7 @@ LDAP search scope for H.350 queries, one of "one", "base", or "sub".
 Default value: "one"
 
 
-**Example: `search_scope` parameter usage**
+**Example: search_scope parameter usage**
 
 
 ```opensips

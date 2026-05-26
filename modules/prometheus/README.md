@@ -53,7 +53,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `root`(string)
+#### root(string)
 
 
 Specifies the root metrics path Promethus uses to query the stats:
@@ -63,7 +63,7 @@ Specifies the root metrics path Promethus uses to query the stats:
 *The default value is "metrics".*
 
 
-**Example: Set `root` parameter**
+**Example: Set root parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ modparam("prometheus", "root", "prometheus")
 ```
 
 
-#### `prefix`(string)
+#### prefix(string)
 
 
 Appends a prefix to each statistic exported.
@@ -82,7 +82,7 @@ Appends a prefix to each statistic exported.
 *The default value is "opensips".*
 
 
-**Example: Set `prefix` parameter**
+**Example: Set prefix parameter**
 
 
 ```opensips
@@ -92,7 +92,7 @@ modparam("prometheus", "prefix", "opensips_1")
 ```
 
 
-#### `group_prefix`(string)
+#### group_prefix(string)
 
 
 Appends a prefix to the name of the group the statistic belongs to.
@@ -101,7 +101,7 @@ Appends a prefix to the name of the group the statistic belongs to.
 *The default value is "" (no group prefix).*
 
 
-**Example: Set `group_prefix` parameter**
+**Example: Set group_prefix parameter**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("prometheus", "group_prefix", "opensips")
 ```
 
 
-#### `delimiter`(string)
+#### delimiter(string)
 
 
 Specifies the delimiter to be used to separate *prefix*
@@ -121,7 +121,7 @@ Specifies the delimiter to be used to separate *prefix*
 *The default value is "_".*
 
 
-**Example: Set `delimiter` parameter**
+**Example: Set delimiter parameter**
 
 
 ```opensips
@@ -131,7 +131,7 @@ modparam("prometheus", "delimiter", "-")
 ```
 
 
-#### `group_label`(string)
+#### group_label(string)
 
 
 Specifies the label used to store the group when *group_mode* is 2.
@@ -140,7 +140,7 @@ Specifies the label used to store the group when *group_mode* is 2.
 *The default value is "group".*
 
 
-**Example: Set `group_label` parameter**
+**Example: Set group_label parameter**
 
 
 ```opensips
@@ -150,7 +150,7 @@ modparam("prometheus", "group_label", "grp")
 ```
 
 
-#### `group_mode`(int)
+#### group_mode(int)
 
 
 Specifies how the group of the statistic should be provisioned to
@@ -170,7 +170,7 @@ group_label
 *The default value is 0 (do not specify the group).*
 
 
-**Example: Set `group_mode` parameter**
+**Example: Set group_mode parameter**
 
 
 ```opensips
@@ -180,7 +180,7 @@ modparam("prometheus", "group_mode", 1)
 ```
 
 
-#### `statistics`(string)
+#### statistics(string)
 
 
 The statistics that are being exported by OpenSIPS, separated by space.
@@ -199,7 +199,7 @@ This parameter can be defined multiple times.
 *The default value is empty: no metric is exported.*
 
 
-**Example: Set `statistics` parameter**
+**Example: Set statistics parameter**
 
 
 ```opensips
@@ -210,7 +210,7 @@ modparam("prometheus", "statistics", "active_dialogs load:")
 ```
 
 
-#### `labels`(string)
+#### labels(string)
 
 
 Rules that define how to convert the name of a statistic
@@ -256,7 +256,7 @@ This parameter can be defined multiple times, even for a single group.
 *The default value is empty: statistic name is provided.*
 
 
-**Example: Set `statistics` parameter**
+**Example: Set statistics parameter**
 
 
 ```opensips
@@ -267,7 +267,7 @@ modparam("prometheus", "labels", "group: /^(.*)_(.*)$/\1:gateway=\"\2\"/")
 ```
 
 
-#### `script_route`(string)
+#### script_route(string)
 
 
 Specifies the route name to be used to for adding custom prometheus information.
@@ -276,7 +276,7 @@ Specifies the route name to be used to for adding custom prometheus information.
 *The default value is "" - no custom route called.*
 
 
-**Example: Set `script_route` parameter**
+**Example: Set script_route parameter**
 
 
 ```opensips
@@ -286,7 +286,7 @@ modparam("prometheus", "script_route", "my_custom_prometheus_route")
 ```
 
 
-#### `script_route_avp_result`(string)
+#### script_route_avp_result(string)
 
 
 Specifies the AVP spec name to be used to for returning custom prometheus information.
@@ -298,7 +298,7 @@ The AVP is expected to contain a JSON format, containing an array of arrays of c
 *The default value is "" - no custom route called.*
 
 
-**Example: Set `script_route` parameter**
+**Example: Set script_route parameter**
 
 
 ```opensips

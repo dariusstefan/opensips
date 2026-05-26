@@ -93,7 +93,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `reliable_mode` (integer)
+#### reliable_mode (integer)
 
 
 This parameter controls the way the
@@ -117,7 +117,7 @@ Note that if you need a reliable communication with
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `reliable_mode` parameter**
+**Example: Set reliable_mode parameter**
 
 
 ```opensips
@@ -127,7 +127,7 @@ modparam("event_stream", "reliable_mode", yes)
 ```
 
 
-#### `timeout` (integer)
+#### timeout (integer)
 
 
 Specified the amount of milliseconds the module
@@ -146,7 +146,7 @@ NOTE that if the event is not using names for its parameters,
 *Default value is "1000 milliseconds = 1 second".*
 
 
-**Example: Set `timeout` parameter**
+**Example: Set timeout parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("event_stream", "timeout", 200)
 ```
 
 
-#### `event_param` (string)
+#### event_param (string)
 
 
 By default, the name of the event subscribed to is not
@@ -170,7 +170,7 @@ By default, the name of the event subscribed to is not
 *Default value is "disabled" - event is not added.*
 
 
-**Example: Set `event_param` parameter**
+**Example: Set event_param parameter**
 
 
 ```opensips

@@ -48,7 +48,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `alloc_limit` (integer)
+#### alloc_limit (integer)
 
 
 Since the library does not support a function to return the number of rows
@@ -63,7 +63,7 @@ Since the library does not support a function to return the number of rows
 *Default value is 10.*
 
 
-**Example: Set `alloc_limit` parameter**
+**Example: Set alloc_limit parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ modparam("db_sqlite", "alloc_limit", 25)
 ```
 
 
-#### `load_extension` (string)
+#### load_extension (string)
 
 
 This parameter enables extension loading, similiar to ".load" functionality in sqlite3,
@@ -88,7 +88,7 @@ This parameter enables extension loading, similiar to ".load" functionality in s
 *By default, no extension is loaded.*
 
 
-**Example: Set `db_sqlite_alloc_limit` parameter**
+**Example: Set db_sqlite_alloc_limit parameter**
 
 
 ```opensips

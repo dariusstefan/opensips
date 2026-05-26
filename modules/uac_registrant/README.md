@@ -90,7 +90,7 @@ None.
 ### Exported Parameters
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 The size of the hash table internally used to keep the registrants.
@@ -101,7 +101,7 @@ The size of the hash table internally used to keep the registrants.
 *Default value is 1.*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("uac_registrant", "hash_size", 2)
 ```
 
 
-#### `timer_interval` (integer)
+#### timer_interval (integer)
 
 
 Defines the periodic timer for checking the registrations status.
@@ -120,7 +120,7 @@ Defines the periodic timer for checking the registrations status.
 *Default value is 100.*
 
 
-**Example: Set `timer_interval` parameter**
+**Example: Set timer_interval parameter**
 
 
 ```opensips
@@ -130,7 +130,7 @@ modparam("uac_registrant", "timer_interval", 120)
 ```
 
 
-#### `failure_retry_interval` (integer)
+#### failure_retry_interval (integer)
 
 
 Defines a custom interval to retry the registration upon error/failure.
@@ -142,7 +142,7 @@ Defines a custom interval to retry the registration upon error/failure.
 *Default value is 0 (not set).*
 
 
-**Example: Set `failure_retry_interval` parameter**
+**Example: Set failure_retry_interval parameter**
 
 
 ```opensips
@@ -152,7 +152,7 @@ modparam("uac_registrant", "failure_retry_interval", 3600)
 ```
 
 
-#### `enable_clustering` (integer)
+#### enable_clustering (integer)
 
 
 This parameter enables the clustering support in the module. This is
@@ -167,7 +167,7 @@ This parameter enables the clustering support in the module. This is
 *Default value is 0 / off.*
 
 
-**Example: Set `enable_clustering` parameter**
+**Example: Set enable_clustering parameter**
 
 
 ```opensips
@@ -177,7 +177,7 @@ modparam("uac_registrant", "enable_clustering", 1)
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Database where to load the registrants from.
@@ -196,7 +196,7 @@ modparam("uac_registrant", "db_url", "mysql://user:passw@localhost/database")
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 The database table that holds the registrant records.
@@ -215,7 +215,7 @@ modparam("uac_registrant", "table_name", "my_registrant")
 ```
 
 
-#### `registrar_column` (string)
+#### registrar_column (string)
 
 
 The column's name in the database storing the
@@ -236,7 +236,7 @@ modparam("uac_registrant", "registrar_column", "registrant_uri")
 ```
 
 
-#### `proxy_column` (string)
+#### proxy_column (string)
 
 
 The column's name in the database storing the
@@ -258,7 +258,7 @@ modparam("uac_registrant", "proxy_column", "proxy_uri")
 ```
 
 
-#### `aor_column` (string)
+#### aor_column (string)
 
 
 The column's name in the database storing the
@@ -280,7 +280,7 @@ modparam("uac_registrant", "aor_column", "to_uri")
 ```
 
 
-#### `third_party_registrant_column` (string)
+#### third_party_registrant_column (string)
 
 
 The column's name in the database storing the
@@ -304,7 +304,7 @@ modparam("uac_registrant", "third_party_registrant_column", "from_uri")
 ```
 
 
-#### `username_column` (string)
+#### username_column (string)
 
 
 The column's name in the database storing the
@@ -324,7 +324,7 @@ modparam("uac_registrant", "username_column", "auth_username")
 ```
 
 
-#### `password_column` (string)
+#### password_column (string)
 
 
 The column's name in the database storing the
@@ -344,7 +344,7 @@ modparam("uac_registrant", "password_column", "auth_passowrd")
 ```
 
 
-#### `binding_URI_column` (string)
+#### binding_URI_column (string)
 
 
 The column's name in the database storing the
@@ -366,7 +366,7 @@ modparam("uac_registrant", "binding_URI_column", "contact_uri")
 ```
 
 
-#### `binding_params_column` (string)
+#### binding_params_column (string)
 
 
 The column's name in the database storing the
@@ -406,7 +406,7 @@ modparam("uac_registrant", "binding_params_column", "contact_params")
 ```
 
 
-#### `expiry_column` (string)
+#### expiry_column (string)
 
 
 The column's name in the database storing the
@@ -426,7 +426,7 @@ modparam("uac_registrant", "expiry_column", "registration_timeout")
 ```
 
 
-#### `forced_socket_column` (string)
+#### forced_socket_column (string)
 
 
 The column's name in the database storing the
@@ -449,7 +449,7 @@ modparam("uac_registrant", "forced_socket_column", "fs")
 ```
 
 
-#### `cluster_shtag_column` (string)
+#### cluster_shtag_column (string)
 
 
 The column's name in the database storing the
@@ -471,7 +471,7 @@ modparam("uac_registrant", "cluster_shtag_column", "sh")
 ```
 
 
-#### `state_column` (string)
+#### state_column (string)
 
 
 The column's name in the database storing the current state of the
@@ -502,7 +502,7 @@ None to be used in configuration file.
 ### Exported MI Functions
 
 
-#### `reg_list`
+#### reg_list
 
 
 Lists the registrant records and their status.
@@ -540,7 +540,7 @@ opensips-cli -x mi reg_list sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip
 ```
 
 
-#### `reg_reload`
+#### reg_reload
 
 
 Reloads the registrant records from the database.
@@ -578,7 +578,7 @@ opensips-cli -x mi reg_leload sip:alice@opensips.org  sip:alice@127.0.0.1:5060 s
 ```
 
 
-#### `reg_enable`
+#### reg_enable
 
 
 Enables a specific registrant. OpenSIPS will immediately send
@@ -606,7 +606,7 @@ opensips-cli -x mi reg_enable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 s
 ```
 
 
-#### `reg_disable`
+#### reg_disable
 
 
 Disables a specific registrant. OpenSIPS will immediately send
@@ -643,7 +643,7 @@ opensips-cli -x mi reg_disable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 
 ```
 
 
-#### `reg_force_register`
+#### reg_force_register
 
 
 Forces the re-registration (or registation) of a specific 

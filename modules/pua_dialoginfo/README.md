@@ -189,7 +189,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `include_callid` (int)
+#### include_callid (int)
 
 
 If this parameter is set, the optional call-id will be put into the
@@ -199,7 +199,7 @@ If this parameter is set, the optional call-id will be put into the
 *Default value is "1".*
 
 
-**Example: Set `include_callid` parameter**
+**Example: Set include_callid parameter**
 
 
 ```opensips
@@ -209,7 +209,7 @@ modparam("pua_dialoginfo", "include_callid", 0)
 ```
 
 
-#### `include_tags` (int)
+#### include_tags (int)
 
 
 If this parameter is set, the local and remote tag will be put
@@ -219,7 +219,7 @@ If this parameter is set, the local and remote tag will be put
 *Default value is "1".*
 
 
-**Example: Set `include_tags` parameter**
+**Example: Set include_tags parameter**
 
 
 ```opensips
@@ -229,7 +229,7 @@ modparam("pua_dialoginfo", "include_tags", 0)
 ```
 
 
-#### `include_localremote` (int)
+#### include_localremote (int)
 
 
 If this parameter is set, the optional local and remote elements
@@ -240,7 +240,7 @@ If this parameter is set, the optional local and remote elements
 *Default value is "1".*
 
 
-**Example: Set `include_localremote` parameter**
+**Example: Set include_localremote parameter**
 
 
 ```opensips
@@ -250,7 +250,7 @@ modparam("pua_dialoginfo", "include_localremote", 0)
 ```
 
 
-#### `caller_confirmed` (int)
+#### caller_confirmed (int)
 
 
 Usually the dialog-info of the caller will be 
@@ -267,7 +267,7 @@ Usually the dialog-info of the caller will be
 *Default value is "0".*
 
 
-**Example: Set `caller_confirmed` parameter**
+**Example: Set caller_confirmed parameter**
 
 
 ```opensips
@@ -277,7 +277,7 @@ modparam("pua_dialoginfo", "caller_confirmed", 1)
 ```
 
 
-#### `publish_on_trying` (int)
+#### publish_on_trying (int)
 
 
 Usually the dialog-info of the caller will be
@@ -296,7 +296,7 @@ The intended purpose of this parameter is to reduce the rate of notifications
 *Default value is "0".*
 
 
-**Example: Set `publish_on_trying` parameter to 0**
+**Example: Set publish_on_trying parameter to 0**
 
 
 ```opensips
@@ -334,7 +334,7 @@ modparam("pua_dialoginfo", "publish_on_trying", 0)
 ```
 
 
-**Example: Set `publish_on_trying` parameter to 1**
+**Example: Set publish_on_trying parameter to 1**
 
 
 ```opensips
@@ -375,7 +375,7 @@ modparam("pua_dialoginfo", "publish_on_trying", 1)
 ```
 
 
-#### `nopublish_flag` (str)
+#### nopublish_flag (str)
 
 
 By default, reINVITEs will trigger a PUBLISH. They are actually
@@ -387,7 +387,7 @@ By default, reINVITEs will trigger a PUBLISH. They are actually
 			specific reINVITE.
 
 
-**Example: Set `nopublish_flag` parameter**
+**Example: Set nopublish_flag parameter**
 
 
 ```opensips
@@ -397,14 +397,14 @@ modparam("pua_dialoginfo", "nopublish_flag", "no_publish")
 ```
 
 
-#### `presence_server` (string)
+#### presence_server (string)
 
 
 The address of the presence server, where the PUBLISH messages
 		should be sent (not compulsory).
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -414,7 +414,7 @@ modparam("pua_dialoginfo", "presence_server", "sip:ps@opensips.org:5060")
 ```
 
 
-#### `caller_spec_param` (string)
+#### caller_spec_param (string)
 
 
 The name of the pseudovariable that will hold a custom caller URI.
@@ -426,7 +426,7 @@ The name of the pseudovariable that will hold a custom caller URI.
 		"display_name<sip_uri>"  or "sip_uri".
 
 
-**Example: Set `caller_spec_param` parameter**
+**Example: Set caller_spec_param parameter**
 
 
 ```opensips
@@ -437,7 +437,7 @@ modparam("pua_dialoginfo", "caller_spec_param", "$avp(10)")
 ```
 
 
-#### `callee_spec_param` (string)
+#### callee_spec_param (string)
 
 
 The name of the pseudovariable that will hold the callee URI.
@@ -447,7 +447,7 @@ The name of the pseudovariable that will hold the callee URI.
 		the same as described in caller_spec_param section.
 
 
-**Example: Set `caller_spec_param` parameter**
+**Example: Set caller_spec_param parameter**
 
 
 ```opensips
@@ -458,7 +458,7 @@ modparam("pua_dialoginfo", "callee_spec_param", "$avp(11)")
 ```
 
 
-#### `osips_ps` (int)
+#### osips_ps (int)
 
 
 It is advisable to specify if you use a different presence server
@@ -472,7 +472,7 @@ It is advisable to specify if you use a different presence server
 *Default value is "1".*
 
 
-**Example: Set `osips_ps` parameter**
+**Example: Set osips_ps parameter**
 
 
 ```opensips
@@ -486,7 +486,7 @@ modparam("pua_dialoginfo", "osips_ps", 0)
 ### Exported Functions
 
 
-#### `dialoginfo_set([side])`
+#### dialoginfo_set([side])
 
 
 This function must be called for INVITE messages that initialize a
@@ -501,7 +501,7 @@ Meaning of the parameters:
 			be published.
 
 
-**Example: `dialoginfo_set` usage**
+**Example: dialoginfo_set usage**
 
 
 ```opensips
@@ -514,7 +514,7 @@ Meaning of the parameters:
 ```
 
 
-#### `dialoginfo_set_branch_callee(callee)`
+#### dialoginfo_set_branch_callee(callee)
 
 
 This function is to be used only from a branch route for setting 
@@ -535,7 +535,7 @@ Meaning of the parameters:
 			'uri', as in the To or From headers)
 
 
-**Example: `dialoginfo_set_branch_callee` usage**
+**Example: dialoginfo_set_branch_callee usage**
 
 
 ```
@@ -551,7 +551,7 @@ branch_route[out]
 ```
 
 
-#### `dialoginfo_mute_branch([side])`
+#### dialoginfo_mute_branch([side])
 
 
 This function must be called for INVITE messages, in the branch route
@@ -567,7 +567,7 @@ Meaning of the parameters:
 			both sides will be muted.
 
 
-**Example: `dialoginfo_mute_branch` usage**
+**Example: dialoginfo_mute_branch usage**
 
 
 ```

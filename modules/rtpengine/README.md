@@ -91,7 +91,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `rtpengine_sock` (string)
+#### rtpengine_sock (string)
 
 
 Definition of socket(s) used to connect to (a set) RTP proxy. It may
@@ -103,7 +103,7 @@ Definition of socket(s) used to connect to (a set) RTP proxy. It may
 *Default value is "NONE" (disabled).*
 
 
-**Example: Set `rtpengine_sock` parameter**
+**Example: Set rtpengine_sock parameter**
 
 
 ```opensips
@@ -122,7 +122,7 @@ modparam("rtpengine", "rtpengine_sock",
 ```
 
 
-#### `rtpengine_disable_tout` (integer)
+#### rtpengine_disable_tout (integer)
 
 
 Once an RTP proxy was found unreachable and marked as disabled, the rtpengine
@@ -133,7 +133,7 @@ Once an RTP proxy was found unreachable and marked as disabled, the rtpengine
 *Default value is "60".*
 
 
-**Example: Set `rtpengine_disable_tout` parameter**
+**Example: Set rtpengine_disable_tout parameter**
 
 
 ```opensips
@@ -143,7 +143,7 @@ modparam("rtpengine", "rtpengine_disable_tout", 20)
 ```
 
 
-#### `rtpengine_tout` (integer)
+#### rtpengine_tout (integer)
 
 
 Timeout value in waiting for reply from RTP proxy.
@@ -152,7 +152,7 @@ Timeout value in waiting for reply from RTP proxy.
 *Default value is "1".*
 
 
-**Example: Set `rtpengine_tout` parameter**
+**Example: Set rtpengine_tout parameter**
 
 
 ```opensips
@@ -162,7 +162,7 @@ modparam("rtpengine", "rtpengine_tout", 2)
 ```
 
 
-#### `rtpengine_retr` (integer)
+#### rtpengine_retr (integer)
 
 
 How many times the module should retry to send and receive after
@@ -172,7 +172,7 @@ How many times the module should retry to send and receive after
 *Default value is "5".*
 
 
-**Example: Set `rtpengine_retr` parameter**
+**Example: Set rtpengine_retr parameter**
 
 
 ```opensips
@@ -182,7 +182,7 @@ modparam("rtpengine", "rtpengine_retr", 2)
 ```
 
 
-#### `rtpengine_timer_interval` (integer)
+#### rtpengine_timer_interval (integer)
 
 
 Frequency to scan rtpengine sets for disabled node probing. Probing is done
@@ -195,7 +195,7 @@ Frequency to scan rtpengine sets for disabled node probing. Probing is done
 Default value is "5".
 
 
-**Example: Set `rtpengine_timer_interval` parameter**
+**Example: Set rtpengine_timer_interval parameter**
 
 
 ```opensips
@@ -205,7 +205,7 @@ modparam("rtpengine", "rtpengine_timer_interval", 1)
 ```
 
 
-#### `notification_sock` (string)
+#### notification_sock (string)
 
 
 An UDP socket formatted as *IP:port*
@@ -220,7 +220,7 @@ Every notification received from RTPengine will trigger an
 *Default value is "none" - notifications are ignored.*
 
 
-**Example: Set `notification_sock` parameter**
+**Example: Set notification_sock parameter**
 
 
 ```opensips
@@ -230,7 +230,7 @@ modparam("rtpengine", "notification_sock", "127.0.0.1:9999")
 ```
 
 
-#### `extra_id_pv` (string)
+#### extra_id_pv (string)
 
 
 The parameter sets the PV definition to use when the "via-branch=extra"
@@ -241,7 +241,7 @@ The parameter sets the PV definition to use when the "via-branch=extra"
 Default is empty, the "via-branch=extra" option may not be used then.
 
 
-**Example: Set `extra_id_pv` parameter**
+**Example: Set extra_id_pv parameter**
 
 
 ```opensips
@@ -251,7 +251,7 @@ modparam("rtpengine", "extra_id_pv", "$avp(extra_id)")
 ```
 
 
-#### `setid_avp` (string)
+#### setid_avp (string)
 
 
 The parameter defines an AVP that, if set,
@@ -264,7 +264,7 @@ The parameter defines an AVP that, if set,
 There is no default value.
 
 
-**Example: Set `setid_avp` parameter**
+**Example: Set setid_avp parameter**
 
 
 ```opensips
@@ -274,7 +274,7 @@ modparam("rtpengine", "setid_avp", "$avp(setid)")
 ```
 
 
-#### `error_pv` (string)
+#### error_pv (string)
 
 
 The parameter defines a variable that shall be populated
@@ -284,7 +284,7 @@ The parameter defines a variable that shall be populated
 There is no default value.
 
 
-**Example: Set `error_pv` parameter**
+**Example: Set error_pv parameter**
 
 
 ```opensips
@@ -294,7 +294,7 @@ modparam("rtpengine", "error_pv", "$var(rtpengine_error)")
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 Database URL, used to load RTPEngines sockets
@@ -307,7 +307,7 @@ Default value is "NULL", no database
 			is used.
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -318,7 +318,7 @@ modparam("rtpengine", "db_url",
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 The table where the RTPEngines sockets are stored.
@@ -328,7 +328,7 @@ The table where the RTPEngines sockets are stored.
 Default value is "rtpengine".
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -338,7 +338,7 @@ modparam("rtpengine", "db_table", "rtpengine_new")
 ```
 
 
-#### `socket_column` (string)
+#### socket_column (string)
 
 
 The name of the rtpengine socket column in the database table.
@@ -347,7 +347,7 @@ The name of the rtpengine socket column in the database table.
 Default value is "socket".
 
 
-**Example: Set `socket_column` parameter**
+**Example: Set socket_column parameter**
 
 
 ```opensips
@@ -357,7 +357,7 @@ modparam("rtpengine", "socket_column", "sock")
 ```
 
 
-#### `set_column` (string)
+#### set_column (string)
 
 
 The name of the rtpengine set column in the database table.
@@ -366,7 +366,7 @@ The name of the rtpengine set column in the database table.
 Default value is "set_id".
 
 
-**Example: Set `set_column` parameter**
+**Example: Set set_column parameter**
 
 
 ```opensips
@@ -379,7 +379,7 @@ modparam("rtpengine", "set_column", "set_new")
 ### Exported Functions
 
 
-#### `rtpengine_use_set(setid)`
+#### rtpengine_use_set(setid)
 
 
 Sets the ID of the RTP proxy set to be used for the next
@@ -391,7 +391,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		BRANCH_ROUTE.
 
 
-**Example: `rtpengine_use_set` usage**
+**Example: rtpengine_use_set usage**
 
 
 ```
@@ -402,7 +402,7 @@ rtpengine_offer();
 ```
 
 
-#### `rtpengine_offer([flags[, sock_var[, sdp_pvar[, body]]]])`
+#### rtpengine_offer([flags[, sock_var[, sdp_pvar[, body]]]])
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -613,7 +613,7 @@ Note: Please note, that this will only work properly with non-dual-stack user-ag
 This function can be used from ALL_ROUTES.
 
 
-**Example: `rtpengine_offer` usage**
+**Example: rtpengine_offer usage**
 
 
 ```opensips
@@ -650,7 +650,7 @@ onreply_route[2]
 ```
 
 
-**Example: `rtpengine_offer` usage with body replace**
+**Example: rtpengine_offer usage with body replace**
 
 
 ```opensips
@@ -666,7 +666,7 @@ if (rtpengine_offer(, $var(socket), $var(body), $rb)) {
 ```
 
 
-**Example: `rtpengine_offer` usage with call recording**
+**Example: rtpengine_offer usage with call recording**
 
 
 ```
@@ -687,7 +687,7 @@ rtpengine_offer($var(rtpengine_flags));
 ```
 
 
-**Example: `rtpengine_offer` usage for transcoding**
+**Example: rtpengine_offer usage for transcoding**
 
 
 ```
@@ -701,7 +701,7 @@ rtpengine_offer("... codec-mask-PCMA codec-strip-opus transcode-opus ...");
 ```
 
 
-#### `rtpengine_answer([flags[, sock_pvar[, sdp_pvar[, body]]]])`
+#### rtpengine_answer([flags[, sock_pvar[, sdp_pvar[, body]]]])
 
 
 Rewrites SDP body to ensure that media is passed through
@@ -718,13 +718,13 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `rtpengine_answer` usage**
+**Example: rtpengine_answer usage**
 
 
 See rtpengine_offer() function example above for examples.
 
 
-#### `rtpengine_delete([flags[, sock_var]])`
+#### rtpengine_delete([flags[, sock_var]])
 
 
 Tears down the RTPEngine session for the current call.
@@ -737,7 +737,7 @@ See rtpengine_offer() function description above for the meaning of the
 This function can be used from ALL_ROUTES.
 
 
-**Example: `rtpengine_delete` usage**
+**Example: rtpengine_delete usage**
 
 
 ```
@@ -747,7 +747,7 @@ rtpengine_delete();
 ```
 
 
-#### `rtpengine_manage([flags[, sock_var[, sdp_var[, body]]]])`
+#### rtpengine_manage([flags[, sock_var[, sdp_var[, body]]]])
 
 
 Manage the RTPEngine session - it combines the functionality of
@@ -775,7 +775,7 @@ Functionality:
 This function can be used from ALL_ROUTES.
 
 
-**Example: `rtpengine_manage` usage**
+**Example: rtpengine_manage usage**
 
 
 ```
@@ -785,7 +785,7 @@ rtpengine_manage();
 ```
 
 
-#### `rtpengine_start_recording([flags [, sock_var]])`
+#### rtpengine_start_recording([flags [, sock_var]])
 
 
 This function will send a signal to the RTP proxy to record
@@ -805,7 +805,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `rtpengine_start_recording` usage**
+**Example: rtpengine_start_recording usage**
 
 
 ```
@@ -816,7 +816,7 @@ rtpengine_start_recording();
 ```
 
 
-#### `rtpengine_stop_recording([flags [, sock_var]])`
+#### rtpengine_stop_recording([flags [, sock_var]])
 
 
 This function will send a signal to the RTP proxy to stop
@@ -836,7 +836,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `rtpengine_stop_recording` usage**
+**Example: rtpengine_stop_recording usage**
 
 
 ```
@@ -847,7 +847,7 @@ rtpengine_stop_recording();
 ```
 
 
-#### `rtpengine_play_media(flags, [duration_spec[, sock_var[, sockvar]]])`
+#### rtpengine_play_media(flags, [duration_spec[, sock_var[, sockvar]]])
 
 
 This function will start playing a media file to one of the endpoints.
@@ -880,7 +880,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: Ringback tone using `rtpengine_play_media`**
+**Example: Ringback tone using rtpengine_play_media**
 
 
 ```opensips
@@ -892,7 +892,7 @@ if (is_method("INVITE") && !has_totag())
 ```
 
 
-**Example: Manage music on hold using `rtpengine_play_media`**
+**Example: Manage music on hold using rtpengine_play_media**
 
 
 ```opensips
@@ -911,7 +911,7 @@ if (is_method("INVITE") && has_totag()) {
 ```
 
 
-#### `rtpengine_stop_media([flags[, sockvar]])`
+#### rtpengine_stop_media([flags[, sockvar]])
 
 
 This function will stop playing a media file previously started
@@ -925,7 +925,7 @@ This function will stop playing a media file previously started
 This function can be used from any route.
 
 
-**Example: Ringback tone stop using `rtpengine_stop_media`**
+**Example: Ringback tone stop using rtpengine_stop_media**
 
 
 ```opensips
@@ -937,7 +937,7 @@ if (is_method("INVITE") && $rs == 200)
 ```
 
 
-#### `rtpengine_block_media([flags[, sockvar]])`
+#### rtpengine_block_media([flags[, sockvar]])
 
 
 This function will block the media sent from one of the endpoints.
@@ -948,7 +948,7 @@ This function will block the media sent from one of the endpoints.
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_block_media` usage**
+**Example: Example of rtpengine_block_media usage**
 
 
 ```
@@ -959,7 +959,7 @@ rtpengine_block_media();
 ```
 
 
-#### `rtpengine_unblock_media([flags[, sockvar]])`
+#### rtpengine_unblock_media([flags[, sockvar]])
 
 
 This function will resume/unblock the media sent from one of the endpoints.
@@ -970,7 +970,7 @@ This function will resume/unblock the media sent from one of the endpoints.
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_unblock_media` usage**
+**Example: Example of rtpengine_unblock_media usage**
 
 
 ```
@@ -981,7 +981,7 @@ rtpengine_unblock_media();
 ```
 
 
-#### `rtpengine_block_dtmf([flags[, sockvar]])`
+#### rtpengine_block_dtmf([flags[, sockvar]])
 
 
 This function will block the DTMF media sent from one of the endpoints.
@@ -992,7 +992,7 @@ This function will block the DTMF media sent from one of the endpoints.
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_block_dtmf` usage**
+**Example: Example of rtpengine_block_dtmf usage**
 
 
 ```
@@ -1003,7 +1003,7 @@ rtpengine_block_dtmf();
 ```
 
 
-#### `rtpengine_unblock_dtmf([flags[, sockvar]])`
+#### rtpengine_unblock_dtmf([flags[, sockvar]])
 
 
 This function will resume/unblock the DTMF media sent from one of the endpoints.
@@ -1014,7 +1014,7 @@ This function will resume/unblock the DTMF media sent from one of the endpoints.
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_unblock_dtmf` usage**
+**Example: Example of rtpengine_unblock_dtmf usage**
 
 
 ```
@@ -1025,7 +1025,7 @@ rtpengine_unblock_dtmf();
 ```
 
 
-#### `rtpengine_start_forwarding([flags[, sockvar]])`
+#### rtpengine_start_forwarding([flags[, sockvar]])
 
 
 This function will start forwarding the media to a TLS destination specified
@@ -1037,7 +1037,7 @@ This function will start forwarding the media to a TLS destination specified
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_start_forwarding` usage**
+**Example: Example of rtpengine_start_forwarding usage**
 
 
 ```
@@ -1048,7 +1048,7 @@ rtpengine_start_forwarding();
 ```
 
 
-#### `rtpengine_stop_forwarding([flags[, sockvar]])`
+#### rtpengine_stop_forwarding([flags[, sockvar]])
 
 
 This function will stop forwarding of the media previously started using the
@@ -1058,7 +1058,7 @@ This function will stop forwarding of the media previously started using the
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_stop_forwarding` usage**
+**Example: Example of rtpengine_stop_forwarding usage**
 
 
 ```
@@ -1069,7 +1069,7 @@ rtpengine_stop_forwarding();
 ```
 
 
-#### `rtpengine_play_dtmf(code, [flags[, sockvar]])`
+#### rtpengine_play_dtmf(code, [flags[, sockvar]])
 
 
 This function instructs RTP to send the DTMF *code*
@@ -1090,7 +1090,7 @@ This function can be used to convert SIP INFO DTMF keys to RTP DTMF.
 This function can be used from any route.
 
 
-**Example: Example of `rtpengine_play_dtmf` usage**
+**Example: Example of rtpengine_play_dtmf usage**
 
 
 ```
@@ -1104,7 +1104,7 @@ rtpengine_play_dtmf("0"); # send the 0 code upstream
 ### Exported Pseudo-Variables
 
 
-#### `$rtpstat`
+#### $rtpstat
 
 
 Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP proxy
@@ -1122,7 +1122,7 @@ Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP p
 ```
 
 
-#### `$rtpstat(STAT)[index]`
+#### $rtpstat(STAT)[index]
 
 
 Returnes one of the pre-fined statistics listed below:
@@ -1213,7 +1213,7 @@ Returnes one of the pre-fined statistics listed below:
 ```
 
 
-#### `$rtpquery`
+#### $rtpquery
 
 
 Does a Query command to the RTP proxy and returns the answer in a JSON format.
@@ -1241,7 +1241,7 @@ You can use a *$json()* variable to parse
 ### Exported MI Functions
 
 
-#### `rtpengine_enable`
+#### rtpengine_enable
 
 
 Enables/disables a RTP proxy.
@@ -1260,7 +1260,7 @@ NOTE: if a RTP proxy is defined multiple times (in the same or
 			different set), all of its instances will be enabled/disabled IF no set ID is provided.
 
 
-**Example: `rtpengine_enable` usage**
+**Example: rtpengine_enable usage**
 
 
 ```
@@ -1274,7 +1274,7 @@ $ opensips-cli -x mi rtpengine_enable url=udp:192.168.2.133:8081 enable=1 setid=
 ```
 
 
-#### `rtpengine_show`
+#### rtpengine_show
 
 
 Displays all the RTP proxies and their information: set and
@@ -1284,7 +1284,7 @@ Displays all the RTP proxies and their information: set and
 No parameter.
 
 
-**Example: `rtpengine_show` usage**
+**Example: rtpengine_show usage**
 
 
 ```
@@ -1295,7 +1295,7 @@ $ opensips-cli -x mi rtpengine_show
 ```
 
 
-#### `rtpengine_reload`
+#### rtpengine_reload
 
 
 Reloads all rtpengine sets from the database. Used only when the
@@ -1314,7 +1314,7 @@ Parameters:
 No parameter.
 
 
-**Example: `rtpengine_reload` usage**
+**Example: rtpengine_reload usage**
 
 
 ```
@@ -1326,7 +1326,7 @@ $ opensips-cli -x mi rtpengine_reload type=soft
 ```
 
 
-#### `teardown`
+#### teardown
 
 
 Terminates the SIP dialog by the SIP Call-ID given as parameter.
@@ -1345,7 +1345,7 @@ Note this is a just a wrapper function over the
 			RTP timeouts.
 
 
-**Example: `teardown` usage**
+**Example: teardown usage**
 
 
 ```
@@ -1359,7 +1359,7 @@ $ opensips-cli -x mi teardown Y2IwYjQ2YmE2ZDg5MWVkNDNkZGIwZjAzNGM1ZDY0ZDQ
 ### Exported Events
 
 
-#### `E_RTPENGINE_NOTIFICATION`
+#### E_RTPENGINE_NOTIFICATION
 
 
 This event is raised when a notification is received from RTPengine.
@@ -1384,7 +1384,7 @@ For a DTMF event received, you will also get the following nodes:
 - *volume* - volume of the tone
 
 
-#### `E_RTPENGINE_STATUS`
+#### E_RTPENGINE_STATUS
 
 
 This event is raised when a RTPEngine server changes it's status to

@@ -38,7 +38,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `event_heartbeat_interval` (integer)
+#### event_heartbeat_interval (integer)
 
 
 The expected interval between FreeSWITCH HEARTBEAT event arrivals.
@@ -47,7 +47,7 @@ The expected interval between FreeSWITCH HEARTBEAT event arrivals.
 *Default value is "1" (second).*
 
 
-**Example: Setting the `event_heartbeat_interval` parameter**
+**Example: Setting the event_heartbeat_interval parameter**
 
 
 ```opensips
@@ -57,7 +57,7 @@ modparam("freeswitch", "event_heartbeat_interval", 20)
 ```
 
 
-#### `esl_connect_timeout` (integer)
+#### esl_connect_timeout (integer)
 
 
 The maximally allowed duration for the establishment of an ESL connection.
@@ -66,7 +66,7 @@ The maximally allowed duration for the establishment of an ESL connection.
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the `esl_connect_timeout` parameter**
+**Example: Setting the esl_connect_timeout parameter**
 
 
 ```opensips
@@ -76,7 +76,7 @@ modparam("freeswitch", "esl_connect_timeout", 3000)
 ```
 
 
-#### `esl_cmd_timeout` (integer)
+#### esl_cmd_timeout (integer)
 
 
 The maximally allowed duration for the execution of an ESL command.
@@ -86,7 +86,7 @@ The maximally allowed duration for the execution of an ESL command.
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the `esl_cmd_timeout` parameter**
+**Example: Setting the esl_cmd_timeout parameter**
 
 
 ```opensips
@@ -96,7 +96,7 @@ modparam("freeswitch", "esl_cmd_timeout", 3000)
 ```
 
 
-#### `esl_cmd_polling_itv` (integer)
+#### esl_cmd_polling_itv (integer)
 
 
 The sleep interval used when polling for an ESL command response. Since the
@@ -108,7 +108,7 @@ The sleep interval used when polling for an ESL command response. Since the
 *Default value is "1000" (microseconds).*
 
 
-**Example: Setting the `esl_cmd_polling_itv` parameter**
+**Example: Setting the esl_cmd_polling_itv parameter**
 
 
 ```opensips

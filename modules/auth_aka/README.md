@@ -95,13 +95,13 @@ This module does not depend on any external library.
 ### Exported Parameters
 
 
-#### `default_av_mgm` (string)
+#### default_av_mgm (string)
 
 
 The default AV Manager used in case the functions do not provide them explicitly.
 
 
-**Example: `default_av_mgm` parameter usage**
+**Example: default_av_mgm parameter usage**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("auth_aka", "default_av_mgm", "diameter") # fetch AVs through the Cx in
 ```
 
 
-#### `default_qop` (string)
+#### default_qop (string)
 
 
 The default qop parameter used during challenge, if the functions
@@ -121,7 +121,7 @@ The default qop parameter used during challenge, if the functions
 Default value is *auth*.
 
 
-**Example: `default_qop` parameter usage**
+**Example: default_qop parameter usage**
 
 
 ```opensips
@@ -131,7 +131,7 @@ modparam("auth_aka", "default_qop", "auth,auth-int")
 ```
 
 
-#### `default_algorithm` (string)
+#### default_algorithm (string)
 
 
 The default algorithm to be advertise during challenge, if the
@@ -147,7 +147,7 @@ Default value is *AKAv1-MD5*.
 *WARNING:* only AKAv1* algorithms are currently supported.
 
 
-**Example: `default_algorithm` parameter usage**
+**Example: default_algorithm parameter usage**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("auth_aka", "default_algorithm", "AKAv2-MD5")
 ```
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 The size of the hash that stores the AVs for each user.
@@ -167,7 +167,7 @@ The size of the hash that stores the AVs for each user.
 Default value is *4096*.
 
 
-**Example: `hash_size` parameter usage**
+**Example: hash_size parameter usage**
 
 
 ```opensips
@@ -177,7 +177,7 @@ modparam("auth_aka", "hash_size", 1024)
 ```
 
 
-#### `sync_timeout` (integer)
+#### sync_timeout (integer)
 
 
 The amount of milliseconds a synchronous call should
@@ -191,7 +191,7 @@ Must be a positive value. A value of
 Default value is *100* ms.
 
 
-**Example: `sync_timeout` parameter usage**
+**Example: sync_timeout parameter usage**
 
 
 ```opensips
@@ -201,7 +201,7 @@ modparam("auth_aka", "sync_timeout", 200)
 ```
 
 
-#### `async_timeout` (integer)
+#### async_timeout (integer)
 
 
 The amount of milliseconds an asynchronous call should
@@ -219,7 +219,7 @@ Must be a positive value, greater than 0.
 Default value is *1000* ms.
 
 
-**Example: `async_timeout` parameter usage**
+**Example: async_timeout parameter usage**
 
 
 ```opensips
@@ -228,7 +228,7 @@ modparam("auth_aka", "async_timeout", 2000)
 ```
 
 
-#### `unused_timeout` (integer)
+#### unused_timeout (integer)
 
 
 The amount of seconds an authentication vector that has
@@ -242,7 +242,7 @@ Must be a positive value, greater than 0.
 Default value is *60* s.
 
 
-**Example: `unused_timeout` parameter usage**
+**Example: unused_timeout parameter usage**
 
 
 ```opensips
@@ -251,7 +251,7 @@ modparam("auth_aka", "unused_timeout", 120)
 ```
 
 
-#### `unused_timeout` (integer)
+#### unused_timeout (integer)
 
 
 The amount of seconds an authentication vector that is being
@@ -266,7 +266,7 @@ Must be a positive value, greater than 0.
 Default value is *30* s.
 
 
-**Example: `pending_timeout` parameter usage**
+**Example: pending_timeout parameter usage**
 
 
 ```opensips
@@ -278,7 +278,7 @@ modparam("auth_aka", "pending_timeout", 10)
 ### Exported Functions
 
 
-#### `aka_www_authorize([realm]])`
+#### aka_www_authorize([realm]])
 
 
 The function verifies credentials according to
@@ -330,7 +330,7 @@ If the credentials are verified successfully then the function will
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aka_www_authorize` usage**
+**Example: aka_www_authorize usage**
 
 
 ```
@@ -342,7 +342,7 @@ if (!aka_www_authorize("diameter", "siphub.com"))
 ```
 
 
-#### `aka_proxy_authorize([realm]])`
+#### aka_proxy_authorize([realm]])
 
 
 The function behaves the same as [aka www authorize](#func_aka_www_authorize),
@@ -353,7 +353,7 @@ The function behaves the same as [aka www authorize](#func_aka_www_authorize),
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aka_proxy_authorize` usage**
+**Example: aka_proxy_authorize usage**
 
 
 ```
@@ -365,7 +365,7 @@ if (!aka_proxy_authorize("siphub.com"))
 ```
 
 
-#### `aka_www_challenge([av_mgm[, realm[ ,qop[, alg]]]])`
+#### aka_www_challenge([av_mgm[, realm[ ,qop[, alg]]]])
 
 
 The function challenges a user agent. It fetches an authentication
@@ -451,7 +451,7 @@ if (!aka_www_authorize("siphub.com")) {
 ```
 
 
-#### `aka_proxy_challenge([realm]])`
+#### aka_proxy_challenge([realm]])
 
 
 The function behaves the same as [aka www challenge](#func_aka_www_challenge),
@@ -468,7 +468,7 @@ The function behaves the same as [aka www challenge](#func_aka_www_challenge),
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aka_proxy_challenge` usage**
+**Example: aka_proxy_challenge usage**
 
 
 ```
@@ -480,7 +480,7 @@ if (!aka_proxy_authorize("siphub.com"))
 ```
 
 
-#### `aka_av_add(public_identity, private_identity, authenticate, authorize, confidentiality_key, integrity_key[, algorithms])`
+#### aka_av_add(public_identity, private_identity, authenticate, authorize, confidentiality_key, integrity_key[, algorithms])
 
 
 Adds an authentication vector for the user identitied by 
@@ -511,7 +511,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `aka_av_add` usage**
+**Example: aka_av_add usage**
 
 
 ```
@@ -526,7 +526,7 @@ aka_av_add("sip:test@siphub.com", "test@siphub.com",
 ```
 
 
-#### `aka_av_drop(public_identity, private_identity, authenticate)`
+#### aka_av_drop(public_identity, private_identity, authenticate)
 
 
 Drops the authentication vector corresponding to the 
@@ -550,7 +550,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `aka_av_drop` usage**
+**Example: aka_av_drop usage**
 
 
 ```
@@ -562,7 +562,7 @@ aka_av_drop("sip:test@siphub.com", "test@siphub.com",
 ```
 
 
-#### `aka_av_drop_all(public_identity, private_identity[, count])`
+#### aka_av_drop_all(public_identity, private_identity[, count])
 
 
 Drops all authentication vectors for an user identitied by 
@@ -585,7 +585,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `aka_av_drop_all` usage**
+**Example: aka_av_drop_all usage**
 
 
 ```
@@ -596,7 +596,7 @@ aka_av_drop_all("sip:test@siphub.com", "test@siphub.com", $var(count));
 ```
 
 
-#### `aka_av_fail(public_identity, private_identity[, count])`
+#### aka_av_fail(public_identity, private_identity[, count])
 
 
 Marks the engine that an authentication vector query for a user has
@@ -624,7 +624,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `aka_av_fail` usage**
+**Example: aka_av_fail usage**
 
 
 ```
@@ -637,7 +637,7 @@ aka_av_fail("sip:test@siphub.com", "test@siphub.com", 3);
 ### Exported MI Functions
 
 
-#### `aka_av_add`
+#### aka_av_add
 
 
 Adds an Authentication Vector through the MI interface.
@@ -663,7 +663,7 @@ Parameters:
 				algorithm.
 
 
-**Example: `aka_av_add` usage**
+**Example: aka_av_add usage**
 
 
 ```
@@ -681,7 +681,7 @@ $ opensips-cli -x mi aka_av_add \
 ```
 
 
-#### `aka_av_drop`
+#### aka_av_drop
 
 
 Invalidates an Authentication Vector of an user identified
@@ -699,7 +699,7 @@ Parameters:
 				to indentify the authentication vector.
 
 
-**Example: `aka_av_drop` usage**
+**Example: aka_av_drop usage**
 
 
 ```
@@ -714,7 +714,7 @@ $ opensips-cli -x mi aka_av_drop \
 ```
 
 
-#### `aka_av_drop_all`
+#### aka_av_drop_all
 
 
 Invalidates all Authentication Vectors of an user through the
@@ -730,7 +730,7 @@ Parameters:
 				(IMPI) of the user to drop authentication vectors for.
 
 
-**Example: `aka_av_drop_all` usage**
+**Example: aka_av_drop_all usage**
 
 
 ```
@@ -744,7 +744,7 @@ $ opensips-cli -x mi aka_av_drop_all \
 ```
 
 
-#### `aka_av_fail`
+#### aka_av_fail
 
 
 Indicates the fact that the fetching of an authentication
@@ -768,7 +768,7 @@ Parameters:
 				authentication vectors failures.
 
 
-**Example: `aka_av_drop` usage**
+**Example: aka_av_drop usage**
 
 
 ```

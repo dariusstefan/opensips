@@ -75,7 +75,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `hash_size` (int)
+#### hash_size (int)
 
 
 The size of the hash table that stores the MSRP session
@@ -86,7 +86,7 @@ The size of the hash table that stores the MSRP session
 			 (1024 records).
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("msrp_ua", "hash_size", 16)
 ```
 
 
-#### `cleanup_interval` (int)
+#### cleanup_interval (int)
 
 
 The interval between full iterations of the sessions table
@@ -107,7 +107,7 @@ The interval between full iterations of the sessions table
 *Default value is "60".*
 
 
-**Example: Set `cleanup_interval` parameter**
+**Example: Set cleanup_interval parameter**
 
 
 ```opensips
@@ -118,7 +118,7 @@ modparam("msrp_ua", "cleanup_interval", 30)
 ```
 
 
-#### `max_duration` (integer)
+#### max_duration (integer)
 
 
 The maximum duration of a call. If set to 0, there will be no limitation.
@@ -137,7 +137,7 @@ modparam("msrp_ua", "max_duration", 7200)
 ```
 
 
-#### `my_uri` (string)
+#### my_uri (string)
 
 
 The MSRP URI of the OpenSIPS endpoint. This URI will be advertised in the SDP
@@ -152,7 +152,7 @@ If the port is not set explicitly, the default value of 2855 wil
 		be assumed
 
 
-**Example: `my_uri` parameter usage**
+**Example: my_uri parameter usage**
 
 
 ```opensips
@@ -162,7 +162,7 @@ modparam("msrp_ua", "my_uri", "msrp://opensips.org:2855;tcp")
 ```
 
 
-#### `advertised_contact` (string)
+#### advertised_contact (string)
 
 
 Contact to be used in the generated SIP requests. For sessions answered
@@ -174,7 +174,7 @@ This parameter is mandatory when using the
 		[mi msrp ua start session](#mi_msrp_ua_start_session) MI function.
 
 
-**Example: `advertised_contact` parameter usage**
+**Example: advertised_contact parameter usage**
 
 
 ```opensips
@@ -184,7 +184,7 @@ modparam("msrp_ua", "advertised_contact", "sip:oss@opensips.org")
 ```
 
 
-#### `relay_uri` (string)
+#### relay_uri (string)
 
 
 URI of an MSRP relay to use for both accepted and initiated
@@ -199,7 +199,7 @@ Credentials for the MSRP client are provided via the
 If not set, no relay will be used.
 
 
-**Example: `relay_uri` parameter usage**
+**Example: relay_uri parameter usage**
 
 
 ```opensips
@@ -212,7 +212,7 @@ modparam("msrp_ua", "relay_uri", "msrp://opensips.org:2856;tcp")
 ### Exported Functions
 
 
-#### `msrp_ua_answer(content_types)`
+#### msrp_ua_answer(content_types)
 
 
 This functions answers an initial INVITE offering a new MSRP
@@ -232,7 +232,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-**Example: `msrp_ua_answer()` usage**
+**Example: msrp_ua_answer() usage**
 
 
 ```opensips
@@ -248,7 +248,7 @@ if (!has_totag() && is_method("INVITE")) {
 ### Exported MI Functions
 
 
-#### `msrp_ua_send_message`
+#### msrp_ua_send_message
 
 
 Sends a new MSRP message to the peer.
@@ -292,7 +292,7 @@ opensips-cli -x mi msrp_ua_send_message \
 ```
 
 
-#### `msrp_ua_start_session`
+#### msrp_ua_start_session
 
 
 Starts a MSRP session.
@@ -330,7 +330,7 @@ opensips-cli -x mi msrp_ua_start_session \
 ```
 
 
-#### `msrp_ua_list_sessions`
+#### msrp_ua_list_sessions
 
 
 Lists information about ongoing MSRP sessions.
@@ -354,7 +354,7 @@ opensips-cli -x mi msrp_ua_list_sessions
 ```
 
 
-#### `msrp_ua_end_session`
+#### msrp_ua_end_session
 
 
 Terminate an ongoing MSRP session.
@@ -383,7 +383,7 @@ opensips-cli -x mi msrp_ua_end_session \
 ### Exported Events
 
 
-#### `E_MSRP_SESSION_NEW`
+#### E_MSRP_SESSION_NEW
 
 
 This event is triggered when a new MSRP session is successfully
@@ -405,7 +405,7 @@ Parameters:
 				by the peer in the *accept-types* SDP attribute.
 
 
-#### `E_MSRP_SESSION_END`
+#### E_MSRP_SESSION_END
 
 
 This event is triggered when an ongoing MSRP session is terminted (session
@@ -420,7 +420,7 @@ Parameters:
 				("session-id" part of the MSRP URI).
 
 
-#### `E_MSRP_MSG_RECEIVED`
+#### E_MSRP_MSG_RECEIVED
 
 
 This event is triggered when receiving a new, non-empty MSRP SEND
@@ -436,7 +436,7 @@ Parameters:
 - *body* - The actual message body.
 
 
-#### `E_MSRP_REPORT_RECEIVED`
+#### E_MSRP_REPORT_RECEIVED
 
 
 This event is triggered when:
@@ -490,7 +490,7 @@ Received MSRP requests, transaction responses and local send timeouts will be
 ### Available Functions
 
 
-#### `init_uas(msg, accept_types, hdl)`
+#### init_uas(msg, accept_types, hdl)
 
 
 This function will intialize a MSRP UA session based on a received SIP
@@ -508,7 +508,7 @@ Meaning of the parameters is as follows:
                 level notifications.
 
 
-**Example: `struct msrp_ua_handler` structure**
+**Example: struct msrp_ua_handler structure**
 
 
 ```
@@ -527,7 +527,7 @@ struct msrp_ua_handler {
 ```
 
 
-**Example: `msrp_ua_notify_cb_f` prototype**
+**Example: msrp_ua_notify_cb_f prototype**
 
 
 ```
@@ -536,7 +536,7 @@ typedef int (*msrp_ua_notify_cb_f)(struct msrp_ua_notify_params *params,
 ```
 
 
-**Example: `struct msrp_ua_notify_params` structure**
+**Example: struct msrp_ua_notify_params structure**
 
 
 ```
@@ -553,7 +553,7 @@ struct msrp_ua_notify_params {
 ```
 
 
-**Example: `enum msrp_ua_event_type`**
+**Example: enum msrp_ua_event_type**
 
 
 ```
@@ -568,7 +568,7 @@ enum msrp_ua_event_type {
 ```
 
 
-**Example: `msrp_ua_req_cb_f` prototype**
+**Example: msrp_ua_req_cb_f prototype**
 
 
 ```
@@ -576,7 +576,7 @@ typedef int (*msrp_ua_req_cb_f)(struct msrp_msg *req, void *hdl_param);
 ```
 
 
-**Example: `msrp_ua_rpl_cb_f` prototype**
+**Example: msrp_ua_rpl_cb_f prototype**
 
 
 ```
@@ -586,7 +586,7 @@ typedef int (*msrp_ua_rpl_cb_f)(struct msrp_msg *rpl, void *hdl_param);
 ```
 
 
-#### `init_uac(accept_types, from_uri, to_uri, ruri, hdl)`
+#### init_uac(accept_types, from_uri, to_uri, ruri, hdl)
 
 
 This function will intialize a MSRP UA session by sending a SIP INVITE to
@@ -609,7 +609,7 @@ Meaning of the parameters is as follows:
                 level notifications.
 
 
-#### `end_session(session_id)`
+#### end_session(session_id)
 
 
 This function terminates an MSRP session.
@@ -621,7 +621,7 @@ Meaning of the parameters is as follows:
 - *str *session_id* - MSRP UA session ID.
 
 
-#### `send_message(session_id, mime, body, failure_report, success_report)`
+#### send_message(session_id, mime, body, failure_report, success_report)
 
 
 This functions sends an MSRP SEND request to the peer.
@@ -641,7 +641,7 @@ Meaning of the parameters is as follows:
                 request an MSRP Failure Report or not.
 
 
-**Example: `enum msrp_failure_report_type`**
+**Example: enum msrp_failure_report_type**
 
 
 ```

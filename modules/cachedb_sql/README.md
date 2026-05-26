@@ -54,7 +54,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The url of the Database  that OpenSIPS will connect to in order
@@ -67,7 +67,7 @@ The format to follow is : sql:[conn_id]-dburl
 The parameter can be set multiple times to create multiple connections accessible from the OpenSIPS script.
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -94,14 +94,14 @@ cache_store("sql:2nd-postgres","counter","10");
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 The table of the Database  that OpenSIPS will connect to in order
 			to use the from script cache_store,cache_fetch, etc operations.
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -112,13 +112,13 @@ modparam("cachedb_sql", "db_table","my_table");
 ```
 
 
-#### `key_column` (string)
+#### key_column (string)
 
 
 The column where the key will be stored
 
 
-**Example: Set `key_column` parameter**
+**Example: Set key_column parameter**
 
 
 ```opensips
@@ -129,13 +129,13 @@ modparam("cachedb_sql", "key_column","some_name");
 ```
 
 
-#### `value_column` (string)
+#### value_column (string)
 
 
 The column where the value will be stored
 
 
-**Example: Set `value_column` parameter**
+**Example: Set value_column parameter**
 
 
 ```opensips
@@ -146,13 +146,13 @@ modparam("cachedb_sql", "value_column","some_name");
 ```
 
 
-#### `counter_column` (string)
+#### counter_column (string)
 
 
 The column where the counter value will be stored
 
 
-**Example: Set `counter_column` parameter**
+**Example: Set counter_column parameter**
 
 
 ```opensips
@@ -163,13 +163,13 @@ modparam("cachedb_sql", "counter_column","some_name");
 ```
 
 
-#### `expires_column` (string)
+#### expires_column (string)
 
 
 The column where the expires will be stored
 
 
-**Example: Set `expires_column` parameter**
+**Example: Set expires_column parameter**
 
 
 ```opensips
@@ -180,14 +180,14 @@ modparam("cachedb_sql", "expires_column","some_name");
 ```
 
 
-#### `cache_clean_period` (int)
+#### cache_clean_period (int)
 
 
 The interval in seconds at which the expired keys will be removed from
 			the database. Default value is 60 ( seconds )
 
 
-**Example: Set `cache_clean_period` parameter**
+**Example: Set cache_clean_period parameter**
 
 
 ```opensips

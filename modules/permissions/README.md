@@ -172,7 +172,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `default_allow_file` (string)
+#### default_allow_file (string)
 
 
 Default allow file used by functions without parameters. If you
@@ -183,7 +183,7 @@ Default allow file used by functions without parameters. If you
 *Default value is "permissions.allow".*
 
 
-**Example: Set `default_allow_file` parameter**
+**Example: Set default_allow_file parameter**
 
 
 ```opensips
@@ -193,7 +193,7 @@ modparam("permissions", "default_allow_file", "/etc/permissions.allow")
 ```
 
 
-#### `default_deny_file` (string)
+#### default_deny_file (string)
 
 
 Default file containing deny rules. The file is used by functions
@@ -204,7 +204,7 @@ Default file containing deny rules. The file is used by functions
 *Default value is "permissions.deny".*
 
 
-**Example: Set `default_deny_file` parameter**
+**Example: Set default_deny_file parameter**
 
 
 ```opensips
@@ -214,7 +214,7 @@ modparam("permissions", "default_deny_file", "/etc/permissions.deny")
 ```
 
 
-#### `check_all_branches` (integer)
+#### check_all_branches (integer)
 
 
 If set then allow_routing functions will check Request-URI of all
@@ -229,7 +229,7 @@ If set then allow_routing functions will check Request-URI of all
 *Default value is 1.*
 
 
-**Example: Set `check_all_branches` parameter**
+**Example: Set check_all_branches parameter**
 
 
 ```opensips
@@ -239,7 +239,7 @@ modparam("permissions", "check_all_branches", 0)
 ```
 
 
-#### `allow_suffix` (string)
+#### allow_suffix (string)
 
 
 Suffix to be appended to basename to create filename of the allow
@@ -254,7 +254,7 @@ Suffix to be appended to basename to create filename of the allow
 *Default value is ".allow".*
 
 
-**Example: Set `allow_suffix` parameter**
+**Example: Set allow_suffix parameter**
 
 
 ```opensips
@@ -264,7 +264,7 @@ modparam("permissions", "allow_suffix", ".allow")
 ```
 
 
-#### `deny_suffix` (string)
+#### deny_suffix (string)
 
 
 Suffix to be appended to basename to create filename of the deny file
@@ -279,7 +279,7 @@ Suffix to be appended to basename to create filename of the deny file
 *Default value is ".deny".*
 
 
-**Example: Set `deny_suffix` parameter**
+**Example: Set deny_suffix parameter**
 
 
 ```opensips
@@ -289,7 +289,7 @@ modparam("permissions", "deny_suffix", ".deny")
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The URL of the database to be used for loading the data related to
@@ -309,7 +309,7 @@ Since version 2.2, this URL represents the db_url for the
 *Default value is "NULL".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -319,7 +319,7 @@ modparam("permissions", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `address_table` (string)
+#### address_table (string)
 
 
 Name of database table containing matching rules used by
@@ -331,7 +331,7 @@ Name of database table containing matching rules used by
 *Default value is "address".*
 
 
-**Example: Set `address_table` parameter**
+**Example: Set address_table parameter**
 
 
 ```opensips
@@ -341,7 +341,7 @@ modparam("permissions", "address_table", "pbx")
 ```
 
 
-#### `partition` (string)
+#### partition (string)
 
 
 Specify a new IP-based checking partition (data source).  This
@@ -352,7 +352,7 @@ Specify a new IP-based checking partition (data source).  This
 		the default partition is 'default'.
 
 
-**Example: Set `partition` parameter**
+**Example: Set partition parameter**
 
 
 ```opensips
@@ -365,7 +365,7 @@ modparam("permissions", "partition", "
 ```
 
 
-#### `grp_col` (string)
+#### grp_col (string)
 
 
 Name of address table column containing group
@@ -375,7 +375,7 @@ Name of address table column containing group
 *Default value is "grp".*
 
 
-**Example: Set `grp_col` parameter**
+**Example: Set grp_col parameter**
 
 
 ```opensips
@@ -385,7 +385,7 @@ modparam("permissions", "grp_col", "group_id")
 ```
 
 
-#### `ip_col` (string)
+#### ip_col (string)
 
 
 Name of address table column containing IP address
@@ -395,7 +395,7 @@ Name of address table column containing IP address
 *Default value is "ip".*
 
 
-**Example: Set `ip_col` parameter**
+**Example: Set ip_col parameter**
 
 
 ```opensips
@@ -405,7 +405,7 @@ modparam("permissions", "ip_col", "ipess")
 ```
 
 
-#### `mask_col` (string)
+#### mask_col (string)
 
 
 Name of address table column containing network mask of
@@ -416,7 +416,7 @@ Name of address table column containing network mask of
 *Default value is "mask".*
 
 
-**Example: Set `mask_col` parameter**
+**Example: Set mask_col parameter**
 
 
 ```opensips
@@ -426,7 +426,7 @@ modparam("permissions", "mask_col", "subnet_length")
 ```
 
 
-#### `port_col` (string)
+#### port_col (string)
 
 
 Name of address table column containing port
@@ -436,7 +436,7 @@ Name of address table column containing port
 *Default value is "port".*
 
 
-**Example: Set `port_col` parameter**
+**Example: Set port_col parameter**
 
 
 ```opensips
@@ -446,7 +446,7 @@ modparam("permissions", "port_col", "prt")
 ```
 
 
-#### `proto_col` (string)
+#### proto_col (string)
 
 
 Name of address table column containing transport
@@ -462,7 +462,7 @@ Name of address table column containing transport
 *Default value is "proto".*
 
 
-**Example: Set `proto_col` parameter**
+**Example: Set proto_col parameter**
 
 
 ```opensips
@@ -472,7 +472,7 @@ modparam("permissions", "proto_col", "transport")
 ```
 
 
-#### `pattern_col` (string)
+#### pattern_col (string)
 
 
 Name of address table column containinga a pattern (a shell wildcard
@@ -485,7 +485,7 @@ Name of address table column containinga a pattern (a shell wildcard
 *Default value is "pattern".*
 
 
-**Example: Set `pattern_col` parameter**
+**Example: Set pattern_col parameter**
 
 
 ```opensips
@@ -495,7 +495,7 @@ modparam("permissions", "pattern_col", "wildcard_col")
 ```
 
 
-#### `info_col` (string)
+#### info_col (string)
 
 
 Name of address table column containing a string
@@ -508,7 +508,7 @@ Name of address table column containing a string
 *Default value is "context_info".*
 
 
-**Example: Set `info_col` parameter**
+**Example: Set info_col parameter**
 
 
 ```opensips
@@ -521,8 +521,8 @@ modparam("permissions", "info_col", "info_col")
 ### Exported Functions
 
 
-#### `check_address(group_id, ip,
-		port, proto [, context_info], [pattern], [partition])`
+#### check_address(group_id, ip,
+		port, proto [, context_info], [pattern], [partition])
 
 
 Returns 1 if group id, IP address, port and protocol given as
@@ -563,8 +563,8 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-**Example: `check_address()
-		` usage**
+**Example: check_address()
+		 usage**
 
 
 ```opensips
@@ -617,7 +617,7 @@ if (check_address( 4,$si, 5700, $socket_in(proto), ,"texttest")) {
 ```
 
 
-#### `check_source_address(group_id , [context_info], [pattern], [partition])`
+#### check_source_address(group_id , [context_info], [pattern], [partition])
 
 
 Equivalent to check_address(group_id, "$si", "$sp", "$socket_in(proto)", context_info, pattern, partition).
@@ -627,7 +627,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-**Example: `check_source_address()` usage**
+**Example: check_source_address() usage**
 
 
 ```opensips
@@ -643,7 +643,7 @@ if (check_source_address( 4,$avp(ctx), , , $avp(my_partition))) {
 ```
 
 
-#### `get_source_group(var,[partition])`
+#### get_source_group(var,[partition])
 
 
 Checks if an entry with the source ip/port/protocol is
@@ -666,7 +666,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `get_source_group()` usage**
+**Example: get_source_group() usage**
 
 
 ```opensips
@@ -680,7 +680,7 @@ if ( get_source_group( $var(group)) ) {
 ```
 
 
-#### `allow_routing()`
+#### allow_routing()
 
 
 Returns true if all pairs constructed as described in [sec call routing](#sec-call-routing) have appropriate permissions according to
@@ -692,7 +692,7 @@ Returns true if all pairs constructed as described in [sec call routing](#sec-ca
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `allow_routing` usage**
+**Example: allow_routing usage**
 
 
 ```opensips
@@ -704,7 +704,7 @@ if (allow_routing()) {
 ```
 
 
-#### `allow_routing(basename)`
+#### allow_routing(basename)
 
 
 Returns true if all pairs constructed as described in [sec call routing](#sec-call-routing) have appropriate permissions according
@@ -726,7 +726,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `allow_routing(basename)` usage**
+**Example: allow_routing(basename) usage**
 
 
 ```opensips
@@ -738,7 +738,7 @@ if (allow_routing("basename")) {
 ```
 
 
-#### `allow_register(basename)`
+#### allow_register(basename)
 
 
 The function returns true if all pairs constructed as described in [sec registration permissions](#sec-registration-permissions) have appropriate permissions
@@ -760,7 +760,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `allow_register(basename)` usage**
+**Example: allow_register(basename) usage**
 
 
 ```opensips
@@ -777,7 +777,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### `allow_uri(basename, uri)`
+#### allow_uri(basename, uri)
 
 
 Returns true if the pair constructed as described in [sec uri permissions](#sec-uri-permissions) have appropriate permissions
@@ -800,7 +800,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `allow_uri(basename, uri)` usage**
+**Example: allow_uri(basename, uri) usage**
 
 
 ```opensips
@@ -818,7 +818,7 @@ if (allow_uri("basename", $avp(uri)) {  // Check URI stored in $avp(uri)
 ### Exported MI Functions
 
 
-#### `address_reload`
+#### address_reload
 
 
 Causes permissions module to re-read the contents of
@@ -838,7 +838,7 @@ Parameters:
 					specified all the partitions shall be reloaded.
 
 
-#### `address_dump`
+#### address_dump
 
 
 Causes permissions module to dump contents of
@@ -853,7 +853,7 @@ Parameters:
 					specified all the partitions shall be dumped.
 
 
-#### `subnet_dump`
+#### subnet_dump
 
 
 Causes permissions module to dump
@@ -868,7 +868,7 @@ Parameters:
 					specified all the partitions shall be dumped.
 
 
-#### `allow_uri`
+#### allow_uri
 
 
 Tests if (URI, Contact) pair is allowed according to

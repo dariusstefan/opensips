@@ -43,7 +43,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `connect_timeout` (integer)
+#### connect_timeout (integer)
 
 
 The amount of milliseconds OpenSIPS waits to connect to the the
@@ -53,7 +53,7 @@ The amount of milliseconds OpenSIPS waits to connect to the the
 *Default value is "500 milliseconds".*
 
 
-**Example: Set `connect_timeout` parameter**
+**Example: Set connect_timeout parameter**
 
 
 ```opensips
@@ -63,7 +63,7 @@ modparam("jsonrpc", "connect_timeout", 200)
 ```
 
 
-#### `write_timeout` (integer)
+#### write_timeout (integer)
 
 
 The amount of milliseconds OpenSIPS waits to send a RPC command to
@@ -73,7 +73,7 @@ The amount of milliseconds OpenSIPS waits to send a RPC command to
 *Default value is "500 milliseconds".*
 
 
-**Example: Set `write_timeout` parameter**
+**Example: Set write_timeout parameter**
 
 
 ```opensips
@@ -83,7 +83,7 @@ modparam("jsonrpc", "write_timeout", 300)
 ```
 
 
-#### `read_timeout` (integer)
+#### read_timeout (integer)
 
 
 The amount of milliseconds OpenSIPS waits for the JSON-RPC server
@@ -95,7 +95,7 @@ The amount of milliseconds OpenSIPS waits for the JSON-RPC server
 *Default value is "500 milliseconds".*
 
 
-**Example: Set `read_timeout` parameter**
+**Example: Set read_timeout parameter**
 
 
 ```opensips
@@ -108,7 +108,7 @@ modparam("jsonrpc", "read_timeout", 300)
 ### Exported Functions
 
 
-#### `jsonrpc_request(destination, method, params, ret_var)`
+#### jsonrpc_request(destination, method, params, ret_var)
 
 
 Does a JSON-RPC request to the JSON-RPC server
@@ -155,7 +155,7 @@ The function has the following return codes:
 						out more information.
 
 
-**Example: `jsonrpc_request()` function usage**
+**Example: jsonrpc_request() function usage**
 
 
 ```opensips
@@ -171,7 +171,7 @@ The function has the following return codes:
 ```
 
 
-#### `jsonrpc_notification(destination, method, params)`
+#### jsonrpc_notification(destination, method, params)
 
 
 Does a JSON-RPC notification to the JSON-RPC server
@@ -187,7 +187,7 @@ The function receives the same parameters as
 				[jsonrpc request](#func_jsonrpc_request), except for the *ret_pvar*. Also, the same values are returned.
 
 
-**Example: `jsonrpc_notification()` function usage**
+**Example: jsonrpc_notification() function usage**
 
 
 ```opensips

@@ -90,7 +90,7 @@ The following libraries must be installed before running
 ### Exported Parameters
 
 
-#### `fd_log_level (integer)`
+#### fd_log_level (integer)
 
 
 This parameter measures the *quietness* of the logging
@@ -109,7 +109,7 @@ NOTE: since freeDiameter logs to standard output, you must also enable
 		before getting any logs from the library.
 
 
-**Example: Setting the `fd_log_level` parameter**
+**Example: Setting the fd_log_level parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("aaa_diameter", "fd_log_level", 0)
 ```
 
 
-#### `realm (string)`
+#### realm (string)
 
 
 The unique realm to be used by all participating Diameter peers.
@@ -126,7 +126,7 @@ The unique realm to be used by all participating Diameter peers.
 Default value is *"diameter.test"*.
 
 
-**Example: Setting the `realm` parameter**
+**Example: Setting the realm parameter**
 
 
 ```opensips
@@ -134,7 +134,7 @@ modparam("aaa_diameter", "realm", "opensips.org")
 ```
 
 
-#### `peer_identity (string)`
+#### peer_identity (string)
 
 
 The identity (realm subdomain) of the Diameter server peer, to which
@@ -145,7 +145,7 @@ Default value is *"server"*
 				(i.e. "server.diameter.test").
 
 
-**Example: Setting the `peer_identity` parameter**
+**Example: Setting the peer_identity parameter**
 
 
 ```opensips
@@ -153,7 +153,7 @@ modparam("aaa_diameter", "peer_identity", "server")
 ```
 
 
-#### `aaa_url (string)`
+#### aaa_url (string)
 
 
 URL of the diameter client: the configuration file, with an optional
@@ -163,7 +163,7 @@ URL of the diameter client: the configuration file, with an optional
 By default, the connection is not created.
 
 
-**Example: Setting the `aaa_url` parameter**
+**Example: Setting the aaa_url parameter**
 
 
 ```opensips
@@ -171,7 +171,7 @@ modparam("aaa_diameter", "aaa_url", "diameter:freeDiameter-client.conf")
 ```
 
 
-**Example: Setting the `aaa_url` parameter**
+**Example: Setting the aaa_url parameter**
 
 
 ```opensips
@@ -179,7 +179,7 @@ modparam("aaa_diameter", "aaa_url", "diameter:freeDiameter-client.conf;extra-avp
 ```
 
 
-#### `answer_timeout (integer)`
+#### answer_timeout (integer)
 
 
 Time, in milliseconds, after which a [dm send request](#func_dm_send_request)
@@ -190,7 +190,7 @@ Time, in milliseconds, after which a [dm send request](#func_dm_send_request)
 Default value is *2000* ms.
 
 
-**Example: Setting the `answer_timeout` parameter**
+**Example: Setting the answer_timeout parameter**
 
 
 ```opensips
@@ -201,7 +201,7 @@ modparam("aaa_diameter", "answer_timeout", 5000)
 ### Exported Functions
 
 
-#### `dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])`
+#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])
 
 
 Perform a blocking Diameter request over to the interconnected peer
@@ -239,7 +239,7 @@ Perform a blocking Diameter request over to the interconnected peer
 This function can be used from any route.
 
 
-**Example: `dictionary.opensips` extended syntax**
+**Example: dictionary.opensips extended syntax**
 
 
 ```
@@ -307,7 +307,7 @@ ANSWER 92001 My-Custom-Answer
 ```
 
 
-**Example: `dm_send_request` usage**
+**Example: dm_send_request usage**
 
 
 ```opensips
@@ -338,7 +338,7 @@ $json(avps) := $var(rpl_avps);
 ```
 
 
-#### `dm_send_answer(avps_json, [is_error])`
+#### dm_send_answer(avps_json, [is_error])
 
 
 Send back a Diameter answer message to the interconnected peer in a
@@ -376,7 +376,7 @@ The following fields will be automatically copied over from the Diameter
 This function can only be used from an *EVENT_ROUTE*.
 
 
-**Example: `dm_send_answer()` usage**
+**Example: dm_send_answer() usage**
 
 
 ```opensips
@@ -409,7 +409,7 @@ event_route [E_DM_REQUEST] {
 ### Exported Asyncronous Functions
 
 
-#### `dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])`
+#### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv])
 
 
 Similar to [dm send request](#func_dm_send_request) but performs an asynchronous Diameter request.
@@ -419,7 +419,7 @@ Uses the same parameters and return codes as
             [dm send request](#func_dm_send_request).
 
 
-**Example: `dm_send_request` asynchronous usage**
+**Example: dm_send_request asynchronous usage**
 
 
 ```opensips
@@ -456,7 +456,7 @@ route[dm_reply] {
 ### Exported Events
 
 
-#### `E_DM_REQUEST`
+#### E_DM_REQUEST
 
 
 This event is raised whenever the *aaa_diameter*

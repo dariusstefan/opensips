@@ -92,7 +92,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `variable` (string)
+#### variable (string)
 
 
 Name of a new statistic variable. The name may be followed by additional
@@ -111,7 +111,7 @@ modparam("statistics", "variable", "active_calls/no_reset")
 ```
 
 
-#### `stat_groups` (string)
+#### stat_groups (string)
 
 
 A comma-separated values string, specifying the statistic groups that
@@ -127,7 +127,7 @@ modparam("statistics", "stat_groups", "method, packet, response")
 ```
 
 
-#### `stat_series_profile` (string)
+#### stat_series_profile (string)
 
 
 Used to define a statistic series profile. Has the following format:
@@ -187,7 +187,7 @@ modparam("statistics", "stat_series_profile", "perc_1h: algorithm=percentage win
 ### Exported Functions
 
 
-#### `update_stat(variable, value)`
+#### update_stat(variable, value)
 
 
 Updates the value of the statistic variable with the new value.
@@ -205,7 +205,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `update_stat` usage**
+**Example: update_stat usage**
 
 
 ```
@@ -218,7 +218,7 @@ update_stat($var(a_calls), -1);
 ```
 
 
-#### `reset_stat(variable)`
+#### reset_stat(variable)
 
 
 Resets to zero the value of the statistic variable.
@@ -234,7 +234,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `reset_stat` usage**
+**Example: reset_stat usage**
 
 
 ```
@@ -247,7 +247,7 @@ update_stat($var(reg_counter));
 ```
 
 
-#### `stat_iter_init(group, iter)`
+#### stat_iter_init(group, iter)
 
 
 Re-initializes "iter" in order to begin iterating through all
@@ -266,7 +266,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `stat_iter_init` usage**
+**Example: stat_iter_init usage**
 
 
 ```
@@ -276,7 +276,7 @@ stat_iter_init("packet", "iter");
 ```
 
 
-#### `stat_iter_next(name, val, iter)`
+#### stat_iter_next(name, val, iter)
 
 
 Attempts to fetch the current statistic to which "iter" points.
@@ -297,7 +297,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `stat_iter_next` usage**
+**Example: stat_iter_next usage**
 
 
 ```
@@ -312,7 +312,7 @@ timer_route [clear_packet_stats, 7200] {
 ```
 
 
-#### `update_stat_series(profile, variable, value)`
+#### update_stat_series(profile, variable, value)
 
 
 Updates the value of a series statistic.
@@ -333,7 +333,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `update_stat_series` usage**
+**Example: update_stat_series usage**
 
 
 ```
@@ -353,7 +353,7 @@ update_stat_series("avg", "PDD", $var(pdd_ms));
 ### Exported Pseudo-Variables
 
 
-#### `$stat`
+#### $stat
 
 
 Allows "get" or "reset" operations on the given statistics.
@@ -369,7 +369,7 @@ If a searching group is not provided, the statistic is first
 			grouped statistics which are not exported by the OpenSIPS core.
 
 
-**Example: `$stat` usage**
+**Example: $stat usage**
 
 
 ```opensips

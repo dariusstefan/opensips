@@ -42,7 +42,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `timeout` (fixedpoint)
+#### timeout (fixedpoint)
 
 
 Timeout value for any operation with BD.
@@ -58,7 +58,7 @@ If value of timeout parameter set to 0, module use synchronous
 		mode (without timeout).
 
 
-**Example: Set `timeout` parameter**
+**Example: Set timeout parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("db_oracle", "timeout", 0)
 ```
 
 
-#### `reconnect` (fixedpoint)
+#### reconnect (fixedpoint)
 
 
 Timeout value for connect (create session) operation.
@@ -90,7 +90,7 @@ Possible values is from 0.1 to 10.0 seconds.
 *Default value is 0.2 (200 milliseconds).*
 
 
-**Example: Set `reconnect` parameter**
+**Example: Set reconnect parameter**
 
 
 ```opensips

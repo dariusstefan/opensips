@@ -47,7 +47,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `hash_size` (int)
+#### hash_size (int)
 
 
 The size of the hash table that stores the MSRP sessions.
@@ -58,7 +58,7 @@ The size of the hash table that stores the MSRP sessions.
 			 (1024 records).
 
 
-**Example: Set `server_hsize` parameter**
+**Example: Set server_hsize parameter**
 
 
 ```opensips
@@ -69,7 +69,7 @@ modparam("msrp_relay", "hash_size", 10)
 ```
 
 
-#### `cleanup_interval` (int)
+#### cleanup_interval (int)
 
 
 The interval between full iterations of the sessions table
@@ -81,7 +81,7 @@ The interval between full iterations of the sessions table
 *Default value is "60".*
 
 
-**Example: Set `cleanup_interval` parameter**
+**Example: Set cleanup_interval parameter**
 
 
 ```opensips
@@ -92,7 +92,7 @@ modparam("msrp_relay", "cleanup_interval", 30)
 ```
 
 
-#### `auth_route` (str)
+#### auth_route (str)
 
 
 The name of the script route to be called when authorizing
@@ -105,7 +105,7 @@ The name of the script route to be called when authorizing
 *No default value; this parameter is mandatory.*
 
 
-**Example: Set `auth_route` parameter**
+**Example: Set auth_route parameter**
 
 
 ```opensips
@@ -116,7 +116,7 @@ modparam("msrp_relay", "auth_route", "auth")
 ```
 
 
-#### `username_var` (string)
+#### username_var (string)
 
 
 This name of the pseudo-variable that holds the authentication
@@ -126,7 +126,7 @@ This name of the pseudo-variable that holds the authentication
 Default value is "$var(username)".
 
 
-**Example: `username_var` parameter usage**
+**Example: username_var parameter usage**
 
 
 ```opensips
@@ -134,7 +134,7 @@ modparam("msrp_relay", "username_var", "$var(msrp_auth_user)")
 ```
 
 
-#### `realm_var` (string)
+#### realm_var (string)
 
 
 This name of the pseudo-variable that hols the authentication
@@ -144,7 +144,7 @@ This name of the pseudo-variable that hols the authentication
 Default value is "$var(realm)".
 
 
-**Example: `realm_var` parameter usage**
+**Example: realm_var parameter usage**
 
 
 ```opensips
@@ -152,7 +152,7 @@ modparam("msrp_relay", "realm_var", "$var(msrp_auth_realm)")
 ```
 
 
-#### `password_var` (string)
+#### password_var (string)
 
 
 This name of the pseudo-variable that should be set in the
@@ -165,7 +165,7 @@ This name of the pseudo-variable that should be set in the
 Default value is "$var(password)".
 
 
-**Example: `password_var` parameter usage**
+**Example: password_var parameter usage**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("msrp_relay", "password_var", "$var(msrp_auth_password)")
 ```
 
 
-#### `calculate_ha1` (integer)
+#### calculate_ha1 (integer)
 
 
 This parameter configures whether the value of the
@@ -184,7 +184,7 @@ This parameter configures whether the value of the
 Default value of this parameter is 0 (HA1 string).
 
 
-**Example: `calculate_ha1` parameter usage**
+**Example: calculate_ha1 parameter usage**
 
 
 ```opensips
@@ -192,7 +192,7 @@ modparam("msrp_relay", "calculate_ha1", 1)
 ```
 
 
-#### `socket_route` (str)
+#### socket_route (str)
 
 
 The optional name of the script route to be called when
@@ -226,7 +226,7 @@ In this route you should optionally set the desired MSRP(S)
 Default value is "NULL" (none).
 
 
-**Example: Set `socket_route` parameter**
+**Example: Set socket_route parameter**
 
 
 ```opensips
@@ -244,7 +244,7 @@ route[msrp_routing] {
 ```
 
 
-#### `dst_schema_var` (string)
+#### dst_schema_var (string)
 
 
 This name of the variable to provide the schema ("msrp" or "msrps")
@@ -255,7 +255,7 @@ This name of the variable to provide the schema ("msrp" or "msrps")
 Default value is "$var(dst_schema)".
 
 
-#### `dst_host_var` (string)
+#### dst_host_var (string)
 
 
 This name of the variable to provide the host of the 
@@ -266,7 +266,7 @@ This name of the variable to provide the host of the
 Default value is "$var(dst_host)".
 
 
-#### `auth_realm` (string)
+#### auth_realm (string)
 
 
 The realm to be provided in the WWW-Authenticate header when the relay
@@ -277,7 +277,7 @@ If this parameter is not set, the realm chose by the relay is the
 		domain part of the top MSRP URI in the To-Path header of the AUTH request.
 
 
-**Example: `auth_realm` parameter usage**
+**Example: auth_realm parameter usage**
 
 
 ```opensips
@@ -285,7 +285,7 @@ modparam("msrp_relay", "auth_realm", "opensips.org")
 ```
 
 
-#### `auth_expires` (int)
+#### auth_expires (int)
 
 
 The *Expires* header value to be provided in the 200 OK
@@ -298,7 +298,7 @@ The *Expires* header value to be provided in the 200 OK
 		 (1024 records).
 
 
-**Example: Set `server_hsize` parameter**
+**Example: Set server_hsize parameter**
 
 
 ```opensips
@@ -309,7 +309,7 @@ modparam("msrp_relay", "auth_expires", 600)
 ```
 
 
-#### `auth_min_expires` (int)
+#### auth_min_expires (int)
 
 
 The minimum value accepted by the relay in the *Expires*
@@ -322,7 +322,7 @@ The minimum value accepted by the relay in the *Expires*
 If not set, the relay will accept any value.
 
 
-**Example: Set `auth_min_expires` parameter**
+**Example: Set auth_min_expires parameter**
 
 
 ```opensips
@@ -333,7 +333,7 @@ modparam("msrp_relay", "auth_min_expires", 60)
 ```
 
 
-#### `auth_max_expires` (int)
+#### auth_max_expires (int)
 
 
 The maximum value accepted by the relay in the *Expires*
@@ -346,7 +346,7 @@ The maximum value accepted by the relay in the *Expires*
 If not set, the relay will accept any value.
 
 
-**Example: Set `auth_max_expires` parameter**
+**Example: Set auth_max_expires parameter**
 
 
 ```opensips
@@ -357,7 +357,7 @@ modparam("msrp_relay", "auth_max_expires", 60)
 ```
 
 
-#### `nonce_expire` (integer)
+#### nonce_expire (integer)
 
 
 Nonces have limited lifetime. After a given period of time nonces 
@@ -381,7 +381,7 @@ modparam("msrp_relay", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
 
-#### `my_uri` (string)
+#### my_uri (string)
 
 
 MSRP URI of this relay, that will be matched against the first URI in
@@ -400,7 +400,7 @@ If the port is not set explicitly, the default value of 2855 wil
 		be assumed. The session-id part of the URI should not be set
 
 
-**Example: `my_uri` parameter usage**
+**Example: my_uri parameter usage**
 
 
 ```opensips

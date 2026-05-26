@@ -101,7 +101,7 @@ The following libraries or applications must be installed before
 ### Exported Functions
 
 
-#### `rtp_relay_engage(engine, [set])`
+#### rtp_relay_engage(engine, [set])
 
 
 Engages the RTP Relay *engine* for the current initial
@@ -138,7 +138,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `rtp_relay_engage` usage**
+**Example: rtp_relay_engage usage**
 
 
 ```opensips
@@ -157,7 +157,7 @@ if (is_method("INVITE") && !has_totag()) {
 ### Exported MI Functions
 
 
-#### `rtp_relay_list`
+#### rtp_relay_list
 
 
 Lists all the RTP Relay sessions engaged.
@@ -177,7 +177,7 @@ Parameters:
 					parameter must also be specified.
 
 
-**Example: `rtp_relay_list` usage**
+**Example: rtp_relay_list usage**
 
 
 ```
@@ -192,7 +192,7 @@ $ opensips-cli -x mi rtp_relay_list rtpproxy udp:127.0.0.1:2222
 ```
 
 
-#### `rtp_relay_update`
+#### rtp_relay_update
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -243,7 +243,7 @@ Parameters:
 					same set will be used.
 
 
-**Example: `rtp_relay_update` usage**
+**Example: rtp_relay_update usage**
 
 
 ```
@@ -255,7 +255,7 @@ $ opensips-cli -x mi rtp_relay_update rtpproxy
 ```
 
 
-#### `rtp_relay_update_callid`
+#### rtp_relay_update_callid
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -292,7 +292,7 @@ Parameters:
 					explicitely specified flags will be overwritten.
 
 
-**Example: `rtp_relay_update_callid` usage**
+**Example: rtp_relay_update_callid usage**
 
 
 ```
@@ -312,7 +312,7 @@ $ opensips-cli -x mi rtp_relay_update_callid callid=1-3758963@127.0.0.1 \
 ### Exported Pseudo-Variables
 
 
-#### `$rtp_relay`
+#### $rtp_relay
 
 
 Is used to provision the RTP back-end flags for the
@@ -356,7 +356,7 @@ For each UAC/peer, there are several flags that can be
 					as an integer, it is used to disable RTP relay for this UAC.
 
 
-#### `$rtp_relay_peer`
+#### $rtp_relay_peer
 
 
 This variable has the same meaning and parameters as the
@@ -365,7 +365,7 @@ This variable has the same meaning and parameters as the
 				current one. All other fields are similar.
 
 
-#### `$rtp_relay_ctx()`
+#### $rtp_relay_ctx()
 
 
 This variable can be used to provide information about the

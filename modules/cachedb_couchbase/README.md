@@ -60,7 +60,7 @@ libcoucbase can be downloaded from http://www.couchbase.com/develop/c/current
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The urls of the server groups that OpenSIPS will connect to in order
@@ -72,7 +72,7 @@ The urls of the server groups that OpenSIPS will connect to in order
 			couchbase[:identifier]://[username:password@]IP:Port/bucket_name
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -86,14 +86,14 @@ modparam("cachedb_couchbase", "cachedb_url","couchbase:cluster1://random_url1:88
 ```
 
 
-#### `timeout` (int)
+#### timeout (int)
 
 
 The max duration in microseconds that a couchbase op is expected to last.
 			Default is 3000000 ( 3 seconds )
 
 
-**Example: Set `timeout` parameter**
+**Example: Set timeout parameter**
 
 
 ```opensips
@@ -104,7 +104,7 @@ modparam("cachedb_couchbase", "timeout",5000000);
 ```
 
 
-#### `exec_threshold` (int)
+#### exec_threshold (int)
 
 
 The maximum number of microseconds that a couchbase query can last.
@@ -114,7 +114,7 @@ The maximum number of microseconds that a couchbase query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set `exec_threshold` parameter**
+**Example: Set exec_threshold parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("cachedb_couchbase", "exec_threshold", 100000)
 ```
 
 
-#### `lazy_connect` (int)
+#### lazy_connect (int)
 
 
 Delay connecting to a bucket until the first time it is used.
@@ -137,7 +137,7 @@ Delay connecting to a bucket until the first time it is used.
 			Default is 0 ( Connect to all buckets on startup )
 
 
-**Example: Set `lazy_connect` parameter**
+**Example: Set lazy_connect parameter**
 
 
 ```opensips

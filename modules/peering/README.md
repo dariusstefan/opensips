@@ -52,7 +52,7 @@ The module depends on the following modules
 ### Exported Parameters
 
 
-#### `aaa_url` (string)
+#### aaa_url (string)
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -65,7 +65,7 @@ If the parameter is set to empty string, the AAA accounting support
 Default value is "NULL".
 
 
-**Example: Set `aaa_url` parameter**
+**Example: Set aaa_url parameter**
 
 
 ```opensips
@@ -75,7 +75,7 @@ modparam("peering", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### `verify_destination_service_type` (integer)
+#### verify_destination_service_type (integer)
 
 
 This is the value of the Service-Type AAA attribute to be
@@ -87,7 +87,7 @@ Default value is dictionary value of "Sip-Verify-Destination"
 		Service-Type.
 
 
-**Example: `verify_destination_service_type` parameter usage**
+**Example: verify_destination_service_type parameter usage**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("peering", "verify_destination_service_type", 21)
 ```
 
 
-#### `verify_source_service_type` (integer)
+#### verify_source_service_type (integer)
 
 
 This is the value of the Service-Type AAA attribute to be
@@ -109,7 +109,7 @@ Default value is dictionary value of "Sip-Verify-Source"
 		Service-Type.
 
 
-**Example: `verify_source_service_type` parameter usage**
+**Example: verify_source_service_type parameter usage**
 
 
 ```opensips
@@ -122,7 +122,7 @@ modparam("peering", "verify_source_service_type", 22)
 ### Exported Functions
 
 
-#### `verify_destination()`
+#### verify_destination()
 
 
 Function verify_destination() queries from
@@ -170,7 +170,7 @@ This function can be used from REQUEST_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: `verify_destination()` usage**
+**Example: verify_destination() usage**
 
 
 ```
@@ -182,7 +182,7 @@ if (verify_destination()) {
 ```
 
 
-#### `verify_source()`
+#### verify_source()
 
 
 Function verify_source() queries from
@@ -222,7 +222,7 @@ This function can be used from REQUEST_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: `verify_source()` usage**
+**Example: verify_source() usage**
 
 
 ```opensips

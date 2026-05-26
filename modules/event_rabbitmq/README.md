@@ -96,7 +96,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `heartbeat` (integer)
+#### heartbeat (integer)
 
 
 Enables heartbeat support for the AMQP communication. If the
@@ -110,7 +110,7 @@ Enables heartbeat support for the AMQP communication. If the
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `heartbeat` parameter**
+**Example: Set heartbeat parameter**
 
 
 ```opensips
@@ -120,7 +120,7 @@ modparam("event_rabbitmq", "heartbeat", 3)
 ```
 
 
-#### `connect_timeout` (integer)
+#### connect_timeout (integer)
 
 
 The maximally allowed duration (in milliseconds) for the establishment
@@ -130,7 +130,7 @@ The maximally allowed duration (in milliseconds) for the establishment
 *Default value is "500" (milliseconds).*
 
 
-**Example: Setting the `connect_timeout` parameter**
+**Example: Setting the connect_timeout parameter**
 
 
 ```opensips
@@ -141,7 +141,7 @@ modparam("event_rabbitmq", "connect_timeout", 1000)
 ```
 
 
-#### `use_tls` (integer)
+#### use_tls (integer)
 
 
 Setting this parameter will allow you to use TLS for broker connections.
@@ -158,7 +158,7 @@ When using this parameter, you must also ensure that
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the `use_tls` parameter**
+**Example: Set the use_tls parameter**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("event_rabbitmq", "use_tls", 1)
 ```
 
 
-#### `timeout` (integer)
+#### timeout (integer)
 
 
 Indicates the timeout (in milliseconds) of any command (i.e. publish)
@@ -189,7 +189,7 @@ Indicates the timeout (in milliseconds) of any command (i.e. publish)
 *Default value is **0** (no timeout - blocking mode)*
 
 
-**Example: Set the `timeout` parameter**
+**Example: Set the timeout parameter**
 
 
 ```opensips

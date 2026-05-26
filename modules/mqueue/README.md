@@ -45,7 +45,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 The URL to connect to database for loading values
@@ -55,7 +55,7 @@ The URL to connect to database for loading values
 *Default value is NULL (do not connect).*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -74,7 +74,7 @@ val character varying(4096) DEFAULT "" NOT NULL
 ```
 
 
-#### `mqueue` (string)
+#### mqueue (string)
 
 
 Definition of a memory queue
@@ -123,7 +123,7 @@ The parameter can be set many times, each holding the
 		definition of one queue.
 
 
-**Example: Set `mqueue` parameter**
+**Example: Set mqueue parameter**
 
 
 ```opensips
@@ -139,14 +139,14 @@ modparam("mqueue", "mqueue", "name=qaz;addmode=1")
 ### Exported Functions
 
 
-#### `mq_add(queue, key, value)`
+#### mq_add(queue, key, value)
 
 
 Add a new item (key, value) in the queue. If max size of queue is
 		exceeded, the oldest one is removed.
 
 
-**Example: `mq_add` usage**
+**Example: mq_add usage**
 
 
 ```
@@ -156,7 +156,7 @@ mq_add("myq", "$rU", "call from $fU");
 ```
 
 
-#### `mq_fetch(queue)`
+#### mq_fetch(queue)
 
 
 Take oldest item from queue and fill $mqk(queue) and
@@ -167,7 +167,7 @@ Return: true on success (1); false on failure (-1) or
 		no item fetched (-2).
 
 
-**Example: `mq_fetch` usage**
+**Example: mq_fetch usage**
 
 
 ```opensips
@@ -180,14 +180,14 @@ while(mq_fetch("myq"))
 ```
 
 
-#### `mq_pv_free(queue)`
+#### mq_pv_free(queue)
 
 
 Free the item fetched in pseudo-variables. It is optional,
 		a new fetch frees the previous values.
 
 
-**Example: `mq_pv_free` usage**
+**Example: mq_pv_free usage**
 
 
 ```
@@ -197,7 +197,7 @@ mq_pv_free("myq");
 ```
 
 
-#### `mq_size(queue)`
+#### mq_size(queue)
 
 
 Returns the current number of elements in the mqueue.
@@ -207,7 +207,7 @@ If the mqueue is empty, the function returns -1. If the
 		mqueue is not found, the function returns -2.
 
 
-**Example: `mq_size` usage**
+**Example: mq_size usage**
 
 
 ```opensips
@@ -233,7 +233,7 @@ Parameters:
 - name
 
 
-**Example: `mq_get_size` usage**
+**Example: mq_get_size usage**
 
 
 ```
@@ -255,7 +255,7 @@ Parameters:
 - name
 
 
-**Example: `mq_fetch` usage**
+**Example: mq_fetch usage**
 
 
 ```
@@ -274,7 +274,7 @@ Get the size for all memory queues.
 Parameters: none
 
 
-**Example: `mq_get_sizes` usage**
+**Example: mq_get_sizes usage**
 
 
 ```
@@ -287,21 +287,21 @@ opensips-cli -x mq_get_sizes
 ### Exported Pseudo-Variables
 
 
-#### `$mqk(mqueue)`
+#### $mqk(mqueue)
 
 
 The variable is read-only and returns the most recent item key
 			fetched from the specified mqueue.
 
 
-#### `$mqv(mqueue)`
+#### $mqv(mqueue)
 
 
 The variable is read-only and returns the most recent item value
 			fetched from the specified mqueue.
 
 
-#### `$mq_size(mqueue)`
+#### $mq_size(mqueue)
 
 
 The variable is read-only and returns the size of the specified

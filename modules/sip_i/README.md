@@ -43,7 +43,7 @@ The following libraries or applications must be installed before running
 ### Parameters
 
 
-#### `param_subfield_separator` (str)
+#### param_subfield_separator (str)
 
 
 The character to be used as separator in the subname of the *$isup_param* and *$isup_param_str* pseudovariables between the ISUP parameter name and subfield name.
@@ -52,7 +52,7 @@ The character to be used as separator in the subname of the *$isup_param* and *$
 *Default value is "|".*
 
 
-**Example: Set `param_subfield_separator` parameter**
+**Example: Set param_subfield_separator parameter**
 
 
 ```opensips
@@ -62,7 +62,7 @@ modparam("sip_i", "param_subfield_separator", ":")
 ```
 
 
-#### `isup_mime_str` (str)
+#### isup_mime_str (str)
 
 
 The string to be used for the Content-Type header field of the ISUP MIME body when creating a new ISUP part.
@@ -71,7 +71,7 @@ The string to be used for the Content-Type header field of the ISUP MIME body wh
 *Default value is "application/ISUP;version=itu-t92+".*
 
 
-**Example: Set `isup_mime_str` parameter**
+**Example: Set isup_mime_str parameter**
 
 
 ```opensips
@@ -81,7 +81,7 @@ modparam("sip_i", "isup_mime_str", "application/ISUP;base=itu-t92+;version=itu-t
 ```
 
 
-#### `default_part_headers` (str)
+#### default_part_headers (str)
 
 
 The default set of headers (fully defined, including the header
@@ -92,7 +92,7 @@ The default set of headers (fully defined, including the header
 *Default value is "Content-Disposition:signal;handling=optional\r\n".*
 
 
-**Example: Set `default_part_headers` parameter**
+**Example: Set default_part_headers parameter**
 
 
 ```opensips
@@ -102,7 +102,7 @@ modparam("sip_i", "default_part_headers", "Content-Disposition:signal;handling=r
 ```
 
 
-#### `country_code` (str)
+#### country_code (str)
 
 
 Country Code that the first part of the number from
@@ -116,7 +116,7 @@ Country Code that the first part of the number from
 *Default value is "+1".*
 
 
-**Example: Set `country_code` parameter**
+**Example: Set country_code parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("sip_i", "country_code", "+4")
 ### Exported Functions
 
 
-#### `add_isup_part([isup_msg_type][,extra_headers])`
+#### add_isup_part([isup_msg_type][,extra_headers])
 
 
 Adds a new ISUP part to the SIP message body.
@@ -187,7 +187,7 @@ The abbreviations that can be given as *isup_msg_type* for each ISUP message typ
 This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,LOCAL_ROUTE.
 
 
-**Example: `add_isup_part` usage**
+**Example: add_isup_part usage**
 
 
 ```
@@ -206,7 +206,7 @@ if ($rs == "183") {
 ### Exported Pseudo-Variables
 
 
-#### `$(isup_param(param_name{sep}subfield_name)[byte_index])`
+#### $(isup_param(param_name{sep}subfield_name)[byte_index])
 
 
 The ISUP parameter named *param_name* of a received or newly added ISUP message can be accessed through this read-write variable. For optional parameters, writing to a *param_name* that does not exist in this ISUP message will insert it. Assigning null to this variable will remove the optional parameter from the message or zeroize the parameter in case of a mandatory one.
@@ -237,7 +237,7 @@ String aliases are not available for all parameters or parameter subfields. Also
 For more information on supported subfields and aliases check [subfields aliases](#subfields_aliases).
 
 
-**Example: `isup_param` usage**
+**Example: isup_param usage**
 
 
 ```
@@ -262,7 +262,7 @@ For more information on supported subfields and aliases check [subfields aliases
 ```
 
 
-#### `$isup_param_str(param_name{sep}subfield_name)`
+#### $isup_param_str(param_name{sep}subfield_name)
 
 
 The ISUP parameter named *param_name* of a received or newly added ISUP message can also be accessed through this read-only variable. This variable is similar in usage with *$isup_param* except it will return the string alias for the value when possible.
@@ -276,7 +276,7 @@ The format of the subname for `$isup_param_str` is the following:
 - *subfield_name* - name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-**Example: `isup_param_str` usage**
+**Example: isup_param_str usage**
 
 
 ```opensips
@@ -294,13 +294,13 @@ The format of the subname for `$isup_param_str` is the following:
 ```
 
 
-#### `$isup_msg_type`
+#### $isup_msg_type
 
 
 Read-only variable, returns the ISUP message type as string.
 
 
-**Example: `isup_msg_type` usage**
+**Example: isup_msg_type usage**
 
 
 ```opensips
@@ -318,7 +318,7 @@ Read-only variable, returns the ISUP message type as string.
 The module also provides a way for accessing the value of ISUP parameters and their subfields from an ISUP message contained in a arbitrary script variable as opposed to directly from the processed SIP (with encapsulated ISUP) message. This is done by aplying a transformation to a script variable containing the ISUP message body. The value of the original variable is not altered and a corresponding integer or string value (representing an ISUP parameter or subfield as the exact value or string alias) is returned.
 
 
-#### `{isup.param,param_name,[subfield_name]}`
+#### {isup.param,param_name,[subfield_name]}
 
 
 The result of this transformation is similar to a read access of the `$isup_param` pseudovariable with the exception that byte level access is not provided.
@@ -331,7 +331,7 @@ The parameters for the transformation are:
 - *subfield_name* - optional, name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-**Example: `isup.param` usage**
+**Example: isup.param usage**
 
 
 ```opensips
@@ -355,7 +355,7 @@ The parameters for the transformation are:
 ```
 
 
-#### `{isup.param.str,param_name,[subfield_name]}`
+#### {isup.param.str,param_name,[subfield_name]}
 
 
 The result of this transformation is similar to a read access of the `$isup_param_str` pseudovariable with the exception that byte level access is not provided.
@@ -368,7 +368,7 @@ The parameters for the transformation are:
 - *subfield_name* - optional, name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-**Example: `isup.param.str` usage**
+**Example: isup.param.str usage**
 
 
 ```opensips

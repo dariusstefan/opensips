@@ -61,14 +61,14 @@ The instructions for a quick installations of the library (note that it has to b
 ### Exported Parameters
 
 
-#### `sdk_key` (string)
+#### sdk_key (string)
 
 
 The LaunchDarkly SDK key used to connect to the service. This
 		is a mandatory parameter.
 
 
-**Example: Set `sdk_key` parameter**
+**Example: Set sdk_key parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("launch_darkly", "sdk_key", "sdk-12345678-abcd-12ab-1234-0123456789abc"
 ```
 
 
-#### `ld_log_level` (string)
+#### ld_log_level (string)
 
 
 The LaunchDarkly specific log level to be used by the LD SDK/libray to
@@ -101,7 +101,7 @@ If not set or set to an unsupported value, the
 		*LD_LOG_WARNING* level will be used by default.
 
 
-**Example: Set `log_level` parameter**
+**Example: Set log_level parameter**
 
 
 ```opensips
@@ -111,7 +111,7 @@ modparam("launch_darkly", "ld_log_level", "LD_LOG_CRITICAL")
 ```
 
 
-#### `connect_wait` (integer)
+#### connect_wait (integer)
 
 
 The time to wait (in miliseconds) when connecting to the LD service.
@@ -122,7 +122,7 @@ The time to wait (in miliseconds) when connecting to the LD service.
 The default value is 500 miliseconds.
 
 
-**Example: Set `connect_wait` parameter**
+**Example: Set connect_wait parameter**
 
 
 ```opensips
@@ -132,7 +132,7 @@ modparam("launch_darkly", "connect_wait", 100)
 ```
 
 
-#### `re_init_interval` (integer)
+#### re_init_interval (integer)
 
 
 The minimum time interval (in seconds) to try again to init 
@@ -147,7 +147,7 @@ The minimum time interval (in seconds) to try again to init
 The default value is 10 seconds.
 
 
-**Example: Set `re_init_interval` parameter**
+**Example: Set re_init_interval parameter**
 
 
 ```opensips
@@ -160,7 +160,7 @@ modparam("launch_darkly", "re_init_interval", 30)
 ### Exported Functions
 
 
-#### `ld_feature_enabled( flag, user, [user_extra], [fallback])`
+#### ld_feature_enabled( flag, user, [user_extra], [fallback])
 
 
 Function to evaluate a LaunchDarkly boolean feature flag
@@ -195,7 +195,7 @@ The function has the following parameters:
 					to be returned on error. By default FALSE will be returned.
 
 
-**Example: `ld_feature_enabled()` function usage**
+**Example: ld_feature_enabled() function usage**
 
 
 ```opensips

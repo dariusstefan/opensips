@@ -51,7 +51,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 A SQL URL have to be given to the module for knowing where the 
@@ -63,7 +63,7 @@ A SQL URL have to be given to the module for knowing where the
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ modparam("cpl_c","db_url","dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 Indicates the name of the table that store the CPL scripts. 
@@ -85,7 +85,7 @@ Indicates the name of the table that store the CPL scripts.
 *Default value is "cpl".*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -95,7 +95,7 @@ modparam("cpl_c","cpl_table","cpl")
 ```
 
 
-#### `username_column` (string)
+#### username_column (string)
 
 
 Indicates the name of the column used for storing the username.
@@ -104,7 +104,7 @@ Indicates the name of the column used for storing the username.
 *Default value is "username".*
 
 
-**Example: Set `username_column` parameter**
+**Example: Set username_column parameter**
 
 
 ```opensips
@@ -114,7 +114,7 @@ modparam("cpl_c","username_column","username")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 Indicates the name of the column used for storing the domain.
@@ -123,7 +123,7 @@ Indicates the name of the column used for storing the domain.
 *Default value is "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -133,7 +133,7 @@ modparam("cpl_c","domain_column","domain")
 ```
 
 
-#### `cpl_xml_column` (string)
+#### cpl_xml_column (string)
 
 
 Indicates the name of the column used for storing the 
@@ -143,7 +143,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_xml".*
 
 
-**Example: Set `cpl_xml_column` parameter**
+**Example: Set cpl_xml_column parameter**
 
 
 ```opensips
@@ -153,7 +153,7 @@ modparam("cpl_c","cpl_xml_column","cpl_xml")
 ```
 
 
-#### `cpl_bin_column` (string)
+#### cpl_bin_column (string)
 
 
 Indicates the name of the column used for storing the 
@@ -163,7 +163,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_bin".*
 
 
-**Example: Set `cpl_bin_column` parameter**
+**Example: Set cpl_bin_column parameter**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("cpl_c","cpl_bin_column","cpl_bin")
 ```
 
 
-#### `cpl_dtd_file` (string)
+#### cpl_dtd_file (string)
 
 
 Points to the DTD file describing the CPL grammar. The file 
@@ -185,7 +185,7 @@ Points to the DTD file describing the CPL grammar. The file
 *This parameter is MANDATORY!*
 
 
-**Example: Set `cpl_dtd_file` parameter**
+**Example: Set cpl_dtd_file parameter**
 
 
 ```opensips
@@ -195,7 +195,7 @@ modparam("cpl_c","cpl_dtd_file","/etc/opensips/cpl-06.dtd")
 ```
 
 
-#### `log_dir` (string)
+#### log_dir (string)
 
 
 Points to a directory where should be created all the log file 
@@ -207,7 +207,7 @@ Points to a directory where should be created all the log file
 					without generating error on execution.*
 
 
-**Example: Set `log_dir` parameter**
+**Example: Set log_dir parameter**
 
 
 ```opensips
@@ -217,7 +217,7 @@ modparam("cpl_c","log_dir","/var/log/opensips/cpl")
 ```
 
 
-#### `proxy_recurse` (int)
+#### proxy_recurse (int)
 
 
 Tells for how many time is allow to have recurse for PROXY CPL 
@@ -231,7 +231,7 @@ Tells for how many time is allow to have recurse for PROXY CPL
 *Default value of this parameter is 0.*
 
 
-**Example: Set `proxy_recurse` parameter**
+**Example: Set proxy_recurse parameter**
 
 
 ```opensips
@@ -241,7 +241,7 @@ modparam("cpl_c","proxy_recurse",2)
 ```
 
 
-#### `proxy_route` (string)
+#### proxy_route (string)
 
 
 Before doing proxy (forward), a script route can be executed.
@@ -252,7 +252,7 @@ Before doing proxy (forward), a script route can be executed.
 *Default value of this parameter is NULL (none).*
 
 
-**Example: Set `proxy_route` parameter**
+**Example: Set proxy_route parameter**
 
 
 ```opensips
@@ -262,7 +262,7 @@ modparam("cpl_c","proxy_route", "1")
 ```
 
 
-#### `case_sensitive` (int)
+#### case_sensitive (int)
 
 
 Tells if the username matching should be perform case 
@@ -273,7 +273,7 @@ Tells if the username matching should be perform case
 *Default value of this parameter is 0.*
 
 
-**Example: Set `case_sensitive` parameter**
+**Example: Set case_sensitive parameter**
 
 
 ```opensips
@@ -283,7 +283,7 @@ modparam("cpl_c","case_sensitive",1)
 ```
 
 
-#### `realm_prefix` (string)
+#### realm_prefix (string)
 
 
 Defines a prefix for the domain part which should be ignored 
@@ -293,7 +293,7 @@ Defines a prefix for the domain part which should be ignored
 *Default value of this parameter is empty string.*
 
 
-**Example: Set `realm_prefix` parameter**
+**Example: Set realm_prefix parameter**
 
 
 ```opensips
@@ -303,7 +303,7 @@ modparam("cpl_c","realm_prefix","sip.")
 ```
 
 
-#### `lookup_domain` (string)
+#### lookup_domain (string)
 
 
 Used by lookup tag to indicate where to perform user location.
@@ -318,7 +318,7 @@ If set to empty string, the lookup node will be disabled - no
 *Default value of this parameter is NULL.*
 
 
-**Example: Set `lookup_domain` parameter**
+**Example: Set lookup_domain parameter**
 
 
 ```opensips
@@ -328,7 +328,7 @@ modparam("cpl_c","lookup_domain","location")
 ```
 
 
-#### `lookup_append_branches` (int)
+#### lookup_append_branches (int)
 
 
 Tells if the lookup tag should append branches (to do parallel
@@ -340,7 +340,7 @@ Tells if the lookup tag should append branches (to do parallel
 *Default value of this parameter is 0.*
 
 
-**Example: Set `lookup_append_branches` 
+**Example: Set lookup_append_branches 
 					parameter**
 
 
@@ -351,7 +351,7 @@ modparam("cpl_c","lookup_append_branches",1)
 ```
 
 
-#### `use_domain` (integer)
+#### use_domain (integer)
 
 
 Indicates if the domain part of the URI should be used in 
@@ -362,7 +362,7 @@ Indicates if the domain part of the URI should be used in
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -375,7 +375,7 @@ modparam("cpl_c","use_domain",1)
 ### Exported Functions
 
 
-#### `cpl_run_script(type,mode)`
+#### cpl_run_script(type,mode)
 
 
 Starts the execution of the CPL script. The user name is 
@@ -444,7 +444,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `cpl_run_script` usage**
+**Example: cpl_run_script usage**
 
 
 ```
@@ -454,7 +454,7 @@ cpl_run_script("incoming","force_stateful");
 ```
 
 
-#### `cpl_process_register()`
+#### cpl_process_register()
 
 
 This function MUST be called only for REGISTER requests. It 
@@ -481,7 +481,7 @@ This function MUST be called only for REGISTER requests. It
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `cpl_process_register` usage**
+**Example: cpl_process_register usage**
 
 
 ```
@@ -493,7 +493,7 @@ if ($rm=="REGISTER") {
 ```
 
 
-#### `cpl_process_register_norpl()`
+#### cpl_process_register_norpl()
 
 
 Same as "cpl_process_register" without 
@@ -509,7 +509,7 @@ Main purpose of this function is to allow integration
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `cpl_process_register_norpl` usage**
+**Example: cpl_process_register_norpl usage**
 
 
 ```
@@ -526,7 +526,7 @@ if ($rm=="REGISTER") {
 ### Exported MI Functions
 
 
-#### `LOAD_CPL`
+#### LOAD_CPL
 
 
 For the given user, loads the XML cpl file, compiles it into 
@@ -551,7 +551,7 @@ MI FIFO Command format:
 ```
 
 
-#### `REMOVE_CPL`
+#### REMOVE_CPL
 
 
 For the given user, removes the entire database record 
@@ -576,7 +576,7 @@ MI FIFO Command format:
 ```
 
 
-#### `GET_CPL`
+#### GET_CPL
 
 
 For the given user, returns the CPL script in XML format.

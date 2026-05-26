@@ -64,7 +64,7 @@ This module does not depend on other modules.
 ### Exported Parameters
 
 
-#### `SSL`(int)
+#### SSL(int)
 
 
 Whether or not to use SSL.
@@ -77,7 +77,7 @@ If value is 1 the module will use https otherwise
 *Default value is " 0 ".*
 
 
-**Example: Set `SSL` parameter**
+**Example: Set SSL parameter**
 
 
 ```opensips
@@ -87,7 +87,7 @@ modparam("db_http", "SSL",1)
 ```
 
 
-#### `cap_raw_query`(int)
+#### cap_raw_query(int)
 
 
 Whether or not the server supports raw queries.
@@ -96,7 +96,7 @@ Whether or not the server supports raw queries.
 *Default value is "0".*
 
 
-**Example: Set `cap_raw_query` parameter**
+**Example: Set cap_raw_query parameter**
 
 
 ```opensips
@@ -106,7 +106,7 @@ modparam("db_http", "cap_raw_query", 1)
 ```
 
 
-#### `cap_replace`(int)
+#### cap_replace(int)
 
 
 Whether or not the server supports replace capabilities.
@@ -115,7 +115,7 @@ Whether or not the server supports replace capabilities.
 *Default value is "0".*
 
 
-**Example: Set `cap_replace` parameter**
+**Example: Set cap_replace parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("db_http", "cap_replace", 1)
 ```
 
 
-#### `cap_insert_update`(int)
+#### cap_insert_update(int)
 
 
 Whether or not the server supports insert_update capabilities.
@@ -134,7 +134,7 @@ Whether or not the server supports insert_update capabilities.
 *Default value is "0".*
 
 
-**Example: Set `cap_insert_update` parameter**
+**Example: Set cap_insert_update parameter**
 
 
 ```opensips
@@ -144,7 +144,7 @@ modparam("db_http", "cap_insert_update", 1)
 ```
 
 
-#### `cap_last_inserted_id`(int)
+#### cap_last_inserted_id(int)
 
 
 Whether or not the server supports last_inserted_id capabilities.
@@ -153,7 +153,7 @@ Whether or not the server supports last_inserted_id capabilities.
 *Default value is "0".*
 
 
-**Example: Set `cap_last_inserted_id` parameter**
+**Example: Set cap_last_inserted_id parameter**
 
 
 ```opensips
@@ -163,7 +163,7 @@ modparam("db_http", "cap_last_inserted_id", 1)
 ```
 
 
-#### `field_delimiter` (str)
+#### field_delimiter (str)
 
 
 Character to be used to delimit fields in the reply.Only
@@ -173,7 +173,7 @@ Character to be used to delimit fields in the reply.Only
 *Default value is ";"*
 
 
-**Example: Set `field_delimiter` parameter**
+**Example: Set field_delimiter parameter**
 
 
 ```opensips
@@ -183,7 +183,7 @@ modparam("db_http", "field_delimiter",";")
 ```
 
 
-#### `row_delimiter` (str)
+#### row_delimiter (str)
 
 
 Character to be used to delimit rows in the reply.Only
@@ -193,7 +193,7 @@ Character to be used to delimit rows in the reply.Only
 *Default value is "\n"*
 
 
-**Example: Set `row_delimiter` parameter**
+**Example: Set row_delimiter parameter**
 
 
 ```opensips
@@ -203,7 +203,7 @@ modparam("db_http", "row_delimiter","\n")
 ```
 
 
-#### `quote_delimiter` (str)
+#### quote_delimiter (str)
 
 
 Character to be used to quote  fields that require quoting
@@ -213,7 +213,7 @@ Character to be used to quote  fields that require quoting
 *Default value is "|"*
 
 
-**Example: Set `quote_delimiter` parameter**
+**Example: Set quote_delimiter parameter**
 
 
 ```opensips
@@ -223,7 +223,7 @@ modparam("db_http", "quote_delimiter","|")
 ```
 
 
-#### `value_delimiter` (str)
+#### value_delimiter (str)
 
 
 The delimiter used to separate multiple fields of a single
@@ -234,7 +234,7 @@ The delimiter used to separate multiple fields of a single
 *Default value is ","*
 
 
-**Example: Set `value_delimiter` parameter**
+**Example: Set value_delimiter parameter**
 
 
 ```opensips
@@ -244,7 +244,7 @@ modparam("db_http", "value_delimiter",";")
 ```
 
 
-#### `timeout` (int)
+#### timeout (int)
 
 
 The maximum number of milliseconds that the HTTP ops are allowed to last
@@ -253,7 +253,7 @@ The maximum number of milliseconds that the HTTP ops are allowed to last
 *Default value is "30000 ( 30 seconds )"*
 
 
-**Example: Set `timeout` parameter**
+**Example: Set timeout parameter**
 
 
 ```opensips
@@ -263,7 +263,7 @@ modparam("db_http", "timeout",5000)
 ```
 
 
-#### `disable_expect` (int)
+#### disable_expect (int)
 
 
 Disables automatic 'Expect: 100-continue' behavior in libcurl for requests over 1024 bytes in size.
@@ -274,7 +274,7 @@ Disables automatic 'Expect: 100-continue' behavior in libcurl for requests over 
 *Default value is "0 (off)"*
 
 
-**Example: Set `disable_expect` parameter**
+**Example: Set disable_expect parameter**
 
 
 ```opensips

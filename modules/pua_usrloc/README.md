@@ -46,7 +46,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `default_domain` (str)
+#### default_domain (str)
 
 
 The default domain to use when constructing the presentity
@@ -56,7 +56,7 @@ The default domain to use when constructing the presentity
 *Default value is "NULL".*
 
 
-**Example: Set `default_domain` parameter**
+**Example: Set default_domain parameter**
 
 
 ```opensips
@@ -66,7 +66,7 @@ modparam("pua_usrloc", "default_domain", "opensips.org")
 ```
 
 
-#### `entity_prefix` (str)
+#### entity_prefix (str)
 
 
 The prefix when construstructing entity attribute to be added to
@@ -77,7 +77,7 @@ The prefix when construstructing entity attribute to be added to
 *Default value is "NULL".*
 
 
-**Example: Set `presentity_prefix` parameter**
+**Example: Set presentity_prefix parameter**
 
 
 ```opensips
@@ -87,14 +87,14 @@ modparam("pua_usrloc", "entity_prefix", "pres")
 ```
 
 
-#### `presence_server` (str)
+#### presence_server (str)
 
 
 The the address of the presence server. If set, it will be
 		used as outbound proxy when sending PUBLISH requests.
 
 
-**Example: Set `presence_server` parameter**
+**Example: Set presence_server parameter**
 
 
 ```opensips
@@ -108,7 +108,7 @@ modparam("pua_usrloc", "presence_server", "sip:pa@opensips.org:5075")
 ### Exported Functions
 
 
-#### `pua_set_publish()`
+#### pua_set_publish()
 
 
 The function is used to mark REGISTER requests that have to
@@ -116,7 +116,7 @@ The function is used to mark REGISTER requests that have to
 				in location table.
 
 
-**Example: `pua_set_publish` usage**
+**Example: pua_set_publish usage**
 
 
 ```opensips

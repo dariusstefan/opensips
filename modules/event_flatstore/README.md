@@ -56,7 +56,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `max_open_sockets` (integer)
+#### max_open_sockets (integer)
 
 
 Defines the maximum number of simultaneously opened files by the
@@ -68,7 +68,7 @@ Defines the maximum number of simultaneously opened files by the
 *Default value is "100".*
 
 
-**Example: Set `max_open_sockets` parameter**
+**Example: Set max_open_sockets parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("event_flatstore", "max_open_sockets", 200)
 ```
 
 
-#### `delimiter` (string)
+#### delimiter (string)
 
 
 Sets the separator between the parameters of the event in the logging file.
@@ -87,7 +87,7 @@ Sets the separator between the parameters of the event in the logging file.
 *Default value is ",".*
 
 
-**Example: Set `delimiter` parameter**
+**Example: Set delimiter parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("event_flatstore", "delimiter", ";")
 ```
 
 
-#### `file_permissions` (string)
+#### file_permissions (string)
 
 
 Sets the permissions for the newly created logs. It
@@ -107,7 +107,7 @@ Sets the permissions for the newly created logs. It
 *Default value is "644".*
 
 
-**Example: Set `file_permissions` parameter**
+**Example: Set file_permissions parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("event_flatstore", "file_permissions", "664")
 ```
 
 
-#### `suppress_event_name` (int)
+#### suppress_event_name (int)
 
 
 Suppresses the name of the event in the log file.
@@ -126,7 +126,7 @@ Suppresses the name of the event in the log file.
 *Default value is "0/OFF" (the event's name is printed).*
 
 
-**Example: Set `suppress_event_name` parameter**
+**Example: Set suppress_event_name parameter**
 
 
 ```opensips
@@ -145,7 +145,7 @@ No exported functions to be used in the configuration file.
 ### Exported MI Functions
 
 
-#### `evi_flat_rotate`
+#### evi_flat_rotate
 
 
 It makes the processes reopen the file specified as a parameter to the command in order to be compatible with a logrotate command. If the function is not called after the mv command is executed, the module will continue to write in the renamed file.

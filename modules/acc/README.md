@@ -328,7 +328,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `early_media` (integer)
+#### early_media (integer)
 
 
 Should be early media (any provisional reply with body) accounted too ?
@@ -345,7 +345,7 @@ modparam("acc", "early_media", 1)
 ```
 
 
-#### `report_cancels` (integer)
+#### report_cancels (integer)
 
 
 By default, CANCEL reporting is disabled -- most accounting
@@ -364,7 +364,7 @@ modparam("acc", "report_cancels", 1)
 ```
 
 
-#### `detect_direction` (integer)
+#### detect_direction (integer)
 
 
 Controls the direction detection for sequential requests. If
@@ -388,7 +388,7 @@ modparam("acc", "detect_direction", 1)
 ```
 
 
-#### `extra_fields` (string)
+#### extra_fields (string)
 
 
 Defines the tag-log_value set to be used in extra fields accounting.
@@ -420,7 +420,7 @@ modparam("acc", "extra_fields","a->2345;b->2346")
 ```
 
 
-#### `leg_fields` (string)
+#### leg_fields (string)
 
 
 Defines the tag-log_value set to be used in multi-leg accounting.
@@ -452,7 +452,7 @@ modparam("acc", "leg_fields","a->2345;b->2346")
 ```
 
 
-#### `log_level` (integer)
+#### log_level (integer)
 
 
 Log level at which accounting messages are issued to syslog.
@@ -469,7 +469,7 @@ modparam("acc", "log_level", 2)   # Set log_level to 2
 ```
 
 
-#### `log_facility` (string)
+#### log_facility (string)
 
 
 Log facility to which accounting messages are issued to syslog.
@@ -488,7 +488,7 @@ modparam("acc", "log_facility", "LOG_DAEMON")
 ```
 
 
-#### `aaa_url` (string)
+#### aaa_url (string)
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -501,7 +501,7 @@ If the parameter is set to empty string, the AAA accounting support
 Default value is "NULL".
 
 
-**Example: Set `aaa_url` parameter**
+**Example: Set aaa_url parameter**
 
 
 ```opensips
@@ -511,7 +511,7 @@ modparam("acc", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### `service_type` (integer)
+#### service_type (integer)
 
 
 AAA service type used for accounting.
@@ -529,7 +529,7 @@ modparam("acc", "service_type", 15)
 ```
 
 
-#### `db_table_acc` (string)
+#### db_table_acc (string)
 
 
 Table name of accounting successful calls -- database specific.
@@ -546,7 +546,7 @@ modparam("acc", "db_table_acc", "myacc_table")
 ```
 
 
-#### `db_table_missed_calls` (string)
+#### db_table_missed_calls (string)
 
 
 Table name for accounting missed calls -- database specific.
@@ -563,7 +563,7 @@ modparam("acc", "db_table_missed_calls", "myMC_table")
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 SQL address -- database specific. If is set to NULL or empty string,
@@ -581,7 +581,7 @@ modparam("acc", "db_url", "mysql://user:password@localhost/opensips")
 ```
 
 
-#### `acc_method_column` (string)
+#### acc_method_column (string)
 
 
 Column name in accounting table to store the request's method name as
@@ -599,7 +599,7 @@ modparam("acc", "acc_method_column", "method")
 ```
 
 
-#### `acc_from_tag_column` (string)
+#### acc_from_tag_column (string)
 
 
 Column name in accounting table to store the From header TAG parameter.
@@ -616,7 +616,7 @@ modparam("acc", "acc_from_tag_column", "from_tag")
 ```
 
 
-#### `acc_to_tag_column` (string)
+#### acc_to_tag_column (string)
 
 
 Column name in accounting table to store the To header TAG parameter.
@@ -633,7 +633,7 @@ modparam("acc", "acc_to_tag_column", "to_tag")
 ```
 
 
-#### `acc_callid_column` (string)
+#### acc_callid_column (string)
 
 
 Column name in accounting table to store the request's Callid value.
@@ -650,7 +650,7 @@ modparam("acc", "acc_callid_column", "callid")
 ```
 
 
-#### `acc_sip_code_column` (string)
+#### acc_sip_code_column (string)
 
 
 Column name in accounting table to store the final reply's numeric code
@@ -668,7 +668,7 @@ modparam("acc", "acc_sip_code_column", "sip_code")
 ```
 
 
-#### `acc_sip_reason_column` (string)
+#### acc_sip_reason_column (string)
 
 
 Column name in accounting table to store the final reply's reason
@@ -686,7 +686,7 @@ modparam("acc", "acc_sip_reason_column", "sip_reason")
 ```
 
 
-#### `acc_time_column` (string)
+#### acc_time_column (string)
 
 
 Column name in accounting table to store the time stamp of the
@@ -754,7 +754,7 @@ Holds the index of the current leg, starting from 0.  Calling
 ### Exported Functions
 
 
-#### `do_accounting(type, [flags], [table])`
+#### do_accounting(type, [flags], [table])
 
 
 `do_accounting()` replaces all the
@@ -825,7 +825,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### `drop_accounting([type], [flags])`
+#### drop_accounting([type], [flags])
 
 
 `drop_accounting()` resets flags
@@ -891,7 +891,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### `acc_log_request(comment)`
+#### acc_log_request(comment)
 
 
 `acc_request` reports on a request,
@@ -924,7 +924,7 @@ acc_log_request("403 Destination not allowed");
 ```
 
 
-#### `acc_db_request(comment, table)`
+#### acc_db_request(comment, table)
 
 
 Like `acc_log_request`,
@@ -958,7 +958,7 @@ acc_db_request("$T_reply_code $(<reply>rr)", "acc");
 ```
 
 
-#### `acc_aaa_request(comment)`
+#### acc_aaa_request(comment)
 
 
 Like `acc_log_request`,
@@ -990,7 +990,7 @@ acc_aaa_request("403 Destination not allowed");
 ```
 
 
-#### `acc_evi_request(comment)`
+#### acc_evi_request(comment)
 
 
 Like `acc_log_request`,
@@ -1024,7 +1024,7 @@ acc_evi_request("403 Destination not allowed");
 ```
 
 
-#### `acc_new_leg()`
+#### acc_new_leg()
 
 
 Creates a new leg and increments [acc current leg](#pv_acc_current_leg)
@@ -1046,7 +1046,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-#### `acc_load_ctx_from_dlg()`
+#### acc_load_ctx_from_dlg()
 
 
 The function loads and exposes the accounting context of the
@@ -1089,7 +1089,7 @@ if ( load_dialog_ctx("$var(callid)") ) {
 ```
 
 
-#### `acc_unload_ctx_from_dlg()`
+#### acc_unload_ctx_from_dlg()
 
 
 The function off-loads a previosuly loaded accounting context, exposing
@@ -1109,7 +1109,7 @@ For usage example, see the [acc load ctx from dlg](#func_acc_load_ctx_from_dlg).
 ### Exported Events
 
 
-#### `E_ACC_CDR`
+#### E_ACC_CDR
 
 
 The event raised when a CDR is generated. Note that this event will
@@ -1141,7 +1141,7 @@ Parameters:
 				created (the initial Invite was received)
 
 
-#### `E_ACC_EVENT`
+#### E_ACC_EVENT
 
 
 This event is triggered when old-style accounting is used. It is
@@ -1166,7 +1166,7 @@ Parameters:
 				the *multi_leg_info* parameter
 
 
-#### `E_ACC_MISSED_EVENT`
+#### E_ACC_MISSED_EVENT
 
 
 This event is triggered when old-style accounting is used. It is

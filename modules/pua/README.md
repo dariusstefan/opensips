@@ -106,7 +106,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `hash_size` (int)
+#### hash_size (int)
 
 
 The size of the hash table used for storing Subscribe and 
@@ -117,7 +117,7 @@ The size of the hash table used for storing Subscribe and
 *Default value is "9".*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -127,7 +127,7 @@ modparam("pua", "hash_size", 11)
 ```
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 Database url.
@@ -136,7 +136,7 @@ Database url.
 *Default value is ">mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -146,7 +146,7 @@ modparam("pua", "db_url" "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `db_table` (str)
+#### db_table (str)
 
 
 The name of the database table.
@@ -155,7 +155,7 @@ The name of the database table.
 *Default value is "pua".*
 
 
-**Example: Set `db_table` parameter**
+**Example: Set db_table parameter**
 
 
 ```opensips
@@ -165,7 +165,7 @@ modparam("pua", "db_table", "pua")
 ```
 
 
-#### `min_expires` (int)
+#### min_expires (int)
 
 
 The inferior expires limit for both Publish and Subscribe.
@@ -174,7 +174,7 @@ The inferior expires limit for both Publish and Subscribe.
 *Default value is "300".*
 
 
-**Example: Set `min_expires` parameter**
+**Example: Set min_expires parameter**
 
 
 ```opensips
@@ -184,7 +184,7 @@ modparam("pua", "min_expires", 0)
 ```
 
 
-#### `default_expires` (int)
+#### default_expires (int)
 
 
 The default expires value used in case this information is not provisioned.
@@ -193,7 +193,7 @@ The default expires value used in case this information is not provisioned.
 *Default value is "3600".*
 
 
-**Example: Set `default_expires` parameter**
+**Example: Set default_expires parameter**
 
 
 ```opensips
@@ -203,7 +203,7 @@ modparam("pua", "default_expires", 3600)
 ```
 
 
-#### `update_period` (int)
+#### update_period (int)
 
 
 The interval at which the information in database and hash table
@@ -218,7 +218,7 @@ IMPORTANT - if you use clustering support for this module, set a low
 		value here, like 2-5, see the clustering chapter above.
 
 
-**Example: Set `update_period` parameter**
+**Example: Set update_period parameter**
 
 
 ```opensips
@@ -228,7 +228,7 @@ modparam("pua", "update_period", 100)
 ```
 
 
-#### `cluster_id` (int)
+#### cluster_id (int)
 
 
 The cluster ID where the PUA data should be replicated/shared.
@@ -244,7 +244,7 @@ For more on PUA clustering see the
 *Default value is "None".*
 
 
-**Example: Set `cluster_id` parameter**
+**Example: Set cluster_id parameter**
 
 
 ```opensips
@@ -254,7 +254,7 @@ modparam("pua", "cluster_id", 10)
 ```
 
 
-#### `cluster_sharing_tag` (int)
+#### cluster_sharing_tag (int)
 
 
 The clustering share-tag to be used by the PUA module when creating
@@ -273,7 +273,7 @@ For more on PUA clustering see the
 *Default value is "NULL".*
 
 
-**Example: Set `cluster_sharing_tag` parameter**
+**Example: Set cluster_sharing_tag parameter**
 
 
 ```opensips
@@ -286,7 +286,7 @@ modparam("pua", "cluster_sharing_tag", "vip")
 ### Exported Functions
 
 
-#### `pua_update_contact()`
+#### pua_update_contact()
 
 
 The remote target can be updated by the Contact of a subsequent in
@@ -307,7 +307,7 @@ This function can be used from REQUEST_ROUTE.
 - *-1 - if error*.
 
 
-**Example: `pua_update_contact` usage**
+**Example: pua_update_contact usage**
 
 
 ```
@@ -335,14 +335,14 @@ The module provides the following functions that can be used
 		in other OpenSIPS modules.
 
 
-### `bind_pua(pua_api_t* api)`
+### bind_pua(pua_api_t* api)
 
 
 This function binds the pua modules and fills the structure 
 				with the two exported function.
 
 
-**Example: `pua_api` structure**
+**Example: pua_api structure**
 
 
 ```
@@ -358,7 +358,7 @@ typedef struct pua_api {
 ```
 
 
-### `send_publish`
+### send_publish
 
 
 Field type:
@@ -430,7 +430,7 @@ typedef int (publrpl_cb_t)(struct sip_msg* reply, void*  extra_param);
 ```
 
 
-### `send_subscribe`
+### send_subscribe
 
 
 Field type:
@@ -481,7 +481,7 @@ typedef struct subs_info
 ```
 
 
-### `is_dialog`
+### is_dialog
 
 
 Field type:
@@ -499,7 +499,7 @@ This function checks is the parameter corresponds to a stored
 			Subscribe initiated dialog.
 
 
-**Example: `pua_is_dialog `usage example**
+**Example: pua_is_dialog usage example**
 
 
 ```
@@ -513,7 +513,7 @@ This function checks is the parameter corresponds to a stored
 ```
 
 
-### `register_puacb`
+### register_puacb
 
 
 Field type:
@@ -536,7 +536,7 @@ This function registers a callback to be called on receiving the reply message
 			reply message.
 
 
-**Example: `register_puacb `usage example**
+**Example: register_puacb usage example**
 
 
 ```
@@ -551,7 +551,7 @@ This function registers a callback to be called on receiving the reply message
 ```
 
 
-### `add_event`
+### add_event
 
 
 Field type:
@@ -601,7 +601,7 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 ```
 
 
-**Example: `add_event `usage example**
+**Example: add_event usage example**
 
 
 ```

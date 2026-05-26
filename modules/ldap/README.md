@@ -216,7 +216,7 @@ LDAP URL including fully qualified domain name or IP address of LDAP server opti
 Default value: none, this is a mandatory setting
 
 
-**Example: `ldap_server_url` examples**
+**Example: ldap_server_url examples**
 
 
 ```
@@ -237,7 +237,7 @@ Supported LDAP versions are 2 and 3.
 Default value: `3` (LDAPv3)
 
 
-**Example: `ldap_version` example**
+**Example: ldap_version example**
 
 
 ```
@@ -257,7 +257,7 @@ Default value: "" (empty string -->
               anonymous bind)
 
 
-**Example: `ldap_bind_dn` example**
+**Example: ldap_bind_dn example**
 
 
 ```
@@ -276,7 +276,7 @@ Default value: "" (empty string -->
               anonymous bind)
 
 
-**Example: `ldap_bind_password` example**
+**Example: ldap_bind_password example**
 
 
 ```
@@ -294,7 +294,7 @@ LDAP TCP connect timeout in milliseconds. Setting this
 Default value: 1000 (one second)
 
 
-**Example: `ldap_network_timeout` example**
+**Example: ldap_network_timeout example**
 
 
 ```
@@ -311,7 +311,7 @@ LDAP bind operation timeout in milliseconds.
 Default value: 1000 (one second)
 
 
-**Example: `ldap_client_bind_timeout`
+**Example: ldap_client_bind_timeout
                 example**
 
 
@@ -329,7 +329,7 @@ LDAP full path of the CA certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: `ldap_ca_cert_file`
+**Example: ldap_ca_cert_file
                 example**
 
 
@@ -347,7 +347,7 @@ LDAP full path of the certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: `ldap_cert_file`
+**Example: ldap_cert_file
                 example**
 
 
@@ -365,7 +365,7 @@ LDAP full path of the key file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: `ldap_key_file`
+**Example: ldap_key_file
                 example**
 
 
@@ -384,7 +384,7 @@ LDAP peer certificate checking strategy, one of "NEVER", "HARD", "DEMAND", "ALLO
 Default value "NEVER".
 
 
-**Example: `ldap_require_certificate`
+**Example: ldap_require_certificate
                 example**
 
 
@@ -450,7 +450,7 @@ Default value:
         `/usr/local/etc/opensips/ldap.cfg`
 
 
-**Example: `config_file` parameter usage**
+**Example: config_file parameter usage**
 
 
 ```opensips
@@ -472,7 +472,7 @@ Number of maximum asynchronous connections that will be started
 Default value: `20`
 
 
-**Example: `max_async_connections` parameter usage**
+**Example: max_async_connections parameter usage**
 
 
 ```opensips

@@ -65,7 +65,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `setvars` (integer)
+#### setvars (integer)
 
 
 Set to 1 to enable setting all above-mentioned environment variables
@@ -89,7 +89,7 @@ modparam("exec", "setvars", 1)
 ```
 
 
-#### `time_to_kill` (integer)
+#### time_to_kill (integer)
 
 
 If set, this parameter specifies the longest time (in seconds) that a
@@ -123,7 +123,7 @@ modparam("exec", "time_to_kill", 20)
 ### Exported Functions
 
 
-#### `exec(command, [stdin], [stdout], [stderr], [envavp])`
+#### exec(command, [stdin], [stdout], [stderr], [envavp])
 
 
 Executes an external command. The input is passed to the standard input of the new
@@ -175,7 +175,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `exec` usage**
+**Example: exec usage**
 
 
 ```opensips
@@ -195,7 +195,7 @@ exec("/home/../myscript.sh", "this is my $var(input) for exec\n", , , $avp(env))
 ### Exported Asyncronous Functions
 
 
-#### `exec(command, [stdin], [stdout], [stderr], [envavp])`
+#### exec(command, [stdin], [stdout], [stderr], [envavp])
 
 
 Executes an external command. This function does exactly the same as
@@ -217,7 +217,7 @@ To read and understand more on the asynchronous functions, how to use
 		online Manual.
 
 
-**Example: `async exec` usage**
+**Example: async exec usage**
 
 
 ```
