@@ -1029,7 +1029,7 @@ capability in order to mark nodes as eligible for becoming data donors during an
 arbitrary sync request. Consequently, the cluster must have *at least
 one node* marked with the **"seed"** value
 as the *clusterer.flags* column/property in order to be fully functional.
-Consult the [clusterer - Capabilities](clusterer#capabilities)
+Consult the [clusterer - Capabilities](/modules/clusterer#capabilities)
 chapter for more details.
 
 
@@ -1661,8 +1661,8 @@ Parameters:
 Using the *req_callid*, if a dialog has been
 				created for the pending request, this dialog may be temporarily
 				loaded inside the event_route using the
-				[load_dialog_ctx()](dialog#func_load_dialog_ctx) and
-				[unload_dialog_ctx()](dialog#func_unload_dialog_ctx)
+				[load_dialog_ctx()](/modules/dialog#func_load_dialog_ctx) and
+				[unload_dialog_ctx()](/modules/dialog#func_unload_dialog_ctx)
 				functions of the dialog module.
 
 
