@@ -203,7 +203,7 @@ Cluster-bridge replication can be useful in some specific scenarios
 		to the standard, full-mesh replication strategy, you can alternatively
 		group them into multiple cluster IDs based on geo-location, then define
 		the replication "bridges" between them.  Full details in the
-		[cluster-bridge replication](clusterer#bridge_replication)
+		[cluster-bridge replication](/modules/clusterer#bridge_replication)
 		chapter of the clusterer module.
 
 
@@ -473,7 +473,7 @@ modparam("ratelimit", "pipe_replication_cluster", 1)
 #### bridge_replication (boolean) {#param_bridge_replication}
 
 
-Enable the [cluster-bridge replication](clusterer#bridge_replication)
+Enable the [cluster-bridge replication](/modules/clusterer#bridge_replication)
 			feature, if applicable (e.g. the current [pipe replication cluster](#param_pipe_replication_cluster) has
 			at least one bridge definition to a foreign cluster).
 
@@ -496,7 +496,7 @@ modparam("ratelimit", "bridge_replication", true)
 
 Timer in milliseconds, used to specify how often the module
 		should replicate its cluster-local counters to remote clusters,
-		if [bridged replication](clusterer#bridge_replication)
+		if [bridged replication](/modules/clusterer#bridge_replication)
 		is in use, as long as it holds the required sharing tag(s).
 
 
