@@ -1,0 +1,121 @@
+---
+title: "RTP.io Module"
+description: "The RTP.io module provides an integrated solution for handling RTP traffic within OpenSIPS, enabling RTP relaying and processing directly inside the OpenSIPS process. This eliminates the need for external processes such as RTPProxy, resulting in a more ..."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+The RTP.io module provides an integrated solution
+            for handling RTP traffic within OpenSIPS, enabling RTP relaying and
+            processing directly inside the OpenSIPS process. This eliminates the
+            need for external processes such as RTPProxy, resulting in a more
+            streamlined, efficient, and manageable system for certain use cases.
+
+
+The *rtp.io* module starts RTP handling threads in the main
+            OpenSIPS process and allows the *rtpproxy* module to access these
+            threads via a one-to-one socket pair. This tight integration facilitates efficient
+            RTP traffic management within OpenSIPS without relying on external RTP handling
+            services.
+
+
+The module requires RTPProxy version 3.1 or higher, compiled
+            with the `--enable-librtpproxy` option to build. It utilizes the
+            `librtpproxy` library to manage RTP traffic and interfaces with the
+            existing *rtpproxy* module to generate commands, parse responses,
+            and process SIP messages.
+
+
+When the *rtpproxy* module is loaded without arguments and the
+            *rtp.io* module is also loaded, the sockets exported by
+            *rtp.io* are used automatically in set `0`.
+            Alternatively, these sockets can be incorporated into other sets by using the
+            `"rtp.io:auto"` moniker.
+
+
+### Dependencies
+
+
+### Exported Parameters
+
+
+#### `rtpproxy_args`(string)
+
+
+Command-line parameteres passed down to the embedded RTPProxy
+                module upon initialization.  Refer to the RTPProxy
+                documentation for the full list.
+
+
+*Parameter has no default value.*
+
+
+**Example: Set `rtpproxy_args` parameter**
+
+
+```opensips
+...
+modparam("rtp.io", "rtpproxy_args", "-m 12000 -M 15000 -l 0.0.0.0 -6 /::")
+...
+```
+
+
+### Exported Functions
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 11 | 3 | 746 | 7 |
+| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 2 | 1 | 3 | 0 |
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jun 2024 - Jun 2025 |
+| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | May 2025 - May 2025 |
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2023 Sippy Software, Inc.

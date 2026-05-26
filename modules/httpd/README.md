@@ -1,0 +1,501 @@
+---
+title: "httpd Module"
+description: "This module provides an HTTP transport layer for OpenSIPS."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+This module provides an HTTP transport layer for OpenSIPS.
+
+
+Implementation of httpd module's http server is based on
+		libmicrohttpd library.
+
+
+### Overview
+
+
+TLS for the http server is enabled by setting  the `tls_cert_file`
+			and `tls_key_file` parameters. If this is enabled, support for plain
+			http is disabled.
+
+
+### Dependencies
+
+
+#### OpenSIPS Modules
+
+
+The following modules must be loaded before this module:
+
+
+- *No dependencies on other OpenSIPS modules*.
+
+
+#### External Libraries or Applications
+
+
+The following libraries or applications must be installed before 
+		running OpenSIPS with this module loaded:
+
+
+- *libmicrohttpd*, with EPOLL support. This
+					typically means a version newer than **0.9.50**.
+
+
+**WARNING!**  Please be aware about an
+			EPOLL support regression in the *libmicrohttpd*
+			library and packaging which affects the OpenSIPS httpd module, which
+			was fixed according to the below timeline.  The effect of the
+			regression is that the HTTP reply body is *sometimes*
+			never written by the library, causing the client (e.g. opensips-cli)
+			to hang indefinitely waiting for it:
+
+
+- versions **0.9.51** - **0.9.52**
+				have been tested and work correctly
+- regression introduced in **0.9.53** (Apr 2017),
+				lasting until **0.9.71** (May 2020)
+- regression is fixed since **0.9.72** (Dec 2020)
+
+
+### Exported Parameters
+
+
+#### `ip`(string)
+
+
+The IP address used by the HTTP server to listen for incoming 
+		requests.
+
+
+*The default value is "127.0.0.1"* (binds to loopback only).
+		Use "*" to bind to all IPv6 and IPv4 interfaces.
+
+
+**Example: Set `ip` parameter**
+
+
+```opensips
+...
+modparam("httpd", "ip", "127.0.0.1")
+...
+```
+
+
+#### `port`(integer)
+
+
+The port number used by the HTTP server to listen for incoming 
+		requests.
+
+
+*The default value is 8888.*
+		Ports lower than 1024 are not accepted.
+
+
+**Example: Set `port` parameter**
+
+
+```opensips
+...
+modparam("httpd", "port", 8000)
+...
+```
+
+
+#### `conn_timeout`(integer)
+
+
+Auto-close TCP connections which are idle for more than the designated
+		timeout, in seconds.  Set to zero to never close any connections.
+
+
+Note: the connection auto-close routine only seems to be executed
+		in an "on-demand" fashion, during an HTTPD network event (e.g. on a new
+		connection), which although not ideal, it should be good enough in
+		practical terms.
+
+
+*The default timeout is 30 seconds.*
+
+
+**Example: Set `conn_timeout` parameter**
+
+
+```opensips
+...
+modparam("httpd", "conn_timeout", 10)
+...
+```
+
+
+#### `buf_size` (integer)
+
+
+It specifies the maximum length (in bytes) of the buffer
+		used to write in the html response.
+
+
+If the size of the buffer is set to zero, it will be automatically
+		set to a quarter of the size of the pkg memory.
+
+
+*The default value is 0.*
+
+
+**Example: Set `buf_size` parameter**
+
+
+```opensips
+...
+modparam("httpd", "buf_size", 524288)
+...
+```
+
+
+#### `post_buf_size` (integer)
+
+
+It specifies the length (in bytes) of the POST HTTP requests
+		processing buffer.  For large POST request, the default value
+		might require to be increased.
+
+
+*The default value is 1024. The minumal value is 256.*
+
+
+**Example: Set `post_buf_size` parameter**
+
+
+```opensips
+...
+modparam("httpd", "post_buf_size", 4096)
+...
+```
+
+
+#### `receive_buf_size` (integer)
+
+
+It specifies the maximum length (in bytes) of the received HTTP requests.  
+		For receiving large POST request, the default value might require to be increased.
+
+
+*The default value is 1024.*
+
+
+**Example: Set `receive_buf_size` parameter**
+
+
+```opensips
+...
+modparam("httpd", "receive_buf_size", 4096)
+...
+```
+
+
+#### `tls_cert_file` (string)
+
+
+Public certificate file for httpd. It will be used as server-side certificate for incoming TLS connections.
+
+
+*The default value is ""*
+
+
+**Example: Set `tls_cert_file` parameter**
+
+
+```opensips
+...
+modparam("httpd", "tls_cert_file", "/etc/opensips/tls/server.pem")
+...
+```
+
+
+#### `tls_key_file` (string)
+
+
+Private key of the above certificate. I must be kept in a safe place with tight permissions!
+
+
+*The default value is ""*
+
+
+**Example: Set `tls_key_file` parameter**
+
+
+```opensips
+...
+modparam("httpd", "tls_key_file", "/etc/opensips/tls/server.key")
+...
+```
+
+
+#### `tls_ciphers` (string)
+
+
+You can specify the list of algorithms for authentication and encryption that you allow.
+		To obtain a list of ciphers
+		and then choose, use the gnutls-cli application:
+
+
+- gnutls-cli -l
+
+
+> **Warning:** Do not use the NULL algorithms (no encryption) ... never!!!
+
+
+*The default value is  "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2"*
+
+
+**Example: Set `tls_key_file` parameter**
+
+
+```opensips
+...
+modparam("httpd", "tls_ciphers", "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2")
+...
+```
+
+
+#### `auth_realm` (string)
+
+
+The realm string to be used for HTTP Basic Authentication
+		challenges.  Only takes effect when both
+		`auth_username` and
+		`auth_password` are set.
+
+
+*The default value is "OpenSIPS MI".*
+
+
+**Example: Set `auth_realm` parameter**
+
+
+```opensips
+...
+modparam("httpd", "auth_realm", "OpenSIPS Management")
+...
+```
+
+
+#### `auth_username` (string)
+
+
+The username for HTTP Basic Authentication.  When set together
+		with `auth_password`, all HTTP requests must
+		present valid credentials.  Requests without credentials or
+		with incorrect credentials receive a 401 Unauthorized response.
+
+
+*The default value is "" (authentication disabled).*
+
+
+**Example: Set `auth_username` parameter**
+
+
+```opensips
+...
+modparam("httpd", "auth_username", "admin")
+...
+```
+
+
+#### `auth_password` (string)
+
+
+The password for HTTP Basic Authentication.  Must be set
+		together with `auth_username`.
+
+
+> **Warning:** When using HTTP Basic Authentication, it is strongly
+		recommended to also enable TLS via
+		`tls_cert_file` and
+		`tls_key_file` to prevent credentials
+		from being transmitted in plaintext.
+
+
+*The default value is "" (authentication disabled).*
+
+
+**Example: Set `auth_password` parameter**
+
+
+```opensips
+...
+modparam("httpd", "auth_password", "secretpass")
+...
+```
+
+
+### Exported MI Functions
+
+
+#### `httpd:list_root_path`
+
+
+Replaces obsolete MI command: *httpd_list_root_path*.
+
+
+Lists all the registered http root paths into the httpd module.
+		When a request comes in, if the root parth is in the list,
+		the request will be sent to the module that register it.
+
+
+Name: *httpd:list_root_path*
+
+
+Parameters: none
+
+
+MI FIFO Command Format:
+
+
+```
+opensips-cli -x mi httpd:list_root_path
+		
+```
+
+
+### Exported Functions
+
+
+No function exported to be used from configuration file.
+
+
+### Known issues
+
+
+Due to the fact that OpenSIPS is a multiprocess application,
+		the microhttpd library is used in "external select" mode.
+		This ensures that the library is not running in
+		multithread mode and the library is entirely controled
+		by OpenSIPS.  Due to this particular mode of operations,
+		for now, the entire http response is built in a pre-allocated
+		buffer (see buf_size parameter).
+
+
+Future realeases of this module will address this issue.
+
+
+Running the http daemon as non root on ports below 1024 is
+		forbidden by default in linux (kernel>=2.6.24).
+		To allow the port binding, one can use
+		*setcap* to give
+		extra privilleges to opensips binary:
+
+
+```
+setcap 'cap_net_bind_service=+ep' /usr/local/sbin/opensips
+		
+```
+
+
+## Developer Guide
+
+
+### Available Functions
+
+
+#### `register_httpdcb (module, root_path, httpd_acces_handler_cb, httpd_flush_data_cb, httpd_init_proc_cb)`
+
+
+Register a new http root with it's associated callbacks into the httpd module.
+
+
+Meaning of the parameters is as follows:
+
+
+- *const char *mod*
+			- name of the module that register an http root path to be handled;
+- *str *root_path*
+			- the registered root path;
+- *httpd_acces_handler_cb f1*
+			- handler to the callback method to be called on root path match;
+- *httpd_flush_data_cb f2*
+			- handler to the callback method to be called for sending extra data (at a later time);
+- *httpd_init_proc_cb f3*
+			- handler to the callback method to be called during httpd process init;
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 48 | 30 | 1667 | 147 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 29 | 25 | 140 | 76 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 23 | 19 | 172 | 82 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 18 | 14 | 144 | 74 |
+| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 10 | 7 | 52 | 89 |
+| 6. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 8 | 6 | 65 | 21 |
+| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 4 | 2 | 68 | 16 |
+| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 5 | 5 |
+| 9. | Alexandra Titoc | 4 | 2 | 2 | 1 |
+| 10. | Fabian Gast ([@fgast](https://github.com/fgast)) | 4 | 1 | 150 | 3 |
+
+
+**All remaining contributors**: rdondeti, Stephane Alnet, Stas Kobzar, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Ken Rice, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Mar 2015 - May 2026 |
+| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2013 - Apr 2026 |
+| 3. | rdondeti | Mar 2026 - Mar 2026 |
+| 4. | Ken Rice | Sep 2025 - Sep 2025 |
+| 5. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Dec 2024 - Dec 2024 |
+| 6. | Alexandra Titoc | Sep 2024 - Sep 2024 |
+| 7. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
+| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 9. | Fabian Gast ([@fgast](https://github.com/fgast)) | Aug 2020 - Aug 2020 |
+| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
+
+
+**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Stas Kobzar, Stephane Alnet.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** rdondeti, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2012-2013 [VoIP Embedded, Inc.](http://www.voipembedded.com)
