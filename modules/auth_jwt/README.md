@@ -45,7 +45,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `db_mode` (int)
+#### db_mode (int)
 
 
 If set to 0, the module won't connect to the Database for reading the Keys for decoding JWTs - only jwt_script_authorize will be usable from the script.
@@ -54,7 +54,7 @@ If set to 0, the module won't connect to the Database for reading the Keys for d
 *Default value is "0".*
 
 
-**Example: `db_mode` parameter usage**
+**Example: db_mode parameter usage**
 
 
 ```opensips
@@ -62,7 +62,7 @@ modparam("auth_jwt", "db_mode", 0)
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 This is URL of the database to be used. Value of the parameter depends
@@ -75,7 +75,7 @@ This is URL of the database to be used. Value of the parameter depends
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: `db_url` parameter usage**
+**Example: db_url parameter usage**
 
 
 ```opensips
@@ -83,7 +83,7 @@ modparam("auth_jwt", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `profiles_table` (string)
+#### profiles_table (string)
 
 
 Name of the DB table containing the jwt profiles
@@ -92,7 +92,7 @@ Name of the DB table containing the jwt profiles
 Default value of this parameter is jwt_profiles.
 
 
-**Example: `profiles_table` parameter usage**
+**Example: profiles_table parameter usage**
 
 
 ```opensips
@@ -100,7 +100,7 @@ modparam("auth_jwt", "profiles_table", "my_profiles")
 ```
 
 
-#### `secrets_table` (string)
+#### secrets_table (string)
 
 
 Name of the DB table containing the jwt secrets
@@ -109,7 +109,7 @@ Name of the DB table containing the jwt secrets
 Default value of this parameter is jwt_secrets.
 
 
-**Example: `secrets_table` parameter usage**
+**Example: secrets_table parameter usage**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("auth_jwt", "secrets_table", "my_secrets")
 ```
 
 
-#### `tag_column` (string)
+#### tag_column (string)
 
 
 Column holding the JWT profile tag.
@@ -126,7 +126,7 @@ Column holding the JWT profile tag.
 *Default value is "tag".*
 
 
-**Example: Set `tag_column` parameter**
+**Example: Set tag_column parameter**
 
 
 ```opensips
@@ -136,7 +136,7 @@ modparam("auth_jwt", "tag_column", "my_tag_column")
 ```
 
 
-#### `username_column` (string)
+#### username_column (string)
 
 
 Column holding the JWT profile associated SIP username.
@@ -145,7 +145,7 @@ Column holding the JWT profile associated SIP username.
 *Default value is "sip_username".*
 
 
-**Example: Set `username_column` parameter**
+**Example: Set username_column parameter**
 
 
 ```opensips
@@ -155,7 +155,7 @@ modparam("auth_jwt", "username_column", "my_username_column")
 ```
 
 
-#### `secret_tag_column` (string)
+#### secret_tag_column (string)
 
 
 Column holding the JWT secret associated tag.
@@ -164,7 +164,7 @@ Column holding the JWT secret associated tag.
 *Default value is "corresponding_tag".*
 
 
-**Example: Set `secret_tag_column` parameter**
+**Example: Set secret_tag_column parameter**
 
 
 ```opensips
@@ -174,7 +174,7 @@ modparam("auth_jwt", "secret_tag_column", "my_secret_tag_column")
 ```
 
 
-#### `secret_column` (string)
+#### secret_column (string)
 
 
 Column holding the actual jwt signing secret.
@@ -183,7 +183,7 @@ Column holding the actual jwt signing secret.
 *default value is "secret".*
 
 
-**Example: set `secret_column` parameter**
+**Example: set secret_column parameter**
 
 
 ```opensips
@@ -193,7 +193,7 @@ modparam("auth_jwt", "secret_column", "my_secret_column")
 ```
 
 
-#### `start_ts_column` (string)
+#### start_ts_column (string)
 
 
 Column holding the JWT secret start UNIX timestamp.
@@ -202,7 +202,7 @@ Column holding the JWT secret start UNIX timestamp.
 *default value is "start_ts".*
 
 
-**Example: set `start_ts` parameter**
+**Example: set start_ts parameter**
 
 
 ```opensips
@@ -212,7 +212,7 @@ modparam("auth_jwt", "start_ts", "my_start_ts_column")
 ```
 
 
-#### `end_ts_column` (string)
+#### end_ts_column (string)
 
 
 column holding the jwt secret end unix timestamp.
@@ -221,7 +221,7 @@ column holding the jwt secret end unix timestamp.
 *default value is "end_ts".*
 
 
-**Example: set `end_ts` parameter**
+**Example: set end_ts parameter**
 
 
 ```opensips
@@ -231,7 +231,7 @@ modparam("auth_jwt", "end_ts", "my_end_ts_column")
 ```
 
 
-#### `tag_claim` (string)
+#### tag_claim (string)
 
 
 The JWT claim which will be used to identify the JWT profile
@@ -240,7 +240,7 @@ The JWT claim which will be used to identify the JWT profile
 *default value is "tag".*
 
 
-**Example: set `tag_claim` parameter**
+**Example: set tag_claim parameter**
 
 
 ```opensips
@@ -250,7 +250,7 @@ modparam("auth_jwt", "tag_claim", "my_tag_claim")
 ```
 
 
-#### `load_credentials` (string)
+#### load_credentials (string)
 
 
 This parameter specifies credentials to be fetched from the JWT profiles table when
@@ -271,7 +271,7 @@ Parameter syntax:
 Default value of this parameter is "none ( empty )".
 
 
-**Example: `load_credentials` parameter usage**
+**Example: load_credentials parameter usage**
 
 
 ```opensips
@@ -283,7 +283,7 @@ modparam("auth_jwt", "load_credentials", "$avp(extra_jwt_info)=my_extra_column")
 ### Exported Functions
 
 
-#### `jwt_db_authorize(jwt_token,out_decoded_token,out_sip_username)`
+#### jwt_db_authorize(jwt_token,out_decoded_token,out_sip_username)
 
 
 The function will read the first param ( jwt_token ), extract the tag claim and then try to authenticate it against the DB secrets for the respective profile tag. In case of success, it populates the out_decoded_token pvar with the decoded JWT ( in plaintext format header_json.payload_json ) and the out_sip_username with the SIP username corresponding to that JWT profile.
@@ -307,7 +307,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `jwt_db_authorize` usage**
+**Example: jwt_db_authorize usage**
 
 
 ```opensips
@@ -326,7 +326,7 @@ if (!jwt_db_authorize("$avp(my_jwt_token)", $avp(decoded_token), $avp(sip_userna
 ```
 
 
-#### `jwt_script_authorize(jwt_token,key, out_decoded_token)`
+#### jwt_script_authorize(jwt_token,key, out_decoded_token)
 
 
 The function will read the first param ( jwt_token ), decode it and then try to validate it against the provided key. If the JWT decoding is succesful, the out_decoded_token pvar will be populated.
@@ -350,7 +350,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `jwt_script_authorize` usage**
+**Example: jwt_script_authorize usage**
 
 
 ```opensips
@@ -365,7 +365,7 @@ if (!jwt_script_authorize("$avp(my_jwt_token)",$avp(pub_key), $avp(decoded_token
 ```
 
 
-#### `extract_pub_key_from_cert(certificate,out_public_key)`
+#### extract_pub_key_from_cert(certificate,out_public_key)
 
 
 The function will read the first param ( certificate ), decode it and then try to extract the public key with the certificate. If the extraction is succesful, the out_public_key will be populated. Useful to be used in conjuction with the jwt_script_authorize function, since most providers make their certificates public, but the JWTs are signed with the actual public key embeded in the certificate.
@@ -387,7 +387,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `extract_pub_key_from_cert` usage**
+**Example: extract_pub_key_from_cert usage**
 
 
 ```opensips

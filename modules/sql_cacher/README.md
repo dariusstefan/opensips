@@ -53,7 +53,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `cache_table` (string)
+#### cache_table (string)
 
 
 This parameter can be set multiple times in order to cache multiple SQL
@@ -102,7 +102,7 @@ Overall, the parameter does not have a default value, it must be set
 		at least once in order to cache any table.
 
 
-**Example: `cache_table` parameter usage**
+**Example: cache_table parameter usage**
 
 
 ```opensips
@@ -117,7 +117,7 @@ on_demand=0")
 ```
 
 
-#### `spec_delimiter` (string)
+#### spec_delimiter (string)
 
 
 The delimiter to be used in the caching entry specification provided in the
@@ -128,7 +128,7 @@ The delimiter to be used in the caching entry specification provided in the
 The default value is newline.
 
 
-**Example: `spec_delimiter` parameter usage**
+**Example: spec_delimiter parameter usage**
 
 
 ```opensips
@@ -136,7 +136,7 @@ modparam("sql_cacher", "spec_delimiter", "\n")
 ```
 
 
-#### `pvar_delimiter` (string)
+#### pvar_delimiter (string)
 
 
 The delimiter to be used in the "$sql_cached_value"
@@ -147,7 +147,7 @@ The delimiter to be used in the "$sql_cached_value"
 The default value is ":".
 
 
-**Example: `pvar_delimiter` parameter usage**
+**Example: pvar_delimiter parameter usage**
 
 
 ```opensips
@@ -155,7 +155,7 @@ modparam("sql_cacher", "pvar_delimiter", " ")
 ```
 
 
-#### `columns_delimiter` (string)
+#### columns_delimiter (string)
 
 
 The delimiter to be used in the *columns* subparameter of
@@ -166,7 +166,7 @@ The delimiter to be used in the *columns* subparameter of
 The default value is " "(space).
 
 
-**Example: `columns_delimiter` parameter usage**
+**Example: columns_delimiter parameter usage**
 
 
 ```opensips
@@ -174,7 +174,7 @@ modparam("sql_cacher", "columns_delimiter", ",")
 ```
 
 
-#### `sql_fetch_nr_rows` (integer)
+#### sql_fetch_nr_rows (integer)
 
 
 The number of rows to be fetched into OpenSIPS private memory in one chunk from
@@ -185,7 +185,7 @@ The number of rows to be fetched into OpenSIPS private memory in one chunk from
 The default value is "100".
 
 
-**Example: `sql_fetch_nr_rows` parameter usage**
+**Example: sql_fetch_nr_rows parameter usage**
 
 
 ```opensips
@@ -193,7 +193,7 @@ modparam("sql_cacher", "sql_fetch_nr_rows", 1000)
 ```
 
 
-#### `full_caching_expire` (integer)
+#### full_caching_expire (integer)
 
 
 Expire period for the values stored in cache for the full caching type
@@ -204,7 +204,7 @@ Expire period for the values stored in cache for the full caching type
 The default value is "24 hours".
 
 
-**Example: `full_caching_expire` parameter usage**
+**Example: full_caching_expire parameter usage**
 
 
 ```opensips
@@ -212,7 +212,7 @@ modparam("sql_cacher", "full_caching_expire", 3600)
 ```
 
 
-#### `reload_interval` (integer)
+#### reload_interval (integer)
 
 
 This parameter represents how many seconds before the data expires (for full caching) the
@@ -222,7 +222,7 @@ This parameter represents how many seconds before the data expires (for full cac
 The default value is "60 s".
 
 
-**Example: `reload_interval` parameter usage**
+**Example: reload_interval parameter usage**
 
 
 ```opensips
@@ -230,7 +230,7 @@ modparam("sql_cacher", "reload_interval", 5)
 ```
 
 
-#### `bigint_to_str` (integer)
+#### bigint_to_str (integer)
 
 
 Controls bigint conversion.
@@ -243,7 +243,7 @@ Controls bigint conversion.
 The default value is "0" (disabled).
 
 
-**Example: `bigint_to_str` parameter usage**
+**Example: bigint_to_str parameter usage**
 
 
 ```opensips
@@ -254,7 +254,7 @@ modparam("sql_cacher", "bigint_to_str", 1)
 ### Exported Functions
 
 
-#### `sql_cache_dump(caching_id, columns, result_avps)`
+#### sql_cache_dump(caching_id, columns, result_avps)
 
 
 Dump all *columns* cached within the given *caching_id*,
@@ -282,7 +282,7 @@ Return Codes:
 This function can be used from any route.
 
 
-**Example: `sql_cache_dump` usage**
+**Example: sql_cache_dump usage**
 
 
 ```opensips
@@ -302,7 +302,7 @@ while ($var(i) < $var(n)) {
 ### Exported MI Functions
 
 
-#### `sql_cacher_reload`
+#### sql_cacher_reload
 
 
 Reloads the entire SQL table in cache or the single key (if key provided) in
@@ -319,7 +319,7 @@ Parameters:
 - *key* (optional) - the specific key to be reloaded.
 
 
-**Example: `sql_cacher_reload` usage**
+**Example: sql_cacher_reload usage**
 
 
 ```
@@ -334,7 +334,7 @@ $ opensips-cli -x mi sql_cacher_reload subs_caching alice@domain.com
 ### Exported Pseudo-Variables
 
 
-#### `$sql_cached_value(id{sep}col{sep}key)`
+#### $sql_cached_value(id{sep}col{sep}key)
 
 
 The cached data is available through this read-only PV.The format
@@ -348,7 +348,7 @@ The cached data is available through this read-only PV.The format
 - *key* : value of the "key" column
 
 
-**Example: `sql_cached_value(id{sep}col{sep}key) pseudo-variable` usage**
+**Example: sql_cached_value(id{sep}col{sep}key) pseudo-variable usage**
 
 
 ```
@@ -392,7 +392,7 @@ In the first place, the details of the caching must be provided by setting
 		the module parameter "cache_table" in the OpenSIPS configuration script.
 
 
-**Example: Setting the `cache_table` parameter**
+**Example: Setting the cache_table parameter**
 
 
 ```opensips
@@ -435,7 +435,7 @@ The module provides the "sql_cacher" Status/Report group, where each
 	are no identifiers created for the on-demand caches.
 
 
-#### `[cache_entry_id]`
+#### [cache_entry_id]
 
 
 The status of these identifiers reflects the readiness/status of the

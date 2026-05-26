@@ -41,7 +41,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `janus_send_timeout` (integer)
+#### janus_send_timeout (integer)
 
 
 Time in milliseconds after a Janus WebSocket connection will be closed if it is not available for blocking writing in this interval (and OpenSIPS wants to send something on it).
@@ -50,7 +50,7 @@ Time in milliseconds after a Janus WebSocket connection will be closed if it is 
 *Default value is "1000" (milliseconds).*
 
 
-**Example: Setting the `janus_send_timeout` parameter**
+**Example: Setting the janus_send_timeout parameter**
 
 
 ```opensips
@@ -60,7 +60,7 @@ modparam("janus", "janus_send_timeout", 2000)
 ```
 
 
-#### `janus_max_msg_chunks` (integer)
+#### janus_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a Janus message is expected to arrive via WebSocket. If a received packet is more fragmented than this, the connection is dropped
@@ -69,7 +69,7 @@ The maximum number of chunks in which a Janus message is expected to arrive via 
 *Default value is "4"*
 
 
-**Example: Setting the `janus_max_msg_chunks` parameter**
+**Example: Setting the janus_max_msg_chunks parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("janus", "janus_max_msg_chunks", 8)
 ```
 
 
-#### `janus_cmd_timeout` (integer)
+#### janus_cmd_timeout (integer)
 
 
 The maximally allowed duration for the execution of an Janus command.
@@ -89,7 +89,7 @@ The maximally allowed duration for the execution of an Janus command.
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the `janus_cmd_timeout` parameter**
+**Example: Setting the janus_cmd_timeout parameter**
 
 
 ```opensips
@@ -99,7 +99,7 @@ modparam("janus", "janus_cmd_timeout", 3000)
 ```
 
 
-#### `janus_cmd_polling_itv` (integer)
+#### janus_cmd_polling_itv (integer)
 
 
 The sleep interval used when polling for an Janus command response. Since the
@@ -111,7 +111,7 @@ The sleep interval used when polling for an Janus command response. Since the
 *Default value is "1000" (microseconds).*
 
 
-**Example: Setting the `janus_cmd_polling_itv` parameter**
+**Example: Setting the janus_cmd_polling_itv parameter**
 
 
 ```opensips
@@ -121,7 +121,7 @@ modparam("janus", "janus_cmd_polling_itv", 3000)
 ```
 
 
-#### `janus_ping_interval` (integer)
+#### janus_ping_interval (integer)
 
 
 The time interval at which OpenSIPS will do keepalive pinging on the Janus connect
@@ -130,7 +130,7 @@ The time interval at which OpenSIPS will do keepalive pinging on the Janus conne
 *Default value is "5" (seconds).*
 
 
-**Example: Setting the `janus_ping_interval` parameter**
+**Example: Setting the janus_ping_interval parameter**
 
 
 ```opensips
@@ -140,7 +140,7 @@ modparam("janus", "janus_ping_interval", 10)
 ```
 
 
-#### `janus_db_url` (string)
+#### janus_db_url (string)
 
 
 The DB URL from where OpenSIPS will load the list of Janus connection
@@ -149,7 +149,7 @@ The DB URL from where OpenSIPS will load the list of Janus connection
 *Default value is ""none"" (needs to be set for the module to start).*
 
 
-**Example: Setting the `janus_db_url` parameter**
+**Example: Setting the janus_db_url parameter**
 
 
 ```opensips
@@ -159,7 +159,7 @@ modparam("janus", "janus_db_url", "mysql://root@localhost/opensips")
 ```
 
 
-#### `janus_db_table` (string)
+#### janus_db_table (string)
 
 
 The DB Table from where OpenSIPS will load the list of Janus connection
@@ -168,7 +168,7 @@ The DB Table from where OpenSIPS will load the list of Janus connection
 *Default value is "janus"*
 
 
-**Example: Setting the `janus_db_table` parameter**
+**Example: Setting the janus_db_table parameter**
 
 
 ```opensips
@@ -181,7 +181,7 @@ modparam("janus", "janus_db_table", "my_janus_table")
 ### Exported Functions
 
 
-#### `janus_send_requeest(janus_id, janus_command[, response_var])`
+#### janus_send_requeest(janus_id, janus_command[, response_var])
 
 
 Run an arbitrary command on an arbitrary Janus socket. The
@@ -216,8 +216,8 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `
-				*janus_send_request()*` usage**
+**Example: 
+				*janus_send_request()* usage**
 
 
 ```opensips
@@ -246,7 +246,7 @@ This function can be used from any route.
 #### Exported Events
 
 
-##### `E_JANUS_EVENT`
+##### E_JANUS_EVENT
 
 
 This event is raised when a notification is received from a Janus server.
@@ -260,8 +260,8 @@ Parameters represent the janus_id and the janus_url that originated the notifica
 - *janus_body* - full body of the notification received from janus
 
 
-**Example: `
-				*E_JANUS_EVENT*` example**
+**Example: 
+				*E_JANUS_EVENT* example**
 
 
 ```opensips

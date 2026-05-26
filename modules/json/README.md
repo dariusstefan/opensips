@@ -48,7 +48,7 @@ This module does not depend on other modules.
 ### Exported Parameters
 
 
-#### `enable_long_quoting` (boolean)
+#### enable_long_quoting (boolean)
 
 
 Enable this parameter if your input JSONs contain signed integers which
@@ -61,7 +61,7 @@ Enable this parameter if your input JSONs contain signed integers which
 *Default value is *false*.*
 
 
-**Example: Set `enable_long_quoting` parameter**
+**Example: Set enable_long_quoting parameter**
 
 
 ```opensips
@@ -77,7 +77,7 @@ $var(gateway_id) = "" + $json(body/gateway_id);
 ### Exported Pseudo-Variables
 
 
-#### `$json(id)`
+#### $json(id)
 
 
 The `json` variable provides
@@ -374,7 +374,7 @@ $json(object/array) := $json(array) ;
 ```
 
 
-#### `$json_pretty(id)`
+#### $json_pretty(id)
 
 
 The `json_pretty` variable has the
@@ -383,7 +383,7 @@ The `json_pretty` variable has the
 			spaces and tabs to make the output more readable.
 
 
-#### `$json_compact(id)`
+#### $json_compact(id)
 
 
 The `json_compact` variable has the
@@ -395,9 +395,9 @@ The `json_compact` variable has the
 ### Exported Functions
 
 
-#### `
+#### 
 				json_link($json(dest_id), $json(source_id))
-				`
+				
 
 
 This function can be used to link json objects together.
@@ -503,9 +503,9 @@ xlog("\nTest link :\n$json(stub)\n$json(b)\n\n");
 ```
 
 
-#### `
+#### 
 				json_merge(main_json_var,patch_json_var,output_var))
-				`
+				
 
 
 The function can be used to patch merge patch_json_var into main_json_var and the output will be populated into the output_var

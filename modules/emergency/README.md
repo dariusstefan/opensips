@@ -67,7 +67,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The database url must be specified.
@@ -76,7 +76,7 @@ The database url must be specified.
 *Default value is "NULL".*
 
 
-**Example: Setting the `db_url` parameter**
+**Example: Setting the db_url parameter**
 
 
 ```opensips
@@ -87,7 +87,7 @@ modparam("emergency", "db_url", "mysql://opensips:opensipsrw@localhost/opensips�
 ```
 
 
-#### `db_table_routing` (string)
+#### db_table_routing (string)
 
 
 The name of the db table storing routing information to emergency calls.
@@ -96,7 +96,7 @@ The name of the db table storing routing information to emergency calls.
 *Default value is "emergency_routing".*
 
 
-**Example: Setting the `db_table_routing` parameter**
+**Example: Setting the db_table_routing parameter**
 
 
 ```opensips
@@ -107,7 +107,7 @@ modparam("emergency", "db_table_routing", "emergency_routing")
 ```
 
 
-#### `db_table_report` (string)
+#### db_table_report (string)
 
 
 The name of the db table that stores the emergency call report.
@@ -116,7 +116,7 @@ The name of the db table that stores the emergency call report.
 *Default value is "emergency_report".*
 
 
-**Example: Setting the `db_table_report` parameter**
+**Example: Setting the db_table_report parameter**
 
 
 ```opensips
@@ -127,7 +127,7 @@ modparam("emergency", "db_table_report", "emergency_report")
 ```
 
 
-#### `db_table_provider` (string)
+#### db_table_provider (string)
 
 
 The name of the db table that stores the nodes information of organization involved in emergency calls.
@@ -136,7 +136,7 @@ The name of the db table that stores the nodes information of organization invol
 *Default value is "emergency_service_provider".*
 
 
-**Example: Setting the `db_table_provider` parameter**
+**Example: Setting the db_table_provider parameter**
 
 
 ```opensips
@@ -147,7 +147,7 @@ modparam("emergency", "db_table_provider", "emergency_service_provider")
 ```
 
 
-#### `proxy_role` (integer)
+#### proxy_role (integer)
 
 
 This parameter define what role the opensips will take to treat emergency   
@@ -177,7 +177,7 @@ This parameter define what role the opensips will take to treat emergency
 *Default value is "0".*
 
 
-**Example: Setting the `proxy_role` parameter**
+**Example: Setting the proxy_role parameter**
 
 
 ```opensips
@@ -188,7 +188,7 @@ modparam("emergency", "proxy_role", 0))
 ```
 
 
-#### `url_vpc` (string)
+#### url_vpc (string)
 
 
 The VPC url that opensips request the routing information to emergency 
@@ -198,7 +198,7 @@ The VPC url that opensips request the routing information to emergency
 *Default value is "empty string".*
 
 
-**Example: Setting the `url_vpc` parameter**
+**Example: Setting the url_vpc parameter**
 
 
 ```opensips
@@ -209,7 +209,7 @@ modparam("emergency", "url_vpc", “192.168.0.103:5060”)
 ```
 
 
-#### `emergency_codes` (string)
+#### emergency_codes (string)
 
 
 Local emergency number. Opensips uses this number to recognize a emergency 
@@ -222,7 +222,7 @@ Local emergency number. Opensips uses this number to recognize a emergency
 *Default value is "NULLg".*
 
 
-**Example: Setting the `emergency_codes` parameter**
+**Example: Setting the emergency_codes parameter**
 
 
 ```opensips
@@ -233,7 +233,7 @@ modparam("emergency", "emergency_codes", “911-us emegency code”)
 ```
 
 
-#### `timer_interval` (interger)
+#### timer_interval (interger)
 
 
 Sets the time interval polling to make the copy in memory of the 
@@ -243,7 +243,7 @@ Sets the time interval polling to make the copy in memory of the
 *Default value is "10".*
 
 
-**Example: Setting the `timer_interval` parameter**
+**Example: Setting the timer_interval parameter**
 
 
 ```opensips
@@ -254,7 +254,7 @@ modparam("emergency","timer_interval",20)
 ```
 
 
-#### `contingency_hostname` (string)
+#### contingency_hostname (string)
 
 
 The contingency_hostname is the url of the server que will route the call 
@@ -264,7 +264,7 @@ The contingency_hostname is the url of the server que will route the call
 *Default value is "NULL".*
 
 
-**Example: Setting the `contingency_hostname` parameter**
+**Example: Setting the contingency_hostname parameter**
 
 
 ```opensips
@@ -275,7 +275,7 @@ modparam("emergency","contingency_hostname",“176.34,29.102:5060”)
 ```
 
 
-#### `emergency_call_server` (string)
+#### emergency_call_server (string)
 
 
 The emergency_call_server is the url of the Routing Proxy/Redirect Server
@@ -287,7 +287,7 @@ The emergency_call_server is the url of the Routing Proxy/Redirect Server
 *Default value is "NULL".*
 
 
-**Example: Setting the `emergency_call_server` parameter**
+**Example: Setting the emergency_call_server parameter**
 
 
 ```opensips
@@ -301,7 +301,7 @@ modparam("emergency","emergency_call_server",“124.78.29.123:5060”)
 ### Exported Functions
 
 
-#### `emergency_call()`
+#### emergency_call()
 
 
 Checks whether the incoming call is an emergency call, case it is treats, and  
@@ -313,7 +313,7 @@ Checks whether the incoming call is an emergency call, case it is treats, and
 This function can be used from the *REQUEST* routes.
 
 
-**Example: `emergency_call()` usage**
+**Example: emergency_call() usage**
 
 
 ```opensips
@@ -333,7 +333,7 @@ This function can be used from the *REQUEST* routes.
 ```
 
 
-#### `failure()`
+#### failure()
 
 
 This function is used when trying to route the emergency call to the 
@@ -346,7 +346,7 @@ This function is used when trying to route the emergency call to the
 This function can be used from the *FAILURE* routes.
 
 
-**Example: `failure()` usage**
+**Example: failure() usage**
 
 
 ```opensips

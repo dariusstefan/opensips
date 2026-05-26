@@ -52,7 +52,7 @@ None.
 ### Parameters
 
 
-#### `default_expires` (int)
+#### default_expires (int)
 
 
 The default expires value used when missing from SUBSCRIBE
@@ -62,7 +62,7 @@ The default expires value used when missing from SUBSCRIBE
 *Default value is "3600".*
 
 
-**Example: Set `default_expires` parameter**
+**Example: Set default_expires parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ The default expires value used when missing from SUBSCRIBE
 ```
 
 
-#### `aggregate_presentities` (int)
+#### aggregate_presentities (int)
 
 
 Whether to aggregate in a single notify body all registration 
@@ -84,7 +84,7 @@ Whether to aggregate in a single notify body all registration
 *Default value is "0" (disabled).*
 
 
-**Example: Set `aggregate_presentities` parameter**
+**Example: Set aggregate_presentities parameter**
 
 
 ```opensips

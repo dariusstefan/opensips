@@ -101,7 +101,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `port` (integer)
+#### port (integer)
 
 
 Default IPSec port used when no prot is being specified in the
@@ -111,7 +111,7 @@ Default IPSec port used when no prot is being specified in the
 *Default value is 5062.*
 
 
-**Example: Set `port` parameter**
+**Example: Set port parameter**
 
 
 ```opensips
@@ -121,7 +121,7 @@ modparam("proto_ipsec", "port", 5100)
 ```
 
 
-#### `min_spi` (integer)
+#### min_spi (integer)
 
 
 This parameter represents the minimum value for the Security
@@ -134,7 +134,7 @@ This parameter represents the minimum value for the Security
 *Default value is 65536.*
 
 
-**Example: Set `min_spi` parameter**
+**Example: Set min_spi parameter**
 
 
 ```opensips
@@ -144,7 +144,7 @@ modparam("proto_ipsec", "min_spi", 10000)
 ```
 
 
-#### `max_spi` (integer)
+#### max_spi (integer)
 
 
 This parameter represents the maximum value for the Security
@@ -157,7 +157,7 @@ This parameter represents the maximum value for the Security
 *Default value is 262144.*
 
 
-**Example: Set `max_spi` parameter**
+**Example: Set max_spi parameter**
 
 
 ```opensips
@@ -167,7 +167,7 @@ modparam("proto_ipsec", "max_spi", 20000)
 ```
 
 
-#### `temporary_timeout` (integer)
+#### temporary_timeout (integer)
 
 
 Sets the timeout (in seconds) a temporary security association
@@ -184,7 +184,7 @@ The timeout signifies the duration elapsed after sending the
 *Default value is 30.*
 
 
-**Example: Set `temporary_timeout` variable**
+**Example: Set temporary_timeout variable**
 
 
 ```
@@ -194,7 +194,7 @@ param("proto_ipsec", "temporary_timeout", 10) # number of seconds
 ```
 
 
-#### `default_client_port` (integer)
+#### default_client_port (integer)
 
 
 Default port value to be used when we act as clients in the
@@ -205,7 +205,7 @@ Default port value to be used when we act as clients in the
 			but needs to be different from the server socket.*
 
 
-**Example: Set `default_client_port` parameter**
+**Example: Set default_client_port parameter**
 
 
 ```opensips
@@ -215,7 +215,7 @@ modparam("proto_ipsec", "default_client_port", 5100)
 ```
 
 
-#### `default_server_port` (integer)
+#### default_server_port (integer)
 
 
 Default port value to be used when we act as server in the
@@ -226,7 +226,7 @@ Default port value to be used when we act as server in the
 			but needs to be different from the client socket.*
 
 
-**Example: Set `default_server_port` parameter**
+**Example: Set default_server_port parameter**
 
 
 ```opensips
@@ -236,7 +236,7 @@ modparam("proto_ipsec", "default_server_port", 6100)
 ```
 
 
-#### `allowed_algorithms` (string)
+#### allowed_algorithms (string)
 
 
 Whitelists the authentication and encryption algorithms
@@ -269,7 +269,7 @@ Currently supported algorithms are:
 *Default value is none - this means that all algorithms can be used.*
 
 
-**Example: Set `allowed_algorithms` parameter**
+**Example: Set allowed_algorithms parameter**
 
 
 ```opensips
@@ -281,7 +281,7 @@ modparam("proto_ipsec", "allowed_algorithms", "hmac-sha-1-96=null,aes-gmac=aes-g
 ```
 
 
-#### `disable_deprecated_algorithms` (integer)
+#### disable_deprecated_algorithms (integer)
 
 
 Indicates whether we should ignore deprecated algorithms,
@@ -297,7 +297,7 @@ Indicates whether we should ignore deprecated algorithms,
 *Default value is false - all algorithms can be used.*
 
 
-**Example: Set `disable_deprecated_algorithms` parameter**
+**Example: Set disable_deprecated_algorithms parameter**
 
 
 ```opensips
@@ -310,7 +310,7 @@ modparam("proto_ipsec", "disable_deprecated_algorithms", yes)
 ### Exported Functions
 
 
-#### `ipsec_create([port_server], [port_client], [algos])`
+#### ipsec_create([port_server], [port_client], [algos])
 
 
 Creates an IPSec SA/tunnel according to the
@@ -348,7 +348,7 @@ Meaning of the parameters is as follows:
 This function can be used from REPLY_ROUTE.
 
 
-**Example: `ipsec_create()` usage**
+**Example: ipsec_create() usage**
 
 
 ```
@@ -364,7 +364,7 @@ onreply_route[ipsec] {
 ### Exported Pseudo-Variables
 
 
-#### `$ipsec`
+#### $ipsec
 
 
 Populated for a request that is being received over
@@ -395,7 +395,7 @@ The following fields can be retrieved:
 					chosen for communicating through the server channel.
 
 
-**Example: `$ipsec(field)` usage**
+**Example: $ipsec(field) usage**
 
 
 ```opensips
@@ -405,7 +405,7 @@ xlog("Using $ipsec(ip):$ipsec(port-c) and $ipsec(ip):$ipsec(port-s) socket\n");
 ```
 
 
-#### `$ipsec_ue`
+#### $ipsec_ue
 
 
 Populated for a request that is being received over
@@ -436,7 +436,7 @@ The following fields can be retrieved:
 					chosen for communicating through the server channel.
 
 
-**Example: `$ipsec_ue(field)` usage**
+**Example: $ipsec_ue(field) usage**
 
 
 ```opensips

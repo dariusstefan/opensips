@@ -83,7 +83,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `backend` (string)
+#### backend (string)
 
 
 The mode you are using the module; it can be either component or server.
@@ -92,7 +92,7 @@ The mode you are using the module; it can be either component or server.
 *Default value is "component".*
 
 
-**Example: Set `backend` parameter**
+**Example: Set backend parameter**
 
 
 ```opensips
@@ -102,7 +102,7 @@ The mode you are using the module; it can be either component or server.
 ```
 
 
-#### `xmpp_domain` (string)
+#### xmpp_domain (string)
 
 
 The xmpp domain of the component or the server, depending on the mode we are in.
@@ -111,7 +111,7 @@ The xmpp domain of the component or the server, depending on the mode we are in.
 *Default value is "127.0.0.1".*
 
 
-**Example: Set `xmpp_domain` parameter**
+**Example: Set xmpp_domain parameter**
 
 
 ```opensips
@@ -121,7 +121,7 @@ The xmpp domain of the component or the server, depending on the mode we are in.
 ```
 
 
-#### `xmpp_host` (string)
+#### xmpp_host (string)
 
 
 The ip address or the name of the local jabber server, if the backend is set to "component"; or the address to bind to in the server mode.
@@ -130,7 +130,7 @@ The ip address or the name of the local jabber server, if the backend is set to 
 *Default value is "127.0.0.1".*
 
 
-**Example: Set `xmpp_host` parameter**
+**Example: Set xmpp_host parameter**
 
 
 ```opensips
@@ -140,7 +140,7 @@ The ip address or the name of the local jabber server, if the backend is set to 
 ```
 
 
-#### `sip_domain` (string)
+#### sip_domain (string)
 
 
 This parameter must be set only if the xmpp module is used in component mode and the domain
@@ -159,7 +159,7 @@ This parameter must be set only if the xmpp module is used in component mode and
 *Default value is NULL.*
 
 
-**Example: Set `xmpp_host` parameter**
+**Example: Set xmpp_host parameter**
 
 
 ```opensips
@@ -169,7 +169,7 @@ This parameter must be set only if the xmpp module is used in component mode and
 ```
 
 
-#### `xmpp_port` (integer)
+#### xmpp_port (integer)
 
 
 In the component mode, this is the port of the jabber router we connect to. In the server mode, it is the transport address to bind to.
@@ -178,7 +178,7 @@ In the component mode, this is the port of the jabber router we connect to. In t
 *Default value is "5347", if backend is set to "component" and "5269", if backend is set to "server".*
 
 
-**Example: Set `xmpp_port` parameter**
+**Example: Set xmpp_port parameter**
 
 
 ```opensips
@@ -188,7 +188,7 @@ In the component mode, this is the port of the jabber router we connect to. In t
 ```
 
 
-#### `xmpp_password` (string)
+#### xmpp_password (string)
 
 
 The password of the local jabber server.
@@ -206,7 +206,7 @@ The password of the local jabber server.
 ```
 
 
-**Example: Set `xmpp_password` parameter**
+**Example: Set xmpp_password parameter**
 
 
 ```opensips
@@ -216,7 +216,7 @@ The password of the local jabber server.
 ```
 
 
-#### `outbound_proxy` (string)
+#### outbound_proxy (string)
 
 
 The SIP address used as next hop when sending the message. Very
@@ -229,7 +229,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is NULL.*
 
 
-**Example: Set `outbound_proxy` parameter**
+**Example: Set outbound_proxy parameter**
 
 
 ```opensips
@@ -242,13 +242,13 @@ The SIP address used as next hop when sending the message. Very
 ### Exported Functions
 
 
-#### `xmpp_send_message()`
+#### xmpp_send_message()
 
 
 Converts SIP messages to XMPP(jabber) messages, in order to be relayed to a XMPP(jabber) client.
 
 
-**Example: `xmpp_send_message()` usage**
+**Example: xmpp_send_message() usage**
 
 
 ```

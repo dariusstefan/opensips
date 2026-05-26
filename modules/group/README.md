@@ -64,13 +64,13 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 URL of the database table to be used.
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -80,7 +80,7 @@ modparam("group", "db_url", "mysql://username:password@dbhost/opensips")
 ```
 
 
-#### `table` (string)
+#### table (string)
 
 
 Name of the table holding strict definitions of groups and
@@ -90,7 +90,7 @@ Name of the table holding strict definitions of groups and
 *Default value is "grp".*
 
 
-**Example: Set `table` parameter**
+**Example: Set table parameter**
 
 
 ```opensips
@@ -100,7 +100,7 @@ modparam("group", "table", "grp_table")
 ```
 
 
-#### `user_column` (string)
+#### user_column (string)
 
 
 Name of the "table" column holding usernames.
@@ -109,7 +109,7 @@ Name of the "table" column holding usernames.
 *Default value is "username".*
 
 
-**Example: Set `user_column` parameter**
+**Example: Set user_column parameter**
 
 
 ```opensips
@@ -119,7 +119,7 @@ modparam("group", "user_column", "user")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 Name of the "table" column holding domains.
@@ -128,7 +128,7 @@ Name of the "table" column holding domains.
 *Default value is "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -138,7 +138,7 @@ modparam("group", "domain_column", "realm")
 ```
 
 
-#### `group_column` (string)
+#### group_column (string)
 
 
 Name of the "table" column holding groups.
@@ -147,7 +147,7 @@ Name of the "table" column holding groups.
 *Default value is "grp".*
 
 
-**Example: Set `group_column` parameter**
+**Example: Set group_column parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("group", "group_column", "grp")
 ```
 
 
-#### `use_domain` (integer)
+#### use_domain (integer)
 
 
 If enabled (set to non zero value) then domain will be used also used
@@ -168,7 +168,7 @@ If enabled (set to non zero value) then domain will be used also used
 *Default value is 0 (no).*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -178,7 +178,7 @@ modparam("group", "use_domain", 1)
 ```
 
 
-#### `re_table` (string)
+#### re_table (string)
 
 
 Name of the table holding definitions for regular-expression
@@ -189,7 +189,7 @@ Name of the table holding definitions for regular-expression
 *Default value is "NULL".*
 
 
-**Example: Set `re_table` parameter**
+**Example: Set re_table parameter**
 
 
 ```opensips
@@ -199,7 +199,7 @@ modparam("group", "re_table", "re_grp")
 ```
 
 
-#### `re_exp_column` (string)
+#### re_exp_column (string)
 
 
 Name of the "re_table" column holding the regular
@@ -209,7 +209,7 @@ Name of the "re_table" column holding the regular
 *Default value is "reg_exp".*
 
 
-**Example: Set `re_exp_column` parameter**
+**Example: Set re_exp_column parameter**
 
 
 ```opensips
@@ -219,7 +219,7 @@ modparam("group", "re_exp_column", "re")
 ```
 
 
-#### `re_gid_column` (string)
+#### re_gid_column (string)
 
 
 Name of the "re_table" column holding the group IDs.
@@ -228,7 +228,7 @@ Name of the "re_table" column holding the group IDs.
 *Default value is "group_id".*
 
 
-**Example: Set `re_gid_column` parameter**
+**Example: Set re_gid_column parameter**
 
 
 ```opensips
@@ -238,7 +238,7 @@ modparam("group", "re_gid_column", "grp_id")
 ```
 
 
-#### `multiple_gid` (integer)
+#### multiple_gid (integer)
 
 
 If enabled (non zero value) the regular-expression matching will
@@ -249,7 +249,7 @@ If enabled (non zero value) the regular-expression matching will
 *Default value is "1".*
 
 
-**Example: Set `multiple_gid` parameter**
+**Example: Set multiple_gid parameter**
 
 
 ```opensips
@@ -259,13 +259,13 @@ modparam("group", "multiple_gid", 0)
 ```
 
 
-#### `aaa_url` (string)
+#### aaa_url (string)
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
 
 
-**Example: Set `aaa_url` parameter**
+**Example: Set aaa_url parameter**
 
 
 ```opensips
@@ -278,7 +278,7 @@ modparam("group", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ### Exported Functions
 
 
-#### `db_is_user_in(uri, group)`
+#### db_is_user_in(uri, group)
 
 
 This function is to be used for script group membership. The function
@@ -313,7 +313,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-**Example: `db_is_user_in` usage**
+**Example: db_is_user_in usage**
 
 
 ```
@@ -331,7 +331,7 @@ if (db_is_user_in("Credentials", $avp(grouptocheck))) {
 ```
 
 
-#### `db_get_user_group(uri, output_avp)`
+#### db_get_user_group(uri, output_avp)
 
 
 This function is to be used for regular expression based group
@@ -373,7 +373,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-**Example: `db_get_user_group` usage**
+**Example: db_get_user_group usage**
 
 
 ```
@@ -386,7 +386,7 @@ if (db_get_user_group("Request-URI", $avp(10))) {
 ```
 
 
-#### `aaa_is_user_in(uri, group)`
+#### aaa_is_user_in(uri, group)
 
 
 This function checks group membership, using AAA support.
@@ -418,7 +418,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aaa_is_user_in` usage**
+**Example: aaa_is_user_in usage**
 
 
 ```

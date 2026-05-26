@@ -216,7 +216,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `timer_interval` (integer)
+#### timer_interval (integer)
 
 
 The timer interval in seconds when the Network and Feedback algorithms
@@ -230,7 +230,7 @@ IMPORTANT: A too small value may lead to performance penalties due to
 *Default value is 10.*
 
 
-**Example: Set `timer_interval` parameter**
+**Example: Set timer_interval parameter**
 
 
 ```opensips
@@ -240,7 +240,7 @@ modparam("ratelimit", "timer_interval", 5)
 ```
 
 
-#### `limit_per_interval` (integer)
+#### limit_per_interval (integer)
 
 
 This parameter configures the way that a pipe's limit is specified
@@ -252,7 +252,7 @@ This parameter configures the way that a pipe's limit is specified
 *Default value is 0(limit per-second).*
 
 
-**Example: Set `limit_per_interval` parameter**
+**Example: Set limit_per_interval parameter**
 
 
 ```opensips
@@ -262,7 +262,7 @@ modparam("ratelimit", "limit_per_interval", 1)
 ```
 
 
-#### `expire_time` (integer)
+#### expire_time (integer)
 
 
 This parameter specifies how long a pipe should be kept in memory
@@ -273,7 +273,7 @@ This parameter specifies how long a pipe should be kept in memory
 *Default value is 3600.*
 
 
-**Example: Set `expire_time` parameter**
+**Example: Set expire_time parameter**
 
 
 ```opensips
@@ -283,7 +283,7 @@ modparam("ratelimit", "expire_time", 1800)
 ```
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 The size of the hash table internally used to keep the pipes.
@@ -294,7 +294,7 @@ The size of the hash table internally used to keep the pipes.
 *Default value is 1024.*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -304,7 +304,7 @@ modparam("ratelimit", "hash_size", 512)
 ```
 
 
-#### `default_algorithm` (string)
+#### default_algorithm (string)
 
 
 Specifies which algorithm should be assumed in case it isn't
@@ -314,7 +314,7 @@ Specifies which algorithm should be assumed in case it isn't
 *Default value is "TAILDROP".*
 
 
-**Example: Set `default_algorithm` parameter**
+**Example: Set default_algorithm parameter**
 
 
 ```opensips
@@ -324,7 +324,7 @@ modparam("ratelimit", "default_algorithm", "RED")
 ```
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 Enables distributed rate limiting and specifies the backend
@@ -334,7 +334,7 @@ Enables distributed rate limiting and specifies the backend
 *Default value is "disabled".*
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -344,7 +344,7 @@ modparam("ratelimit", "cachedb_url", "redis://root:root@127.0.0.1/")
 ```
 
 
-#### `db_prefix` (string)
+#### db_prefix (string)
 
 
 Specifies what prefix should be added to the pipe name. This is
@@ -354,7 +354,7 @@ Specifies what prefix should be added to the pipe name. This is
 *Default value is "rl_pipe_".*
 
 
-**Example: Set `db_prefix` parameter**
+**Example: Set db_prefix parameter**
 
 
 ```opensips
@@ -364,7 +364,7 @@ modparam("ratelimit", "db_prefix", "ratelimit_")
 ```
 
 
-#### `repl_buffer_threshold` (string)
+#### repl_buffer_threshold (string)
 
 
 Used to specify the length of the buffer used by the binary
@@ -376,7 +376,7 @@ Used to specify the length of the buffer used by the binary
 *Default value is 32767 bytes.*
 
 
-**Example: Set `repl_buffer_threshold` parameter**
+**Example: Set repl_buffer_threshold parameter**
 
 
 ```opensips
@@ -386,7 +386,7 @@ modparam("ratelimit", "repl_buffer_threshold", 500)
 ```
 
 
-#### `repl_timer_interval` (string)
+#### repl_timer_interval (string)
 
 
 Timer in milliseconds, used to specify how often the module
@@ -396,7 +396,7 @@ Timer in milliseconds, used to specify how often the module
 *Default value is 200 ms.*
 
 
-**Example: Set `repl_timer_interval` parameter**
+**Example: Set repl_timer_interval parameter**
 
 
 ```opensips
@@ -406,7 +406,7 @@ modparam("ratelimit", "repl_timer_interval", 100)
 ```
 
 
-#### `repl_timer_expire` (string)
+#### repl_timer_expire (string)
 
 
 Timer in seconds, used to specify when the counter received
@@ -418,7 +418,7 @@ Timer in seconds, used to specify when the counter received
 *Default value is 10 s.*
 
 
-**Example: Set `repl_timer_expire` parameter**
+**Example: Set repl_timer_expire parameter**
 
 
 ```opensips
@@ -428,7 +428,7 @@ modparam("ratelimit", "repl_timer_expire", 10)
 ```
 
 
-#### `pipe_replication_cluster` (integer)
+#### pipe_replication_cluster (integer)
 
 
 Specifies the cluster ID where pipes will be replicated to and
@@ -438,7 +438,7 @@ Specifies the cluster ID where pipes will be replicated to and
 *Default value is 0. (no replication)*
 
 
-**Example: Set `pipe_replication_cluster` parameter**
+**Example: Set pipe_replication_cluster parameter**
 
 
 ```opensips
@@ -448,7 +448,7 @@ modparam("ratelimit", "pipe_replication_cluster", 1)
 ```
 
 
-#### `window_size` (int)
+#### window_size (int)
 
 
 How long the history in SBT should be in seconds.
@@ -457,7 +457,7 @@ How long the history in SBT should be in seconds.
 *Default value is "10".*
 
 
-**Example: Set `window_size` parameter**
+**Example: Set window_size parameter**
 
 
 ```opensips
@@ -467,7 +467,7 @@ modparam("ratelimit", "window_size", 5)
 ```
 
 
-#### `slot_period` (int)
+#### slot_period (int)
 
 
 Value of one slot in milliseconds. This parameter determines
@@ -478,7 +478,7 @@ Value of one slot in milliseconds. This parameter determines
 *Default value is "200".*
 
 
-**Example: Set `slot_period` parameter**
+**Example: Set slot_period parameter**
 
 
 ```opensips
@@ -493,8 +493,8 @@ modparam("ratelimit", "slot_period", 100)
 ### Exported Functions
 
 
-#### `rl_check(name, limit[, algorithm])
-			`
+#### rl_check(name, limit[, algorithm])
+			
 
 
 Check the current request against the pipe identified by name and
@@ -539,7 +539,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: `rl_check` usage**
+**Example: rl_check usage**
 
 
 ```opensips
@@ -569,7 +569,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### `rl_dec_count(name)`
+#### rl_dec_count(name)
 
 
 This function decreases a counter that could have been previously
@@ -586,7 +586,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: `rl_dec_count` usage**
+**Example: rl_dec_count usage**
 
 
 ```
@@ -600,7 +600,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### `rl_reset_count(name)`
+#### rl_reset_count(name)
 
 
 This function resets a counter that could have been previously
@@ -617,7 +617,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: `rl_reset_count` usage**
+**Example: rl_reset_count usage**
 
 
 ```
@@ -631,7 +631,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 ```
 
 
-#### `rl_values(ret_avp, regexp)`
+#### rl_values(ret_avp, regexp)
 
 
 Returns all the available pipes' names in the *ret_avp*
@@ -651,7 +651,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `rl_values` usage**
+**Example: rl_values usage**
 
 
 ```opensips
@@ -666,7 +666,7 @@ This function can be used from any route.
 ### Exported MI Functions
 
 
-#### `rl_list`
+#### rl_list
 
 
 Lists the parameters and variabiles in the ratelimit module.
@@ -706,7 +706,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rl_dump_pipe`
+#### rl_dump_pipe
 
 
 Exposes all the details about the current runtime data (specific to the
@@ -731,7 +731,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rl_reset_pipe`
+#### rl_reset_pipe
 
 
 Resets the counter of a specified pipe.
@@ -756,7 +756,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rl_set_pid`
+#### rl_set_pid
 
 
 Sets the PID Controller parameters for the Feedback Algorithm.
@@ -782,7 +782,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rl_get_pid`
+#### rl_get_pid
 
 
 Gets the list of in use PID Controller parameters.
@@ -803,7 +803,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `rl_bin_status`
+#### rl_bin_status
 
 
 Dumps each destination used for replication, as well as
@@ -828,7 +828,7 @@ MI FIFO Command Format:
 ### Exported Pseudo-Variables
 
 
-#### `$rl_count(name)`
+#### $rl_count(name)
 
 
 Returns the counter of a pipe. The variable is read-only.

@@ -115,7 +115,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The database URL where the sockets are fetched from.
@@ -134,7 +134,7 @@ modparam("sockets_mgm", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 The database table name where the sockets are stored.
@@ -153,7 +153,7 @@ modparam("sockets_mgm", "table_name", "sockets_def")
 ```
 
 
-#### `socket_column` (string)
+#### socket_column (string)
 
 
 The database table column where the socket definition is stored.
@@ -172,7 +172,7 @@ modparam("sockets_mgm", "socket_column", "sock")
 ```
 
 
-#### `advertised_column` (string)
+#### advertised_column (string)
 
 
 The database table column where the advertised definition is stored.
@@ -191,7 +191,7 @@ modparam("advertiseds_mgm", "advertised_column", "adv")
 ```
 
 
-#### `tag_column` (string)
+#### tag_column (string)
 
 
 The database table column where the tag definition is stored.
@@ -210,7 +210,7 @@ modparam("tags_mgm", "tag_column", "sock")
 ```
 
 
-#### `flags_column` (string)
+#### flags_column (string)
 
 
 The database table column where the flags definition is stored.
@@ -229,7 +229,7 @@ modparam("flagss_mgm", "flags_column", "sock")
 ```
 
 
-#### `tos_column` (string)
+#### tos_column (string)
 
 
 The database table column where the tos definition is stored.
@@ -248,7 +248,7 @@ modparam("toss_mgm", "tos_column", "sock")
 ```
 
 
-#### `processes` (integer)
+#### processes (integer)
 
 
 The number of processes designated to handle UDP sockets.
@@ -267,7 +267,7 @@ modparam("sockets_mgm", "processes", 32)
 ```
 
 
-#### `max_sockets` (integer)
+#### max_sockets (integer)
 
 
 The maximum number of sockets that can be defined dynamically.
@@ -290,7 +290,7 @@ modparam("sockets_mgm", "max_sockets", 2000)
 ### Exported MI Functions
 
 
-#### `sockets_reload`
+#### sockets_reload
 
 
 MI command used to reload the sockets from the database.
@@ -307,7 +307,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `sockets_list`
+#### sockets_list
 
 
 MI command to list all the currently used dynamic sockets.

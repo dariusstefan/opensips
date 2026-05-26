@@ -49,7 +49,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `restore_mode` (string)
+#### restore_mode (string)
 
 
 There are 3 mode of restoring the original headers (FROM/TO) URI:
@@ -68,7 +68,7 @@ There are 3 mode of restoring the original headers (FROM/TO) URI:
 					"auto".*
 
 
-**Example: Set `restore_mode` parameter**
+**Example: Set restore_mode parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("uac","restore_mode","auto")
 ```
 
 
-#### `restore_passwd` (string)
+#### restore_passwd (string)
 
 
 String password to be used to encrypt the RR storing parameter
@@ -90,7 +90,7 @@ String password to be used to encrypt the RR storing parameter
 *Default value of this parameter is empty.*
 
 
-**Example: Set `restore_passwd` parameter**
+**Example: Set restore_passwd parameter**
 
 
 ```opensips
@@ -101,7 +101,7 @@ modparam("uac","restore_passwd","my_secret_passwd")
 ```
 
 
-#### `rr_from_store_param` (string)
+#### rr_from_store_param (string)
 
 
 Name of Record-Route header parameter that will be used to store 
@@ -112,7 +112,7 @@ Name of Record-Route header parameter that will be used to store
 					"vsf".*
 
 
-**Example: Set `rr_from_store_param` parameter**
+**Example: Set rr_from_store_param parameter**
 
 
 ```opensips
@@ -123,7 +123,7 @@ modparam("uac","rr_from_store_param","my_Fparam")
 ```
 
 
-#### `rr_to_store_param` (string)
+#### rr_to_store_param (string)
 
 
 Name of Record-Route header parameter that will be used to store 
@@ -134,7 +134,7 @@ Name of Record-Route header parameter that will be used to store
 					"vst".*
 
 
-**Example: Set `rr_to_store_param` parameter**
+**Example: Set rr_to_store_param parameter**
 
 
 ```opensips
@@ -145,7 +145,7 @@ modparam("uac","rr_to_store_param","my_Tparam")
 ```
 
 
-#### `force_dialog` (int)
+#### force_dialog (int)
 
 
 Force create dialog if it is not created from the configuration script.
@@ -154,7 +154,7 @@ Force create dialog if it is not created from the configuration script.
 Default value is no.
 
 
-**Example: Set `force_dialog` parameter**
+**Example: Set force_dialog parameter**
 
 
 ```opensips
@@ -168,8 +168,8 @@ modparam("uac", "force_dialog", yes)
 ### Exported Functions
 
 
-#### `uac_replace_from([display],uri)`
-				`uac_replace_to([display],uri)`
+#### uac_replace_from([display],uri)
+				uac_replace_to([display],uri)
 
 
 Replace in FROM/TO header the *display* name or/and
@@ -192,7 +192,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 			FAILURE_ROUTE.
 
 
-**Example: `uac_replace_from`/`uac_replace_to` usage**
+**Example: uac_replace_from/uac_replace_to usage**
 
 
 ```
@@ -212,8 +212,8 @@ uac_replace_from( , "sip:batman@gotham.org");
 ```
 
 
-#### `uac_restore_from()`
-				`uac_restore_to()`
+#### uac_restore_from()
+				uac_restore_to()
 
 
 This function will check if the FROM/TO URI was modified and will
@@ -229,7 +229,7 @@ NOTE - this function should be used only if you configured MANUAL
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `uac_restore_from`/`uac_restore_to` usage**
+**Example: uac_restore_from/uac_restore_to usage**
 
 
 ```
@@ -240,7 +240,7 @@ uac_restore_from();
 ```
 
 
-#### `uac_auth()`
+#### uac_auth()
 
 
 This function can be called only from failure route and will 
@@ -275,7 +275,7 @@ This function can be used from FAILURE_ROUTE.
 				authenticating the initial INVITE though.
 
 
-**Example: `uac_auth` usage**
+**Example: uac_auth usage**
 
 
 ```opensips
@@ -300,7 +300,7 @@ failure_route[check_auth] {
 ```
 
 
-#### `uac_inc_cseq()`
+#### uac_inc_cseq()
 
 
 This function can be called to increase the CSeq of an ongoing request.
@@ -313,7 +313,7 @@ It receives as the *cseq* parameter the value that
 This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and  FAILURE_ROUTE.
 
 
-**Example: `uac_inc_cseq` usage**
+**Example: uac_inc_cseq usage**
 
 
 ```

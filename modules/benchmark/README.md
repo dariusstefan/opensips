@@ -53,7 +53,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `enable` (int)
+#### enable (int)
 
 
 Even when the module is loaded, benchmarking is not enabled
@@ -70,7 +70,7 @@ Even when the module is loaded, benchmarking is not enabled
 *Default value is "0".*
 
 
-**Example: Set `enable` parameter**
+**Example: Set enable parameter**
 
 
 ```opensips
@@ -80,7 +80,7 @@ modparam("benchmark", "enable", 1)
 ```
 
 
-#### `granularity` (int)
+#### granularity (int)
 
 
 Logging normally is not done for every reference to the log_timer()
@@ -94,7 +94,7 @@ If granularity is set to 0, then nothing will be logged automatically. Instead b
 *Default value is "100".*
 
 
-**Example: Set `granularity` parameter**
+**Example: Set granularity parameter**
 
 
 ```opensips
@@ -104,7 +104,7 @@ modparam("benchmark", "granularity", 500)
 ```
 
 
-#### `loglevel` (int)
+#### loglevel (int)
 
 
 Set the log level for the benchmark logs. These levels should be used:
@@ -122,7 +122,7 @@ Set the log level for the benchmark logs. These levels should be used:
 *Default value is "3" (L_INFO).*
 
 
-**Example: Set `loglevel` parameter**
+**Example: Set loglevel parameter**
 
 
 ```opensips
@@ -138,14 +138,14 @@ This will set the logging level to L_DBG.
 ### Exported Functions
 
 
-#### `bm_start_timer(name)`
+#### bm_start_timer(name)
 
 
 Start timer "name". A later call to
 		"bm_log_timer()" logs this timer..
 
 
-**Example: `bm_start_timer` usage**
+**Example: bm_start_timer usage**
 
 
 ```
@@ -155,7 +155,7 @@ bm_start_timer("test");
 ```
 
 
-#### `bm_log_timer(name)`
+#### bm_log_timer(name)
 
 
 This function logs the timer with the given ID. The following data are
@@ -193,7 +193,7 @@ This function logs the timer with the given ID. The following data are
 - *Global avg* possibly the most interesting value.
 
 
-**Example: `bm_log_timer` usage**
+**Example: bm_log_timer usage**
 
 
 ```
@@ -221,7 +221,7 @@ Exported pseudo-variables are listed in the next sections.
 ### Exported MI Functions
 
 
-#### `bm_enable_global`
+#### bm_enable_global
 
 
 Enables/disables the module.
@@ -243,7 +243,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `bm_enable_timer`
+#### bm_enable_timer
 
 
 Enable or disable a single timer.
@@ -269,7 +269,7 @@ opensips-cli -x mi bm_enable_timer test 1
 ```
 
 
-#### `bm_granularity`
+#### bm_granularity
 
 
 Modifies the benchmarking granularity.
@@ -291,7 +291,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `bm_loglevel`
+#### bm_loglevel
 
 
 Modifies the module log level.
@@ -313,7 +313,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `bm_poll_results`
+#### bm_poll_results
 
 
 Returns the current and global results for each timer. This command is only available if the "granularity" variable is set to 0. It can be used to get results in stable time intervals instead of every N messages. Each timer will have 2 nodes - the local and the global values. Format of the values is the same as the one normally used in logfile. This way of getting the results allows to interface with external graphing applications like Munin.
@@ -371,7 +371,7 @@ Please note that this module is intended mainly for developers. It should
 ### Available Functions
 
 
-#### `bm_register(name, mode, id)`
+#### bm_register(name, mode, id)
 
 
 This function register a new timer and/or returns the internal ID
@@ -379,14 +379,14 @@ This function register a new timer and/or returns the internal ID
 		if not found. id is to be used by start and log timer functions.
 
 
-#### `bm_start(id)`
+#### bm_start(id)
 
 
 This function equals the user-exported function bm_start_timer. The
 		id is passed as an integer, though.
 
 
-#### `bm_log(id)`
+#### bm_log(id)
 
 
 This function equals the user-exported function bm_log_timer. The id

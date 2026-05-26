@@ -49,7 +49,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `socket_name` (string)
+#### socket_name (string)
 
 
 The name of a UNIX SOCKET or an IP address.
@@ -61,7 +61,7 @@ The name of a UNIX SOCKET or an IP address.
 *Default value is NONE.*
 
 
-**Example: Set `socket_name` parameter**
+**Example: Set socket_name parameter**
 
 
 ```opensips
@@ -73,7 +73,7 @@ modparam("mi_datagram", "socket_name", "udp:192.168.2.133:8080")
 ```
 
 
-#### `children_count` (string)
+#### children_count (string)
 
 
 The number of child processes to be created. Each child process
@@ -83,7 +83,7 @@ The number of child processes to be created. Each child process
 *Default value is 1.*
 
 
-**Example: Set `children_count` parameter**
+**Example: Set children_count parameter**
 
 
 ```opensips
@@ -93,7 +93,7 @@ modparam("mi_datagram", "children_count", 3)
 ```
 
 
-#### `unix_socket_mode` (integer)
+#### unix_socket_mode (integer)
 
 
 Permission to be used for creating the listening UNIX datagram socket.
@@ -104,7 +104,7 @@ Permission to be used for creating the listening UNIX datagram socket.
 *Default value is 0660 (rw-rw----).*
 
 
-**Example: Set `unix_socket_mode` parameter**
+**Example: Set unix_socket_mode parameter**
 
 
 ```opensips
@@ -114,8 +114,8 @@ modparam("mi_datagram", "unix_socket_mode", 0600)
 ```
 
 
-#### `unix_socket_group` (integer)
-		`unix_socket_group` (string)
+#### unix_socket_group (integer)
+		unix_socket_group (string)
 
 
 Group to be used for creating the listening UNIX socket.
@@ -124,7 +124,7 @@ Group to be used for creating the listening UNIX socket.
 *Default value is the inherited one.*
 
 
-**Example: Set `unix_socket_group` parameter**
+**Example: Set unix_socket_group parameter**
 
 
 ```opensips
@@ -135,8 +135,8 @@ modparam("mi_datagram", "unix_socket_group", "root")
 ```
 
 
-#### `unix_socket_user` (integer)
-		`unix_socket_group` (string)
+#### unix_socket_user (integer)
+		unix_socket_group (string)
 
 
 User to be used for creating the listening UNIX socket.
@@ -145,7 +145,7 @@ User to be used for creating the listening UNIX socket.
 *Default value is the inherited one.*
 
 
-**Example: Set `unix_socket_user` parameter**
+**Example: Set unix_socket_user parameter**
 
 
 ```opensips
@@ -156,7 +156,7 @@ modparam("mi_datagram", "unix_socket_user", "root")
 ```
 
 
-#### `socket_timeout` (integer)
+#### socket_timeout (integer)
 
 
 The reply will expire after trying to sent it for socket_timeout
@@ -166,7 +166,7 @@ The reply will expire after trying to sent it for socket_timeout
 *Default value is 2000.*
 
 
-**Example: Set `socket_timeout` parameter**
+**Example: Set socket_timeout parameter**
 
 
 ```opensips
@@ -176,7 +176,7 @@ modparam("mi_datagram", "socket_timeout", 2000)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -192,7 +192,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -204,7 +204,7 @@ modparam("mi_datagram", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_bwlist` (string)
+#### trace_bwlist (string)
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -231,7 +231,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -247,7 +247,7 @@ modparam("mi_datagram", "trace_bwlist", "w: sip_trace")
 ```
 
 
-#### `pretty_printing` (int)
+#### pretty_printing (int)
 
 
 Indicates whether the JSONRPC responses sent through MI should
@@ -257,7 +257,7 @@ Indicates whether the JSONRPC responses sent through MI should
 *Default value is "0 - no pretty-printing".*
 
 
-**Example: Set `pretty_printing` parameter**
+**Example: Set pretty_printing parameter**
 
 
 ```opensips

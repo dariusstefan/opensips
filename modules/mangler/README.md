@@ -38,7 +38,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `contact_flds_separator` (string)
+#### contact_flds_separator (string)
 
 
 First char of this parameter is used as separator for encoding/decoding 
@@ -53,7 +53,7 @@ First char of this parameter is used as separator for encoding/decoding
 *Default value is "*".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -70,7 +70,7 @@ then an encoded uri might look
 ### Exported Functions
 
 
-#### `sdp_mangle_ip(pattern, newip)`
+#### sdp_mangle_ip(pattern, newip)
 
 
 Changes IP addresses inside SDP package in lines describing 
@@ -98,7 +98,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `sdp_mangle_ip` usage**
+**Example: sdp_mangle_ip usage**
 
 
 ```
@@ -108,7 +108,7 @@ sdp_mangle_ip("10.0.0.0/8","193.175.135.38");
 ```
 
 
-#### `sdp_mangle_port(offset)`
+#### sdp_mangle_port(offset)
 
 
 Changes ports inside SDP package in lines describing media like 
@@ -128,7 +128,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `sdp_mangle_port` usage**
+**Example: sdp_mangle_port usage**
 
 
 ```
@@ -138,7 +138,7 @@ sdp_mangle_port(-12000);
 ```
 
 
-#### `encode_contact(encoding_prefix, public_ip)`
+#### encode_contact(encoding_prefix, public_ip)
 
 
 This function will encode uri-s inside Contact header in the following 
@@ -165,7 +165,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `encode_contact` usage**
+**Example: encode_contact usage**
 
 
 ```
@@ -175,7 +175,7 @@ if ($si == 10.0.0.0/8) encode_contact("enc_prefix","193.175.135.38");
 ```
 
 
-#### `decode_contact()`
+#### decode_contact()
 
 
 This function will decode the URI in first line in packets which 
@@ -194,7 +194,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `decode_contact` usage**
+**Example: decode_contact usage**
 
 
 ```
@@ -204,7 +204,7 @@ if ($ru =~ "^enc*") { decode_contact(); }
 ```
 
 
-#### `decode_contact_header()`
+#### decode_contact_header()
 
 
 This function will decode URIs inside Contact header in the 
@@ -222,7 +222,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: `decode_contact_header` usage**
+**Example: decode_contact_header usage**
 
 
 ```

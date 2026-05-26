@@ -56,7 +56,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `max_open_sockets` (integer)
+#### max_open_sockets (integer)
 
 
 Defines the maximum number of simultaneously opened files by the
@@ -68,7 +68,7 @@ Defines the maximum number of simultaneously opened files by the
 *Default value is "100".*
 
 
-**Example: Set `max_open_sockets` parameter**
+**Example: Set max_open_sockets parameter**
 
 
 ```opensips
@@ -78,7 +78,7 @@ modparam("event_flatstore", "max_open_sockets", 200)
 ```
 
 
-#### `delimiter` (string)
+#### delimiter (string)
 
 
 Sets the separator between the parameters of the event in the logging file.
@@ -87,7 +87,7 @@ Sets the separator between the parameters of the event in the logging file.
 *Default value is ",".*
 
 
-**Example: Set `delimiter` parameter**
+**Example: Set delimiter parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("event_flatstore", "delimiter", ";")
 ```
 
 
-#### `escape_delimiter` (string)
+#### escape_delimiter (string)
 
 
 Optional replacement sequence that will be written *instead
@@ -127,7 +127,7 @@ modparam("event_flatstore", "escape_delimiter", "|")
 ```
 
 
-#### `file_permissions` (string)
+#### file_permissions (string)
 
 
 Sets the permissions for the newly created logs. It
@@ -137,7 +137,7 @@ Sets the permissions for the newly created logs. It
 *Default value is "644".*
 
 
-**Example: Set `file_permissions` parameter**
+**Example: Set file_permissions parameter**
 
 
 ```opensips
@@ -147,7 +147,7 @@ modparam("event_flatstore", "file_permissions", "664")
 ```
 
 
-#### `suppress_event_name` (int)
+#### suppress_event_name (int)
 
 
 Suppresses the name of the event in the log file.
@@ -156,7 +156,7 @@ Suppresses the name of the event in the log file.
 *Default value is "0/OFF" (the event's name is printed).*
 
 
-**Example: Set `suppress_event_name` parameter**
+**Example: Set suppress_event_name parameter**
 
 
 ```opensips
@@ -166,7 +166,7 @@ modparam("event_flatstore", "suppress_event_name", 1)
 ```
 
 
-#### `rotate_period` (int)
+#### rotate_period (int)
 
 
 When used, it triggers a file auto-rotate. The period is matched
@@ -177,7 +177,7 @@ When used, it triggers a file auto-rotate. The period is matched
 *Default value is "0/OFF" (the file is never auto-rotated)*
 
 
-**Example: Set `rotate_period` parameter**
+**Example: Set rotate_period parameter**
 
 
 ```opensips
@@ -188,7 +188,7 @@ modparam("event_flatstore", "rotate_period", 3660) # rotate every hour
 ```
 
 
-#### `rotate_count` (int|string)
+#### rotate_count (int|string)
 
 
 Defines after how many written lines the log file is rotated.
@@ -210,7 +210,7 @@ modparam("event_flatstore", "rotate_count", "5000000000")
 ```
 
 
-#### `rotate_size` (int|string)
+#### rotate_size (int|string)
 
 
 Sets the maximum size of a file before it is rotated.  A size
@@ -233,7 +233,7 @@ modparam("event_flatstore", "rotate_size", "2g")
 ```
 
 
-#### `suffix` (string)
+#### suffix (string)
 
 
 Modifies the file that OpenSIPS writes events into by
@@ -255,7 +255,7 @@ This parameter does not affect the matching of the event socket -
 *Default value is """" (no suffix is added)*
 
 
-**Example: Set `suffix` parameter**
+**Example: Set suffix parameter**
 
 
 ```opensips
@@ -274,7 +274,7 @@ No exported functions to be used in the configuration file.
 ### Exported MI Functions
 
 
-#### `evi_flat_rotate`
+#### evi_flat_rotate
 
 
 It makes the processes reopen the file specified as a parameter to the command in order to be compatible with a logrotate command. If the function is not called after the mv command is executed, the module will continue to write in the renamed file.
@@ -298,7 +298,7 @@ opensips-cli -x mi evi_flat_rotate _path_to_log_file_
 ### Exported Events
 
 
-#### `E_FLATSTORE_ROTATION`
+#### E_FLATSTORE_ROTATION
 
 
 The event is raised every time *event_flatstore*

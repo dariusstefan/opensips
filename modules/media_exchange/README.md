@@ -85,7 +85,7 @@ The following libraries or applications must be installed before
 ### Exported Functions
 
 
-#### `media_fork_to_uri(URI[, leg][, headers][, medianum][, instance])`
+#### media_fork_to_uri(URI[, leg][, headers][, medianum][, instance])
 
 
 Behaves as a B2B user agent client to initiate a call to a SIP
@@ -120,7 +120,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `media_fork_to_uri()` function to fork
+**Example: Use media_fork_to_uri() function to fork
 					media to a Media Server**
 
 
@@ -133,7 +133,7 @@ if (!has_totag() && is_method("INVITE"))
 ```
 
 
-#### `media_fork_from_call(callid[, leg][, medianum][, instance])`
+#### media_fork_from_call(callid[, leg][, medianum][, instance])
 
 
 Starts streaming the media of an existing proxied call, identified
@@ -178,7 +178,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-**Example: Use `media_fork_from_call()` function to fork
+**Example: Use media_fork_from_call() function to fork
 					all media streams of a call**
 
 
@@ -191,7 +191,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-**Example: Use `media_fork_from_call()` function to fork
+**Example: Use media_fork_from_call() function to fork
 					only the first caller's stream**
 
 
@@ -204,7 +204,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-#### `media_fork_pause([leg][, medianum][, instance])`
+#### media_fork_pause([leg][, medianum][, instance])
 
 
 Pauses an existing RTP media streaming session. This function does
@@ -230,7 +230,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `media_fork_pause()` function to temporarily
+**Example: Use media_fork_pause() function to temporarily
 					stop the entire media stream of the call**
 
 
@@ -243,7 +243,7 @@ if (has_totag() && is_method("INVITE"))
 ```
 
 
-#### `media_fork_resume([leg][, medianum][, instance])`
+#### media_fork_resume([leg][, medianum][, instance])
 
 
 Resumes the RTP media stream of an existing session/call. This function
@@ -268,7 +268,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `media_fork_resume()` function to resume
+**Example: Use media_fork_resume() function to resume
 					a forking previously stopped**
 
 
@@ -281,7 +281,7 @@ if (has_totag() && is_method("INVITE"))
 ```
 
 
-#### `media_exchange_from_uri(URI[, leg][, body][, headers][, nohold])`
+#### media_exchange_from_uri(URI[, leg][, body][, headers][, nohold])
 
 
 Originates a call to the specified URI. The SDP in the response is
@@ -318,7 +318,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `media_exchange_from_uri()` function to
+**Example: Use media_exchange_from_uri() function to
 					fetch media from a Media Server's call**
 
 
@@ -331,7 +331,7 @@ if (has_totag() && is_method("INVITE") && is_audio_on_hold())
 ```
 
 
-#### `media_exchange_to_call(callid[, leg][, nohold])`
+#### media_exchange_to_call(callid[, leg][, nohold])
 
 
 Pushes the SDP of a new call received in an existing proxied
@@ -364,7 +364,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-**Example: Use `media_exchange_to_call()` function to make
+**Example: Use media_exchange_to_call() function to make
 					an announcement**
 
 
@@ -377,7 +377,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-#### `media_terminate([leg][, nohold][, instance])`
+#### media_terminate([leg][, nohold][, instance])
 
 
 Terminates an ongoing media session exchange, whether the media is
@@ -414,7 +414,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: Use `media_terminate()` function to
+**Example: Use media_terminate() function to
 					terminate an announcement**
 
 
@@ -427,7 +427,7 @@ if (has_totag() && is_method("INVITE") && !is_audio_on_hold())
 ```
 
 
-#### `media_handle_indialog()`
+#### media_handle_indialog()
 
 
 Searches for an existing media session started for any leg,
@@ -458,7 +458,7 @@ This function can be used from REQUEST_ROUTE,
 				BRANCH_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: Use `media_terminate()` function to
+**Example: Use media_terminate() function to
 					terminate an announcement**
 
 
@@ -483,7 +483,7 @@ if (has_totag() && loose_route()) {
 ### Exported MI Functions
 
 
-#### `media_fork_from_call_to_uri`
+#### media_fork_from_call_to_uri
 
 
 MI command that has the same behavior as
@@ -530,7 +530,7 @@ opensips-cli -x mi media_fork_from_call_to_uri \
 ```
 
 
-#### `media_exchange_from_call_to_uri`
+#### media_exchange_from_call_to_uri
 
 
 MI command that has the same behavior as
@@ -573,7 +573,7 @@ opensips-cli -x mi media_exchange_from_call_to_uri \
 ```
 
 
-#### `media_exchange_from_call_to_uri_body`
+#### media_exchange_from_call_to_uri_body
 
 
 MI command that does the same thing as the
@@ -584,7 +584,7 @@ MI command that does the same thing as the
 		[mi media exchange from call to uri](#mi_media_exchange_from_call_to_uri).
 
 
-#### `media_terminate`
+#### media_terminate
 
 
 MI command to terminate an ongoing media exchange.

@@ -35,7 +35,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `trie_table`(str)
+#### trie_table(str)
 
 
 The name of the db table storing prefix rules.
@@ -44,7 +44,7 @@ The name of the db table storing prefix rules.
 *Default value is "trie_table".*
 
 
-**Example: Set `trie_table` parameter**
+**Example: Set trie_table parameter**
 
 
 ```opensips
@@ -54,7 +54,7 @@ modparam("trie", "trie_table", "my_prefix_table")
 ```
 
 
-#### `no_concurrent_reload` (int)
+#### no_concurrent_reload (int)
 
 
 If enabled, the module will not allow do run multiple trie_reload
@@ -72,7 +72,7 @@ If you have a large routing set (millions of rules/prefixes), you
 *Default value is "0 (disabled)".*
 
 
-**Example: Set `no_concurrent_reload` parameter**
+**Example: Set no_concurrent_reload parameter**
 
 
 ```opensips
@@ -83,7 +83,7 @@ modparam("trie", "no_concurrent_reload", 1)
 ```
 
 
-#### `use_partitions` (int)
+#### use_partitions (int)
 
 
 Flag to configure whether to use partitions for tries. If this
@@ -95,7 +95,7 @@ Flag to configure whether to use partitions for tries. If this
 *Default value is "0".*
 
 
-**Example: Set `use_partitions` parameter**
+**Example: Set use_partitions parameter**
 
 
 ```opensips
@@ -105,7 +105,7 @@ modparam("trie", "use_partitions", 1)
 ```
 
 
-#### `db_partitions_url` (str)
+#### db_partitions_url (str)
 
 
 The url to the database containing partition-specific
@@ -116,7 +116,7 @@ The url to the database containing partition-specific
 *Default value is ""NULL"".*
 
 
-**Example: Set `db_partitions_url` parameter**
+**Example: Set db_partitions_url parameter**
 
 
 ```opensips
@@ -126,7 +126,7 @@ modparam("trie", "db_partitions_url", "mysql://user:password@localhost/opensips_
 ```
 
 
-#### `db_partitions_table` (str)
+#### db_partitions_table (str)
 
 
 The name of the table containing partition definitions. To be
@@ -136,7 +136,7 @@ The name of the table containing partition definitions. To be
 *Default value is "trie_partitions".*
 
 
-**Example: Set `db_partitions_table` parameter**
+**Example: Set db_partitions_table parameter**
 
 
 ```opensips
@@ -146,7 +146,7 @@ modparam("trie", "db_partitions_table", "trie_partition_defs")
 ```
 
 
-#### `extra_prefix_chars` (str)
+#### extra_prefix_chars (str)
 
 
 List of ASCII (0-127) characters to be additionally accepted in
@@ -157,7 +157,7 @@ List of ASCII (0-127) characters to be additionally accepted in
 *Default value is "NULL".*
 
 
-**Example: Set `extra_prefix_chars` parameter**
+**Example: Set extra_prefix_chars parameter**
 
 
 ```opensips
@@ -170,7 +170,7 @@ modparam("trie", "extra_prefix_chars", "#-%")
 ### Exported Functions
 
 
-#### `trie_search(number, [flags], [trie_attrs_pvar], [match_prefix_pvar], [partition])`
+#### trie_search(number, [flags], [trie_attrs_pvar], [match_prefix_pvar], [partition])
 
 
 Function to search for an entry ( number ) in a trie.
@@ -206,7 +206,7 @@ All parameters are optional. Any of them may be ignored, provided
 			ONLY if the "use_partition" module parameter is turned on.
 
 
-**Example: `trie_search` usage**
+**Example: trie_search usage**
 
 
 ```opensips
@@ -221,7 +221,7 @@ if (trie_search("$rU","L",$avp(code_attrs),,"my_partition")) {
 ### Exported MI Functions
 
 
-#### `trie_reload`
+#### trie_reload
 
 
 Command to reload trie rules from database.
@@ -243,7 +243,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `trie_reload_status`
+#### trie_reload_status
 
 
 Gets the time of the last reload for any partition.
@@ -260,7 +260,7 @@ Gets the time of the last reload for any partition.
 							reload for the given partition.
 
 
-**Example: `trie_reload_status` usage when `use_partitions` is 0**
+**Example: trie_reload_status usage when use_partitions is 0**
 
 
 ```
@@ -269,7 +269,7 @@ Date:: Tue Aug 12 12:26:00 2014
 ```
 
 
-#### `trie_search`
+#### trie_search
 
 
 Tries to match a number in the existing tries loaded from the database.
@@ -297,7 +297,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `trie_number_delete`
+#### trie_number_delete
 
 
 Deletes individual entries in the trie, without reloading all of the data
@@ -322,7 +322,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `trie_number_upsert`
+#### trie_number_upsert
 
 
 Upserts ( insert if not found, update is found ) an array of numbers in the trie, without reloading all of the data

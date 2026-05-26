@@ -43,7 +43,7 @@ When the *rtpproxy* module is loaded without arguments and the
 ### Exported Parameters
 
 
-#### `rtpproxy_args`(string)
+#### rtpproxy_args(string)
 
 
 Command-line parameteres passed down to the embedded RTPProxy
@@ -54,7 +54,7 @@ Command-line parameteres passed down to the embedded RTPProxy
 *Parameter has no default value.*
 
 
-**Example: Set `rtpproxy_args` parameter**
+**Example: Set rtpproxy_args parameter**
 
 
 ```opensips

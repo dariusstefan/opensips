@@ -78,7 +78,7 @@ This module does not depend on any external library.
 ### Exported Parameters
 
 
-#### `aaa_url` (string)
+#### aaa_url (string)
 
 
 This is the url representing the connection to the AAA server.
@@ -88,7 +88,7 @@ This is the url representing the connection to the AAA server.
 		not start, or not work properly.
 
 
-**Example: `aaa_url` parameter usage**
+**Example: aaa_url parameter usage**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("auth_aaa", "aaa_url", "diameter:freeDiameter.conf;extra-avps-file:/etc
 ```
 
 
-#### `realm` (string)
+#### realm (string)
 
 
 The Realm used in the Origin Diameter commands.
@@ -106,7 +106,7 @@ The Realm used in the Origin Diameter commands.
 Default value is "diameter.test".
 
 
-**Example: `realm` parameter usage**
+**Example: realm parameter usage**
 
 
 ```opensips
@@ -116,7 +116,7 @@ modparam("aka_av_diameter", "realm", "scscf.ims.mnc001.mcc001.3gppnetwork.org")
 ```
 
 
-#### `server_uri` (string)
+#### server_uri (string)
 
 
 The Server-URI used in the Diameter commands.
@@ -127,7 +127,7 @@ If it is left empty, the Server-Name will be created by adding "sip:" in front o
 		(e.g. "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org").
 
 
-**Example: `server_uri` parameter usage**
+**Example: server_uri parameter usage**
 
 
 ```opensips

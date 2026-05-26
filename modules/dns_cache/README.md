@@ -30,14 +30,14 @@ A cachedb_* type module must be loaded before loading
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The url of the key-value back-end that will be used
 			for storing the DNS records.
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -51,14 +51,14 @@ modparam("dns_cache", "cachedb_url","memcached://192.168.2.130:8888/")
 ```
 
 
-#### `blacklist_timeout` (int)
+#### blacklist_timeout (int)
 
 
 The number of seconds that a failed DNS query will be kept in cache.
 			Default is 3600.
 
 
-**Example: Set `blacklist_timeout` parameter**
+**Example: Set blacklist_timeout parameter**
 
 
 ```opensips
@@ -69,7 +69,7 @@ modparam("dns_cache", "blacklist_timeout",7200) # 2 hours
 ```
 
 
-#### `min_ttl` (int)
+#### min_ttl (int)
 
 
 The minimum number of seconds that a DNS record will be kept in
@@ -80,7 +80,7 @@ The minimum number of seconds that a DNS record will be kept in
 *Default value is **0** seconds (no minimum TTL is enforced).*
 
 
-**Example: Set `min_ttl` parameter**
+**Example: Set min_ttl parameter**
 
 
 ```opensips

@@ -88,7 +88,7 @@ This module does not depend on any external library.
 ### Exported Parameters
 
 
-#### `aaa_url` (string)
+#### aaa_url (string)
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -97,7 +97,7 @@ This is the url representing the AAA protocol used and the location of the confi
 The syntax for the url is the following: "name_of_the_aaa_protocol_used:path_of_the_configuration_file"
 
 
-**Example: `aaa_url` parameter usage**
+**Example: aaa_url parameter usage**
 
 
 ```opensips
@@ -107,7 +107,7 @@ modparam("auth_aaa", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### `auth_service_type` (integer)
+#### auth_service_type (integer)
 
 
 This is the value of the Service-Type aaa attribute to be used when
@@ -120,7 +120,7 @@ This is the value of the Service-Type aaa attribute to be used when
 Default value is "15".
 
 
-**Example: `auth_service_type` parameter usage**
+**Example: auth_service_type parameter usage**
 
 
 ```opensips
@@ -130,7 +130,7 @@ modparam("auth_aaa", "auth_service_type", 15)
 ```
 
 
-#### `check_service_type` (integer)
+#### check_service_type (integer)
 
 
 AAA service type used by `aaa_does_uri_exist` and
@@ -140,7 +140,7 @@ AAA service type used by `aaa_does_uri_exist` and
 *Default value is 10 (Call-Check).*
 
 
-**Example: Set `check_service_type` parameter**
+**Example: Set check_service_type parameter**
 
 
 ```opensips
@@ -150,7 +150,7 @@ modparam("auth_aaa", "check_service_type", 11)
 ```
 
 
-#### `use_ruri_flag` (string)
+#### use_ruri_flag (string)
 
 
 When this parameter is set to the value other than "NULL" and the
@@ -166,7 +166,7 @@ When this parameter is set to the value other than "NULL" and the
 Default value is "NULL" (not set).
 
 
-**Example: `use_ruri_flag` parameter usage**
+**Example: use_ruri_flag parameter usage**
 
 
 ```opensips
@@ -179,7 +179,7 @@ modparam("auth_aaa", "use_ruri_flag", "USE_RURI_FLAG")
 ### Exported Functions
 
 
-#### `aaa_www_authorize(realm, [uri_user])`
+#### aaa_www_authorize(realm, [uri_user])
 
 
 The function verifies credentials according to 
@@ -231,7 +231,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aaa_www_authorize` usage**
+**Example: aaa_www_authorize usage**
 
 
 ```
@@ -243,7 +243,7 @@ if (!aaa_www_authorize("siphub.net"))
 ```
 
 
-#### `aaa_proxy_authorize(realm, [uri_user])`
+#### aaa_proxy_authorize(realm, [uri_user])
 
 
 The function verifies credentials according to 
@@ -282,7 +282,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `proxy_authorize` usage**
+**Example: proxy_authorize usage**
 
 
 ```
@@ -298,7 +298,7 @@ if (!aaa_proxy_authorize($pd, $pU))    # Realm and URI user are taken
 ```
 
 
-#### `aaa_does_uri_exist([sip_uri])`
+#### aaa_does_uri_exist([sip_uri])
 
 
 Checks from Radius if the SIP URI stored in the "sip_uri" parameter
@@ -322,7 +322,7 @@ Returns 1 if Radius returns Access-Accept, -1 if Radius
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aaa_does_uri_exist` usage**
+**Example: aaa_does_uri_exist usage**
 
 
 ```
@@ -334,7 +334,7 @@ if (aaa_does_uri_exist()) {
 ```
 
 
-#### `aaa_does_uri_user_exist([sip_uri])`
+#### aaa_does_uri_user_exist([sip_uri])
 
 
 Similar to aaa_does_uri_exist, but check is done
@@ -346,7 +346,7 @@ Similar to aaa_does_uri_exist, but check is done
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `aaa_does_uri_user_exist` usage**
+**Example: aaa_does_uri_user_exist usage**
 
 
 ```

@@ -64,7 +64,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `enable_stats` (integer)
+#### enable_stats (integer)
 
 
 If the module should generate and export statistics to the core
@@ -89,7 +89,7 @@ modparam("sl", "enable_stats", 0)
 ### Exported Functions
 
 
-#### `sl_send_reply(code, reason)`
+#### sl_send_reply(code, reason)
 
 
 For the current request, a reply is sent back having the given code 
@@ -109,7 +109,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ERROR_ROUTE.
 
 
-**Example: `sl_send_reply` usage**
+**Example: sl_send_reply usage**
 
 
 ```opensips
@@ -121,7 +121,7 @@ sl_send_reply($err.rcode, $err.rreason);
 ```
 
 
-#### `sl_reply_error()`
+#### sl_reply_error()
 
 
 Sends back an error reply describing the nature of the last internal 
@@ -132,7 +132,7 @@ Sends back an error reply describing the nature of the last internal
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `sl_reply_error` usage**
+**Example: sl_reply_error usage**
 
 
 ```
@@ -145,55 +145,55 @@ sl_reply_error();
 ### Exported Statistics
 
 
-#### `1xx_replies`
+#### 1xx_replies
 
 
 The number of 1xx_replies.
 
 
-#### `2xx_replies`
+#### 2xx_replies
 
 
 The number of 2xx_replies.
 
 
-#### `3xx_replies`
+#### 3xx_replies
 
 
 The number of 3xx_replies.
 
 
-#### `4xx_replies`
+#### 4xx_replies
 
 
 The number of 4xx_replies.
 
 
-#### `5xx_replies`
+#### 5xx_replies
 
 
 The number of 5xx_replies.
 
 
-#### `6xx_replies`
+#### 6xx_replies
 
 
 The number of 6xx_replies.
 
 
-#### `sent_replies`
+#### sent_replies
 
 
 The number of sent_replies.
 
 
-#### `sent_err_replies`
+#### sent_err_replies
 
 
 The number of sent_err_replies.
 
 
-#### `received_ACKs`
+#### received_ACKs
 
 
 The number of received_ACKs.

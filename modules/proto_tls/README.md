@@ -170,7 +170,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-TLS.
 
 
-#### `listen`=interface
+#### listen=interface
 
 
 Not specific to TLS. Allows to specify the protocol
@@ -178,7 +178,7 @@ Not specific to TLS. Allows to specify the protocol
 			listening server will be.
 
 
-**Example: Set `listen` variable**
+**Example: Set listen variable**
 
 
 ```
@@ -189,7 +189,7 @@ socket= tls:1.2.3.4:5061
 ```
 
 
-#### `tls_port` (integer)
+#### tls_port (integer)
 
 
 The default port to be used for all TLS related operation. Be 
@@ -205,7 +205,7 @@ If you want to change only the listening port for TLS, use the port
 *Default value is 5061.*
 
 
-**Example: Set `tls_port` variable**
+**Example: Set tls_port variable**
 
 
 ```opensips
@@ -216,7 +216,7 @@ modparam("proto_tls", "tls_port", 5062)
 ```
 
 
-#### `tls_crlf_pingpong` (integer)
+#### tls_crlf_pingpong (integer)
 
 
 Send CRLF pong (\r\n) to incoming CRLFCRLF ping messages over TLS.
@@ -226,7 +226,7 @@ Send CRLF pong (\r\n) to incoming CRLFCRLF ping messages over TLS.
 *Default value is 1 (enabled).*
 
 
-**Example: Set `tls_crlf_pingpong` parameter**
+**Example: Set tls_crlf_pingpong parameter**
 
 
 ```opensips
@@ -236,7 +236,7 @@ modparam("proto_tls", "tls_crlf_pingpong", 0)
 ```
 
 
-#### `tls_crlf_drop` (integer)
+#### tls_crlf_drop (integer)
 
 
 Drop CRLF (\r\n) ping messages. When this parameter is enabled,
@@ -248,7 +248,7 @@ Drop CRLF (\r\n) ping messages. When this parameter is enabled,
 *Default value is 0 (disabled).*
 
 
-**Example: Set `tls_crlf_drop` parameter**
+**Example: Set tls_crlf_drop parameter**
 
 
 ```opensips
@@ -258,7 +258,7 @@ modparam("proto_tls", "tls_crlf_drop", 1)
 ```
 
 
-#### `tls_max_msg_chunks` (integer)
+#### tls_max_msg_chunks (integer)
 
 
 The maximum number of chunks that a SIP message is expected to
@@ -272,7 +272,7 @@ The maximum number of chunks that a SIP message is expected to
 *Default value is 4.*
 
 
-**Example: Set `tls_max_msg_chunks` parameter**
+**Example: Set tls_max_msg_chunks parameter**
 
 
 ```opensips
@@ -282,7 +282,7 @@ modparam("proto_tls", "tls_max_msg_chunks", 8)
 ```
 
 
-#### `cert_check_on_conn_reusage` (integer)
+#### cert_check_on_conn_reusage (integer)
 
 
 This parameter turns on or off the extra checking/matching of the
@@ -302,7 +302,7 @@ This checking is done only when comes to send SIP traffic via TLS and
 *Default value is 0 (disabled).*
 
 
-**Example: Set `cert_check_on_conn_reusage` parameter**
+**Example: Set cert_check_on_conn_reusage parameter**
 
 
 ```opensips
@@ -312,7 +312,7 @@ modparam("proto_tls", "cert_check_on_conn_reusage", 1)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -332,7 +332,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -344,7 +344,7 @@ modparam("proto_tls", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_on` (int)
+#### trace_on (int)
 
 
 This controls whether tracing for tls is on or not. You still need to define
@@ -352,7 +352,7 @@ This controls whether tracing for tls is on or not. You still need to define
 			controlled using mi function [mi tls trace](#mi_tls_trace).
 
 
-**Example: Set `trace_on` parameter**
+**Example: Set trace_on parameter**
 
 
 ```opensips
@@ -362,7 +362,7 @@ modparam("proto_tls", "trace_on", 1)
 ```
 
 
-#### `trace_filter_route` (string)
+#### trace_filter_route (string)
 
 
 Define the name of a route in which you can filter which connections will
@@ -390,7 +390,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-**Example: Set `trace_filter_route` parameter**
+**Example: Set trace_filter_route parameter**
 
 
 ```opensips
@@ -414,7 +414,7 @@ route[tls_filter] {
 ```
 
 
-#### `tls_handshake_timeout` (integer)
+#### tls_handshake_timeout (integer)
 
 
 Sets the timeout (in milliseconds) for the SSL handshake sequence to complete.
@@ -429,7 +429,7 @@ The timeout is invoked during acceptance of a new connection (inbound) and
 *Default value is 100.*
 
 
-**Example: Set `tls_handshake_timeout` variable**
+**Example: Set tls_handshake_timeout variable**
 
 
 ```opensips
@@ -439,7 +439,7 @@ modparam("proto_tls", "tls_handshake_timeout", 200) # number of milliseconds
 ```
 
 
-#### `tls_send_timeout` (integer)
+#### tls_send_timeout (integer)
 
 
 Sets the timeout (in milliseconds) for the send operations to complete
@@ -452,7 +452,7 @@ The send timeout is invoked for all TLS write operations, excluding
 *Default value is 100.*
 
 
-**Example: Set `tls_send_timeout` variable**
+**Example: Set tls_send_timeout variable**
 
 
 ```opensips
@@ -462,7 +462,7 @@ modparam("proto_tls", "tls_send_timeout", 200) # number of milliseconds
 ```
 
 
-#### `tls_async` (integer)
+#### tls_async (integer)
 
 
 If the TLS connect and write operations should be done in an
@@ -474,7 +474,7 @@ If the TLS connect and write operations should be done in an
 *Default value is 1 (enabled).*
 
 
-**Example: Set `tls_async` variable**
+**Example: Set tls_async variable**
 
 
 ```opensips
@@ -484,7 +484,7 @@ modparam("proto_tls", "tls_async", 1) # enable async TLS
 ```
 
 
-#### `tls_async_max_postponed_chunks` (integer)
+#### tls_async_max_postponed_chunks (integer)
 
 
 If *tls_async* is enabled, this specifies the
@@ -496,7 +496,7 @@ If *tls_async* is enabled, this specifies the
 *Default value is 32.*
 
 
-**Example: Set `tls_async_max_postponed_chunks` parameter**
+**Example: Set tls_async_max_postponed_chunks parameter**
 
 
 ```opensips
@@ -506,7 +506,7 @@ modparam("proto_tls", "tls_async_max_postponed_chunks", 16)
 ```
 
 
-#### `tls_async_local_connect_timeout` (integer)
+#### tls_async_local_connect_timeout (integer)
 
 
 If *tls_async* is enabled, this specifies the
@@ -519,7 +519,7 @@ If *tls_async* is enabled, this specifies the
 *Default value is 100 ms.*
 
 
-**Example: Set `tls_async_local_connect_timeout` parameter**
+**Example: Set tls_async_local_connect_timeout parameter**
 
 
 ```opensips
@@ -529,7 +529,7 @@ modparam("proto_tls", "tls_async_local_connect_timeout", 200)
 ```
 
 
-#### `tls_async_handshake_timeout` (integer)
+#### tls_async_handshake_timeout (integer)
 
 
 If *tls_async* is enabled, this specifies the
@@ -542,7 +542,7 @@ If *tls_async* is enabled, this specifies the
 *Default value is 10 ms.*
 
 
-**Example: Set `tls_async_handshake_timeout` parameter**
+**Example: Set tls_async_handshake_timeout parameter**
 
 
 ```opensips
@@ -555,7 +555,7 @@ modparam("proto_tls", "tls_async_handshake_timeout", 100)
 ### Exported MI Functions
 
 
-#### `tls_trace`
+#### tls_trace
 
 
 Name: *tls_trace*

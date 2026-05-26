@@ -74,7 +74,7 @@ The following libraries or applications must be installed before running
 ### Exported Functions
 
 
-#### `send_reply(code, reason)`
+#### send_reply(code, reason)
 
 
 For the current request, a reply is sent back having the given code 
@@ -93,7 +93,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, ERROR_ROUTE.
 
 
-**Example: `sl_send_reply` usage**
+**Example: sl_send_reply usage**
 
 
 ```
@@ -129,7 +129,7 @@ NOTE: the variable returns the To-Tag that will be used by OpenSIPS
 		the To-tag in the replies received and forwarded by OpenSIPS.
 
 
-**Example: Usage of `$sig_local_totag` variable**
+**Example: Usage of $sig_local_totag variable**
 
 
 ```opensips

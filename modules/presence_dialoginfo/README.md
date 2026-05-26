@@ -157,7 +157,7 @@ None.
 ### Exported Parameters
 
 
-#### `force_single_dialog` (int)
+#### force_single_dialog (int)
 
 
 By default the module aggregates all available dialog info
@@ -180,7 +180,7 @@ If this parameter is set, only the dialog element with the
 *Default value is "0".*
 
 
-**Example: Set `` parameter**
+**Example: Set  parameter**
 
 
 ```opensips

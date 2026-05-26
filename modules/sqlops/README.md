@@ -40,7 +40,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 DB URL for database connection. As the module allows the usage
@@ -54,7 +54,7 @@ DB URL for database connection. As the module allows the usage
 *This parameter is optional, it's default value being NULL.*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -68,7 +68,7 @@ modparam("sqlops","db_url","1 postgres://user:passwd@host2/opensips")
 ```
 
 
-#### `usr_table` (string)
+#### usr_table (string)
 
 
 DB table to be used for user preferences (AVPs)
@@ -78,7 +78,7 @@ DB table to be used for user preferences (AVPs)
 					"usr_preferences".*
 
 
-**Example: Set `usr_table` parameter**
+**Example: Set usr_table parameter**
 
 
 ```opensips
@@ -89,7 +89,7 @@ modparam("sqlops","usr_table","avptable")
 ```
 
 
-#### `db_scheme` (string)
+#### db_scheme (string)
 
 
 Definition of a DB scheme to be used for accessing
@@ -113,7 +113,7 @@ Definition of a DB scheme. Scheme syntax is:
 *Default value is "NULL".*
 
 
-**Example: Set `db_scheme` parameter**
+**Example: Set db_scheme parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("sqlops","db_scheme",
 ```
 
 
-#### `use_domain` (integer)
+#### use_domain (integer)
 
 
 If the domain part of the a SIP URI should be used for
@@ -135,7 +135,7 @@ If the domain part of the a SIP URI should be used for
 *Default value is 0 (no).*
 
 
-**Example: Set `use_domain` parameter**
+**Example: Set use_domain parameter**
 
 
 ```opensips
@@ -146,7 +146,7 @@ modparam("sqlops","use_domain",1)
 ```
 
 
-#### `ps_id_max_buf_len` (integer)
+#### ps_id_max_buf_len (integer)
 
 
 The maximum size of the buffer used to build the query IDs which
@@ -162,7 +162,7 @@ If the size is exceeded (when trying to build the PS query ID),
 *Default value is 1024.*
 
 
-**Example: Set `ps_id_max_buf_len` parameter**
+**Example: Set ps_id_max_buf_len parameter**
 
 
 ```opensips
@@ -173,7 +173,7 @@ modparam("sqlops","ps_id_max_buf_len", 2048)
 ```
 
 
-#### `bigint_to_str` (int)
+#### bigint_to_str (int)
 
 
 Controls bigint conversion.
@@ -186,7 +186,7 @@ Controls bigint conversion.
 *Default value is "0".*
 
 
-**Example: Set `bigint_to_str` parameter**
+**Example: Set bigint_to_str parameter**
 
 
 ```opensips
@@ -198,7 +198,7 @@ modparam("sqlops","bigint_to_str",1)
 ```
 
 
-#### `uuid_column` (string)
+#### uuid_column (string)
 
 
 Name of column containing the uuid (unique user id).
@@ -207,7 +207,7 @@ Name of column containing the uuid (unique user id).
 *Default value is "uuid".*
 
 
-**Example: Set `uuid_column` parameter**
+**Example: Set uuid_column parameter**
 
 
 ```opensips
@@ -218,7 +218,7 @@ modparam("sqlops","uuid_column","uuid")
 ```
 
 
-#### `username_column` (string)
+#### username_column (string)
 
 
 Name of column containing the username.
@@ -227,7 +227,7 @@ Name of column containing the username.
 *Default value is "username".*
 
 
-**Example: Set `username_column` parameter**
+**Example: Set username_column parameter**
 
 
 ```opensips
@@ -238,7 +238,7 @@ modparam("sqlops","username_column","username")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 Name of column containing the domain name.
@@ -247,7 +247,7 @@ Name of column containing the domain name.
 *Default value is "domain".*
 
 
-**Example: Set `domain_column` parameter**
+**Example: Set domain_column parameter**
 
 
 ```opensips
@@ -258,7 +258,7 @@ modparam("sqlops","domain_column","domain")
 ```
 
 
-#### `attribute_column` (string)
+#### attribute_column (string)
 
 
 Name of column containing the attribute name (AVP name).
@@ -267,7 +267,7 @@ Name of column containing the attribute name (AVP name).
 *Default value is "attribute".*
 
 
-**Example: Set `attribute_column` parameter**
+**Example: Set attribute_column parameter**
 
 
 ```opensips
@@ -278,7 +278,7 @@ modparam("sqlops","attribute_column","attribute")
 ```
 
 
-#### `value_column` (string)
+#### value_column (string)
 
 
 Name of column containing the AVP value.
@@ -287,7 +287,7 @@ Name of column containing the AVP value.
 *Default value is "value".*
 
 
-**Example: Set `value_column` parameter**
+**Example: Set value_column parameter**
 
 
 ```opensips
@@ -298,7 +298,7 @@ modparam("sqlops","value_column","value")
 ```
 
 
-#### `type_column` (string)
+#### type_column (string)
 
 
 Name of column containing the AVP type.
@@ -307,7 +307,7 @@ Name of column containing the AVP type.
 *Default value is "type".*
 
 
-**Example: Set `type_column` parameter**
+**Example: Set type_column parameter**
 
 
 ```opensips
@@ -321,7 +321,7 @@ modparam("sqlops","type_column","type")
 ### Exported Functions
 
 
-#### `sql_query(query, [res_col_avps], [db_id])`
+#### sql_query(query, [res_col_avps], [db_id])
 
 
 Make a database query and store the result in AVPs.
@@ -363,7 +363,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `sql_query` usage**
+**Example: sql_query usage**
 
 
 ```
@@ -380,7 +380,7 @@ sql_query("DELETE FROM subscriber", , $avp(id));
 ```
 
 
-#### `sql_query_one(query, [res_col_vars], [db_id])`
+#### sql_query_one(query, [res_col_vars], [db_id])
 
 
 Similar to [sql query](#func_sql_query), it makes a generic raw
@@ -406,7 +406,7 @@ Similar to [sql query](#func_sql_query), it makes a generic raw
 This function can be used from any type of route.
 
 
-**Example: `sql_query_one` usage**
+**Example: sql_query_one usage**
 
 
 ```
@@ -425,8 +425,8 @@ sql_query_one("SELECT value, type FROM usr_preferences WHERE username='$fU' and 
 ```
 
 
-#### `sql_select([columns],table,[filter],[order],[res_col_avps], [db_id])
-				`
+#### sql_select([columns],table,[filter],[order],[res_col_avps], [db_id])
+				
 
 
 Function to perform a structured (not raw) SQL SELECT operation.
@@ -492,7 +492,7 @@ The meaning and usage of the parameters:
 This function can be used from any type of route.
 
 
-**Example: `sql_select` usage**
+**Example: sql_select usage**
 
 
 ```
@@ -505,7 +505,7 @@ sql_select('["password","ha1"]', 'subscriber',
 ```
 
 
-#### `sql_select_one([columns],table,[filter],[order],[res_col_vars], [db_id])`
+#### sql_select_one([columns],table,[filter],[order],[res_col_vars], [db_id])
 
 
 Similar to [sql select](#func_sql_select), it makes a SELECT SQL
@@ -531,7 +531,7 @@ Similar to [sql select](#func_sql_select), it makes a SELECT SQL
 This function can be used from any type of route.
 
 
-**Example: `sql_select_one` usage**
+**Example: sql_select_one usage**
 
 
 ```
@@ -546,8 +546,8 @@ sql_select_one('["value","type"]', 'usr_preferences',
 ```
 
 
-#### `sql_update(columns,table,[filter],[db_id])
-				`
+#### sql_update(columns,table,[filter],[db_id])
+				
 
 
 Function to perform a structured (not raw) SQL UPDATE operation.
@@ -585,7 +585,7 @@ The meaning and usage of the parameters:
 This function can be used from any type of route.
 
 
-**Example: `sql_update` usage**
+**Example: sql_update usage**
 
 
 ```
@@ -597,8 +597,8 @@ sql_update( '[{"password":"my_secret"}]', 'subscriber',
 ```
 
 
-#### `sql_insert(table,columns,[db_id])
-				`
+#### sql_insert(table,columns,[db_id])
+				
 
 
 Function to perform a structured (not raw) SQL INSERT operation.
@@ -627,7 +627,7 @@ The meaning and usage of the parameters:
 This function can be used from any type of route.
 
 
-**Example: `sql_insert` usage**
+**Example: sql_insert usage**
 
 
 ```
@@ -638,8 +638,8 @@ sql_insert( 'cc_agents', '[{"agentid":"agentX"},{"skills":"info"},{"location":nu
 ```
 
 
-#### `sql_delete(table,[filter],[db_id])
-				`
+#### sql_delete(table,[filter],[db_id])
+				
 
 
 Function to perform a structured (not raw) SQL DELETE operation.
@@ -673,7 +673,7 @@ The meaning and usage of the parameters:
 This function can be used from any type of route.
 
 
-**Example: `sql_delete` usage**
+**Example: sql_delete usage**
 
 
 ```
@@ -684,8 +684,8 @@ sql_delete( 'subscriber', '[{"username": "$tu"}]');
 ```
 
 
-#### `sql_replace(table,columns,[db_id])
-				`
+#### sql_replace(table,columns,[db_id])
+				
 
 
 Function very similar to [sql insert](#func_sql_insert) function,
@@ -696,8 +696,8 @@ Function very similar to [sql insert](#func_sql_insert) function,
 The function returns true if the query was successful.
 
 
-#### `sql_avp_load(source, name, [db_id], [prefix]])
-				`
+#### sql_avp_load(source, name, [db_id], [prefix]])
+				
 
 
 Loads from DB into memory the AVPs corresponding to the given
@@ -737,7 +737,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `sql_avp_load` usage**
+**Example: sql_avp_load usage**
 
 
 ```opensips
@@ -759,7 +759,7 @@ xlog("Loaded: $avp(caller_100)\n");
 ```
 
 
-#### `sql_avp_store(source, name, [db_id])`
+#### sql_avp_store(source, name, [db_id])
 
 
 Stores to DB the AVPs corresponding to the given
@@ -775,7 +775,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `sql_avp_store` usage**
+**Example: sql_avp_store usage**
 
 
 ```
@@ -789,7 +789,7 @@ sql_avp_store("$ru", "$avp(1)", 3);
 ```
 
 
-#### `sql_avp_delete(source, name, [db_id])`
+#### sql_avp_delete(source, name, [db_id])
 
 
 Deletes from DB the AVPs corresponding to the given
@@ -805,7 +805,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `sql_avp_delete` usage**
+**Example: sql_avp_delete usage**
 
 
 ```
@@ -823,7 +823,7 @@ sql_avp_delete("$ru", "$avp(1)", 3);
 ### Exported Asynchronous Functions
 
 
-#### `sql_query(query, [dest], [db_id])`
+#### sql_query(query, [dest], [db_id])
 
 
 This function takes the same parameters and behaves identically
@@ -837,7 +837,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: `async sql_query` usage**
+**Example: async sql_query usage**
 
 
 ```opensips
@@ -865,7 +865,7 @@ route [my_resume_route]
 ```
 
 
-#### `sql_query_one(query, [dest], [db_id])`
+#### sql_query_one(query, [dest], [db_id])
 
 
 This function takes the same parameters and behaves identically
@@ -878,7 +878,7 @@ This function takes the same parameters and behaves identically
 This function can be used from any route.
 
 
-**Example: `async sql_query_one` usage**
+**Example: async sql_query_one usage**
 
 
 ```opensips

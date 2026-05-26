@@ -168,7 +168,7 @@ The next libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_mode` (integer)
+#### db_mode (integer)
 
 
 Set caching mode (0) or non-caching mode (1). In caching mode, data
@@ -180,7 +180,7 @@ Set caching mode (0) or non-caching mode (1). In caching mode, data
 *Default value is "0".*
 
 
-**Example: Set `db_mode` parameter**
+**Example: Set db_mode parameter**
 
 
 ```opensips
@@ -190,7 +190,7 @@ modparam("db_text", "db_mode", 1)
 ```
 
 
-#### `buffer_size` (integer)
+#### buffer_size (integer)
 
 
 Size of the buffer used to read the text file.
@@ -199,7 +199,7 @@ Size of the buffer used to read the text file.
 *Default value is "4096".*
 
 
-**Example: Set `buffer_size` parameter**
+**Example: Set buffer_size parameter**
 
 
 ```opensips
@@ -218,7 +218,7 @@ modparam("db_text", "buffer_size", 8192)
 ### Exported MI Functions
 
 
-#### `dbt_dump`
+#### dbt_dump
 
 
 Write back to hard drive modified tables.
@@ -239,7 +239,7 @@ opensips-cli -x mi dbt_dump
 ```
 
 
-#### `dbt_reload`
+#### dbt_reload
 
 
 Causes db_text module to reload cached tables from disk.

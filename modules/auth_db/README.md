@@ -58,7 +58,7 @@ The following libraries or applications must be installed
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 This is URL of the database to be used. Value of the parameter depends
@@ -71,7 +71,7 @@ This is URL of the database to be used. Value of the parameter depends
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: `db_url` parameter usage**
+**Example: db_url parameter usage**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("auth_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `calculate_ha1` (integer)
+#### calculate_ha1 (integer)
 
 
 This parameter tells the server whether it should considered the
@@ -115,7 +115,7 @@ Default value of this parameter is
 			*0 (use hashed passwords)*.
 
 
-**Example: `calculate_ha1` parameter usage**
+**Example: calculate_ha1 parameter usage**
 
 
 ```opensips
@@ -123,7 +123,7 @@ modparam("auth_db", "calculate_ha1", 1)
 ```
 
 
-#### `use_domain` (integer)
+#### use_domain (integer)
 
 
 If true (not 0), domain will be also used when looking up in the
@@ -140,7 +140,7 @@ IMPORTANT: before turning on this parameter, be sure that the
 Default value is "0 (false)".
 
 
-**Example: `use_domain` parameter usage**
+**Example: use_domain parameter usage**
 
 
 ```opensips
@@ -149,7 +149,7 @@ modparam("auth_db", "use_domain", 1)
 ```
 
 
-#### `load_credentials` (string)
+#### load_credentials (string)
 
 
 This parameter specifies credentials to be fetched from database when
@@ -179,7 +179,7 @@ Default value of this parameter is "rpid".
 Default value of this parameter is "rpid".
 
 
-**Example: `load_credentials` parameter usage**
+**Example: load_credentials parameter usage**
 
 
 ```opensips
@@ -189,7 +189,7 @@ modparam("auth_db", "load_credentials", "$avp(13)=rpid;email_address")
 ```
 
 
-#### `skip_version_check` (int)
+#### skip_version_check (int)
 
 
 This parameter specifies not to check the auth table version. This
@@ -199,7 +199,7 @@ This parameter specifies not to check the auth table version. This
 Default value is "0 (false)".
 
 
-**Example: `skip_version_check` parameter usage**
+**Example: skip_version_check parameter usage**
 
 
 ```opensips
@@ -208,7 +208,7 @@ modparam("auth_db", "skip_version_check", 1)
 ```
 
 
-#### `user_column` (string)
+#### user_column (string)
 
 
 This is the name of the column in a 'SUBSCRIBER' like table holding
@@ -219,7 +219,7 @@ This is the name of the column in a 'SUBSCRIBER' like table holding
 Default value is "username".
 
 
-**Example: `user_column` parameter usage**
+**Example: user_column parameter usage**
 
 
 ```opensips
@@ -227,7 +227,7 @@ modparam("auth_db", "user_column", "user")
 ```
 
 
-#### `domain_column` (string)
+#### domain_column (string)
 
 
 This is the name of the column in a 'SUBSCRIBER' like table holding
@@ -239,7 +239,7 @@ This is the name of the column in a 'SUBSCRIBER' like table holding
 Default value is "domain".
 
 
-**Example: `domain_column` parameter usage**
+**Example: domain_column parameter usage**
 
 
 ```opensips
@@ -247,7 +247,7 @@ modparam("auth_db", "domain_column", "domain")
 ```
 
 
-#### `password_column` (string)
+#### password_column (string)
 
 
 This is the name of the column in a *"subscriber"*
@@ -262,7 +262,7 @@ This is the name of the column in a *"subscriber"*
 Default value is "ha1".
 
 
-**Example: `password_column` parameter usage**
+**Example: password_column parameter usage**
 
 
 ```opensips
@@ -270,7 +270,7 @@ modparam("auth_db", "password_column", "password")
 ```
 
 
-#### `hash_column_sha256` (string)
+#### hash_column_sha256 (string)
 
 
 The name of the column holding SHA-256 HA1 hashes
@@ -280,7 +280,7 @@ The name of the column holding SHA-256 HA1 hashes
 Default value is "ha1_sha256".
 
 
-**Example: `password_column` parameter usage**
+**Example: password_column parameter usage**
 
 
 ```opensips
@@ -288,7 +288,7 @@ modparam("auth_db", "hash_column_sha256", "ha1_sha256")
 ```
 
 
-#### `hash_column_sha512t256` (string)
+#### hash_column_sha512t256 (string)
 
 
 The name of the column holding SHA-512/256 HA1 hashes.
@@ -298,7 +298,7 @@ The name of the column holding SHA-512/256 HA1 hashes.
 Default value is "ha1_sha512t256".
 
 
-**Example: `password_column` parameter usage**
+**Example: password_column parameter usage**
 
 
 ```opensips
@@ -306,7 +306,7 @@ modparam("auth_db", "hash_column_sha512t256", "ha1_sha512t256")
 ```
 
 
-#### `uri_user_column` (string)
+#### uri_user_column (string)
 
 
 Column holding usernames in an 'URI' like table.
@@ -315,7 +315,7 @@ Column holding usernames in an 'URI' like table.
 *Default value is "username".*
 
 
-**Example: Set `uri_user_column` parameter**
+**Example: Set uri_user_column parameter**
 
 
 ```opensips
@@ -325,7 +325,7 @@ modparam("auth_db", "uri_user_column", "username")
 ```
 
 
-#### `uri_domain_column` (string)
+#### uri_domain_column (string)
 
 
 Column holding domain in an 'URI' like table.
@@ -334,7 +334,7 @@ Column holding domain in an 'URI' like table.
 *Default value is "domain".*
 
 
-**Example: Set `uri_domain_column` parameter**
+**Example: Set uri_domain_column parameter**
 
 
 ```opensips
@@ -344,7 +344,7 @@ modparam("auth_db", "uri_domain_column", "domain")
 ```
 
 
-#### `uri_uriuser_column` (string)
+#### uri_uriuser_column (string)
 
 
 Column holding URI username in an 'URI' like table.
@@ -353,7 +353,7 @@ Column holding URI username in an 'URI' like table.
 *Default value is "uri_user".*
 
 
-**Example: Set `uriuser_column` parameter**
+**Example: Set uriuser_column parameter**
 
 
 ```opensips
@@ -366,7 +366,7 @@ modparam("auth_db", "uri_uriuser_column", "uri_user")
 ### Exported Functions
 
 
-#### `www_authorize(realm, table)`
+#### www_authorize(realm, table)
 
 
 The function verifies the received credentials against a
@@ -415,7 +415,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `www_authorize` usage**
+**Example: www_authorize usage**
 
 
 ```
@@ -426,7 +426,7 @@ if (!www_authorize("siphub.net", "subscriber"))
 ```
 
 
-#### `proxy_authorize(realm, table)`
+#### proxy_authorize(realm, table)
 
 
 The function verifies the received credentials against a
@@ -484,7 +484,7 @@ if (!proxy_authorize("", "subscriber"))
 ```
 
 
-#### `db_is_to_authorized(table)`
+#### db_is_to_authorized(table)
 
 
 The function checks against a  'URI' like table to see if the
@@ -509,7 +509,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `db_is_to_authorized` usage**
+**Example: db_is_to_authorized usage**
 
 
 ```opensips
@@ -521,14 +521,14 @@ if (!db_is_to_authorized("uri")) {
 ```
 
 
-#### `db_is_from_authorized(table)`
+#### db_is_from_authorized(table)
 
 
 Similar to [db is to authorized](#func_db_is_to_authorized) but instead of
 		checking the TO header URI, the FROM header URI is checked.
 
 
-#### `db_does_uri_exist(uri, table)`
+#### db_does_uri_exist(uri, table)
 
 
 Checks if the username@domain from the given URI is an existing
@@ -547,7 +547,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `db_does_uri_exist` usage**
+**Example: db_does_uri_exist usage**
 
 
 ```
@@ -559,7 +559,7 @@ if (db_does_uri_exist($ru, "subscriber")) {
 ```
 
 
-#### `db_get_auth_id(table, uri, auth, realm)`
+#### db_get_auth_id(table, uri, auth, realm)
 
 
 Checks given uri-string username against an 'URI' like table.
@@ -586,7 +586,7 @@ This function can be used from REQUEST_ROUTE ,FAILURE_ROUTE and
 		LOCAL_ROUTE.
 
 
-**Example: `db_get_auth_id` usage**
+**Example: db_get_auth_id usage**
 
 
 ```

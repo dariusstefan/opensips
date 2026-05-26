@@ -55,7 +55,7 @@ The following modules must be loaded before this module:
 ### Exported Parameters
 
 
-#### `get_route` (string)
+#### get_route (string)
 
 
 The name of the script route to be run in order to retrieve the status
@@ -65,7 +65,7 @@ The name of the script route to be run in order to retrieve the status
 *Default value is "dfks_get".*
 
 
-**Example: Set `` parameter**
+**Example: Set  parameter**
 
 
 ```opensips
@@ -75,7 +75,7 @@ modparam("presence_dfks", "get_route", "dfks_get")
 ```
 
 
-#### `set_route` (string)
+#### set_route (string)
 
 
 The name of the script route to be run when a feature status update
@@ -85,7 +85,7 @@ The name of the script route to be run when a feature status update
 *Default value is "dfks_get".*
 
 
-**Example: Set `` parameter**
+**Example: Set  parameter**
 
 
 ```opensips
@@ -104,7 +104,7 @@ None.
 ### Exported MI Functions
 
 
-#### `dfks_set_feature`
+#### dfks_set_feature
 
 
 Triggers the sending of NOTIFY messages containing a feature status update
@@ -160,7 +160,7 @@ ringCount/4 forwardTo/sip:bob@10.0.0.11
 ### Exported Pseudo-Variables
 
 
-#### `$dfks(field)`
+#### $dfks(field)
 
 
 This pseudo-variable can be used in the routes triggered by the module
@@ -197,7 +197,7 @@ This pseudo-variable can be used in the routes triggered by the module
 			*ringCount* - for *CallForwardingNoAnswer*
 
 
-**Example: `dfks` usage**
+**Example: dfks usage**
 
 
 ```opensips

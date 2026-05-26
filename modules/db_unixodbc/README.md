@@ -46,7 +46,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `auto_reconnect` (int)
+#### auto_reconnect (int)
 
 
 Turns on or off the auto_reconnect mode.
@@ -65,7 +65,7 @@ modparam("db_unixodbc", "auto_reconnect", 0)
 ```
 
 
-#### `use_escape_common` (int)
+#### use_escape_common (int)
 
 
 Escape values in query using internal escape_common() function.

@@ -145,7 +145,7 @@ The following libraries or applications must be installed before
 ### Exported Functions
 
 
-#### `is_peer_verified`
+#### is_peer_verified
 
 
 Returns 1 if the message is received via TLS and the peer was verified
@@ -155,7 +155,7 @@ Returns 1 if the message is received via TLS and the peer was verified
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `is_peer_verified` usage**
+**Example: is_peer_verified usage**
 
 
 ```opensips
@@ -172,13 +172,13 @@ if (is_peer_verified()) {
 ### Exported MI Functions
 
 
-#### `tls_list`
+#### tls_list
 
 
 List all domains information.
 
 
-#### `tls_reload`
+#### tls_reload
 
 
 Reloads the TLS domains information from the database.
@@ -193,7 +193,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-TLS.
 
 
-#### `listen`=interface
+#### listen=interface
 
 
 Not specific to TLS. Allows to specify the protocol
@@ -201,7 +201,7 @@ Not specific to TLS. Allows to specify the protocol
 			listening server will be.
 
 
-**Example: Set `listen` variable**
+**Example: Set listen variable**
 
 
 ```
@@ -212,7 +212,7 @@ socket= tls:1.2.3.4:5061
 ```
 
 
-#### `tls_library` (string)
+#### tls_library (string)
 
 
 Selects which TLS library to use. Possible values are:
@@ -237,7 +237,7 @@ Selects which TLS library to use. Possible values are:
 Default value is *auto*.
 
 
-**Example: Set `tls_library` variable**
+**Example: Set tls_library variable**
 
 
 ```opensips
@@ -248,7 +248,7 @@ modparam("tls_mgm", "tls_library", "none")
 ```
 
 
-#### `tls_method` ([domain]string)
+#### tls_method ([domain]string)
 
 
 Sets the TLS protocol. The domain part represents the name of
@@ -294,7 +294,7 @@ If you want RFC3261 conformance and all your clients support
 			applications with SSL support use the SSLv23 method).
 
 
-**Example: Set `tls_method` variable**
+**Example: Set tls_method variable**
 
 
 ```opensips
@@ -305,7 +305,7 @@ modparam("tls_mgm", "tls_method", "[dom]TLSv1")
 ```
 
 
-**Example: Set `tls_method` range variable**
+**Example: Set tls_method range variable**
 
 
 ```opensips
@@ -319,7 +319,7 @@ modparam("tls_mgm", "tls_method", "[dom]-")              # all supported
 ```
 
 
-#### `certificate` ([domain](string)
+#### certificate ([domain](string)
 
 
 Public certificate file for OpenSIPS. It will be used as
@@ -331,7 +331,7 @@ Public certificate file for OpenSIPS. It will be used as
 *Default value is "CFG_DIR/tls/cert.pem".*
 
 
-**Example: Set `certificate` variable**
+**Example: Set certificate variable**
 
 
 ```opensips
@@ -342,7 +342,7 @@ modparam("tls_mgm", "certificate", "[dom]/mycerts/certs/opensips_server_cert.pem
 ```
 
 
-#### `private_key` ([domain](string)
+#### private_key ([domain](string)
 
 
 Private key of the above certificate. I must be kept in a
@@ -353,7 +353,7 @@ Private key of the above certificate. I must be kept in a
 *Default value is "CFG_DIR/tls/ckey.pem".*
 
 
-**Example: Set `private_key` variable**
+**Example: Set private_key variable**
 
 
 ```opensips
@@ -364,7 +364,7 @@ modparam("tls_mgm", "private_key", "[dom]/mycerts/private/prik.pem")
 ```
 
 
-#### `ca_list` ([domain](string)
+#### ca_list ([domain](string)
 
 
 List of trusted CAs. The file contains the certificates
@@ -376,7 +376,7 @@ List of trusted CAs. The file contains the certificates
 *Default value is "".*
 
 
-**Example: Set `ca_list` variable**
+**Example: Set ca_list variable**
 
 
 ```opensips
@@ -387,7 +387,7 @@ modparam("tls_mgm", "ca_list", "[dom]/mycerts/certs/ca_list.pem")
 ```
 
 
-#### `ca_dir` ([domain](string)
+#### ca_dir ([domain](string)
 
 
 Directory storing trusted CAs. The certificates in the directory
@@ -400,7 +400,7 @@ Directory storing trusted CAs. The certificates in the directory
 *Default value is "/etc/pki/CA/".*
 
 
-**Example: Set `ca_dir` variable**
+**Example: Set ca_dir variable**
 
 
 ```opensips
@@ -411,7 +411,7 @@ modparam("tls_mgm", "ca_dir", "[dom]/mycerts/certs")
 ```
 
 
-#### `crl_dir` ([domain](string)
+#### crl_dir ([domain](string)
 
 
 Directory storing certificate revocation lists (CRLs). The domain
@@ -421,7 +421,7 @@ Directory storing certificate revocation lists (CRLs). The domain
 *If this parameter is not set, no CRLs will be used.*
 
 
-**Example: Set `crl_dir` variable**
+**Example: Set crl_dir variable**
 
 
 ```opensips
@@ -432,7 +432,7 @@ modparam("tls_mgm", "crl_dir", "[dom]/mycerts/crls")
 ```
 
 
-#### `crl_check_all` ([domain](string)
+#### crl_check_all ([domain](string)
 
 
 Setting this parameter with a non-zero integer value enables CRL
@@ -443,7 +443,7 @@ Setting this parameter with a non-zero integer value enables CRL
 				is checked.*
 
 
-**Example: Set `crl_check_all` variable**
+**Example: Set crl_check_all variable**
 
 
 ```opensips
@@ -454,7 +454,7 @@ modparam("tls_mgm", "crl_check_all", "[dom]1")
 ```
 
 
-#### `ciphers_list` ([domain](string)
+#### ciphers_list ([domain](string)
 
 
 You can specify the list of algorithms for authentication
@@ -472,7 +472,7 @@ You can specify the list of algorithms for authentication
 *It defaults to the OpenSSL default ciphers.*
 
 
-**Example: Set `ciphers_list` variable**
+**Example: Set ciphers_list variable**
 
 
 ```opensips
@@ -483,7 +483,7 @@ modparam("tls_mgm", "ciphers_list", "[dom]NULL")
 ```
 
 
-#### `dh_params` ([domain](string)
+#### dh_params ([domain](string)
 
 
 You can specify a file which contains Diffie-Hellman
@@ -495,7 +495,7 @@ You can specify a file which contains Diffie-Hellman
 *It defaults to not set a dh param file.*
 
 
-**Example: Set `dh_params` variable**
+**Example: Set dh_params variable**
 
 
 ```opensips
@@ -506,7 +506,7 @@ modparam("tls_mgm", "dh_params", "[dom]/etc/pki/CA/dh1024.pem")
 ```
 
 
-#### `ec_curve` ([domain](string)
+#### ec_curve ([domain](string)
 
 
 You can specify an elliptic curve which should be used for
@@ -527,7 +527,7 @@ It's usable only if TLS v1.1/1.2 support was compiled.
 *It defaults to not set a elliptic curve.*
 
 
-#### `verify_cert` ([domain](string)
+#### verify_cert ([domain](string)
 
 
 Activates SSL_VERIFY_PEER in the ssl_context. For a detailed
@@ -540,7 +540,7 @@ The domain part represents the name of the TLS domain.
 Default value is *1*.
 
 
-**Example: Set `verify_cert` variable**
+**Example: Set verify_cert variable**
 
 
 ```opensips
@@ -551,7 +551,7 @@ modparam("tls_mgm", "verify_cert", "[dom]0")
 ```
 
 
-#### `require_cert` ([domain](string)
+#### require_cert ([domain](string)
 
 
 Activates SSL_VERIFY_FAIL_IF_NO_PEER_CERT in the ssl_context. For a
@@ -566,7 +566,7 @@ The domain part represents the name of the TLS domain.
 Default value is *1*.
 
 
-**Example: Set `require_cert` variable**
+**Example: Set require_cert variable**
 
 
 ```opensips
@@ -577,7 +577,7 @@ modparam("tls_mgm", "require_cert", "[dom]0")
 ```
 
 
-#### `client_tls_domain_avp` (string)
+#### client_tls_domain_avp (string)
 
 
 Name of the AVP used for enforcing the selection of a specific TLS
@@ -599,7 +599,7 @@ Note: You can force a particular domain to be used just for a particular
 *No default value.*
 
 
-**Example: Set `client_tls_domain_avp` variable**
+**Example: Set client_tls_domain_avp variable**
 
 
 ```opensips
@@ -610,7 +610,7 @@ modparam("tls_mgm", "client_tls_domain_avp", "tls_match_dom")
 ```
 
 
-#### `client_sip_domain_avp` (string)
+#### client_sip_domain_avp (string)
 
 
 Name of the AVP that sets the SIP domain used in the TLS client
@@ -633,7 +633,7 @@ For the AVP usage example, refer to  [domains param](#domains-param).
 *No default value.*
 
 
-**Example: Set `client_sip_domain_avp` variable**
+**Example: Set client_sip_domain_avp variable**
 
 
 ```opensips
@@ -644,7 +644,7 @@ modparam("tls_mgm", "client_sip_domain_avp", "sip_match_dom")
 ```
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The database url. It cannot be NULL.
@@ -654,7 +654,7 @@ You cannot use the "tls_domain=*dom_name*" URL parameter
 			for a TLS connection to the database for the tls_mgm module itself.
 
 
-**Example: Usage of `db_url` block**
+**Example: Usage of db_url block**
 
 
 ```opensips
@@ -663,7 +663,7 @@ modparam("tls_mgm", "db_url", "mysql://root:admin@localhost/opensips")
 ```
 
 
-#### `db_table` (string)
+#### db_table (string)
 
 
 Sets the database table name.
@@ -672,7 +672,7 @@ Sets the database table name.
 Default value is "tls_mgm".
 
 
-**Example: Usage of `db_table` block**
+**Example: Usage of db_table block**
 
 
 ```opensips
@@ -681,7 +681,7 @@ modparam("tls_mgm", "db_table", "tls_mgm")
 ```
 
 
-#### `domain_col` (string)
+#### domain_col (string)
 
 
 Sets the name for the TLS domain column.
@@ -690,7 +690,7 @@ Sets the name for the TLS domain column.
 Default value is "domain".
 
 
-**Example: Usage of `domain_col` block**
+**Example: Usage of domain_col block**
 
 
 ```opensips
@@ -699,7 +699,7 @@ modparam("tls_mgm", "domain_col", "tls_domain")
 ```
 
 
-#### `match_ip_address_col` (string)
+#### match_ip_address_col (string)
 
 
 Sets the IP address matching column name.
@@ -708,7 +708,7 @@ Sets the IP address matching column name.
 Default value is "match_ip_address".
 
 
-**Example: Usage of `match_ip_address_col` block**
+**Example: Usage of match_ip_address_col block**
 
 
 ```opensips
@@ -717,7 +717,7 @@ modparam("tls_mgm", "match_ip_address_col", "addr")
 ```
 
 
-#### `match_sip_domain_col` (string)
+#### match_sip_domain_col (string)
 
 
 Sets the SIP domain matching column name.
@@ -726,7 +726,7 @@ Sets the SIP domain matching column name.
 Default value is "match_sip_domain".
 
 
-**Example: Usage of `match_sip_domain_col` block**
+**Example: Usage of match_sip_domain_col block**
 
 
 ```opensips
@@ -735,7 +735,7 @@ modparam("tls_mgm", "match_sip_domain_col", "addr")
 ```
 
 
-#### `tls_method_col` (string)
+#### tls_method_col (string)
 
 
 Sets the method column name.
@@ -744,7 +744,7 @@ Sets the method column name.
 Default value is "method".
 
 
-**Example: Usage of `tls_method_col` block**
+**Example: Usage of tls_method_col block**
 
 
 ```opensips
@@ -753,7 +753,7 @@ modparam("tls_mgm", "tls_method_col", "method")
 ```
 
 
-#### `verify_cert_col` (string)
+#### verify_cert_col (string)
 
 
 Sets the verrify certificate column name.
@@ -762,7 +762,7 @@ Sets the verrify certificate column name.
 Default value is "verify_cert".
 
 
-**Example: Usage of `vertify_cert_col` block**
+**Example: Usage of vertify_cert_col block**
 
 
 ```opensips
@@ -771,7 +771,7 @@ modparam("tls_mgm", "verify_cert_col", "verify_cert")
 ```
 
 
-#### `require_cert_col` (string)
+#### require_cert_col (string)
 
 
 Sets the require certificate column name.
@@ -780,7 +780,7 @@ Sets the require certificate column name.
 Default value is "require_cert".
 
 
-**Example: Usage of `require_cert_col` block**
+**Example: Usage of require_cert_col block**
 
 
 ```opensips
@@ -789,7 +789,7 @@ modparam("tls_mgm", "require_cert_col", "req")
 ```
 
 
-#### `certificate_col` (string)
+#### certificate_col (string)
 
 
 Sets the certificate column name.
@@ -798,7 +798,7 @@ Sets the certificate column name.
 Default value is "certificate".
 
 
-**Example: Usage of `certificate_col` block**
+**Example: Usage of certificate_col block**
 
 
 ```opensips
@@ -807,7 +807,7 @@ modparam("tls_mgm", "certificate_col", "certificate")
 ```
 
 
-#### `private_key_col` (string)
+#### private_key_col (string)
 
 
 Sets the private key column name.
@@ -816,7 +816,7 @@ Sets the private key column name.
 Default value is "private_key".
 
 
-**Example: Usage of `private_key_col` block**
+**Example: Usage of private_key_col block**
 
 
 ```opensips
@@ -825,7 +825,7 @@ modparam("tls_mgm", "private_key_col", "pk")
 ```
 
 
-#### `crl_check_all_col` (string)
+#### crl_check_all_col (string)
 
 
 Sets the crl_check_all column name.
@@ -834,7 +834,7 @@ Sets the crl_check_all column name.
 Default value is "crl_check_all".
 
 
-**Example: Usage of `crl_check_all` block**
+**Example: Usage of crl_check_all block**
 
 
 ```opensips
@@ -843,7 +843,7 @@ modparam("tls_mgm", "crl_check_all_col", "crl_check")
 ```
 
 
-#### `crl_dir_col` (string)
+#### crl_dir_col (string)
 
 
 Sets the crl directory column name.
@@ -852,7 +852,7 @@ Sets the crl directory column name.
 Default value is "crl_dir".
 
 
-**Example: Usage of `crl_dir_col` block**
+**Example: Usage of crl_dir_col block**
 
 
 ```opensips
@@ -861,7 +861,7 @@ modparam("tls_mgm", "crl_dir_col", "crl_dir")
 ```
 
 
-#### `ca_list_col` (string)
+#### ca_list_col (string)
 
 
 Sets the CA list column name.
@@ -870,7 +870,7 @@ Sets the CA list column name.
 Default value is "ca_list".
 
 
-**Example: Usage of `ca_list_col` block**
+**Example: Usage of ca_list_col block**
 
 
 ```opensips
@@ -879,7 +879,7 @@ modparam("tls_mgm", "ca_list_col", "ca_list")
 ```
 
 
-#### `ca_dir_col` (string)
+#### ca_dir_col (string)
 
 
 Sets the CA directory column name.
@@ -888,7 +888,7 @@ Sets the CA directory column name.
 Default value is "ca_dir".
 
 
-**Example: Usage of `ca_dir_col` block**
+**Example: Usage of ca_dir_col block**
 
 
 ```opensips
@@ -897,7 +897,7 @@ modparam("tls_mgm", "ca_dir_col", "ca_dir")
 ```
 
 
-#### `cipher_list_col` (string)
+#### cipher_list_col (string)
 
 
 Sets the cipher list column name.
@@ -906,7 +906,7 @@ Sets the cipher list column name.
 Default value is "cipher_list".
 
 
-**Example: Usage of `cipher_list_col` block**
+**Example: Usage of cipher_list_col block**
 
 
 ```opensips
@@ -915,7 +915,7 @@ modparam("tls_mgm", "cipher_list_col", "cipher_list")
 ```
 
 
-#### `dh_params_col` (string)
+#### dh_params_col (string)
 
 
 Sets the Diffie-Hellmann parameters column name.
@@ -924,7 +924,7 @@ Sets the Diffie-Hellmann parameters column name.
 Default value is "dh_params".
 
 
-**Example: Usage of `dh_params_col` block**
+**Example: Usage of dh_params_col block**
 
 
 ```opensips
@@ -933,7 +933,7 @@ modparam("tls_mgm", "dh_params_col", "dh_parms")
 ```
 
 
-#### `ec_curve_col` (string)
+#### ec_curve_col (string)
 
 
 Sets the ec_curve column name.
@@ -942,7 +942,7 @@ Sets the ec_curve column name.
 Default value is "ec_curve".
 
 
-**Example: Usage of `ec_curve_col` block**
+**Example: Usage of ec_curve_col block**
 
 
 ```opensips
@@ -951,7 +951,7 @@ modparam("tls_mgm", "ec_curve_col", "ec_curve")
 ```
 
 
-#### `match_ip_address` (string)
+#### match_ip_address (string)
 
 
 The IP addresses and ports used to match a TLS connection with a
@@ -968,7 +968,7 @@ The parameter accepts a list of values, and the special value "*"
 *Default value is "*" (match any address).*
 
 
-**Example: Set `match_ip_address` variable**
+**Example: Set match_ip_address variable**
 
 
 ```opensips
@@ -979,7 +979,7 @@ modparam("tls_mgm", "match_ip_address", "[dom1]10.0.0.10:5061, 10.0.0.11:5061")
 ```
 
 
-#### `match_sip_domain` (string)
+#### match_sip_domain (string)
 
 
 The SIP domains used to match a TLS connection with a
@@ -1009,7 +1009,7 @@ The FQDNs can be specified as with Unix shell-style wildcards. If
 *Default value is "*" (match any sip domain).*
 
 
-**Example: Set `match_sip_domain` variable**
+**Example: Set match_sip_domain variable**
 
 
 ```opensips
@@ -1021,7 +1021,7 @@ modparam("tls_mgm", "match_sip_domain", "[default_dom]*")
 ```
 
 
-#### `server_domain, client_domain` (string)
+#### server_domain, client_domain (string)
 
 
 You can define virtual TLS domains through these parameters.
@@ -1031,8 +1031,8 @@ The value of these parameters represents the virtual tls domain's
 				name which is only used for identification.
 
 
-**Example: Usage of `tls_client_domain` and
-					`tls_server_domain` block**
+**Example: Usage of tls_client_domain and
+					tls_server_domain block**
 
 
 ```opensips
@@ -1196,7 +1196,7 @@ Some variables are available for both, the peer'S certificate and
 			String type.
 
 
-**Example: Example of `$tls_[peer|my]_[subject|issuer]`**
+**Example: Example of $tls_[peer|my]_[subject|issuer]**
 
 
 ```

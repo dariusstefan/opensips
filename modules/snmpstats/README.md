@@ -203,7 +203,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `sipEntityType` (String)
+#### sipEntityType (String)
 
 
 This parameter describes the entity type for this OpenSIPS instance,
@@ -214,7 +214,7 @@ This parameter describes the entity type for this OpenSIPS instance,
 *registrarServer, redirectServer, proxyServer, userAgent, other*
 
 
-**Example: Setting the `sipEntityType` parameter**
+**Example: Setting the sipEntityType parameter**
 
 
 ```opensips
@@ -231,7 +231,7 @@ Note that as the above example shows, you can define this parameter
 		can take on more than one role.
 
 
-#### `MsgQueueMinorThreshold` (Integer)
+#### MsgQueueMinorThreshold (Integer)
 
 
 The SNMPStats module monitors the number of bytes waiting to be
@@ -242,7 +242,7 @@ The SNMPStats module monitors the number of bytes waiting to be
 		MsgQueueMinorThreshold parameter.
 
 
-**Example: Setting the `MsgQueueMinorThreshold` parameter**
+**Example: Setting the MsgQueueMinorThreshold parameter**
 
 
 ```opensips
@@ -257,7 +257,7 @@ If this parameter is not set, then there will be no minor alarm
 		monitoring.
 
 
-#### `MsgQueueMajorThreshold` (Integer)
+#### MsgQueueMajorThreshold (Integer)
 
 
 The SNMPStats module monitors the number of bytes waiting to be
@@ -268,7 +268,7 @@ The SNMPStats module monitors the number of bytes waiting to be
 		MsgQueueMajorThreshold parameter.
 
 
-**Example: Setting the `MsgQueueMajorThreshold` parameter**
+**Example: Setting the MsgQueueMajorThreshold parameter**
 
 
 ```opensips
@@ -283,7 +283,7 @@ If this parameter is not set, then there will be no major alarm
 		monitoring.
 
 
-#### `dlg_minor_threshold` (Integer)
+#### dlg_minor_threshold (Integer)
 
 
 The SNMPStats module monitors the number of active dialogs.  If the
@@ -293,7 +293,7 @@ The SNMPStats module monitors the number of active dialogs.  If the
 		the dlg_minor_threshold parameter.
 
 
-**Example: Setting the `dlg_minor_threshold` parameter**
+**Example: Setting the dlg_minor_threshold parameter**
 
 
 ```opensips
@@ -308,7 +308,7 @@ If this parameter is not set, then there will be no minor alarm
 		monitoring.
 
 
-#### `dlg_major_threshold` (Integer)
+#### dlg_major_threshold (Integer)
 
 
 The SNMPStats module monitors the number of active dialogs.  If
@@ -318,7 +318,7 @@ The SNMPStats module monitors the number of active dialogs.  If
 		with the dlg_major_threshold parameter.
 
 
-**Example: Setting the `dlg_major_threshold` parameter**
+**Example: Setting the dlg_major_threshold parameter**
 
 
 ```opensips
@@ -333,7 +333,7 @@ If this parameter is not set, then there will be no major alarm
 		monitoring.
 
 
-#### `snmpgetPath` (String)
+#### snmpgetPath (String)
 
 
 The SNMPStats module provides the openserSIPServiceStartTime scalar.
@@ -345,7 +345,7 @@ The SNMPStats module provides the openserSIPServiceStartTime scalar.
 *Default value is "/usr/local/bin/".*
 
 
-**Example: Setting the `snmpgetPath` parameter**
+**Example: Setting the snmpgetPath parameter**
 
 
 ```opensips
@@ -356,7 +356,7 @@ modparam("snmpstats", "snmpgetPath",     "/my/custom/path/")
 ```
 
 
-#### `snmpCommunity` (String)
+#### snmpCommunity (String)
 
 
 The SNMPStats module provides the openserSIPServiceStartTime scalar.
@@ -368,7 +368,7 @@ The SNMPStats module provides the openserSIPServiceStartTime scalar.
 *Default value is "public".*
 
 
-**Example: Setting the `snmpCommunity` parameter**
+**Example: Setting the snmpCommunity parameter**
 
 
 ```opensips

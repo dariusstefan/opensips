@@ -88,7 +88,7 @@ If TLS connections are enabled via the [use tls](#param_use_tls) modparam,
 ### Exported Parameters
 
 
-#### `cachedb_url` (string)
+#### cachedb_url (string)
 
 
 The URLs of the server groups that OpenSIPS will connect to in order
@@ -97,7 +97,7 @@ The URLs of the server groups that OpenSIPS will connect to in order
 			the identifier that will be used from the script.
 
 
-**Example: Set `cachedb_url` parameter**
+**Example: Set cachedb_url parameter**
 
 
 ```opensips
@@ -123,7 +123,7 @@ cache_remove("redis:cluster1", "key");
 ```
 
 
-#### `connect_timeout` (integer)
+#### connect_timeout (integer)
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -133,7 +133,7 @@ This parameter specifies how many milliseconds OpenSIPS should wait
 *Default value is "5000 ms".*
 
 
-**Example: Set `connect_timeout` parameter**
+**Example: Set connect_timeout parameter**
 
 
 ```opensips
@@ -145,7 +145,7 @@ modparam("cachedb_redis", "connect_timeout",1000)
 ```
 
 
-#### `query_timeout` (integer)
+#### query_timeout (integer)
 
 
 This parameter specifies how many milliseconds OpenSIPS should wait
@@ -155,7 +155,7 @@ This parameter specifies how many milliseconds OpenSIPS should wait
 *Default value is "5000 ms".*
 
 
-**Example: Set `connect_timeout` parameter**
+**Example: Set connect_timeout parameter**
 
 
 ```opensips
@@ -167,7 +167,7 @@ modparam("cachedb_redis", "query_timeout",1000)
 ```
 
 
-#### `shutdown_on_error` (integer)
+#### shutdown_on_error (integer)
 
 
 By setting this parameter to 1, OpenSIPS will abort startup if
@@ -178,7 +178,7 @@ By setting this parameter to 1, OpenSIPS will abort startup if
 *Default value is "0" (disabled).*
 
 
-**Example: Set the `shutdown_on_error` parameter**
+**Example: Set the shutdown_on_error parameter**
 
 
 ```opensips
@@ -190,7 +190,7 @@ modparam("cachedb_redis", "shutdown_on_error", 1)
 ```
 
 
-#### `use_tls` (integer)
+#### use_tls (integer)
 
 
 Setting this parameter will allow you to use TLS for Redis connections.
@@ -213,7 +213,7 @@ Note that TLS is supported by Redis starting with version 6.0. Also, it is
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the `use_tls` parameter**
+**Example: Set the use_tls parameter**
 
 
 ```opensips
@@ -229,7 +229,7 @@ modparam("cachedb_redis", "cachedb_url","redis://localhost:6379/?tls_domain=redi
 ```
 
 
-#### `ftsearch_index_name` (string)
+#### ftsearch_index_name (string)
 
 
 Only relevant with *RedisJSON* and
@@ -243,7 +243,7 @@ A global index name to be used for all internal JSON full-text search operations
 Default value is **"idx:usrloc"**.
 
 
-**Example: Set the `ftsearch_index_name` parameter**
+**Example: Set the ftsearch_index_name parameter**
 
 
 ```opensips
@@ -251,7 +251,7 @@ modparam("cachedb_redis", "ftsearch_index_name", "ix::usrloc")
 ```
 
 
-#### `ftsearch_json_prefix` (string)
+#### ftsearch_json_prefix (string)
 
 
 Only relevant with *RedisJSON* and
@@ -265,7 +265,7 @@ A key naming prefix for all internally-created Redis JSON objects (e.g.
 Default value is **"usrloc:"**.
 
 
-**Example: Set the `ftsearch_json_prefix` parameter**
+**Example: Set the ftsearch_json_prefix parameter**
 
 
 ```opensips
@@ -273,7 +273,7 @@ modparam("cachedb_redis", "ftsearch_json_prefix", "userlocation:")
 ```
 
 
-#### `ftsearch_max_results` (integer)
+#### ftsearch_max_results (integer)
 
 
 Only relevant with *RedisJSON* and
@@ -287,7 +287,7 @@ The maximum number of results returned by each internally-triggered
 Default value is **10000** max results.
 
 
-**Example: Set the `ftsearch_max_results` parameter**
+**Example: Set the ftsearch_max_results parameter**
 
 
 ```opensips
@@ -295,7 +295,7 @@ modparam("cachedb_redis", "ftsearch_max_results", 100)
 ```
 
 
-#### `ftsearch_json_mset_expire` (integer)
+#### ftsearch_json_mset_expire (integer)
 
 
 Only relevant with *RedisJSON* and
@@ -310,7 +310,7 @@ A Redis EXPIRE timer to set/refresh on the JSON key after each JSON.MSET operati
 Default value is **3600** seconds.
 
 
-**Example: Set the `ftsearch_json_mset_expire` parameter**
+**Example: Set the ftsearch_json_mset_expire parameter**
 
 
 ```opensips

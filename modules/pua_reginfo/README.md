@@ -59,7 +59,7 @@ None.
 ### Parameters
 
 
-#### `default_domain`(str)
+#### default_domain(str)
 
 
 The default domain for the registered users to be used when
@@ -69,7 +69,7 @@ The default domain for the registered users to be used when
 *Default value is "NULL".*
 
 
-**Example: Set `default_domain` parameter**
+**Example: Set default_domain parameter**
 
 
 ```opensips
@@ -79,7 +79,7 @@ modparam("pua_reginfo", "default_domain", "kamailio.org")
 ```
 
 
-#### `publish_reginfo`(int)
+#### publish_reginfo(int)
 
 
 Whether or not to generate PUBLISH requests.
@@ -88,7 +88,7 @@ Whether or not to generate PUBLISH requests.
 *Default value is "1" (enabled).*
 
 
-**Example: Set `publish_reginfo` parameter**
+**Example: Set publish_reginfo parameter**
 
 
 ```opensips
@@ -98,7 +98,7 @@ modparam("pua_reginfo", "publish_reginfo", 0)
 ```
 
 
-#### `outbound_proxy`(str)
+#### outbound_proxy(str)
 
 
 The outbound_proxy uri to be used when sending Subscribe and Publish requests.
@@ -107,7 +107,7 @@ The outbound_proxy uri to be used when sending Subscribe and Publish requests.
 *Default value is "NULL".*
 
 
-**Example: Set `outbound_proxy` parameter**
+**Example: Set outbound_proxy parameter**
 
 
 ```opensips
@@ -117,13 +117,13 @@ modparam("pua_reginfo", "outbound_proxy", "sip:proxy@kamailio.org")
 ```
 
 
-#### `server_address`(str)
+#### server_address(str)
 
 
 The IP address of the server.
 
 
-**Example: Set `server_address` parameter**
+**Example: Set server_address parameter**
 
 
 ```opensips
@@ -133,7 +133,7 @@ modparam("pua_reginfo", "server_address", "sip:reginfo@160.34.23.12")
 ```
 
 
-#### `ul_domain`(str)
+#### ul_domain(str)
 
 
 The domain for for querying the usrloc-database.
@@ -142,7 +142,7 @@ The domain for for querying the usrloc-database.
 *Default value is "NULL" (not set).*
 
 
-**Example: Set `ul_domain` parameter**
+**Example: Set ul_domain parameter**
 
 
 ```opensips
@@ -152,7 +152,7 @@ modparam("pua_reginfo", "ul_domain", "location")
 ```
 
 
-#### `ul_identities_key`(str)
+#### ul_identities_key(str)
 
 
 The Key, which may be used for retrieving multiple public identies
@@ -162,7 +162,7 @@ The Key, which may be used for retrieving multiple public identies
 *Default value is "NULL" (not set).*
 
 
-**Example: Set `ul_identities_key` parameter**
+**Example: Set ul_identities_key parameter**
 
 
 ```opensips
@@ -184,7 +184,7 @@ onreply_route[register_reply] {
 ### Functions
 
 
-#### `reginfo_handle_notify(uldomain)`
+#### reginfo_handle_notify(uldomain)
 
 
 This function processes received "NOTIFY"-requests and updates
@@ -209,7 +209,7 @@ Return codes:
 *-1* - Invalid NOTIFY or other error (see log-file)
 
 
-**Example: `reginfo_handle_notify` usage**
+**Example: reginfo_handle_notify usage**
 
 
 ```opensips
@@ -222,7 +222,7 @@ if(is_method("NOTIFY"))
 ```
 
 
-#### `reginfo_subscribe(uri[, expires])`
+#### reginfo_subscribe(uri[, expires])
 
 
 This function will subscribe for reginfo-information at the given
@@ -237,7 +237,7 @@ Meaning of the parameters is as follows:
 *expires* - Expiration date for this subscription, in seconds (default 3600)
 
 
-**Example: `reginfo_subscribe` usage**
+**Example: reginfo_subscribe usage**
 
 
 ```opensips
@@ -256,7 +256,7 @@ reply_route[1] {
 ```
 
 
-#### `reginfo_update(aor)`
+#### reginfo_update(aor)
 
 
 Explicitly update the presence status, e.g., when new information
@@ -276,7 +276,7 @@ Meaning of the parameters is as follows:
 - *aor* - The AOR to be updated.
 
 
-**Example: `reginfo_subscribe` usage**
+**Example: reginfo_subscribe usage**
 
 
 ```opensips

@@ -73,7 +73,7 @@ The following modules must be loaded for this module to work:
 ### Exported Parameters
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 An SQL database URL.
@@ -82,7 +82,7 @@ An SQL database URL.
 *Default value is **NULL**.*
 
 
-**Example: Setting the `db_url` parameter**
+**Example: Setting the db_url parameter**
 
 
 ```opensips
@@ -91,7 +91,7 @@ modparam("qrouting", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ```
 
 
-#### `table_name` (string)
+#### table_name (string)
 
 
 The name of the quality-based routing profiles table.
@@ -100,7 +100,7 @@ The name of the quality-based routing profiles table.
 *Default value is **"qr_profiles"**.*
 
 
-**Example: Setting the `table_name` parameter**
+**Example: Setting the table_name parameter**
 
 
 ```opensips
@@ -109,7 +109,7 @@ modparam("qrouting", "table_name", "qr_profiles_bak")
 ```
 
 
-#### `algorithm` (integer)
+#### algorithm (integer)
 
 
 Quality-based destination selection/balancing algorithm to use.
@@ -144,7 +144,7 @@ Possible values:
 *Default value is **"dynamic-weights"**.*
 
 
-**Example: Setting the `algorithm` parameter**
+**Example: Setting the algorithm parameter**
 
 
 ```opensips
@@ -153,7 +153,7 @@ modparam("qrouting", "algorithm", "best-dest-first")
 ```
 
 
-#### `history_span` (integer)
+#### history_span (integer)
 
 
 The duration (in minutes) that a gateway's statistics for a given call
@@ -163,7 +163,7 @@ The duration (in minutes) that a gateway's statistics for a given call
 *Default value is **30** minutes.*
 
 
-**Example: Setting the `connection_timeout` parameter**
+**Example: Setting the connection_timeout parameter**
 
 
 ```opensips
@@ -172,7 +172,7 @@ modparam("qrouting", "history_span", 15)
 ```
 
 
-#### `sampling_interval` (integer)
+#### sampling_interval (integer)
 
 
 The duration (in seconds) of the statistics sampling window.  Every
@@ -190,7 +190,7 @@ A lower value will lead to a closer to realtime adjustment to traffic
 *Default value is **5** seconds.*
 
 
-**Example: Setting the `connect_poll_interval` parameter**
+**Example: Setting the connect_poll_interval parameter**
 
 
 ```opensips
@@ -199,7 +199,7 @@ modparam("qrouting", "sampling_interval", 5)
 ```
 
 
-#### `extra_stats` (string)
+#### extra_stats (string)
 
 
 A semicolon-separated list of custom statistics to be additionally kept
@@ -239,7 +239,7 @@ The thresholds and penalties for a custom statistic must be provided
 *Default value is **NULL**.*
 
 
-**Example: Setting the `extra_stats` parameter**
+**Example: Setting the extra_stats parameter**
 
 
 ```opensips
@@ -248,7 +248,7 @@ modparam("qrouting", "extra_stats", "+mos/60; +r_factor; -503_replies/100")
 ```
 
 
-#### `min_samples_asr` (integer)
+#### min_samples_asr (integer)
 
 
 The minimally accepted amount of sampled ASR statistics for each
@@ -260,7 +260,7 @@ The minimally accepted amount of sampled ASR statistics for each
 *Default value is **30**.*
 
 
-**Example: Setting the `min_samples_asr` parameter**
+**Example: Setting the min_samples_asr parameter**
 
 
 ```opensips
@@ -269,7 +269,7 @@ modparam("qrouting", "min_samples_asr", 50)
 ```
 
 
-#### `min_samples_ccr` (integer)
+#### min_samples_ccr (integer)
 
 
 The minimally accepted amount of sampled CCR statistics for each
@@ -281,7 +281,7 @@ The minimally accepted amount of sampled CCR statistics for each
 *Default value is **30**.*
 
 
-**Example: Setting the `min_samples_ccr` parameter**
+**Example: Setting the min_samples_ccr parameter**
 
 
 ```opensips
@@ -290,7 +290,7 @@ modparam("qrouting", "min_samples_ccr", 50)
 ```
 
 
-#### `min_samples_pdd` (integer)
+#### min_samples_pdd (integer)
 
 
 The minimally accepted amount of sampled PDD statistics for each
@@ -302,7 +302,7 @@ The minimally accepted amount of sampled PDD statistics for each
 *Default value is **10**.*
 
 
-**Example: Setting the `min_samples_pdd` parameter**
+**Example: Setting the min_samples_pdd parameter**
 
 
 ```opensips
@@ -311,7 +311,7 @@ modparam("qrouting", "min_samples_pdd", 15)
 ```
 
 
-#### `min_samples_ast` (integer)
+#### min_samples_ast (integer)
 
 
 The minimally accepted amount of sampled AST statistics for each
@@ -323,7 +323,7 @@ The minimally accepted amount of sampled AST statistics for each
 *Default value is **10**.*
 
 
-**Example: Setting the `min_samples_ast` parameter**
+**Example: Setting the min_samples_ast parameter**
 
 
 ```opensips
@@ -332,7 +332,7 @@ modparam("qrouting", "min_samples_ast", 15)
 ```
 
 
-#### `min_samples_acd` (integer)
+#### min_samples_acd (integer)
 
 
 The minimally accepted amount of sampled ACD statistics for each
@@ -344,7 +344,7 @@ The minimally accepted amount of sampled ACD statistics for each
 *Default value is **20**.*
 
 
-**Example: Setting the `min_samples_acd` parameter**
+**Example: Setting the min_samples_acd parameter**
 
 
 ```opensips
@@ -353,7 +353,7 @@ modparam("qrouting", "min_samples_acd", 30)
 ```
 
 
-#### `event_bad_dst_threshold` (string)
+#### event_bad_dst_threshold (string)
 
 
 The minimally accepted quality of a (prefix, destination) combination,
@@ -366,7 +366,7 @@ The minimally accepted quality of a (prefix, destination) combination,
 *Default value is **NULL** (not set).*
 
 
-**Example: Setting the `event_bad_dst_threshold` parameter**
+**Example: Setting the event_bad_dst_threshold parameter**
 
 
 ```opensips
@@ -375,7 +375,7 @@ modparam("qrouting", "event_bad_dst_threshold", "0.5")
 ```
 
 
-#### `decimal_digits` (string)
+#### decimal_digits (string)
 
 
 The amount of decimal digits to use in logging or MI output.
@@ -384,7 +384,7 @@ The amount of decimal digits to use in logging or MI output.
 *Default value is **2**.*
 
 
-**Example: Setting the `decimal_digits` parameter**
+**Example: Setting the decimal_digits parameter**
 
 
 ```opensips
@@ -396,8 +396,8 @@ modparam("qrouting", "decimal_digits", 4)
 ### Exported Functions
 
 
-#### `qr_set_xstat(rule_id, gw_name, stat_name,
-										inc_by, [part], [inc_total])`
+#### qr_set_xstat(rule_id, gw_name, stat_name,
+										inc_by, [part], [inc_total])
 
 
 Provide a new sample value for an extra statistic on a given (prefix,
@@ -428,7 +428,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `qr_set_xstat()` usage**
+**Example: qr_set_xstat() usage**
 
 
 ```
@@ -441,7 +441,7 @@ qr_set_xstat($var(rule_id), $var(gw_name), "mos", $var(mos_score));
 ```
 
 
-#### `qr_disable_dst(rule_id, dst_name, [part])`
+#### qr_disable_dst(rule_id, dst_name, [part])
 
 
 Within a given routing rule, temporarily remove the given gateway or
@@ -463,7 +463,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `qr_disable_dst()` usage**
+**Example: qr_disable_dst() usage**
 
 
 ```
@@ -476,7 +476,7 @@ event_route [E_QROUTING_BAD_DST]
 ```
 
 
-#### `qr_enable_dst(rule_id, dst_name, [part])`
+#### qr_enable_dst(rule_id, dst_name, [part])
 
 
 Within a given routing rule, re-introduce the given gateway or
@@ -496,7 +496,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: `qr_enable_dst()` usage**
+**Example: qr_enable_dst() usage**
 
 
 ```
@@ -509,7 +509,7 @@ qr_enable_dst($param(rule_id), $param(dst_name), $param(partition));
 ### Exported MI Functions
 
 
-#### `qr_reload`
+#### qr_reload
 
 
 Reload all quality-based routing rules from the SQL database.
@@ -524,7 +524,7 @@ opensips-cli -x mi qr_reload
 ```
 
 
-#### `qr_status`
+#### qr_status
 
 
 Inspect the signaling quality statistics of the current
@@ -555,7 +555,7 @@ opensips-cli -x mi qr_status pstn 17 MY-CARR-7
 ```
 
 
-#### `qr_disable_dst`
+#### qr_disable_dst
 
 
 Within a given routing rule, temporarily remove the given gateway or
@@ -581,7 +581,7 @@ opensips-cli -x mi qr_disable_dst pstn 81 MY-GW-3
 ```
 
 
-#### `qr_enable_dst`
+#### qr_enable_dst
 
 
 Within a given routing rule, re-introduce the given gateway or
@@ -609,7 +609,7 @@ opensips-cli -x mi qr_enable_dst pstn 81 MY-GW-3
 ### Exported Events
 
 
-#### `E_QROUTING_BAD_DST`
+#### E_QROUTING_BAD_DST
 
 
 This event may be raised during routing, asynchronously, whenever the

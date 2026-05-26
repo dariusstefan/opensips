@@ -80,7 +80,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `qos_flag` (string)
+#### qos_flag (string)
 
 
 Keeping with OpenSIPS, the module will not do
@@ -105,7 +105,7 @@ This parameter must be set of the module will
 *Default value is "Not set!".*
 
 
-**Example: Set `qos_flag` parameter**
+**Example: Set qos_flag parameter**
 
 
 ```opensips
@@ -161,7 +161,7 @@ Just load the module and remember to set the flag.
 ### Available Functions
 
 
-#### `register_qoscb (qos, type, cb, param)`
+#### register_qoscb (qos, type, cb, param)
 
 
 Register a new callback to the qos.

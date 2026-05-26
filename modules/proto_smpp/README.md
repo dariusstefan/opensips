@@ -154,7 +154,7 @@ All these parameters can be used from the opensips.cfg file,
 		to configure the behavior of OpenSIPS-SMPP gateway.
 
 
-#### `db_url` (string)
+#### db_url (string)
 
 
 The database handler where the SMPP connection will be
@@ -164,7 +164,7 @@ The database handler where the SMPP connection will be
 *Default value is *unset*.*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -174,7 +174,7 @@ modparam("proto_smpp", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `smpp_port` (integer)
+#### smpp_port (integer)
 
 
 Used to change the default value of the SMPP port used to
@@ -184,7 +184,7 @@ Used to change the default value of the SMPP port used to
 *Default value is 2775.*
 
 
-**Example: Set `smpp_port` variable**
+**Example: Set smpp_port variable**
 
 
 ```opensips
@@ -195,7 +195,7 @@ modparam("proto_smpp", "smpp_port", 27775)
 ```
 
 
-#### `smpp_max_msg_chunks` (integer)
+#### smpp_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a SMPP message is expected to
@@ -209,7 +209,7 @@ The maximum number of chunks in which a SMPP message is expected to
 *Default value is 8.*
 
 
-**Example: Set `smpp_max_msg_chunks` parameter**
+**Example: Set smpp_max_msg_chunks parameter**
 
 
 ```opensips
@@ -219,7 +219,7 @@ modparam("proto_smpp", "smpp_max_msg_chunks", 32)
 ```
 
 
-#### `smpp_send_timeout` (integer)
+#### smpp_send_timeout (integer)
 
 
 Time in milliseconds after a TCP connection will be closed if it is
@@ -230,7 +230,7 @@ Time in milliseconds after a TCP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set `smpp_send_timeout` parameter**
+**Example: Set smpp_send_timeout parameter**
 
 
 ```opensips
@@ -240,7 +240,7 @@ modparam("proto_smpp", "smpp_send_timeout", 200)
 ```
 
 
-#### `outbound_uri` (string)
+#### outbound_uri (string)
 
 
 This parameter represents the URI of the outbound proxy used to send
@@ -250,7 +250,7 @@ This parameter represents the URI of the outbound proxy used to send
 *Default value is *None*.*
 
 
-**Example: Set `outbound_uri` parameter**
+**Example: Set outbound_uri parameter**
 
 
 ```opensips
@@ -260,7 +260,7 @@ modparam("proto_smpp", "outbound_uri", "sip:127.0.0.1:5060")
 ```
 
 
-#### `smpp_table` (string)
+#### smpp_table (string)
 
 
 The name of the database table containing definitions
@@ -270,7 +270,7 @@ The name of the database table containing definitions
 *Default value is "smpp".*
 
 
-**Example: Set `smpp_table` parameter**
+**Example: Set smpp_table parameter**
 
 
 ```opensips
@@ -280,7 +280,7 @@ modparam("proto_smpp", "smpp_table", "smsc")
 ```
 
 
-#### `name_col` (string)
+#### name_col (string)
 
 
 The name of the column that holds the SMSc identifier used by
@@ -290,7 +290,7 @@ The name of the column that holds the SMSc identifier used by
 *Default value is "name".*
 
 
-**Example: Set `name_col` parameter**
+**Example: Set name_col parameter**
 
 
 ```opensips
@@ -300,7 +300,7 @@ modparam("proto_smpp", "name_col", "smsc_name")
 ```
 
 
-#### `ip_col` (string)
+#### ip_col (string)
 
 
 The name of the column that holds the IP of the SMSc.
@@ -309,7 +309,7 @@ The name of the column that holds the IP of the SMSc.
 *Default value is "ip".*
 
 
-**Example: Set `ip_col` parameter**
+**Example: Set ip_col parameter**
 
 
 ```opensips
@@ -319,7 +319,7 @@ modparam("proto_smpp", "ip_col", "smsc_ip")
 ```
 
 
-#### `port_col` (string)
+#### port_col (string)
 
 
 The name of the column that holds the SMSc port.
@@ -328,7 +328,7 @@ The name of the column that holds the SMSc port.
 *Default value is "port".*
 
 
-**Example: Set `port_col` parameter**
+**Example: Set port_col parameter**
 
 
 ```opensips
@@ -338,7 +338,7 @@ modparam("proto_smpp", "port_col", "smsc_port")
 ```
 
 
-#### `system_id_col` (string)
+#### system_id_col (string)
 
 
 The name of the column that holds the SMSc System ID.
@@ -347,7 +347,7 @@ The name of the column that holds the SMSc System ID.
 *Default value is "system_id".*
 
 
-**Example: Set `system_id_col` parameter**
+**Example: Set system_id_col parameter**
 
 
 ```opensips
@@ -357,7 +357,7 @@ modparam("proto_smpp", "system_id_col", "smsc_system_id")
 ```
 
 
-#### `password_col` (string)
+#### password_col (string)
 
 
 The name of the password column used to authenticate the SMSc.
@@ -366,7 +366,7 @@ The name of the password column used to authenticate the SMSc.
 *Default value is "password".*
 
 
-**Example: Set `password_col` parameter**
+**Example: Set password_col parameter**
 
 
 ```opensips
@@ -376,7 +376,7 @@ modparam("proto_smpp", "password_col", "smsc_password")
 ```
 
 
-#### `system_type_col` (string)
+#### system_type_col (string)
 
 
 The name of the System Type column used to bind the SMSc.
@@ -385,7 +385,7 @@ The name of the System Type column used to bind the SMSc.
 *Default value is "system_type".*
 
 
-**Example: Set `system_type_col` parameter**
+**Example: Set system_type_col parameter**
 
 
 ```opensips
@@ -395,7 +395,7 @@ modparam("proto_smpp", "system_type_col", "smsc_system_type")
 ```
 
 
-#### `src_ton_col` (string)
+#### src_ton_col (string)
 
 
 The name of the column that holds the Source TON values.
@@ -404,7 +404,7 @@ The name of the column that holds the Source TON values.
 *Default value is "src_ton".*
 
 
-**Example: Set `src_ton_col` parameter**
+**Example: Set src_ton_col parameter**
 
 
 ```opensips
@@ -414,7 +414,7 @@ modparam("proto_smpp", "src_ton_col", "smsc_src_ton")
 ```
 
 
-#### `src_npi_col` (string)
+#### src_npi_col (string)
 
 
 The name of the column that holds the Source NPI values.
@@ -423,7 +423,7 @@ The name of the column that holds the Source NPI values.
 *Default value is "src_npi".*
 
 
-**Example: Set `src_npi_col` parameter**
+**Example: Set src_npi_col parameter**
 
 
 ```opensips
@@ -433,7 +433,7 @@ modparam("proto_smpp", "src_npi_col", "smsc_src_npi")
 ```
 
 
-#### `dst_ton_col` (string)
+#### dst_ton_col (string)
 
 
 The name of the column that holds the Destination TON values.
@@ -442,7 +442,7 @@ The name of the column that holds the Destination TON values.
 *Default value is "dst_ton".*
 
 
-**Example: Set `dst_ton_col` parameter**
+**Example: Set dst_ton_col parameter**
 
 
 ```opensips
@@ -452,7 +452,7 @@ modparam("proto_smpp", "dst_ton_col", "smsc_dst_ton")
 ```
 
 
-#### `dst_npi_col` (string)
+#### dst_npi_col (string)
 
 
 The name of the column that holds the Destination NPI values.
@@ -461,7 +461,7 @@ The name of the column that holds the Destination NPI values.
 *Default value is "dst_npi".*
 
 
-**Example: Set `dst_npi_col` parameter**
+**Example: Set dst_npi_col parameter**
 
 
 ```opensips
@@ -471,7 +471,7 @@ modparam("proto_smpp", "dst_npi_col", "smsc_dst_npi")
 ```
 
 
-#### `session_type_col` (string)
+#### session_type_col (string)
 
 
 The name of the column that holds the Session Type of the SMSc.
@@ -480,7 +480,7 @@ The name of the column that holds the Session Type of the SMSc.
 *Default value is "session_type".*
 
 
-**Example: Set `session_type_col` parameter**
+**Example: Set session_type_col parameter**
 
 
 ```opensips
@@ -493,7 +493,7 @@ modparam("proto_smpp", "session_type_col", "smsc_session_type")
 ### Exported Functions
 
 
-#### `send_smpp_message(smsc_name, [from],[to],[body],[utf-16],[delivery_receipt])`
+#### send_smpp_message(smsc_name, [from],[to],[body],[utf-16],[delivery_receipt])
 
 
 This function is used to convert a SIP message received in the
@@ -533,7 +533,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE
 			or BRANCH_ROUTE.
 
 
-**Example: `send_smpp_message()` usage**
+**Example: send_smpp_message() usage**
 
 
 ```opensips

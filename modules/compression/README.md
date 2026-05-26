@@ -74,7 +74,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `mc_level` (int)
+#### mc_level (int)
 
 
 This parameter ranges from 1 to 9 and it specifies the level of compression you want to do.
@@ -83,7 +83,7 @@ This parameter ranges from 1 to 9 and it specifies the level of compression you 
 		receive a warning.
 
 
-**Example: Set `mc_level` parameter**
+**Example: Set mc_level parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("mc", "mc_level", "3")
 ### Exported Functions
 
 
-#### `mc_compress([algo], flags, [whitelist])`
+#### mc_compress([algo], flags, [whitelist])
 
 
 This function will compress the current message as specified in the parameters. Keep in mind
@@ -145,7 +145,7 @@ The *flags* parameter can have the following values:
 This function can be used from REQUEST_ROUTE, LOCAL_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `mc_compress` usage**
+**Example: mc_compress usage**
 
 
 ```opensips
@@ -157,7 +157,7 @@ if (!mc_compress(0, "bhs", "Max-Forwards|Subject|P-Asserted-Identity"))
 ```
 
 
-**Example: `mc_compress` usage**
+**Example: mc_compress usage**
 
 
 ```opensips
@@ -172,7 +172,7 @@ xlog("compression registered\n");
 ```
 
 
-#### `mc_compact([whitelist], flags)`
+#### mc_compact([whitelist], flags)
 
 
 This function will realise four different things: headers which are not mandatory
@@ -212,7 +212,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, LOCAL_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `mc_compress` usage**
+**Example: mc_compress usage**
 
 
 ```opensips
@@ -224,7 +224,7 @@ if (!mc_compact("Max-Forwards|P-Asserted-Identity"))
 ```
 
 
-#### `mc_decompress()`
+#### mc_decompress()
 
 
 This function does the reverse of mc_compress, meaning that it does base64
@@ -246,7 +246,7 @@ WARNING: This function replaces the original buffer of the message with the
 This function can be used from REQUEST_ROUTE, LOCAL_ROUTE, FAILURE_ROUTE.
 
 
-**Example: `mc_decompress` usage**
+**Example: mc_decompress usage**
 
 
 ```opensips

@@ -53,7 +53,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `bin_port` (integer)
+#### bin_port (integer)
 
 
 The default port to be used by all TCP listeners.
@@ -62,7 +62,7 @@ The default port to be used by all TCP listeners.
 *Default value is 5555.*
 
 
-**Example: Set `bin_port` parameter**
+**Example: Set bin_port parameter**
 
 
 ```opensips
@@ -72,7 +72,7 @@ modparam("proto_bin", "bin_port", 6666)
 ```
 
 
-#### `bin_send_timeout` (integer)
+#### bin_send_timeout (integer)
 
 
 Time in milliseconds after a TCP connection will be closed if it is
@@ -83,7 +83,7 @@ Time in milliseconds after a TCP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set `bin_send_timeout` parameter**
+**Example: Set bin_send_timeout parameter**
 
 
 ```opensips
@@ -93,7 +93,7 @@ modparam("proto_bin", "bin_send_timeout", 200)
 ```
 
 
-#### `bin_max_msg_chunks` (integer)
+#### bin_max_msg_chunks (integer)
 
 
 The maximum number of chunks in which a BIN message is expected to
@@ -107,7 +107,7 @@ The maximum number of chunks in which a BIN message is expected to
 *Default value is 32.*
 
 
-**Example: Set `bin_max_msg_chunks` parameter**
+**Example: Set bin_max_msg_chunks parameter**
 
 
 ```opensips
@@ -117,7 +117,7 @@ modparam("proto_bin", "bin_max_msg_chunks", 8)
 ```
 
 
-#### `bin_async` (integer)
+#### bin_async (integer)
 
 
 Specifies whether the TCP connect and write operations should be
@@ -129,7 +129,7 @@ Specifies whether the TCP connect and write operations should be
 *Default value is 1 (enabled).*
 
 
-**Example: Set `bin_async` parameter**
+**Example: Set bin_async parameter**
 
 
 ```opensips
@@ -139,7 +139,7 @@ modparam("proto_bin", "bin_async", 0)
 ```
 
 
-#### `bin_async_max_postponed_chunks` (integer)
+#### bin_async_max_postponed_chunks (integer)
 
 
 If *bin_async* is enabled, this specifies the
@@ -151,7 +151,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 1024.*
 
 
-**Example: Set `bin_async_max_postponed_chunks` parameter**
+**Example: Set bin_async_max_postponed_chunks parameter**
 
 
 ```opensips
@@ -161,7 +161,7 @@ modparam("proto_bin", "bin_async_max_postponed_chunks", 1024)
 ```
 
 
-#### `bin_async_local_connect_timeout` (integer)
+#### bin_async_local_connect_timeout (integer)
 
 
 If *bin_async* is enabled, this specifies the
@@ -174,7 +174,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 100 ms.*
 
 
-**Example: Set `bin_async_local_connect_timeout` parameter**
+**Example: Set bin_async_local_connect_timeout parameter**
 
 
 ```opensips
@@ -184,7 +184,7 @@ modparam("proto_bin", "bin_async_local_connect_timeout", 200)
 ```
 
 
-#### `bin_async_local_write_timeout` (integer)
+#### bin_async_local_write_timeout (integer)
 
 
 If *bin_async* is enabled, this specifies the
@@ -197,7 +197,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 10 ms.*
 
 
-**Example: Set `bin_async_local_write_timeout` parameter**
+**Example: Set bin_async_local_write_timeout parameter**
 
 
 ```opensips

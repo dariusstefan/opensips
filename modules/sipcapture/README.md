@@ -61,7 +61,7 @@ The following libraries or applications must be installed before running
 ### Parameters
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 Database URL.
@@ -70,7 +70,7 @@ Database URL.
 *Default value is "".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -80,7 +80,7 @@ modparam("sipcapture", "db_url", "mysql://user:passwd@host/dbname")
 ```
 
 
-#### `table_name` (str)
+#### table_name (str)
 
 
 Name of the table's name where to store the SIP messages. Since
@@ -91,7 +91,7 @@ Name of the table's name where to store the SIP messages. Since
 *Default value is "sip_capture".*
 
 
-**Example: Set `table_name` parameter**
+**Example: Set table_name parameter**
 
 
 ```opensips
@@ -105,7 +105,7 @@ modparam("sipcapture", "table_name", "homer_%m_%d")
 ```
 
 
-#### `rtcp_table_name` (str)
+#### rtcp_table_name (str)
 
 
 Name of the table's name where to store packets captured
@@ -117,7 +117,7 @@ Name of the table's name where to store packets captured
 *Default value is "rtcp_capture".*
 
 
-**Example: Set `rtcp_capture` parameter**
+**Example: Set rtcp_capture parameter**
 
 
 ```opensips
@@ -131,7 +131,7 @@ modparam("sipcapture", "rtcp_table_name", "homer_%m_%d_%H")
 ```
 
 
-#### `capture_on` (integer)
+#### capture_on (integer)
 
 
 Parameter to enable/disable capture globaly (on(1)/off(0))
@@ -140,7 +140,7 @@ Parameter to enable/disable capture globaly (on(1)/off(0))
 *Default value is "0".*
 
 
-**Example: Set `capture_on` parameter**
+**Example: Set capture_on parameter**
 
 
 ```opensips
@@ -150,7 +150,7 @@ modparam("sipcapture", "capture_on", 1)
 ```
 
 
-#### `hep_capture_on` (integer)
+#### hep_capture_on (integer)
 
 
 Parameter to enable/disable capture of HEP (on(1)/off(0))
@@ -159,7 +159,7 @@ Parameter to enable/disable capture of HEP (on(1)/off(0))
 *Default value is "0".*
 
 
-**Example: Set `hep_capture_on` parameter**
+**Example: Set hep_capture_on parameter**
 
 
 ```opensips
@@ -169,7 +169,7 @@ modparam("sipcapture", "hep_capture_on", 1)
 ```
 
 
-#### `max_async_queries` (integer)
+#### max_async_queries (integer)
 
 
 Parameter to set the maximum number of 'INSERT' queries of captured
@@ -183,7 +183,7 @@ Parameter to set the maximum number of 'INSERT' queries of captured
 *Default value is "5".*
 
 
-**Example: Set `max_async_queries` parameter**
+**Example: Set max_async_queries parameter**
 
 
 ```opensips
@@ -193,7 +193,7 @@ modparam("sipcapture", "max_async_queries", 3)
 ```
 
 
-#### `raw_ipip_capture_on` (integer)
+#### raw_ipip_capture_on (integer)
 
 
 Parameter to enable/disable IPIP capturing (on(1)/off(0))
@@ -202,7 +202,7 @@ Parameter to enable/disable IPIP capturing (on(1)/off(0))
 *Default value is "0".*
 
 
-**Example: Set `raw_ipip_capture_on` parameter**
+**Example: Set raw_ipip_capture_on parameter**
 
 
 ```opensips
@@ -212,7 +212,7 @@ modparam("sipcapture", "raw_ipip_capture_on", 1)
 ```
 
 
-#### `raw_moni_capture_on` (integer)
+#### raw_moni_capture_on (integer)
 
 
 Parameter to enable/disable monitoring/mirroring port capturing (on(1)/off(0))
@@ -223,7 +223,7 @@ Parameter to enable/disable monitoring/mirroring port capturing (on(1)/off(0))
 *Default value is "0".*
 
 
-**Example: Set `raw_moni_capture_on` parameter**
+**Example: Set raw_moni_capture_on parameter**
 
 
 ```opensips
@@ -234,7 +234,7 @@ modparam("sipcapture", "raw_moni_capture_on", 1)
 ```
 
 
-#### `raw_socket_listen` (string)
+#### raw_socket_listen (string)
 
 
 Parameter indicate an listen IP address of RAW socket for IPIP capturing.
@@ -251,7 +251,7 @@ Parameter indicate an listen IP address of RAW socket for IPIP capturing.
 *Default value is "".*
 
 
-**Example: Set `raw_socket_listen` parameter**
+**Example: Set raw_socket_listen parameter**
 
 
 ```opensips
@@ -263,7 +263,7 @@ modparam("sipcapture", "raw_socket_listen", "10.0.0.1:5060")
 ```
 
 
-#### `raw_interface` (string)
+#### raw_interface (string)
 
 
 Name of the interface to bind on the raw socket.
@@ -272,7 +272,7 @@ Name of the interface to bind on the raw socket.
 *Default value is "".*
 
 
-**Example: Set `raw_socket_listen` parameter**
+**Example: Set raw_socket_listen parameter**
 
 
 ```opensips
@@ -282,7 +282,7 @@ modparam("sipcapture", "raw_interface", "eth0")
 ```
 
 
-#### `raw_sock_children` (integer)
+#### raw_sock_children (integer)
 
 
 Parameter define how much children must be created to listen the raw socket.
@@ -291,7 +291,7 @@ Parameter define how much children must be created to listen the raw socket.
 *Default value is "1".*
 
 
-**Example: Set `raw_socket_listen` parameter**
+**Example: Set raw_socket_listen parameter**
 
 
 ```opensips
@@ -301,7 +301,7 @@ modparam("sipcapture", "raw_sock_children", 6)
 ```
 
 
-#### `promiscuous_on` (integer)
+#### promiscuous_on (integer)
 
 
 Parameter to enable/disable promiscuous mode on the raw socket.
@@ -311,7 +311,7 @@ Parameter to enable/disable promiscuous mode on the raw socket.
 *Default value is "0".*
 
 
-**Example: Set `promiscuous_on` parameter**
+**Example: Set promiscuous_on parameter**
 
 
 ```opensips
@@ -321,7 +321,7 @@ modparam("sipcapture", "promiscuous_on", 1)
 ```
 
 
-#### `raw_moni_bpf_on` (integer)
+#### raw_moni_bpf_on (integer)
 
 
 Activate Linux Socket Filter (LSF based on BPF) on the mirroring interface.
@@ -332,7 +332,7 @@ Activate Linux Socket Filter (LSF based on BPF) on the mirroring interface.
 *Default value is "0".*
 
 
-**Example: Set `raw_moni_bpf_on` parameter**
+**Example: Set raw_moni_bpf_on parameter**
 
 
 ```opensips
@@ -342,7 +342,7 @@ modparam("sipcapture", "raw_moni_bpf_on", 1)
 ```
 
 
-#### `capture_node` (str)
+#### capture_node (str)
 
 
 Name of the capture node.
@@ -351,7 +351,7 @@ Name of the capture node.
 *Default value is "homer01".*
 
 
-**Example: Set `capture_node` parameter**
+**Example: Set capture_node parameter**
 
 
 ```opensips
@@ -361,7 +361,7 @@ modparam("sipcapture", "capture_node", "homer03")
 ```
 
 
-#### `hep_route` (string)
+#### hep_route (string)
 
 
 Specifies what path your hep messages should take. Possible
@@ -382,7 +382,7 @@ Specifies what path your hep messages should take. Possible
 *Default value is sip(going thorugh the main request route).*
 
 
-**Example: Set `hep_route` parameter**
+**Example: Set hep_route parameter**
 
 
 ```opensips
@@ -401,7 +401,7 @@ route[my_hep_route] {
 ### Exported Functions
 
 
-#### `sip_capture([table_name], [custom_field1], [custom_field2], [custom_field3])`
+#### sip_capture([table_name], [custom_field1], [custom_field2], [custom_field3])
 
 
 Save the message into the database.
@@ -424,7 +424,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,BRANCH_ROUTE,LOCAL_ROUTE.
 
 
-**Example: `sip_capture` usage**
+**Example: sip_capture usage**
 
 
 ```opensips
@@ -440,7 +440,7 @@ if (is_method("REGISTER"))
 ```
 
 
-#### `report_capture(correlation_id, [table_name], [proto_type])`
+#### report_capture(correlation_id, [table_name], [proto_type])
 
 
 Save the message into the database. If you want set the protocol type you have to define
@@ -470,7 +470,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,BRANCH_ROUTE,LOCAL_ROUTE.
 
 
-**Example: `sip_capture` usage**
+**Example: sip_capture usage**
 
 
 ```opensips
@@ -492,7 +492,7 @@ This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,BRANCH_
 ```
 
 
-#### `hep_set(chunk_id, chunk_data, [data_type], [vendor_id])`
+#### hep_set(chunk_id, chunk_data, [data_type], [vendor_id])
 
 
 Set a hep chunk. If not exists, it shall be added.
@@ -642,7 +642,7 @@ Meaning of the parameters is as follows:
 				for more details.
 
 
-**Example: `hep_set` usage**
+**Example: hep_set usage**
 
 
 ```
@@ -660,7 +660,7 @@ hep_set("32", "192.168.5.14", "inet4-addr", "3")
 ```
 
 
-#### `hep_get(chunk_id, data_type, [chunk_data_pv], [vendor_id_pv])`
+#### hep_get(chunk_id, data_type, [chunk_data_pv], [vendor_id_pv])
 
 
 Set a hep chunk. If not exists, it shall be added.
@@ -688,7 +688,7 @@ Meaning of the parameters is as follows:
 			of the chunk
 
 
-**Example: `hep_set` usage**
+**Example: hep_set usage**
 
 
 ```
@@ -703,7 +703,7 @@ hep_set("31", "uint32", $var(data), $var(vid))
 ```
 
 
-#### `hep_del(chunk_id)`
+#### hep_del(chunk_id)
 
 
 Removes a hep chunk.
@@ -719,7 +719,7 @@ Meaning of the parameters is as follows:
 				[hep set](#func_hep_set).
 
 
-**Example: `hep_set` usage**
+**Example: hep_set usage**
 
 
 ```
@@ -731,7 +731,7 @@ hep_del("25"); /* removes chunk with chunk id 25 */
 ```
 
 
-#### `hep_relay()`
+#### hep_relay()
 
 
 Relay a message statefully to destination indicated in current URI.
@@ -744,7 +744,7 @@ Relay a message statefully to destination indicated in current URI.
 This function can be used from REQUEST_ROUTE,FAILURE_ROUTE,ONREPLY_ROUTE,BRANCH_ROUTE,LOCAL_ROUTE.
 
 
-**Example: `hep_relay` usage**
+**Example: hep_relay usage**
 
 
 ```opensips
@@ -760,7 +760,7 @@ if (!hep_relay()) {
 ```
 
 
-#### `hep_resume_sip()`
+#### hep_resume_sip()
 
 
 Break hep route execution and resume into the main request route.
@@ -769,7 +769,7 @@ Break hep route execution and resume into the main request route.
 WARNING: USE THIS FUNCTION ONLY FROM A ROUTE DEFINED USING *hep_route* PARAMETER.
 
 
-**Example: `hep_resume_sip` usage**
+**Example: hep_resume_sip usage**
 
 
 ```opensips
@@ -792,7 +792,7 @@ route[my_hep_route] {
 ### Exported Async Functions
 
 
-#### `sip_capture()`
+#### sip_capture()
 
 
 Save the message inside the database. The query is being done
@@ -801,7 +801,7 @@ Save the message inside the database. The query is being done
 	on the *max_async_queries* parameter.
 
 
-**Example: `sip_capture` usage**
+**Example: sip_capture usage**
 
 
 ```opensips
@@ -822,7 +822,7 @@ route[capture_resume] {
 ### Exported Pseudo-Variables
 
 
-#### `$hep_net`
+#### $hep_net
 
 
 Holds layer 3 and 4 information(IP addresses and ports) about
@@ -846,7 +846,7 @@ Possible values for it's name are the following:
 			port on which the message was received).
 
 
-**Example: `hep_net` usage**
+**Example: hep_net usage**
 
 
 ```
@@ -866,13 +866,13 @@ Possible values for it's name are the following:
 ```
 
 
-#### `HEPVERSION (string, int)`
+#### HEPVERSION (string, int)
 
 
 Holds the version of the hep packet received on the interface.
 
 
-**Example: `HEPVERSION` usage**
+**Example: HEPVERSION usage**
 
 
 ```
@@ -895,7 +895,7 @@ Holds the version of the hep packet received on the interface.
 ### MI Commands
 
 
-#### `sip_capture`
+#### sip_capture
 
 
 Name: *sip_capture*

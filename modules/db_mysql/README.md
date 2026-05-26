@@ -38,7 +38,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `exec_query_threshold` (integer)
+#### exec_query_threshold (integer)
 
 
 If queries take longer than 'exec_query_threshold' microseconds, warning
@@ -48,7 +48,7 @@ If queries take longer than 'exec_query_threshold' microseconds, warning
 *Default value is 0 - disabled.*
 
 
-**Example: Set `exec_query_threshold` parameter**
+**Example: Set exec_query_threshold parameter**
 
 
 ```opensips
@@ -58,7 +58,7 @@ modparam("db_mysql", "exec_query_threshold", 60000)
 ```
 
 
-#### `timeout_interval` (integer)
+#### timeout_interval (integer)
 
 
 Time interval after which a connection attempt (read or write request)
@@ -75,7 +75,7 @@ The read timeout parameter is ignored on driver versions prior to
 *Default value is 2 (6 sec).*
 
 
-**Example: Set `timeout_interval` parameter**
+**Example: Set timeout_interval parameter**
 
 
 ```opensips
@@ -85,7 +85,7 @@ modparam("db_mysql", "timeout_interval", 2)
 ```
 
 
-#### `max_db_queries` (integer)
+#### max_db_queries (integer)
 
 
 The maximum number of retries to execute a failed query due to connections problems.
@@ -95,7 +95,7 @@ The maximum number of retries to execute a failed query due to connections probl
 *Default value is 2.*
 
 
-**Example: Set `max_db_queries` parameter**
+**Example: Set max_db_queries parameter**
 
 
 ```opensips
@@ -105,7 +105,7 @@ modparam("db_mysql", "max_db_queries", 2)
 ```
 
 
-#### `max_db_retries` (integer)
+#### max_db_retries (integer)
 
 
 The maximum number of database connection retries. If this parameter
@@ -115,7 +115,7 @@ The maximum number of database connection retries. If this parameter
 *Default value is 3.*
 
 
-**Example: Set `max_db_retries` parameter**
+**Example: Set max_db_retries parameter**
 
 
 ```opensips
@@ -125,7 +125,7 @@ modparam("db_mysql", "max_db_retries", 2)
 ```
 
 
-#### `ps_max_col_size` (integer)
+#### ps_max_col_size (integer)
 
 
 The maximum size of a column's data, when fetched using prepared
@@ -140,7 +140,7 @@ NOTE: Should a column's data exceed this limit, the value will be
 *Default value is *1024 (bytes)*.*
 
 
-**Example: Set `ps_max_col_size` parameter**
+**Example: Set ps_max_col_size parameter**
 
 
 ```opensips
@@ -150,7 +150,7 @@ modparam("db_mysql", "ps_max_col_size", 4096)
 ```
 
 
-#### `use_tls` (integer)
+#### use_tls (integer)
 
 
 Setting this parameter will allow you to use TLS for MySQL connections.
@@ -182,7 +182,7 @@ Also, you can *NOT* enable TLS for the connection
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the `use_tls` parameter**
+**Example: Set the use_tls parameter**
 
 
 ```opensips
@@ -224,7 +224,7 @@ Because it dependes on an external library, the mysql module is not
 ### Exported Events
 
 
-#### `E_MYSQL_CONNECTION`
+#### E_MYSQL_CONNECTION
 
 
 This event is raised when a MySQL connection is lost or recovered.

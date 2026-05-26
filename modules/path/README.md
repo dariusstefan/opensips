@@ -77,7 +77,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `use_received` (int)
+#### use_received (int)
 
 
 If set to 1, the "received" parameter of the first Route URI is evaluated and
@@ -87,7 +87,7 @@ If set to 1, the "received" parameter of the first Route URI is evaluated and
 *Default value is 0.*
 
 
-**Example: Set `use_received` parameter**
+**Example: Set use_received parameter**
 
 
 ```opensips
@@ -97,7 +97,7 @@ modparam("path", "use_received", 1)
 ```
 
 
-#### `enable_double_path` (integer)
+#### enable_double_path (integer)
 
 
 There are some situations when the server needs to insert two 
@@ -110,7 +110,7 @@ There are some situations when the server needs to insert two
 *Default value is 1 (yes).*
 
 
-**Example: Set `enable_double_path` parameter**
+**Example: Set enable_double_path parameter**
 
 
 ```opensips
@@ -123,7 +123,7 @@ modparam("path", "enable_double_path", 0)
 ### Exported Functions
 
 
-#### `add_path([user])`
+#### add_path([user])
 
 
 This function adds a Path header in the form 
@@ -140,7 +140,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `add_path(user)` usage**
+**Example: add_path(user) usage**
 
 
 ```opensips
@@ -153,7 +153,7 @@ if (!add_path("loadbalancer")) {
 ```
 
 
-#### `add_path_received([user])`
+#### add_path_received([user])
 
 
 This function adds a Path header in the form 
@@ -173,7 +173,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: `add_path_received(user)` usage**
+**Example: add_path_received(user) usage**
 
 
 ```opensips

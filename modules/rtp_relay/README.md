@@ -122,7 +122,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `route_offer` (string)
+#### route_offer (string)
 
 
 Route that is being run when an SDP offer happens (i.e.
@@ -172,7 +172,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_offer".*
 
 
-**Example: Set `route_offer` parameter**
+**Example: Set route_offer parameter**
 
 
 ```opensips
@@ -182,7 +182,7 @@ modparam("rtp_relay", "route_offer", "custom_rtp_offer")
 ```
 
 
-**Example: `route_offer` route usage**
+**Example: route_offer route usage**
 
 
 ```
@@ -195,7 +195,7 @@ route[rtp_relay_offer] {
 ```
 
 
-#### `route_answer` (string)
+#### route_answer (string)
 
 
 Route that is being run when an SDP answer happens (i.e.
@@ -240,7 +240,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_answer".*
 
 
-**Example: Set `route_answer` parameter**
+**Example: Set route_answer parameter**
 
 
 ```opensips
@@ -250,7 +250,7 @@ modparam("rtp_relay", "route_answer", "custom_rtp_answer")
 ```
 
 
-**Example: `route_answer` route usage**
+**Example: route_answer route usage**
 
 
 ```
@@ -264,7 +264,7 @@ route[rtp_relay_answer] {
 ```
 
 
-#### `route_delete` (string)
+#### route_delete (string)
 
 
 Route that is being run when media should be disconnected
@@ -297,7 +297,7 @@ Return values are not needed.
 		*Default value is "rtp_relay_delete".*
 
 
-**Example: Set `route_delete` parameter**
+**Example: Set route_delete parameter**
 
 
 ```opensips
@@ -307,7 +307,7 @@ modparam("rtp_relay", "route_delete", "custom_rtp_delete")
 ```
 
 
-**Example: `rtp_relay_delete` route usage**
+**Example: rtp_relay_delete route usage**
 
 
 ```
@@ -320,7 +320,7 @@ route[rtp_relay_delete] {
 ```
 
 
-#### `route_copy_offer` (string)
+#### route_copy_offer (string)
 
 
 Route that is being executed when a new call's SDP is being copied.
@@ -356,7 +356,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_copy_offer".*
 
 
-**Example: Set `rtp_relay_copy_offer` parameter**
+**Example: Set rtp_relay_copy_offer parameter**
 
 
 ```opensips
@@ -366,7 +366,7 @@ modparam("rtp_relay", "route_copy_offer", "custom_rtp_copy_offer")
 ```
 
 
-**Example: Set `rtp_relay_copy_offer` usage**
+**Example: Set rtp_relay_copy_offer usage**
 
 
 ```
@@ -380,7 +380,7 @@ route[rtp_relay_copy_offer] {
 ```
 
 
-#### `route_copy_answer` (string)
+#### route_copy_answer (string)
 
 
 Route that is being run when an SDP for the copied stream is received.
@@ -413,7 +413,7 @@ When the route is executed, the following parameters are
 *Default value is "rtp_relay_copy_answer".*
 
 
-**Example: Set `rtp_relay_copy_answer` parameter**
+**Example: Set rtp_relay_copy_answer parameter**
 
 
 ```opensips
@@ -423,7 +423,7 @@ modparam("rtp_relay", "route_copy_answer", "custom_rtp_copy_answer")
 ```
 
 
-**Example: Set `rtp_relay_copy_answer` usage**
+**Example: Set rtp_relay_copy_answer usage**
 
 
 ```
@@ -436,7 +436,7 @@ route[rtp_relay_copy_answer] {
 ```
 
 
-#### `route_copy_delete` (string)
+#### route_copy_delete (string)
 
 
 Route that is being run when media fork should be removed.
@@ -471,7 +471,7 @@ Return values are not needed.
 *Default value is "rtp_relay_copy_delete".*
 
 
-**Example: Set `rtp_relay_copy_delete` parameter**
+**Example: Set rtp_relay_copy_delete parameter**
 
 
 ```opensips
@@ -481,7 +481,7 @@ modparam("rtp_relay", "route_copy_delete", "custom_rtp_copy_delete")
 ```
 
 
-**Example: Set `rtp_relay_copy_delete` usage**
+**Example: Set rtp_relay_copy_delete usage**
 
 
 ```
@@ -496,7 +496,7 @@ route[rtp_relay_copy_delete] {
 ### Exported Functions
 
 
-#### `rtp_relay_engage(engine, [set])`
+#### rtp_relay_engage(engine, [set])
 
 
 Engages the RTP Relay *engine* for the current initial
@@ -534,7 +534,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: `rtp_relay_engage` usage**
+**Example: rtp_relay_engage usage**
 
 
 ```opensips
@@ -553,7 +553,7 @@ if (is_method("INVITE") && !has_totag()) {
 ### Exported MI Functions
 
 
-#### `rtp_relay_list`
+#### rtp_relay_list
 
 
 Lists all the RTP Relay sessions engaged.
@@ -573,7 +573,7 @@ Parameters:
 					parameter must also be specified.
 
 
-**Example: `rtp_relay_list` usage**
+**Example: rtp_relay_list usage**
 
 
 ```
@@ -588,7 +588,7 @@ $ opensips-cli -x mi rtp_relay_list rtpproxy udp:127.0.0.1:2222
 ```
 
 
-#### `rtp_relay_update`
+#### rtp_relay_update
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -639,7 +639,7 @@ Parameters:
 					same set will be used.
 
 
-**Example: `rtp_relay_update` usage**
+**Example: rtp_relay_update usage**
 
 
 ```
@@ -651,7 +651,7 @@ $ opensips-cli -x mi rtp_relay_update rtpproxy
 ```
 
 
-#### `rtp_relay_update_callid`
+#### rtp_relay_update_callid
 
 
 Updates/Re-engages the RTP relays in all ongoing RTP relay sessions.
@@ -688,7 +688,7 @@ Parameters:
 					explicitely specified flags will be overwritten.
 
 
-**Example: `rtp_relay_update_callid` usage**
+**Example: rtp_relay_update_callid usage**
 
 
 ```
@@ -708,7 +708,7 @@ $ opensips-cli -x mi rtp_relay_update_callid callid=1-3758963@127.0.0.1 \
 ### Exported Pseudo-Variables
 
 
-#### `$rtp_relay`
+#### $rtp_relay
 
 
 Is used to provision the RTP back-end flags for the
@@ -752,7 +752,7 @@ For each UAC/peer, there are several flags that can be
 					as an integer, it is used to disable RTP relay for this UAC.
 
 
-#### `$rtp_relay_peer`
+#### $rtp_relay_peer
 
 
 This variable has the same meaning and parameters as the
@@ -761,7 +761,7 @@ This variable has the same meaning and parameters as the
 				current one. All other fields are similar.
 
 
-#### `$rtp_relay_ctx()`
+#### $rtp_relay_ctx()
 
 
 This variable can be used to provide information about the

@@ -66,7 +66,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `ip`(string)
+#### ip(string)
 
 
 The IP address used by the HTTP server to listen for incoming 
@@ -76,7 +76,7 @@ The IP address used by the HTTP server to listen for incoming
 *The default value is "*"* (bind to all IPv6 and IPv4 interfaces).
 
 
-**Example: Set `ip` parameter**
+**Example: Set ip parameter**
 
 
 ```opensips
@@ -86,7 +86,7 @@ modparam("httpd", "ip", "127.0.0.1")
 ```
 
 
-#### `port`(integer)
+#### port(integer)
 
 
 The port number used by the HTTP server to listen for incoming 
@@ -97,7 +97,7 @@ The port number used by the HTTP server to listen for incoming
 		Ports lower than 1024 are not accepted.
 
 
-**Example: Set `port` parameter**
+**Example: Set port parameter**
 
 
 ```opensips
@@ -107,7 +107,7 @@ modparam("httpd", "port", 8000)
 ```
 
 
-#### `conn_timeout`(integer)
+#### conn_timeout(integer)
 
 
 Auto-close TCP connections which are idle for more than the designated
@@ -123,7 +123,7 @@ Note: the connection auto-close routine only seems to be executed
 *The default timeout is 30 seconds.*
 
 
-**Example: Set `conn_timeout` parameter**
+**Example: Set conn_timeout parameter**
 
 
 ```opensips
@@ -133,7 +133,7 @@ modparam("httpd", "conn_timeout", 10)
 ```
 
 
-#### `buf_size` (integer)
+#### buf_size (integer)
 
 
 It specifies the maximum length (in bytes) of the buffer
@@ -147,7 +147,7 @@ If the size of the buffer is set to zero, it will be automatically
 *The default value is 0.*
 
 
-**Example: Set `buf_size` parameter**
+**Example: Set buf_size parameter**
 
 
 ```opensips
@@ -157,7 +157,7 @@ modparam("httpd", "buf_size", 524288)
 ```
 
 
-#### `post_buf_size` (integer)
+#### post_buf_size (integer)
 
 
 It specifies the length (in bytes) of the POST HTTP requests
@@ -168,7 +168,7 @@ It specifies the length (in bytes) of the POST HTTP requests
 *The default value is 1024. The minumal value is 256.*
 
 
-**Example: Set `post_buf_size` parameter**
+**Example: Set post_buf_size parameter**
 
 
 ```opensips
@@ -178,7 +178,7 @@ modparam("httpd", "post_buf_size", 4096)
 ```
 
 
-#### `receive_buf_size` (integer)
+#### receive_buf_size (integer)
 
 
 It specifies the maximum length (in bytes) of the received HTTP requests.  
@@ -188,7 +188,7 @@ It specifies the maximum length (in bytes) of the received HTTP requests.
 *The default value is 1024.*
 
 
-**Example: Set `receive_buf_size` parameter**
+**Example: Set receive_buf_size parameter**
 
 
 ```opensips
@@ -198,7 +198,7 @@ modparam("httpd", "receive_buf_size", 4096)
 ```
 
 
-#### `tls_cert_file` (string)
+#### tls_cert_file (string)
 
 
 Public certificate file for httpd. It will be used as server-side certificate for incoming TLS connections.
@@ -207,7 +207,7 @@ Public certificate file for httpd. It will be used as server-side certificate fo
 *The default value is ""*
 
 
-**Example: Set `tls_cert_file` parameter**
+**Example: Set tls_cert_file parameter**
 
 
 ```opensips
@@ -217,7 +217,7 @@ modparam("httpd", "tls_cert_file", "/etc/opensips/tls/server.pem")
 ```
 
 
-#### `tls_key_file` (string)
+#### tls_key_file (string)
 
 
 Private key of the above certificate. I must be kept in a safe place with tight permissions!
@@ -226,7 +226,7 @@ Private key of the above certificate. I must be kept in a safe place with tight 
 *The default value is ""*
 
 
-**Example: Set `tls_key_file` parameter**
+**Example: Set tls_key_file parameter**
 
 
 ```opensips
@@ -236,7 +236,7 @@ modparam("httpd", "tls_key_file", "/etc/opensips/tls/server.key")
 ```
 
 
-#### `tls_ciphers` (string)
+#### tls_ciphers (string)
 
 
 You can specify the list of algorithms for authentication and encryption that you allow.
@@ -253,7 +253,7 @@ You can specify the list of algorithms for authentication and encryption that yo
 *The default value is  "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2"*
 
 
-**Example: Set `tls_key_file` parameter**
+**Example: Set tls_key_file parameter**
 
 
 ```opensips
@@ -266,7 +266,7 @@ modparam("httpd", "tls_ciphers", "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2")
 ### Exported MI Functions
 
 
-#### `httpd_list_root_path`
+#### httpd_list_root_path
 
 
 Lists all the registered http root paths into the httpd module.
@@ -329,7 +329,7 @@ setcap 'cap_net_bind_service=+ep' /usr/local/sbin/opensips
 ### Available Functions
 
 
-#### `register_httpdcb (module, root_path, httpd_acces_handler_cb, httpd_flush_data_cb, httpd_init_proc_cb)`
+#### register_httpdcb (module, root_path, httpd_acces_handler_cb, httpd_flush_data_cb, httpd_init_proc_cb)
 
 
 Register a new http root with it's associated callbacks into the httpd module.

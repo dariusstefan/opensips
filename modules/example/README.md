@@ -39,7 +39,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `default_str` (string)
+#### default_str (string)
 
 
 The default parameter used when the [example str](#func_example_str)
@@ -59,7 +59,7 @@ modparam("example", "default_str", "TEST")
 ```
 
 
-#### `default_int` (integer)
+#### default_int (integer)
 
 
 The default parameter used when the [example int](#func_example_int)
@@ -82,7 +82,7 @@ modparam("example", "default_int", -1)
 ### Exported Functions
 
 
-#### `example()`
+#### example()
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -91,7 +91,7 @@ Function that simply prints a message to log, saying that it has been called.
 This function can be used from any route.
 
 
-**Example: `example` usage**
+**Example: example usage**
 
 
 ```
@@ -101,7 +101,7 @@ example();
 ```
 
 
-#### `example_str([string])`
+#### example_str([string])
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -118,7 +118,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `example_str()` usage**
+**Example: example_str() usage**
 
 
 ```
@@ -128,7 +128,7 @@ example_str("test");
 ```
 
 
-#### `example_int([int])`
+#### example_int([int])
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -145,7 +145,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: `example_int()` usage**
+**Example: example_int() usage**
 
 
 ```

@@ -70,7 +70,7 @@ Here you can find some cli commands such as create-queue, send/receive-message, 
 ### Exported Parameters
 
 
-#### `queue_url` (string)
+#### queue_url (string)
 
 
 This parameter specifies the configuration for an SQS queue that can be used

@@ -52,7 +52,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `db_url` (str)
+#### db_url (str)
 
 
 The database url.
@@ -61,7 +61,7 @@ The database url.
 *The default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set `db_url` parameter**
+**Example: Set db_url parameter**
 
 
 ```opensips
@@ -71,7 +71,7 @@ modparam("imc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### `rooms_table` (str)
+#### rooms_table (str)
 
 
 The name of the table storing IMC rooms.
@@ -80,7 +80,7 @@ The name of the table storing IMC rooms.
 *The default value is "imc_rooms".*
 
 
-**Example: Set `rooms_table` parameter**
+**Example: Set rooms_table parameter**
 
 
 ```opensips
@@ -90,7 +90,7 @@ modparam("imc", "rooms_table", "rooms")
 ```
 
 
-#### `members_table` (str)
+#### members_table (str)
 
 
 The name of the table storing IMC members.
@@ -99,7 +99,7 @@ The name of the table storing IMC members.
 *The default value is "imc_members".*
 
 
-**Example: Set `members_table` parameter**
+**Example: Set members_table parameter**
 
 
 ```opensips
@@ -109,7 +109,7 @@ modparam("imc", "rooms_table", "members")
 ```
 
 
-#### `hash_size` (integer)
+#### hash_size (integer)
 
 
 The power of 2 to get the size of the hash table used for storing
@@ -119,7 +119,7 @@ The power of 2 to get the size of the hash table used for storing
 *The default value is 4 (resultimg in hash size 16).*
 
 
-**Example: Set `hash_size` parameter**
+**Example: Set hash_size parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("imc", "hash_size", 8)
 ```
 
 
-#### `imc_cmd_start_char` (str)
+#### imc_cmd_start_char (str)
 
 
 The character which indicates that the body of the message is a command.
@@ -138,7 +138,7 @@ The character which indicates that the body of the message is a command.
 *The default value is "#".*
 
 
-**Example: Set `imc_cmd_start_char` parameter**
+**Example: Set imc_cmd_start_char parameter**
 
 
 ```opensips
@@ -148,7 +148,7 @@ modparam("imc", "imc_cmd_start_char", "#")
 ```
 
 
-#### `outbound_proxy` (str)
+#### outbound_proxy (str)
 
 
 The SIP address used as next hop when sending the message. Very
@@ -161,7 +161,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is NULL.*
 
 
-**Example: Set `outbound_proxy` parameter**
+**Example: Set outbound_proxy parameter**
 
 
 ```opensips
@@ -174,7 +174,7 @@ modparam("imc", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ### Exported Functions
 
 
-#### `imc_manager()`
+#### imc_manager()
 
 
 Handles Message method.It detects if the body of the message is a
@@ -185,7 +185,7 @@ Handles Message method.It detects if the body of the message is a
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Usage of `imc_manager()` function**
+**Example: Usage of imc_manager() function**
 
 
 ```opensips
@@ -202,7 +202,7 @@ if(is_method("MESSAGE)
 ### Exported MI Functions
 
 
-#### `imc_list_rooms`
+#### imc_list_rooms
 
 
 Lists of the IM Conferencing rooms.
@@ -223,7 +223,7 @@ MI FIFO Command Format:
 ```
 
 
-#### `imc_list_members`
+#### imc_list_members
 
 
 Listing of the members in IM Conferencing rooms.
@@ -250,7 +250,7 @@ MI FIFO Command Format:
 ### Exported Statistics
 
 
-#### `active_rooms`
+#### active_rooms
 
 
 Number of active IM Conferencing rooms.

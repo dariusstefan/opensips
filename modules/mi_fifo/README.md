@@ -79,7 +79,7 @@ The following libraries or applications must be installed before
 ### Exported Parameters
 
 
-#### `fifo_name` (string)
+#### fifo_name (string)
 
 
 The name of the FIFO file to be created for listening and
@@ -104,7 +104,7 @@ The name of the FIFO file to be created for listening and
 *Default value is "/tmp/opensips_fifo".*
 
 
-**Example: Set `fifo_name` parameter**
+**Example: Set fifo_name parameter**
 
 
 ```opensips
@@ -114,7 +114,7 @@ modparam("mi_fifo", "fifo_name", "/tmp/opensips_b2b_fifo")
 ```
 
 
-#### `fifo_mode` (integer)
+#### fifo_mode (integer)
 
 
 Permission to be used for creating the listening FIFO file. It
@@ -124,7 +124,7 @@ Permission to be used for creating the listening FIFO file. It
 *Default value is 0660 (rw-rw----).*
 
 
-**Example: Set `fifo_mode` parameter**
+**Example: Set fifo_mode parameter**
 
 
 ```opensips
@@ -134,8 +134,8 @@ modparam("mi_fifo", "fifo_mode", 0600)
 ```
 
 
-#### `fifo_group` (integer)
-		`fifo_group` (string)
+#### fifo_group (integer)
+		fifo_group (string)
 
 
 Group to be used for creating the listening FIFO file.
@@ -144,7 +144,7 @@ Group to be used for creating the listening FIFO file.
 *Default value is the inherited one.*
 
 
-**Example: Set `fifo_group` parameter**
+**Example: Set fifo_group parameter**
 
 
 ```opensips
@@ -155,8 +155,8 @@ modparam("mi_fifo", "fifo_group", "root")
 ```
 
 
-#### `fifo_user` (integer)
-		`fifo_group` (string)
+#### fifo_user (integer)
+		fifo_group (string)
 
 
 User to be used for creating the listening FIFO file.
@@ -165,7 +165,7 @@ User to be used for creating the listening FIFO file.
 *Default value is the inherited one.*
 
 
-**Example: Set `fifo_user` parameter**
+**Example: Set fifo_user parameter**
 
 
 ```opensips
@@ -176,7 +176,7 @@ modparam("mi_fifo", "fifo_user", "root")
 ```
 
 
-#### `reply_dir` (string)
+#### reply_dir (string)
 
 
 Directory to be used for creating the reply FIFO files.
@@ -185,7 +185,7 @@ Directory to be used for creating the reply FIFO files.
 *Default value is "/tmp/"*
 
 
-**Example: Set `reply_dir` parameter**
+**Example: Set reply_dir parameter**
 
 
 ```opensips
@@ -195,7 +195,7 @@ modparam("mi_fifo", "reply_dir", "/home/opensips/tmp/")
 ```
 
 
-#### `pretty_printing` (int)
+#### pretty_printing (int)
 
 
 Indicates whether the JSONRPC responses sent through MI should
@@ -205,7 +205,7 @@ Indicates whether the JSONRPC responses sent through MI should
 *Default value is "0 - no pretty-printing".*
 
 
-**Example: Set `pretty_printing` parameter**
+**Example: Set pretty_printing parameter**
 
 
 ```opensips
@@ -215,7 +215,7 @@ modparam("mi_fifo", "pretty_printing", 1)
 ```
 
 
-#### `trace_destination` (string)
+#### trace_destination (string)
 
 
 Trace destination as defined in the tracing module. Currently
@@ -231,7 +231,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips
@@ -243,7 +243,7 @@ modparam("mi_fifo", "trace_destination", "hep_dest")
 ```
 
 
-#### `trace_bwlist` (string)
+#### trace_bwlist (string)
 
 
 Filter traced mi commands based on a blacklist or a whitelist.
@@ -270,7 +270,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set `trace_destination` parameter**
+**Example: Set trace_destination parameter**
 
 
 ```opensips

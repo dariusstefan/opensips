@@ -50,7 +50,7 @@ The following libraries or applications must be installed before running
 ### Exported Parameters
 
 
-#### `file` (string)
+#### file (string)
 
 
 Text file containing the regular expression groups. It must be set in order
@@ -60,7 +60,7 @@ Text file containing the regular expression groups. It must be set in order
 *Default value is "NULL".*
 
 
-**Example: Set `file` parameter**
+**Example: Set file parameter**
 
 
 ```opensips
@@ -70,7 +70,7 @@ modparam("regex", "file", "/etc/opensips/regex_groups")
 ```
 
 
-#### `max_groups` (int)
+#### max_groups (int)
 
 
 Max number of regular expression groups in the text file.
@@ -79,7 +79,7 @@ Max number of regular expression groups in the text file.
 *Default value is "20".*
 
 
-**Example: Set `max_groups` parameter**
+**Example: Set max_groups parameter**
 
 
 ```opensips
@@ -89,7 +89,7 @@ modparam("regex", "max_groups", 40)
 ```
 
 
-#### `group_max_size` (int)
+#### group_max_size (int)
 
 
 Max content size of a group in the text file.
@@ -98,7 +98,7 @@ Max content size of a group in the text file.
 *Default value is "8192".*
 
 
-**Example: Set `group_max_size` parameter**
+**Example: Set group_max_size parameter**
 
 
 ```opensips
@@ -108,7 +108,7 @@ modparam("regex", "group_max_size", 16384)
 ```
 
 
-#### `pcre_caseless` (int)
+#### pcre_caseless (int)
 
 
 If this options is set, matching is done caseless. It is equivalent to
@@ -119,7 +119,7 @@ If this options is set, matching is done caseless. It is equivalent to
 *Default value is "0".*
 
 
-**Example: Set `pcre_caseless` parameter**
+**Example: Set pcre_caseless parameter**
 
 
 ```opensips
@@ -129,7 +129,7 @@ modparam("regex", "pcre_caseless", 1)
 ```
 
 
-#### `pcre_multiline` (int)
+#### pcre_multiline (int)
 
 
 By default, PCRE treats the subject string as consisting of a single line
@@ -150,7 +150,7 @@ When this option is set, the "start of line" and "end of line" constructs
 *Default value is "0".*
 
 
-**Example: Set `pcre_multiline` parameter**
+**Example: Set pcre_multiline parameter**
 
 
 ```opensips
@@ -160,7 +160,7 @@ modparam("regex", "pcre_multiline", 1)
 ```
 
 
-#### `pcre_dotall` (int)
+#### pcre_dotall (int)
 
 
 If this option is set, a dot metacharater in the pattern matches all characters,
@@ -172,7 +172,7 @@ If this option is set, a dot metacharater in the pattern matches all characters,
 *Default value is "0".*
 
 
-**Example: Set `pcre_dotall` parameter**
+**Example: Set pcre_dotall parameter**
 
 
 ```opensips
@@ -182,7 +182,7 @@ modparam("regex", "pcre_dotall", 1)
 ```
 
 
-#### `pcre_extended` (int)
+#### pcre_extended (int)
 
 
 If this option is set, whitespace data characters in the pattern are totally
@@ -196,7 +196,7 @@ If this option is set, whitespace data characters in the pattern are totally
 *Default value is "0".*
 
 
-**Example: Set `pcre_extended` parameter**
+**Example: Set pcre_extended parameter**
 
 
 ```opensips
@@ -209,7 +209,7 @@ modparam("regex", "pcre_extended", 1)
 ### Exported Functions
 
 
-#### `pcre_match (string, pcre_regex)`
+#### pcre_match (string, pcre_regex)
 
 
 Matches the given string parameter against the regular expression pcre_regex,
@@ -232,7 +232,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: `pcre_match` usage (forcing case insensitive)**
+**Example: pcre_match usage (forcing case insensitive)**
 
 
 ```opensips
@@ -244,7 +244,7 @@ if (pcre_match("$ua", "(?i)^twinkle")) {
 ```
 
 
-**Example: `pcre_match` usage (using "end of line" symbol)**
+**Example: pcre_match usage (using "end of line" symbol)**
 
 
 ```opensips
@@ -256,7 +256,7 @@ if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
 ```
 
 
-#### `pcre_match_group (string [, group])`
+#### pcre_match_group (string [, group])
 
 
 It uses the groups readed from the text file
@@ -277,7 +277,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: `pcre_match_group` usage**
+**Example: pcre_match_group usage**
 
 
 ```opensips
@@ -292,7 +292,7 @@ if (pcre_match_group($rU, 2)) {
 ### Exported MI Functions
 
 
-#### `regex_reload`
+#### regex_reload
 
 
 Causes regex module to re-read the content of the text file
@@ -316,7 +316,7 @@ opensips-cli -x mi regex_reload
 ```
 
 
-#### `regex_match`
+#### regex_match
 
 
 Matches the given string parameter against the regular expression pcre_regex.
@@ -346,7 +346,7 @@ opensips-cli -x mi regex_match string="1234" pcre_regex="^1235$"
 ```
 
 
-#### `regex_match_group`
+#### regex_match_group
 
 
 It uses the groups readed from the text file to match the given string parameter against the compiled
