@@ -6,7 +6,7 @@ description: "This modules implements a dispatcher for destination addresses. It
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This modules implements a dispatcher for destination addresses. It
@@ -50,7 +50,7 @@ Since version 2.1, the "flags" parameter has been moved to
 		"use_default" flags.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS modules
@@ -76,10 +76,10 @@ The following libraries or applications must be installed before
 - *none*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The default DB connection of the module, overriding the global
@@ -100,7 +100,7 @@ modparam("dispatcher", "db_url", "mysql://user:passwb@localhost/database")
 ```
 
 
-#### attrs_avp (str)
+#### attrs_avp (str) {#param_attrs_avp}
 
 
 The name of the avp to contain the attributes string of the current
@@ -126,7 +126,7 @@ modparam("dispatcher", "attrs_avp", "$avp(272)")
 ```
 
 
-#### script_attrs_avp (str)
+#### script_attrs_avp (str) {#param_script_attrs_avp}
 
 
 Name of the avp to contain the script attributes string of the current
@@ -149,7 +149,7 @@ modparam("dispatcher", "attrs_avp", "$avp(script_attrs)")
 ```
 
 
-#### algo_route (str)
+#### algo_route (str) {#algo_route_param}
 
 
 Name of the route to be called when using algo 10.
@@ -186,7 +186,7 @@ route[my_dispatcher_logic] {
 ```
 
 
-#### hash_pvar (str)
+#### hash_pvar (str) {#param_hash_pvar}
 
 
 String with PVs used for the hashing algorithm 7.
@@ -219,7 +219,7 @@ modparam("dispatcher", "hash_pvar", "hash the $fU@$ci")
 ```
 
 
-#### setid_pvar (str)
+#### setid_pvar (str) {#param_setid_pvar}
 
 
 The name of the PV where to store the set ID (group ID) when calling
@@ -239,7 +239,7 @@ modparam("dispatcher", "setid_pvar", "$var(setid)")
 ```
 
 
-#### ds_ping_method (string)
+#### ds_ping_method (string) {#param_ds_ping_method}
 
 
 With this Method you can define, with which method you want to probe
@@ -264,7 +264,7 @@ modparam("dispatcher", "ds_ping_method", "INFO")
 ```
 
 
-#### ds_ping_from (string)
+#### ds_ping_from (string) {#param_ds_ping_from}
 
 
 With this Method you can define the "From:"-Line for the request,
@@ -289,7 +289,7 @@ modparam("dispatcher", "ds_ping_from", "sip:proxy@sip.somehost.com")
 ```
 
 
-#### ds_ping_interval (int)
+#### ds_ping_interval (int) {#param_ds_ping_interval}
 
 
 With this Method you can define the interval for sending a request to
@@ -311,7 +311,7 @@ modparam("dispatcher", "ds_ping_interval", 30)
 ```
 
 
-#### ds_ping_maxfwd (int)
+#### ds_ping_maxfwd (int) {#param_ds_ping_maxfwd}
 
 
 This parameter allows you to enforce a specific Max-Forward value
@@ -334,7 +334,7 @@ modparam("dispatcher", "ds_ping_maxfwd", 2)
 ```
 
 
-#### ds_probing_sock (str)
+#### ds_probing_sock (str) {#param_ds_probing_sock}
 
 
 A socket description [proto:]host[:port] of the local socket (which
@@ -355,7 +355,7 @@ modparam("dispatcher", "ds_probing_sock", "udp:192.168.1.100:5077")
 ```
 
 
-#### ds_probing_threshold (int)
+#### ds_probing_threshold (int) {#param_ds_probing_threshold}
 
 
 If you want to set a gateway into probing mode, you will need a
@@ -376,7 +376,7 @@ modparam("dispatcher", "ds_probing_threshold", 10)
 ```
 
 
-#### ds_probing_mode (int)
+#### ds_probing_mode (int) {#param_ds_probing_mode}
 
 
 Controls what gateways are tested to see if they are reachable. If set
@@ -398,7 +398,7 @@ modparam("dispatcher", "ds_probing_mode", 1)
 ```
 
 
-#### ds_probing_list (str)
+#### ds_probing_list (str) {#param_ds_probing_list}
 
 
 Defines a list of one or more setids that limits which
@@ -421,7 +421,7 @@ modparam("dispatcher", "ds_probing_list", "1,2,3")
 ```
 
 
-#### ds_define_blacklist (str)
+#### ds_define_blacklist (str) {#param_ds_define_blacklist}
 
 
 Defines a blacklist based on a dispatching setid from the 'default'
@@ -450,7 +450,7 @@ modparam("dispatcher", "ds_define_blacklist", "blist2= 2,10,6")
 ```
 
 
-#### options_reply_codes (str)
+#### options_reply_codes (str) {#param_options_reply_codes}
 
 
 This parameter must contain a list of SIP reply codes separated by
@@ -471,7 +471,7 @@ modparam("dispatcher", "options_reply_codes", "501, 403")
 ```
 
 
-#### dst_avp (str)
+#### dst_avp (str) {#param_dst_avp}
 
 
 This is mainly for internal usage and represents the name of the avp
@@ -501,7 +501,7 @@ modparam("dispatcher", "dst_avp", "$avp(271)")
 ```
 
 
-#### grp_avp (str)
+#### grp_avp (str) {#param_grp_avp}
 
 
 This is mainly for internal usage and represents the name of the avp
@@ -527,7 +527,7 @@ modparam("dispatcher", "grp_avp", "$avp(273)")
 ```
 
 
-#### cnt_avp (str)
+#### cnt_avp (str) {#param_cnt_avp}
 
 
 This is mainly for internal usage and represents the name of the avp
@@ -552,7 +552,7 @@ modparam("dispatcher", "cnt_avp", "$avp(274)")
 ```
 
 
-#### sock_avp (str)
+#### sock_avp (str) {#param_sock_avp}
 
 
 This is mainly for internal usage and represents the name of the avp
@@ -578,7 +578,7 @@ modparam("dispatcher", "sock_avp", "$avp(275)")
 ```
 
 
-#### pvar_algo_pattern (str)
+#### pvar_algo_pattern (str) {#param_pvar_algo_pattern}
 
 
 This parameter is used by the PVAR(9) algorithm to specify the
@@ -603,7 +603,7 @@ modparam("dispatcher", "pvar_algo_pattern", "$stat(load_%u)")
 ```
 
 
-#### persistent_state (int)
+#### persistent_state (int) {#param_persistent_state}
 
 
 Specifies whether the *state* column
@@ -629,7 +629,7 @@ modparam("dispatcher", "persistent_state", 0)
 ```
 
 
-#### cluster_id (integer)
+#### cluster_id (integer) {#param_cluster_id}
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -678,7 +678,7 @@ modparam("dispatcher", "cluster_id", 9)
 ```
 
 
-#### cluster_sharing_tag (string)
+#### cluster_sharing_tag (string) {#param_cluster_sharing_tag}
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -714,7 +714,7 @@ modparam("dispatcher", "cluster_sharing_tag", "vip")
 ```
 
 
-#### cluster_probing_mode (string)
+#### cluster_probing_mode (string) {#param_cluster_probing_mode}
 
 
 This paramter controls how the probing/pinging should be done when
@@ -768,7 +768,7 @@ modparam("dispatcher", "cluster_probing_mode", "distributed")
 ```
 
 
-#### partition (string)
+#### partition (string) {#param_partition}
 
 
 Define a new partition (data source) with the following properties:
@@ -818,7 +818,7 @@ modparam("dispatcher", "partition", "default: trunks")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The default name of the table from which to load dispatcher
@@ -839,7 +839,7 @@ modparam("dispatcher", "table_name", "my_dispatcher")
 ```
 
 
-#### setid_col (string)
+#### setid_col (string) {#param_setid_col}
 
 
 The column's name in the database storing the gateway's group id.
@@ -858,7 +858,7 @@ modparam("dispatcher", "setid_col", "groupid")
 ```
 
 
-#### destination_col (string)
+#### destination_col (string) {#param_destination_col}
 
 
 The column's name in the database storing the destination's
@@ -878,7 +878,7 @@ modparam("dispatcher", "destination_col", "uri")
 ```
 
 
-#### state_col (string)
+#### state_col (string) {#param_state_col}
 
 
 The column's name in the database storing the state of the
@@ -898,7 +898,7 @@ modparam("dispatcher", "state_col", "dststate")
 ```
 
 
-#### weight_col (string)
+#### weight_col (string) {#param_weight_col}
 
 
 The column's name in the database storing the weight for
@@ -918,7 +918,7 @@ modparam("dispatcher", "weight_col", "dstweight")
 ```
 
 
-#### priority_col (string)
+#### priority_col (string) {#param_priority_col}
 
 
 The column's name in the database storing the priority for
@@ -938,7 +938,7 @@ modparam("dispatcher", "priority_col", "dstprio")
 ```
 
 
-#### attrs_col (string)
+#### attrs_col (string) {#param_attrs_col}
 
 
 The column's name in the database storing the attributes (opaque
@@ -958,7 +958,7 @@ modparam("dispatcher", "attrs_col", "dstattrs")
 ```
 
 
-#### socket_col (string)
+#### socket_col (string) {#param_socket_col}
 
 
 The column's name in the database storing the socket (as
@@ -978,7 +978,7 @@ modparam("dispatcher", "socket_col", "my_sock")
 ```
 
 
-#### probe_mode_col (string)
+#### probe_mode_col (string) {#param_probe_mode_col}
 
 
 The column's name in the database storing the probe_mode (as
@@ -998,7 +998,7 @@ modparam("dispatcher", "probe_mode_col", "probing")
 ```
 
 
-#### fetch_freeswitch_stats (integer)
+#### fetch_freeswitch_stats (integer) {#param_fetch_freeswitch_stats}
 
 
 If enabled, FreeSWITCH destinations may have dynamic dispatching weights,
@@ -1044,7 +1044,7 @@ modparam("dispatcher", "fetch_freeswitch_stats", 1)
 ```
 
 
-#### max_freeswitch_weight (integer)
+#### max_freeswitch_weight (integer) {#param_max_freeswitch_weight}
 
 
 The maximum weight of a FreeSWITCH ESL-enabled destination. This value
@@ -1078,10 +1078,10 @@ modparam("dispatcher", "max_freeswitch_weight", 1000)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ds_select_dst(set, alg, [flags], [partition], [max_res])
+#### ds_select_dst(set, alg, [flags], [partition], [max_res]) {#func_ds_select_dst}
 
 
 The method selects a destination from the given set of addresses. It will
@@ -1174,7 +1174,7 @@ ds_select_dst($var(setid), $var(alg), $var(flags), $var(part), $var(max_res));
 ```
 
 
-#### ds_select_domain(set, alg, [flags], [partition], [max_res])
+#### ds_select_domain(set, alg, [flags], [partition], [max_res]) {#func_ds_select_domain}
 
 
 The method selects a destination from addresses set and rewrites the
@@ -1192,7 +1192,7 @@ If the "f" (failover support) flag is present, the rest of the
 This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and FAILURE_ROUTE.
 
 
-#### ds_next_dst([partition])
+#### ds_next_dst([partition]) {#func_ds_next_dst}
 
 
 Takes the next destination address from the AVPs with id
@@ -1204,7 +1204,7 @@ Takes the next destination address from the AVPs with id
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-#### ds_next_domain([partition])
+#### ds_next_domain([partition]) {#func_ds_next_domain}
 
 
 Takes the next destination address from the AVPs with id
@@ -1216,7 +1216,7 @@ Takes the next destination address from the AVPs with id
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-#### ds_mark_dst([state], [partition])
+#### ds_mark_dst([state], [partition]) {#func_ds_mark_dst}
 
 
 Mark the last used address from partition's destination set as
@@ -1251,7 +1251,7 @@ Possible parameters:
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-#### ds_count(set, state_filter, res_var, [partition])
+#### ds_count(set, state_filter, res_var, [partition]) {#func_ds_count}
 
 
 Returns the number of active, inactive or probing destinations in a
@@ -1294,7 +1294,7 @@ if (ds_count($avp(set), "ip", $avp(result), $avp(partition))) {
 ```
 
 
-#### ds_is_in_list(ip, port, [set], [partition], [active_only], [pattern])
+#### ds_is_in_list(ip, port, [set], [partition], [active_only], [pattern]) {#func_ds_is_in_list}
 
 
 This function returns *true* only if "ip" and "port" point to a
@@ -1348,7 +1348,7 @@ if (ds_is_in_list($rd, $rp, 2, "part2")) {
 ```
 
 
-#### ds_push_script_attrs(script_attr, ip, port, set, [partition])
+#### ds_push_script_attrs(script_attr, ip, port, set, [partition]) {#func_ds_push_script_attrs}
 
 
 Set the script attrs for the dispatcher entry defined by IP, Port, setid and partition.
@@ -1383,7 +1383,7 @@ if (ds_push_script_attrs($var(my_attributes),$si , $sp, 1, 'my_partition')) {
 ```
 
 
-#### ds_get_script_attrs(uri, set, [partition], out_attrs)
+#### ds_get_script_attrs(uri, set, [partition], out_attrs) {#func_ds_get_script_attrs}
 
 
 Get the script attrs for the dispatcher entry defined by the URI, setid and partition.
@@ -1418,10 +1418,10 @@ if (ds_push_script_attrs($var(my_attributes),$si , $sp, 1, 'my_partition')) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dispatcher:set_state
+#### dispatcher:set_state {#mi_set_state}
 
 
 Replaces obsolete MI command: *ds_set_state*.
@@ -1456,7 +1456,7 @@ opensips-cli -x mi dispatcher:set_state a 2 sip:10.0.0.202
 ```
 
 
-#### dispatcher:list
+#### dispatcher:list {#mi_list}
 
 
 Replaces obsolete MI command: *ds_list*.
@@ -1485,7 +1485,7 @@ opensips-cli -x mi dispatcher:list
 ```
 
 
-#### dispatcher:reload
+#### dispatcher:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *ds_reload*.
@@ -1518,7 +1518,7 @@ opensips-cli -x mi dispatcher:reload inherit_state=n
 ```
 
 
-#### dispatcher:push_script_attrs
+#### dispatcher:push_script_attrs {#mi_push_script_attrs}
 
 
 Replaces obsolete MI command: *ds_push_script_attrs*.
@@ -1548,10 +1548,10 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_DISPATCHER_STATUS
+#### E_DISPATCHER_STATUS {#event_E_DISPATCHER_STATUS}
 
 
 This event is raised when the dispatcher module marks a destination as
@@ -1569,14 +1569,14 @@ Parameters:
 				destination is detected unresponsive.
 
 
-### Exported Status/Report Identifiers
+### Exported Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "dispatcher" Status/Report group, where each
 	partition is defined as a separate SR identifier.
 
 
-#### [partition_name]
+#### [partition_name] {#sr_id_partition_name}
 
 
 The status of these identifiers reflects the readiness/status of the 
@@ -1627,7 +1627,7 @@ In terms of date reloading, the following events will be reported:
 ```
 
 
-#### [partition_name];events
+#### [partition_name];events {#sr_id_events}
 
 
 Destination switching reporting:
@@ -1817,10 +1817,10 @@ If you want to keep the mail private, send it to users@lists.opensips.org.
 Please follow the guidelines provided at: [https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues)
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1852,7 +1852,7 @@ Please follow the guidelines provided at: [https://github.com/OpenSIPS/opensips/
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1878,10 +1878,10 @@ Please follow the guidelines provided at: [https://github.com/OpenSIPS/opensips/
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), wangdd, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), John Burke ([@john08burke](https://github.com/john08burke)), Roman Sevko, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Stanislaw Pitucha, Anca Vamanu, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Carsten Bock, Edson Gellert Schubert, Elena-Ramona Modroiu.

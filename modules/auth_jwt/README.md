@@ -6,7 +6,7 @@ description: "The module implements authentication over JSON Web Tokens. In some
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module implements authentication over JSON Web Tokens.
@@ -16,7 +16,7 @@ The module implements authentication over JSON Web Tokens.
 		It relies on two DB tables, one containing JWT profiles ( a profile name and it's SIP username associated to it ) and one containing JWT secrets. Each secret has a corresponding profile, the KEY used for signing the JWT and two timestamps describing a validation interval. Multiple JWT secrets can point to the same JWT profile.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -42,10 +42,10 @@ The following libraries or applications must be installed
 					*libssl-dev*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_mode (int)
+#### db_mode (int) {#param_db_mode}
 
 
 If set to 0, the module won't connect to the Database for reading the Keys for decoding JWTs - only jwt_script_authorize will be usable from the script.
@@ -62,7 +62,7 @@ modparam("auth_jwt", "db_mode", 0)
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 This is URL of the database to be used. Value of the parameter depends
@@ -83,7 +83,7 @@ modparam("auth_jwt", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### profiles_table (string)
+#### profiles_table (string) {#param_profiles_table}
 
 
 Name of the DB table containing the jwt profiles
@@ -100,7 +100,7 @@ modparam("auth_jwt", "profiles_table", "my_profiles")
 ```
 
 
-#### secrets_table (string)
+#### secrets_table (string) {#param_secrets_table}
 
 
 Name of the DB table containing the jwt secrets
@@ -117,7 +117,7 @@ modparam("auth_jwt", "secrets_table", "my_secrets")
 ```
 
 
-#### tag_column (string)
+#### tag_column (string) {#param_tag_column}
 
 
 Column holding the JWT profile tag.
@@ -136,7 +136,7 @@ modparam("auth_jwt", "tag_column", "my_tag_column")
 ```
 
 
-#### username_column (string)
+#### username_column (string) {#param_username_column}
 
 
 Column holding the JWT profile associated SIP username.
@@ -155,7 +155,7 @@ modparam("auth_jwt", "username_column", "my_username_column")
 ```
 
 
-#### secret_tag_column (string)
+#### secret_tag_column (string) {#param_secret_tag_column}
 
 
 Column holding the JWT secret associated tag.
@@ -174,7 +174,7 @@ modparam("auth_jwt", "secret_tag_column", "my_secret_tag_column")
 ```
 
 
-#### secret_column (string)
+#### secret_column (string) {#param_secret_column}
 
 
 Column holding the actual jwt signing secret.
@@ -193,7 +193,7 @@ modparam("auth_jwt", "secret_column", "my_secret_column")
 ```
 
 
-#### start_ts_column (string)
+#### start_ts_column (string) {#param_start_ts_column}
 
 
 Column holding the JWT secret start UNIX timestamp.
@@ -212,7 +212,7 @@ modparam("auth_jwt", "start_ts", "my_start_ts_column")
 ```
 
 
-#### end_ts_column (string)
+#### end_ts_column (string) {#param_end_ts_column}
 
 
 column holding the jwt secret end unix timestamp.
@@ -231,7 +231,7 @@ modparam("auth_jwt", "end_ts", "my_end_ts_column")
 ```
 
 
-#### tag_claim (string)
+#### tag_claim (string) {#param_tag_claim}
 
 
 The JWT claim which will be used to identify the JWT profile
@@ -250,7 +250,7 @@ modparam("auth_jwt", "tag_claim", "my_tag_claim")
 ```
 
 
-#### load_credentials (string)
+#### load_credentials (string) {#param_load_credentials}
 
 
 This parameter specifies credentials to be fetched from the JWT profiles table when
@@ -280,10 +280,10 @@ modparam("auth_jwt", "load_credentials", "$avp(extra_jwt_info)=my_extra_column")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### jwt_db_authorize(jwt_token,out_decoded_token,out_sip_username)
+#### jwt_db_authorize(jwt_token,out_decoded_token,out_sip_username) {#func_jwt_db_authorize}
 
 
 The function will read the first param ( jwt_token ), extract the tag claim and then try to authenticate it against the DB secrets for the respective profile tag. In case of success, it populates the out_decoded_token pvar with the decoded JWT ( in plaintext format header_json.payload_json ) and the out_sip_username with the SIP username corresponding to that JWT profile.
@@ -326,7 +326,7 @@ if (!jwt_db_authorize("$avp(my_jwt_token)", $avp(decoded_token), $avp(sip_userna
 ```
 
 
-#### jwt_script_authorize(jwt_token,key, out_decoded_token)
+#### jwt_script_authorize(jwt_token,key, out_decoded_token) {#func_jwt_script_authorize}
 
 
 The function will read the first param ( jwt_token ), decode it and then try to validate it against the provided key. If the JWT decoding is succesful, the out_decoded_token pvar will be populated.
@@ -365,7 +365,7 @@ if (!jwt_script_authorize("$avp(my_jwt_token)",$avp(pub_key), $avp(decoded_token
 ```
 
 
-#### extract_pub_key_from_cert(certificate,out_public_key)
+#### extract_pub_key_from_cert(certificate,out_public_key) {#func_extract_pub_key_from_cert}
 
 
 The function will read the first param ( certificate ), decode it and then try to extract the public key with the certificate. If the extraction is succesful, the out_public_key will be populated. Useful to be used in conjuction with the jwt_script_authorize function, since most providers make their certificates public, but the JWTs are signed with the actual public key embeded in the certificate.
@@ -399,7 +399,7 @@ if (extract_pub_key_from_cert("$avp(my_certificate)",$avp(my_pub_key))) {
 ```
 
 
-#### extract_pub_key_from_exp_mod(e,n,out_public_key)
+#### extract_pub_key_from_exp_mod(e,n,out_public_key) {#func_extract_pub_key_from_exp_mod}
 
 
 The function reads a base64url-encoded RSA exponent (*e*) and modulus (*n*), then builds a PEM public key and stores it into *out_public_key*.
@@ -435,10 +435,10 @@ if (extract_pub_key_from_exp_mod("$avp(my_exp)", "$avp(my_mod)", $avp(my_pub_key
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -465,7 +465,7 @@ if (extract_pub_key_from_exp_mod("$avp(my_exp)", "$avp(my_mod)", $avp(my_pub_key
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -486,10 +486,10 @@ if (extract_pub_key_from_exp_mod("$avp(my_exp)", "$avp(my_mod)", $avp(my_pub_key
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** vladpaiu, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).

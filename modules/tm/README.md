@@ -6,7 +6,7 @@ description: "TM module enables stateful processing of SIP transactions. The mai
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 TM module enables stateful processing of SIP 
@@ -62,7 +62,7 @@ Other things programmers may want to know is UAC--it is a very
 		may register for a callback.
 
 
-#### Per-Branch flags
+#### Per-Branch flags {#branch-flags}
 
 
 First what is the idea with the branch concept: branch route is a 
@@ -107,7 +107,7 @@ Also, modules may set branch flags before transaction creation
 		is pushed in branch flags instead in message flags
 
 
-#### Timeout-Based Failover
+#### Timeout-Based Failover {#timer-based-failover}
 
 
 Timeouts can be used to trigger failover behavior. E.g. if we send a call
@@ -171,7 +171,7 @@ DNS-based failover is by default applied excepting when this failover
 		function).
 
 
-#### Anycast Scenario
+#### Anycast Scenario {#tm_anycast}
 
 
 Doing a load balancing scenario using
@@ -237,7 +237,7 @@ Transaction functions and variables are only designed to be
 		context aware routes.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -261,10 +261,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### fr_timeout (integer)
+#### fr_timeout (integer) {#param_fr_timeout}
 
 
 Timeout which is triggered if no final reply for a request or ACK for a 
@@ -284,7 +284,7 @@ modparam("tm", "fr_timeout", 10)
 ```
 
 
-#### fr_inv_timeout (integer)
+#### fr_inv_timeout (integer) {#param_fr_inv_timeout}
 
 
 Timeout which is triggered if no final reply for an INVITE arrives after a 
@@ -308,7 +308,7 @@ modparam("tm", "fr_inv_timeout", 200)
 ```
 
 
-#### wt_timer (integer)
+#### wt_timer (integer) {#param_wt_timer}
 
 
 Time for which a transaction stays in memory to absorb delayed 
@@ -337,7 +337,7 @@ modparam("tm", "wt_timer", 10)
 ```
 
 
-#### delete_timer (integer)
+#### delete_timer (integer) {#param_delete_timer}
 
 
 Time after which a to-be-deleted transaction currently ref-ed by a
@@ -357,7 +357,7 @@ modparam("tm", "delete_timer", 5)
 ```
 
 
-#### T1_timer (integer)
+#### T1_timer (integer) {#param_T1_timer}
 
 
 Retransmission T1 period, in milliseconds.
@@ -376,7 +376,7 @@ modparam("tm", "T1_timer", 700)
 ```
 
 
-#### T2_timer (integer)
+#### T2_timer (integer) {#param_T2_timer}
 
 
 Maximum retransmission period, in milliseconds.
@@ -395,7 +395,7 @@ modparam("tm", "T2_timer", 8000)
 ```
 
 
-#### ruri_matching (integer)
+#### ruri_matching (integer) {#param_ruri_matching}
 
 
 Should be request-uri matching used as a part of pre-3261 transaction
@@ -417,7 +417,7 @@ modparam("tm", "ruri_matching", 0)
 ```
 
 
-#### via1_matching (integer)
+#### via1_matching (integer) {#param_via1_matching}
 
 
 Should be top most VIA matching used as a part of pre-3261 transaction
@@ -439,7 +439,7 @@ modparam("tm", "via1_matching", 0)
 ```
 
 
-#### unix_tx_timeout (integer)
+#### unix_tx_timeout (integer) {#param_unix_tx_timeout}
 
 
 Send timeout to be used by function which use UNIX sockets 
@@ -459,7 +459,7 @@ modparam("tm", "unix_tx_timeout", 5)
 ```
 
 
-#### restart_fr_on_each_reply (integer)
+#### restart_fr_on_each_reply (integer) {#param_restart_fr_on_each_reply}
 
 
 If true (non null value), the final response timer will be re-triggered
@@ -481,7 +481,7 @@ modparam("tm", "restart_fr_on_each_reply", 0)
 ```
 
 
-#### tw_append (string)
+#### tw_append (string) {#param_tw_append}
 
 
 List of additional information to be appended by t_write_req and
@@ -517,7 +517,7 @@ modparam("tm", "tw_append",
 ```
 
 
-#### pass_provisional_replies (integer)
+#### pass_provisional_replies (integer) {#param_pass_provisional_replies}
 
 
 Enable/disable passing of provisional replies to FIFO applications.
@@ -536,7 +536,7 @@ modparam("tm", "pass_provisional_replies", 1)
 ```
 
 
-#### syn_branch (integer)
+#### syn_branch (integer) {#param_syn_branch}
 
 
 Enable/disable the usage of stateful synonym branch IDs in the 
@@ -556,7 +556,7 @@ modparam("tm", "syn_branch", 0)
 ```
 
 
-#### onreply_avp_mode (integer)
+#### onreply_avp_mode (integer) {#param_onreply_avp_mode}
 
 
 Describes how the AVPs should be handled in reply route:
@@ -590,7 +590,7 @@ modparam("tm", "onreply_avp_mode", 1)
 ```
 
 
-#### disable_6xx_block (integer)
+#### disable_6xx_block (integer) {#param_disable_6xx_block}
 
 
 Tells how the 6xx replies should be internally handled:
@@ -618,7 +618,7 @@ modparam("tm", "disable_6xx_block", 1)
 ```
 
 
-#### enable_stats (integer)
+#### enable_stats (integer) {#param_enable_stats}
 
 
 Enables statistics support in TM module - If enabled, the TM module
@@ -639,7 +639,7 @@ modparam("tm", "enable_stats", 0)
 ```
 
 
-#### minor_branch_flag (string/integer)
+#### minor_branch_flag (string/integer) {#param_minor_branch_flag}
 
 
 A branch flag index to be used in script to mark the minor branches 
@@ -671,7 +671,7 @@ modparam("tm", "minor_branch_flag", "MINOR_BFLAG")
 ```
 
 
-#### timer_partitions (integer)
+#### timer_partitions (integer) {#param_timer_partitions}
 
 
 The number of partitions for the internal TM timers (retransmissions,
@@ -697,7 +697,7 @@ modparam("tm", "timer_partitions", 2)
 ```
 
 
-#### auto_100trying (integer)
+#### auto_100trying (integer) {#param_auto_100trying}
 
 
 This parameter controls if the TM module should automatically 
@@ -723,7 +723,7 @@ modparam("tm", "auto_100trying", 0)
 ```
 
 
-#### tm_replication_cluster (integer)
+#### tm_replication_cluster (integer) {#param_tm_replication_cluster}
 
 
 This parameter should be used in an anycast setup, and specifies
@@ -747,7 +747,7 @@ modparam("tm", "tm_replication_cluster", 1)
 ```
 
 
-#### cluster_param (string)
+#### cluster_param (string) {#param_cluster_param}
 
 
 This parameter should be used in an anycast setup, and specifies
@@ -771,7 +771,7 @@ modparam("tm", "cluster_param", "tid")
 ```
 
 
-#### cluster_auto_cancel (boolean)
+#### cluster_auto_cancel (boolean) {#param_cluster_auto_cancel}
 
 
 This parameter should be used in an anycast setup, and specifies
@@ -800,7 +800,7 @@ modparam("tm", "cluster_auto_cancel", no)
 ```
 
 
-#### local_request_route (string)
+#### local_request_route (string) {#param_local_request_route}
 
 
 This parameter points to a route, which is executed whenever TM is
@@ -845,7 +845,7 @@ route[tm_local_request] {
 ```
 
 
-#### local_reply_route (string)
+#### local_reply_route (string) {#param_local_reply_route}
 
 
 This parameter points to a route, which is executed whenever TM is
@@ -884,10 +884,10 @@ route[tm_local_reply] {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### t_relay([flags],[outbound_proxy])
+#### t_relay([flags],[outbound_proxy]) {#func_t_relay}
 
 
 Relay a message statefully to destination indicated in current URI. 
@@ -982,7 +982,7 @@ t_relay(0x1, "mydomain.com:5070");
 ```
 
 
-#### t_reply(code, reason_phrase)
+#### t_reply(code, reason_phrase) {#func_t_reply}
 
 
 Sends a stateful SIP reply to the currently processed requests. Note 
@@ -1011,7 +1011,7 @@ t_reply(404, "Use $rU not found");
 ```
 
 
-#### t_reply_with_body(code, reason_phrase, body)
+#### t_reply_with_body(code, reason_phrase, body) {#func_t_reply_with_body}
 
 
 Sends a stateful SIP reply with a body to the currently processed 
@@ -1047,7 +1047,7 @@ This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 ```
 
 
-#### t_newtran()
+#### t_newtran() {#func_t_newtran}
 
 
 Creates the SIP transaction for the currently processed SIP request,
@@ -1075,7 +1075,7 @@ t_relay(); # send the call further
 ```
 
 
-#### t_check_trans()
+#### t_check_trans() {#func_t_check_trans}
 
 
 Returns true if the current request is associated to a transaction. 
@@ -1122,7 +1122,7 @@ if ( is_method("CANCEL") ) {
 ```
 
 
-#### t_check_status(re)
+#### t_check_status(re) {#func_t_check_status}
 
 
 Returns true if the regualr expression "re" match the 
@@ -1153,7 +1153,7 @@ if (t_check_status("(487)|(408)")) {
 ```
 
 
-#### t_local_replied(reply)
+#### t_local_replied(reply) {#func_t_local_replied}
 
 
 Returns true if all or last (depending of the parameter) reply(es) were
@@ -1179,7 +1179,7 @@ if (t_local_replied("all")) {
 ```
 
 
-#### t_was_cancelled()
+#### t_was_cancelled() {#func_t_was_cancelled}
 
 
 Retuns true if called for an INVITE transaction that was explicitly
@@ -1201,7 +1201,7 @@ if (t_was_cancelled()) {
 ```
 
 
-#### t_cancel_branch([flags])
+#### t_cancel_branch([flags]) {#func_t_cancel_branch}
 
 
 This function is to be call when a reply is received for cancelling a
@@ -1240,7 +1240,7 @@ onreply_route[3] {
 ```
 
 
-#### t_new_request( method, RURI, from, to [, body[, ctx]])
+#### t_new_request( method, RURI, from, to [, body[, ctx]]) {#func_t_new_request}
 
 
 This function generates and sends out a new SIP request (in a stateful way).
@@ -1275,7 +1275,7 @@ Meaning of the parameters is as follows (all do accept variables):
 ```
 
 
-#### t_on_failure(failure_route)
+#### t_on_failure(failure_route) {#func_t_on_failure}
 
 
 Sets reply routing block, to which control is passed after a 
@@ -1330,7 +1330,7 @@ failure_route[1] {
 ```
 
 
-#### t_on_reply(reply_route)
+#### t_on_reply(reply_route) {#func_t_on_reply}
 
 
 Sets reply routing block, to which control is passed each time a reply
@@ -1412,7 +1412,7 @@ onreply_route[global] {
 ```
 
 
-#### t_on_branch(branch_route)
+#### t_on_branch(branch_route) {#func_t_on_branch}
 
 
 Sets a branch route to be execute separately for each branch of the
@@ -1468,7 +1468,7 @@ branch_route[1] {
 ```
 
 
-#### t_inject_branches(source[,flags])
+#### t_inject_branches(source[,flags]) {#func_t_inject_branches}
 
 
 The function adds new SIP branches (destinations) to an existing 
@@ -1532,7 +1532,7 @@ route[event_notification] {
 ```
 
 
-#### t_wait_for_new_branches([branches])
+#### t_wait_for_new_branches([branches]) {#func_t_wait_for_new_branches}
 
 
 This function instructs the existing SIP transaction to wait for new
@@ -1574,7 +1574,7 @@ t_relay();
 ```
 
 
-#### t_wait_no_more_branches()
+#### t_wait_no_more_branches() {#func_t_wait_no_more_branches}
 
 
 This function instructs the existing SIP transaction to stop wait
@@ -1601,7 +1601,7 @@ t_wait_no_more_branches();
 ```
 
 
-#### t_add_hdrs("sip_hdrs")
+#### t_add_hdrs("sip_hdrs") {#func_t_add_hdrs}
 
 
 Attach a set of headers to the existing transaction - these headers
@@ -1625,7 +1625,7 @@ t_add_hdrs("X-origin: 1.1.1.1\r\n");
 ```
 
 
-#### t_add_cancel_reason("Reason_hdr")
+#### t_add_cancel_reason("Reason_hdr") {#func_t_add_cancel_reason}
 
 
 This function is used to enforce from the script level a custom
@@ -1654,7 +1654,7 @@ t_relay();
 ```
 
 
-#### t_replicate(URI,[flags])
+#### t_replicate(URI,[flags]) {#func_t_replicate}
 
 
 Replicates a request to another destination. No information due the
@@ -1693,7 +1693,7 @@ t_replicate("sip:1.2.3.4",0x4);
 
 
 #### t_write_req(info,fifo)
-		t_write_unix(info,sock)
+		t_write_unix(info,sock) {#func_t_write_req}
 
 
 Write via FIFO file or UNIX socket a lot of information regarding the
@@ -1727,7 +1727,7 @@ t_write_unix("logger/append2","/var/run/logger.sock");
 ```
 
 
-#### t_flush_flags()
+#### t_flush_flags() {#func_t_flush_flags}
 
 
 Flush the flags from current request into the already created 
@@ -1748,7 +1748,7 @@ t_flush_flags();
 ```
 
 
-#### t_anycast_replicate()
+#### t_anycast_replicate() {#func_t_anycast_replicate}
 
 
 This function is used in an anycast setup to replicate a
@@ -1772,7 +1772,7 @@ if (is_method("ACK|CANCEL") && !t_check_trans()) {
 ```
 
 
-#### t_reply_by_callid(code, reason_phrase, [callid], [cseq])
+#### t_reply_by_callid(code, reason_phrase, [callid], [cseq]) {#func_t_reply_by_callid}
 
 
 This function is used to send a reply to an existing INVITE
@@ -1831,7 +1831,7 @@ route{
 ```
 
 
-#### t_get_branch_idx_by_attr(attr, [val_str], [val_int], [result_var], [offset])
+#### t_get_branch_idx_by_attr(attr, [val_str], [val_int], [result_var], [offset]) {#func_t_get_branch_idx_by_attr}
 
 
 This function may be used to search for the index of another branch
@@ -1867,13 +1867,13 @@ This function can be used from ONREPLY_ROUTE, BRANCH_ROUTE and
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
 Exported variables are listed in the next sections.
 
 
-#### $T_branch_idx
+#### $T_branch_idx {#pv_T_branch_idx}
 
 
 *$T_branch_idx* - the index (starting with 0
@@ -1884,7 +1884,7 @@ Exported variables are listed in the next sections.
 			the other types of routes, the value of this index will be NULL.
 
 
-#### $T_reply_code
+#### $T_reply_code {#pv_T_reply_code}
 
 
 *$T_reply_code* - the code of the reply, as 
@@ -1894,7 +1894,7 @@ Exported variables are listed in the next sections.
 			no-reply or error, '0' value is returned.
 
 
-#### $T_fr_timeout
+#### $T_fr_timeout {#pv_T_fr_timeout}
 
 
 *$T_fr_timeout (R/W)* - the timeout
@@ -1911,7 +1911,7 @@ With each different
 			**[fr timeout](#param_fr_timeout)**.
 
 
-#### $T_fr_inv_timeout
+#### $T_fr_inv_timeout {#pv_T_fr_inv_timeout}
 
 
 *$T_fr_inv_timeout (R/W)* - the timeout
@@ -1929,7 +1929,7 @@ With each different request received,
 			**[fr inv timeout](#param_fr_inv_timeout)**.
 
 
-#### $T_ruri
+#### $T_ruri {#pv_T_ruri}
 
 
 *$T_ruri* - the ruri of the current branch; this
@@ -1938,7 +1938,7 @@ With each different request received,
 			has a transaction.
 
 
-#### $bavp(name)
+#### $bavp(name) {#pv_bavp}
 
 
 *$bavp(name)* - a particular type of avp that
@@ -1946,7 +1946,7 @@ With each different request received,
 			BRANCH, REPLY and FAILURE routes. Otherwise NULL value is returned.
 
 
-#### $T_id
+#### $T_id {#pv_T_id}
 
 
 *$T_id* - returns the ID of the current 
@@ -1955,7 +1955,7 @@ With each different request received,
 			returned.
 
 
-#### $T_branch_last_reply_code
+#### $T_branch_last_reply_code {#pv_T_branch_last_reply_code}
 
 
 *$T_branch_last_reply_code* - returns the last reply
@@ -1963,7 +1963,7 @@ With each different request received,
 				specified, the last reply for the current branch is retrieved.
 
 
-#### $tm.branch.uri[]
+#### $tm.branch.uri[] {#pv_tm_branch_uri}
 
 
 *$tm.branch.uri* - gives read-only 
@@ -2012,28 +2012,28 @@ NOTES:
 The variable can be used in BRANCH, ONREPLY and FAILURE routes.
 
 
-#### $tm.branch.duri[]
+#### $tm.branch.duri[] {#pv_tm_branch_duri}
 
 
 *$tm.branch.duri* - 100% similar to
 				**[tm branch uri](#pv_tm_branch_uri)**, but returning the Detination-URI value of the branch.
 
 
-#### $tm.branch.path[]
+#### $tm.branch.path[] {#pv_tm_branch_path}
 
 
 *$tm.branch.path* - 100% similar to
 				**[tm branch uri](#pv_tm_branch_uri)**, but returning the PATH value of the branch.
 
 
-#### $tm.branch.q[]
+#### $tm.branch.q[] {#pv_tm_branch_q}
 
 
 *$tm.branch.q* - 100% similar to
 				**[tm branch uri](#pv_tm_branch_uri)**, but returning the Q value of the branch.
 
 
-#### $tm.branch.flags[]
+#### $tm.branch.flags[] {#pv_tm_branch_flags}
 
 
 *$tm.branch.flags* - 100% similar to
@@ -2041,7 +2041,7 @@ The variable can be used in BRANCH, ONREPLY and FAILURE routes.
 				set for the branch.
 
 
-#### $tm.branch.socket[]
+#### $tm.branch.socket[] {#pv_tm_branch_socket}
 
 
 *$tm.branch.socket* - 100% similar to
@@ -2049,7 +2049,7 @@ The variable can be used in BRANCH, ONREPLY and FAILURE routes.
 				branch out.
 
 
-#### $tm.branch.flag()[]
+#### $tm.branch.flag()[] {#pv_tm_branch_flag}
 
 
 *$tm.branch.flag(name)* - similar to
@@ -2064,7 +2064,7 @@ The flags operated here are the same as the bflags you can
 				operated with via the "[re]setbflag()" functions.
 
 
-#### $tm.branch.attr()[]
+#### $tm.branch.attr()[] {#pv_tm_branch_attr}
 
 
 *$tm.branch.attr(name)* - similar to
@@ -2076,7 +2076,7 @@ An attribute can have whatever name (no need to be
 				string or integer.
 
 
-#### $tm.branch.last_received[]
+#### $tm.branch.last_received[] {#pv_tm_branch_last_received}
 
 
 *$tm.branch.last_received* - 100% similar to
@@ -2085,7 +2085,7 @@ An attribute can have whatever name (no need to be
 				received so far.
 
 
-#### $tm.branch.type[]
+#### $tm.branch.type[] {#pv_tm_branch_type}
 
 
 *$tm.branch.type* - 100% similar to
@@ -2094,10 +2094,10 @@ An attribute can have whatever name (no need to be
 				branch injection) or "sip" (a real signalling branch).
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### tm:uac_dlg
+#### tm:uac_dlg {#mi_uac_dlg}
 
 
 Replaces obsolete MI command: *t_uac_dlg*.
@@ -2132,7 +2132,7 @@ MI FIFO Command Format:
 ```
 
 
-#### tm:uac_cancel
+#### tm:uac_cancel {#mi_uac_cancel}
 
 
 Replaces obsolete MI command: *t_uac_cancel*.
@@ -2159,7 +2159,7 @@ MI FIFO Command Format:
 ```
 
 
-#### tm:hash
+#### tm:hash {#mi_hash}
 
 
 Replaces obsolete MI command: *t_hash*.
@@ -2183,7 +2183,7 @@ MI FIFO Command Format:
 ```
 
 
-#### tm:reply
+#### tm:reply {#mi_reply}
 
 
 Replaces obsolete MI command: *t_reply*.
@@ -2216,115 +2216,115 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
 Exported statistics are listed in the next sections. All statistics
 		except "inuse_transactions" can be reset.
 
 
-#### received_replies
+#### received_replies {#stat_received_replies}
 
 
 Total number of total replies received by TM module.
 
 
-#### relayed_replies
+#### relayed_replies {#stat_relayed_replies}
 
 
 Total number of replies received and relayed by TM module.
 
 
-#### local_replies
+#### local_replies {#stat_local_replies}
 
 
 Total number of replies local generated by TM module.
 
 
-#### UAS_transactions
+#### UAS_transactions {#stat_UAS_transactions}
 
 
 Total number of transactions created by received requests.
 
 
-#### UAC_transactions
+#### UAC_transactions {#stat_UAC_transactions}
 
 
 Total number of transactions created by local generated requests.
 
 
-#### 2xx_transactions
+#### 2xx_transactions {#stat_2xx_transactions}
 
 
 Total number of transactions completed with 2xx replies.
 
 
-#### 3xx_transactions
+#### 3xx_transactions {#stat_3xx_transactions}
 
 
 Total number of transactions completed with 3xx replies.
 
 
-#### 4xx_transactions
+#### 4xx_transactions {#stat_4xx_transactions}
 
 
 Total number of transactions completed with 4xx replies.
 
 
-#### 5xx_transactions
+#### 5xx_transactions {#stat_5xx_transactions}
 
 
 Total number of transactions completed with 5xx replies.
 
 
-#### 6xx_transactions
+#### 6xx_transactions {#stat_6xx_transactions}
 
 
 Total number of transactions completed with 6xx replies.
 
 
-#### inuse_transactions
+#### inuse_transactions {#stat_inuse_transactions}
 
 
 Number of transactions existing in memory at current time.
 
 
-#### retransmission_req_T1_1
+#### retransmission_req_T1_1 {#stat_retransmission_req_T1_1}
 
 
 Number of request retransmissions due to T1 1 timer,
 			the first retransmission interval (typical 500ms).
 
 
-#### retransmission_req_T1_2
+#### retransmission_req_T1_2 {#stat_retransmission_req_T1_2}
 
 
 Number of request retransmissions due to T1 2 timer,
 			the second retransmission interval (typical 1s).
 
 
-#### retransmission_req_T1_3
+#### retransmission_req_T1_3 {#stat_retransmission_req_T1_3}
 
 
 Number of request retransmissions due to T1 3 timer,
 			the third retransmission interval (typical 2s).
 
 
-#### retransmission_req_T2
+#### retransmission_req_T2 {#stat_retransmission_req_T2}
 
 
 Number of request retransmissions due to T2 ,
 			the final retransmission interval (typical 4s).
 
 
-#### retransmission_rpl_T2
+#### retransmission_rpl_T2 {#stat_retransmission_rpl_T2}
 
 
 Number of reply retransmissions, all done with the same 
 			retransmission interval T2, typical 4s.
 
 
-#### timeout_finalresponse
+#### timeout_finalresponse {#stat_timeout_finalresponse}
 
 
 Number of transactional timeouts without receiving any kind of reply (not
@@ -2333,7 +2333,7 @@ Number of transactional timeouts without receiving any kind of reply (not
 			multiple such timeouts due forking.
 
 
-#### timeout_finalresponse
+#### timeout_finalresponse {#stat_timeout_finalresponse_inc}
 
 
 Number of transactional INVITE timeouts without receiving a FINAL reply
@@ -2380,10 +2380,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -2415,7 +2415,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -2441,10 +2441,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Carsten Bock, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).

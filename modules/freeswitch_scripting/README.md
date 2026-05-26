@@ -3,10 +3,10 @@ title: "freeswitch_scripting  Module"
 description: "*freeswitch_scripting* is a helper module that exposes full control over the FreeSWITCH ESL interface to the OpenSIPS script."
 ---
 
-## Admin Guide
+## Admin Guide {#sec-admin-guide}
 
 
-### Overview
+### Overview {#overview}
 
 
 *freeswitch_scripting* is a helper module that
@@ -26,10 +26,10 @@ Credits for the initial idea and working code samples providing
 		<gmaruzz@opentelecom.it>.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#sec-module-dependencies}
 
 
 The following modules must be loaded together with this module:
@@ -39,7 +39,7 @@ The following modules must be loaded together with this module:
 - *(optional) an SQL DB module*
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#sec-external-dependencies}
 
 
 The following libraries or applications must be installed before
@@ -49,10 +49,10 @@ The following libraries or applications must be installed before
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 An SQL database URL which the module will use in order to
@@ -72,7 +72,7 @@ modparam("freeswitch_scripting", "db_url", "dbdriver://username:password@dbhost/
 ```
 
 
-#### db_table (string)
+#### db_table (string) {#param_db_table}
 
 
 The SQL table name for this module.
@@ -91,7 +91,7 @@ modparam("freeswitch_scripting", "db_table", "freeswitch_sockets")
 ```
 
 
-#### db_col_username (string)
+#### db_col_username (string) {#param_db_col_username}
 
 
 The SQL column name for the "username" ESL connect information.
@@ -110,7 +110,7 @@ modparam("freeswitch_scripting", "db_col_username", "user")
 ```
 
 
-#### db_col_password (string)
+#### db_col_password (string) {#param_db_col_password}
 
 
 The SQL column name for the "password" ESL connect information.
@@ -129,7 +129,7 @@ modparam("freeswitch_scripting", "db_col_password", "pass")
 ```
 
 
-#### db_col_ip (string)
+#### db_col_ip (string) {#param_db_col_ip}
 
 
 The SQL column name for the "ip" ESL connect information.
@@ -148,7 +148,7 @@ modparam("freeswitch_scripting", "db_col_ip", "ip_addr")
 ```
 
 
-#### db_col_port (string)
+#### db_col_port (string) {#param_db_col_port}
 
 
 The SQL column name for the "port" ESL connect information.
@@ -167,7 +167,7 @@ modparam("freeswitch_scripting", "db_col_port", "tcp_port")
 ```
 
 
-#### db_col_events (string)
+#### db_col_events (string) {#param_db_col_events}
 
 
 The SQL column name for the comma-separated, case-sensitive FreeSWITCH
@@ -187,7 +187,7 @@ modparam("freeswitch_scripting", "db_col_events", "fs_events")
 ```
 
 
-#### fs_subscribe (string)
+#### fs_subscribe (string) {#param_fs_subscribe}
 
 
 Add a FreeSWITCH ESL URL to which OpenSIPS will connect at startup.
@@ -210,10 +210,10 @@ modparam("freeswitch_scripting", "fs_subscribe", ":ClueCon@10.0.0.11:8021?DTMF,B
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### freeswitch_esl(command, freeswitch_url[, response_var])
+#### freeswitch_esl(command, freeswitch_url[, response_var]) {#func_freeswitch_esl}
 
 
 Run an arbitrary command on an arbitrary FreeSWITCH ESL socket. The
@@ -279,10 +279,10 @@ This function can be used from any route.
 ```
 
 
-### Exported MI Commands
+### Exported MI Commands {#sec-mi-commands}
 
 
-#### freeswitch_scripting:subscribe
+#### freeswitch_scripting:subscribe {#mi_subscribe}
 
 
 Replaces obsolete MI command: *fs_subscribe*.
@@ -306,7 +306,7 @@ Parameters:
 - *...* - (other events)
 
 
-#### freeswitch_scripting:unsubscribe
+#### freeswitch_scripting:unsubscribe {#mi_unsubscribe}
 
 
 Replaces obsolete MI command: *fs_unsubscribe*.
@@ -327,7 +327,7 @@ Parameters:
 - *...* - (other events)
 
 
-#### freeswitch_scripting:list
+#### freeswitch_scripting:list {#mi_list}
 
 
 Replaces obsolete MI command: *fs_list*.
@@ -337,7 +337,7 @@ Displays the current set of FreeSWITCH ESL sockets and the list of events
 		that the module is subscribed to for each socket.
 
 
-#### freeswitch_scripting:reload
+#### freeswitch_scripting:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *fs_reload*.
@@ -353,10 +353,10 @@ Replaces the current set* of FreeSWITCH ESL sockets along with their respective
 			[mi subscribe](#mi_subscribe) commands or previous DB data set.
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_FREESWITCH
+#### E_FREESWITCH {#event-freeswitch}
 
 
 This event is raised when OpenSIPS receives an ESL event notification from
@@ -373,10 +373,10 @@ Parameters:
 					to easily interpret it.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -401,7 +401,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -420,10 +420,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

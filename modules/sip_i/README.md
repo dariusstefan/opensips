@@ -6,7 +6,7 @@ description: "This module offers the possibility of processing ISDN User Part(IS
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module offers the possibility of processing ISDN User Part(ISUP) messages encapsulated in SIP. The available operations are: reading and modifying parameters from an ISUP message, removing or adding new optional parameters, adding an ISUP part to a SIP message body. This is done explicitly via script pseudovariables and functions.
@@ -18,7 +18,7 @@ The supported ISUP message types are only the ones that can be included in a SIP
 The format and specification of the ISUP messages and parameters follow the recomandations from ITU-T Rec. Q.763.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -43,7 +43,7 @@ The following libraries or applications must be installed before running
 ### Parameters
 
 
-#### param_subfield_separator (str)
+#### param_subfield_separator (str) {#param_param_subfield_separator}
 
 
 The character to be used as separator in the subname of the *$isup_param* and *$isup_param_str* pseudovariables between the ISUP parameter name and subfield name.
@@ -62,7 +62,7 @@ modparam("sip_i", "param_subfield_separator", ":")
 ```
 
 
-#### isup_mime_str (str)
+#### isup_mime_str (str) {#param_isup_mime_str}
 
 
 The string to be used for the Content-Type header field of the ISUP MIME body when creating a new ISUP part.
@@ -81,7 +81,7 @@ modparam("sip_i", "isup_mime_str", "application/ISUP;base=itu-t92+;version=itu-t
 ```
 
 
-#### default_part_headers (str)
+#### default_part_headers (str) {#param_default_part_headers}
 
 
 The default set of headers (fully defined, including the header
@@ -102,7 +102,7 @@ modparam("sip_i", "default_part_headers", "Content-Disposition:signal;handling=r
 ```
 
 
-#### country_code (str)
+#### country_code (str) {#param_country_code}
 
 
 Country Code that the first part of the number from
@@ -126,10 +126,10 @@ modparam("sip_i", "country_code", "+4")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### add_isup_part([isup_msg_type][,extra_headers])
+#### add_isup_part([isup_msg_type][,extra_headers]) {#func_add_isup_part}
 
 
 Adds a new ISUP part to the SIP message body.
@@ -203,10 +203,10 @@ if ($rs == "183") {
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $(isup_param(param_name{sep}subfield_name)[byte_index])
+#### $(isup_param(param_name{sep}subfield_name)[byte_index]) {#pv_isup_param}
 
 
 The ISUP parameter named *param_name* of a received or newly added ISUP message can be accessed through this read-write variable. For optional parameters, writing to a *param_name* that does not exist in this ISUP message will insert it. Assigning null to this variable will remove the optional parameter from the message or zeroize the parameter in case of a mandatory one.
@@ -262,7 +262,7 @@ For more information on supported subfields and aliases check [subfields aliases
 ```
 
 
-#### $isup_param_str(param_name{sep}subfield_name)
+#### $isup_param_str(param_name{sep}subfield_name) {#pv_isup_param_str}
 
 
 The ISUP parameter named *param_name* of a received or newly added ISUP message can also be accessed through this read-only variable. This variable is similar in usage with *$isup_param* except it will return the string alias for the value when possible.
@@ -294,7 +294,7 @@ The format of the subname for `$isup_param_str` is the following:
 ```
 
 
-#### $isup_msg_type
+#### $isup_msg_type {#pv_isup_msg_type}
 
 
 Read-only variable, returns the ISUP message type as string.
@@ -312,13 +312,13 @@ Read-only variable, returns the ISUP message type as string.
 ```
 
 
-### Exported script transformations
+### Exported script transformations {#exported_transformations}
 
 
 The module also provides a way for accessing the value of ISUP parameters and their subfields from an ISUP message contained in a arbitrary script variable as opposed to directly from the processed SIP (with encapsulated ISUP) message. This is done by aplying a transformation to a script variable containing the ISUP message body. The value of the original variable is not altered and a corresponding integer or string value (representing an ISUP parameter or subfield as the exact value or string alias) is returned.
 
 
-#### {isup.param,param_name,[subfield_name]}
+#### {isup.param,param_name,[subfield_name]} {#tran_isup.param}
 
 
 The result of this transformation is similar to a read access of the `$isup_param` pseudovariable with the exception that byte level access is not provided.
@@ -355,7 +355,7 @@ The parameters for the transformation are:
 ```
 
 
-#### {isup.param.str,param_name,[subfield_name]}
+#### {isup.param.str,param_name,[subfield_name]} {#tran_isup.param.str}
 
 
 The result of this transformation is similar to a read access of the `$isup_param_str` pseudovariable with the exception that byte level access is not provided.
@@ -392,7 +392,7 @@ The parameters for the transformation are:
 ```
 
 
-### ISUP parameter subfields and string aliases
+### ISUP parameter subfields and string aliases {#subfields_aliases}
 
 
 The supported subfields for each ISUP parameter and the string aliases for their values are the following:
@@ -799,10 +799,10 @@ The mandatory parameters(According to ITU-T Rec. Q.763) for each supported ISUP 
   - User-to-user information
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -829,7 +829,7 @@ The mandatory parameters(According to ITU-T Rec. Q.763) for each supported ISUP 
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -850,10 +850,10 @@ The mandatory parameters(According to ITU-T Rec. Q.763) for each supported ISUP 
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

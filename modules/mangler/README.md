@@ -6,14 +6,14 @@ description: "This is a module to help with SDP mangling. Note: This module is o
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module to help with SDP mangling.
 		Note: This module is obselete and will be removed for the 1.5.0 release.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### contact_flds_separator (string)
+#### contact_flds_separator (string) {#param_contact_flds_separator}
 
 
 First char of this parameter is used as separator for encoding/decoding 
@@ -67,10 +67,10 @@ then an encoded uri might look
 		sip:user-password-ip-port-protocol@PublicIP
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sdp_mangle_ip(pattern, newip)
+#### sdp_mangle_ip(pattern, newip) {#func_sdp_mangle_ip}
 
 
 Changes IP addresses inside SDP package in lines describing 
@@ -108,7 +108,7 @@ sdp_mangle_ip("10.0.0.0/8","193.175.135.38");
 ```
 
 
-#### sdp_mangle_port(offset)
+#### sdp_mangle_port(offset) {#func_sdp_mangle_port}
 
 
 Changes ports inside SDP package in lines describing media like 
@@ -138,7 +138,7 @@ sdp_mangle_port(-12000);
 ```
 
 
-#### encode_contact(encoding_prefix, public_ip)
+#### encode_contact(encoding_prefix, public_ip) {#func_encode_contact}
 
 
 This function will encode uri-s inside Contact header in the following 
@@ -175,7 +175,7 @@ if ($si == 10.0.0.0/8) encode_contact("enc_prefix","193.175.135.38");
 ```
 
 
-#### decode_contact()
+#### decode_contact() {#func_decode_contact}
 
 
 This function will decode the URI in first line in packets which 
@@ -204,7 +204,7 @@ if ($ru =~ "^enc*") { decode_contact(); }
 ```
 
 
-#### decode_contact_header()
+#### decode_contact_header() {#func_decode_contact_header}
 
 
 This function will decode URIs inside Contact header in the 
@@ -232,10 +232,10 @@ if ($ru =~ "^enc*") { decode_contact_header(); }
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -267,7 +267,7 @@ if ($ru =~ "^enc*") { decode_contact_header(); }
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -293,10 +293,10 @@ if ($ru =~ "^enc*") { decode_contact_header(); }
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).

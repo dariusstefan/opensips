@@ -6,7 +6,7 @@ description: "This module provides a Radius implementation for the AAA API from 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a Radius implementation for the AAA API from the core.
@@ -29,7 +29,7 @@ Any module that wishes to use it has to do the following:
 - *make a bind call with a proper radius specific url*
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -65,10 +65,10 @@ IMPORTANT: If the selected library is not installed the module won't compile.
 				it shall be used, else freeradius shall be looked for and so on.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### sets (string)
+#### sets (string) {#param_sets}
 
 
 Sets of Radius AVPs to be used when building custom RADIUS requests (set of input RADIUS AVPs)
@@ -108,7 +108,7 @@ modparam("aaa_radius","sets","set2 = (Sip-Group = $var(sipgrup)) ")
 ```
 
 
-#### radius_config (string)
+#### radius_config (string) {#param_radius_config}
 
 
 Radiusclient configuration file.
@@ -128,7 +128,7 @@ modparam("aaa_radius", "radius_config", "/etc/radiusclient-ng/radiusclient.conf"
 ```
 
 
-#### syslog_name (string)
+#### syslog_name (string) {#param_syslog_name}
 
 
 Enable logging of the client library to syslog, using the given log name.
@@ -153,7 +153,7 @@ modparam("aaa_radius", "syslog_name", "aaa-radius")
 ```
 
 
-#### fetch_all_values (integer)
+#### fetch_all_values (integer) {#param_fetch_all_values}
 
 
 For the output sets, this parameter controls if all the values (for the same
@@ -176,10 +176,10 @@ modparam("aaa_radius", "fetch_all_values", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### radius_send_auth(input_set_name, output_set_name)
+#### radius_send_auth(input_set_name, output_set_name) {#func_radius_send_auth}
 
 
 This function can be used from the script to make custom
@@ -235,7 +235,7 @@ switch ($rc) {
 ```
 
 
-#### radius_send_acct(input_set_name)
+#### radius_send_acct(input_set_name) {#func_radius_send_acct}
 
 
 This function can be used from the script to make custom
@@ -269,7 +269,7 @@ radius_send_acct("set1");
 ### Exported Async Functions
 
 
-#### radius_send_auth(input_set_name, output_set_name)
+#### radius_send_auth(input_set_name, output_set_name) {#afunc_radius_send_auth}
 
 
 This function can be used from the script to make custom
@@ -326,7 +326,7 @@ switch ($rc) {
 ```
 
 
-#### radius_send_acct(input_set_name)
+#### radius_send_acct(input_set_name) {#afunc_radius_send_acct}
 
 
 This function can be used from the script to make custom
@@ -417,10 +417,10 @@ sudo make install
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -452,7 +452,7 @@ sudo make install
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -478,10 +478,10 @@ sudo make install
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Boris Ratner, Irina-Maria Stanescu.

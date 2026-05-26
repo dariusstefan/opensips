@@ -6,7 +6,7 @@ description: "The Call Center module implements an inbound call center system wi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Call Center module implements an inbound call center system with call 
@@ -153,7 +153,7 @@ There is an optional per-agent *wrapup_time*
 		per-flow *max_wrapup_time* if defined.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -176,10 +176,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 SQL address to the DB server -- database specific. This must be
@@ -198,7 +198,7 @@ modparam("call_center", "db_url",
 ```
 
 
-#### acc_db_url (string)
+#### acc_db_url (string) {#param_acc_db_url}
 
 
 SQL address to the DB server -- database specific. This must be
@@ -216,7 +216,7 @@ modparam("call_center", "acc_db_url",
 ```
 
 
-#### rt_db_url (string)
+#### rt_db_url (string) {#param_rt_db_url}
 
 
 SQL address/URL of the DB server (database specific) where the
@@ -237,7 +237,7 @@ modparam("call_center", "rt_db_url",
 ```
 
 
-#### wrapup_time (integer)
+#### wrapup_time (integer) {#param_wrapup_time}
 
 
 Time for an agent between finishing a call and receiving the next
@@ -262,7 +262,7 @@ modparam("call_center", "wrapup_time", 45)
 ```
 
 
-#### queue_pos_param (string)
+#### queue_pos_param (string) {#param_queue_pos_param}
 
 
 The name of an SIP URI parameter to be used to report the position
@@ -284,7 +284,7 @@ modparam("call_center", "queue_pos_param", "cc_pos")
 ```
 
 
-#### reject_on_no_agents (int)
+#### reject_on_no_agents (int) {#param_reject_on_no_agents}
 
 
 A parameter to tell if an incoming call should be rejected or
@@ -305,7 +305,7 @@ modparam("call_center", "reject_on_no_agents", 0)
 ```
 
 
-#### chat_dispatch_policy (int)
+#### chat_dispatch_policy (int) {#param_chat_dispatch_policy}
 
 
 A parameter to tell what should be the policy on dispatching the
@@ -343,7 +343,7 @@ modparam("call_center", "chat_dispatch_policy", "balancing")
 ```
 
 
-#### internal_call_dispatching (int)
+#### internal_call_dispatching (int) {#param_internal_call_dispatching}
 
 
 A parameter to tell if the internal/buit-in call dispatching to agent
@@ -370,7 +370,7 @@ modparam("call_center", "internal_call_dispatching", 0)
 ```
 
 
-#### cc_agents_table (string)
+#### cc_agents_table (string) {#param_cc_agents_table}
 
 
 Name to be used for the table holding the agents.
@@ -389,7 +389,7 @@ modparam("call_center", "cc_agents_table", "my_agents")
 ```
 
 
-#### cca_agentid_column (string)
+#### cca_agentid_column (string) {#param_cca_agentid_column}
 
 
 Name to be used for the "agent id" (unique DB id) column in the
@@ -409,7 +409,7 @@ modparam("call_center", "cca_agentid_column", "cid")
 ```
 
 
-#### cca_location_column (string)
+#### cca_location_column (string) {#param_cca_location_column}
 
 
 Name to be used for the calling/audio "location" (SIP URI) column in 
@@ -429,7 +429,7 @@ modparam("call_center", "cca_location_column", "sip_uri")
 ```
 
 
-#### cca_msrp_location_column (string)
+#### cca_msrp_location_column (string) {#param_cca_msrp_location_column}
 
 
 Name to be used for the msrp/chat "location" (SIP URI) column in the
@@ -449,7 +449,7 @@ modparam("call_center", "cca_msrp_location_column", "sip_uri")
 ```
 
 
-#### cca_msrp_max_sessions_column (string)
+#### cca_msrp_max_sessions_column (string) {#param_cca_msrp_max_sessions_column}
 
 
 Name to be used for the column (in the agents table) holding the 
@@ -469,7 +469,7 @@ modparam("call_center", "cca_msrp_max_sessions_column", "max_chats")
 ```
 
 
-#### cca_skills_column (string)
+#### cca_skills_column (string) {#param_cca_skills_column}
 
 
 Name to be used for the "skills" (list of skills) column in the
@@ -489,7 +489,7 @@ modparam("call_center", "cca_skills_column", "skills")
 ```
 
 
-#### cca_logstate_column (string)
+#### cca_logstate_column (string) {#param_cca_logstate_column}
 
 
 Name to be used for the "logstate" (original login state) column in the
@@ -509,7 +509,7 @@ modparam("call_center", "cca_logstate_column", "log_state")
 ```
 
 
-#### cca_wrapuptime_column (string)
+#### cca_wrapuptime_column (string) {#param_cca_wrapuptime_column}
 
 
 Name to be used for the "wrapuptime" (per-agent wrapup time) column 
@@ -529,7 +529,7 @@ modparam("call_center", "cca_wrapuptime_column", "wtime")
 ```
 
 
-#### cca_wrapupend_column (string)
+#### cca_wrapupend_column (string) {#param_cca_wrapupend_column}
 
 
 Name to be used for the "wrapupend" (timestamp when the wrapup ends) 
@@ -549,7 +549,7 @@ modparam("call_center", "cca_wrapupend_column", "wrapup_ends")
 ```
 
 
-#### cc_flows_table (string)
+#### cc_flows_table (string) {#param_cc_flows_table}
 
 
 Name to be used for the table holding the definition of the
@@ -569,7 +569,7 @@ modparam("call_center", "cc_flows_table", "queues")
 ```
 
 
-#### ccf_flowid_column (string)
+#### ccf_flowid_column (string) {#param_ccf_flowid_column}
 
 
 Name to be used for the "flow id" (unique DB id) column in the
@@ -589,7 +589,7 @@ modparam("call_center", "ccf_flowid_column", "queue_id")
 ```
 
 
-#### ccf_priority_column (string)
+#### ccf_priority_column (string) {#param_ccf_priority_column}
 
 
 Name to be used for the "priority" column in the
@@ -609,7 +609,7 @@ modparam("call_center", "ccf_priority_column", "queue_prio")
 ```
 
 
-#### ccf_skill_column (string)
+#### ccf_skill_column (string) {#param_ccf_skill_column}
 
 
 Name to be used for the "skill" column in the
@@ -629,7 +629,7 @@ modparam("call_center", "ccf_skill_column", "queue_skill")
 ```
 
 
-#### ccf_cid_column (string)
+#### ccf_cid_column (string) {#param_ccf_cid_column}
 
 
 Name to be used for the "caller ID prefix" column in the
@@ -649,7 +649,7 @@ modparam("call_center", "ccf_cid_column", "queue_cli_prefix")
 ```
 
 
-#### ccf_max_wrapup_column (string)
+#### ccf_max_wrapup_column (string) {#param_ccf_max_wrapup_column}
 
 
 Name to be used for the "max limit for wrapup time" column in the
@@ -669,7 +669,7 @@ modparam("call_center", "ccf_max_wrapup_column", "queue_wrapup")
 ```
 
 
-#### ccf_dissuading_hangup_column (string)
+#### ccf_dissuading_hangup_column (string) {#param_ccf_dissuading_hangup_column}
 
 
 Name to be used for the "hangup after dissuading" column in the
@@ -689,7 +689,7 @@ modparam("call_center", "ccf_dissuading_hangup_column", "hangup_on_dissuading")
 ```
 
 
-#### ccf_dissuading_onhold_th_column (string)
+#### ccf_dissuading_onhold_th_column (string) {#param_ccf_dissuading_onhold_th_column}
 
 
 Name to be used for the "on-hold dissuading threshold" column in the
@@ -709,7 +709,7 @@ modparam("call_center", "ccf_dissuading_onhold_th_column", "th_diss_onhold")
 ```
 
 
-#### ccf_dissuading_ewt_th_column (string)
+#### ccf_dissuading_ewt_th_column (string) {#param_ccf_dissuading_ewt_th_column}
 
 
 Name to be used for the "EWT dissuading threshold" column in the
@@ -729,7 +729,7 @@ modparam("call_center", "ccf_dissuading_ewt_th_column", "th_diss_ewt")
 ```
 
 
-#### ccf_dissuading_qsize_th_column (string)
+#### ccf_dissuading_qsize_th_column (string) {#param_ccf_dissuading_qsize_th_column}
 
 
 Name to be used for the "queue size dissuading threshold" column in the
@@ -749,7 +749,7 @@ modparam("call_center", "ccf_dissuading_qsize_th_column", "th_diss_qsize")
 ```
 
 
-#### ccf_m_welcome_column (string)
+#### ccf_m_welcome_column (string) {#param_ccf_m_welcome_column}
 
 
 Name to be used for the "audio message on welcome" column in the
@@ -769,7 +769,7 @@ modparam("call_center", "ccf_m_welcome_column", "audio_welcome")
 ```
 
 
-#### ccf_m_queue_column (string)
+#### ccf_m_queue_column (string) {#param_ccf_m_queue_column}
 
 
 Name to be used for the "audio message on queueing" column in the
@@ -789,7 +789,7 @@ modparam("call_center", "ccf_m_queue_column", "audio_queue")
 ```
 
 
-#### ccf_m_dissuading_column (string)
+#### ccf_m_dissuading_column (string) {#param_ccf_m_dissuading_column}
 
 
 Name to be used for the "audio message on dissuading" column in the
@@ -809,7 +809,7 @@ modparam("call_center", "ccf_m_dissuading_column", "audio_dissuading")
 ```
 
 
-#### ccf_m_flow_id_column (string)
+#### ccf_m_flow_id_column (string) {#param_ccf_m_flow_id_column}
 
 
 Name to be used for the "audio message on identifying the flow" column
@@ -829,7 +829,7 @@ modparam("call_center", "ccf_m_flow_id_column", "audio_flow_id")
 ```
 
 
-#### b2b_logic_ctx_param (string)
+#### b2b_logic_ctx_param (string) {#param_b2b_logic_ctx_param}
 
 
 The name of the *$b2b_logic.ctx* variable that can be
@@ -867,10 +867,10 @@ route[b2b_handle_request] {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### cc_handle_call( flowID [,param])
+#### cc_handle_call( flowID [,param]) {#func_cc_handle_call}
 
 
 This must be used only for initial INVITE requests - the function
@@ -931,7 +931,7 @@ if (is_method("INVITE") and !has_totag()) {
 ```
 
 
-#### cc_agent_login(agentID, state)
+#### cc_agent_login(agentID, state) {#func_cc_agent_login}
 
 
 This function sets the login (on or off) state for an agent.
@@ -965,62 +965,62 @@ cc_agent_login("agentX",0);
 #### Global statistics
 
 
-##### ccg_incalls
+##### ccg_incalls {#stat_ccg_incalls}
 
 
 Total number of received calls. (counter type)
 
 
-##### ccg_awt
+##### ccg_awt {#stat_ccg_awt}
 
 
 Global avg. waiting time for calls. (realtime type)
 
 
-##### ccg_load
+##### ccg_load {#stat_ccg_load}
 
 
 Global load (across all flows). (realtime type)
 
 
-##### ccg_distributed_incalls
+##### ccg_distributed_incalls {#stat_ccg_distributed_incalls}
 
 
 Total number of distributed calls. (counter type)
 
 
-##### ccg_answered_incalls
+##### ccg_answered_incalls {#stat_ccg_answered_incalls}
 
 
 Total number of calls (audio/RTP and chat/MSRP) answered by agents. (counter type)
 
 
-##### ccg_answered_inchats
+##### ccg_answered_inchats {#stat_ccg_answered_inchats}
 
 
 Total number of chat/MSRP only calls answered by agents. (counter type)
 
 
-##### ccg_abandonned_incalls
+##### ccg_abandonned_incalls {#stat_ccg_abandonned_incalls}
 
 
 Total number of calls terminated by caller before being
 			answered by agents. (counter type)
 
 
-##### ccg_onhold_calls
+##### ccg_onhold_calls {#stat_ccg_onhold_calls}
 
 
 Total number of calls (audio/RTP and chat/MSRP) in the queues (onhold). (realtime type)
 
 
-##### ccg_onhold_chats
+##### ccg_onhold_chats {#stat_ccg_onhold_chats}
 
 
 Total number of chat/MSRP only calls in the queues (onhold). (realtime type)
 
 
-##### ccg_free_agents
+##### ccg_free_agents {#stat_ccg_free_agents}
 
 
 Total number of free agents (across all flows). (realtime type)
@@ -1029,76 +1029,76 @@ Total number of free agents (across all flows). (realtime type)
 #### Per-flow statistics (one set for each flow)
 
 
-##### ccf_incalls_flowID
+##### ccf_incalls_flowID {#stat_ccf_incalls_flowID}
 
 
 Number of received calls for the flow. (counter type)
 
 
-##### ccf_dist_incalls_flowID
+##### ccf_dist_incalls_flowID {#stat_ccf_dist_incalls_flowID}
 
 
 Number of distributed calls in this flow. (counter type)
 
 
-##### ccf_answ_incalls_flowID
+##### ccf_answ_incalls_flowID {#stat_ccf_answ_incalls_flowID}
 
 
 Nnumber of calls (audio/RTP and chat/MSRP) from the flow answered by agents. (counter type)
 
 
-##### ccf_answ_incalls_flowID
+##### ccf_answ_incalls_flowID {#stat_ccf_answ_inchats_flowID}
 
 
 Nnumber of chat/MSRP only calls from the flow answered by agents. (counter type)
 
 
-##### ccf_aban_incalls_flowID
+##### ccf_aban_incalls_flowID {#stat_ccf_aban_incalls_flowID}
 
 
 Number of calls (from the flow) terminated by caller before being
 			answered by agents. (counter type)
 
 
-##### ccf_onhold_incalls_flowID
+##### ccf_onhold_incalls_flowID {#stat_ccf_onhold_incalls_flowID}
 
 
 Number of calls (audio/RTP and chat/MSRP) -from the flow- which are onhold.
 			 (realtime type)
 
 
-##### ccf_onhold_inchats_flowID
+##### ccf_onhold_inchats_flowID {#stat_ccf_onhold_inchats_flowID}
 
 
 Number of chat/MSRP only calls -from the flow- which are onhold.
 			 (realtime type)
 
 
-##### ccf_queued_calls_flowID
+##### ccf_queued_calls_flowID {#stat_ccf_queued_calls_flowID}
 
 
 Number of calls which are queued for this flow. (realtime type)
 
 
-##### ccf_free_agents_flowID
+##### ccf_free_agents_flowID {#stat_ccf_free_agents_flowID}
 
 
 Number of free agents serving this flow. (realtime type)
 
 
-##### ccf_etw_flowID
+##### ccf_etw_flowID {#stat_ccf_etw_flowID}
 
 
 Estimated Time to Wait for this flow. (realtime type)
 
 
-##### ccf_awt_flowID
+##### ccf_awt_flowID {#stat_ccf_awt_flowID}
 
 
 Avg. Wating Time for this flow. (realtime type)
 
 
-##### ccg_load_flowID
+##### ccg_load_flowID {#stat_ccg_load_flowID}
 
 
 The load on the flow (number of queued calls versus number of
@@ -1108,41 +1108,41 @@ The load on the flow (number of queued calls versus number of
 #### Per-agent statistics (one set for each agent)
 
 
-##### cca_dist_incalls_agnetID
+##### cca_dist_incalls_agnetID {#stat_cca_dist_incalls_agnetID}
 
 
 Number of distributed calls to this agent. (counter type)
 
 
-##### cca_answ_incalls_agentID
+##### cca_answ_incalls_agentID {#stat_cca_answ_incalls_agentID}
 
 
 Number of calls (audio/RTP and chat/MSRP) answered by the agent. (counter type)
 
 
-##### cca_answ_inchats_agentID
+##### cca_answ_inchats_agentID {#stat_cca_answ_inchats_agentID}
 
 
 Number of chat/MSRP only calls answered by the agent. (counter type)
 
 
-##### cca_aban_incalls_agentID
+##### cca_aban_incalls_agentID {#stat_cca_aban_incalls_agentID}
 
 
 Number of calls (sent to this agent) terminated by caller before 
 			being answered by agents. (counter type)
 
 
-##### cca_att_agentID
+##### cca_att_agentID {#stat_cca_att_agentID}
 
 
 Avg. Talk Time for this agent (realtime type)
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### call_center:reload
+#### call_center:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *cc_reload*.
@@ -1162,7 +1162,7 @@ opensips-cli -x mi call_center:reload
 ```
 
 
-#### call_center:agent_login
+#### call_center:agent_login {#mi_agent_login}
 
 
 Replaces obsolete MI command: *cc_agent_login*.
@@ -1186,7 +1186,7 @@ opensips-cli -x mi call_center:agent_login agentX 0
 ```
 
 
-#### call_center:list_queue
+#### call_center:list_queue {#mi_list_queue}
 
 
 Replaces obsolete MI command: *cc_list_queue*.
@@ -1210,7 +1210,7 @@ opensips-cli -x mi call_center:list_queue
 ```
 
 
-#### call_center:list_flows
+#### call_center:list_flows {#mi_list_flows}
 
 
 Replaces obsolete MI command: *cc_list_flows*.
@@ -1233,7 +1233,7 @@ opensips-cli -x mi call_center:list_flows
 ```
 
 
-#### call_center:list_agents
+#### call_center:list_agents {#mi_list_agents}
 
 
 Replaces obsolete MI command: *cc_list_agents*.
@@ -1255,7 +1255,7 @@ opensips-cli -x mi call_center:list_agents
 ```
 
 
-#### call_center:list_calls
+#### call_center:list_calls {#mi_list_calls}
 
 
 Replaces obsolete MI command: *cc_list_calls*.
@@ -1278,7 +1278,7 @@ opensips-cli -x mi call_center:list_agents
 ```
 
 
-#### call_center:dispatch_call_to_agent
+#### call_center:dispatch_call_to_agent {#mi_dispatch_call_to_agent}
 
 
 Replaces obsolete MI command: *cc_dispatch_call_to_agent*.
@@ -1318,7 +1318,7 @@ opensips-cli -x mi call_center:dispatch_call_to_agent B2B452.dee2.33 agentX
 ```
 
 
-#### call_center:internal_call_dispatching
+#### call_center:internal_call_dispatching {#mi_internal_call_dispatching}
 
 
 Replaces obsolete MI command: *cc_internal_call_dispatching*.
@@ -1341,7 +1341,7 @@ opensips-cli -x mi call_center:internal_call_dispatching 0
 ```
 
 
-#### call_center:reset_stats
+#### call_center:reset_stats {#mi_reset_stats}
 
 
 Replaces obsolete MI command: *cc_reset_stats*.
@@ -1361,10 +1361,10 @@ opensips-cli -x mi call_center:reset_stats
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_CALLCENTER_AGENT_REPORT
+#### E_CALLCENTER_AGENT_REPORT {#event_E_CALLCENTER_AGENT_REPORT}
 
 
 This event is raised when the status of an agent changes.
@@ -1387,7 +1387,7 @@ Parameters:
 				call for this agent; published only if the state is "incall"
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
 `$cc_state`
@@ -1455,10 +1455,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1490,7 +1490,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1516,10 +1516,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

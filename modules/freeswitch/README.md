@@ -3,10 +3,10 @@ title: "freeswitch Module"
 description: "The *\"freeswitch\"* module is a C driver for the FreeSWITCH Event Socket Layer interface. It can interact with one or more FreeSWITCH servers either by issuing commands to them, or by receiving events from them."
 ---
 
-## Admin Guide
+## Admin Guide {#sec-admin-guide}
 
 
-### Overview
+### Overview {#overview}
 
 
 The *"freeswitch"* module is a C driver for the
@@ -25,7 +25,7 @@ A FreeSWITCH ESL URL is of the form:
 	The default ESL port is 8021.
 
 
-### External Libraries or Applications
+### External Libraries or Applications {#sec-external-dependencies}
 
 
 The following libraries or applications must be installed before
@@ -35,10 +35,10 @@ The following libraries or applications must be installed before
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### event_heartbeat_interval (integer)
+#### event_heartbeat_interval (integer) {#param_event_heartbeat_interval}
 
 
 The expected interval between FreeSWITCH HEARTBEAT event arrivals.
@@ -57,7 +57,7 @@ modparam("freeswitch", "event_heartbeat_interval", 20)
 ```
 
 
-#### esl_connect_timeout (integer)
+#### esl_connect_timeout (integer) {#param_esl_connect_timeout}
 
 
 The maximally allowed duration for the establishment of an ESL connection.
@@ -76,7 +76,7 @@ modparam("freeswitch", "esl_connect_timeout", 3000)
 ```
 
 
-#### esl_cmd_timeout (integer)
+#### esl_cmd_timeout (integer) {#param_esl_cmd_timeout}
 
 
 The maximally allowed duration for the execution of an ESL command.
@@ -96,7 +96,7 @@ modparam("freeswitch", "esl_cmd_timeout", 3000)
 ```
 
 
-#### esl_cmd_polling_itv (integer)
+#### esl_cmd_polling_itv (integer) {#param_esl_cmd_polling_itv}
 
 
 The sleep interval used when polling for an ESL command response. Since the
@@ -118,13 +118,13 @@ modparam("freeswitch", "esl_cmd_polling_itv", 3000)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -150,7 +150,7 @@ modparam("freeswitch", "esl_cmd_polling_itv", 3000)
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -170,10 +170,10 @@ modparam("freeswitch", "esl_cmd_polling_itv", 3000)
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

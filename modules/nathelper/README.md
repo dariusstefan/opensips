@@ -6,7 +6,7 @@ description: "This is a module to help with NAT traversal. In particular, it hel
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module to help with NAT traversal. In particular,
@@ -58,7 +58,7 @@ Currently, the nathelper module supports two types of NAT pings:
 				traffic, more expensive (as time) to generate by OpenSIPS;
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -83,10 +83,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### natping_interval (integer)
+#### natping_interval (integer) {#param_natping_interval}
 
 
 Period of time in seconds between sending the NAT pings to all
@@ -111,7 +111,7 @@ modparam("nathelper", "natping_interval", 10)
 ```
 
 
-#### ping_nated_only (integer)
+#### ping_nated_only (integer) {#param_ping_nated_only}
 
 
 If this variable is set then only contacts that have
@@ -132,7 +132,7 @@ modparam("nathelper", "ping_nated_only", 1)
 ```
 
 
-#### natping_partitions (integer)
+#### natping_partitions (integer) {#param_natping_partitions}
 
 
 How many partitions/chunks to be used for sending the pingings.
@@ -154,7 +154,7 @@ modparam("nathelper", "natping_partitions", 4)
 ```
 
 
-#### natping_socket (string)
+#### natping_socket (string) {#param_natping_socket}
 
 
 Spoof the natping's source-ip to this address. Works only for IPv4.
@@ -173,7 +173,7 @@ modparam("nathelper", "natping_socket", "192.168.1.1:5006")
 ```
 
 
-#### received_avp (str)
+#### received_avp (str) {#param_received_avp}
 
 
 The name of the Attribute-Value-Pair (AVP) used to store the URI
@@ -204,7 +204,7 @@ modparam("nathelper", "received_avp", "$avp(received)")
 ```
 
 
-#### force_socket (string)
+#### force_socket (string) {#param_force_socket}
 
 
 Sending socket to be used for pinging contacts without local socket
@@ -227,7 +227,7 @@ modparam("nathelper", "force_socket", "localhost:33333")
 ```
 
 
-#### sipping_bflag (string)
+#### sipping_bflag (string) {#param_sipping_bflag}
 
 
 What branch flag should be used by the module to identify NATed
@@ -248,7 +248,7 @@ modparam("nathelper", "sipping_bflag", "SIPPING_ENABLE")
 ```
 
 
-#### remove_on_timeout_bflag (string)
+#### remove_on_timeout_bflag (string) {#param_remove_on_timeout_bflag}
 
 
 What branch flag to be used in order to activate usrloc contact removal when
@@ -268,7 +268,7 @@ modparam("nathelper", "remove_on_timeout_bflag", "SIPPING_RTO")
 ```
 
 
-#### sipping_latency_flag (string)
+#### sipping_latency_flag (string) {#param_sipping_latency_flag}
 
 
 The branch flag which will be used in order to enable contact pinging
@@ -289,7 +289,7 @@ modparam("nathelper", "sipping_latency_flag", "SIPPING_CALC_LATENCY")
 ```
 
 
-#### sipping_ignore_rpl_codes (CSV string)
+#### sipping_ignore_rpl_codes (CSV string) {#param_sipping_ignore_rpl_codes}
 
 
 A comma-separated list of SIP reply status codes to contact pings which
@@ -313,7 +313,7 @@ modparam("nathelper", "sipping_ignore_rpl_codes", "408, 480, 404")
 ```
 
 
-#### sipping_from (string)
+#### sipping_from (string) {#param_sipping_from}
 
 
 The parameter sets the SIP URI to be used in generating the SIP
@@ -335,7 +335,7 @@ modparam("nathelper", "sipping_from", "sip:pinger@siphub.net")
 ```
 
 
-#### sipping_method (string)
+#### sipping_method (string) {#param_sipping_method}
 
 
 The parameter sets the SIP method to be used in generating the SIP
@@ -355,7 +355,7 @@ modparam("nathelper", "sipping_method", "INFO")
 ```
 
 
-#### nortpproxy_str (string)
+#### nortpproxy_str (string) {#param_nortpproxy_str}
 
 
 The parameter sets the SDP attribute used by nathelper to mark
@@ -381,7 +381,7 @@ modparam("nathelper", "nortpproxy_str", "a=sdpmangled:yes\r\n")
 ```
 
 
-#### natping_tcp (integer)
+#### natping_tcp (integer) {#param_natping_tcp}
 
 
 If the flag is set, TCP/TLS clients will also be pinged with
@@ -401,7 +401,7 @@ modparam("nathelper", "natping_tcp", 1)
 ```
 
 
-#### oldip_skip (string)
+#### oldip_skip (string) {#param_oldip_skip}
 
 
 Parameter which specifies whether old media ip and old origin ip
@@ -423,7 +423,7 @@ modparam("nathelper", "oldip_skip", "oc")
 ```
 
 
-#### ping_threshold (int)
+#### ping_threshold (int) {#param_ping_threshold}
 
 
 If a contact does not respond in *ping_threshold*
@@ -444,7 +444,7 @@ modparam("nathelper", "ping_threshold", 10)
 ```
 
 
-#### max_pings_lost (int)
+#### max_pings_lost (int) {#param_max_pings_lost}
 
 
 Number of unresponded pings after which the contact shall be removed
@@ -464,7 +464,7 @@ modparam("nathelper", "max_pings_lost", 5)
 ```
 
 
-#### cluster_id (integer)
+#### cluster_id (integer) {#param_cluster_id}
 
 
 The ID of the cluster the module is part of. The clustering support is 
@@ -497,7 +497,7 @@ modparam("nathelper", "cluster_id", 9)
 ```
 
 
-#### cluster_sharing_tag (string)
+#### cluster_sharing_tag (string) {#param_cluster_sharing_tag}
 
 
 The name of the sharing tag (as defined per clusterer modules) to 
@@ -530,10 +530,10 @@ modparam("nathelper", "cluster_sharing_tag", "vip")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### fix_nated_contact([uri_params [, flags]])
+#### fix_nated_contact([uri_params [, flags]]) {#func_fix_nated_contact}
 
 
 Rewrites the URI Contact HF to contain request's
@@ -576,7 +576,7 @@ if (search("User-Agent: Cisco ATA.*") {
 ```
 
 
-#### fix_nated_sdp(flags [, ip_address [, sdp_fields]])
+#### fix_nated_sdp(flags [, ip_address [, sdp_fields]]) {#func_fix_nated_sdp}
 
 
 Alters the SDP information in orer to facilitate NAT traversal. What
@@ -639,7 +639,7 @@ if (search("User-Agent: Cisco ATA.*")
 ```
 
 
-#### add_rcv_param([flag]),
+#### add_rcv_param([flag]), {#func_add_rcv_param}
 
 
 Add received parameter to Contact header fields or Contact URI.
@@ -676,7 +676,7 @@ add_rcv_param(1); # add the parameter to the Contact URI
 ```
 
 
-#### fix_nated_register()
+#### fix_nated_register() {#func_fix_nated_register}
 
 
 The function creates a URI consisting of the source IP, port and
@@ -699,7 +699,7 @@ fix_nated_register();
 ```
 
 
-#### nat_uac_test(flags)
+#### nat_uac_test(flags) {#func_nat_uac_test}
 
 
 Determines whether the received SIP message originated behind a NAT,
@@ -751,7 +751,7 @@ if (nat_uac_test("private-contact,private-sdp"))
 ```
 
 
-#### restore_nated_ruri()
+#### restore_nated_ruri() {#func_restore_nated_ruri}
 
 
 Restores the original R-URI host:port from the "org" URI parameter
@@ -768,10 +768,10 @@ Returns -1 on error or if "org" does not exist in R-URI. On success,
 This function can be used from REQUEST_ROUTE, BRANCH_ROUTE.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### nathelper:enable_ping
+#### nathelper:enable_ping {#mi_enable_ping}
 
 
 Replaces obsolete MI command: *nh_enable_ping*.
@@ -836,10 +836,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -871,7 +871,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -897,10 +897,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Jasper Hafkenscheid ([@hafkensite](https://github.com/hafkensite)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Christophe Sollet ([@csollet](https://github.com/csollet)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Anca Vamanu, Andrei Dragus, Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Carsten Bock, Ancuta Onofrei, Marcus Hunger, Jeremie Le Hen, Bayan Towfiq, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).

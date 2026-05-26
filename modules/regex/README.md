@@ -6,7 +6,7 @@ description: "This module offers matching operations against regular expressions
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module offers matching operations against regular expressions using the
@@ -25,7 +25,7 @@ For a detailed list of PCRE features read the
 			[man page](http://www.pcre.org/pcre.txt) of the library.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -47,10 +47,10 @@ The following libraries or applications must be installed before running
 - *libpcre-dev - the development libraries of [PCRE](http://www.pcre.org/)*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### file (string)
+#### file (string) {#param_file}
 
 
 Text file containing the regular expression groups. It must be set in order
@@ -70,7 +70,7 @@ modparam("regex", "file", "/etc/opensips/regex_groups")
 ```
 
 
-#### max_groups (int)
+#### max_groups (int) {#param_max_groups}
 
 
 Max number of regular expression groups in the text file.
@@ -89,7 +89,7 @@ modparam("regex", "max_groups", 40)
 ```
 
 
-#### group_max_size (int)
+#### group_max_size (int) {#param_group_max_size}
 
 
 Max content size of a group in the text file.
@@ -108,7 +108,7 @@ modparam("regex", "group_max_size", 16384)
 ```
 
 
-#### pcre_caseless (int)
+#### pcre_caseless (int) {#param_pcre_caseless}
 
 
 If this options is set, matching is done caseless. It is equivalent to
@@ -129,7 +129,7 @@ modparam("regex", "pcre_caseless", 1)
 ```
 
 
-#### pcre_multiline (int)
+#### pcre_multiline (int) {#param_pcre_multiline}
 
 
 By default, PCRE treats the subject string as consisting of a single line
@@ -160,7 +160,7 @@ modparam("regex", "pcre_multiline", 1)
 ```
 
 
-#### pcre_dotall (int)
+#### pcre_dotall (int) {#param_pcre_dotall}
 
 
 If this option is set, a dot metacharater in the pattern matches all characters,
@@ -182,7 +182,7 @@ modparam("regex", "pcre_dotall", 1)
 ```
 
 
-#### pcre_extended (int)
+#### pcre_extended (int) {#param_pcre_extended}
 
 
 If this option is set, whitespace data characters in the pattern are totally
@@ -206,10 +206,10 @@ modparam("regex", "pcre_extended", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### pcre_match (string, pcre_regex)
+#### pcre_match (string, pcre_regex) {#func_pcre_match}
 
 
 Matches the given string parameter against the regular expression pcre_regex,
@@ -256,7 +256,7 @@ if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
 ```
 
 
-#### pcre_match_group (string [, group])
+#### pcre_match_group (string [, group]) {#func_pcre_match_group}
 
 
 It uses the groups readed from the text file
@@ -289,10 +289,10 @@ if (pcre_match_group($rU, 2)) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### regex:reload
+#### regex:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *regex_reload*.
@@ -319,7 +319,7 @@ opensips-cli -x mi regex:reload
 ```
 
 
-#### regex:match
+#### regex:match {#mi_match}
 
 
 Replaces obsolete MI command: *regex_match*.
@@ -352,7 +352,7 @@ opensips-cli -x mi regex:match string="1234" pcre_regex="^1235$"
 ```
 
 
-#### regex:match_group
+#### regex:match_group {#mi_match_group}
 
 
 Replaces obsolete MI command: *regex_match_group*.
@@ -388,7 +388,7 @@ opensips-cli -x mi regex:match_group string="1234" group="1"
 ### Installation and Running
 
 
-#### File format
+#### File format {#file-format-id}
 
 
 The file contains regular expressions categorized in groups. Each
@@ -520,10 +520,10 @@ NOTE: A line containing a regular expression cannot start by '[' since it
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -555,7 +555,7 @@ NOTE: A line containing a regular expression cannot start by '[' since it
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -581,10 +581,10 @@ NOTE: A line containing a regular expression cannot start by '[' since it
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), MonkeyTester, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Iñaki Baz Castillo.

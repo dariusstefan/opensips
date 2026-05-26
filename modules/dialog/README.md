@@ -6,7 +6,7 @@ description: "The dialog module provides dialog awareness to the OpenSIPS proxy.
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The dialog module provides dialog awareness to the OpenSIPS proxy. Its
@@ -48,7 +48,7 @@ Once terminated, the in-memory dialog may be destroyed right away or,
 	re-INVITEs, etc).
 
 
-### Dialog profiling
+### Dialog profiling {#dialog-profiling}
 
 
 Dialog profiling is a mechanism that helps in classifying, sorting and
@@ -92,7 +92,7 @@ Dialog profiles can also be used in distributed systems, using the OpenSIPS
 	*profiles_no_value* parameters.
 
 
-### Dialog clustering
+### Dialog clustering {#dialog-clustering}
 
 
 **Dialog replication** is a mechanism used to
@@ -156,7 +156,7 @@ A scenario were both profile and dialog replication should be configured is when
 	both on the active and backup node for that dialog).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -183,10 +183,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable_stats (integer)
+#### enable_stats (integer) {#param_enable_stats}
 
 
 If the statistics support should be enabled or not. Via statistic
@@ -207,7 +207,7 @@ modparam("dialog", "enable_stats", 0)
 ```
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The size of the hash table internally used to keep the dialogs. A
@@ -234,7 +234,7 @@ modparam("dialog", "hash_size", 1024)
 ```
 
 
-#### log_profile_hash_size (integer)
+#### log_profile_hash_size (integer) {#param_log_profile_hash_size}
 
 
 The size of the hash table internally used to store  profile->dialog
@@ -257,7 +257,7 @@ modparam("dialog", "log_profile_hash_size", 5) #set a table size of 32
 ```
 
 
-#### rr_param (string)
+#### rr_param (string) {#param_rr_param}
 
 
 Name of the Record-Route parameter to be added with the dialog cookie.
@@ -277,7 +277,7 @@ modparam("dialog", "rr_param", "xyz")
 ```
 
 
-#### default_timeout (integer)
+#### default_timeout (integer) {#param_default_timeout}
 
 
 The default dialog timeout (in seconds) if no custom one is set.
@@ -296,7 +296,7 @@ modparam("dialog", "default_timeout", 21600)
 ```
 
 
-#### dlg_extra_hdrs (string)
+#### dlg_extra_hdrs (string) {#param_dlg_extra_hdrs}
 
 
 A string containing the extra headers (full format, with EOH)
@@ -316,7 +316,7 @@ modparam("dialog", "dlg_extra_hdrs", "Hint: credit expired\r\n")
 ```
 
 
-#### dlg_match_mode (integer)
+#### dlg_match_mode (integer) {#param_dlg_match_mode}
 
 
 How the seqential requests should be matched against the known dialogs.
@@ -359,7 +359,7 @@ modparam("dialog", "dlg_match_mode", 0)
 ```
 
 
-#### delete_delay (integer)
+#### delete_delay (integer) {#param_delete_delay}
 
 
 The interval (seconds) to delay a dialog deletion / removal from
@@ -386,7 +386,7 @@ modparam("dialog", "delete_delay", 10)
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 If you want to store the information about the dialogs in a database
@@ -406,7 +406,7 @@ modparam("dialog", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### db_mode (integer)
+#### db_mode (integer) {#param_db_mode}
 
 
 Describe how to push into the DB the dialogs' information from memory.
@@ -439,7 +439,7 @@ modparam("dialog", "db_mode", 1)
 ```
 
 
-#### db_update_period (integer)
+#### db_update_period (integer) {#param_db_update_period}
 
 
 The interval (seconds) at which to update dialogs' information if you chose to store the dialogs' info at a given interval.
@@ -459,7 +459,7 @@ modparam("dialog", "db_update_period", 120)
 ```
 
 
-#### options_ping_interval (integer)
+#### options_ping_interval (integer) {#param_options_ping_interval}
 
 
 The interval (seconds) at which OpenSIPS will generate in-dialog
@@ -479,7 +479,7 @@ modparam("dialog", "options_ping_interval", 20)
 ```
 
 
-#### reinvite_ping_interval (integer)
+#### reinvite_ping_interval (integer) {#param_reinvite_ping_interval}
 
 
 The interval (seconds) at which OpenSIPS will generate in-dialog
@@ -510,7 +510,7 @@ modparam("dialog", "reinvite_ping_interval", 600)
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 If you want to store the information about the dialogs in a
@@ -530,7 +530,7 @@ modparam("dialog", "table_name", "my_dialog")
 ```
 
 
-#### call_id_column (string)
+#### call_id_column (string) {#param_call_id_column}
 
 
 The column's name in the database to store the dialogs' callid.
@@ -549,7 +549,7 @@ modparam("dialog", "call_id_column", "callid_c_name")
 ```
 
 
-#### from_uri_column (string)
+#### from_uri_column (string) {#param_from_uri_column}
 
 
 The column's name in the database to store the caller's
@@ -569,7 +569,7 @@ modparam("dialog", "from_uri_column", "from_uri_c_name")
 ```
 
 
-#### from_tag_column (string)
+#### from_tag_column (string) {#param_from_tag_column}
 
 
 The column's name in the database to store the From tag from
@@ -589,7 +589,7 @@ modparam("dialog", "from_tag_column", "from_tag_c_name")
 ```
 
 
-#### to_uri_column (string)
+#### to_uri_column (string) {#param_to_uri_column}
 
 
 The column's name in the database to store the calee's sip address.
@@ -608,7 +608,7 @@ modparam("dialog", "to_uri_column", "to_uri_c_name")
 ```
 
 
-#### to_tag_column (string)
+#### to_tag_column (string) {#param_to_tag_column}
 
 
 The column's name in the database to store the To tag from
@@ -628,7 +628,7 @@ modparam("dialog", "to_tag_column", "to_tag_c_name")
 ```
 
 
-#### from_cseq_column (string)
+#### from_cseq_column (string) {#param_from_cseq_column}
 
 
 The column's name in the database to store the cseq from caller
@@ -648,7 +648,7 @@ modparam("dialog", "from_cseq_column", "from_cseq_c_name")
 ```
 
 
-#### to_cseq_column (string)
+#### to_cseq_column (string) {#param_to_cseq_column}
 
 
 The column's name in the database to store the cseq from callee
@@ -668,7 +668,7 @@ modparam("dialog", "to_cseq_column", "to_cseq_c_name")
 ```
 
 
-#### from_route_column (string)
+#### from_route_column (string) {#param_from_route_column}
 
 
 The column's name in the database to store the route records from
@@ -688,7 +688,7 @@ modparam("dialog", "from_route_column", "from_route_c_name")
 ```
 
 
-#### to_route_column (string)
+#### to_route_column (string) {#param_to_route_column}
 
 
 The column's name in the database to store the route records from
@@ -708,7 +708,7 @@ modparam("dialog", "to_route_column", "to_route_c_name")
 ```
 
 
-#### from_contact_column (string)
+#### from_contact_column (string) {#param_from_contact_column}
 
 
 The column's name in the database to store the caller's contact
@@ -728,7 +728,7 @@ modparam("dialog", "from_contact_column", "from_contact_c_name")
 ```
 
 
-#### to_contact_column (string)
+#### to_contact_column (string) {#param_to_contact_column}
 
 
 The column's name in the database to store the callee's contact
@@ -748,7 +748,7 @@ modparam("dialog", "to_contact_column", "to_contact_c_name")
 ```
 
 
-#### from_sock_column (string)
+#### from_sock_column (string) {#param_from_sock_column}
 
 
 The column's name in the database to store the information about
@@ -768,7 +768,7 @@ modparam("dialog", "from_sock_column", "from_sock_c_name")
 ```
 
 
-#### to_sock_column (string)
+#### to_sock_column (string) {#param_to_sock_column}
 
 
 The column's name in the database to store information about the
@@ -788,7 +788,7 @@ modparam("dialog", "to_sock_column", "to_sock_c_name")
 ```
 
 
-#### dlg_id_column (string)
+#### dlg_id_column (string) {#param_dlg_id_column}
 
 
 The column's name in the database to store the dialogs'
@@ -808,7 +808,7 @@ modparam("dialog", "dlg_id_column", "dlg_id_c_name")
 ```
 
 
-#### state_column (string)
+#### state_column (string) {#param_state_column}
 
 
 The column's name in the database to store the
@@ -828,7 +828,7 @@ modparam("dialog", "state_column", "state_c_name")
 ```
 
 
-#### start_time_column (string)
+#### start_time_column (string) {#param_start_time_column}
 
 
 The column's name in the database to store the
@@ -848,7 +848,7 @@ modparam("dialog", "start_time_column", "start_time_c_name")
 ```
 
 
-#### timeout_column (string)
+#### timeout_column (string) {#param_timeout_column}
 
 
 The column's name in the database to store the dialogs' timeout.
@@ -867,7 +867,7 @@ modparam("dialog", "timeout_column", "timeout_c_name")
 ```
 
 
-#### profiles_column (string)
+#### profiles_column (string) {#param_profiles_column}
 
 
 The column's name in the database to store the dialogs' profiles.
@@ -886,7 +886,7 @@ modparam("dialog", "profiles_column", "profiles_c_name")
 ```
 
 
-#### vars_column (string)
+#### vars_column (string) {#param_vars_column}
 
 
 The column's name in the database to store the dialogs' vars.
@@ -905,7 +905,7 @@ modparam("dialog", "vars_column", "vars_c_name")
 ```
 
 
-#### sflags_column (string)
+#### sflags_column (string) {#param_sflags_column}
 
 
 The column's name in the database to store the dialogs' script flags.
@@ -924,7 +924,7 @@ modparam("dialog", "sflags_column", "sflags_c_name")
 ```
 
 
-#### mflags_column (string)
+#### mflags_column (string) {#param_mflags_column}
 
 
 The column's name in the database to store the dialogs' module flags.
@@ -943,7 +943,7 @@ modparam("dialog", "mflags_column", "mflags_c_name")
 ```
 
 
-#### flags_column (string)
+#### flags_column (string) {#param_flags_column}
 
 
 The column's name in the database to store the dialogs' flags.
@@ -962,7 +962,7 @@ modparam("dialog", "flags_column", "flags_c_name")
 ```
 
 
-#### profiles_with_value (string)
+#### profiles_with_value (string) {#param_profiles_with_value}
 
 
 List of names (alphanumerical/-/_) for profiles with values. Flags
@@ -984,7 +984,7 @@ modparam("dialog", "profiles_with_value", "callerCC; gatewayCC; clientChannels/s
 ```
 
 
-#### profiles_no_value (string)
+#### profiles_no_value (string) {#param_profiles_no_value}
 
 
 List of names (alphanumerical/-/_) for profiles without values. Flags
@@ -1006,7 +1006,7 @@ modparam("dialog", "profiles_no_value", "inbound ; outbound ; shared/s; repl/b;"
 ```
 
 
-#### db_flush_vals_profiles (int)
+#### db_flush_vals_profiles (int) {#param_db_flush_vals_profiles}
 
 
 Pushes dialog values, profiles and flags into the database
@@ -1026,7 +1026,7 @@ modparam("dialog", "db_flush_vals_profiles", 1)
 ```
 
 
-#### timer_bulk_del_no (int)
+#### timer_bulk_del_no (int) {#param_timer_bulk_del_no}
 
 
 The number of dialogs that should be attempted to be
@@ -1047,7 +1047,7 @@ modparam("dialog", "timer_bulk_del_no", 10)
 ```
 
 
-#### race_condition_timeout (int)
+#### race_condition_timeout (int) {#race_condition_timeout}
 
 
 If dialog is created using the 'E' flag, and a SIP Race condition happens, then the dialog will be terminated after 'race_condition_timeout' seconds.
@@ -1067,7 +1067,7 @@ modparam("dialog", "race_condition_timeout", 1)
 ```
 
 
-#### cachedb_url (string)
+#### cachedb_url (string) {#param_cachedb_url}
 
 
 Enables distributed dialog profiles and specifies the
@@ -1087,7 +1087,7 @@ modparam("dialog", "cachedb_url", "redis://127.0.0.1:6379")
 ```
 
 
-#### profile_value_prefix (string)
+#### profile_value_prefix (string) {#param_profile_value_prefix}
 
 
 Specifies what prefix should be added to the profiles with
@@ -1108,7 +1108,7 @@ modparam("dialog", "profile_value_prefix", "dlgv_")
 ```
 
 
-#### profile_no_value_prefix (string)
+#### profile_no_value_prefix (string) {#param_profile_no_value_prefix}
 
 
 Specifies what prefix should be added to the profiles without
@@ -1129,7 +1129,7 @@ modparam("dialog", "profile_no_value_prefix", "dlgnv_")
 ```
 
 
-#### profile_size_prefix (string)
+#### profile_size_prefix (string) {#param_profile_size_prefix}
 
 
 Specifies what prefix should be added to the entity that holds
@@ -1150,7 +1150,7 @@ modparam("dialog", "profile_size_prefix", "dlgs_")
 ```
 
 
-#### profile_timeout (int)
+#### profile_timeout (int) {#param_profile_timeout}
 
 
 Specifies how long a dialog profile should be kept in the CacheDB
@@ -1171,7 +1171,7 @@ modparam("dialog", "profile_timeout", "43200")
 ```
 
 
-#### dialog_replication_cluster (int)
+#### dialog_replication_cluster (int) {#param_dialog_replication_cluster}
 
 
 Specifies the cluster ID for dialog replication using the
@@ -1202,7 +1202,7 @@ modparam("dialog", "dialog_replication_cluster", 1)
 ```
 
 
-#### profile_replication_cluster (int)
+#### profile_replication_cluster (int) {#param_profile_replication_cluster}
 
 
 Specifies the cluster ID for profile replication using the
@@ -1224,7 +1224,7 @@ modparam("dialog", "profile_replication_cluster", 1)
 ```
 
 
-#### replicate_profiles_buffer (string)
+#### replicate_profiles_buffer (string) {#param_replicate_profiles_buffer}
 
 
 Used to specify the length of the buffer used by the binary
@@ -1247,7 +1247,7 @@ modparam("dialog", "replicate_profiles_buffer", 500)
 ```
 
 
-#### replicate_profiles_check (string)
+#### replicate_profiles_check (string) {#param_replicate_profiles_check}
 
 
 Timer in seconds, used to specify how often the module should check
@@ -1268,7 +1268,7 @@ modparam("dialog", "replicate_profiles_check", 100)
 ```
 
 
-#### replicate_profiles_timer (string)
+#### replicate_profiles_timer (string) {#param_replicate_profiles_timer}
 
 
 Timer in milliseconds, used to specify how often the module
@@ -1288,7 +1288,7 @@ modparam("dialog", "replicate_profiles_timer", 100)
 ```
 
 
-#### replicate_profiles_expire (string)
+#### replicate_profiles_expire (string) {#param_replicate_profiles_expire}
 
 
 Timer in seconds, used to specify when the profiles counters received
@@ -1310,7 +1310,7 @@ modparam("dialog", "replicate_profiles_expire", 10)
 ```
 
 
-#### cluster_auto_sync (string)
+#### cluster_auto_sync (string) {#param_cluster_auto_sync}
 
 
 Specifies whether to automatically issue a sync request (for dialogs
@@ -1332,7 +1332,7 @@ modparam("dialog", "cluster_auto_sync", 0)
 ```
 
 
-#### auto_prack_hangup_on_failure (int)
+#### auto_prack_hangup_on_failure (int) {#param_auto_prack_hangup_on_failure}
 
 
 Controls how dialogs created with the "auto-prack" flag react
@@ -1350,7 +1350,7 @@ A failure means that the local PRACK transaction either completed with a
 *Default value is "0" (disabled).*
 
 
-#### auto_prack_fr_timeout (int)
+#### auto_prack_fr_timeout (int) {#param_auto_prack_fr_timeout}
 
 
 Specifies the TM FR timeout, in seconds, for PRACK transactions generated
@@ -1362,10 +1362,10 @@ Specifies the TM FR timeout, in seconds, for PRACK transactions generated
 *Default value is "3".*
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### create_dialog([flags])
+#### create_dialog([flags]) {#func_create_dialog}
 
 
 The function creats the dialog for the currently processed request. The
@@ -1445,7 +1445,7 @@ create_dialog("auto-prack");
 ```
 
 
-#### match_dialog([dlg_match_mode])
+#### match_dialog([dlg_match_mode]) {#func_match_dialog}
 
 
 This function is to be used to match a sequential (in-dialog) request
@@ -1490,7 +1490,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### validate_dialog()
+#### validate_dialog() {#func_validate_dialog}
 
 
 The function checks the current received requests against the dialog
@@ -1534,7 +1534,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### fix_route_dialog()
+#### fix_route_dialog() {#func_fix_route_dialog}
 
 
 The function forces an in dialog SIP message to contain the ruri, route headers and
@@ -1561,7 +1561,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-#### get_dialog_info(attr,avp,key,key_val,no_dlgs)
+#### get_dialog_info(attr,avp,key,key_val,no_dlgs) {#func_get_dialog_info}
 
 
 The function extracts a dialog value from another dialog. It first searches
@@ -1623,7 +1623,7 @@ $dlg_val(callee) = $ru;
 ```
 
 
-#### get_dialog_vals(names,vals,callid)
+#### get_dialog_vals(names,vals,callid) {#func_get_dialog_vals}
 
 
 The function fetches all the dialog variables of another dialog.
@@ -1670,7 +1670,7 @@ if ( get_dialog_vals($avp(d_names),$avp(d_vals),$var(callid)) ) {
 ```
 
 
-#### get_dialogs_by_val(name,value,out_avp,out_dlg_no)
+#### get_dialogs_by_val(name,value,out_avp,out_dlg_no) {#func_get_dialog_by_val}
 
 
 The function looks up through the whole dialog table for dialogs containing a $dlg_val with the provided name and value, and returns all the $DLG_ctx_json variables for the matched dialogs, storing them in the provided out_avp. The total number of matched dialogs is returned in the out_dlgs_no variable
@@ -1711,7 +1711,7 @@ if ( get_dialogs_by_val("caller",$fU,$avp(dlg_jsons),$avp(dlg_no)) ) {
 ```
 
 
-#### get_dialogs_by_profile(name,value,out_avp,out_dlg_no)
+#### get_dialogs_by_profile(name,value,out_avp,out_dlg_no) {#func_get_dialog_by_profile}
 
 
 The function looks up through the whole dialog table for dialogs configured to be within the provided dialog profile name, and optionally with the provided profile value. The function returns all the $DLG_ctx_json variables for the matched dialogs, storing them in the provided out_avp. The total number of matched dialogs is returned in the out_dlgs_no variable
@@ -1752,7 +1752,7 @@ if ( get_dialogs_by_profile("caller",$fU,$avp(dlg_jsons),$avp(dlg_no)) ) {
 ```
 
 
-#### load_dialog_ctx( dialog [, id_type] [, active_only])
+#### load_dialog_ctx( dialog [, id_type] [, active_only]) {#func_load_dialog_ctx}
 
 
 The function loads and switches to the context of the given dialog.
@@ -1801,7 +1801,7 @@ if (load_dialog_ctx("$var(callid)")) {
 ```
 
 
-#### unload_dialog_ctx()
+#### unload_dialog_ctx() {#func_unload_dialog_ctx}
 
 
 The function off-loads the loaded context of another dialog, exposing
@@ -1818,7 +1818,7 @@ This function can be used from any type of route.
 For usage example, see the [load dialog ctx](#func_load_dialog_ctx)
 
 
-#### set_dlg_profile(profile, [value], [clear_values])
+#### set_dlg_profile(profile, [value], [clear_values]) {#func_set_dlg_profile}
 
 
 Inserts the current dialog into a profile. Note that if the profile does
@@ -1863,7 +1863,7 @@ set_dlg_profile("caller", $fu, true);
 ```
 
 
-#### unset_dlg_profile(profile, [value])
+#### unset_dlg_profile(profile, [value]) {#func_unset_dlg_profile}
 
 
 Removes the current dialog from a profile.
@@ -1903,7 +1903,7 @@ unset_dlg_profile("caller");
 ```
 
 
-#### is_in_profile(profile,[value])
+#### is_in_profile(profile,[value]) {#func_is_in_profile}
 
 
 Checks if the current dialog belongs to a profile. If the profile
@@ -1947,7 +1947,7 @@ if (is_in_profile("caller","XX")) {
 ```
 
 
-#### get_profile_size(profile,[value],size)
+#### get_profile_size(profile,[value],size) {#func_get_profile_size}
 
 
 Returns the number of dialogs belonging to a profile. If the profile
@@ -1989,7 +1989,7 @@ xlog("currently, the user $fu has $var(size) active outgoing calls\n");
 ```
 
 
-#### set_dlg_flag(flag)
+#### set_dlg_flag(flag) {#func_set_dlg_flag}
 
 
 Sets the dialog flag named *flag* to true. The dialog
@@ -2021,7 +2021,7 @@ set_dlg_flag("MY_DLG_FLAG");
 ```
 
 
-#### test_and_set_dlg_flag(flag, value)
+#### test_and_set_dlg_flag(flag, value) {#func_test_and_set_dlg_flag}
 
 
 Atomically checks if the dialog flag named *flag* is
@@ -2051,7 +2051,7 @@ test_and_set_dlg_flag("MY_DLG_FLAG", 0);
 ```
 
 
-#### reset_dlg_flag(flag)
+#### reset_dlg_flag(flag) {#func_reset_dlg_flag}
 
 
 Resets the dialog flag named *flag* to false.
@@ -2083,7 +2083,7 @@ reset_dlg_flag("MY_DLG_FLAG");
 ```
 
 
-#### is_dlg_flag_set(flag)
+#### is_dlg_flag_set(flag) {#func_is_dlg_flag_set}
 
 
 Returns true if the dialog flag named *flag* is set.
@@ -2117,7 +2117,7 @@ if (is_dlg_flag_set("MY_DLG_FLAG")) {
 ```
 
 
-#### store_dlg_value(name,val)
+#### store_dlg_value(name,val) {#func_store_dlg_value}
 
 
 Attaches to the dialog the value from the variable *val*
@@ -2158,7 +2158,7 @@ $dlg_val(account_type) = "prepaid";
 ```
 
 
-#### fetch_dlg_value(name,val)
+#### fetch_dlg_value(name,val) {#func_fetch_dlg_value}
 
 
 Fetches from the dialog the value of attribute named
@@ -2199,7 +2199,7 @@ $var(account) = $dlg_val(account_type);
 ```
 
 
-#### set_dlg_sharing_tag(tag_name)
+#### set_dlg_sharing_tag(tag_name) {#func_set_dlg_sharing_tag}
 
 
 Marks the current dialog with the sharing tag *tag_name*.
@@ -2235,7 +2235,7 @@ set_dlg_sharing_tag("vip1");
 ```
 
 
-#### dlg_on_answer([route_name])
+#### dlg_on_answer([route_name]) {#func_dlg_on_answer}
 
 
 The function arms a script route to be executed when the current
@@ -2277,7 +2277,7 @@ route[dlg_answered] {
 ```
 
 
-#### dlg_on_timeout([route_name])
+#### dlg_on_timeout([route_name]) {#func_dlg_on_timeout}
 
 
 The function arms a script route to be executed when (and if) the 
@@ -2328,7 +2328,7 @@ route[dlg_timeout] {
 ```
 
 
-#### dlg_on_hangup([route_name])
+#### dlg_on_hangup([route_name]) {#func_dlg_on_hangup}
 
 
 The function arms a script route to be executed when the current
@@ -2370,7 +2370,7 @@ route[dlg_hangup] {
 ```
 
 
-#### dlg_send_sequential(method, leg, [, body] [, content-type] [, headers])
+#### dlg_send_sequential(method, leg, [, body] [, content-type] [, headers]) {#func_dlg_send_sequential}
 
 
 Used to send an in-dialog request towards one if the dialog's legs.
@@ -2423,7 +2423,7 @@ event_route[E_RTPPROXY_DTMF] {
 ```
 
 
-#### dlg_inc_cseq([tag, ][inc])
+#### dlg_inc_cseq([tag, ][inc]) {#func_dlg_inc_cseq}
 
 
 Increments the dialog's generated CSeq associated to the leg
@@ -2463,36 +2463,36 @@ route {
 ```
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
-#### active_dialogs
+#### active_dialogs {#stat_active_dialogs}
 
 
 Returns the number of current active dialogs (may be confirmed or
 			not).
 
 
-#### early_dialogs
+#### early_dialogs {#stat_early_dialogs}
 
 
 Returns the number of early dialogs.
 
 
-#### processed_dialogs
+#### processed_dialogs {#stat_processed_dialogs}
 
 
 Returns the total number of processed dialogs (terminated,
 			expired or active) from the startup.
 
 
-#### expired_dialogs
+#### expired_dialogs {#stat_expired_dialogs}
 
 
 Returns the total number of expired dialogs from the startup.
 
 
-#### failed_dialogs
+#### failed_dialogs {#stat_failed_dialogs}
 
 
 Returns the number of failed dialogs ( dialogs were
@@ -2500,7 +2500,7 @@ Returns the number of failed dialogs ( dialogs were
 			negative reply, cancelled, etc )
 
 
-#### create_sent
+#### create_sent {#stat_create_sent}
 
 
 Returns the number of replicated dialog
@@ -2508,7 +2508,7 @@ Returns the number of replicated dialog
 			instances.
 
 
-#### update_sent
+#### update_sent {#stat_update_sent}
 
 
 Returns the number of replicated dialog
@@ -2516,7 +2516,7 @@ Returns the number of replicated dialog
 			instances.
 
 
-#### delete_sent
+#### delete_sent {#stat_delete_sent}
 
 
 Returns the number of replicated dialog
@@ -2524,7 +2524,7 @@ Returns the number of replicated dialog
 			instances.
 
 
-#### create_recv
+#### create_recv {#stat_create_recv}
 
 
 Returns the number of dialog
@@ -2532,7 +2532,7 @@ Returns the number of dialog
 			OpenSIPS instances.
 
 
-#### update_recv
+#### update_recv {#stat_update_recv}
 
 
 Returns the number of dialog
@@ -2540,7 +2540,7 @@ Returns the number of dialog
 			OpenSIPS instances.
 
 
-#### delete_recv
+#### delete_recv {#stat_delete_recv}
 
 
 Returns the number of dialog
@@ -2548,10 +2548,10 @@ Returns the number of dialog
 			OpenSIPS instances.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dialog:list
+#### dialog:list {#mi_list}
 
 
 Replaces obsolete MI command: *dlg_list*.
@@ -2603,7 +2603,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:list_ctx
+#### dialog:list_ctx {#mi_list_ctx}
 
 
 Replaces obsolete MI command: *dlg_list_ctx*.
@@ -2633,7 +2633,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:end_dlg
+#### dialog:end_dlg {#mi_end_dlg}
 
 
 Replaces obsolete MI command: *dlg_end_dlg*.
@@ -2677,7 +2677,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:profile_get_size
+#### dialog:profile_get_size {#mi_profile_get_size}
 
 
 Replaces obsolete MI command: *profile_get_size*.
@@ -2712,7 +2712,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:profile_list_dlgs
+#### dialog:profile_list_dlgs {#mi_profile_list_dlgs}
 
 
 Replaces obsolete MI command: *profile_list_dlgs*.
@@ -2749,7 +2749,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:profile_get_values
+#### dialog:profile_get_values {#mi_profile_get_values}
 
 
 Replaces obsolete MI command: *profile_get_values*.
@@ -2780,7 +2780,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:profile_end_dlgs
+#### dialog:profile_end_dlgs {#mi_profile_end_dlgs}
 
 
 Replaces obsolete MI command: *profile_end_dlgs*.
@@ -2810,7 +2810,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:db_sync
+#### dialog:db_sync {#mi_db_sync}
 
 
 Replaces obsolete MI command: *dlg_db_sync*.
@@ -2837,7 +2837,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:cluster_sync
+#### dialog:cluster_sync {#mi_cluster_sync}
 
 
 Replaces obsolete MI command: *dlg_cluster_sync*.
@@ -2872,7 +2872,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:restore_db
+#### dialog:restore_db {#mi_restore_db}
 
 
 Replaces obsolete MI command: *dlg_restore_db*.
@@ -2897,7 +2897,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:list_all_profiles
+#### dialog:list_all_profiles {#mi_list_all_profiles}
 
 
 Replaces obsolete MI command: *list_all_profiles*.
@@ -2922,7 +2922,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:push_var
+#### dialog:push_var {#mi_push_var}
 
 
 Replaces obsolete MI command: *dlg_push_var*.
@@ -2951,7 +2951,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:send_sequential
+#### dialog:send_sequential {#mi_send_sequential}
 
 
 Replaces obsolete MI command: *dlg_send_sequential*.
@@ -3068,7 +3068,7 @@ MI Command used to send REFER to the callee, and add Refer-To header:
 ```
 
 
-#### dialog:set_profile
+#### dialog:set_profile {#mi_set_profile}
 
 
 Replaces obsolete MI command: *set_dlg_profile*.
@@ -3098,7 +3098,7 @@ MI FIFO Command Format:
 ```
 
 
-#### dialog:unset_profile
+#### dialog:unset_profile {#mi_unset_profile}
 
 
 Replaces obsolete MI command: *unset_dlg_profile*.
@@ -3127,17 +3127,17 @@ MI FIFO Command Format:
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $DLG_count
+#### $DLG_count {#pv_DLG_count}
 
 
 Returns the number of current active dialogs (may be confirmed or
 			not).
 
 
-#### $DLG_status
+#### $DLG_status {#pv_DLG_status}
 
 
 Returns the status of the dialog corresponding to the processed
@@ -3161,7 +3161,7 @@ Value may be:
 - *5* - Dialog ended.
 
 
-#### $DLG_lifetime
+#### $DLG_lifetime {#pv_DLG_lifetime}
 
 
 Returns the duration (in seconds) of the dialog corresponding to
@@ -3173,7 +3173,7 @@ Returns the duration (in seconds) of the dialog corresponding to
 NULL will be returned if there is no dialog for the request.
 
 
-#### $DLG_flags
+#### $DLG_flags {#pv_DLG_flags}
 
 
 Returns the dialog flags (as a list of flag names separted by space)
@@ -3185,7 +3185,7 @@ Returns the dialog flags (as a list of flag names separted by space)
 NULL will be returned if there is no dialog for the request.
 
 
-#### $DLG_dir
+#### $DLG_dir {#pv_DLG_dir}
 
 
 Returns the direction of the request in dialog (as "upstream" string
@@ -3198,7 +3198,7 @@ Returns the direction of the request in dialog (as "upstream" string
 NULL will be returned if there is no dialog for the request.
 
 
-#### $DLG_did
+#### $DLG_did {#pv_DLG_did}
 
 
 Returns the id of the dialog corresponding to
@@ -3210,7 +3210,7 @@ Returns the id of the dialog corresponding to
 NULL will be returned if there is no dialog for the request.
 
 
-#### $DLG_end_reason
+#### $DLG_end_reason {#pv_DLG_end_reason}
 
 
 Returns the reason for the dialog termination. It can be
@@ -3231,7 +3231,7 @@ NULL will be returned if there is no dialog for the request,
 				or if the dialog is not ended in the current context.
 
 
-#### $DLG_timeout
+#### $DLG_timeout {#pv_DLG_timeout}
 
 
 Used to set the dialog lifetime (in seconds). When read, the variable
@@ -3246,7 +3246,7 @@ NULL will be returned if there is no dialog for the request, otherwise the
 				number of seconds until the dialog expiration.
 
 
-#### $DLG_del_delay
+#### $DLG_del_delay {#pv_DLG_del_delay}
 
 
 Used to set the dialog deletion delay (in seconds) for the
@@ -3261,7 +3261,7 @@ The variable must be used when the context of a dialog is
 				available in script.
 
 
-#### $DLG_json
+#### $DLG_json {#pv_DLG_json}
 
 
 The variable is read-only and exposes a JSON variable containing all the information that the dialog:list MI function contains
@@ -3270,7 +3270,7 @@ The variable is read-only and exposes a JSON variable containing all the informa
 NULL will be returned if there is no dialog for the request, otherwise the JSON will be returned.
 
 
-#### $DLG_ctx_json
+#### $DLG_ctx_json {#pv_DLG_ctx_json}
 
 
 The variable is read-only and exposes a JSON variable containing all the information that the dialog:list_ctx MI function contains ( on top of $DLG_json, this will expose the full list of dialog vars and profile links for the current dialog )
@@ -3279,7 +3279,7 @@ The variable is read-only and exposes a JSON variable containing all the informa
 NULL will be returned if there is no dialog for the request, otherwise the JSON will be returned.
 
 
-#### $dlg_val(name)
+#### $dlg_val(name) {#pv_dlg_val}
 
 
 This is a read/write variable that allows access to the dialog
@@ -3298,10 +3298,10 @@ The variable accepts dynamic names, meaning the name may contain
 NULL will be returned if there is no dialog for the request.
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_DLG_STATE_CHANGED
+#### E_DLG_STATE_CHANGED {#event_E_DLG_STATE_CHANGED}
 
 
 This event is raised when the dialog state is changed.
@@ -3474,10 +3474,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -3509,7 +3509,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -3535,10 +3535,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Stefan-Cristian Mititelu, Ryan Bullock, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Norman Brandinger ([@NormB](https://github.com/NormB)), Anca Vamanu, Andrei Dragus, Hugues Mitonneau, Klaus Darilion, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Michel Bensoussan, Andy Pyles, Elena-Ramona Modroiu.

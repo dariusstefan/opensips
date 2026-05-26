@@ -6,7 +6,7 @@ description: "*qrouting* is a module which sits on top of [drouting](../drouting
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 *qrouting* is a module which sits on top of
@@ -25,7 +25,7 @@ description: "*qrouting* is a module which sits on top of [drouting](../drouting
 			demoted to the end of the routing list
 
 
-### Monitored Statistics
+### Monitored Statistics {#monitored_statistics}
 
 
 The module keeps track of a series of statistics, for each drouting
@@ -54,10 +54,10 @@ The module keeps track of a series of statistics, for each drouting
 				state advances to *"ended"*).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#deps_modules}
 
 
 The following modules must be loaded for this module to work:
@@ -70,10 +70,10 @@ The following modules must be loaded for this module to work:
 - *drouting*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 An SQL database URL.
@@ -91,7 +91,7 @@ modparam("qrouting", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The name of the quality-based routing profiles table.
@@ -109,7 +109,7 @@ modparam("qrouting", "table_name", "qr_profiles_bak")
 ```
 
 
-#### algorithm (integer)
+#### algorithm (integer) {#param_algorithm}
 
 
 Quality-based destination selection/balancing algorithm to use.
@@ -153,7 +153,7 @@ modparam("qrouting", "algorithm", "best-dest-first")
 ```
 
 
-#### history_span (integer)
+#### history_span (integer) {#param_history_span}
 
 
 The duration (in minutes) that a gateway's statistics for a given call
@@ -172,7 +172,7 @@ modparam("qrouting", "history_span", 15)
 ```
 
 
-#### sampling_interval (integer)
+#### sampling_interval (integer) {#param_sampling_interval}
 
 
 The duration (in seconds) of the statistics sampling window.  Every
@@ -199,7 +199,7 @@ modparam("qrouting", "sampling_interval", 5)
 ```
 
 
-#### extra_stats (string)
+#### extra_stats (string) {#param_extra_stats}
 
 
 A semicolon-separated list of custom statistics to be additionally kept
@@ -248,7 +248,7 @@ modparam("qrouting", "extra_stats", "+mos/60; +r_factor; -503_replies/100")
 ```
 
 
-#### min_samples_asr (integer)
+#### min_samples_asr (integer) {#param_min_samples_asr}
 
 
 The minimally accepted amount of sampled ASR statistics for each
@@ -269,7 +269,7 @@ modparam("qrouting", "min_samples_asr", 50)
 ```
 
 
-#### min_samples_ccr (integer)
+#### min_samples_ccr (integer) {#param_min_samples_ccr}
 
 
 The minimally accepted amount of sampled CCR statistics for each
@@ -290,7 +290,7 @@ modparam("qrouting", "min_samples_ccr", 50)
 ```
 
 
-#### min_samples_pdd (integer)
+#### min_samples_pdd (integer) {#param_min_samples_pdd}
 
 
 The minimally accepted amount of sampled PDD statistics for each
@@ -311,7 +311,7 @@ modparam("qrouting", "min_samples_pdd", 15)
 ```
 
 
-#### min_samples_ast (integer)
+#### min_samples_ast (integer) {#param_min_samples_ast}
 
 
 The minimally accepted amount of sampled AST statistics for each
@@ -332,7 +332,7 @@ modparam("qrouting", "min_samples_ast", 15)
 ```
 
 
-#### min_samples_acd (integer)
+#### min_samples_acd (integer) {#param_min_samples_acd}
 
 
 The minimally accepted amount of sampled ACD statistics for each
@@ -353,7 +353,7 @@ modparam("qrouting", "min_samples_acd", 30)
 ```
 
 
-#### event_bad_dst_threshold (string)
+#### event_bad_dst_threshold (string) {#param_event_bad_dst_threshold}
 
 
 The minimally accepted quality of a (prefix, destination) combination,
@@ -375,7 +375,7 @@ modparam("qrouting", "event_bad_dst_threshold", "0.5")
 ```
 
 
-#### decimal_digits (string)
+#### decimal_digits (string) {#param_decimal_digits}
 
 
 The amount of decimal digits to use in logging or MI output.
@@ -393,11 +393,11 @@ modparam("qrouting", "decimal_digits", 4)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### qr_set_xstat(rule_id, gw_name, stat_name,
-										inc_by, [part], [inc_total])
+										inc_by, [part], [inc_total]) {#func_qr_set_xstat}
 
 
 Provide a new sample value for an extra statistic on a given (prefix,
@@ -441,7 +441,7 @@ qr_set_xstat($var(rule_id), $var(gw_name), "mos", $var(mos_score));
 ```
 
 
-#### qr_disable_dst(rule_id, dst_name, [part])
+#### qr_disable_dst(rule_id, dst_name, [part]) {#func_qr_disable_dst}
 
 
 Within a given routing rule, temporarily remove the given gateway or
@@ -476,7 +476,7 @@ event_route [E_QROUTING_BAD_DST]
 ```
 
 
-#### qr_enable_dst(rule_id, dst_name, [part])
+#### qr_enable_dst(rule_id, dst_name, [part]) {#func_qr_enable_dst}
 
 
 Within a given routing rule, re-introduce the given gateway or
@@ -506,10 +506,10 @@ qr_enable_dst($param(rule_id), $param(dst_name), $param(partition));
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### qrouting:reload
+#### qrouting:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *qr_reload*.
@@ -527,7 +527,7 @@ opensips-cli -x mi qrouting:reload
 ```
 
 
-#### qrouting:status
+#### qrouting:status {#mi_status}
 
 
 Replaces obsolete MI command: *qr_status*.
@@ -561,7 +561,7 @@ opensips-cli -x mi qrouting:status pstn 17 MY-CARR-7
 ```
 
 
-#### qrouting:disable_dst
+#### qrouting:disable_dst {#mi_disable_dst}
 
 
 Replaces obsolete MI command: *qr_disable_dst*.
@@ -590,7 +590,7 @@ opensips-cli -x mi qrouting:disable_dst pstn 81 MY-GW-3
 ```
 
 
-#### qrouting:enable_dst
+#### qrouting:enable_dst {#mi_enable_dst}
 
 
 Replaces obsolete MI command: *qr_enable_dst*.
@@ -618,10 +618,10 @@ opensips-cli -x mi qrouting:enable_dst pstn 81 MY-GW-3
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_QROUTING_BAD_DST
+#### E_QROUTING_BAD_DST {#event_E_QROUTING_BAD_DST}
 
 
 This event may be raised during routing, asynchronously, whenever the
@@ -637,10 +637,10 @@ Parameters:
 - *dst_name* - name of the concerned gateway or carrier
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -665,7 +665,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -684,10 +684,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

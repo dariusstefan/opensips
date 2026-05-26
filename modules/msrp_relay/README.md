@@ -6,7 +6,7 @@ description: "This modules implements a Relay for the MSRP protocol, according t
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This modules implements a Relay for the MSRP protocol, according to
@@ -19,7 +19,7 @@ For authenticating MSRP clients, a dedicated script route is run in order
     	to check the Digest credentials via pseudo-variables.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -44,10 +44,10 @@ The following libraries or applications must be installed
 					*libssl-dev*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (int)
+#### hash_size (int) {#param_hash_size}
 
 
 The size of the hash table that stores the MSRP sessions.
@@ -69,7 +69,7 @@ modparam("msrp_relay", "hash_size", 10)
 ```
 
 
-#### cleanup_interval (int)
+#### cleanup_interval (int) {#param_cleanup_interval}
 
 
 The interval between full iterations of the sessions table
@@ -92,7 +92,7 @@ modparam("msrp_relay", "cleanup_interval", 30)
 ```
 
 
-#### auth_route (str)
+#### auth_route (str) {#param_auth_route}
 
 
 The name of the script route to be called when authorizing
@@ -116,7 +116,7 @@ modparam("msrp_relay", "auth_route", "auth")
 ```
 
 
-#### username_var (string)
+#### username_var (string) {#param_username_var}
 
 
 This name of the pseudo-variable that holds the authentication
@@ -134,7 +134,7 @@ modparam("msrp_relay", "username_var", "$var(msrp_auth_user)")
 ```
 
 
-#### realm_var (string)
+#### realm_var (string) {#param_realm_var}
 
 
 This name of the pseudo-variable that hols the authentication
@@ -152,7 +152,7 @@ modparam("msrp_relay", "realm_var", "$var(msrp_auth_realm)")
 ```
 
 
-#### password_var (string)
+#### password_var (string) {#param_password_var}
 
 
 This name of the pseudo-variable that should be set in the
@@ -173,7 +173,7 @@ modparam("msrp_relay", "password_var", "$var(msrp_auth_password)")
 ```
 
 
-#### calculate_ha1 (integer)
+#### calculate_ha1 (integer) {#param_calculate_ha1}
 
 
 This parameter configures whether the value of the
@@ -192,7 +192,7 @@ modparam("msrp_relay", "calculate_ha1", 1)
 ```
 
 
-#### socket_route (str)
+#### socket_route (str) {#param_socket_route}
 
 
 The optional name of the script route to be called when
@@ -244,7 +244,7 @@ route[msrp_routing] {
 ```
 
 
-#### dst_schema_var (string)
+#### dst_schema_var (string) {#param_dst_schema_var}
 
 
 This name of the variable to provide the schema ("msrp" or "msrps")
@@ -255,7 +255,7 @@ This name of the variable to provide the schema ("msrp" or "msrps")
 Default value is "$var(dst_schema)".
 
 
-#### dst_host_var (string)
+#### dst_host_var (string) {#param_dst_host_var}
 
 
 This name of the variable to provide the host of the 
@@ -266,7 +266,7 @@ This name of the variable to provide the host of the
 Default value is "$var(dst_host)".
 
 
-#### auth_realm (string)
+#### auth_realm (string) {#param_auth_realm}
 
 
 The realm to be provided in the WWW-Authenticate header when the relay
@@ -285,7 +285,7 @@ modparam("msrp_relay", "auth_realm", "opensips.org")
 ```
 
 
-#### auth_expires (int)
+#### auth_expires (int) {#param_auth_expires}
 
 
 The *Expires* header value to be provided in the 200 OK
@@ -309,7 +309,7 @@ modparam("msrp_relay", "auth_expires", 600)
 ```
 
 
-#### auth_min_expires (int)
+#### auth_min_expires (int) {#param_auth_min_expires}
 
 
 The minimum value accepted by the relay in the *Expires*
@@ -333,7 +333,7 @@ modparam("msrp_relay", "auth_min_expires", 60)
 ```
 
 
-#### auth_max_expires (int)
+#### auth_max_expires (int) {#param_auth_max_expires}
 
 
 The maximum value accepted by the relay in the *Expires*
@@ -357,7 +357,7 @@ modparam("msrp_relay", "auth_max_expires", 60)
 ```
 
 
-#### nonce_expire (integer)
+#### nonce_expire (integer) {#param_nonce_expire}
 
 
 Nonces have limited lifetime. After a given period of time nonces 
@@ -381,7 +381,7 @@ modparam("msrp_relay", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
 
-#### my_uri (string)
+#### my_uri (string) {#param_my_uri}
 
 
 MSRP URI of this relay, that will be matched against the first URI in
@@ -408,10 +408,10 @@ modparam("msrp_relay", "my_uri", "msrp://opensips.org:2855;tcp")
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -433,7 +433,7 @@ modparam("msrp_relay", "my_uri", "msrp://opensips.org:2855;tcp")
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -449,10 +449,10 @@ modparam("msrp_relay", "my_uri", "msrp://opensips.org:2855;tcp")
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

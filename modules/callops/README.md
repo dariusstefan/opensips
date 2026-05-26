@@ -6,7 +6,7 @@ description: "This module provides a set of functions that allow the user to con
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a set of functions that allow the user to control
@@ -62,10 +62,10 @@ if (has_totag() && loose_route() &&
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
-#### OpenSIPS Modules
+#### OpenSIPS Modules {#callops_modules_dependencies}
 
 
 The following modules must be loaded before this module:
@@ -75,7 +75,7 @@ The following modules must be loaded before this module:
 - *Dialog* - Dialog module for keeping track of the proxied calls.
 
 
-#### External Libraries or Applications
+#### External Libraries or Applications {#callops_external_dependencies}
 
 
 The following libraries or applications must be installed before
@@ -85,10 +85,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### mode (string/integer)
+#### mode (string/integer) {#param_mode}
 
 
 This parameter can be used to change the mode that the module
@@ -127,7 +127,7 @@ modparam("callops", "mode", "manual") # use your own logic
 ```
 
 
-#### match_param (string)
+#### match_param (string) {#param_match_param}
 
 
 The parameter used to match the different calls together. This is
@@ -149,10 +149,10 @@ modparam("callops", "match_param", "call")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### call_blind_replace(callid[, leg])
+#### call_blind_replace(callid[, leg]) {#func_call_blind_replace}
 
 
 When *manual mode* is used, this function is
@@ -191,7 +191,7 @@ if (!has_totag() && is_method("INVITE")) {
 ```
 
 
-#### call_transfer_notify()
+#### call_transfer_notify() {#func_call_transfer_notify}
 
 
 When *manual mode* is used, this function should
@@ -220,7 +220,7 @@ if (has_totag() && is_method("NOTIFY") && loose_route()) {
 ```
 
 
-#### call_transfer(leg, destination) or
+#### call_transfer(leg, destination) or {#func_call_blind_transfer}
 
 
 This function triggers a blind call transfer by sending a REFER
@@ -255,7 +255,7 @@ if (has_totag() && && loose_route()) {
 ```
 
 
-#### call_transfer(leg, transfer_callid, transfer_leg[, destination]) or
+#### call_transfer(leg, transfer_callid, transfer_leg[, destination]) or {#func_call_attended_transfer}
 
 
 This function triggers an attended call transfer by sending a REFER
@@ -297,10 +297,10 @@ if (has_totag() && && loose_route()) {
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### callops:transfer
+#### callops:transfer {#mi_transfer}
 
 
 Replaces obsolete MI command: *call_transfer*.
@@ -378,7 +378,7 @@ opensips-cli -x mi callops:transfer \
 ```
 
 
-#### callops:hold
+#### callops:hold {#mi_hold}
 
 
 Replaces obsolete MI command: *call_hold*.
@@ -426,7 +426,7 @@ opensips-cli -x mi callops:hold \
 ```
 
 
-#### callops:unhold
+#### callops:unhold {#mi_unhold}
 
 
 Replaces obsolete MI command: *call_unhold*.
@@ -473,10 +473,10 @@ opensips-cli -x mi callops:unhold \
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_CALL_TRANSFER
+#### E_CALL_TRANSFER {#event_E_CALL_TRANSFER}
 
 
 This event is triggered during a call transfer scenario.
@@ -525,7 +525,7 @@ Parameters:
 					the success or failure of the call.
 
 
-#### E_CALL_HOLD
+#### E_CALL_HOLD {#event_E_CALL_HOLD}
 
 
 Triggered during the process of putting a call on hold, or resuming
@@ -557,10 +557,10 @@ Parameters:
 					the action failed.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -584,7 +584,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -602,10 +602,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

@@ -6,7 +6,7 @@ description: "The LDAP module implements an LDAP search interface for OpenSIPS. 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The LDAP module implements an LDAP search interface for OpenSIPS. It exports script functions to perform an LDAP search operation and to store the search results as OpenSIPS AVPs. This allows for using LDAP directory data in the OpenSIPS SIP message routing script.
@@ -49,7 +49,7 @@ The result of an LDAP search is stored internally and can be accessed with one o
 All `ldap_result*` functions do always access the LDAP result set from the last `ldap_search` call. This should be kept in mind when calling `ldap_search` more than once in the OpenSIPS configuration script.
 
 
-#### LDAP URLs
+#### LDAP URLs {#ldap-urls}
 
 
 `ldap_search` expects an LDAP URL as argument. This section describes the format and semantics of an LDAP URL.
@@ -112,7 +112,7 @@ LDAP search filter definition following rules of RFC 4515
 	  rules.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -136,7 +136,7 @@ The following libraries or applications must be installed before
             (libldap-dev) are needed for compilation
 
 
-### LDAP Configuration File
+### LDAP Configuration File {#ldap-config}
 
 
 The module reads an external confiuration file at module
@@ -437,10 +437,10 @@ ldap_client_bind_timeout = 500
 ```
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### config_file (string)
+#### config_file (string) {#param_config_file}
 
 
 Full path to LDAP configuration file.
@@ -459,7 +459,7 @@ modparam("ldap", "config_file", "/etc/opensips/ldap.ini")
 ```
 
 
-#### max_async_connections (int)
+#### max_async_connections (int) {#param_max_async_connections}
 
 
 Number of maximum asynchronous connections that will be started
@@ -481,10 +481,10 @@ modparam("ldap", "max_async_connections", 50)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### ldap_search(ldap_url)
+#### ldap_search(ldap_url) {#ldap-search-fn}
 
 
 Performs an LDAP search operation using given LDAP URL and stores result
@@ -591,7 +591,7 @@ ldap_result("telephoneNumber/$avp(tel_number)");
 ```
 
 
-#### ldap_result(ldap_attr_name, avp_spec, [avp_type], [regex_subst])
+#### ldap_result(ldap_attr_name, avp_spec, [avp_type], [regex_subst]) {#ldap-result-fn}
 
 
 This function converts LDAP attribute values into AVPs for later
@@ -695,7 +695,7 @@ ldap_result("SIPIdentitySIPURI", $avp(10), "/^[^@]+@(.+)$/\1/");
 
 
 #### ldap_result_check(ldap_attr_name, string_to_match, [,
-        regex_subst])
+        regex_subst]) {#ldap-result-check-fn}
 
 
 This function compares `ldap_attr_name`'s value
@@ -788,7 +788,7 @@ if (!ldap_result_check("sn", $ru, "/^sip:([^@]).*$/\1/"))
 ```
 
 
-#### ldap_result_next()
+#### ldap_result_next() {#ldap-result-next-fn}
 
 
 An LDAP search operation can return multiple LDAP entries. This
@@ -847,7 +847,7 @@ if (ldap_result_next())
 ```
 
 
-#### ldap_filter_url_encode(string, avp_spec)
+#### ldap_filter_url_encode(string, avp_spec) {#ldap-filter-url-encode-fn}
 
 
 This function applies the following escaping rules to
@@ -929,7 +929,7 @@ if (ldap_search(
 ### Exported Async Functions
 
 
-#### ldap_search(ldap_url)
+#### ldap_search(ldap_url) {#ldap-search-async-fn}
 
 
 Performs an LDAP search operation using given LDAP URL and stores result
@@ -1562,10 +1562,10 @@ return 0;
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1597,7 +1597,7 @@ return 0;
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1623,10 +1623,10 @@ return 0;
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Christian Schlatter.

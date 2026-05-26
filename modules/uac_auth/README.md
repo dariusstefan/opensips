@@ -6,7 +6,7 @@ description: "UAC AUTH (User Agent Client Authentication) module provides a comm
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 UAC AUTH (User Agent Client Authentication) module provides a
@@ -22,7 +22,7 @@ Note that authentication provided by this module supports both
 		by the server, "auth" will be prefered.
 
 
-#### RFC 8760 Support (Strenghtened Authentication)
+#### RFC 8760 Support (Strenghtened Authentication) {#rfc-8760-support}
 
 
 Starting with OpenSIPS 3.2, the [auth](auth),
@@ -34,7 +34,7 @@ Starting with OpenSIPS 3.2, the [auth](auth),
 	        specs.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -53,10 +53,10 @@ The following libraries or applications must be installed
 - *None*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### credential (string)
+#### credential (string) {#param_credential}
 
 
 Contains a multiple definition of credentials used to perform
@@ -83,7 +83,7 @@ modparam("uac_auth","credential","username:domain:0xc17ba8157756f263d07e15850420
 ```
 
 
-#### auth_realm_avp (string)
+#### auth_realm_avp (string) {#param_auth_realm_avp}
 
 
 The definition of an AVP that might contain the realm to be used
@@ -108,7 +108,7 @@ modparam("uac_auth","auth_realm_avp","$avp(10)")
 ```
 
 
-#### auth_username_avp (string)
+#### auth_username_avp (string) {#param_auth_username_avp}
 
 
 The definition of an AVP that might contain the username to be used
@@ -133,7 +133,7 @@ modparam("uac_auth","auth_username_avp","$avp(11)")
 ```
 
 
-#### auth_password_avp (string)
+#### auth_password_avp (string) {#param_auth_password_avp}
 
 
 The definition of an AVP that might contain the password to be used
@@ -161,10 +161,10 @@ modparam("uac_auth","auth_password_avp","$avp(12)")
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -191,7 +191,7 @@ modparam("uac_auth","auth_password_avp","$avp(12)")
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -212,10 +212,10 @@ modparam("uac_auth","auth_password_avp","$avp(12)")
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).

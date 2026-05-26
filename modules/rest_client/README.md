@@ -6,14 +6,14 @@ description: "The *rest_client* module provides a means of interacting with an H
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *rest_client* module provides a means of interacting
 	with an HTTP server by doing RESTful queries, such as GET, POST and PUT.
 
 
-### TCP Connection Reusage
+### TCP Connection Reusage {#tcp-connection-reusage}
 
 
 Unless specified otherwise by the server through a "Connection: close"
@@ -23,7 +23,7 @@ Unless specified otherwise by the server through a "Connection: close"
 	workers — each worker maintains its own set of connections.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -45,10 +45,10 @@ The following libraries or applications must be installed before
 - *libcurl*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### curl_timeout (integer)
+#### curl_timeout (integer) {#param_curl_timeout}
 
 
 The maximum allowed time for any HTTP(S) transfer to complete.  This
@@ -70,7 +70,7 @@ modparam("rest_client", "curl_timeout", 10)
 ```
 
 
-#### connection_timeout (integer)
+#### connection_timeout (integer) {#param_connection_timeout}
 
 
 The maximum allowed time to establish a connection with the server.
@@ -89,7 +89,7 @@ modparam("rest_client", "connection_timeout", 4)
 ```
 
 
-#### connect_poll_interval (integer)
+#### connect_poll_interval (integer) {#param_connect_poll_interval}
 
 
 Only relevant with async requests.  Allows complete control over how
@@ -112,7 +112,7 @@ modparam("rest_client", "connect_poll_interval", 2)
 ```
 
 
-#### max_async_transfers (integer)
+#### max_async_transfers (integer) {#param_max_async_transfers}
 
 
 Maximum number of asynchronous HTTP transfers *a single*
@@ -134,7 +134,7 @@ modparam("rest_client", "max_async_transfers", 300)
 ```
 
 
-#### max_transfer_size (integer)
+#### max_transfer_size (integer) {#param_max_transfer_size}
 
 
 The maximum allowed size of a single transfer (download).  Reaching
@@ -156,7 +156,7 @@ modparam("rest_client", "max_transfer_size", 64)
 ```
 
 
-#### ssl_verifypeer (integer)
+#### ssl_verifypeer (integer) {#param_ssl_verifypeer}
 
 
 Set this to 0 in order to disable the verification of the remote peer's
@@ -177,7 +177,7 @@ modparam("rest_client", "ssl_verifypeer", 0)
 ```
 
 
-#### ssl_verifyhost (integer)
+#### ssl_verifyhost (integer) {#param_ssl_verifyhost}
 
 
 Set this to 0 in order to disable the verification that the remote peer
@@ -197,7 +197,7 @@ modparam("rest_client", "ssl_verifyhost", 0)
 ```
 
 
-#### ssl_capath (integer)
+#### ssl_capath (integer) {#param_ssl_capath}
 
 
 An optional path for CA certificates to be used for host verifications.
@@ -213,7 +213,7 @@ modparam("rest_client", "ssl_capath", "/home/opensips/ca_certificates")
 ```
 
 
-#### curl_http_version (integer)
+#### curl_http_version (integer) {#param_curl_http_version}
 
 
 Use a specific HTTP version for all requests. Possible values:
@@ -249,7 +249,7 @@ modparam("rest_client", "curl_http_version", 3)
 ```
 
 
-#### enable_expect_100 (boolean)
+#### enable_expect_100 (boolean) {#param_enable_expect_100}
 
 
 Include a "Expect: 100-continue" HTTP header field whenever the body
@@ -271,7 +271,7 @@ modparam("rest_client", "enable_expect_100", true)
 ```
 
 
-#### no_concurrent_connects (boolean)
+#### no_concurrent_connects (boolean) {#param_no_concurrent_connects}
 
 
 Set to *true* in order to only allow one OpenSIPS
@@ -306,7 +306,7 @@ modparam("rest_client", "no_concurrent_connects", true)
 ```
 
 
-#### curl_conn_lifetime (integer)
+#### curl_conn_lifetime (integer) {#param_curl_conn_lifetime}
 
 
 Only relevant when [no concurrent connects](#param_no_concurrent_connects) is enabled.
@@ -337,10 +337,10 @@ modparam("rest_client", "curl_conn_lifetime", 1800)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### rest_get(url, body_pv, [ctype_pv], [retcode_pv])
+#### rest_get(url, body_pv, [ctype_pv], [retcode_pv]) {#func_rest_get}
 
 
 Perform a blocking HTTP GET on the given *url* and
@@ -413,7 +413,7 @@ if ($var(rcode) != 200) {
 
 #### rest_post(url, send_body, [send_ctype],
 				recv_body_pv, [recv_ctype_pv], [retcode_pv])
-		
+		 {#func_rest_post}
 
 
 Perform a blocking HTTP POST on the given *url*.
@@ -493,7 +493,7 @@ if ($var(rcode) != 200) {
 
 #### rest_put(url, send_body, [send_ctype],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		
+		 {#func_rest_put}
 
 
 Perform a blocking HTTP PUT on the given *url*.
@@ -570,7 +570,7 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### rest_append_hf(txt)
+#### rest_append_hf(txt) {#func_rest_append_hf}
 
 
 Append *txt* to the HTTP headers of the subsequent request.
@@ -605,7 +605,7 @@ $var(rc) = rest_get("http://getcredit.org/?account=$fU", $var(credit));
 ```
 
 
-#### rest_init_client_tls(tls_client_domain)
+#### rest_init_client_tls(tls_client_domain) {#func_rest_init_client_tls}
 
 
 Force a specific TLS domain to be used at most once, during the next
@@ -643,7 +643,7 @@ if (!rest_get("https://example.com"))
 
 
 #### rest_get(url, body_pv[, [ctype_pv][, [retcode_pv]]])
-		
+		 {#afunc_rest_get}
 
 
 Perform an asynchronous HTTP GET.  This function behaves exactly the same as
@@ -684,7 +684,7 @@ route [resume] {
 
 #### rest_post(url, send_body_pv, [send_ctype_pv],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		
+		 {#afunc_rest_post}
 
 
 Perform an asynchronous HTTP POST.  This function behaves exactly the same as
@@ -724,7 +724,7 @@ route [resume] {
 
 #### rest_put(url, send_body_pv, [send_ctype_pv],
 				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		
+		 {#afunc_rest_put}
 
 
 Perform an asynchronous HTTP PUT.  This function behaves exactly the same as
@@ -762,7 +762,7 @@ route [resume] {
 ```
 
 
-### Exported script transformations
+### Exported script transformations {#exported_transformations}
 
 
 The module also provides a way for encoding and decoding parameters
@@ -774,7 +774,7 @@ The module also provides a way for encoding and decoding parameters
 			method curl_easy_escape (or curl_escape for libcurl < 7.15.4).
 
 
-#### {rest.escape}
+#### {rest.escape} {#tran_rest.escape}
 
 
 The result of this transformation is to produce percent encoded string value which can be safely used in URI construction.
@@ -799,7 +799,7 @@ $var(rc) = rest_get("https://call-info.org/?id=$(ci{rest.escape})", $var(body_pv
 ```
 
 
-#### {rest.unescape}
+#### {rest.unescape} {#tran_rest.unescape}
 
 
 The result of this transformation is to decode percent encoded string values.
@@ -825,10 +825,10 @@ xlog("$(var(tmp){rest.unescape})\n");
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -860,7 +860,7 @@ xlog("$(var(tmp){rest.unescape})\n");
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -886,10 +886,10 @@ xlog("$(var(tmp){rest.unescape})\n");
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Agalya Ramachandran ([@AgalyaR](https://github.com/AgalyaR)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).

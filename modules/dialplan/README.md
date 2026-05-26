@@ -6,7 +6,7 @@ description: "This module implements generic string translations based on matchi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module implements generic string translations based on matching and
@@ -179,7 +179,7 @@ Recognize a fixed string/number and replace it with something fixed.
 				output string
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -201,10 +201,10 @@ The following libraries or applications must be installed before
 - *libpcre-dev - the development libraries of [PCRE](http://www.pcre.org/)*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### partition (string)
+#### partition (string) {#param_partition}
 
 
 Specify a new dialplan partition (data source).  This parameter may
@@ -251,7 +251,7 @@ modparam("dialplan", "partition", "default: pstn")
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The default DB connection of the module, overriding the global
@@ -273,7 +273,7 @@ modparam("dialplan", "db_url", "mysql://user:passwd@localhost/db")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The default name of the table from which to load translation rules.
@@ -295,7 +295,7 @@ modparam("dialplan", "table_name", "my_table")
 ```
 
 
-#### dpid_col (string)
+#### dpid_col (string) {#param_dpid_col}
 
 
 The column name to store the dialplan ID group.
@@ -315,7 +315,7 @@ modparam("dialplan", "dpid_col", "column_name")
 ```
 
 
-#### pr_col (string)
+#### pr_col (string) {#param_pr_col}
 
 
 The column name to store the priority of the corresponding rule from
@@ -336,7 +336,7 @@ modparam("dialplan", "pr_col", "column_name")
 ```
 
 
-#### match_op_col (string)
+#### match_op_col (string) {#param_match_op_col}
 
 
 The column name to store the type of matching of the rule.
@@ -356,7 +356,7 @@ modparam("dialplan", "match_op_col", "column_name")
 ```
 
 
-#### match_exp_col (string)
+#### match_exp_col (string) {#param_match_exp_col}
 
 
 The column name to store the rule match expression.
@@ -376,7 +376,7 @@ modparam("dialplan", "match_exp_col", "column_name")
 ```
 
 
-#### match_flags_col (string)
+#### match_flags_col (string) {#param_match_flags_col}
 
 
 The column name to store various matching flags. Currently
@@ -397,7 +397,7 @@ modparam("dialplan", "match_flags_col", "column_name")
 ```
 
 
-#### subst_exp_col (string)
+#### subst_exp_col (string) {#param_subst_exp_col}
 
 
 The column name to store the rule's substitution expression.
@@ -417,7 +417,7 @@ modparam("dialplan", "subst_exp_col", "column_name")
 ```
 
 
-#### repl_exp_col (string)
+#### repl_exp_col (string) {#param_repl_exp_col}
 
 
 The column name to store the rule's replacement expression.
@@ -437,7 +437,7 @@ modparam("dialplan", "repl_exp_col", "column_name")
 ```
 
 
-#### timerec_col (integer)
+#### timerec_col (integer) {#param_timerec_col}
 
 
 The column name that indicates an additional time recurrence check 
@@ -463,7 +463,7 @@ modparam("dialplan", "timerec_col", "month_match")
 ```
 
 
-#### disabled_col (integer)
+#### disabled_col (integer) {#param_disabled_col}
 
 
 The column name that indicates if the dialplan rule is disabled.
@@ -483,7 +483,7 @@ modparam("dialplan", "disabled_col", "disabled_column")
 ```
 
 
-#### attrs_col (string)
+#### attrs_col (string) {#param_attrs_col}
 
 
 The column name to store rule-specific attributes.
@@ -503,10 +503,10 @@ modparam("dialplan", "attrs_col", "column_name")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### dp_translate(id, input, [out_var], [attrs_var], [partition])
+#### dp_translate(id, input, [out_var], [attrs_var], [partition]) {#func_dp_translate}
 
 
 Will try to translate the src string into dest string according to
@@ -582,10 +582,10 @@ xlog("'$var(in)' matched against partition '$var(part)'\n")
 ```
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### dialplan:reload
+#### dialplan:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *dp_reload*.
@@ -614,7 +614,7 @@ MI DATAGRAM Command Format:
 ```
 
 
-#### dialplan:translate
+#### dialplan:translate {#mi_translate}
 
 
 Replaces obsolete MI command: *dp_translate*.
@@ -646,7 +646,7 @@ MI DATAGRAM Command Format:
 ```
 
 
-#### dialplan:show_partition
+#### dialplan:show_partition {#mi_show_partition}
 
 
 Replaces obsolete MI command: *dp_show_partition*.
@@ -675,14 +675,14 @@ MI DATAGRAM Command Format:
 ```
 
 
-### Exported Status/Report Identifiers
+### Exported Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "dialplan" Status/Report group, where each
 	dialplan partition is defined as a separate SR identifier.
 
 
-#### [partition_name]
+#### [partition_name] {#sr_id_partition_name}
 
 
 The status of these identifiers reflects the readiness/status of the 
@@ -764,10 +764,10 @@ The modules requires one table in OpenSIPS database: dialplan.The SQL
 The module does not provide any API to use in other OpenSIPS modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -799,7 +799,7 @@ The module does not provide any API to use in other OpenSIPS modules.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -825,10 +825,10 @@ The module does not provide any API to use in other OpenSIPS modules.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Zero King ([@l2dy](https://github.com/l2dy)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Dragus, Anca Vamanu.

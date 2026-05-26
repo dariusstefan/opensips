@@ -6,7 +6,7 @@ description: "This module provides a way to generate universally unique identifi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides a way to generate universally unique identifiers
@@ -16,7 +16,7 @@ This module provides a way to generate universally unique identifiers
 		script function.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -33,16 +33,16 @@ This module does not depend on other modules.
 					ftp://ftp.kernel.org/pub/linux/utils/util-linux/
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 The module does not export any parameters.
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $uuid(version)
+#### $uuid(version) {#pv_uuid}
 
 
 The *$uuid* variable returns a newly generated UUID.
@@ -68,12 +68,12 @@ xlog("generated uuid v7: $uuid(7)\n");
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 #### 
 				uuid(out_var, [version], [namespace], [name])
-				
+				 {#func_uuid}
 
 
 Generates a new UUID.
@@ -134,10 +134,10 @@ If UUID version 1 is used, the function will return the value
 This function can be used from any route.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -163,7 +163,7 @@ This function can be used from any route.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -183,10 +183,10 @@ This function can be used from any route.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ryan Bullock, Aron Podrigal ([@ar45](https://github.com/ar45)), Norman Brandinger ([@NormB](https://github.com/NormB)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).

@@ -6,7 +6,7 @@ description: "This module serves as an example of how to write a module in OpenS
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module serves as an example of how to write a module in OpenSIPS.
@@ -14,7 +14,7 @@ This module serves as an example of how to write a module in OpenSIPS.
 		newcomers, providing a clear and accessible starting point.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -36,10 +36,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### default_str (string)
+#### default_str (string) {#param_default_str}
 
 
 The default parameter used when the [example str](#func_example_str)
@@ -59,7 +59,7 @@ modparam("example", "default_str", "TEST")
 ```
 
 
-#### default_int (integer)
+#### default_int (integer) {#param_default_int}
 
 
 The default parameter used when the [example int](#func_example_int)
@@ -79,10 +79,10 @@ modparam("example", "default_int", -1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### example()
+#### example() {#func_example}
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -101,7 +101,7 @@ example();
 ```
 
 
-#### example_str([string])
+#### example_str([string]) {#func_example_str}
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -128,7 +128,7 @@ example_str("test");
 ```
 
 
-#### example_int([int])
+#### example_int([int]) {#func_example_int}
 
 
 Function that simply prints a message to log, saying that it has been called.
@@ -155,10 +155,10 @@ example_int(10);
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -178,7 +178,7 @@ example_int(10);
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -192,10 +192,10 @@ example_int(10);
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

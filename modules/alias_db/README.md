@@ -6,7 +6,7 @@ description: "ALIAS_DB module can be used as an alternative for user aliases via
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 ALIAS_DB module can be used as an alternative for user aliases
@@ -21,7 +21,7 @@ Having no memory caching, search speed might decrease but
 	tables in the same script.
 
 
-### Dependencies
+### Dependencies {#dependenciesid}
 
 
 #### OpenSIPS Modules
@@ -43,10 +43,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (str)
+#### db_url (str) {#param_db_url}
 
 
 Database URL.
@@ -65,7 +65,7 @@ modparam("alias_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
 
-#### user_column (str)
+#### user_column (str) {#param_user_column}
 
 
 Name of the column storing username.
@@ -84,7 +84,7 @@ modparam("alias_db", "user_column", "susername")
 ```
 
 
-#### domain_column (str)
+#### domain_column (str) {#param_domain_column}
 
 
 Name of the column storing user's domain.
@@ -103,7 +103,7 @@ modparam("alias_db", "domain_column", "sdomain")
 ```
 
 
-#### alias_user_column (str)
+#### alias_user_column (str) {#param_alias_user_column}
 
 
 Name of the column storing alias username.
@@ -122,7 +122,7 @@ modparam("alias_db", "alias_user_column", "auser")
 ```
 
 
-#### alias_domain_column (str)
+#### alias_domain_column (str) {#param_alias_domain_column}
 
 
 Name of the column storing alias domain.
@@ -141,7 +141,7 @@ modparam("alias_db", "alias_domain_column", "adomain")
 ```
 
 
-#### domain_prefix (str)
+#### domain_prefix (str) {#param_domain_prefix}
 
 
 Specifies the prefix to be stripped from the domain in R-URI before
@@ -161,7 +161,7 @@ modparam("alias_db", "domain_prefix", "sip.")
 ```
 
 
-#### append_branches (int)
+#### append_branches (int) {#param_append_branches}
 
 
 If the alias resolves to many SIP IDs, the first is replacing
@@ -182,10 +182,10 @@ modparam("alias_db", "append_branches", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### alias_db_lookup(table_name, [flags])
+#### alias_db_lookup(table_name, [flags]) {#func_alias_db_lookup}
 
 
 The function takes the R-URI and search to see whether it is an alias
@@ -228,7 +228,7 @@ alias_db_lookup("dba_$(rU{s.substr,0,1})");
 ```
 
 
-#### alias_db_find(table_name, input_uri, output_var, [flags])
+#### alias_db_find(table_name, input_uri, output_var, [flags]) {#func_alias_db_find}
 
 
 The function is very similar to `alias_db_lookup()`,
@@ -300,10 +300,10 @@ Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -335,7 +335,7 @@ Please follow the guidelines provided at:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -361,10 +361,10 @@ Please follow the guidelines provided at:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

@@ -6,7 +6,7 @@ description: "Peering module allows SIP providers (operators or organizations) t
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Peering module allows SIP
@@ -35,7 +35,7 @@ Verification functions communicate with the broker using an AAA
 Comments and suggestions for improvements are welcome.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -49,10 +49,10 @@ The module depends on the following modules
 - *an AAA implementing module*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 This is the url representing the AAA protocol used and the location of the configuration file of this protocol.
@@ -75,7 +75,7 @@ modparam("peering", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ```
 
 
-#### verify_destination_service_type (integer)
+#### verify_destination_service_type (integer) {#param_verify_destination_service_type}
 
 
 This is the value of the Service-Type AAA attribute to be
@@ -119,10 +119,10 @@ modparam("peering", "verify_source_service_type", 22)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### verify_destination()
+#### verify_destination() {#func_verify_destination}
 
 
 Function verify_destination() queries from
@@ -182,7 +182,7 @@ if (verify_destination()) {
 ```
 
 
-#### verify_source()
+#### verify_source() {#func_verify_source}
 
 
 Function verify_source() queries from
@@ -236,10 +236,10 @@ if (is_present_hf("P-Request-Hash")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -266,7 +266,7 @@ if (is_present_hf("P-Request-Hash")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -287,10 +287,10 @@ if (is_present_hf("P-Request-Hash")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Irina-Maria Stanescu, Juha Heinanen ([@juha-h](https://github.com/juha-h)).

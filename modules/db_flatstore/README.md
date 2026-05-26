@@ -6,7 +6,7 @@ description: "Flatstore is one of so-called OpenSIPS database modules. It does n
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 Flatstore is one of so-called OpenSIPS database modules. It does not
@@ -68,7 +68,7 @@ For example, without setting any module parameter, the
 		that this will induce some latency.
 
 
-#### Rotating Log Files
+#### Rotating Log Files {#rotating}
 
 
 There is a new OpenSIPS MI (management interface) command called
@@ -113,7 +113,7 @@ Note that the suffix and prefix parameters are re-evaluated
 - Move the renamed files somewhere else and process them.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -135,10 +135,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### flush (integer)
+#### flush (integer) {#param_flush}
 
 
 Enable or disable flushing after each write.
@@ -157,7 +157,7 @@ modparam("db_flatstore", "flush", 0)
 ```
 
 
-#### delimiter (char)
+#### delimiter (char) {#param_delimiter}
 
 
 Delimiter used to separate the values.
@@ -176,7 +176,7 @@ modparam("db_flatstore", "delimiter", ";")
 ```
 
 
-#### suffix (string)
+#### suffix (string) {#param_suffix}
 
 
 The suffix appended to the table name. Can be a pseudo
@@ -196,7 +196,7 @@ modparam("db_flatstore", "suffix", "$time(%H)")
 ```
 
 
-#### prefix (string)
+#### prefix (string) {#param_prefix}
 
 
 The table name prefix. Can be a pseudo variable.
@@ -215,7 +215,7 @@ modparam("db_flatstore", "prefix", "$time(%H)")
 ```
 
 
-#### single_file (integer)
+#### single_file (integer) {#param_single_file}
 
 
 Specifies if all the processes should dump the data
@@ -235,16 +235,16 @@ modparam("db_flatstore", "single_file", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 There are no function exported to routing script.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### db_flatstore:rotate
+#### db_flatstore:rotate {#mi_rotate}
 
 
 Replaces obsolete MI command: *flat_rotate*.
@@ -274,10 +274,10 @@ MI FIFO Command Format:
 The module implements the DB API.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -309,7 +309,7 @@ The module implements the DB API.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -335,10 +335,10 @@ The module implements the DB API.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu.

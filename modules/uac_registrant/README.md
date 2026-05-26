@@ -6,7 +6,7 @@ description: "The module enable OpenSIPS to register itself on a remote SIP regi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The module enable OpenSIPS to register itself on a remote SIP registrar.
@@ -69,7 +69,7 @@ UAC registrant states:
 				after an unREGISTER with authentication header was sent;
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -87,10 +87,10 @@ The following modules must be loaded before this module:
 None.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### hash_size (integer)
+#### hash_size (integer) {#param_hash_size}
 
 
 The size of the hash table internally used to keep the registrants.
@@ -111,7 +111,7 @@ modparam("uac_registrant", "hash_size", 2)
 ```
 
 
-#### timer_interval (integer)
+#### timer_interval (integer) {#param_timer_interval}
 
 
 Defines the periodic timer for checking the registrations status.
@@ -130,7 +130,7 @@ modparam("uac_registrant", "timer_interval", 120)
 ```
 
 
-#### failure_retry_interval (integer)
+#### failure_retry_interval (integer) {#param_failure_retry_interval}
 
 
 Defines a custom interval to retry the registration upon error/failure.
@@ -152,7 +152,7 @@ modparam("uac_registrant", "failure_retry_interval", 3600)
 ```
 
 
-#### enable_clustering (integer)
+#### enable_clustering (integer) {#param_enable_clustering}
 
 
 This parameter enables the clustering support in the module. This is
@@ -177,7 +177,7 @@ modparam("uac_registrant", "enable_clustering", 1)
 ```
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 Database where to load the registrants from.
@@ -196,7 +196,7 @@ modparam("uac_registrant", "db_url", "mysql://user:passw@localhost/database")
 ```
 
 
-#### table_name (string)
+#### table_name (string) {#param_table_name}
 
 
 The database table that holds the registrant records.
@@ -215,7 +215,7 @@ modparam("uac_registrant", "table_name", "my_registrant")
 ```
 
 
-#### registrar_column (string)
+#### registrar_column (string) {#param_registrar_column}
 
 
 The column's name in the database storing the
@@ -236,7 +236,7 @@ modparam("uac_registrant", "registrar_column", "registrant_uri")
 ```
 
 
-#### proxy_column (string)
+#### proxy_column (string) {#param_proxy_column}
 
 
 The column's name in the database storing the
@@ -258,7 +258,7 @@ modparam("uac_registrant", "proxy_column", "proxy_uri")
 ```
 
 
-#### aor_column (string)
+#### aor_column (string) {#param_aor_column}
 
 
 The column's name in the database storing the
@@ -280,7 +280,7 @@ modparam("uac_registrant", "aor_column", "to_uri")
 ```
 
 
-#### third_party_registrant_column (string)
+#### third_party_registrant_column (string) {#param_third_party_registrant_column}
 
 
 The column's name in the database storing the
@@ -304,7 +304,7 @@ modparam("uac_registrant", "third_party_registrant_column", "from_uri")
 ```
 
 
-#### username_column (string)
+#### username_column (string) {#param_username_column}
 
 
 The column's name in the database storing the
@@ -324,7 +324,7 @@ modparam("uac_registrant", "username_column", "auth_username")
 ```
 
 
-#### password_column (string)
+#### password_column (string) {#param_password_column}
 
 
 The column's name in the database storing the
@@ -344,7 +344,7 @@ modparam("uac_registrant", "password_column", "auth_passowrd")
 ```
 
 
-#### binding_URI_column (string)
+#### binding_URI_column (string) {#param_binding_URI_column}
 
 
 The column's name in the database storing the
@@ -366,7 +366,7 @@ modparam("uac_registrant", "binding_URI_column", "contact_uri")
 ```
 
 
-#### binding_params_column (string)
+#### binding_params_column (string) {#param_binding_params_column}
 
 
 The column's name in the database storing the
@@ -406,7 +406,7 @@ modparam("uac_registrant", "binding_params_column", "contact_params")
 ```
 
 
-#### expiry_column (string)
+#### expiry_column (string) {#param_expiry_column}
 
 
 The column's name in the database storing the
@@ -426,7 +426,7 @@ modparam("uac_registrant", "expiry_column", "registration_timeout")
 ```
 
 
-#### forced_socket_column (string)
+#### forced_socket_column (string) {#param_forced_socket_column}
 
 
 The column's name in the database storing the
@@ -449,7 +449,7 @@ modparam("uac_registrant", "forced_socket_column", "fs")
 ```
 
 
-#### cluster_shtag_column (string)
+#### cluster_shtag_column (string) {#param_cluster_shtag_column}
 
 
 The column's name in the database storing the
@@ -471,7 +471,7 @@ modparam("uac_registrant", "cluster_shtag_column", "sh")
 ```
 
 
-#### state_column (string)
+#### state_column (string) {#param_state_column}
 
 
 The column's name in the database storing the current state of the
@@ -493,7 +493,7 @@ modparam("uac_registrant", "state_column", "status")
 ```
 
 
-#### reregister_expiry_percentage (integer)
+#### reregister_expiry_percentage (integer) {#param_reregister_expiry_percentage}
 
 
 Percentage describing how much sooner a RE-REGISTER needs to be send based on the Expiry. a 100 value means the RE-REGISTER will be send right on the edge of expiry ( old behavior ), which might lead to registration loss. a 90 value means the RE-REGISTER will be sent sooner , at 90% of the Expiry, etc.
@@ -512,16 +512,16 @@ modparam("uac_registrant", "reregister_expiry_percentage", 90)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None to be used in configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### uac_registrant:list
+#### uac_registrant:list {#mi_list}
 
 
 Replaces obsolete MI command: *reg_list*.
@@ -562,7 +562,7 @@ opensips-cli -x mi uac_registrant:list sip:alice@opensips.org  sip:alice@127.0.0
 ```
 
 
-#### uac_registrant:reload
+#### uac_registrant:reload {#mi_reload}
 
 
 Replaces obsolete MI command: *reg_reload*.
@@ -603,7 +603,7 @@ opensips-cli -x mi reg_leload sip:alice@opensips.org  sip:alice@127.0.0.1:5060 s
 ```
 
 
-#### uac_registrant:enable
+#### uac_registrant:enable {#mi_enable}
 
 
 Replaces obsolete MI command: *reg_enable*.
@@ -634,7 +634,7 @@ opensips-cli -x mi uac_registrant:enable sip:alice@opensips.org  sip:alice@127.0
 ```
 
 
-#### uac_registrant:disable
+#### uac_registrant:disable {#mi_disable}
 
 
 Replaces obsolete MI command: *reg_disable*.
@@ -674,7 +674,7 @@ opensips-cli -x mi uac_registrant:disable sip:alice@opensips.org  sip:alice@127.
 ```
 
 
-#### uac_registrant:force_register
+#### uac_registrant:force_register {#mi_force_register}
 
 
 Replaces obsolete MI command: *reg_force_register*.
@@ -714,7 +714,7 @@ opensips-cli -x mi uac_registrant:force_register sip:alice@opensips.org  sip:ali
 ```
 
 
-#### uac_registrant:upsert
+#### uac_registrant:upsert {#mi_upsert}
 
 
 Replaces obsolete MI command: *reg_upsert*.
@@ -752,7 +752,7 @@ opensips-cli -x mi uac_registrant:upsert aor=sip:vlad@test.com contact=sip:test@
 ```
 
 
-#### uac_registrant:delete
+#### uac_registrant:delete {#mi_delete}
 
 
 Replaces obsolete MI command: *reg_delete*.
@@ -781,10 +781,10 @@ opensips-cli -x mi uac_registrant:delete aor=sip:vlad@test.com contact=sip:test@
 ```
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
-#### E_REGISTRANT_REGISTERING
+#### E_REGISTRANT_REGISTERING {#event_E_REGISTRANT_REGISTERING}
 
 
 This event is raised when the module sent the initial REGISTER and started the registration process.
@@ -798,7 +798,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_AUTHENTICATING
+#### E_REGISTRANT_AUTHENTICATING {#event_E_REGISTRANT_AUTHENTICATING}
 
 
 This event is raised when the initial REGISTER has been challenged and a new REGISTER with credentials has been sent out.
@@ -812,7 +812,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_REGISTERED
+#### E_REGISTRANT_REGISTERED {#event_E_REGISTRANT_REGISTERED}
 
 
 This event is raised when a REGISTER has been 200 OKd.
@@ -826,7 +826,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_REGISTER_TIMEOUT
+#### E_REGISTRANT_REGISTER_TIMEOUT {#event_E_REGISTRANT_REGISTER_TIMEOUT}
 
 
 This event is raised when a REGISTER received no reply from the registrar.
@@ -840,7 +840,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_INTERNAL_ERROR
+#### E_REGISTRANT_INTERNAL_ERROR {#event_E_REGISTRANT_INTERNAL_ERROR}
 
 
 This event is raised when a REGISTER procesing was stopped due to an internal OpenSIPS error.
@@ -854,7 +854,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_WRONG_CREDENTIALS
+#### E_REGISTRANT_WRONG_CREDENTIALS {#event_E_REGISTRANT_WRONG_CREDENTIALS}
 
 
 This event is raised when a REGISTER with credentials was still rejected by the registrar
@@ -868,7 +868,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_REGISTRAR_ERROR
+#### E_REGISTRANT_REGISTRAR_ERROR {#event_E_REGISTRANT_REGISTRAR_EROR}
 
 
 This event is raised when a REGISTER is rejected by the registrar with a non-standard sip code.
@@ -882,7 +882,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_UNREGISTERING
+#### E_REGISTRANT_UNREGISTERING {#event_E_REGISTRANT_UNREGISTERING}
 
 
 This event is raised when a de-REGISTER is sent by OpenSIPS.
@@ -896,7 +896,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-#### E_REGISTRANT_AUTHENTICATING_UNREGISTER
+#### E_REGISTRANT_AUTHENTICATING_UNREGISTER {#event_E_REGISTRANT_AUTHENTICATING_UNREGISTER}
 
 
 This event is raised when a de-REGISTER is challenged and auth is sent by OpenSIPS.
@@ -910,7 +910,7 @@ Parameters:
 - *registrar* - the Registrar
 
 
-### Exported Status/Report Identifiers
+### Exported Status/Report Identifiers {#sr_identifiers}
 
 
 The module provides the "uac_registrant" Status/Report group, where each
@@ -971,10 +971,10 @@ For how to access and use the Status/Report information, please see
 	[https://www.opensips.org/Documentation/Interface-StatusReport-3-6](>https://www.opensips.org/Documentation/Interface-StatusReport-3-6).
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -1006,7 +1006,7 @@ For how to access and use the Status/Report information, please see
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -1032,10 +1032,10 @@ For how to access and use the Status/Report information, please see
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).

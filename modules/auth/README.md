@@ -6,7 +6,7 @@ description: "This is a module that provides common functions that are needed by
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This is a module that provides common functions that are needed by
@@ -14,7 +14,7 @@ This is a module that provides common functions that are needed by
 		authentication taking username and password from pseudo-variables.
 
 
-#### RFC 8760 Support (Strenghtened Authentication)
+#### RFC 8760 Support (Strenghtened Authentication) {#rfc-8760-support}
 
 
 Starting with OpenSIPS 3.2, the [auth](auth),
@@ -54,7 +54,7 @@ However this mechanism does not work for architectures using a cluster
 		'disable_nonce_check'.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -77,7 +77,7 @@ The following libraries or applications must be installed
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
 #### secret (string)
@@ -106,7 +106,7 @@ modparam("auth", "secret", "johndoessecretphrase")
 ```
 
 
-#### nonce_expire (integer)
+#### nonce_expire (integer) {#param_nonce_expire}
 
 
 Nonces have limited lifetime. After a given period of time nonces 
@@ -130,7 +130,7 @@ modparam("auth", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
 
-#### rpid_prefix (string)
+#### rpid_prefix (string) {#param_rpid_prefix}
 
 
 Prefix to be added to Remote-Party-ID header field just before 
@@ -148,7 +148,7 @@ modparam("auth", "rpid_prefix", "Whatever <")
 ```
 
 
-#### rpid_suffix (string)
+#### rpid_suffix (string) {#param_rpid_suffix}
 
 
 Suffix to be added to Remote-Party-ID header field after the URI 
@@ -167,7 +167,7 @@ modparam("auth", "rpid_suffix", "@1.2.3.4>")
 ```
 
 
-#### realm_prefix (string)
+#### realm_prefix (string) {#param_realm_prefix}
 
 
 Prefix to be automatically strip from realm. As an alternative to
@@ -190,7 +190,7 @@ modparam("auth", "realm_prefix", "sip.")
 ```
 
 
-#### rpid_avp (string)
+#### rpid_avp (string) {#param_rpid_avp}
 
 
 Full AVP specification for the AVP which 
@@ -215,7 +215,7 @@ modparam("auth", "rpid_avp", "$avp(caller_rpid)")
 ```
 
 
-#### username_spec (string)
+#### username_spec (string) {#param_username_spec}
 
 
 This name of the pseudo-variable that will hold the username.
@@ -232,7 +232,7 @@ modparam("auth", "username_spec", "$var(username)")
 ```
 
 
-#### password_spec (string)
+#### password_spec (string) {#param_password_spec}
 
 
 This name of the pseudo-variable that will hold the password.
@@ -249,7 +249,7 @@ modparam("auth", "password_spec", "$var(password)")
 ```
 
 
-#### calculate_ha1 (integer)
+#### calculate_ha1 (integer) {#param_calculate_ha1}
 
 
 This parameter tells the server whether it should expect plaintext
@@ -274,7 +274,7 @@ modparam("auth", "calculate_ha1", 1)
 ```
 
 
-#### disable_nonce_check (int)
+#### disable_nonce_check (int) {#param_disable_nonce_check}
 
 
 By setting this parameter you disable the security mechanism 
@@ -296,10 +296,10 @@ modparam("auth", "disable_nonce_check", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### www_challenge(realm[, qop[, algorithms]])
+#### www_challenge(realm[, qop[, algorithms]]) {#func_www_challenge}
 
 
 The function challenges a user agent. It will generate one or
@@ -368,7 +368,7 @@ if (!www_authorize("siphub.net", "subscriber")) {
 ```
 
 
-#### proxy_challenge(realm[, qop[, algorithms]])
+#### proxy_challenge(realm[, qop[, algorithms]]) {#func_proxy_challenge}
 
 
 The function challenges a user agent. It will generate a 
@@ -403,7 +403,7 @@ if (!proxy_authorize("", "subscriber")) {
 ```
 
 
-#### consume_credentials()
+#### consume_credentials() {#func_consume_credentials}
 
 
 This function removes previously authorized credentials from the 
@@ -431,7 +431,7 @@ if (www_authorize("", "subscriber")) {
 ```
 
 
-#### is_rpid_user_e164()
+#### is_rpid_user_e164() {#func_is_rpid_user_e164}
 
 
 The function checks if the SIP URI received from the database or 
@@ -456,7 +456,7 @@ if (is_rpid_user_e164()) {
 ```
 
 
-#### append_rpid_hf()
+#### append_rpid_hf() {#func_append_rpid_hf_no_params}
 
 
 Appends to the message a Remote-Party-ID header that contains header
@@ -480,7 +480,7 @@ append_rpid_hf();  # Append Remote-Party-ID header field
 ```
 
 
-#### append_rpid_hf(prefix, suffix)
+#### append_rpid_hf(prefix, suffix) {#func_append_rpid_hf}
 
 
 This function is the same as 
@@ -518,7 +518,7 @@ append_rpid_hf("", ";party=calling;id-type=subscriber;screen=yes");
 ```
 
 
-#### pv_www_authorize(realm)
+#### pv_www_authorize(realm) {#func_pv_www_authorize}
 
 
 The function verifies credentials according to 
@@ -577,7 +577,7 @@ if (!pv_www_authorize("opensips.org")) {
 ```
 
 
-#### pv_proxy_authorize(realm)
+#### pv_proxy_authorize(realm) {#func_pv_proxy_authorize}
 
 
 The function verifies credentials according to 
@@ -621,10 +621,10 @@ if (!pv_proxy_authorize("")) {
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -656,7 +656,7 @@ if (!pv_proxy_authorize("")) {
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -682,10 +682,10 @@ if (!pv_proxy_authorize("")) {
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Sergio Gutierrez, Dan Pascu ([@danpascu](https://github.com/danpascu)), Anca Vamanu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Jan Janak ([@janakj](https://github.com/janakj)).

@@ -6,7 +6,7 @@ description: "The sst module provides a way to update the dialog expire timer ba
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The sst module provides a way to update the
@@ -104,7 +104,7 @@ The following was taken from the RFC as a call flow
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -128,10 +128,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### enable_stats (integer)
+#### enable_stats (integer) {#param_enable_stats}
 
 
 If the statistics support should be enabled or
@@ -153,7 +153,7 @@ modparam("sst", "enable_stats", 0)
 ```
 
 
-#### min_se (integer)
+#### min_se (integer) {#param_min_se}
 
 
 The value is used to set the proxies MIN-SE
@@ -181,7 +181,7 @@ modparam("sst", "min_se", 2400)
 ```
 
 
-#### sst_interval (integer)
+#### sst_interval (integer) {#param_sst_interval}
 
 
 The sst minimum interval in Session-Expires header if OpenSIPS
@@ -205,7 +205,7 @@ modparam("sst", "sst_interval", 2400)
 ```
 
 
-#### reject_to_small (integer)
+#### reject_to_small (integer) {#param_reject_to_small}
 
 
 In the initial INVITE if the UAC has requested a
@@ -236,7 +236,7 @@ modparam("sst", "reject_to_small", 0)
 ```
 
 
-#### sst_flag (string)
+#### sst_flag (string) {#param_sst_flag}
 
 
 Keeping with OpenSIPS, the module will not do
@@ -279,10 +279,10 @@ route {
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sstCheckMin(send_reply_flag)
+#### sstCheckMin(send_reply_flag) {#func_sstCheckMin}
 
 
 Check the current Session-Expires / MIN-SE values
@@ -332,19 +332,19 @@ route {
 ```
 
 
-### Exported Statistics
+### Exported Statistics {#exported_statistics}
 
 
-#### expired_sst
+#### expired_sst {#stat_expired_sst}
 
 
 Number of dialogs which got expired session timer.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -376,7 +376,7 @@ Number of dialogs which got expired session timer.
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -402,10 +402,10 @@ Number of dialogs which got expired session timer.
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Christophe Sollet ([@csollet](https://github.com/csollet)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Ron Winacott.

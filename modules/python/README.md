@@ -6,7 +6,7 @@ description: "This module can be used to efficiently run Python code directly fr
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module can be used to efficiently run Python code directly from
@@ -95,7 +95,7 @@ The SIP message received as parameter by the function has the following
 		using Unicode string *value*.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -117,10 +117,10 @@ The following libraries or applications must be installed before
 - *python-dev* - provides the Python bindings.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### script_name (string)
+#### script_name (string) {#param_script_name}
 
 
 The script that contains the Python module.
@@ -139,7 +139,7 @@ modparam("python", "script_name", "/usr/local/bin/opensips_handler.py")
 ```
 
 
-#### mod_init_function (string)
+#### mod_init_function (string) {#param_mod_init_function}
 
 
 The method used to initialize the Python module and return the object.
@@ -158,7 +158,7 @@ modparam("python", "mod_init_function", "module_initializer")
 ```
 
 
-#### child_init_method (string)
+#### child_init_method (string) {#param_child_init_method}
 
 
 The method called for each child process.
@@ -177,10 +177,10 @@ modparam("python", "child_init_method", "child_initializer")
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### python_exec(method_name [, extra_args])
+#### python_exec(method_name [, extra_args]) {#func_python_exec}
 
 
 This function is used to execute a method from the Python module
@@ -199,10 +199,10 @@ Meaning of the parameters is as follows:
 					be passed from the script to the python function.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -228,7 +228,7 @@ Meaning of the parameters is as follows:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -248,10 +248,10 @@ Meaning of the parameters is as follows:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** importos, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

@@ -6,7 +6,7 @@ description: "The *event_virtual* module provides the possibility to have multip
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The *event_virtual*
@@ -45,7 +45,7 @@ Meanings:
 - *subscriber_1* - use the socket syntax for this specific subscriber (eg. "rabbitmq:guest:guest@127.0.0.1:5672/pike")
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -65,10 +65,10 @@ The following libraries or applications must be installed before
 - *none*
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### failover_timeout (integer)
+#### failover_timeout (integer) {#param_failover_timeout}
 
 
 The minimum duration in seconds that a failed subscriber is
@@ -90,7 +90,7 @@ modparam("event_virtual", "failover_timeout", 5)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 No exported functions to be used in the configuration file.
@@ -110,10 +110,10 @@ The sockets of the subscribers may be separated by any number of spaces or tabs:
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -138,7 +138,7 @@ The sockets of the subscribers may be separated by any number of spaces or tabs:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -157,10 +157,10 @@ The sockets of the subscribers may be separated by any number of spaces or tabs:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).

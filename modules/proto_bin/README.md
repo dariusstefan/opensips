@@ -6,7 +6,7 @@ description: "The **proto_bin** module is a transport module which implements Bi
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The **proto_bin** module is a
@@ -28,7 +28,7 @@ socket= bin:127.0.0.1:5080	# change the listening IP and port
 ```
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -50,10 +50,10 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### bin_port (integer)
+#### bin_port (integer) {#param_bin_port}
 
 
 The default port to be used by all TCP listeners.
@@ -72,7 +72,7 @@ modparam("proto_bin", "bin_port", 6666)
 ```
 
 
-#### bin_send_timeout (integer)
+#### bin_send_timeout (integer) {#param_bin_send_timeout}
 
 
 Time in milliseconds after a TCP connection will be closed if it is
@@ -93,7 +93,7 @@ modparam("proto_bin", "bin_send_timeout", 200)
 ```
 
 
-#### bin_max_msg_chunks (integer)
+#### bin_max_msg_chunks (integer) {#param_bin_max_msg_chunks}
 
 
 The maximum number of chunks in which a BIN message is expected to
@@ -117,7 +117,7 @@ modparam("proto_bin", "bin_max_msg_chunks", 8)
 ```
 
 
-#### bin_async (integer)
+#### bin_async (integer) {#param_bin_async}
 
 
 Specifies whether the TCP connect and write operations should be
@@ -139,7 +139,7 @@ modparam("proto_bin", "bin_async", 0)
 ```
 
 
-#### bin_async_max_postponed_chunks (integer)
+#### bin_async_max_postponed_chunks (integer) {#param_bin_async_max_postponed_chunks}
 
 
 If *bin_async* is enabled, this specifies the
@@ -161,7 +161,7 @@ modparam("proto_bin", "bin_async_max_postponed_chunks", 1024)
 ```
 
 
-#### bin_async_local_write_timeout (integer)
+#### bin_async_local_write_timeout (integer) {#param_bin_async_local_write_timeout}
 
 
 If *bin_async* is enabled, this specifies the
@@ -184,10 +184,10 @@ modparam("proto_bin", "tcp_async_local_write_timeout", 100)
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -215,7 +215,7 @@ modparam("proto_bin", "tcp_async_local_write_timeout", 100)
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -237,10 +237,10 @@ modparam("proto_bin", "tcp_async_local_write_timeout", 100)
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)).

@@ -6,7 +6,7 @@ description: "This module provides on-server speed dial facilities. An user can 
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module provides on-server speed dial facilities. An user can store
@@ -15,7 +15,7 @@ This module provides on-server speed dial facilities. An user can store
 		wants to call the SIP address associated with them.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -37,10 +37,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### db_url (string)
+#### db_url (string) {#param_db_url}
 
 
 The URL of database where the table containing speed dial records.
@@ -59,7 +59,7 @@ modparam("speeddial", "db_url", "mysql://user:xxx@localhost/db_name")
 ```
 
 
-#### user_column (string)
+#### user_column (string) {#param_user_column}
 
 
 The name of column storing the user name of the owner of the speed dial
@@ -79,7 +79,7 @@ modparam("speeddial", "user_column", "userid")
 ```
 
 
-#### domain_column (string)
+#### domain_column (string) {#param_domain_column}
 
 
 The name of column storing the domain of the owner of the speed dial
@@ -99,7 +99,7 @@ modparam("speeddial", "domain_column", "userdomain")
 ```
 
 
-#### sd_user_column (string)
+#### sd_user_column (string) {#param_sd_user_column}
 
 
 The name of the column storing the user part of the short dial address.
@@ -118,7 +118,7 @@ modparam("speeddial", "sd_user_column", "short_user")
 ```
 
 
-#### sd_domain_column (string)
+#### sd_domain_column (string) {#param_sd_domain_column}
 
 
 The name of the column storing the domain of the short dial address.
@@ -137,7 +137,7 @@ modparam("speeddial", "sd_domain_column", "short_domain")
 ```
 
 
-#### new_uri_column (string)
+#### new_uri_column (string) {#param_new_uri_column}
 
 
 The name of the column containing the URI that will be use to replace
@@ -157,7 +157,7 @@ modparam("speeddial", "new_uri_column", "real_uri")
 ```
 
 
-#### domain_prefix (string)
+#### domain_prefix (string) {#param_domain_prefix}
 
 
 If the domain of the owner (From URI) starts with the value of this parameter, then
@@ -177,7 +177,7 @@ modparam("speeddial", "domain_prefix", "tel.")
 ```
 
 
-#### use_domain (int)
+#### use_domain (int) {#param_use_domain}
 
 
 The parameter specifies wheter or not to use the domain when searching a
@@ -198,10 +198,10 @@ modparam("speeddial", "use_domain", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### sd_lookup(table [, owner])
+#### sd_lookup(table [, owner]) {#func_sd_lookup}
 
 
 The function lookups the short dial number from R-URI in 'table' and replaces the R-URI with associated address.
@@ -358,10 +358,10 @@ route{
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -393,7 +393,7 @@ route{
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -419,10 +419,10 @@ route{
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Elena-Ramona Modroiu.

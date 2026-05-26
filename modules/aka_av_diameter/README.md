@@ -6,7 +6,7 @@ description: "This module is an extension to the *AKA_AUTH* module providing a D
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module is an extension to the *AKA_AUTH* module
@@ -32,7 +32,7 @@ It uses the *AAA_Diameter* module to perform the Diameter
 		depending on how the *AUTH_AKA* module performs the query.
 
 
-### Setup
+### Setup {#setup}
 
 
 The module requires an *aaa_diameter* connection to an
@@ -52,7 +52,7 @@ The format of the command, along with the required fields can be found in the
 		of the module.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -75,10 +75,10 @@ The module depends on the following modules (in the other words
 This module does not depend on any external library.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### aaa_url (string)
+#### aaa_url (string) {#param_aaa_url}
 
 
 This is the url representing the connection to the AAA server.
@@ -97,7 +97,7 @@ modparam("auth_aaa", "aaa_url", "diameter:freeDiameter.conf;extra-avps-file:/etc
 ```
 
 
-#### realm (string)
+#### realm (string) {#param_realm}
 
 
 The Realm used in the Origin Diameter commands.
@@ -116,7 +116,7 @@ modparam("aka_av_diameter", "realm", "scscf.ims.mnc001.mcc001.3gppnetwork.org")
 ```
 
 
-#### server_uri (string)
+#### server_uri (string) {#param_server_uri}
 
 
 The Server-URI used in the Diameter commands.
@@ -137,7 +137,7 @@ modparam("aka_av_diameter", "server_uri", "sip:scscf.ims.mnc001.mcc001.3gppnetwo
 ```
 
 
-### Diameter Commands File
+### Diameter Commands File {#example_diameter_commands}
 
 
 File that should be provided to the *aaa_diameter* connection.
@@ -207,10 +207,10 @@ ANSWER 303 Multimedia-Auth Answer
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -231,7 +231,7 @@ ANSWER 303 Multimedia-Auth Answer
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -246,10 +246,10 @@ ANSWER 303 Multimedia-Auth Answer
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** LarryLaffer-dev, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).

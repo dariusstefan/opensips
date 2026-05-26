@@ -6,7 +6,7 @@ description: "The modules is an XCAP client for OpenSIPS that can be used by oth
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The modules is an XCAP client for OpenSIPS that can be used by other modules.
@@ -35,7 +35,7 @@ The module is currently used by the presence_xml module, if the
 	'integrated_xcap_server' parameter is not set.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -58,10 +58,10 @@ The following libraries or applications must be installed before running
 - *libcurl-dev*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### periodical_query(int)
+#### periodical_query(int) {#param_periodical_query}
 
 
 A flag to disable periodical query as an update method for
@@ -87,7 +87,7 @@ modparam("xcap_client", "periodical_query", 0)
 ```
 
 
-#### query_period(int)
+#### query_period(int) {#param_query_period}
 
 
 Should be set if periodical query is not disabled. 
@@ -111,16 +111,16 @@ modparam("xcap_client", "query_period", 50)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 None to be used in configuration file.
 
 
-### Exported MI Functions
+### Exported MI Functions {#exported_mi_functions}
 
 
-#### refreshXcapDoc
+#### refreshXcapDoc {#mi_refreshXcapDoc}
 
 
 MI command that should be sent by an xcap server when a
@@ -303,10 +303,10 @@ typedef int (xcap_cb)(int doc_type, str xid, char* doc);
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -338,7 +338,7 @@ typedef int (xcap_cb)(int doc_type, str xid, char* doc);
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -364,10 +364,10 @@ typedef int (xcap_cb)(int doc_type, str xid, char* doc);
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

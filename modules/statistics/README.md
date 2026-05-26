@@ -6,7 +6,7 @@ description: "The Statistics module is a wrapper over the internal statistics ma
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 The Statistics module is a wrapper over the internal
@@ -41,7 +41,7 @@ By default, all statistics belong to the
 		**"dynamic"** group.
 
 
-### Statistic Series
+### Statistic Series {#section_stat_series}
 
 
 Statistic series provide the ability to accumulate statistical data
@@ -67,7 +67,7 @@ Statistic series profile describe the timeframe used to store the data, as
 			ASR, NER, CCR stats.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -89,10 +89,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### variable (string)
+#### variable (string) {#param_variable}
 
 
 Name of a new statistic variable. The name may be followed by additional
@@ -111,7 +111,7 @@ modparam("statistics", "variable", "active_calls/no_reset")
 ```
 
 
-#### stat_groups (string)
+#### stat_groups (string) {#param_stat_groups}
 
 
 A comma-separated values string, specifying the statistic groups that
@@ -127,7 +127,7 @@ modparam("statistics", "stat_groups", "method, packet, response")
 ```
 
 
-#### stat_series_profile (string)
+#### stat_series_profile (string) {#param_stat_series_profile}
 
 
 Used to define a statistic series profile. Has the following format:
@@ -184,10 +184,10 @@ modparam("statistics", "stat_series_profile", "perc_1h: algorithm=percentage win
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
-#### update_stat(variable, value)
+#### update_stat(variable, value) {#func_update_stat}
 
 
 Updates the value of the statistic variable with the new value.
@@ -218,7 +218,7 @@ update_stat($var(a_calls), -1);
 ```
 
 
-#### reset_stat(variable)
+#### reset_stat(variable) {#func_reset_stat}
 
 
 Resets to zero the value of the statistic variable.
@@ -247,7 +247,7 @@ update_stat($var(reg_counter));
 ```
 
 
-#### stat_iter_init(group, iter)
+#### stat_iter_init(group, iter) {#func_stat_iter_init}
 
 
 Re-initializes "iter" in order to begin iterating through all
@@ -276,7 +276,7 @@ stat_iter_init("packet", "iter");
 ```
 
 
-#### stat_iter_next(name, val, iter)
+#### stat_iter_next(name, val, iter) {#func_stat_iter_next}
 
 
 Attempts to fetch the current statistic to which "iter" points.
@@ -312,7 +312,7 @@ timer_route [clear_packet_stats, 7200] {
 ```
 
 
-#### update_stat_series(profile, variable, value)
+#### update_stat_series(profile, variable, value) {#func_update_stat_series}
 
 
 Updates the value of a series statistic.
@@ -350,10 +350,10 @@ update_stat_series("avg", "PDD", $var(pdd_ms));
 ```
 
 
-### Exported Pseudo-Variables
+### Exported Pseudo-Variables {#exported_pseudo_variables}
 
 
-#### $stat
+#### $stat {#pv_stat}
 
 
 Allows "get" or "reset" operations on the given statistics.
@@ -382,10 +382,10 @@ $stat(err_requests) = 0;
 ```
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -417,7 +417,7 @@ $stat(err_requests) = 0;
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -443,10 +443,10 @@ $stat(err_requests) = 0;
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.

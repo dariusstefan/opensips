@@ -6,7 +6,7 @@ description: "This module allows to use the unixodbc package with OpenSIPS. It h
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 This module allows to use the unixodbc package with OpenSIPS. It have been 
@@ -21,7 +21,7 @@ To see what DB engines can be used via unixodbc, look at
 	[http://www.unixodbc.org/drivers.html](http://www.unixodbc.org/drivers.html).
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -43,10 +43,10 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### auto_reconnect (int)
+#### auto_reconnect (int) {#param_auto_reconnect}
 
 
 Turns on or off the auto_reconnect mode.
@@ -65,7 +65,7 @@ modparam("db_unixodbc", "auto_reconnect", 0)
 ```
 
 
-#### use_escape_common (int)
+#### use_escape_common (int) {#param_use_escape_common}
 
 
 Escape values in query using internal escape_common() function.
@@ -92,7 +92,7 @@ modparam("db_unixodbc", "use_escape_common", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 NONE
@@ -172,10 +172,10 @@ The module implements the OpenSIPS DB API, in order to
 	be used by other modules.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -207,7 +207,7 @@ The module implements the OpenSIPS DB API, in order to
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -233,10 +233,10 @@ The module implements the OpenSIPS DB API, in order to
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu, Marco Lorrai.

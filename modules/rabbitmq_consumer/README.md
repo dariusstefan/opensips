@@ -6,7 +6,7 @@ description: "*RabbitMQ Consumer* ([http://www.rabbitmq.com/](http://www.rabbitm
 ## Admin Guide
 
 
-### Overview
+### Overview {#overview}
 
 
 *RabbitMQ Consumer*
@@ -21,7 +21,7 @@ Using this module you can subscribe consumers to a RabbitMQ broker in order
 		by triggering events through the OpenSIPS Event Interface.
 
 
-### Dependencies
+### Dependencies {#dependencies}
 
 
 #### OpenSIPS Modules
@@ -47,10 +47,10 @@ NOte that the module is not compatible with versions 0.4 or below of
 			the librabbitmq-dev library.
 
 
-### Exported Parameters
+### Exported Parameters {#exported_parameters}
 
 
-#### connection_id (string)
+#### connection_id (string) {#param_connection_id}
 
 
 Specify the configuration for a RabbitMQ connection. It contains a set
@@ -121,7 +121,7 @@ modparam("rabbitmq_consumer", "connection_id",
 ```
 
 
-#### connect_timeout (integer)
+#### connect_timeout (integer) {#param_connect_timeout}
 
 
 The maximally allowed duration (in milliseconds) for the establishment
@@ -141,7 +141,7 @@ modparam("rabbitmq_consumer", "connect_timeout", 1000)
 ```
 
 
-#### retry_timeout (integer)
+#### retry_timeout (integer) {#param_retry_timeout}
 
 
 The interval (in milliseconds) after which OpenSIPS will try to
@@ -161,7 +161,7 @@ modparam("rabbitmq_consumer", "retry_timeout", 10000)
 ```
 
 
-#### use_tls (integer)
+#### use_tls (integer) {#param_use_tls}
 
 
 Setting this parameter will allow you to use TLS for broker connections.
@@ -193,13 +193,13 @@ modparam("rabbitmq_consumer", "use_tls", 1)
 ```
 
 
-### Exported Functions
+### Exported Functions {#exported_functions}
 
 
 The module does not export any script functions.
 
 
-### Exported Events
+### Exported Events {#exported_events}
 
 
 An event with a custom name, as set in the *event*
@@ -213,10 +213,10 @@ Parameters:
 - *body* - the AMQP message body.
 
 
-## Contributors
+## Contributors {#contributors}
 
 
-### By Commit Statistics
+### By Commit Statistics {#contrib_commit_statistics}
 
 
 **Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
@@ -241,7 +241,7 @@ Parameters:
 *(3) ignoring whitespace edits, renamed files and auto-generated files*
 
 
-### By Commit Activity
+### By Commit Activity {#contrib_commit_activity}
 
 
 **Most recently active contributors^(1)^ to this module**
@@ -260,10 +260,10 @@ Parameters:
 *(1) including any documentation-related commits, excluding merge commits*
 
 
-## Documentation
+## Documentation {#documentation}
 
 
-### Contributors
+### Contributors {#documentation_contributors}
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
