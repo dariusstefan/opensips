@@ -1,0 +1,625 @@
+---
+title: "DB_HTTP Module"
+description: "This module provides access to a database that is implemented as a HTTP server. It may be used in special cases where traversing firewalls is a problem, or where data encryption is required."
+---
+
+## Admin Guide
+
+
+### Overview
+
+
+This module provides access to a database that is implemented
+	as a HTTP server. It may be used in special cases where traversing
+	firewalls is a problem, or where data encryption is required.
+
+
+In order to use this module you must have a server that can communicate
+	via HTTP or HTTPS with this module that follows exactly the format 
+	decribed in the specifications section.
+
+
+The module can provide SSL, authentication, and all the functionalities
+	of an opensips db as long as the server supports them ( except result_fetch).
+
+
+There is a slight difference between the url of db_http and
+	the urls of the other db modules. The url doesn't have to contain
+	the database name. Instead, everything that is after the
+	address is considered to be a path to the db resource, it may be
+	missing.
+
+
+Even if using HTTPS the url must begin with "http://" , and the
+	SSL parameter for the module must be set to 1.
+
+
+**Example: Setting db_url for a module**
+
+
+```opensips
+...
+modparam("presence", "db_url","http://user:pass@localhost:13100")
+or
+modparam("presence", "db_url","http://user:pass@www.some.com/some/some")
+...
+```
+
+
+### Dependencies
+
+
+#### OpenSIPS Modules
+
+
+This module does not depend on other modules.
+
+
+#### External Libraries or Applications
+
+
+- *libcurl*.
+
+
+### Exported Parameters
+
+
+#### `SSL`(int)
+
+
+Whether or not to use SSL.
+
+
+If value is 1 the module will use https otherwise
+		it will use http.
+
+
+*Default value is " 0 ".*
+
+
+**Example: Set `SSL` parameter**
+
+
+```opensips
+...
+modparam("db_http", "SSL",1)
+...
+```
+
+
+#### `cap_raw_query`(int)
+
+
+Whether or not the server supports raw queries.
+
+
+*Default value is "0".*
+
+
+**Example: Set `cap_raw_query` parameter**
+
+
+```opensips
+...
+modparam("db_http", "cap_raw_query", 1)
+...
+```
+
+
+#### `cap_replace`(int)
+
+
+Whether or not the server supports replace capabilities.
+
+
+*Default value is "0".*
+
+
+**Example: Set `cap_replace` parameter**
+
+
+```opensips
+...
+modparam("db_http", "cap_replace", 1)
+...
+```
+
+
+#### `cap_insert_update`(int)
+
+
+Whether or not the server supports insert_update capabilities.
+
+
+*Default value is "0".*
+
+
+**Example: Set `cap_insert_update` parameter**
+
+
+```opensips
+...
+modparam("db_http", "cap_insert_update", 1)
+...
+```
+
+
+#### `cap_last_inserted_id`(int)
+
+
+Whether or not the server supports last_inserted_id capabilities.
+
+
+*Default value is "0".*
+
+
+**Example: Set `cap_last_inserted_id` parameter**
+
+
+```opensips
+...
+modparam("db_http", "cap_last_inserted_id", 1)
+...
+```
+
+
+#### `field_delimiter` (str)
+
+
+Character to be used to delimit fields in the reply.Only
+		one char may be set.
+
+
+*Default value is ";"*
+
+
+**Example: Set `field_delimiter` parameter**
+
+
+```opensips
+...
+modparam("db_http", "field_delimiter",";")
+...
+```
+
+
+#### `row_delimiter` (str)
+
+
+Character to be used to delimit rows in the reply.Only
+		one char may be set.
+
+
+*Default value is "\n"*
+
+
+**Example: Set `row_delimiter` parameter**
+
+
+```opensips
+...
+modparam("db_http", "row_delimiter","\n")
+...
+```
+
+
+#### `quote_delimiter` (str)
+
+
+Character to be used to quote  fields that require quoting
+		in the reply.Only one char may be set.
+
+
+*Default value is "|"*
+
+
+**Example: Set `quote_delimiter` parameter**
+
+
+```opensips
+...
+modparam("db_http", "quote_delimiter","|")
+...
+```
+
+
+#### `value_delimiter` (str)
+
+
+The delimiter used to separate multiple fields of a single
+		variable (see [http variables](#http-variables)).
+		Only one char may be set.
+
+
+*Default value is ","*
+
+
+**Example: Set `value_delimiter` parameter**
+
+
+```opensips
+...
+modparam("db_http", "value_delimiter",";")
+...
+```
+
+
+#### `timeout` (int)
+
+
+The maximum number of milliseconds that the HTTP ops are allowed to last
+
+
+*Default value is "30000 ( 30 seconds )"*
+
+
+**Example: Set `timeout` parameter**
+
+
+```opensips
+...
+modparam("db_http", "timeout",5000)
+...
+```
+
+
+#### `disable_expect` (int)
+
+
+Disables automatic 'Expect: 100-continue' behavior in libcurl for requests over 1024 bytes in size.
+		This can help reduce latency by saving a network round-trip for large records.
+		For more information on this behavior please seee rfc2616 section 8.2.3.
+
+
+*Default value is "0 (off)"*
+
+
+**Example: Set `disable_expect` parameter**
+
+
+```opensips
+...
+modparam("db_http", "disable_expect",1)
+...
+```
+
+
+### Exported Functions
+
+
+### Server specifications
+
+
+#### Queries
+
+
+The server must accept queries as HTTP queries.
+
+
+The queries are of 2 types : GET and POST.Both
+		set variables that must be interpreted by the server.
+		All values are URL-encoded.
+
+
+There are several types of queries and the server can tell
+		them apart by the query_type variable. Each type of query uses
+		specific variables simillar to those in the opensips db_api.
+
+
+**Example: Example query.**
+
+
+```
+...
+GET /presentity/?c=username,domain,event,expires HTTP/1.1
+...
+```
+
+
+#### Variables
+
+
+A description of all the variables. Each variable can have
+		either a single value or a comma-separated list of values. Each
+		variable has a special meaning and can be used only with
+		certain queries.
+
+
+The table on which operations will take place will be encoded
+		in the url as the end of the url ( www.some.com/users will point
+		to the users table).
+
+
+- k=
+Describes the keys (columns) that will 
+				be used for comparison.Can have multiple values.
+- op=
+Describes the operators that will 
+				be used for comparison.Can have multiple values.
+- v=
+Describes the values that columns will be 
+				compaired against. Can have multiple values.
+- c=
+Describes the columns that will be selected
+				from the result.Can have multiple values.
+- o=
+The column that the result will be ordered by.
+				Has a single value.
+- uk=
+The keys(columns) that will be updated.
+				Can have multiple values.
+- uv=
+The new values that will be put in the columns.
+				Can have multiple values.
+- q=
+Describes a raw query. Will only be used if
+				the server supports raw queries. Has a single
+				value.
+- query_type=
+Describes the type of the current query.
+				Can have a single value as described in the
+				Query Types section.Has a single value.
+				Will be present in all queries except the
+				"SELECT" (normal query).
+
+
+**Example: Example query with variables.**
+
+
+```
+...
+GET /presentity/?c=username,domain,event,expires HTTP/1.1
+GET /version/?k=table_name&v=xcap&c=table_version HTTP/1.1 
+...
+...
+POST /active_watchers HTTP/1.1
+
+k=id&v=100&query_type=insert
+...
+```
+
+
+#### Query Types
+
+
+The types of the queries are described by the
+		query_type variable. The value of the variable
+		will be set to the exact name of the query.
+
+
+Queries for "SELECT" use GET and the rest use POST
+		(insert, update, delete, replace, insert_update).
+
+
+- normal query
+Uses the k, op, v, c and o variables.
+				This will not set the query_type variable and
+				will use GET.
+- delete
+Uses the k, op and v variables.
+- insert
+Uses the k and v variables.
+- update
+Uses the k,op,v,uk and uv  variables.
+- replace
+Uses the k and v  variables. This is an optional
+				type of query. If the module is not configured to use it
+				it will not.
+- insert_update
+Uses the k and v  variables. This is an optional
+				type of query. If the module is not configured to use it
+				it will not.
+- custom
+Uses the q  variable. This is an optional
+				type of query. If the module is not configured to use it
+				it will not.
+
+
+**Example: More query examples.**
+
+
+```
+...
+POST /active_watchers HTTP/1.1
+
+k=id&op=%3D&v=100&query_type=delete
+...
+
+...
+POST /active_watchers HTTP/1.1
+
+k=id&op=%3D&v=100&uk=id&uv=101&query_type=update
+...
+```
+
+
+#### NULL values in queries
+
+
+NULL values in queries are represented as a string of length 1
+		containing a single character with value '\0'.
+
+
+**Example: NULL query example.**
+
+
+```
+...
+POST /active_watchers HTTP/1.1
+
+k=id&op=%3D&v=%00&query_type=delete
+...
+```
+
+
+#### Server Replies
+
+
+If the query is ok (even if the answer is empty)
+			the server must reply with a 200 OK HTTP reply with
+			a body containing the types and values of the columns.
+
+
+The server must reply with a delimiter separated list of
+		values and columns.
+
+
+Each element in the list must be seperated from the
+			one before it by a field delimiter that must be the same 
+			as the one set as a parameter from the script for the module.
+			The last element of each line must not be followed by
+			a field delimiter, but by a	row delimiter.
+
+
+The first line of the reply must contain a list of the types
+		of values of each column. The types can be any from the list:
+		integer, string, str, blob, date.
+
+
+Each following line contains the values of each row from the result.
+
+
+If the query produced an error the server must reply with a
+		HTTP 500 reply,	or with a corresponding error code (404, 401).
+
+
+**Example: Example Reply.**
+
+
+```
+...
+int;string;blob
+6;something=something;1000
+100;mine;10002030
+...
+```
+
+
+#### Reply Quoting
+
+
+Because the values may contain delimiters inside,
+		the server must perform quoting when necessary (there is no
+		problem if it does it even when it is not necessary).
+
+
+A quote delimiter must be defined and must be the same as
+		the one set from the script ( by default it is "|" ).
+
+
+If a value contains a field ,  row  or a quote delimiter
+		it must be placed under quotes. A quote delimiter inside a value
+		must be preceeded by another quote delimiter.
+
+
+**Example: Quoting Example.**
+
+
+```
+...
+int;string;blob
+6;|ana;maria|;1000
+100;mine;10002030
+3;mine;|some||more;|
+...
+```
+
+
+#### Last inserted id
+
+
+This is an optional feature and may be enabled if one wants
+		to use it.
+
+
+In order to use this feature the server must place the id
+		of the last insert in the 200 reply for each insert query.
+
+
+#### Authentication and SSL
+
+
+If the server supports authentication and SSL, the module
+		can be enabled to use SSL. Authentication will always be used
+		if needed.
+
+
+The module will try to use the most secure type of
+		authentication that is provided by the server from:
+		Basic, Digest,GSSNEGOTIATE and NTLM.
+
+
+## Contributors
+
+
+### By Commit Statistics
+
+
+**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
+
+
+|  | Name | DevScore | Commits | Lines ++ | Lines -- |
+| --- | --- | --- | --- | --- | --- |
+| 1. | Andrei Dragus | 23 | 2 | 2289 | 5 |
+| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 14 | 12 | 71 | 20 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 10 | 8 | 25 | 48 |
+| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 9 | 7 | 48 | 52 |
+| 5. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 6 | 4 | 65 | 7 |
+| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 6 | 4 | 62 | 9 |
+| 7. | Ryan Bullock ([@rrb3942](https://github.com/rrb3942)) | 5 | 3 | 42 | 1 |
+| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 4 | 2 | 6 | 6 |
+| 9. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 5 | 5 |
+| 10. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | 3 | 1 | 50 | 26 |
+
+
+**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu, Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Stephane Alnet.
+
+
+*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
+
+
+*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
+
+
+*(3) ignoring whitespace edits, renamed files and auto-generated files*
+
+
+### By Commit Activity
+
+
+**Most recently active contributors^(1)^ to this module**
+
+
+|  | Name | Commit Activity |
+| --- | --- | --- |
+| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Dec 2009 - Nov 2025 |
+| 2. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Oct 2025 |
+| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2023 |
+| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
+| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2021 |
+| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Oct 2011 - Jan 2021 |
+| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Mar 2020 - Mar 2020 |
+| 8. | Ryan Bullock ([@rrb3942](https://github.com/rrb3942)) | Jan 2019 - Feb 2019 |
+| 9. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
+| 10. | Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)) | Oct 2014 - Oct 2014 |
+
+
+**All remaining contributors**: Stephane Alnet, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Andrei Dragus.
+
+
+*(1) including any documentation-related commits, excluding merge commits*
+
+
+## Documentation
+
+
+### Contributors
+
+
+**Last edited by:** Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Stephane Alnet, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Andrei Dragus.
+
+
+*Documentation Copyrights:*
+
+
+Copyright © 2009 Voice Sistem SRL
