@@ -27,8 +27,9 @@ This module is a B2BUA upper level implementation that can be used along with th
 A B2B session can be triggered in two ways:
 
 
-- 
-- 
+- from the script - at the receipt of an initial INVITE message
+- with an extern command (MI) command - the server will connect two
+			end points in a session(Third Party Call Control).
 
 
 High Availability for B2B sessions can be achieved by enabling the clustering support
@@ -164,15 +165,15 @@ Regexp to search SIP header by names that should be passed
 		of headers that are passed by default. They are:
 
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Max-Forwards (it is decreased by 1)
+- Content-Type
+- Supported
+- Allow
+- Proxy-Require
+- Session-Expires
+- Min-SE
+- Require
+- RSeq
 
 
 If you wish some other headers to be passed also you should define them
@@ -211,15 +212,15 @@ A list of SIP header names delimited by ';' that should be passed
 		of headers that are passed by default. They are:
 
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Max-Forwards (it is decreased by 1)
+- Content-Type
+- Supported
+- Allow
+- Proxy-Require
+- Session-Expires
+- Min-SE
+- Require
+- RSeq
 
 
 If you wish some other headers to be passed also you should define them
@@ -448,9 +449,9 @@ modparam("b2b_logic", "init_callid_hdr", "Init-CallID")
 The B2B modules have support for the 3 type of database storage
 
 
-- 
-- 
-- 
+- NO DB STORAGE - set this parameter to 0
+- WRITE THROUGH (synchronous write in database) - set this parameter to 1
+- WRITE BACK (update in db from time to time) - set this parameter to 2
 
 
 *Default value is "2" (WRITE BACK).*
@@ -513,8 +514,8 @@ modparam("b2b_logic", "b2bl_th_init_timeout", 60)
 Allow bridging of calls in early stage by issuing a "UPDATE" request
 
 
-- 
-- 
+- 0 - Do not bridge dialogs in early stage
+- 1 - Try to update an session in early stage by sending an UPDATE
 
 
 *Default value is "0" Do not bridge dialogs in early stage*
