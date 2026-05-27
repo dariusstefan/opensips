@@ -31,10 +31,15 @@ And finally, it can process received "NOTIFY" requests and it will
 Use cases for this might be:
 
 
-- 
-- 
-- 
-- 
+- Keeping different Servers in Sync regarding
+		the location database
+- Get notified, when a user registers: A presence-server,
+		which handles offline message storage for an account, would get
+		notified, when the user comes online.
+- A client could subscribe to its own registration-status,
+		so he would get notified as soon as his account gets administratively
+		unregistered.
+- ...
 
 
 ### Dependencies
