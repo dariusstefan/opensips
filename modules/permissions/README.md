@@ -538,24 +538,31 @@ This function can be useful to check if a request can be allowed
 Meaning of the parameter is as follows:
 
 
-- This argument represents the group id to be matched.
+- group_id (int)
+This argument represents the group id to be matched.
 			If the group_id argument is "0", the query can match any group
 			in the cached address table.
-- This argument represents the ip address to be matched.
+- ip (string)
+This argument represents the ip address to be matched.
 			This argument cannot be null/empty.
-- This argument represents the port to be matched.
+- port (int)
+This argument represents the port to be matched.
 			Cached address table entry containing port value 0
 			matches any port.
 			Also, a *0* value for the argument will match any port in the
 			address table.
-- This argument represents the protocol used for transport;
+- proto (string)
+This argument represents the protocol used for transport;
 			Transport protocol is either "ANY" or any
 			valid transport protocol value: "UDP, "TCP", "TLS", and "SCTP".
-- This argument represents the variable in wich the context_info field
+- context_info (var, optional)
+This argument represents the variable in wich the context_info field
 			from the cached address table will be stored in case of match.
-- This argument is a string to be matched against the wildcard
+- pattern (string, optional)
+This argument is a string to be matched against the wildcard
 			pattern field from the address table.
-- An optional parition name for the group id. If no partition
+- partition (string, optional)
+An optional parition name for the group id. If no partition
 			specified, the "default" one will be used.
 
 
