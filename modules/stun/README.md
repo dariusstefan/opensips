@@ -126,8 +126,7 @@ By default, the *primary_ip* and the advertised
 			This may be changed with an optional "/ xxx.xxx.xxx.xxx" string.
 
 
-```c title="Set
-					primary_ip parameter"
+```c title="Set primary_ip parameter"
 ...
 modparam("stun", "primary_ip", "192.168.0.100")
 
@@ -187,8 +186,7 @@ By default, the *alternate_ip* and the advertised
 			This may be changed with an optional "/ xxx.xxx.xxx.xxx" string.
 
 
-```c title="Set
-					alternate_ip parameter"
+```c title="Set alternate_ip parameter"
 ...
 modparam("stun","alternate_ip","11.22.33.44")
 
@@ -223,8 +221,7 @@ By default, the *alternate_port* and the advertised
 			This may be changed with an optional "/ adv_port" string.
 
 
-```c title="Set
-					alternate_port parameter"
+```c title="Set alternate_port parameter"
 ...
 modparam("stun","alternate_port","3479")
 
@@ -251,8 +248,7 @@ The [primary ip](#param_primary_ip) and
 The default value is *0* (disabled).
 
 
-```c title="Set
-					use_listeners_as_primary parameter"
+```c title="Set use_listeners_as_primary parameter"
 ...
 modparam("stun","use_listeners_as_primary",1)
 ...

@@ -923,8 +923,7 @@ The value of these parameters represents the virtual tls domain's
 				name which is only used for identification.
 
 
-```c title="Usage of tls_client_domain and
-					tls_server_domain block"
+```c title="Usage of tls_client_domain and tls_server_domain block"
 ...
 socket=tls:10.0.0.10:5061
 ...

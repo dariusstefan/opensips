@@ -65,7 +65,7 @@ The name of the script route to be run in order to retrieve the status
 *Default value is "dfks_get".*
 
 
-```c title="Set  parameter"
+```c title="Set parameter"
 ...
 modparam("presence_dfks", "get_route", "dfks_get")
 ...
@@ -82,7 +82,7 @@ The name of the script route to be run when a feature status update
 *Default value is "dfks_get".*
 
 
-```c title="Set  parameter"
+```c title="Set parameter"
 ...
 modparam("presence_dfks", "set_route", "dfks_set")
 ...

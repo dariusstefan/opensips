@@ -301,8 +301,7 @@ Tells if the lookup tag should append branches (to do parallel
 *Default value of this parameter is 0.*
 
 
-```c title="Set lookup_append_branches 
-					parameter"
+```c title="Set lookup_append_branches parameter"
 ...
 modparam("cpl_c","lookup_append_branches",1)
 ...

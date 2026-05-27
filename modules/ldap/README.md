@@ -296,8 +296,7 @@ LDAP bind operation timeout in milliseconds.
 Default value: 1000 (one second)
 
 
-```c title="ldap_client_bind_timeout
-                example"
+```c title="ldap_client_bind_timeout example"
 ldap_client_bind_timeout = 1000
 ```
 
@@ -311,8 +310,7 @@ LDAP full path of the CA certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-```c title="ldap_ca_cert_file
-                example"
+```c title="ldap_ca_cert_file example"
 ldap_ca_cert_file = "/usr/local/CAcert.pem"
 ```
 
@@ -326,8 +324,7 @@ LDAP full path of the certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-```c title="ldap_cert_file
-                example"
+```c title="ldap_cert_file example"
 ldap_cert_file = "/usr/local/mycert.pem"
 ```
 
@@ -341,8 +338,7 @@ LDAP full path of the key file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-```c title="ldap_key_file
-                example"
+```c title="ldap_key_file example"
 ldap_key_file = "/usr/local/mykey.pem"
 ```
 
@@ -357,8 +353,7 @@ LDAP peer certificate checking strategy, one of "NEVER", "HARD", "DEMAND", "ALLO
 Default value "NEVER".
 
 
-```c title="ldap_require_certificate
-                example"
+```c title="ldap_require_certificate example"
 ldap_require_certificate = "NEVER"
 ```
 

@@ -232,8 +232,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-```c title="
-				*freeswitch_esl()* usage"
+```c title="*freeswitch_esl()* usage"
 ...
 	# ESL socket 10.0.0.10 is defined in the database (password "ClueCon")
 	$var(rc) = freeswitch_esl("bgapi originate {origination_uuid=123456789}user/1010 9386\njob-uuid: foobar", "10.0.0.10", "$var(response)");

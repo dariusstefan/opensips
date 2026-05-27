@@ -961,8 +961,7 @@ More details on the user location replication mechanism are available
 		in [distributed sip user location](#distributed-sip-user-location)
 
 
-```c title="Setting the skip_replicated_db_ops
-			parameter"
+```c title="Setting the skip_replicated_db_ops parameter"
 ...
 modparam("usrloc", "skip_replicated_db_ops", 1)
 ...
@@ -980,8 +979,7 @@ Relevant only in WRITE_THROUGH or WRITE_BACK schemes. The maximum
 Default value is "10"
 
 
-```c title="Setting the max_contact_delete
-			parameter"
+```c title="Setting the max_contact_delete parameter"
 ...
 modparam("usrloc", "max_contact_delete", 10)
 ...
