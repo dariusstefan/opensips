@@ -230,10 +230,7 @@ IMPORTANT: A too small value may lead to performance penalties due to
 *Default value is 10.*
 
 
-**Example: Set timer_interval parameter**
-
-
-```opensips
+```opensips title="Set timer_interval parameter"
 ...
 modparam("ratelimit", "timer_interval", 5)
 ...
@@ -252,10 +249,7 @@ This parameter configures the way that a pipe's limit is specified
 *Default value is 0(limit per-second).*
 
 
-**Example: Set limit_per_interval parameter**
-
-
-```opensips
+```opensips title="Set limit_per_interval parameter"
 ...
 modparam("ratelimit", "limit_per_interval", 1)
 ...
@@ -273,10 +267,7 @@ This parameter specifies how long a pipe should be kept in memory
 *Default value is 3600.*
 
 
-**Example: Set expire_time parameter**
-
-
-```opensips
+```opensips title="Set expire_time parameter"
 ...
 modparam("ratelimit", "expire_time", 1800)
 ...
@@ -294,10 +285,7 @@ The size of the hash table internally used to keep the pipes.
 *Default value is 1024.*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("ratelimit", "hash_size", 512)
 ...
@@ -314,10 +302,7 @@ Specifies which algorithm should be assumed in case it isn't
 *Default value is "TAILDROP".*
 
 
-**Example: Set default_algorithm parameter**
-
-
-```opensips
+```opensips title="Set default_algorithm parameter"
 ...
 modparam("ratelimit", "default_algorithm", "RED")
 ...
@@ -334,10 +319,7 @@ Enables distributed rate limiting and specifies the backend
 *Default value is "disabled".*
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("ratelimit", "cachedb_url", "redis://root:root@127.0.0.1/")
 ...
@@ -354,10 +336,7 @@ Specifies what prefix should be added to the pipe name. This is
 *Default value is "rl_pipe_".*
 
 
-**Example: Set db_prefix parameter**
-
-
-```opensips
+```opensips title="Set db_prefix parameter"
 ...
 modparam("ratelimit", "db_prefix", "ratelimit_")
 ...
@@ -376,10 +355,7 @@ Used to specify the length of the buffer used by the binary
 *Default value is 32767 bytes.*
 
 
-**Example: Set repl_buffer_threshold parameter**
-
-
-```opensips
+```opensips title="Set repl_buffer_threshold parameter"
 ...
 modparam("ratelimit", "repl_buffer_threshold", 500)
 ...
@@ -396,10 +372,7 @@ Timer in milliseconds, used to specify how often the module
 *Default value is 200 ms.*
 
 
-**Example: Set repl_timer_interval parameter**
-
-
-```opensips
+```opensips title="Set repl_timer_interval parameter"
 ...
 modparam("ratelimit", "repl_timer_interval", 100)
 ...
@@ -418,10 +391,7 @@ Timer in seconds, used to specify when the counter received
 *Default value is 10 s.*
 
 
-**Example: Set repl_timer_expire parameter**
-
-
-```opensips
+```opensips title="Set repl_timer_expire parameter"
 ...
 modparam("ratelimit", "repl_timer_expire", 10)
 ...
@@ -438,10 +408,7 @@ Specifies the cluster ID where pipes will be replicated to and
 *Default value is 0. (no replication)*
 
 
-**Example: Set pipe_replication_cluster parameter**
-
-
-```opensips
+```opensips title="Set pipe_replication_cluster parameter"
 ...
 modparam("ratelimit", "pipe_replication_cluster", 1)
 ...
@@ -457,10 +424,7 @@ How long the history in SBT should be in seconds.
 *Default value is "10".*
 
 
-**Example: Set window_size parameter**
-
-
-```opensips
+```opensips title="Set window_size parameter"
 ...
 modparam("ratelimit", "window_size", 5)
 ...
@@ -478,10 +442,7 @@ Value of one slot in milliseconds. This parameter determines
 *Default value is "200".*
 
 
-**Example: Set slot_period parameter**
-
-
-```opensips
+```opensips title="Set slot_period parameter"
 ...
 modparam("ratelimit", "window_size", 5)
 #we will have 50 slots of 100 milliseconds
@@ -539,10 +500,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: rl_check usage**
-
-
-```opensips
+```opensips title="rl_check usage"
 ...
 	# perform a pipe match for all INVITE methods using RED algorithm
 	if (is_method("INVITE")) {
@@ -586,10 +544,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: rl_dec_count usage**
-
-
-```
+```c title="rl_dec_count usage"
 ...
 	if (!rl_check("gw_$ru", 100, "TAILDROP")) {
 		exit;
@@ -617,10 +572,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 			BRANCH_ROUTE, ERROR_ROUTE, LOCAL_ROUTE, TIMER_ROUTE and EVENT_ROUTE.
 
 
-**Example: rl_reset_count usage**
-
-
-```
+```c title="rl_reset_count usage"
 ...
 	if (!rl_check("gw_$ru", 100, "TAILDROP")) {
 		exit;
@@ -667,7 +619,7 @@ If no parameter are passed to the function, all the active pipes
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_list pipe=gw_10.0.0.1
 		opensips-cli -x mi rl_list filter=gw_*
 		
@@ -693,7 +645,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_dump_pipe gw_10.0.0.1
 		
 ```
@@ -718,7 +670,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_reset_pipe gw_10.0.0.1
 		
 ```
@@ -744,7 +696,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_set_pid 0.5 0.5 0.5
 		
 ```
@@ -765,7 +717,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_get_pid
 		
 ```
@@ -787,7 +739,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi rl_bin_status
 		
 ```

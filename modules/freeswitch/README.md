@@ -47,10 +47,7 @@ The expected interval between FreeSWITCH HEARTBEAT event arrivals.
 *Default value is "1" (second).*
 
 
-**Example: Setting the event_heartbeat_interval parameter**
-
-
-```opensips
+```opensips title="Setting the event_heartbeat_interval parameter"
 ...
 modparam("freeswitch", "event_heartbeat_interval", 20)
 ...
@@ -66,10 +63,7 @@ The maximally allowed duration for the establishment of an ESL connection.
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the esl_connect_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the esl_connect_timeout parameter"
 ...
 modparam("freeswitch", "esl_connect_timeout", 3000)
 ...
@@ -86,10 +80,7 @@ The maximally allowed duration for the execution of an ESL command.
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the esl_cmd_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the esl_cmd_timeout parameter"
 ...
 modparam("freeswitch", "esl_cmd_timeout", 3000)
 ...
@@ -108,10 +99,7 @@ The sleep interval used when polling for an ESL command response. Since the
 *Default value is "1000" (microseconds).*
 
 
-**Example: Setting the esl_cmd_polling_itv parameter**
-
-
-```opensips
+```opensips title="Setting the esl_cmd_polling_itv parameter"
 ...
 modparam("freeswitch", "esl_cmd_polling_itv", 3000)
 ...

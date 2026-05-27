@@ -67,7 +67,7 @@ If you obtained the OpenSIPS sources by cloning the repository from Github,
 
 In order to fetch the *wolfSSL* library code you can run:
 		
-```
+```c
 
 		git submodule update --init
 ```

@@ -49,10 +49,7 @@ If queries take longer than 'exec_query_threshold' microseconds, warning
 *Default value is 0 - disabled.*
 
 
-**Example: Set exec_query_threshold parameter**
-
-
-```opensips
+```opensips title="Set exec_query_threshold parameter"
 ...
 modparam("db_postgres", "exec_query_threshold", 60000)
 ...
@@ -69,10 +66,7 @@ The maximum number of database queries to be executed.
 *Default value is 2.*
 
 
-**Example: Set max_db_queries parameter**
-
-
-```opensips
+```opensips title="Set max_db_queries parameter"
 ...
 modparam("db_postgres", "max_db_queries", 2)
 ...
@@ -97,10 +91,7 @@ The number of seconds the PostgreSQL library waits to connect and query
 *Default value is 5.*
 
 
-**Example: Set timeout parameter**
-
-
-```opensips
+```opensips title="Set timeout parameter"
 ...
 modparam("db_postgres", "timeout", 2)
 ...
@@ -141,10 +132,7 @@ Also, you can *NOT* enable TLS for the connection
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the use_tls parameter**
-
-
-```opensips
+```opensips title="Set the use_tls parameter"
 ...
 modparam("tls_mgm", "client_domain", "dom1")
 modparam("tls_mgm", "certificate", "[dom1]/etc/pki/tls/certs/opensips.pem")

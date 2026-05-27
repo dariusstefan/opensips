@@ -74,10 +74,7 @@ This is an example of an event raised by the pike module
 			when it decides an ip should be blocked:
 
 
-**Example: E_PIKE_BLOCKED event**
-
-
-```
+```c title="E_PIKE_BLOCKED event"
 {
   "jsonrpc": "2.0",
   "method": "E_PIKE_BLOCKED",
@@ -88,18 +85,12 @@ This is an example of an event raised by the pike module
 ```
 
 
-**Example: UNIX socket**
-
-
-```
+```c title="UNIX socket"
 unix:/tmp/opensips_event.sock
 ```
 
 
-**Example: UDP socket**
-
-
-```
+```c title="UDP socket"
 udp:127.0.0.1:8081
 ```
 

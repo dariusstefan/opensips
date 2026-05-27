@@ -44,10 +44,7 @@ Specifies the root path for HTTP requests:
 *The default value is "mi".*
 
 
-**Example: Set root parameter**
-
-
-```opensips
+```opensips title="Set root parameter"
 ...
 modparam("mi_http", "root", "opensips_mi")
 ...
@@ -70,10 +67,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "trace_destination", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -109,10 +103,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 ## blacklist ps and which mi commands
 ## all the other commands shall be traced
@@ -149,10 +140,7 @@ This is an example showing the JSON-RPC request and reply over HTTP
 		for the "ps" MI command.
 
 
-**Example: JSON-RPC request**
-
-
-```
+```c title="JSON-RPC request"
 POST /mi HTTP/1.1
 Accept: application/json
 Content-Type: application/json
@@ -173,10 +161,7 @@ This is an example showing the JSON-RPC request with params and reply over HTTP
 		for the "get_statistics" MI command.
 
 
-**Example: JSON-RPC request with params**
-
-
-```
+```c title="JSON-RPC request with params"
 POST /mi HTTP/1.1
 Accept: application/json
 Content-Type: application/json

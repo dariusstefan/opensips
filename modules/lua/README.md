@@ -40,7 +40,7 @@ With the Lua module, you can access to lua function on the
     write in your opensips.cfg
 
 
-```
+```c
 ...
 if (lua_exec("mongo_alias")) {
 	...
@@ -112,10 +112,7 @@ This is the file name of your script. This may be set once
 The default value is "/etc/opensips/opensips.lua"
 
 
-**Example: Set luafilename parameter**
-
-
-```opensips
+```opensips title="Set luafilename parameter"
 ...
 modparam("lua", "luafilename", "/etc/opensips/opensips.lua")
 ...
@@ -168,10 +165,7 @@ Parameters:
 - *param* (string, optional) - Parameter to be passed to the Lua function.
 
 
-**Example: lua_exec() usage**
-
-
-```
+```c title="lua_exec() usage"
 ...
 if (lua_exec("mongo_alias")) {
 	...
@@ -206,7 +200,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
   opensips-cli -x mi watch
   
 ```

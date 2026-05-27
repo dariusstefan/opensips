@@ -85,10 +85,7 @@ Cassandra does not support regular columns in a table that contains any
 The database part of the URL needs to be in the format *Keyspace.Table[.CountersTable]*.
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("cachedb_cassandra", "cachedb_url",
 	"cassandra:group1://localhost:9042/keyspace1.users.counters");
@@ -101,10 +98,7 @@ modparam("cachedb_cassandra", "cachedb_url",
 ```
 
 
-**Example: Use Cassandra servers**
-
-
-```
+```c title="Use Cassandra servers"
 ...
 cache_store("cassandra:group1","key","$ru value");
 cache_fetch("cassandra:cluster1","key",$avp(10));
@@ -123,10 +117,7 @@ The timeout in ms that will be triggered in case a connection attempt fails.
 *Default value is "5000".*
 
 
-**Example: Set connect_timeout parameter**
-
-
-```opensips
+```opensips title="Set connect_timeout parameter"
 ...
 modparam("cachedb_cassandra", "connect_timeout",1000);
 ...
@@ -143,10 +134,7 @@ The timeout in ms that will be triggered in case a Cassandra query takes too lon
 *Default value is "5000".*
 
 
-**Example: Set query_timeout parameter**
-
-
-```opensips
+```opensips title="Set query_timeout parameter"
 ...
 modparam("cachedb_cassandra", "query_timeout",1000);
 ...
@@ -175,10 +163,7 @@ The consistency level desired for write operations.
 Default value is *one*.
 
 
-**Example: Set wr_consistency_level parameter**
-
-
-```opensips
+```opensips title="Set wr_consistency_level parameter"
 ...
 modparam("cachedb_cassandra", "wr_consistency_level", "each_quorum");
 ...
@@ -207,10 +192,7 @@ The consistency level desired for write operations.
 Default value is *one*.
 
 
-**Example: Set rd_consistency_level parameter**
-
-
-```opensips
+```opensips title="Set rd_consistency_level parameter"
 ...
 modparam("cachedb_cassandra", "rd_consistency_level", "quorum");
 ...
@@ -233,10 +215,7 @@ This value, if set, only makes sense to be lower than the
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set exec_threshold parameter**
-
-
-```opensips
+```opensips title="Set exec_threshold parameter"
 ...
 modparam("cachedb_cassandra", "exec_threshold", 100000)
 ...

@@ -105,10 +105,7 @@ This parameter must be set of the module will
 *Default value is "Not set!".*
 
 
-**Example: Set qos_flag parameter**
-
-
-```opensips
+```opensips title="Set qos_flag parameter"
 ...
 modparam("qos", "qos_flag", "QOS_FLAG")
 ...

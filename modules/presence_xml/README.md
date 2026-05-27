@@ -71,10 +71,7 @@ Note: When switching from one value to another, the watchers table must
 *Default value is "0".*
 
 
-**Example: Set force_active parameter**
-
-
-```opensips
+```opensips title="Set force_active parameter"
 ...
 modparam("presence_xml", "force_active", 1)
 ...
@@ -96,10 +93,7 @@ Setting this parameter to 1 enables the features described in RFC 4827.
 *Default value is "0".*
 
 
-**Example: Set pidf_manipulation parameter**
-
-
-```opensips
+```opensips title="Set pidf_manipulation parameter"
 ...
 modparam("presence_xml", "pidf_manipulation", 1)
 ...
@@ -115,10 +109,7 @@ The address of the xcap servers used for storage.
 		list of trusted XCAP servers.
 
 
-**Example: Set xcap_server parameter**
-
-
-```opensips
+```opensips title="Set xcap_server parameter"
 ...
 modparam("presence_xml", "xcap_server", "xcap_server.example.org")
 modparam("presence_xml", "xcap_server", "xcap_server.ag.org")
@@ -133,10 +124,7 @@ This parameter should be configured if you are using the non integrated xcap
 		mode and you need to use another pres-rules auid than the default 'pres-rules'.
 
 
-**Example: Set pres_rules_auid parameter**
-
-
-```opensips
+```opensips title="Set pres_rules_auid parameter"
 ...
 modparam("presence_xml", "pres_rules_auid", "org.openmobilealliance.pres-rules")
 ...
@@ -150,10 +138,7 @@ This parameter should be configured if you are using the non integrated xcap
 		mode and you need to configure another filename than the default 'index'.
 
 
-**Example: Set pres_rules_filename parameter**
-
-
-```opensips
+```opensips title="Set pres_rules_filename parameter"
 ...
 modparam("presence_xml", "pres_rules_filename", "pres-rules")
 ...
@@ -168,10 +153,7 @@ This parameter should be set to 0 if you want to prevent OpenSIPS from automatic
                 (a PUBLISH request is received with Expires: 0).
 
 
-**Example: Set generate_offline_body parameter**
-
-
-```opensips
+```opensips title="Set generate_offline_body parameter"
 ...
 modparam("presence_xml", "generate_offline_body", 0)
 ...

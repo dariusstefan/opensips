@@ -19,7 +19,7 @@ The **proto_bin** module is a
 Once loaded, you will be able to define BIN listeners in your
 		configuration file by adding their IP and, optionally, a listening port,
 		similar to this example:
-	```
+	```c
 
 ...
 socket= bin:127.0.0.1 		# change the listening IP
@@ -62,10 +62,7 @@ The default port to be used by all TCP listeners.
 *Default value is 5555.*
 
 
-**Example: Set bin_port parameter**
-
-
-```opensips
+```opensips title="Set bin_port parameter"
 ...
 modparam("proto_bin", "bin_port", 6666)
 ...
@@ -83,10 +80,7 @@ Time in milliseconds after a TCP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set bin_send_timeout parameter**
-
-
-```opensips
+```opensips title="Set bin_send_timeout parameter"
 ...
 modparam("proto_bin", "bin_send_timeout", 200)
 ...
@@ -107,10 +101,7 @@ The maximum number of chunks in which a BIN message is expected to
 *Default value is 32.*
 
 
-**Example: Set bin_max_msg_chunks parameter**
-
-
-```opensips
+```opensips title="Set bin_max_msg_chunks parameter"
 ...
 modparam("proto_bin", "bin_max_msg_chunks", 8)
 ...
@@ -129,10 +120,7 @@ Specifies whether the TCP connect and write operations should be
 *Default value is 1 (enabled).*
 
 
-**Example: Set bin_async parameter**
-
-
-```opensips
+```opensips title="Set bin_async parameter"
 ...
 modparam("proto_bin", "bin_async", 0)
 ...
@@ -151,10 +139,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 1024.*
 
 
-**Example: Set bin_async_max_postponed_chunks parameter**
-
-
-```opensips
+```opensips title="Set bin_async_max_postponed_chunks parameter"
 ...
 modparam("proto_bin", "bin_async_max_postponed_chunks", 1024)
 ...
@@ -174,10 +159,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 100 ms.*
 
 
-**Example: Set bin_async_local_connect_timeout parameter**
-
-
-```opensips
+```opensips title="Set bin_async_local_connect_timeout parameter"
 ...
 modparam("proto_bin", "bin_async_local_connect_timeout", 200)
 ...
@@ -197,10 +179,7 @@ If *bin_async* is enabled, this specifies the
 *Default value is 10 ms.*
 
 
-**Example: Set bin_async_local_write_timeout parameter**
-
-
-```opensips
+```opensips title="Set bin_async_local_write_timeout parameter"
 ...
 modparam("proto_bin", "tcp_async_local_write_timeout", 100)
 ...

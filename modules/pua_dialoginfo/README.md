@@ -31,7 +31,7 @@ Following you will show some examples of an dialog-info XML document taken
 		parameters:
 
 
-```
+```c
 <?xml version="1.0"?>
 <dialog-info xmlns="urn:ietf:params:xml:ns:dialog-info"
              version="1"
@@ -73,7 +73,7 @@ The dialog element can contain optional "local" and "remote" elements which
 		describes the local and the remote party in more detail, for example:
 
 
-```
+```c
 <?xml version="1.0" encoding="UTF-8"?>
 <dialog-info xmlns="urn:ietf:params:xml:ns:dialog-info"
              version="1" state="full">
@@ -111,7 +111,7 @@ A dialog-info XML document may contain multiple "dialog" elements, for
 		a second incoming call) dialog.
 
 
-```
+```c
 <?xml version="1.0"?>
 <dialog-info xmlns="urn:ietf:params:xml:ns:dialog-info"
              version="3"
@@ -199,10 +199,7 @@ If this parameter is set, the optional call-id will be put into the
 *Default value is "1".*
 
 
-**Example: Set include_callid parameter**
-
-
-```opensips
+```opensips title="Set include_callid parameter"
 ...
 modparam("pua_dialoginfo", "include_callid", 0)
 ...
@@ -219,10 +216,7 @@ If this parameter is set, the local and remote tag will be put
 *Default value is "1".*
 
 
-**Example: Set include_tags parameter**
-
-
-```opensips
+```opensips title="Set include_tags parameter"
 ...
 modparam("pua_dialoginfo", "include_tags", 0)
 ...
@@ -240,10 +234,7 @@ If this parameter is set, the optional local and remote elements
 *Default value is "1".*
 
 
-**Example: Set include_localremote parameter**
-
-
-```opensips
+```opensips title="Set include_localremote parameter"
 ...
 modparam("pua_dialoginfo", "include_localremote", 0)
 ...
@@ -267,10 +258,7 @@ Usually the dialog-info of the caller will be
 *Default value is "0".*
 
 
-**Example: Set caller_confirmed parameter**
-
-
-```opensips
+```opensips title="Set caller_confirmed parameter"
 ...
 modparam("pua_dialoginfo", "caller_confirmed", 1)
 ...
@@ -296,10 +284,7 @@ The intended purpose of this parameter is to reduce the rate of notifications
 *Default value is "0".*
 
 
-**Example: Set publish_on_trying parameter to 0**
-
-
-```opensips
+```opensips title="Set publish_on_trying parameter to 0"
 ...
 modparam("pua_dialoginfo", "publish_on_trying", 0)
 
@@ -334,10 +319,7 @@ modparam("pua_dialoginfo", "publish_on_trying", 0)
 ```
 
 
-**Example: Set publish_on_trying parameter to 1**
-
-
-```opensips
+```opensips title="Set publish_on_trying parameter to 1"
 ...
 modparam("pua_dialoginfo", "publish_on_trying", 1)
 
@@ -387,10 +369,7 @@ By default, reINVITEs will trigger a PUBLISH. They are actually
 			specific reINVITE.
 
 
-**Example: Set nopublish_flag parameter**
-
-
-```opensips
+```opensips title="Set nopublish_flag parameter"
 ...
 modparam("pua_dialoginfo", "nopublish_flag", "no_publish")
 ...
@@ -404,10 +383,7 @@ The address of the presence server, where the PUBLISH messages
 		should be sent (not compulsory).
 
 
-**Example: Set presence_server parameter**
-
-
-```opensips
+```opensips title="Set presence_server parameter"
 ...
 modparam("pua_dialoginfo", "presence_server", "sip:ps@opensips.org:5060")
 ...
@@ -426,10 +402,7 @@ The name of the pseudovariable that will hold a custom caller URI.
 		"display_name<sip_uri>"  or "sip_uri".
 
 
-**Example: Set caller_spec_param parameter**
-
-
-```opensips
+```opensips title="Set caller_spec_param parameter"
 ...
 modparam("pua_dialoginfo", "caller_spec_param", "$avp(10)")
 ...
@@ -447,10 +420,7 @@ The name of the pseudovariable that will hold the callee URI.
 		the same as described in caller_spec_param section.
 
 
-**Example: Set caller_spec_param parameter**
-
-
-```opensips
+```opensips title="Set caller_spec_param parameter"
 ...
 modparam("pua_dialoginfo", "callee_spec_param", "$avp(11)")
 ...
@@ -472,10 +442,7 @@ It is advisable to specify if you use a different presence server
 *Default value is "1".*
 
 
-**Example: Set osips_ps parameter**
-
-
-```opensips
+```opensips title="Set osips_ps parameter"
 ...
 modparam("pua_dialoginfo", "osips_ps", 0)
 ...
@@ -501,10 +468,7 @@ Meaning of the parameters:
 			be published.
 
 
-**Example: dialoginfo_set usage**
-
-
-```opensips
+```opensips title="dialoginfo_set usage"
 ...
 	if(is_method("INVITE"))
 		if($ru =~ "opensips.org")
@@ -535,10 +499,7 @@ Meaning of the parameters:
 			'uri', as in the To or From headers)
 
 
-**Example: dialoginfo_set_branch_callee usage**
-
-
-```
+```c title="dialoginfo_set_branch_callee usage"
 ...
 branch_route[out]
 {
@@ -567,10 +528,7 @@ Meaning of the parameters:
 			both sides will be muted.
 
 
-**Example: dialoginfo_mute_branch usage**
-
-
-```
+```c title="dialoginfo_mute_branch usage"
 ...
 	branch_route[out] {
 		# mute publishing for callee side if not a local domain

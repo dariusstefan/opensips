@@ -56,10 +56,7 @@ The default domain to use when constructing the presentity
 *Default value is "NULL".*
 
 
-**Example: Set default_domain parameter**
-
-
-```opensips
+```opensips title="Set default_domain parameter"
 ...
 modparam("pua_usrloc", "default_domain", "opensips.org")
 ...
@@ -77,10 +74,7 @@ The prefix when construstructing entity attribute to be added to
 *Default value is "NULL".*
 
 
-**Example: Set presentity_prefix parameter**
-
-
-```opensips
+```opensips title="Set presentity_prefix parameter"
 ...
 modparam("pua_usrloc", "entity_prefix", "pres")
 ...
@@ -94,10 +88,7 @@ The the address of the presence server. If set, it will be
 		used as outbound proxy when sending PUBLISH requests.
 
 
-**Example: Set presence_server parameter**
-
-
-```opensips
+```opensips title="Set presence_server parameter"
 ...
 modparam("pua_usrloc", "presence_server", "sip:pa@opensips.org:5075")
 ...
@@ -116,10 +107,7 @@ The function is used to mark REGISTER requests that have to
 				in location table.
 
 
-**Example: pua_set_publish usage**
-
-
-```opensips
+```opensips title="pua_set_publish usage"
 ...
 if(is_method("REGISTER") && $fu=~"john@opensips.org") 
 	pua_set_publish();
