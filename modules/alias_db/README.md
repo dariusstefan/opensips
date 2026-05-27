@@ -55,7 +55,7 @@ Database URL.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("alias_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -71,7 +71,7 @@ Name of the column storing username.
 *Default value is "username".*
 
 
-```opensips title="Set user_column parameter"
+```c title="Set user_column parameter"
 ...
 modparam("alias_db", "user_column", "susername")
 ...
@@ -87,7 +87,7 @@ Name of the column storing user's domain.
 *Default value is "domain".*
 
 
-```opensips title="Set domain_column parameter"
+```c title="Set domain_column parameter"
 ...
 modparam("alias_db", "domain_column", "sdomain")
 ...
@@ -103,7 +103,7 @@ Name of the column storing alias username.
 *Default value is "alias_username".*
 
 
-```opensips title="Set alias_user_column parameter"
+```c title="Set alias_user_column parameter"
 ...
 modparam("alias_db", "alias_user_column", "auser")
 ...
@@ -119,7 +119,7 @@ Name of the column storing alias domain.
 *Default value is "alias_domain".*
 
 
-```opensips title="Set alias_domain_column parameter"
+```c title="Set alias_domain_column parameter"
 ...
 modparam("alias_db", "alias_domain_column", "adomain")
 ...
@@ -136,7 +136,7 @@ Specifies the prefix to be stripped from the domain in R-URI before
 *Default value is "NULL".*
 
 
-```opensips title="Set domain_prefix parameter"
+```c title="Set domain_prefix parameter"
 ...
 modparam("alias_db", "domain_prefix", "sip.")
 ...
@@ -154,7 +154,7 @@ If the alias resolves to many SIP IDs, the first is replacing
 			1 - add branches).*
 
 
-```opensips title="Set append_branches parameter"
+```c title="Set append_branches parameter"
 ...
 modparam("alias_db", "append_branches", 1)
 ...

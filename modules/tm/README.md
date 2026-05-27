@@ -274,7 +274,7 @@ Timeout which is triggered if no final reply for a request or ACK for a
 *Default value is 30 seconds.*
 
 
-```opensips title="Set fr_timeout parameter"
+```c title="Set fr_timeout parameter"
 ...
 modparam("tm", "fr_timeout", 10)
 ...
@@ -295,7 +295,7 @@ Timeout which is triggered if no final reply for an INVITE arrives after a
 *Default value is 120 seconds.*
 
 
-```opensips title="Set fr_inv_timeout parameter"
+```c title="Set fr_inv_timeout parameter"
 ...
 modparam("tm", "fr_inv_timeout", 200)
 ...
@@ -321,7 +321,7 @@ For non-INVITE transaction this timer relates to timer J of RFC 3261
 *Default value is 5 seconds.*
 
 
-```opensips title="Set wt_timer parameter"
+```c title="Set wt_timer parameter"
 ...
 modparam("tm", "wt_timer", 10)
 ...
@@ -338,7 +338,7 @@ Time after which a to-be-deleted transaction currently ref-ed by a
 *Default value is 2 seconds.*
 
 
-```opensips title="Set delete_timer parameter"
+```c title="Set delete_timer parameter"
 ...
 modparam("tm", "delete_timer", 5)
 ...
@@ -354,7 +354,7 @@ Retransmission T1 period, in milliseconds.
 *Default value is 500 milliseconds.*
 
 
-```opensips title="Set T1_timer parameter"
+```c title="Set T1_timer parameter"
 ...
 modparam("tm", "T1_timer", 700)
 ...
@@ -370,7 +370,7 @@ Maximum retransmission period, in milliseconds.
 *Default value is 4000 milliseconds.*
 
 
-```opensips title="Set T2_timer parameter"
+```c title="Set T2_timer parameter"
 ...
 modparam("tm", "T2_timer", 8000)
 ...
@@ -389,7 +389,7 @@ Should be request-uri matching used as a part of pre-3261 transaction
 *Default value is 1 (true).*
 
 
-```opensips title="Set ruri_matching parameter"
+```c title="Set ruri_matching parameter"
 ...
 modparam("tm", "ruri_matching", 0)
 ...
@@ -408,7 +408,7 @@ Should be top most VIA matching used as a part of pre-3261 transaction
 *Default value is 1 (true).*
 
 
-```opensips title="Set via1_matching parameter"
+```c title="Set via1_matching parameter"
 ...
 modparam("tm", "via1_matching", 0)
 ...
@@ -425,7 +425,7 @@ Send timeout to be used by function which use UNIX sockets
 *Default value is 2 seconds.*
 
 
-```opensips title="Set unix_tx_timeout parameter"
+```c title="Set unix_tx_timeout parameter"
 ...
 modparam("tm", "unix_tx_timeout", 5)
 ...
@@ -444,7 +444,7 @@ If true (non null value), the final response timer will be re-triggered
 *Default value is 1 (true).*
 
 
-```opensips title="Set restart_fr_on_each_reply parameter"
+```c title="Set restart_fr_on_each_reply parameter"
 ...
 modparam("tm", "restart_fr_on_each_reply", 0)
 ...
@@ -476,7 +476,7 @@ Each element will be appended per line in
 		definition string.
 
 
-```opensips title="Set tw_append parameter"
+```c title="Set tw_append parameter"
 ...
 modparam("tm", "tw_append",
    "test: ua=$hdr(User-Agent) ;avp=$avp(avp);$rb;time=$Ts")
@@ -493,7 +493,7 @@ Enable/disable passing of provisional replies to FIFO applications.
 *Default value is 0.*
 
 
-```opensips title="Set pass_provisional_replies parameter"
+```c title="Set pass_provisional_replies parameter"
 ...
 modparam("tm", "pass_provisional_replies", 1)
 ...
@@ -510,7 +510,7 @@ Enable/disable the usage of stateful synonym branch IDs in the
 *Default value is 1 (use synonym branches).*
 
 
-```opensips title="Set syn_branch parameter"
+```c title="Set syn_branch parameter"
 ...
 modparam("tm", "syn_branch", 0)
 ...
@@ -541,7 +541,7 @@ In mode 1, you can see the AVPs you set in request route, branch route
 *Default value is 0.*
 
 
-```opensips title="Set onreply_avp_mode parameter"
+```c title="Set onreply_avp_mode parameter"
 ...
 modparam("tm", "onreply_avp_mode", 1)
 ...
@@ -566,7 +566,7 @@ Tells how the 6xx replies should be internally handled:
 *Default value is 0.*
 
 
-```opensips title="Set disable_6xx_block parameter"
+```c title="Set disable_6xx_block parameter"
 ...
 modparam("tm", "disable_6xx_block", 1)
 ...
@@ -584,7 +584,7 @@ Enables statistics support in TM module - If enabled, the TM module
 *Default value is 1 (enabled).*
 
 
-```opensips title="Set enable_stats parameter"
+```c title="Set enable_stats parameter"
 ...
 modparam("tm", "enable_stats", 0)
 ...
@@ -613,7 +613,7 @@ Main applicability of minor branch is to fork a branch to a media
 *Default value is none (disabled).*
 
 
-```opensips title="Set minor_branch_flag parameter"
+```c title="Set minor_branch_flag parameter"
 ...
 modparam("tm", "minor_branch_flag", "MINOR_BFLAG")
 ...
@@ -635,7 +635,7 @@ Recomanded range for timer partitions is max 16 (soft limit).
 *Default value is 1 (disabled).*
 
 
-```opensips title="Set timer_partitions parameter"
+```c title="Set timer_partitions parameter"
 ...
 # Enable two timer partitions
 modparam("tm", "timer_partitions", 2)
@@ -658,7 +658,7 @@ You may want to disable this behavior if you want to control from
 *Default value is 1 (enabled).*
 
 
-```opensips title="Set auto_100trying parameter"
+```c title="Set auto_100trying parameter"
 ...
 # Disable automatic 100 Trying
 modparam("tm", "auto_100trying", 0)
@@ -679,7 +679,7 @@ Check out the [tm anycast](#tm_anycast) section for more details.
 *Anycast replication is disabled by default.*
 
 
-```opensips title="Set tm_replication_cluster parameter"
+```c title="Set tm_replication_cluster parameter"
 ...
 # replicate anycast messages in cluster 1
 modparam("tm", "tm_replication_cluster", 1)
@@ -701,7 +701,7 @@ Check out the [tm anycast](#tm_anycast) section for more details.
 *Default value is *cid*.*
 
 
-```opensips title="Set the cluster_param parameter"
+```c title="Set the cluster_param parameter"
 ...
 modparam("tm", "cluster_param", "tid")
 ...
@@ -726,7 +726,7 @@ Check out the [tm anycast](#tm_anycast) section for more details.
 *Default value is *yes* (enabled).*
 
 
-```opensips title="Set the cluster_auto_cancel parameter"
+```c title="Set the cluster_auto_cancel parameter"
 ...
 # disable auto-cancel handling
 modparam("tm", "cluster_auto_cancel", no)
@@ -813,7 +813,7 @@ In case of error, the function returns the following codes:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-```opensips title="t_relay usage"
+```c title="t_relay usage"
 ...
 if (!t_relay()) {
     sl_reply_error();
@@ -873,7 +873,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE and FAILURE_ROUTE.
 
 
-```opensips title="t_reply_with_body usage"
+```c title="t_reply_with_body usage"
 ...
 	if(is_method("INVITE"))
 	{
@@ -901,7 +901,7 @@ Creates the SIP transaction for the currently processed SIP request,
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="t_newtran usage"
+```c title="t_newtran usage"
 ...
 t_newtran();  # 100 Trying is fired here
 xlog("doing my complicated routing logic\n");
@@ -944,7 +944,7 @@ Note: To detect retransmissions using this function you have to make
 This function can be used from REQUEST_ROUTE and BRANCH_ROUTE.
 
 
-```opensips title="t_check_trans usage"
+```c title="t_check_trans usage"
 ...
 if ( is_method("CANCEL") ) {
 	if ( t_check_trans() )
@@ -1130,7 +1130,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		ONREPLY_ROUTE and FAILURE_ROUTE.
 
 
-```opensips title="t_on_failure usage"
+```c title="t_on_failure usage"
 ...
 route { 
 	t_on_failure("1"); 
@@ -1189,7 +1189,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		ONREPLY_ROUTE and FAILURE_ROUTE.
 
 
-```opensips title="t_on_reply usage"
+```c title="t_on_reply usage"
 ...
 route {
 	seturi("sip:bob@opensips.org");  # first branch
@@ -1257,7 +1257,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		ONREPLY_ROUTE and FAILURE_ROUTE.
 
 
-```opensips title="t_on_branch usage"
+```c title="t_on_branch usage"
 ...
 route { 
 	t_on_branch("1"); 
@@ -1368,7 +1368,7 @@ Parameters:
 				maximum number of branches to be waited for.
 
 
-```opensips title="t_wait_for_new_branches usage"
+```c title="t_wait_for_new_branches usage"
 ...
 t_newtran();
 t_wait_for_new_branches();
@@ -1440,7 +1440,7 @@ Parameters:
 - *reason_hdr (string)*
 
 
-```opensips title="t_add_cancel_reason usage"
+```c title="t_add_cancel_reason usage"
 ...
 t_add_cancel_reason("Reason: SIP ;cause=200 ;text=\"Call completed elsewhere\"\r\n");
 t_relay();
@@ -1502,7 +1502,7 @@ This functions can be used from REQUEST_ROUTE, FAILURE_ROUTE and
 		BRANCH_ROUTE.
 
 
-```opensips title="t_write_req/unix usage"
+```c title="t_write_req/unix usage"
 ...
 modparam("tm","tw_append","append1:Email=$avp(email);UA=$ua")
 modparam("tm","tw_append","append2:body=$rb")
@@ -1543,7 +1543,7 @@ This function is used in an anycast setup to replicate a
 		able to handle it.
 
 
-```opensips title="t_anycast_replicate usage"
+```c title="t_anycast_replicate usage"
 ...
 if (is_method("ACK|CANCEL") && !t_check_trans()) {
 	t_anycast_replicate();

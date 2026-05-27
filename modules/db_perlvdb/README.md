@@ -28,7 +28,7 @@ Modules can be configured to use the db_perlvdb module as
 		database backend using the db_url_parameter:
 
 
-```opensips
+```c
 modparam("acc", "db_url", "perlvdb:OpenSIPS::VDB::Adapter::AccountingSIPtrace")
 ```
 

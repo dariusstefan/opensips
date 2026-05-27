@@ -55,7 +55,7 @@ This parameter may be defined multiple times, in order to define
 		multiple groups.
 
 
-```opensips title="script_sr_group example"
+```c title="script_sr_group example"
 modparam("status_report", "script_sr_group", "security")
 modparam("status_report", "script_sr_group", "alarms")
 ```

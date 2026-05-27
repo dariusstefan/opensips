@@ -43,7 +43,7 @@ In order to retrieve the parameters of an event, the
 		Example:
 
 
-```opensips
+```c
 xlog("first parameters is $param(1)\n");
 xlog("Pike Blocking IP is $param(ip)\n");
 ```

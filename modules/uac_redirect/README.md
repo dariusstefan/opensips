@@ -72,7 +72,7 @@ The default behavior in filtering contacts. It may be
 *The default value is "accept".*
 
 
-```opensips title="Set default_filter 
+```c title="Set default_filter 
 					module parameter"
 ...
 modparam("uac_redirect","default_filter","deny")
@@ -102,7 +102,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-```opensips title="Set deny_filter 
+```c title="Set deny_filter 
 					module parameter"
 ...
 modparam("uac_redirect","deny_filter",".*@siphub\.net")
@@ -132,7 +132,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-```opensips title="Set accept_filter 
+```c title="Set accept_filter 
 					module parameter"
 ...
 modparam("uac_redirect","accept_filter",".*@siphub\.net")
@@ -270,7 +270,7 @@ get_redirects(, 2);
 ### Script Example
 
 
-```opensips title="Redirection script example"
+```c title="Redirection script example"
 loadmodule "modules/sl/sl.so"
 loadmodule "modules/usrloc/usrloc.so"
 loadmodule "modules/registrar/registrar.so"

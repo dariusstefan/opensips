@@ -52,7 +52,7 @@ The character to be used as separator in the subname of the *$isup_param* and *$
 *Default value is "|".*
 
 
-```opensips title="Set param_subfield_separator parameter"
+```c title="Set param_subfield_separator parameter"
 ...
 modparam("sip_i", "param_subfield_separator", ":")
 ...
@@ -68,7 +68,7 @@ The string to be used for the Content-Type header field of the ISUP MIME body wh
 *Default value is "application/ISUP;version=itu-t92+".*
 
 
-```opensips title="Set isup_mime_str parameter"
+```c title="Set isup_mime_str parameter"
 ...
 modparam("sip_i", "isup_mime_str", "application/ISUP;base=itu-t92+;version=itu-t")
 ...
@@ -86,7 +86,7 @@ The default set of headers (fully defined, including the header
 *Default value is "Content-Disposition:signal;handling=optional\r\n".*
 
 
-```opensips title="Set default_part_headers parameter"
+```c title="Set default_part_headers parameter"
 ...
 modparam("sip_i", "default_part_headers", "Content-Disposition:signal;handling=required\r\n")
 ...
@@ -107,7 +107,7 @@ Country Code that the first part of the number from
 *Default value is "+1".*
 
 
-```opensips title="Set country_code parameter"
+```c title="Set country_code parameter"
 ...
 modparam("sip_i", "country_code", "+4")
 ...
@@ -258,7 +258,7 @@ The format of the subname for `$isup_param_str` is the following:
 - *subfield_name* - name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-```opensips title="isup_param_str usage"
+```c title="isup_param_str usage"
 ...
 	# may print: "NOA is: national"  
 	xlog("NOA is: $isup_param_str(Called Party Number|Nature of address indicator)");
@@ -279,7 +279,7 @@ The format of the subname for `$isup_param_str` is the following:
 Read-only variable, returns the ISUP message type as string.
 
 
-```opensips title="isup_msg_type usage"
+```c title="isup_msg_type usage"
 ...
 	# may print: "ISUP msg is: IAM"
 	xlog("ISUP msg is: $isup_msg_type");
@@ -307,7 +307,7 @@ The parameters for the transformation are:
 - *subfield_name* - optional, name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-```opensips title="isup.param usage"
+```c title="isup.param usage"
 ...
 	# for this example, we take the ISUP body from the received SIP-I message
 	$var(isup_body) = $(rb[1]);
@@ -341,7 +341,7 @@ The parameters for the transformation are:
 - *subfield_name* - optional, name of the subfield of the ISUP parameter as it appears in ITU-T Rec. Q.763
 
 
-```opensips title="isup.param.str usage"
+```c title="isup.param.str usage"
 ...
 	# for this example, we take the ISUP body from the received SIP-I message
 	$var(isup_body) = $(rb[1]);

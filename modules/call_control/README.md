@@ -136,7 +136,7 @@ Boolean flag that specifies if callcontrol should be disabled. This
 *Default value is "0".*
 
 
-```opensips title="Setting the disable parameter"
+```c title="Setting the disable parameter"
 ...
 modparam("call_control", "disable", 1)
 ...
@@ -155,7 +155,7 @@ It is the path to the filesystem socket where the callcontrol
             "/run/callcontrol/socket".*
 
 
-```opensips title="Setting the socket_name parameter"
+```c title="Setting the socket_name parameter"
 ...
 modparam("call_control", "socket_name", "/run/callcontrol/socket")
 ...
@@ -173,7 +173,7 @@ How much time (in milliseconds) to wait for an answer from the
 *Default value is "500" (ms).*
 
 
-```opensips title="Setting the socket_timeout parameter"
+```c title="Setting the socket_timeout parameter"
 ...
 modparam("call_control", "socket_timeout", 500)
 ...
@@ -207,7 +207,7 @@ This is used by the rating engine which finds the rates to apply to a
 *Default value is "$avp(cc_signaling_ip)".*
 
 
-```opensips title="Setting the signaling_ip_avp parameter"
+```c title="Setting the signaling_ip_avp parameter"
 ...
 modparam("call_control", "signaling_ip_avp", "$avp(cc_signaling_ip)")
 ...
@@ -229,7 +229,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_can_uri)".*
 
 
-```opensips title="Setting the canonical_uri_avp parameter"
+```c title="Setting the canonical_uri_avp parameter"
 ...
 modparam("call_control", "canonical_uri_avp", "$avp(cc_can_uri)")
 ...
@@ -260,7 +260,7 @@ This is useful when a destination diverts a call, thus becoming the
 *Default value is "$avp(diverter)".*
 
 
-```opensips title="Setting the diverter_avp parameter"
+```c title="Setting the diverter_avp parameter"
 ...
 modparam("call_control", "diverter_avp", "$avp(diverter)")
 
@@ -291,7 +291,7 @@ The flag that is used to specify whether the account making the call is
 *Default value is NULL (undefined).*
 
 
-```opensips title="Setting the prepaid_account_flag parameter"
+```c title="Setting the prepaid_account_flag parameter"
 ...
 modparam("call_control", "prepaid_account_flag", "PP_ACC_FLAG")
 ...
@@ -311,7 +311,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_limit)".*
 
 
-```opensips title="Setting the call_limit_avp parameter"
+```c title="Setting the call_limit_avp parameter"
 ...
 modparam("call_control", "call_limit_avp", "$avp(cc_call_limit)")
 ...
@@ -333,7 +333,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_token)".*
 
 
-```opensips title="Setting the call_token_avp parameter"
+```c title="Setting the call_token_avp parameter"
 ...
 modparam("call_control", "call_token_avp", "$avp(cc_call_token)")
 ...
@@ -366,7 +366,7 @@ If the parameter is not set, the default initialize message is sent.
 *Default value is "NULL".*
 
 
-```opensips title="Setting the init parameter"
+```c title="Setting the init parameter"
 	
 ...
 modparam("call_control", "init", "call-id=$ci to=$tu from=$fu 
@@ -399,7 +399,7 @@ If the parameter is not set, the default start message is sent.
 *Default value is "NULL".*
 
 
-```opensips title="Setting the start parameter"
+```c title="Setting the start parameter"
 	
 ...
 modparam("call_control", "start", "call-id=$ci to=$tu from=$fu 
@@ -432,7 +432,7 @@ If the parameter is not set, the default stop message is sent.
 *Default value is "NULL".*
 
 
-```opensips title="Setting the stop parameter"
+```c title="Setting the stop parameter"
 	
 ...
 modparam("call_control", "stop", "call-id=$ci to=$tu from=$fu 
@@ -476,7 +476,7 @@ This function has the following return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="Using the call_control function"
+```c title="Using the call_control function"
 ...
 if (is_avp_set($avp(805))) {
     # the diverter AVP is set, use it as billing party

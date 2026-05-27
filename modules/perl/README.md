@@ -151,7 +151,7 @@ This is the file name of your script. This may be set once only, but it may incl
 *May not be empty!*
 
 
-```opensips title="Set filename parameter"
+```c title="Set filename parameter"
 ...
 modparam("perl", "filename", "/home/john/opensips/myperl.pl")
 ...
@@ -168,7 +168,7 @@ The path to the Perl modules included (OpenSIPS.pm et.al). It is not absolutely
 			is the standard behavior, though.
 
 
-```opensips title="Set modpath parameter"
+```c title="Set modpath parameter"
 ...
 modparam("perl", "modpath", "/usr/local/lib/opensips/perl/")
 ...
@@ -409,7 +409,7 @@ $m->moduleFunction("xlog", "L_INFO", "foo");
 you may as well write
 
 
-```opensips
+```c
 $m->sl_send_reply("500", "Internal Error");
 $m->xlog("L_INFO", "foo");
 ```

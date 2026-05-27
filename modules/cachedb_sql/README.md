@@ -67,7 +67,7 @@ The format to follow is : sql:[conn_id]-dburl
 The parameter can be set multiple times to create multiple connections accessible from the OpenSIPS script.
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("cachedb_sql", "cachedb_url", "sql:1st-mysql://root:vlad@localhost/opensips_sql")
 ...
@@ -75,7 +75,7 @@ modparam("cachedb_sql", "cachedb_url", "sql:1st-mysql://root:vlad@localhost/open
 ```
 
 
-```opensips title="Usage example"
+```c title="Usage example"
 ...
 modparam("cachedb_sql", "cachedb_url", "sql:1st-mysql://root:vlad@localhost/opensips_sql")
 modparam("cachedb_sql", "cachedb_url", "sql:2nd-postgres://root:vlad@localhost/opensips_pg")
@@ -95,7 +95,7 @@ The table of the Database  that OpenSIPS will connect to in order
 			to use the from script cache_store,cache_fetch, etc operations.
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("cachedb_sql", "db_table","my_table");
 ...
@@ -109,7 +109,7 @@ modparam("cachedb_sql", "db_table","my_table");
 The column where the key will be stored
 
 
-```opensips title="Set key_column parameter"
+```c title="Set key_column parameter"
 ...
 modparam("cachedb_sql", "key_column","some_name");
 ...
@@ -123,7 +123,7 @@ modparam("cachedb_sql", "key_column","some_name");
 The column where the value will be stored
 
 
-```opensips title="Set value_column parameter"
+```c title="Set value_column parameter"
 ...
 modparam("cachedb_sql", "value_column","some_name");
 ...
@@ -137,7 +137,7 @@ modparam("cachedb_sql", "value_column","some_name");
 The column where the counter value will be stored
 
 
-```opensips title="Set counter_column parameter"
+```c title="Set counter_column parameter"
 ...
 modparam("cachedb_sql", "counter_column","some_name");
 ...
@@ -151,7 +151,7 @@ modparam("cachedb_sql", "counter_column","some_name");
 The column where the expires will be stored
 
 
-```opensips title="Set expires_column parameter"
+```c title="Set expires_column parameter"
 ...
 modparam("cachedb_sql", "expires_column","some_name");
 ...
@@ -166,7 +166,7 @@ The interval in seconds at which the expired keys will be removed from
 			the database. Default value is 60 ( seconds )
 
 
-```opensips title="Set cache_clean_period parameter"
+```c title="Set cache_clean_period parameter"
 ...
 modparam("cachedb_sql", "cache_clean_period",10);
 ...

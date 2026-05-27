@@ -61,7 +61,7 @@ The name of a UNIX SOCKET or an IP address.
 *Default value is NONE.*
 
 
-```opensips title="Set socket_name parameter"
+```c title="Set socket_name parameter"
 ...
 modparam("mi_datagram", "socket_name", "/tmp/opensips.sock")
 ...
@@ -80,7 +80,7 @@ The number of child processes to be created. Each child process
 *Default value is 1.*
 
 
-```opensips title="Set children_count parameter"
+```c title="Set children_count parameter"
 ...
 modparam("mi_datagram", "children_count", 3)
 ...
@@ -98,7 +98,7 @@ Permission to be used for creating the listening UNIX datagram socket.
 *Default value is 0660 (rw-rw----).*
 
 
-```opensips title="Set unix_socket_mode parameter"
+```c title="Set unix_socket_mode parameter"
 ...
 modparam("mi_datagram", "unix_socket_mode", 0600)
 ...
@@ -115,7 +115,7 @@ Group to be used for creating the listening UNIX socket.
 *Default value is the inherited one.*
 
 
-```opensips title="Set unix_socket_group parameter"
+```c title="Set unix_socket_group parameter"
 ...
 modparam("mi_datagram", "unix_socket_group", 0)
 modparam("mi_datagram", "unix_socket_group", "root")
@@ -133,7 +133,7 @@ User to be used for creating the listening UNIX socket.
 *Default value is the inherited one.*
 
 
-```opensips title="Set unix_socket_user parameter"
+```c title="Set unix_socket_user parameter"
 ...
 modparam("mi_datagram", "unix_socket_user", 0)
 modparam("mi_datagram", "unix_socket_user", "root")
@@ -151,7 +151,7 @@ The reply will expire after trying to sent it for socket_timeout
 *Default value is 2000.*
 
 
-```opensips title="Set socket_timeout parameter"
+```c title="Set socket_timeout parameter"
 ...
 modparam("mi_datagram", "socket_timeout", 2000)
 ...
@@ -174,7 +174,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-```opensips title="Set trace_destination parameter"
+```c title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "trace_destination", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -210,7 +210,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-```opensips title="Set trace_destination parameter"
+```c title="Set trace_destination parameter"
 ...
 ## blacklist ps and which mi commands
 ## all the other commands shall be traced
@@ -233,7 +233,7 @@ Indicates whether the JSONRPC responses sent through MI should
 *Default value is "0 - no pretty-printing".*
 
 
-```opensips title="Set pretty_printing parameter"
+```c title="Set pretty_printing parameter"
 ...
 modparam("mi_fifo", "pretty_printing", 1)
 ...

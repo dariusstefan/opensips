@@ -50,7 +50,7 @@ The default domain for the registered users to be used when
 *Default value is "NULL".*
 
 
-```opensips title="Set default_domain parameter"
+```c title="Set default_domain parameter"
 ...
 modparam("pua_bla", "default_domain", "opensips.org")
 ...
@@ -69,7 +69,7 @@ The name of the header to be added to Publish requests.
 *Default value is "NULL".*
 
 
-```opensips title="Set header_name parameter"
+```c title="Set header_name parameter"
 ...
 modparam("pua_bla", "header_name", "Sender")
 ...
@@ -85,7 +85,7 @@ The outbound_proxy uri to be used when sending Subscribe requests.
 *Default value is "NULL".*
 
 
-```opensips title="Set outbound_proxy parameter"
+```c title="Set outbound_proxy parameter"
 ...
 modparam("pua_bla", "outbound_proxy", "sip:proxy@opensips.org")
 ...
@@ -98,7 +98,7 @@ modparam("pua_bla", "outbound_proxy", "sip:proxy@opensips.org")
 The IP address of the server.
 
 
-```opensips title="Set server_address parameter"
+```c title="Set server_address parameter"
 ...
 modparam("pua_bla", "server_address", "sip:bla@160.34.23.12")
 ...
@@ -116,7 +116,7 @@ The address of the presence server - will be used as
 *Default value is "NULL".*
 
 
-```opensips title="Set presence_server parameter"
+```c title="Set presence_server parameter"
 ...
 modparam("pua_bla", "presence_server", "sip:pa@opensips.org")
 ...
@@ -134,7 +134,7 @@ The function is used to mark REGISTER requests made to a BLA AOR.
 				event.
 
 
-```opensips title="bla_set_flag usage"
+```c title="bla_set_flag usage"
 ...
 if(is_method("REGISTER") && $tu=~"bla_aor@opensips.org") 
 	bla_set_flag();		
@@ -151,7 +151,7 @@ The function handles Notify requests sent from phones on the
 				in case of a successful processing a 2xx reply should be sent.
 
 
-```opensips title="bla_handle_notify usage"
+```c title="bla_handle_notify usage"
 ...
 if(is_method("NOTIFY") && $tu=~"bla_aor@opensips.org") 
 {

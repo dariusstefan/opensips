@@ -110,7 +110,7 @@ Name of the LDAP session to be used for H.350 queries, as defined in the LDAP mo
 Default value: ""
 
 
-```opensips title="ldap_session parameter usage"
+```c title="ldap_session parameter usage"
 modparam("h350", "ldap_session", "h350");
             
 ```
@@ -125,7 +125,7 @@ Base LDAP DN to start LDAP search for H.350 entries. For best performance, this 
 Default value: ""
 
 
-```opensips title="base_dn parameter usage"
+```c title="base_dn parameter usage"
 modparam("h350", "base_dn", "ou=h350,dc=example,dc=com");
             
 ```
@@ -140,7 +140,7 @@ LDAP search scope for H.350 queries, one of "one", "base", or "sub".
 Default value: "one"
 
 
-```opensips title="search_scope parameter usage"
+```c title="search_scope parameter usage"
 modparam("h350", "search_scope", "sub");
             
 ```
@@ -188,7 +188,7 @@ H.350 SIPIdentitySIPURI to search for in directory.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 #
 # H.350 lookup for callee
 #
@@ -263,7 +263,7 @@ Specification for authentication password AVP, e.g. `$avp(pwd)`.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 # -- auth params --
 modparam("auth", "username_spec", "$avp(auth_user)")
 modparam("auth", "password_spec", "$avp(auth_pwd)")
@@ -452,7 +452,7 @@ Name prefix for call forwarding rule AVPs, as described above.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 #
 # H.350 lookup for callee
 #
@@ -556,7 +556,7 @@ Name prefix for service level AVPs, as described above.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 #
 # H.350 SIP digest authentication for caller
 #

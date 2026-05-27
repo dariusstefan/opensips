@@ -71,7 +71,7 @@ The size of the hash table that stores the b2b server entities.
 		 (512 records).
 
 
-```opensips title="Set server_hsize parameter"
+```c title="Set server_hsize parameter"
 ...
 modparam("b2b_entities", "server_hsize", 10)
 ...
@@ -90,7 +90,7 @@ The size of the hash table that stores the b2b client entities.
 		 (512 records).
 
 
-```opensips title="Set client_hsize parameter"
+```c title="Set client_hsize parameter"
 ...
 modparam("b2b_entities", "client_hsize", 10)
 ...
@@ -105,7 +105,7 @@ The name of the b2b script route that will be called when
 			B2B requests are received.
 
 
-```opensips title="Set script_req_route parameter"
+```c title="Set script_req_route parameter"
 ...
 modparam("b2b_entities", "script_req_route", "b2b_request")
 ...
@@ -120,7 +120,7 @@ The name of the b2b script route that will be called when
 			B2B replies are received.
 
 
-```opensips title="Set script_repl_route parameter"
+```c title="Set script_repl_route parameter"
 ...
 modparam("b2b_entities", "script_reply_route", "b2b_reply")
 ...
@@ -135,7 +135,7 @@ Database URL. It is not compulsory, if not set
 			data is not stored in database.
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("b2b_entities", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensips")
 ...
@@ -150,7 +150,7 @@ URL of a NoSQL database to be used. Only Redis is supported
 			at the moment.
 
 
-```opensips title="Set cachedb_url parameter"
+```c title="Set cachedb_url parameter"
 ...
 modparam("b2b_entities", "cachedb_url", "redis://localhost:6379/")
 ...
@@ -167,7 +167,7 @@ Prefix to use for every key set in the NoSQL database.
 *Default value is "b2be$".*
 
 
-```opensips title="Set cachedb_key_prefix parameter"
+```c title="Set cachedb_key_prefix parameter"
 ...
 modparam("b2b_entities", "cachedb_key_prefix", "b2b")
 ...
@@ -183,7 +183,7 @@ The time interval at which to update the info in database.
 *Default value is "100".*
 
 
-```opensips title="Set update_period parameter"
+```c title="Set update_period parameter"
 ...
 modparam("b2b_entities", "update_period", 60)
 ...
@@ -205,7 +205,7 @@ The string to use when generating the key ( it is inserted
 *Default value is "B2B".*
 
 
-```opensips title="Set b2b_key_prefix parameter"
+```c title="Set b2b_key_prefix parameter"
 ...
 modparam("b2b_entities", "b2b_key_prefix", "B2B1")
 ...
@@ -227,7 +227,7 @@ The B2B modules have support for the 3 type of database storage
 *Default value is "2" (WRITE BACK).*
 
 
-```opensips title="Set db_mode parameter"
+```c title="Set db_mode parameter"
 ...
 modparam("b2b_entities", "db_mode", 1)
 ...
@@ -244,7 +244,7 @@ The name of the table that will be used for storing B2B entities
 *Default value is "b2b_entities"*
 
 
-```opensips title="Set db_table parameter"
+```c title="Set db_table parameter"
 ...
 modparam("b2b_entities", "db_table", "some table name")
 ...
@@ -265,7 +265,7 @@ The ID of the cluster this instance belongs to. Setting this parameter
 *Default value is "0" (clustering disabled)*
 
 
-```opensips title="Set cluster_id parameter"
+```c title="Set cluster_id parameter"
 ...
 modparam("b2b_entities", "cluster_id", 10)
 ...
@@ -283,7 +283,7 @@ This parameter allows to control, whether a PRACK should be generated locally (=
 *Default value is "0" (generate PRACK locally)*
 
 
-```opensips title="Set passthru_prack parameter"
+```c title="Set passthru_prack parameter"
 ...
 modparam("b2b_entities", "passthru_prack", 1)
 ...
