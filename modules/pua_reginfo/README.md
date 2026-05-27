@@ -74,10 +74,7 @@ The default domain for the registered users to be used when
 *Default value is "NULL".*
 
 
-**Example: Set default_domain parameter**
-
-
-```opensips
+```opensips title="Set default_domain parameter"
 ...
 modparam("pua_reginfo", "default_domain", "kamailio.org")
 ...
@@ -93,10 +90,7 @@ Whether or not to generate PUBLISH requests.
 *Default value is "1" (enabled).*
 
 
-**Example: Set publish_reginfo parameter**
-
-
-```opensips
+```opensips title="Set publish_reginfo parameter"
 ...
 modparam("pua_reginfo", "publish_reginfo", 0)
 ...
@@ -112,10 +106,7 @@ The outbound_proxy uri to be used when sending Subscribe and Publish requests.
 *Default value is "NULL".*
 
 
-**Example: Set outbound_proxy parameter**
-
-
-```opensips
+```opensips title="Set outbound_proxy parameter"
 ...
 modparam("pua_reginfo", "outbound_proxy", "sip:proxy@kamailio.org")
 ...
@@ -128,10 +119,7 @@ modparam("pua_reginfo", "outbound_proxy", "sip:proxy@kamailio.org")
 The IP address of the server.
 
 
-**Example: Set server_address parameter**
-
-
-```opensips
+```opensips title="Set server_address parameter"
 ...
 modparam("pua_reginfo", "server_address", "sip:reginfo@160.34.23.12")
 ...
@@ -147,10 +135,7 @@ The domain for for querying the usrloc-database.
 *Default value is "NULL" (not set).*
 
 
-**Example: Set ul_domain parameter**
-
-
-```opensips
+```opensips title="Set ul_domain parameter"
 ...
 modparam("pua_reginfo", "ul_domain", "location")
 ...
@@ -167,10 +152,7 @@ The Key, which may be used for retrieving multiple public identies
 *Default value is "NULL" (not set).*
 
 
-**Example: Set ul_identities_key parameter**
-
-
-```opensips
+```opensips title="Set ul_identities_key parameter"
 ...
 modparam("pua_reginfo", "ul_identities_key", "identities")
 ...
@@ -214,10 +196,7 @@ Return codes:
 *-1* - Invalid NOTIFY or other error (see log-file)
 
 
-**Example: reginfo_handle_notify usage**
-
-
-```opensips
+```opensips title="reginfo_handle_notify usage"
 ...
 if(is_method("NOTIFY")) 
 	if (reginfo_handle_notify("location"))
@@ -242,10 +221,7 @@ Meaning of the parameters is as follows:
 *expires* - Expiration date for this subscription, in seconds (default 3600)
 
 
-**Example: reginfo_subscribe usage**
-
-
-```opensips
+```opensips title="reginfo_subscribe usage"
 ...
 route {
 	t_on_reply("1");
@@ -281,10 +257,7 @@ Meaning of the parameters is as follows:
 - *aor* - The AOR to be updated.
 
 
-**Example: reginfo_subscribe usage**
-
-
-```opensips
+```opensips title="reginfo_subscribe usage"
 ...
 modparam("pua_reginfo", "ul_domain", "location")
 modparam("pua_reginfo", "ul_identities_key", "identities")

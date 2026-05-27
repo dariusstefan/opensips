@@ -134,7 +134,7 @@ A value includes a data type flag and a value. Valid data types are
 			A new variable may be created with
 
 
-```
+```c
 my $val = new OpenSIPS::VDB::Value(DB_STRING, "foobar");
 ```
 
@@ -151,7 +151,7 @@ The Pair class is derived from the Value class and additionally contains a
 			A new variable may be created with
 
 
-```
+```c
 my $pair = new OpenSIPS::VDB::Pair("foo", DB_STRING, "bar");
 ```
 
@@ -169,7 +169,7 @@ The ReqCond class is used for select condition and is derived from the Pair
 			A new variable may be created with
 
 
-```
+```c
 my $cond = new OpenSIPS::VDB::ReqCond("foo", ">", DB_INT, 5);
 ```
 
@@ -188,7 +188,7 @@ This class represents a column definition or database schema. It contains an
 			A new variable may be created with
 
 
-```
+```c
 my @types = { DB_INT, DB_STRING };
 my @names = { "id", "vals" };
 my $cols = new OpenSIPS::VDB::Column(\@types, \@names);

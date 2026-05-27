@@ -61,10 +61,7 @@ Enable this parameter if your input JSONs contain signed integers which
 *Default value is *false*.*
 
 
-**Example: Set enable_long_quoting parameter**
-
-
-```opensips
+```opensips title="Set enable_long_quoting parameter"
 ...
 modparam("json", "enable_long_quoting", true)
 ...
@@ -146,10 +143,7 @@ Trying to replace or insert a value in a
 			describing the value of the json and the path used
 
 
-**Example: Accessing the $json variable**
-
-
-```opensips
+```opensips title="Accessing the $json variable"
 ...
 $json(obj1/key) = "value"; #replace or insert the (key,value)
 			   #pair into the json object;
@@ -164,10 +158,7 @@ xlog("$json(name/key1[0][-1]/key2)"); # a more complex example
 ```
 
 
-**Example: Iterating through an array using variables**
-
-
-```opensips
+```opensips title="Iterating through an array using variables"
 ...
 
 $json(ar1) := "[1,2,3,4]";
@@ -208,10 +199,7 @@ In order to explicitly iterate over a JSON object keys or values, you can use th
 			specified in the *id*.
 
 
-**Example: iteration over $json object keys**
-
-
-```opensips
+```opensips title="iteration over $json object keys"
 ...
 $json(foo) := "{\"a\": 1, \"b\": 2, \"c\": 3}";
 for ($var(k) in $(json(foo.keys)[*]))
@@ -221,10 +209,7 @@ for ($var(k) in $(json(foo.keys)[*]))
 ```
 
 
-**Example: iteration over $json object values**
-
-
-```opensips
+```opensips title="iteration over $json object values"
 ...
 $json(foo) := "{\"a\": 1, \"b\": 2, \"c\": 3}";
 for ($var(v) in $(json(foo.values)[*]))
@@ -240,10 +225,7 @@ for ($var(v) in $(json(foo)[*]))
 ```
 
 
-**Example: iteration over $json array values**
-
-
-```opensips
+```opensips title="iteration over $json array values"
 ...
 $json(foo) := "[1, 2, 3]";
 for ($var(v) in $(json(foo)[*]))
@@ -294,10 +276,7 @@ Setting a value to NULL will cause it to be
 				deleted.
 
 
-**Example: Appending integers to arrays**
-
-
-```
+```c title="Appending integers to arrays"
 ...
 $json(array1[]) = 1;
 ...
@@ -305,10 +284,7 @@ $json(array1[]) = 1;
 ```
 
 
-**Example: Deleting the last element in an array**
-
-
-```
+```c title="Deleting the last element in an array"
 ...
 $json(array1[-1]) = NULL;
 ...
@@ -316,10 +292,7 @@ $json(array1[-1]) = NULL;
 ```
 
 
-**Example: Adding a string value to a json object**
-
-
-```
+```c title="Adding a string value to a json object"
 ...
 $json(object1/some_key) = "some_value";
 ...
@@ -336,10 +309,7 @@ This will cause the value to be taken
 				 json inputs ).
 
 
-**Example: Initializing an array**
-
-
-```
+```c title="Initializing an array"
 ...
 $json(array1) := "[]";
 ...
@@ -347,10 +317,7 @@ $json(array1) := "[]";
 ```
 
 
-**Example: Setting a boolean or null value**
-
-
-```
+```c title="Setting a boolean or null value"
 ...
 $json(array1[]) := "null";
 $json(array1[]) := "true";
@@ -360,10 +327,7 @@ $json(array1[]) := "false";
 ```
 
 
-**Example: Adding a json to another json**
-
-
-```
+```c title="Adding a json to another json"
 ...
 
 $json(array) := "[1,2,3]";
@@ -431,10 +395,7 @@ WARNING: You should be careful when using references.
 			to get the value from the object you will crash OPENSIPS.
 
 
-**Example: Creating a reference**
-
-
-```opensips
+```opensips title="Creating a reference"
 ...
 
 $json(b) := "[{},{},{}]";
@@ -481,10 +442,7 @@ Test link :
 ```
 
 
-**Example: [LOGICAL ERROR] Creating a  circular reference**
-
-
-```opensips
+```opensips title="[LOGICAL ERROR] Creating a  circular reference"
 ...
 
 $json(b) := "[1]";
@@ -511,10 +469,7 @@ xlog("\nTest link :\n$json(stub)\n$json(b)\n\n");
 The function can be used to patch merge patch_json_var into main_json_var and the output will be populated into the output_var
 
 
-**Example: Using json_merge**
-
-
-```opensips
+```opensips title="Using json_merge"
 ...
 
 $json(val1) := "{}";

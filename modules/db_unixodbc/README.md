@@ -55,10 +55,7 @@ Turns on or off the auto_reconnect mode.
 *Default value is "1", this means it is enabled.*
 
 
-**Example: Set the "auto_reconnect" parameter**
-
-
-```opensips
+```opensips title="Set the "auto_reconnect" parameter"
 ...
 modparam("db_unixodbc", "auto_reconnect", 0)
 ...
@@ -82,10 +79,7 @@ You should enable this parameter if you know that the ODBC driver
 *Default value is "0" (0 = disabled; 1 = enabled).*
 
 
-**Example: Set the "use_escape_common" parameter**
-
-
-```opensips
+```opensips title="Set the "use_escape_common" parameter"
 ...
 modparam("db_unixodbc", "use_escape_common", 1)
 ...
@@ -156,7 +150,7 @@ HINT: if unixodbc don't want to connect to mysql server, try restarting
 	mysql server with:
 
 
-```
+```c
 shell>safe_mysqld --user=mysql --socket=/var/lib/mysql/mysql.sock
 ```
 

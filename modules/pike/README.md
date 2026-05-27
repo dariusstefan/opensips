@@ -88,10 +88,7 @@ IMPORTANT: a too small value may lead to performance penalties due
 *Default value is 2.*
 
 
-**Example: Set sampling_time_unit parameter**
-
-
-```opensips
+```opensips title="Set sampling_time_unit parameter"
 ...
 modparam("pike", "sampling_time_unit", 10)
 ...
@@ -110,10 +107,7 @@ How many requests should be allowed per sampling_time_unit before
 *Default value is 30.*
 
 
-**Example: Set reqs_density_per_unit parameter**
-
-
-```opensips
+```opensips title="Set reqs_density_per_unit parameter"
 ...
 modparam("pike", "reqs_density_per_unit", 30)
 ...
@@ -138,10 +132,7 @@ For how long the IP address will be kept in memory after the last
 *Default value is 120.*
 
 
-**Example: Set remove_latency parameter**
-
-
-```opensips
+```opensips title="Set remove_latency parameter"
 ...
 modparam("pike", "remove_latency", 130)
 ...
@@ -164,10 +155,7 @@ By defining this parameter, the automatic checking mode is enabled.
 *Default value is NONE (no auto mode).*
 
 
-**Example: Set check_route parameter**
-
-
-```opensips
+```opensips title="Set check_route parameter"
 ...
 modparam("pike", "check_route", "pike")
 ...
@@ -190,10 +178,7 @@ Log level to be used by module to auto report the blocking (only first
 *Default value is 1 (L_WARN).*
 
 
-**Example: Set pike_log_level parameter**
-
-
-```opensips
+```opensips title="Set pike_log_level parameter"
 ...
 modparam("pike", "pike_log_level", -1)
 ...
@@ -226,10 +211,7 @@ Return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: pike_check_req usage**
-
-
-```
+```c title="pike_check_req usage"
 ...
 if (!pike_check_req()) { exit; };
 ...
@@ -254,7 +236,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi pike_list
 		
 ```
@@ -278,7 +260,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi pike_rm 10.0.0.106
 		
 ```
@@ -327,10 +309,7 @@ One single tree (for both IPv4 and IPv6) is used. Each node contains a byte, the
 	addresses stretching from root to the leafs.
 
 
-**Example: Tree of IP addresses**
-
-
-```
+```c title="Tree of IP addresses"
 	   / 193 - 175 - 132 - 164
 tree root /                  \ 142
 	  \ 195 - 37 - 78 - 163

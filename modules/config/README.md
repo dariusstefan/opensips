@@ -94,10 +94,7 @@ Database URL used to load the initial configuration values,
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set "db_url" parameter**
-
-
-```opensips
+```opensips title="Set "db_url" parameter"
 ...
 modparam("config", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -113,10 +110,7 @@ Name of the table where configuration entries are stored.
 *Default value is "config".*
 
 
-**Example: Set "table_name" parameter**
-
-
-```opensips
+```opensips title="Set "table_name" parameter"
 ...
 modparam("config", "table_name", "configuration")
 ...
@@ -132,10 +126,7 @@ Name of the column storing configuration variable names.
 *Default value is "name".*
 
 
-**Example: Set "name_column" parameter**
-
-
-```opensips
+```opensips title="Set "name_column" parameter"
 ...
 modparam("config", "name_column", "key")
 ...
@@ -151,10 +142,7 @@ Name of the column storing configuration variable values.
 *Default value is "value".*
 
 
-**Example: Set "value_column" parameter**
-
-
-```opensips
+```opensips title="Set "value_column" parameter"
 ...
 modparam("config", "value_column", "val")
 ...
@@ -170,10 +158,7 @@ Name of the column storing variable descriptions.
 *Default value is "description".*
 
 
-**Example: Set "desctiption_column" parameter**
-
-
-```opensips
+```opensips title="Set "desctiption_column" parameter"
 ...
 modparam("config", "description_column", "desc")
 ...
@@ -190,10 +175,7 @@ Enables restart persistency. Check the
 *Default value is "0 / disabled".*
 
 
-**Example: Set "restart_persistent_memory" parameter**
-
-
-```opensips
+```opensips title="Set "restart_persistent_memory" parameter"
 ...
 modparam("config", "restart_persistent_memory", yes)
 ...
@@ -211,10 +193,7 @@ Size of the internal hash table used to store config variables.
 *Default value is "16".*
 
 
-**Example: Set "hash_size" parameter**
-
-
-```opensips
+```opensips title="Set "hash_size" parameter"
 ...
 modparam("config", "hash_size", 32)
 ...
@@ -231,10 +210,7 @@ Returns the value of the given config variable by name.
 			Can also be used for temporarily changing the value.
 
 
-**Example: Usage of $config(...)**
-
-
-```opensips
+```opensips title="Usage of $config(...)"
 			...
 			xlog("Config value: $config(debug_mode)\n"); # reading the value
 			$config(debug_mode) = 1; # temporarily changing the value
@@ -252,10 +228,7 @@ Returns the description of a config variable if available.
 This variable is read-only.
 
 
-**Example: Usage of $config.description(name)**
-
-
-```opensips
+```opensips title="Usage of $config.description(name)"
 			...
 			xlog("Description: $config.description(debug_mode)\n");
 			...
@@ -275,7 +248,7 @@ Reloads all configuration variables from the database.
 MI FIFO Command Format:
 
 
-```
+```c
 		## reload configuration cache from the database
 		opensips-mi config_reload
 		opensips-cli -x mi config_reload
@@ -297,7 +270,7 @@ Lists all config variables currently loaded in cache,
 MI FIFO Command Format:
 
 
-```
+```c
 		## list all configuration cache
 		opensips-mi config_list
 		opensips-cli -x mi config_list 1
@@ -324,7 +297,7 @@ Expected parameters are:
 MI FIFO Command Format:
 
 
-```
+```c
 		## push temporarily debug_mode configuration value
 		opensips-mi config_push debug_mode 1 "Enable Debug mode"
 		opensips-cli -x mi config_list 1
@@ -362,7 +335,7 @@ Expected parameters are:
 MI FIFO Command Format:
 
 
-```
+```c
 		## push bulk temporarily values to the config cache
 		opensips-mi config_push_bulk -j '[[{"name":"debug_mode","value":"1"},{"name":"debug_level","value":"5"}]]'
 		
@@ -389,7 +362,7 @@ Expected parameters are:
 MI FIFO Command Format:
 
 
-```
+```c
 		## Flush config variables to the database
 		opensips-mi config_flush
 		opensips-cli -x mi config_flush debug_mode

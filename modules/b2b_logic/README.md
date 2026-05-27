@@ -87,10 +87,7 @@ The size of the hash table that stores the session entities.
 		 (512 records).
 
 
-**Example: Set server_hsize parameter**
-
-
-```opensips
+```opensips title="Set server_hsize parameter"
 ...
 modparam("b2b_logic", "hash_size", 10)
 ...
@@ -105,10 +102,7 @@ The name of the script route to be called when requests belonging to
 			an ongoing B2B session are received.
 
 
-**Example: Set script_req_route parameter**
-
-
-```opensips
+```opensips title="Set script_req_route parameter"
 ...
 modparam("b2b_logic", "script_req_route", "b2b_request")
 ...
@@ -123,10 +117,7 @@ The name of the script route to be called when replies belonging to
 			an ongoing B2B session are received.
 
 
-**Example: Set script_repl_route parameter**
-
-
-```opensips
+```opensips title="Set script_repl_route parameter"
 ...
 modparam("b2b_logic", "script_reply_route", "b2b_reply")
 ...
@@ -146,10 +137,7 @@ The time interval at which to search for an hanged b2b context.
 *Default value is "100".*
 
 
-**Example: Set cleanup_period parameter**
-
-
-```opensips
+```opensips title="Set cleanup_period parameter"
 ...
 modparam("b2b_logic", "cleanup_period", 60)
 ...
@@ -193,10 +181,7 @@ Meaning of the flags is as follows:
 *Default value is "NULL".*
 
 
-**Example: Set  parameter**
-
-
-```opensips
+```opensips title="Set  parameter"
 ...
 modparam("b2b_logic", "custom_headers_regexp", "/^x-/i")
 ...
@@ -230,10 +215,7 @@ If you wish some other headers to be passed also you should define them
 *Default value is "NULL".*
 
 
-**Example: Set  parameter**
-
-
-```opensips
+```opensips title="Set  parameter"
 ...
 modparam("b2b_logic", "custom_headers", "User-Agent;Date")
 ...
@@ -247,10 +229,7 @@ modparam("b2b_logic", "custom_headers", "User-Agent;Date")
 Database URL.
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("b2b_logic", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensips")
 ...
@@ -265,10 +244,7 @@ URL of a NoSQL database to be used. Only Redis is supported
 				at the moment.
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("b2b_logic", "cachedb_url", "redis://localhost:6379/")
 ...
@@ -285,10 +261,7 @@ Prefix to use for every key set in the NoSQL database.
 *Default value is "b2bl$".*
 
 
-**Example: Set cachedb_key_prefix parameter**
-
-
-```opensips
+```opensips title="Set cachedb_key_prefix parameter"
 ...
 modparam("b2b_logic", "cachedb_key_prefix", "b2b")
 ...
@@ -305,10 +278,7 @@ The time interval at which to update the info in database.
 *Default value is "100".*
 
 
-**Example: Set update_period parameter**
-
-
-```opensips
+```opensips title="Set update_period parameter"
 ...
 modparam("b2b_logic", "update_period", 60)
 ...
@@ -328,10 +298,7 @@ The maximum duration of a call.
 If you set it to 0, there will be no limitation.
 
 
-**Example: Set max_duration parameter**
-
-
-```opensips
+```opensips title="Set max_duration parameter"
 ...
 modparam("b2b_logic", "max_duration", 7200)
 ...
@@ -348,10 +315,7 @@ If set to 1, adds user from From: header to generated Contact:
 *Default value is "0".*
 
 
-**Example: Set contact_user parameter**
-
-
-```opensips
+```opensips title="Set contact_user parameter"
 ...
 modparam("b2b_logic", "contact_user", 1)
 ...
@@ -370,10 +334,7 @@ The name of the pseudo variable for storing the new
 *Default value is "NULL" (disabled).*
 
 
-**Example: Set b2bl_from_spec_param parameter**
-
-
-```opensips
+```opensips title="Set b2bl_from_spec_param parameter"
 ...
 modparam("b2b_logic", "b2bl_from_spec_param", "$var(b2bl_from)")
 ...
@@ -402,10 +363,7 @@ The IP address of the machine that will be used as Contact in
 			This parameter support Pseudo-Variables.
 
 
-**Example: Set server_address parameter**
-
-
-```opensips
+```opensips title="Set server_address parameter"
 ...
 modparam("b2b_logic", "server_address", "sip:sa@10.10.10.10:5060")
 ...
@@ -413,10 +371,7 @@ modparam("b2b_logic", "server_address", "sip:sa@10.10.10.10:5060")
 ```
 
 
-**Example: Set server_address parameter using Pseudo-Variables**
-
-
-```opensips
+```opensips title="Set server_address parameter using Pseudo-Variables"
 ...
 modparam("b2b_logic", "server_address", "sip:$socket_in(advertised_ip):$socket_in(advertised_port)")
 ...
@@ -432,10 +387,7 @@ The module offers the possibility to insert the original callid in a header
 			of the header in which to insert the original callid.
 
 
-**Example: Set init_callid_hdr parameter**
-
-
-```opensips
+```opensips title="Set init_callid_hdr parameter"
 ...
 modparam("b2b_logic", "init_callid_hdr", "Init-CallID")
 ...
@@ -457,10 +409,7 @@ The B2B modules have support for the 3 type of database storage
 *Default value is "2" (WRITE BACK).*
 
 
-**Example: Set db_mode parameter**
-
-
-```opensips
+```opensips title="Set db_mode parameter"
 ...
 modparam("b2b_logic", "db_mode", 1)
 ...
@@ -477,10 +426,7 @@ Name of the database table to be used
 *Default value is "b2b_logic"*
 
 
-**Example: Set db_table parameter**
-
-
-```opensips
+```opensips title="Set db_table parameter"
 ...
 modparam("b2b_logic", "db_table", "some_table_name")
 ...
@@ -497,10 +443,7 @@ Call setup timeout for topology hiding scenario.
 *Default value is "60"*
 
 
-**Example: Set b2bl_th_init_timeout parameter**
-
-
-```opensips
+```opensips title="Set b2bl_th_init_timeout parameter"
 ...
 modparam("b2b_logic", "b2bl_th_init_timeout", 60)
 ...
@@ -521,10 +464,7 @@ Allow bridging of calls in early stage by issuing a "UPDATE" request
 *Default value is "0" Do not bridge dialogs in early stage*
 
 
-**Example: Set b2bl_early_update parameter**
-
-
-```opensips
+```opensips title="Set b2bl_early_update parameter"
 ...
 modparam("b2b_logic", "b2bl_early_update", 1)
 ...
@@ -545,10 +485,7 @@ When the *b2b_bridge_request* is being used with the
 *Default value is "0" - send BYE on the spot*
 
 
-**Example: Set old_entity_term_delay parameter**
-
-
-```opensips
+```opensips title="Set old_entity_term_delay parameter"
 ...
 modparam("b2b_logic", "old_entity_term_delay", 2) # delay the BYE with 2 seconds
 ...
@@ -606,10 +543,7 @@ This function can be used from REQUEST_ROUTE.
 		but the SIP pacakge may be invalid (as Contact, Via, etc).
 
 
-**Example: b2b_init_request usage**
-
-
-```opensips
+```opensips title="b2b_init_request usage"
 ...
 if(is_method("INVITE") && !has_totag() && prepaid_user()) {
    ...
@@ -654,10 +588,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: b2b_server_new usage**
-
-
-```opensips
+```opensips title="b2b_server_new usage"
 ...
 if(is_method("INVITE") && !has_totag()) {
    b2b_server_new("server1", $avp(b2b_hdrs), $avp(b2b_hdr_bodies));
@@ -702,10 +633,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE and the b2b_logic request routes.
 
 
-**Example: b2b_client_new usage**
-
-
-```
+```c title="b2b_client_new usage"
 ...
 b2b_client_new("client1", "sip:alice@opensips.org");
 ...
@@ -755,10 +683,7 @@ Parameters:
 This function can be used from the b2b_logic request routes.
 
 
-**Example: b2b_bridge usage**
-
-
-```
+```c title="b2b_bridge usage"
 ...
 route[b2b_logic_request] {
    ...
@@ -788,10 +713,7 @@ Parameters:
 This function can be used from the b2b_logic reply route.
 
 
-**Example: b2b_bridge usage**
-
-
-```
+```c title="b2b_bridge usage"
 ...
 route[b2b_logic_reply] {
    ...
@@ -821,10 +743,7 @@ This function passes a request belonging to an existing B2B session
 This function can be used from the b2b_logic request routes.
 
 
-**Example: b2b_pass_request usage**
-
-
-```
+```c title="b2b_pass_request usage"
 ...
 route[b2b_logic_request] {
    if ($rm != "BYE") {
@@ -863,10 +782,7 @@ Parameters:
 					just as it is, without modifying it.
 
 
-**Example: b2b_handle_reply usage**
-
-
-```opensips
+```opensips title="b2b_handle_reply usage"
 ...
 route[b2b_logic_reply] {
     xlog("B2B REPLY: [$rs $rm] from entity: $b2b_logic.entity(id)\n");
@@ -896,10 +812,7 @@ Parameters:
 This function can be used from the b2b_logic request routes.
 
 
-**Example: b2b_send_reply usage**
-
-
-```
+```c title="b2b_send_reply usage"
 ...
 route[b2b_logic_request] {
    if ($rm == "REFER") {
@@ -921,10 +834,7 @@ This function deletes the entity that sent the current request.
 This function can be used from the b2b_logic request routes.
 
 
-**Example: b2b_delete_entity usage**
-
-
-```
+```c title="b2b_delete_entity usage"
 ...
 route[b2b_logic_request] {
    if ($rm == "BYE") {
@@ -950,10 +860,7 @@ This function sends a BYE request to the entity that sent
 This function can be used from the b2b_logic request or reply routes.
 
 
-**Example: b2b_end_dlg_leg usage**
-
-
-```
+```c title="b2b_end_dlg_leg usage"
 ...
 route[b2b_logic_request] {
    if ($rm == "REFER") {
@@ -990,10 +897,7 @@ Parameters:
 					on the stop, leave it pending until the new enity fully establishes.
 
 
-**Example: b2b_bridge_request usage**
-
-
-```
+```c title="b2b_bridge_request usage"
 ...
 if ($rU == "pickup") {
     # get the b2b logic key of the parked call for this user
@@ -1059,10 +963,7 @@ Parameters:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: b2b_trigger_scenario usage**
-
-
-```opensips
+```opensips title="b2b_trigger_scenario usage"
 ...
 if(is_method("REFER") && !has_totag()) {
    $avp(header) = "Replaces";
@@ -1111,7 +1012,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2b_trigger_scenario marketing client1,sip:bob@opensips.org client2,sip:322@opensips.org:5070 agent_uri=sip:alice@opensips.org
 		
 ```
@@ -1146,7 +1047,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2b_bridge 1020.30 sip:alice@opensips.org
 	
 ```
@@ -1155,7 +1056,7 @@ MI FIFO Command Format:
 opensips-cli Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2b_bridge 1020.30 sip:alice@opensips.org
 	
 ```
@@ -1176,7 +1077,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2b_list
 	
 ```
@@ -1202,7 +1103,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2b_terminate_call 159.0
 	
 ```
@@ -1223,10 +1124,7 @@ The variable can be used in request route, local_route and the dedicated
 		*b2b_logic* modules.
 
 
-**Example: $b2b_logic.key usage**
-
-
-```opensips
+```opensips title="$b2b_logic.key usage"
 ...
 local_route {
    ...
@@ -1281,10 +1179,7 @@ The variable can be used in request route, local_route and the dedicated
 		*b2b_logic* modules.
 
 
-**Example: $b2b_logic.entity usage**
-
-
-```opensips
+```opensips title="$b2b_logic.entity usage"
 ...
 modparam("b2b_entities", "script_request_route", "b2b_request")
 ...
@@ -1320,10 +1215,7 @@ Setting the variable to *NULL* will delete the value
 		at the given key.
 
 
-**Example: $b2b_logic.ctx usage**
-
-
-```opensips
+```opensips title="$b2b_logic.ctx usage"
 ...
 modparam("b2b_entities", "script_reply_route", "b2b_reply")
 ...
@@ -1357,10 +1249,7 @@ The variable can be used in request route, local_route and the dedicated
 		*b2b_logic* modules.
 
 
-**Example: $b2b_logic.scenario usage**
-
-
-```
+```c title="$b2b_logic.scenario usage"
 ...
 route[b2b_logic_request] {
    if ($b2b_logic.scenario == "prepaid") {
@@ -1395,10 +1284,7 @@ This function binds the b2b_entities modules and fills the
    detail.
 
 
-**Example: b2bl_api_t structure**
-
-
-```
+```c title="b2bl_api_t structure"
 ...
 typedef struct b2bl_api
 {
@@ -1420,7 +1306,7 @@ typedef struct b2bl_api
 Field type:
 
 
-```
+```c
 ...
 typedef str* (*b2bl_init_f)(struct sip_msg* msg, str* name, str* args[5],
 		b2bl_cback_f, void* param);
@@ -1434,7 +1320,7 @@ Initializing a b2b scenario. The last two parameters are the
    the following definition:
 
 
-```
+```c
 ...
 typedef int (*b2b_notify_t)(struct sip_msg* msg, str* id, int type, void* param);
 ...
@@ -1483,7 +1369,7 @@ The return code controls what will happen with the
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2bl_bridge_f)(str* key, str* new_uri, str* new_from_dname,int entity_type);
 ...
@@ -1500,7 +1386,7 @@ This function allows bridging an entity that is in a call
 Field type:
 
 
-```
+```c
 ...
 typedef str* (*b2bl_bridge_extern_f)(str* scenario_name, str* args[5],
                 b2bl_cback_f cbf, void* cb_param);
@@ -1518,7 +1404,7 @@ This function allows initiating an extern scenario, when the
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2bl_bridge_2calls_t)(str* key1, str* key2);
 ...
@@ -1536,7 +1422,7 @@ With this function it is possible to bridge two existing calls.
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2bl_terminate_call_t)(str* key);
 ...
@@ -1552,7 +1438,7 @@ Terminate a call.
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2bl_set_state_f)(str* key, int state);
 ...
@@ -1568,7 +1454,7 @@ Set the scenario state.
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2bl_bridge_msg_t)(struct sip_msg* msg, str* key, int entity_no);
 ...

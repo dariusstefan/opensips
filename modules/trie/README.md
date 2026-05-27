@@ -44,10 +44,7 @@ The name of the db table storing prefix rules.
 *Default value is "trie_table".*
 
 
-**Example: Set trie_table parameter**
-
-
-```opensips
+```opensips title="Set trie_table parameter"
 ...
 modparam("trie", "trie_table", "my_prefix_table")
 ...
@@ -72,10 +69,7 @@ If you have a large routing set (millions of rules/prefixes), you
 *Default value is "0 (disabled)".*
 
 
-**Example: Set no_concurrent_reload parameter**
-
-
-```opensips
+```opensips title="Set no_concurrent_reload parameter"
 ...
 # do not allow parallel reload operations
 modparam("trie", "no_concurrent_reload", 1)
@@ -95,10 +89,7 @@ Flag to configure whether to use partitions for tries. If this
 *Default value is "0".*
 
 
-**Example: Set use_partitions parameter**
-
-
-```opensips
+```opensips title="Set use_partitions parameter"
 ...
 modparam("trie", "use_partitions", 1)
 ...
@@ -116,10 +107,7 @@ The url to the database containing partition-specific
 *Default value is ""NULL"".*
 
 
-**Example: Set db_partitions_url parameter**
-
-
-```opensips
+```opensips title="Set db_partitions_url parameter"
 ...
 modparam("trie", "db_partitions_url", "mysql://user:password@localhost/opensips_partitions")
 ...
@@ -136,10 +124,7 @@ The name of the table containing partition definitions. To be
 *Default value is "trie_partitions".*
 
 
-**Example: Set db_partitions_table parameter**
-
-
-```opensips
+```opensips title="Set db_partitions_table parameter"
 ...
 modparam("trie", "db_partitions_table", "trie_partition_defs")
 ...
@@ -157,10 +142,7 @@ List of ASCII (0-127) characters to be additionally accepted in
 *Default value is "NULL".*
 
 
-**Example: Set extra_prefix_chars parameter**
-
-
-```opensips
+```opensips title="Set extra_prefix_chars parameter"
 ...
 modparam("trie", "extra_prefix_chars", "#-%")
 ...
@@ -206,10 +188,7 @@ All parameters are optional. Any of them may be ignored, provided
 			ONLY if the "use_partition" module parameter is turned on.
 
 
-**Example: trie_search usage**
-
-
-```opensips
+```opensips title="trie_search usage"
 ...
 if (trie_search("$rU","L",$avp(code_attrs),,"my_partition")) {
     # we found it in the trie, it's a match
@@ -237,7 +216,7 @@ Command to reload trie rules from database.
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi trie_reload part_1
 		
 ```
@@ -260,10 +239,7 @@ Gets the time of the last reload for any partition.
 							reload for the given partition.
 
 
-**Example: trie_reload_status usage when use_partitions is 0**
-
-
-```
+```c title="trie_reload_status usage when use_partitions is 0"
 $ opensips-cli -x mi trie_reload_status
 Date:: Tue Aug 12 12:26:00 2014
 ```
@@ -291,7 +267,7 @@ Tries to match a number in the existing tries loaded from the database.
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi trie_search partition_name=part1 number=012340987
 		
 ```
@@ -316,7 +292,7 @@ Deletes individual entries in the trie, without reloading all of the data
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi trie_number_delete partition_name=part1 number=["012340987","4858345"]
 		
 ```
@@ -344,7 +320,7 @@ Upserts ( insert if not found, update is found ) an array of numbers in the trie
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi trie_number_upsert partition_name=part1 number=["012340987"] attrs=["my_attrs"]
 		
 ```

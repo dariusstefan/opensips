@@ -60,10 +60,7 @@ Text file containing the regular expression groups. It must be set in order
 *Default value is "NULL".*
 
 
-**Example: Set file parameter**
-
-
-```opensips
+```opensips title="Set file parameter"
 ...
 modparam("regex", "file", "/etc/opensips/regex_groups")
 ...
@@ -79,10 +76,7 @@ Max number of regular expression groups in the text file.
 *Default value is "20".*
 
 
-**Example: Set max_groups parameter**
-
-
-```opensips
+```opensips title="Set max_groups parameter"
 ...
 modparam("regex", "max_groups", 40)
 ...
@@ -98,10 +92,7 @@ Max content size of a group in the text file.
 *Default value is "8192".*
 
 
-**Example: Set group_max_size parameter**
-
-
-```opensips
+```opensips title="Set group_max_size parameter"
 ...
 modparam("regex", "group_max_size", 16384)
 ...
@@ -119,10 +110,7 @@ If this options is set, matching is done caseless. It is equivalent to
 *Default value is "0".*
 
 
-**Example: Set pcre_caseless parameter**
-
-
-```opensips
+```opensips title="Set pcre_caseless parameter"
 ...
 modparam("regex", "pcre_caseless", 1)
 ...
@@ -150,10 +138,7 @@ When this option is set, the "start of line" and "end of line" constructs
 *Default value is "0".*
 
 
-**Example: Set pcre_multiline parameter**
-
-
-```opensips
+```opensips title="Set pcre_multiline parameter"
 ...
 modparam("regex", "pcre_multiline", 1)
 ...
@@ -172,10 +157,7 @@ If this option is set, a dot metacharater in the pattern matches all characters,
 *Default value is "0".*
 
 
-**Example: Set pcre_dotall parameter**
-
-
-```opensips
+```opensips title="Set pcre_dotall parameter"
 ...
 modparam("regex", "pcre_dotall", 1)
 ...
@@ -196,10 +178,7 @@ If this option is set, whitespace data characters in the pattern are totally
 *Default value is "0".*
 
 
-**Example: Set pcre_extended parameter**
-
-
-```opensips
+```opensips title="Set pcre_extended parameter"
 ...
 modparam("regex", "pcre_extended", 1)
 ...
@@ -232,10 +211,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: pcre_match usage (forcing case insensitive)**
-
-
-```opensips
+```opensips title="pcre_match usage (forcing case insensitive)"
 ...
 if (pcre_match("$ua", "(?i)^twinkle")) {
     xlog("L_INFO", "User-Agent matches\n");
@@ -244,10 +220,7 @@ if (pcre_match("$ua", "(?i)^twinkle")) {
 ```
 
 
-**Example: pcre_match usage (using "end of line" symbol)**
-
-
-```opensips
+```opensips title="pcre_match usage (using "end of line" symbol)"
 ...
 if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
     xlog("L_INFO", "RURI username matches\n");
@@ -277,10 +250,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: pcre_match_group usage**
-
-
-```opensips
+```opensips title="pcre_match_group usage"
 ...
 if (pcre_match_group($rU, 2)) {
     xlog("L_INFO", "RURI username matches group 2\n");
@@ -309,7 +279,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 ...
 opensips-cli -x mi regex_reload
 ...
@@ -336,7 +306,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 ...
 opensips-cli -x mi regex_match string="1234" pcre_regex="^1234$"
 "Match"
@@ -366,7 +336,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 ...
 opensips-cli -x mi regex_match_group string="1234" group="0"
 "Match"
@@ -392,10 +362,7 @@ The file contains regular expressions categorized in groups. Each
 An example of the file format would be the following:
 
 
-**Example: regex file**
-
-
-```
+```c title="regex file"
 ### List of User-Agents publishing presence status
 [0]
 
@@ -435,7 +402,7 @@ The module compiles the text above to the following regular
 				expressions:
 
 
-```
+```c
 group 0: ((^Twinkle/1)|(^X-Lite)|(^eyeBeam)|(^Bria)|(^SIP Communicator)|
           (^Linphone)|(^Snom)|(^SIPp)|(^PJSUA))
 group 1: ((^190\.232\.250\.226$)|(^122\.5\.27\.125$)|(^86\.92\.112\.))
@@ -447,10 +414,7 @@ The first group can be used to avoid auto-generated PUBLISH (pua_usrloc
 				module) for UA's already supporting presence:
 
 
-**Example: Using with pua_usrloc**
-
-
-```opensips
+```opensips title="Using with pua_usrloc"
 route[REGISTER] {
     if (! pcre_match_group("$ua", 0)) {
         xlog("L_INFO", "Auto-generated PUBLISH for $fu ($ua)\n");
@@ -468,10 +432,7 @@ NOTE: It's important to understand that the numbers in each group
 				following text file:
 
 
-**Example: Incorrect groups file**
-
-
-```
+```c title="Incorrect groups file"
 [1]
 ^aaa
 ^bbb
@@ -485,7 +446,7 @@ NOTE: It's important to understand that the numbers in each group
 will generate the following regular expressions:
 
 
-```
+```c
 group 0: ((^aaa)|(^bbb))
 group 1: ((^ccc)|(^ddd))
 ```
@@ -503,7 +464,7 @@ NOTE: A line containing a regular expression cannot start by '[' since it
 				would work:
 
 
-```
+```c
 [0]
 ([0-9]{9})
 ( #abcde)

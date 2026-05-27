@@ -79,10 +79,7 @@ The minimum duration in seconds that a failed subscriber is
 *Default value is "30".*
 
 
-**Example: Setting the failover_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the failover_timeout parameter"
 ...
 modparam("event_virtual", "failover_timeout", 5)
 ...
@@ -99,13 +96,10 @@ No exported functions to be used in the configuration file.
 ### Example
 
 
-**Example: Virtual socket**
-
-
 The sockets of the subscribers may be separated by any number of spaces or tabs:
 
 
-```
+```c title="Virtual socket"
 	virtual:PARALLEL rabbitmq:guest:guest@127.0.0.1:5672/pike flatstore:/var/log/opensips_proxy.log
 ```
 

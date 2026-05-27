@@ -85,10 +85,7 @@ Database URL.
 			"mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set the "db_url" parameter**
-
-
-```opensips
+```opensips title="Set the "db_url" parameter"
 ...
 modparam("msilo", "db_url", "mysql://user:passwd@host.com/dbname")
 ...
@@ -104,10 +101,7 @@ The name of table where to store the messages.
 *Default value is "silo".*
 
 
-**Example: Set the "db_table" parameter**
-
-
-```opensips
+```opensips title="Set the "db_table" parameter"
 ...
 modparam("msilo", "db_table", "silo")
 ...
@@ -126,10 +120,7 @@ The SIP address used to inform users that destination of their
 *Default value is "NULL".*
 
 
-**Example: Set the "from_address" parameter**
-
-
-```opensips
+```opensips title="Set the "from_address" parameter"
 ...
 modparam("msilo", "from_address", "sip:registrar@example.org")
 modparam("msilo", "from_address", "sip:$rU@example.org")
@@ -148,10 +139,7 @@ The value of the Contact header (including header name and ending
 *Default value is "NULL".*
 
 
-**Example: Set the "contact_hdr" parameter**
-
-
-```opensips
+```opensips title="Set the "contact_hdr" parameter"
 ...
 modparam("msilo", "contact_hdr", "Contact: <sip:null@example.com>\r\n")
 ...
@@ -168,10 +156,7 @@ The body of the notification message.
 *Default value is "NULL".*
 
 
-**Example: Set the "offline_message" parameter**
-
-
-```opensips
+```opensips title="Set the "offline_message" parameter"
 ...
 modparam("msilo", "offline_message", "*** User $rU is offline!")
 modparam("msilo", "offline_message", "<em>I am offline!</em>")
@@ -191,10 +176,7 @@ The value of the Content-Type header (including header name and ending
 *Default value is "NULL".*
 
 
-**Example: Set the "content_type_hdr" parameter**
-
-
-```opensips
+```opensips title="Set the "content_type_hdr" parameter"
 ...
 modparam("msilo", "content_type_hdr", "Content-Type: text/plain\r\n")
 modparam("msilo", "content_type_hdr", "Content-Type: text/html\r\n")
@@ -212,10 +194,7 @@ The SIP address used to send reminder messages. If this value
 *Default value is "NULL".*
 
 
-**Example: Set the "reminder" parameter**
-
-
-```opensips
+```opensips title="Set the "reminder" parameter"
 ...
 modparam("msilo", "reminder", "sip:registrar@example.org")
 ...
@@ -234,10 +213,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is "NULL".*
 
 
-**Example: Set the "outbound_proxy" parameter**
-
-
-```opensips
+```opensips title="Set the "outbound_proxy" parameter"
 ...
 modparam("msilo", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ...
@@ -254,10 +230,7 @@ Expire time of stored messages - seconds. When this time passed, the message is
 *Default value is "259200 (72 hours = 3 days)".*
 
 
-**Example: Set the "expire_time" parameter**
-
-
-```opensips
+```opensips title="Set the "expire_time" parameter"
 ...
 modparam("msilo", "expire_time", 36000)
 ...
@@ -275,10 +248,7 @@ Timer interval to check if dumped messages are sent OK - seconds. The module kee
 *Default value is "30".*
 
 
-**Example: Set the "check_time" parameter**
-
-
-```opensips
+```opensips title="Set the "check_time" parameter"
 ...
 modparam("msilo", "check_time", 10)
 ...
@@ -299,10 +269,7 @@ If the value is 0, the reminder feature is disabled.
 *Default value is "0".*
 
 
-**Example: Set the "send_time" parameter**
-
-
-```opensips
+```opensips title="Set the "send_time" parameter"
 ...
 modparam("msilo", "send_time", 60)
 ...
@@ -319,10 +286,7 @@ Number of "check_time" cycles when to check if
 *Default value is "5".*
 
 
-**Example: Set the "clean_period" parameter**
-
-
-```opensips
+```opensips title="Set the "clean_period" parameter"
 ...
 modparam("msilo", "clean_period", 3)
 ...
@@ -339,10 +303,7 @@ Turns on/off the usage of the Contact address to send notification
 *Default value is "1 (0 = off, 1 = on)".*
 
 
-**Example: Set the "use_contact" parameter**
-
-
-```opensips
+```opensips title="Set the "use_contact" parameter"
 ...
 modparam("msilo", "use_contact", 0)
 ...
@@ -358,10 +319,7 @@ The name of the column in silo table, storing message id.
 Default value is "mid".
 
 
-**Example: Set the "sc_mid" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_mid" parameter"
 ...
 modparam("msilo", "sc_mid", "other_mid")
 ...
@@ -377,10 +335,7 @@ The name of the column in silo table, storing the source address.
 Default value is "src_addr".
 
 
-**Example: Set the "sc_from" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_from" parameter"
 ...
 modparam("msilo", "sc_from", "source_address")
 ...
@@ -396,10 +351,7 @@ The name of the column in silo table, storing the destination address.
 Default value is "dst_addr".
 
 
-**Example: Set the "sc_to" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_to" parameter"
 ...
 modparam("msilo", "sc_to", "destination_address")
 ...
@@ -415,10 +367,7 @@ The name of the column in silo table, storing the user name.
 Default value is "username".
 
 
-**Example: Set the "sc_uri_user" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_uri_user" parameter"
 ...
 modparam("msilo", "sc_uri_user", "user")
 ...
@@ -434,10 +383,7 @@ The name of the column in silo table, storing the domain.
 Default value is "domain".
 
 
-**Example: Set the "sc_uri_host" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_uri_host" parameter"
 ...
 modparam("msilo", "sc_uri_host", "domain")
 ...
@@ -453,10 +399,7 @@ The name of the column storing the message body in silo table.
 Default value is "body".
 
 
-**Example: Set the "sc_body" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_body" parameter"
 ...
 modparam("msilo", "sc_body", "message_body")
 ...
@@ -472,10 +415,7 @@ The name of the column in silo table, storing content type.
 Default value is "ctype".
 
 
-**Example: Set the "sc_ctype" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_ctype" parameter"
 ...
 modparam("msilo", "sc_ctype", "content_type")
 ...
@@ -491,10 +431,7 @@ The name of the column in silo table, storing the expire time of the message.
 Default value is "exp_time".
 
 
-**Example: Set the "sc_exp_time" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_exp_time" parameter"
 ...
 modparam("msilo", "sc_exp_time", "expire_time")
 ...
@@ -510,10 +447,7 @@ The name of the column in silo table, storing the incoming time of the message.
 Default value is "inc_time".
 
 
-**Example: Set the "sc_inc_time" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_inc_time" parameter"
 ...
 modparam("msilo", "sc_inc_time", "incoming_time")
 ...
@@ -529,10 +463,7 @@ The name of the column in silo table, storing the send time for the reminder.
 Default value is "snd_time".
 
 
-**Example: Set the "sc_snd_time" parameter**
-
-
-```opensips
+```opensips title="Set the "sc_snd_time" parameter"
 ...
 modparam("msilo", "sc_snd_time", "send_reminder_time")
 ...
@@ -554,10 +485,7 @@ If the parameter is not set, the module does not look for this AVP. If
 *Default value is "null".*
 
 
-**Example: Set the "snd_time_avp" parameter**
-
-
-```opensips
+```opensips title="Set the "snd_time_avp" parameter"
 ...
 modparam("msilo", "snd_time_avp", "$avp(snd_time)")
 ...
@@ -573,10 +501,7 @@ Wheter to add as prefix the date when the message was stored.
 *Default value is "1" (1==on/0==off).*
 
 
-**Example: Set the "add_date" parameter**
-
-
-```opensips
+```opensips title="Set the "add_date" parameter"
 ...
 modparam("msilo", "add_date", 0)
 ...
@@ -593,10 +518,7 @@ Maximum number of stored message for an AoR.  Value 0
 *Default value is 0.*
 
 
-**Example: Set the "max_messages" parameter**
-
-
-```opensips
+```opensips title="Set the "max_messages" parameter"
 ...
 modparam("msilo", "max_messages", 0)
 ...
@@ -628,10 +550,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: m_store usage**
-
-
-```
+```c title="m_store usage"
 ...
 m_store();
 m_store($tu);
@@ -662,10 +581,7 @@ This function can be used from REQUEST_ROUTE, STARTUP_ROUTE,
 		TIMER_ROUTE, EVENT_ROUTE
 
 
-**Example: m_dump usage**
-
-
-```
+```c title="m_dump usage"
 ...
 m_dump();
 m_dump($fu);
@@ -716,10 +632,7 @@ The number of failed reminder messages.
 Next picture displays a sample usage of msilo.
 
 
-**Example: OpenSIPS config script - sample msilo usage**
-
-
-```opensips
+```opensips title="OpenSIPS config script - sample msilo usage"
 ...
 #
 # MSILO usage example

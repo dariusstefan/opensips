@@ -61,10 +61,7 @@ The database url.
 *The default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("imc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -80,10 +77,7 @@ The name of the table storing IMC rooms.
 *The default value is "imc_rooms".*
 
 
-**Example: Set rooms_table parameter**
-
-
-```opensips
+```opensips title="Set rooms_table parameter"
 ...
 modparam("imc", "rooms_table", "rooms")
 ...
@@ -99,10 +93,7 @@ The name of the table storing IMC members.
 *The default value is "imc_members".*
 
 
-**Example: Set members_table parameter**
-
-
-```opensips
+```opensips title="Set members_table parameter"
 ...
 modparam("imc", "rooms_table", "members")
 ...
@@ -119,10 +110,7 @@ The power of 2 to get the size of the hash table used for storing
 *The default value is 4 (resultimg in hash size 16).*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("imc", "hash_size", 8)
 ...
@@ -138,10 +126,7 @@ The character which indicates that the body of the message is a command.
 *The default value is "#".*
 
 
-**Example: Set imc_cmd_start_char parameter**
-
-
-```opensips
+```opensips title="Set imc_cmd_start_char parameter"
 ...
 modparam("imc", "imc_cmd_start_char", "#")
 ...
@@ -161,10 +146,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is NULL.*
 
 
-**Example: Set outbound_proxy parameter**
-
-
-```opensips
+```opensips title="Set outbound_proxy parameter"
 ...
 modparam("imc", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ...
@@ -185,10 +167,7 @@ Handles Message method.It detects if the body of the message is a
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Usage of imc_manager() function**
-
-
-```opensips
+```opensips title="Usage of imc_manager() function"
 ...
 # the rooms will be named chat-xyz to avoid overlapping
 # with usernames
@@ -217,7 +196,7 @@ Parameters: none
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi imc_list_rooms
 		
 ```
@@ -241,7 +220,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi imc_list_members sip:chat-000@opensips.org
 		
 ```
@@ -267,10 +246,7 @@ A command is identified by the starting character. A command must be
 Next picture presents the list of commands and their parameters.
 
 
-**Example: List of commands**
-
-
-```
+```c title="List of commands"
 ...
 
 1.create

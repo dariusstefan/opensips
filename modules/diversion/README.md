@@ -54,10 +54,7 @@ The suffix to be appended to the end of the header field. You can use
 Default value is "" (empty string).
 
 
-**Example: suffix usage**
-
-
-```opensips
+```opensips title="suffix usage"
 modparam("diversion", "suffix", ";privacy=full")
 ```
 
@@ -88,10 +85,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: add_diversion usage**
-
-
-```
+```c title="add_diversion usage"
 ...
 add_diversion("user-busy");
 ...
@@ -106,7 +100,7 @@ The following example shows a Diversion header field added to
 			of sip:bob@sip.org is:
 
 
-```
+```c
 INVITE sip:bob@sip.org SIP/2.0
 Via: SIP/2.0/UDP 1.2.3.4:5060
 From: "mark" <sip:mark@sip.org>;tag=ldgheoihege
@@ -123,7 +117,7 @@ The INVITE message is diverted by the user agent
 			and the new destination is sip:alice@sip.org :
 
 
-```
+```c
 INVITE sip:alice@sip.org SIP/2.0
 Via: SIP/2.0/UDP 5.6.7.8:5060
 Via: SIP/2.0/UDP 1.2.3.4:5060
@@ -164,7 +158,7 @@ The following code snippet shows the code that invalidates the anchor, new ancho
 	created when the `anchor` variable is set to 0.
 
 
-```
+```c
 static inline int add_diversion_helper(struct sip_msg* msg, str* s)
 {
     static struct lump* anchor = 0;

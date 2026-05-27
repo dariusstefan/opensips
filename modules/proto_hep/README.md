@@ -21,7 +21,7 @@ Once loaded, you will be able to define HEP listeners in your
 		configuration file by adding their IP and, optionally, a listening port.
 		You can define both TCP, UDP, and TLS listeners. On UDP you will be able to
 		receive HEP v1, v2 and v3 packets, on TCP and TLS only HEPv3.
-	```
+	```c
 
 ...
 #HEPv3 listener
@@ -87,10 +87,7 @@ NO default value. If **hep_id** the module
 		can't be used for HEP tracing.
 
 
-**Example: Set hep_id parameter**
-
-
-```opensips
+```opensips title="Set hep_id parameter"
 ...
 /* define a destination to localhost on port 8001 using hepV3 on tcp */
 modparam("proto_hep", "hep_id",
@@ -117,10 +114,7 @@ Specify how the data should be encapsulated in the HEP packet. If set to
 Default value 1, HOMER5 format.
 
 
-**Example: Set homer5_on parameter**
-
-
-```opensips
+```opensips title="Set homer5_on parameter"
 modparam("proto_hep", "homer5_on", 0)
 ```
 
@@ -136,10 +130,7 @@ In case **homer5_on** is set
 Default value ":".
 
 
-**Example: Set homer5_on parameter**
-
-
-```opensips
+```opensips title="Set homer5_on parameter"
 modparam("proto_hep", "homer5_delim", "##")
 ```
 
@@ -153,10 +144,7 @@ The default port to be used by all TCP/UDP/TLS listeners.
 *Default value is 5656.*
 
 
-**Example: Set hep_port parameter**
-
-
-```opensips
+```opensips title="Set hep_port parameter"
 ...
 modparam("proto_hep", "hep_port", 6666)
 ...
@@ -174,10 +162,7 @@ Time in milliseconds after a TCP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set hep_send_timeout parameter**
-
-
-```opensips
+```opensips title="Set hep_send_timeout parameter"
 ...
 modparam("proto_hep", "hep_send_timeout", 200)
 ...
@@ -198,10 +183,7 @@ The maximum number of chunks in which a HEP message is expected to
 *Default value is 32.*
 
 
-**Example: Set hep_max_msg_chunks parameter**
-
-
-```opensips
+```opensips title="Set hep_max_msg_chunks parameter"
 ...
 modparam("proto_hep", "hep_max_msg_chunks", 8)
 ...
@@ -220,10 +202,7 @@ Specifies whether the TCP connect and write operations should be
 *Default value is 1 (enabled).*
 
 
-**Example: Set hep_async parameter**
-
-
-```opensips
+```opensips title="Set hep_async parameter"
 ...
 modparam("proto_hep", "hep_async", 0)
 ...
@@ -242,10 +221,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 32.*
 
 
-**Example: Set hep_async_max_postponed_chunks parameter**
-
-
-```opensips
+```opensips title="Set hep_async_max_postponed_chunks parameter"
 ...
 modparam("proto_hep", "hep_async_max_postponed_chunks", 16)
 ...
@@ -262,10 +238,7 @@ The parameter indicate the capture agent ID for HEPv2/v3 protocol.
 *Default value is "1".*
 
 
-**Example: Set hep_capture_id parameter**
-
-
-```opensips
+```opensips title="Set hep_capture_id parameter"
 ...
 modparam("proto_hep", "hep_capture_id", 234)
 ...
@@ -282,10 +255,7 @@ This parameter defines how many seconds OpenSIPS should wait before retrying a T
 *Default value is "3600".*
 
 
-**Example: Set hep_retry_cooldown parameter**
-
-
-```opensips
+```opensips title="Set hep_retry_cooldown parameter"
 ...
 modparam("proto_hep", "hep_retry_cooldown", 60)
 ...
@@ -302,10 +272,7 @@ This parameter defines the maximum number of attempts OpenSIPS will make to esta
 *Default value is "5".*
 
 
-**Example: Set hep_max_retries parameter**
-
-
-```opensips
+```opensips title="Set hep_max_retries parameter"
 ...
 modparam("proto_hep", "hep_max_retries", 10)
 ...
@@ -325,10 +292,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 100 ms.*
 
 
-**Example: Set hep_async_local_connect_timeout parameter**
-
-
-```opensips
+```opensips title="Set hep_async_local_connect_timeout parameter"
 ...
 modparam("proto_hep", "hep_async_local_connect_timeout", 200)
 ...
@@ -348,10 +312,7 @@ If *hep_async* is enabled, this specifies the
 *Default value is 10 ms.*
 
 
-**Example: Set hep_async_local_write_timeout parameter**
-
-
-```opensips
+```opensips title="Set hep_async_local_write_timeout parameter"
 ...
 modparam("proto_hep", "hep_async_local_write_timeout", 100)
 ...
@@ -389,10 +350,7 @@ Meaning of the parameters is as follows:
 				the second extra correlation id that will be put in the extra correlation chunk.
 
 
-**Example: correlate usage**
-
-
-```
+```c title="correlate usage"
 ...
 /* see declaration of hep_dst in trace_id section */
 /* we suppose we have two correlations in two varibles: cor1 and cor2 */

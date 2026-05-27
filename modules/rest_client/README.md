@@ -60,10 +60,7 @@ The maximum allowed time for any HTTP(S) transfer to complete.  This
 *Default value is "20" seconds.*
 
 
-**Example: Setting the curl_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the curl_timeout parameter"
 ...
 modparam("rest_client", "curl_timeout", 10)
 ...
@@ -79,10 +76,7 @@ The maximum allowed time to establish a connection with the server.
 *Default value is "20" seconds.*
 
 
-**Example: Setting the connection_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the connection_timeout parameter"
 ...
 modparam("rest_client", "connection_timeout", 4)
 ...
@@ -102,10 +96,7 @@ Only relevant with async requests.  Allows complete control over how
 *Default value is "20" milliseconds.*
 
 
-**Example: Setting the connect_poll_interval parameter**
-
-
-```opensips
+```opensips title="Setting the connect_poll_interval parameter"
 ...
 modparam("rest_client", "connect_poll_interval", 2)
 ...
@@ -124,10 +115,7 @@ Maximum number of asynchronous HTTP transfers *a single*
 *Default value is "100".*
 
 
-**Example: Setting the max_async_transfers parameter**
-
-
-```opensips
+```opensips title="Setting the max_async_transfers parameter"
 ...
 modparam("rest_client", "max_async_transfers", 300)
 ...
@@ -146,10 +134,7 @@ The maximum allowed size of a single transfer (download).  Reaching
 *Default value is "10240" (KB).*
 
 
-**Example: Setting the max_transfer_size parameter**
-
-
-```opensips
+```opensips title="Setting the max_transfer_size parameter"
 ...
 modparam("rest_client", "max_transfer_size", 64)
 ...
@@ -167,10 +152,7 @@ Set this to 0 in order to disable the verification of the remote peer's
 *Default value is "1" (enabled).*
 
 
-**Example: Setting the ssl_verifypeer parameter**
-
-
-```opensips
+```opensips title="Setting the ssl_verifypeer parameter"
 ...
 modparam("rest_client", "ssl_verifypeer", 0)
 ...
@@ -187,10 +169,7 @@ Set this to 0 in order to disable the verification that the remote peer
 *Default value is "1" (enabled).*
 
 
-**Example: Setting the ssl_verifyhost parameter**
-
-
-```opensips
+```opensips title="Setting the ssl_verifyhost parameter"
 ...
 modparam("rest_client", "ssl_verifyhost", 0)
 ...
@@ -203,10 +182,7 @@ modparam("rest_client", "ssl_verifyhost", 0)
 An optional path for CA certificates to be used for host verifications.
 
 
-**Example: Setting the ssl_capath parameter**
-
-
-```opensips
+```opensips title="Setting the ssl_capath parameter"
 ...
 modparam("rest_client", "ssl_capath", "/home/opensips/ca_certificates")
 ...
@@ -239,10 +215,7 @@ Use a specific HTTP version for all requests. Possible values:
 			this setting was inspired (read: pilfered) from*
 
 
-**Example: Setting the curl_http_version parameter**
-
-
-```opensips
+```opensips title="Setting the curl_http_version parameter"
 ...
 modparam("rest_client", "curl_http_version", 3)
 ...
@@ -261,10 +234,7 @@ Include a "Expect: 100-continue" HTTP header field whenever the body
 *Default value is "false" (disabled).*
 
 
-**Example: Setting the enable_expect_100 parameter**
-
-
-```opensips
+```opensips title="Setting the enable_expect_100 parameter"
 ...
 modparam("rest_client", "enable_expect_100", true)
 ...
@@ -296,10 +266,7 @@ This parameter may be useful in order to prevent system outages caused
 *Default value is "false" (disabled).*
 
 
-**Example: Setting the no_concurrent_connects parameter**
-
-
-```opensips
+```opensips title="Setting the no_concurrent_connects parameter"
 ...
 modparam("rest_client", "no_concurrent_connects", true)
 ...
@@ -327,10 +294,7 @@ The parameter denotes the lifetime, in seconds, of TCP connections kept
 *Default value is *0* (disabled).*
 
 
-**Example: Setting the curl_conn_lifetime parameter**
-
-
-```opensips
+```opensips title="Setting the curl_conn_lifetime parameter"
 ...
 modparam("rest_client", "curl_conn_lifetime", 1800)
 ...
@@ -386,10 +350,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: rest_get usage**
-
-
-```opensips
+```opensips title="rest_get usage"
 ...
 # Example of querying a REST service to get the credit of an account
 $var(rc) = rest_get("https://getcredit.org/?account=$fU",
@@ -468,10 +429,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: rest_post usage**
-
-
-```opensips
+```opensips title="rest_post usage"
 ...
 # Creating a resource using a RESTful service with an HTTP POST request
 $var(rc) = rest_post("https://myserver.org/register_user",
@@ -547,10 +505,7 @@ Parameters:
 This function can be used from any route.
 
 
-**Example: rest_put usage**
-
-
-```opensips
+```opensips title="rest_put usage"
 ...
 # Creating/Updating a resource using a RESTful service with an HTTP PUT request
 $var(rc) = rest_put("https://myserver.org/users/$fU",
@@ -591,10 +546,7 @@ Parameters
 This function can be used from any route.
 
 
-**Example: rest_append_hf usage**
-
-
-```
+```c title="rest_append_hf usage"
 ...
 # Example of querying a REST service requiring additional headers
 
@@ -626,10 +578,7 @@ Parameters
 This function can be used from any route.
 
 
-**Example: rest_init_client_tls usage**
-
-
-```opensips
+```opensips title="rest_init_client_tls usage"
 ...
 rest_init_client_tls("dom1");
 if (!rest_get("https://example.com"))
@@ -653,10 +602,7 @@ Perform an asynchronous HTTP GET.  This function behaves exactly the same as
 		entire content of the HTTP response is available.
 
 
-**Example: async rest_get usage**
-
-
-```opensips
+```opensips title="async rest_get usage"
 route {
 	...
 	async(rest_get("http://getcredit.org/?account=$fU",
@@ -694,10 +640,7 @@ Perform an asynchronous HTTP POST.  This function behaves exactly the same as
 		response is available.
 
 
-**Example: async rest_post usage**
-
-
-```opensips
+```opensips title="async rest_post usage"
 route {
 	...
 	async(rest_post("http://myserver.org/register_user",
@@ -734,10 +677,7 @@ Perform an asynchronous HTTP PUT.  This function behaves exactly the same as
 		response is available.
 
 
-**Example: async rest_put usage**
-
-
-```opensips
+```opensips title="async rest_put usage"
 route {
 	...
 	async(rest_put("http://myserver.org/users/$fU", $var(userinfo), ,
@@ -783,10 +723,7 @@ The result of this transformation is to produce percent encoded string value whi
 There are no parameters for this transformation.
 
 
-**Example: rest.escape usage**
-
-
-```opensips
+```opensips title="rest.escape usage"
 ...
 # This example would produce log entry: "Output: call%40example.com%26safe%3Dfalse"
 $var(tmp) = "call@example.com&safe=false";
@@ -808,10 +745,7 @@ The result of this transformation is to decode percent encoded string values.
 There are no parameters for this transformation.
 
 
-**Example: rest.unescape usage**
-
-
-```opensips
+```opensips title="rest.unescape usage"
 ...
 # This example would produce log entry: "Output: 1+1=2!"
 $var(tmp) = "1%2B1%3D2%21";

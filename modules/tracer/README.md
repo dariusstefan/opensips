@@ -88,10 +88,7 @@ Parameter to enable/disable trace (on(1)/off(0))
 *Default value is "1"(enabled).*
 
 
-**Example: Set trace_on parameter**
-
-
-```opensips
+```opensips title="Set trace_on parameter"
 ...
 modparam("tracer", "trace_on", 1)
 ...
@@ -111,10 +108,7 @@ The address to be used in the fields that specify the source address
 *Default value is "NULL".*
 
 
-**Example: Set trace_local_ip parameter**
-
-
-```opensips
+```opensips title="Set trace_local_ip parameter"
 ...
 #Resulting address: udp:10.1.1.1:5064
 modparam("tracer", "trace_local_ip", "10.1.1.1:5064")
@@ -183,10 +177,7 @@ All the old parameter such as db_url, table and duplicate_uri
 *No default value. If not set the module will be useless.*
 
 
-**Example: Set trace_id parameter**
-
-
-```opensips
+```opensips title="Set trace_id parameter"
 ...
 /*DB trace id*/
 modparam("tracer", "trace_id",
@@ -223,10 +214,7 @@ When *syslog* tracing is used, this parameter specifies
 *Default value is the value of *syslog_facility*.*
 
 
-**Example: Set syslog_default_facility parameter**
-
-
-```opensips
+```opensips title="Set syslog_default_facility parameter"
 ...
 modparam("tracer", "syslog_default_facility", "LOG_DAEMON")
 ...
@@ -243,10 +231,7 @@ When *syslog* tracing is used, this parameter specifies
 *Default value is the value of *log_level*.*
 
 
-**Example: Set syslog_default_level parameter**
-
-
-```opensips
+```opensips title="Set syslog_default_level parameter"
 ...
 modparam("tracer", "syslog_default_level", 2) # NOTICE
 ...
@@ -264,10 +249,7 @@ When *file* tracing is used, this parameter
 *Default value is *0600 (rw-------)*.*
 
 
-**Example: Set file_mode parameter**
-
-
-```opensips
+```opensips title="Set file_mode parameter"
 ...
 modparam("tracer", "file_mode", 0644)
 ...
@@ -344,10 +326,7 @@ NOTE these flags are supported only by transactional and dialog tracing
 			to correlate this traffic (transaction, dialog) with other traffic.
 
 
-**Example: trace() usage**
-
-
-```opensips
+```opensips title="trace() usage"
 ...
 /* see declaration of tid in trace_id section */
 	$var(trace_id) = "tid";
@@ -434,7 +413,7 @@ If this parameter is missing but the first is set, the command will
 MI FIFO Command Format:
 
 
-```
+```c
 # Display global tracing mode and all trace destinations:
 opensips-cli -x mi trace
 # Turn off global tracing:
@@ -489,7 +468,7 @@ The filter is applied for any incoming request
 MI FIFO Command to start tracing calls from IP 127.0.0.1 to HEP destination 10.0.0.1:9060:
 
 
-```
+```c
 		opensips-cli -x mi trace_start id=ip_filter uri=hep:10.0.0.1:9060 filter=ip=127.0.0.1
 		
 ```
@@ -498,7 +477,7 @@ MI FIFO Command to start tracing calls from IP 127.0.0.1 to HEP destination 10.0
 MI FIFO Command to start tracing calls from user Alice to user Bob:
 
 
-```
+```c
 		opensips-cli -x mi trace_start id=alice_bob uri=hep:10.0.0.1:9060 filter=caller=Alice filter=caller=Bob
 		
 ```
@@ -523,7 +502,7 @@ Parameters:
 MI FIFO Command to stop tracing calls from user Alice to user Bob:
 
 
-```
+```c
 		opensips-cli -x mi trace_stop alice_bob
 		
 ```

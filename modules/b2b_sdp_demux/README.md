@@ -111,10 +111,7 @@ Possible values are:
 		*Default value is "disable".*
 
 
-**Example: Set client_bye_mode parameter**
-
-
-```opensips
+```opensips title="Set client_bye_mode parameter"
 ...
 modparam("b2b_sdp_demux", "client_bye_mode", "terminate")
 ...
@@ -160,11 +157,8 @@ Parameters:
 This function can be used only from request route.
 
 
-**Example: Use b2b_sdp_demux() to 
-				handle an audio SIPREC call**
-
-
-```opensips
+```opensips title="Use b2b_sdp_demux() to 
+				handle an audio SIPREC call"
 ...
 if (!has_totag() && is_method("INVITE")) {
 	$avp(headers) = "X-Leg: caller\r\n");
