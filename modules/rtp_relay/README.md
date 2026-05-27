@@ -172,20 +172,14 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_offer".*
 
 
-**Example: Set route_offer parameter**
-
-
-```opensips
+```opensips title="Set route_offer parameter"
 ...
 modparam("rtp_relay", "route_offer", "custom_rtp_offer")
 ...
 ```
 
 
-**Example: route_offer route usage**
-
-
-```
+```c title="route_offer route usage"
 ...
 route[rtp_relay_offer] {
 	# manually engaging RTPEngine, get the SDP, and replace it in the message
@@ -240,20 +234,14 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_answer".*
 
 
-**Example: Set route_answer parameter**
-
-
-```opensips
+```opensips title="Set route_answer parameter"
 ...
 modparam("rtp_relay", "route_answer", "custom_rtp_answer")
 ...
 ```
 
 
-**Example: route_answer route usage**
-
-
-```
+```c title="route_answer route usage"
 ...
 route[rtp_relay_answer] {
 	# again, manually engaging RTPEngine
@@ -297,20 +285,14 @@ Return values are not needed.
 		*Default value is "rtp_relay_delete".*
 
 
-**Example: Set route_delete parameter**
-
-
-```opensips
+```opensips title="Set route_delete parameter"
 ...
 modparam("rtp_relay", "route_delete", "custom_rtp_delete")
 ...
 ```
 
 
-**Example: rtp_relay_delete route usage**
-
-
-```
+```c title="rtp_relay_delete route usage"
 ...
 route[rtp_relay_delete] {
 	# manually removing RTPEngine session
@@ -356,20 +338,14 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_copy_offer".*
 
 
-**Example: Set rtp_relay_copy_offer parameter**
-
-
-```opensips
+```opensips title="Set rtp_relay_copy_offer parameter"
 ...
 modparam("rtp_relay", "route_copy_offer", "custom_rtp_copy_offer")
 ...
 ```
 
 
-**Example: Set rtp_relay_copy_offer usage**
-
-
-```
+```c title="Set rtp_relay_copy_offer usage"
 ...
 route[rtp_relay_copy_offer] {
 	# instruct a media engine to fork media and assign an identifier
@@ -413,20 +389,14 @@ When the route is executed, the following parameters are
 *Default value is "rtp_relay_copy_answer".*
 
 
-**Example: Set rtp_relay_copy_answer parameter**
-
-
-```opensips
+```opensips title="Set rtp_relay_copy_answer parameter"
 ...
 modparam("rtp_relay", "route_copy_answer", "custom_rtp_copy_answer")
 ...
 ```
 
 
-**Example: Set rtp_relay_copy_answer usage**
-
-
-```
+```c title="Set rtp_relay_copy_answer usage"
 ...
 route[rtp_relay_copy_answer] {
 	# feed the received $param(body) to the media engine that is forking the call
@@ -471,20 +441,14 @@ Return values are not needed.
 *Default value is "rtp_relay_copy_delete".*
 
 
-**Example: Set rtp_relay_copy_delete parameter**
-
-
-```opensips
+```opensips title="Set rtp_relay_copy_delete parameter"
 ...
 modparam("rtp_relay", "route_copy_delete", "custom_rtp_copy_delete")
 ...
 ```
 
 
-**Example: Set rtp_relay_copy_delete usage**
-
-
-```
+```c title="Set rtp_relay_copy_delete usage"
 ...
 route[rtp_relay_copy_delete] {
 	# remove the copy instance is identified by the $param(copy-ctx) variable
@@ -534,10 +498,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: rtp_relay_engage usage**
-
-
-```opensips
+```opensips title="rtp_relay_engage usage"
 ...
 if (is_method("INVITE") && !has_totag()) {
 	xlog("SCRIPT: engaging RTPProxy relay for all branches\n");
@@ -576,10 +537,7 @@ Parameters:
 					parameter must also be specified.
 
 
-**Example: rtp_relay:list usage**
-
-
-```
+```c title="rtp_relay:list usage"
 ...
 ## list all sessions
 $ opensips-cli -x mi rtp_relay:list
@@ -645,10 +603,7 @@ Parameters:
 					same set will be used.
 
 
-**Example: rtp_relay:update usage**
-
-
-```
+```c title="rtp_relay:update usage"
 ...
 ## update all sessions that are using rtpproxy
 $ opensips-cli -x mi rtp_relay:update rtpproxy
@@ -697,10 +652,7 @@ Parameters:
 					explicitely specified flags will be overwritten.
 
 
-**Example: rtp_relay:update_callid usage**
-
-
-```
+```c title="rtp_relay:update_callid usage"
 ...
 ## update a call with a working RTPproxy node
 $ opensips-cli -x mi rtp_relay:update_callid 1-3758963@127.0.0.1 rtpproxy

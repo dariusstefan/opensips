@@ -49,10 +49,7 @@ The auto-reload will close and reopen a Berkeley DB when the
 *Default value is 0 (1 - on / 0 - off).*
 
 
-**Example: Set auto_reload parameter**
-
-
-```opensips
+```opensips title="Set auto_reload parameter"
 ...
 modparam("db_berkeley", "auto_reload", 1)
 ...
@@ -78,10 +75,7 @@ The log_enable boolean controls when to create journal files.
 *Default value is 0 (1 - on / 0 - off).*
 
 
-**Example: Set log_enable parameter**
-
-
-```opensips
+```opensips title="Set log_enable parameter"
 ...
 modparam("db_berkeley", "log_enable", 1)
 ...
@@ -100,10 +94,7 @@ The journal_roll_interval will close and open a new log file.
 *Default value is 0 (off).*
 
 
-**Example: Set journal_roll_interval parameter**
-
-
-```opensips
+```opensips title="Set journal_roll_interval parameter"
 ...
 modparam("db_berkeley", "journal_roll_interval", 3600)
 ...
@@ -148,7 +139,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi db_berkeley:reload subscriber
 		
 ```
@@ -203,7 +194,7 @@ Decide where (on the filesystem) you want to install the Berkeley DB files.
 		Note: If you plan to use bdb_recover, you must change the LOGFLAGS.
 
 
-```
+```c
 		METADATA_READONLY
 		0
 		METADATA_LOGFLAGS
@@ -216,7 +207,7 @@ Execute opensipsdbctl - There are three (3) groups of tables you may need depend
 		on your situation.
 
 
-```
+```c
 		opensipsdbctl create   		(required)
 		opensipsdbctl presence 		(optional)
 		opensipsdbctl extra    		(optional)
@@ -273,10 +264,7 @@ Note on reserved character-
 	Berkeley DB implementation and must not be present in any DB field.
 
 
-**Example: METADATA_COLUMNS**
-
-
-```
+```c title="METADATA_COLUMNS"
 METADATA_COLUMNS
 table_name(str) table_version(int)
 METADATA_KEY
@@ -301,10 +289,7 @@ The actual column data is stored as a string value, and delimited by
 	It shows contents of table 'version' in plain text.
 
 
-**Example: contents of version table**
-
-
-```
+```c title="contents of version table"
 VERSION=3
 format=print
 type=hash
@@ -359,10 +344,7 @@ The METADATA_COLUMNS row contains the column names and types.
 	Each is space delimited. Here is an example of the data taken from table subscriber :
 
 
-**Example: METADATA_COLUMNS**
-
-
-```
+```c title="METADATA_COLUMNS"
 METADATA_COLUMNS
 username(str) domain(str) password(str) ha1(str) ha1b(str) first_name(str) last_name(str) email_address(str) datetime_created(datetime) timezone(str) rpid(str)
  	
@@ -388,10 +370,7 @@ The METADATA_KEYS row indicates the indexes of the key columns,
 	Here is an example taken from table subscriber that brings up a good point:
 
 
-**Example: METADATA_KEYS**
-
-
-```
+```c title="METADATA_KEYS"
  METADATA_KEY
  0 1
  	
@@ -422,10 +401,7 @@ The METADATA_LOGFLAGS row contains a bitfield that customizes the
 	is taken as 0. Here are the masks so far (taken from bdb_lib.h):
 
 
-**Example: METADATA_LOGFLAGS**
-
-
-```
+```c title="METADATA_LOGFLAGS"
 #define JLOG_NONE 0
 #define JLOG_INSERT 1
 #define JLOG_DELETE 2
@@ -466,10 +442,7 @@ The '-h' home option is the DB_PATH path. Unlike the Berkeley utilities,
 The following illustrates the four operations available to the administrator.
 
 
-**Example: bdb_recover usage**
-
-
-```
+```c title="bdb_recover usage"
 usage: ./bdb_recover -s schemadir [-h home] [-c tablename]
 	This will create a brand new DB file with metadata.
 

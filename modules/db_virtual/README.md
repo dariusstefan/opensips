@@ -65,7 +65,7 @@ Note that starting with version 2.2 db_virtual supports
 #### Failures
 
 
-```
+```c
 	When an operation from a process on a real DB fails:
 		it is marked (global and local CAN flag down)
 		its connection closed
@@ -132,11 +132,8 @@ The following libraries or applications must be installed before running
 Multiple value parameter used for virtual DB URLs declaration.
 
 
-**Example: Set
-					db_urls parameter**
-
-
-```opensips
+```opensips title="Set
+					db_urls parameter"
 ...
 
 modparam("group","db_url","virtual://set1")
@@ -164,11 +161,8 @@ Time interval after which a registered timer process attempts to check
 *Default value is 10 (10 sec).*
 
 
-**Example: Set
-					db_probe_time parameter**
-
-
-```opensips
+```opensips title="Set
+					db_probe_time parameter"
 ...
 modparam("db_virtual", "db_probe_time", 20)
 ...
@@ -189,11 +183,8 @@ After the timer process has reported that it can connect to the real db,
 *Default value is 10 (10 consecutive times).*
 
 
-**Example: Set
-					db_max_consec_retrys parameter**
-
-
-```opensips
+```opensips title="Set
+					db_max_consec_retrys parameter"
 ...
 modparam("db_virtual", "db_max_consec_retrys", 20)
 ...
@@ -227,7 +218,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 				opensips-cli -x mi db_virtual:get
 			
 ```
@@ -270,7 +261,7 @@ db_virtual:set 3 2 0 1 means:
 MI FIFO Command Format:
 
 
-```
+```c
 				opensips-cli -x mi db_virtual:set 3 2 0 1
 			
 ```

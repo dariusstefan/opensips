@@ -26,14 +26,14 @@ It allows creation of both UDP and TCP secure connections on the same
 		using the *proto_ipsec* protocol, two new
 		internal/hidden sockets are created on the specified port.
 		For example, defining the following socket:
-	```
+	```c
 
 ...
 socket=ipsec:127.0.0.1:5100
 ...
 ```
 		Internally, two different sockets are created:
-	```
+	```c
 
 ...
 socket=udp:127.0.0.1:5100
@@ -111,10 +111,7 @@ Default IPSec port used when no prot is being specified in the
 *Default value is 5062.*
 
 
-**Example: Set port parameter**
-
-
-```opensips
+```opensips title="Set port parameter"
 ...
 modparam("proto_ipsec", "port", 5100)
 ...
@@ -134,10 +131,7 @@ This parameter represents the minimum value for the Security
 *Default value is 65536.*
 
 
-**Example: Set min_spi parameter**
-
-
-```opensips
+```opensips title="Set min_spi parameter"
 ...
 modparam("proto_ipsec", "min_spi", 10000)
 ...
@@ -157,10 +151,7 @@ This parameter represents the maximum value for the Security
 *Default value is 262144.*
 
 
-**Example: Set max_spi parameter**
-
-
-```opensips
+```opensips title="Set max_spi parameter"
 ...
 modparam("proto_ipsec", "max_spi", 20000)
 ...
@@ -184,10 +175,7 @@ The timeout signifies the duration elapsed after sending the
 *Default value is 30.*
 
 
-**Example: Set temporary_timeout variable**
-
-
-```
+```c title="Set temporary_timeout variable"
 param("proto_ipsec", "temporary_timeout", 10) # number of seconds
 
 			
@@ -205,10 +193,7 @@ Default port value to be used when we act as clients in the
 			but needs to be different from the server socket.*
 
 
-**Example: Set default_client_port parameter**
-
-
-```opensips
+```opensips title="Set default_client_port parameter"
 ...
 modparam("proto_ipsec", "default_client_port", 5100)
 ...
@@ -226,10 +211,7 @@ Default port value to be used when we act as server in the
 			but needs to be different from the client socket.*
 
 
-**Example: Set default_server_port parameter**
-
-
-```opensips
+```opensips title="Set default_server_port parameter"
 ...
 modparam("proto_ipsec", "default_server_port", 6100)
 ...
@@ -269,10 +251,7 @@ Currently supported algorithms are:
 *Default value is none - this means that all algorithms can be used.*
 
 
-**Example: Set allowed_algorithms parameter**
-
-
-```opensips
+```opensips title="Set allowed_algorithms parameter"
 ...
 modparam("proto_ipsec", "allowed_algorithms", "null")
 modparam("proto_ipsec", "allowed_algorithms", "hmac-sha-1-96=null")
@@ -297,10 +276,7 @@ Indicates whether we should ignore deprecated algorithms,
 *Default value is false - all algorithms can be used.*
 
 
-**Example: Set disable_deprecated_algorithms parameter**
-
-
-```opensips
+```opensips title="Set disable_deprecated_algorithms parameter"
 ...
 modparam("proto_ipsec", "disable_deprecated_algorithms", yes)
 ...
@@ -348,10 +324,7 @@ Meaning of the parameters is as follows:
 This function can be used from REPLY_ROUTE.
 
 
-**Example: ipsec_create() usage**
-
-
-```
+```c title="ipsec_create() usage"
 ...
 onreply_route[ipsec] {
 	if ($T_reply_code == 401)
@@ -395,10 +368,7 @@ The following fields can be retrieved:
 					chosen for communicating through the server channel.
 
 
-**Example: $ipsec(field) usage**
-
-
-```opensips
+```opensips title="$ipsec(field) usage"
 ...
 xlog("Using $ipsec(ip):$ipsec(port-c) and $ipsec(ip):$ipsec(port-s) socket\n");
 ...
@@ -436,10 +406,7 @@ The following fields can be retrieved:
 					chosen for communicating through the server channel.
 
 
-**Example: $ipsec_ue(field) usage**
-
-
-```opensips
+```opensips title="$ipsec_ue(field) usage"
 ...
 xlog("Using $ipsec_ue(ip):$ipsec_ue(port-c) and $ipsec_ue(ip):$ipsec_ue(port-s) socket\n");
 ...

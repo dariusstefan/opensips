@@ -21,7 +21,7 @@ This module behaves as any other transport protocol module: in order to
 	use it, you must define one or more listeners that will handle the secure
 	WebSocket traffic, *after* the `mpath`
 	parameter:
-	```
+	```c
 
 ...
 mpath=/path/to/modules
@@ -31,7 +31,7 @@ socket=wss:10.0.0.1:5060	# change with the listening IP and port
 ...
 ```
 	Besides that, you need to define the TLS parameters for securing the connection. This is done through the *tls_mgm* module interface, similar to the *proto_tls* module:
-	```
+	```c
 
 modparam("tls_mgm", "certificate", "/certs/biloxy.com/cert.pem")
 modparam("tls_mgm", "private_key", "/certs/biloxy.com/privkey.pem")
@@ -81,10 +81,7 @@ This is a global parameter that specifies what interface/IP and
 			port should handle WSS traffic.
 
 
-**Example: Set listen variable**
-
-
-```
+```c title="Set listen variable"
 ...
 socket= wss:1.2.3.4:44344
 ...
@@ -108,10 +105,7 @@ If you want to change only the listening port for WSS, use the port
 *Default value is 443.*
 
 
-**Example: Set wss_port variable**
-
-
-```opensips
+```opensips title="Set wss_port variable"
 ...
 modparam("proto_wss", "wss_port", 44344)
 ...
@@ -133,10 +127,7 @@ The maximum number of chunks in which a SIP message is expected to
 *Default value is 4.*
 
 
-**Example: Set wss_max_msg_chunks parameter**
-
-
-```opensips
+```opensips title="Set wss_max_msg_chunks parameter"
 ...
 modparam("proto_wss", "wss_max_msg_chunks", 8)
 ...
@@ -152,10 +143,7 @@ The resource queried for when a WebSocket handshake is initiated.
 *Default value is "/".*
 
 
-**Example: Set wss_resource parameter**
-
-
-```opensips
+```opensips title="Set wss_resource parameter"
 ...
 modparam("proto_wss", "wss_resource", "/wss")
 ...
@@ -172,10 +160,7 @@ This parameter specifies the time in milliseconds the proto_wss module
 *Default value is 100.*
 
 
-**Example: Set wss_handshake_timeout parameter**
-
-
-```opensips
+```opensips title="Set wss_handshake_timeout parameter"
 ...
 modparam("proto_wss", "wss_handshake_timeout", 300)
 ...
@@ -202,10 +187,7 @@ This checking is done only when comes to send SIP traffic via TLS and
 *Default value is 0 (disabled).*
 
 
-**Example: Set cert_check_on_conn_reusage parameter**
-
-
-```opensips
+```opensips title="Set cert_check_on_conn_reusage parameter"
 ...
 modparam("proto_wss", "cert_check_on_conn_reusage", 1)
 ...
@@ -233,10 +215,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "hep_id", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -253,10 +232,7 @@ This controls whether tracing for wss is on or not. You still need to define
 			controlled using mi function [mi trace](#mi_trace).
 
 
-**Example: Set trace_on parameter**
-
-
-```opensips
+```opensips title="Set trace_on parameter"
 ...
 modparam("proto_wss", "trace_on", 1)
 ...
@@ -291,10 +267,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-**Example: Set trace_filter_route parameter**
-
-
-```opensips
+```opensips title="Set trace_filter_route parameter"
 ...
 modparam("proto_wss", "trace_filter_route", "wss_filter")
 ...
@@ -330,10 +303,7 @@ The timeout is invoked during acceptance of a new connection (inbound) and
 *Default value is 100.*
 
 
-**Example: Set wss_tls_handshake_timeout variable**
-
-
-```
+```c title="Set wss_tls_handshake_timeout variable"
 param("proto_wss", "wss_tls_handshake_timeout", 200) # number of milliseconds
 
 			
@@ -353,10 +323,7 @@ The send timeout is invoked for all TLS write operations, excluding
 *Default value is 100.*
 
 
-**Example: Set wss_send_timeout variable**
-
-
-```opensips
+```opensips title="Set wss_send_timeout variable"
 modparam("proto_wss", "wss_send_timeout", 200) # number of milliseconds
 
 			
@@ -369,10 +336,7 @@ modparam("proto_wss", "wss_send_timeout", 200) # number of milliseconds
 Controls whether the module should require the Origin header or not.
 
 
-**Example: Set require_origin parameter**
-
-
-```opensips
+```opensips title="Set require_origin parameter"
 modparam("proto_wss", "require_origin", no)
 
 		
@@ -406,7 +370,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi wss:trace on
 			
 ```

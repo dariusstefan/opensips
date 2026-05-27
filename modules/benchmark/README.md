@@ -70,10 +70,7 @@ Even when the module is loaded, benchmarking is not enabled
 *Default value is "0".*
 
 
-**Example: Set enable parameter**
-
-
-```opensips
+```opensips title="Set enable parameter"
 ...
 modparam("benchmark", "enable", 1)
 ...
@@ -94,10 +91,7 @@ If granularity is set to 0, then nothing will be logged automatically. Instead b
 *Default value is "100".*
 
 
-**Example: Set granularity parameter**
-
-
-```opensips
+```opensips title="Set granularity parameter"
 ...
 modparam("benchmark", "granularity", 500)
 ...
@@ -122,10 +116,7 @@ Set the log level for the benchmark logs. These levels should be used:
 *Default value is "3" (L_INFO).*
 
 
-**Example: Set loglevel parameter**
-
-
-```opensips
+```opensips title="Set loglevel parameter"
 ...
 modparam("benchmark", "loglevel", 4)
 ...
@@ -145,10 +136,7 @@ Start timer "name". A later call to
 		"bm_log_timer()" logs this timer..
 
 
-**Example: bm_start_timer usage**
-
-
-```
+```c title="bm_start_timer usage"
 ...
 bm_start_timer("test");
 ...
@@ -193,10 +181,7 @@ This function logs the timer with the given ID. The following data are
 - *Global avg* possibly the most interesting value.
 
 
-**Example: bm_log_timer usage**
-
-
-```
+```c title="bm_log_timer usage"
 ...
 bm_log_timer("test");
 ...
@@ -240,7 +225,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi benchmark:enable_global 1
 			
 ```
@@ -265,10 +250,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-**Example: Enabling a timer**
-
-
-```
+```c title="Enabling a timer"
 ...
 opensips-cli -x mi benchmark:enable_timer test 1
 ...
@@ -294,7 +276,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi benchmark:granularity 300
 			
 ```
@@ -319,7 +301,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi benchmark:loglevel 4
 			
 ```
@@ -337,10 +319,7 @@ Returns the current and global results for each timer. This command is only avai
 If there were no new calls to *bm_log_timer* since last check, then all current values of a timer will be equal 0. Each call to *benchmark:poll_results* will reset current values (but not global ones).
 
 
-**Example: Getting the results via FIFO interface**
-
-
-```
+```c title="Getting the results via FIFO interface"
 ...
 opensips-cli -x mi benchmark:poll_results
 register_timer
@@ -359,10 +338,7 @@ security_check_timer
 Measure the duration of user location lookup.
 
 
-**Example: benchmark usage**
-
-
-```
+```c title="benchmark usage"
 ...
 bm_start_timer("usrloc-lookup");
 lookup("location");
@@ -411,10 +387,7 @@ This function equals the user-exported function bm_log_timer. The id
 ### Benchmark API Example
 
 
-**Example: Using the benchmark module's API from another module**
-
-
-```
+```c title="Using the benchmark module's API from another module"
 ...
 #include "../benchmark/benchmark.h"
 ...

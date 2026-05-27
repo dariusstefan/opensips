@@ -46,7 +46,7 @@ To get better understanding how all the module works together please take a
 			look at the follwing figure:
 
 
-```
+```c
     Main Proxy and Presence Server on the same Instance
 
    caller        proxy &      callee         watcher
@@ -101,7 +101,7 @@ The presence server can also be separated from the main proxy by using a separat
 			main proxy to the presence server).
 
 
-```
+```c
     Main Proxy and Presence Server use a separate Instance
 
    caller        proxy &   presence      callee         watcher
@@ -180,10 +180,7 @@ If this parameter is set, only the dialog element with the
 *Default value is "0".*
 
 
-**Example: Set  parameter**
-
-
-```opensips
+```opensips title="Set  parameter"
 ...
 modparam("presence_dialoginfo", "force_single_dialog", 1)
 ...

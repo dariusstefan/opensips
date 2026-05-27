@@ -77,10 +77,7 @@ The IP address used by the HTTP server to listen for incoming
 		Use "*" to bind to all IPv6 and IPv4 interfaces.
 
 
-**Example: Set ip parameter**
-
-
-```opensips
+```opensips title="Set ip parameter"
 ...
 modparam("httpd", "ip", "127.0.0.1")
 ...
@@ -98,10 +95,7 @@ The port number used by the HTTP server to listen for incoming
 		Ports lower than 1024 are not accepted.
 
 
-**Example: Set port parameter**
-
-
-```opensips
+```opensips title="Set port parameter"
 ...
 modparam("httpd", "port", 8000)
 ...
@@ -124,10 +118,7 @@ Note: the connection auto-close routine only seems to be executed
 *The default timeout is 30 seconds.*
 
 
-**Example: Set conn_timeout parameter**
-
-
-```opensips
+```opensips title="Set conn_timeout parameter"
 ...
 modparam("httpd", "conn_timeout", 10)
 ...
@@ -148,10 +139,7 @@ If the size of the buffer is set to zero, it will be automatically
 *The default value is 0.*
 
 
-**Example: Set buf_size parameter**
-
-
-```opensips
+```opensips title="Set buf_size parameter"
 ...
 modparam("httpd", "buf_size", 524288)
 ...
@@ -169,10 +157,7 @@ It specifies the length (in bytes) of the POST HTTP requests
 *The default value is 1024. The minumal value is 256.*
 
 
-**Example: Set post_buf_size parameter**
-
-
-```opensips
+```opensips title="Set post_buf_size parameter"
 ...
 modparam("httpd", "post_buf_size", 4096)
 ...
@@ -189,10 +174,7 @@ It specifies the maximum length (in bytes) of the received HTTP requests.
 *The default value is 1024.*
 
 
-**Example: Set receive_buf_size parameter**
-
-
-```opensips
+```opensips title="Set receive_buf_size parameter"
 ...
 modparam("httpd", "receive_buf_size", 4096)
 ...
@@ -208,10 +190,7 @@ Public certificate file for httpd. It will be used as server-side certificate fo
 *The default value is ""*
 
 
-**Example: Set tls_cert_file parameter**
-
-
-```opensips
+```opensips title="Set tls_cert_file parameter"
 ...
 modparam("httpd", "tls_cert_file", "/etc/opensips/tls/server.pem")
 ...
@@ -227,10 +206,7 @@ Private key of the above certificate. I must be kept in a safe place with tight 
 *The default value is ""*
 
 
-**Example: Set tls_key_file parameter**
-
-
-```opensips
+```opensips title="Set tls_key_file parameter"
 ...
 modparam("httpd", "tls_key_file", "/etc/opensips/tls/server.key")
 ...
@@ -254,10 +230,7 @@ You can specify the list of algorithms for authentication and encryption that yo
 *The default value is  "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2"*
 
 
-**Example: Set tls_key_file parameter**
-
-
-```opensips
+```opensips title="Set tls_key_file parameter"
 ...
 modparam("httpd", "tls_ciphers", "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2")
 ...
@@ -276,10 +249,7 @@ The realm string to be used for HTTP Basic Authentication
 *The default value is "OpenSIPS MI".*
 
 
-**Example: Set auth_realm parameter**
-
-
-```opensips
+```opensips title="Set auth_realm parameter"
 ...
 modparam("httpd", "auth_realm", "OpenSIPS Management")
 ...
@@ -298,10 +268,7 @@ The username for HTTP Basic Authentication.  When set together
 *The default value is "" (authentication disabled).*
 
 
-**Example: Set auth_username parameter**
-
-
-```opensips
+```opensips title="Set auth_username parameter"
 ...
 modparam("httpd", "auth_username", "admin")
 ...
@@ -325,10 +292,7 @@ The password for HTTP Basic Authentication.  Must be set
 *The default value is "" (authentication disabled).*
 
 
-**Example: Set auth_password parameter**
-
-
-```opensips
+```opensips title="Set auth_password parameter"
 ...
 modparam("httpd", "auth_password", "secretpass")
 ...
@@ -358,7 +322,7 @@ Parameters: none
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi httpd:list_root_path
 		
 ```
@@ -392,7 +356,7 @@ Running the http daemon as non root on ports below 1024 is
 		extra privilleges to opensips binary:
 
 
-```
+```c
 setcap 'cap_net_bind_service=+ep' /usr/local/sbin/opensips
 		
 ```

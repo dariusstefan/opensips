@@ -232,10 +232,7 @@ The name of the branch flag to be used as NAT marker (if the contact
 *Default value is NULL (not set).*
 
 
-**Example: Set nat_bflag parameter**
-
-
-```opensips
+```opensips title="Set nat_bflag parameter"
 ...
 modparam("usrloc", "nat_bflag", "NAT_BFLAG")
 ...
@@ -251,10 +248,7 @@ Name of the column holding the unique contact IDs.
 *Default value is "contact_id".*
 
 
-**Example: Set contact_id_column parameter**
-
-
-```opensips
+```opensips title="Set contact_id_column parameter"
 ...
 modparam("usrloc", "contact_id_column", "ctid")
 ...
@@ -270,10 +264,7 @@ Name of column containing usernames.
 *Default value is "username".*
 
 
-**Example: Set user_column parameter**
-
-
-```opensips
+```opensips title="Set user_column parameter"
 ...
 modparam("usrloc", "user_column", "username")
 ...
@@ -289,10 +280,7 @@ Name of column containing domains.
 *Default value is "domain".*
 
 
-**Example: Set user_column parameter**
-
-
-```opensips
+```opensips title="Set user_column parameter"
 ...
 modparam("usrloc", "domain_column", "domain")
 ...
@@ -308,10 +296,7 @@ Name of column containing contacts.
 *Default value is "contact".*
 
 
-**Example: Set contact_column parameter**
-
-
-```opensips
+```opensips title="Set contact_column parameter"
 ...
 modparam("usrloc", "contact_column", "contact")
 ...
@@ -327,10 +312,7 @@ Name of column containing expires value.
 *Default value is "expires".*
 
 
-**Example: Set expires_column parameter**
-
-
-```opensips
+```opensips title="Set expires_column parameter"
 ...
 modparam("usrloc", "expires_column", "expires")
 ...
@@ -346,10 +328,7 @@ Name of column containing q values.
 *Default value is "q".*
 
 
-**Example: Set q_column parameter**
-
-
-```opensips
+```opensips title="Set q_column parameter"
 ...
 modparam("usrloc", "q_column", "q")
 ...
@@ -365,10 +344,7 @@ Name of column containing callid values.
 *Default value is "callid".*
 
 
-**Example: Set callid_column parameter**
-
-
-```opensips
+```opensips title="Set callid_column parameter"
 ...
 modparam("usrloc", "callid_column", "callid")
 ...
@@ -384,10 +360,7 @@ Name of column containing cseq numbers.
 *Default value is "cseq".*
 
 
-**Example: Set cseq_column parameter**
-
-
-```opensips
+```opensips title="Set cseq_column parameter"
 ...
 modparam("usrloc", "cseq_column", "cseq")
 ...
@@ -403,10 +376,7 @@ Name of column containing supported methods.
 *Default value is "methods".*
 
 
-**Example: Set methods_column parameter**
-
-
-```opensips
+```opensips title="Set methods_column parameter"
 ...
 modparam("usrloc", "methods_column", "methods")
 ...
@@ -422,10 +392,7 @@ Name of column to save the internal flags of the record.
 *Default value is "flags".*
 
 
-**Example: Set flags_column parameter**
-
-
-```opensips
+```opensips title="Set flags_column parameter"
 ...
 modparam("usrloc", "flags_column", "flags")
 ...
@@ -441,10 +408,7 @@ Name of column to save the branch/contact flags of the record.
 *Default value is "cflags".*
 
 
-**Example: Set cflags_column parameter**
-
-
-```opensips
+```opensips title="Set cflags_column parameter"
 ...
 modparam("usrloc", "cflags_column", "cflags")
 ...
@@ -460,10 +424,7 @@ Name of column containing user-agent values.
 *Default value is "user_agent".*
 
 
-**Example: Set user_agent_column parameter**
-
-
-```opensips
+```opensips title="Set user_agent_column parameter"
 ...
 modparam("usrloc", "user_agent_column", "user_agent")
 ...
@@ -480,10 +441,7 @@ Name of column containing the source IP, port, and protocol from the REGISTER
 *Default value is "received".*
 
 
-**Example: Set received_column parameter**
-
-
-```opensips
+```opensips title="Set received_column parameter"
 ...
 modparam("usrloc", "received_column", "received")
 ...
@@ -500,10 +458,7 @@ Name of column containing the received socket information (IP:port)
 *Default value is "socket".*
 
 
-**Example: Set socket_column parameter**
-
-
-```opensips
+```opensips title="Set socket_column parameter"
 ...
 modparam("usrloc", "socket_column", "socket")
 ...
@@ -519,10 +474,7 @@ Name of column containing the Path header.
 *Default value is "path".*
 
 
-**Example: Set path_column parameter**
-
-
-```opensips
+```opensips title="Set path_column parameter"
 ...
 modparam("usrloc", "path_column", "path")
 ...
@@ -538,10 +490,7 @@ Name of column containing the SIP instance.
 *Default value is "NULL".*
 
 
-**Example: Set sip_instance_column parameter**
-
-
-```opensips
+```opensips title="Set sip_instance_column parameter"
 ...
 modparam("usrloc", "sip_instance_column", "sip_instance")
 ...
@@ -557,10 +506,7 @@ Name of column containing generic key-value data.
 *Default value is "kv_store".*
 
 
-**Example: Set kv_store_column parameter**
-
-
-```opensips
+```opensips title="Set kv_store_column parameter"
 ...
 modparam("usrloc", "kv_store_column", "json_data")
 ...
@@ -576,10 +522,7 @@ Name of column containing additional registration-related information.
 *Default value is "attr".*
 
 
-**Example: Set attr_column parameter**
-
-
-```opensips
+```opensips title="Set attr_column parameter"
 ...
 modparam("usrloc", "attr_column", "attributes")
 ...
@@ -597,10 +540,7 @@ Denotes whether the *domain* part of the user should
 *Default value is *true* (enabled).*
 
 
-**Example: Set use_domain parameter**
-
-
-```opensips
+```opensips title="Set use_domain parameter"
 ...
 modparam("usrloc", "use_domain", true)
 ...
@@ -618,10 +558,7 @@ If the user's contacts should be kept timestamp ordered; otherwise the
 *Default value is "0 (false)".*
 
 
-**Example: Set desc_time_order parameter**
-
-
-```opensips
+```opensips title="Set desc_time_order parameter"
 ...
 modparam("usrloc", "desc_time_order", 1)
 ...
@@ -645,10 +582,7 @@ Number of seconds between two timer runs.  During each run, the module
 *Default value is 60.*
 
 
-**Example: Set timer_interval parameter**
-
-
-```opensips
+```opensips title="Set timer_interval parameter"
 ...
 modparam("usrloc", "timer_interval", 120)
 ...
@@ -664,10 +598,7 @@ URL of the database that should be used.
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("usrloc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -685,10 +616,7 @@ URL of a NoSQL database to be used. Only required in a
 *Default value is "none".*
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("usrloc", "cachedb_url", "mongodb://10.0.0.4:27017/opensipsDB.userlocation")
 ...
@@ -764,10 +692,7 @@ Refer to section
 *Default value is "single-instance-no-db".*
 
 
-**Example: Set working_mode_preset parameter**
-
-
-```opensips
+```opensips title="Set working_mode_preset parameter"
 ...
 modparam("usrloc", "working_mode_preset", "full-sharing-cachedb-cluster")
 ...
@@ -818,10 +743,7 @@ This parameter may take the following values:
 *Default value is *"none" (single instance mode)*.*
 
 
-**Example: Set cluster_mode parameter**
-
-
-```opensips
+```opensips title="Set cluster_mode parameter"
 ...
 modparam("usrloc", "cluster_mode", "federation-cachedb")
 ...
@@ -870,10 +792,7 @@ This parameter may take the following values:
 			*"none" (no restart persistency)*.*
 
 
-**Example: Set restart_persistency parameter**
-
-
-```opensips
+```opensips title="Set restart_persistency parameter"
 ...
 modparam("usrloc", "restart_persistency", "sync-from-cluster")
 ...
@@ -917,10 +836,7 @@ This parameter may take the following values:
 *Default value is *"none" (no added SQL writes)*.*
 
 
-**Example: Set sql_write_mode parameter**
-
-
-```opensips
+```opensips title="Set sql_write_mode parameter"
 ...
 modparam("usrloc", "sql_write_mode", "write-back")
 ...
@@ -947,10 +863,7 @@ The parameter may take the following values:
 *Default value is *0 (CONTACT_ONLY)*.*
 
 
-**Example: Set matching_mode parameter**
-
-
-```opensips
+```opensips title="Set matching_mode parameter"
 ...
 modparam("usrloc", "matching_mode", 1)
 ...
@@ -976,10 +889,7 @@ A value of 0 disable the retransmission detection.
 *Default value is "20 seconds".*
 
 
-**Example: Set cseq_delay parameter**
-
-
-```opensips
+```opensips title="Set cseq_delay parameter"
 ...
 modparam("usrloc", "cseq_delay", 5)
 ...
@@ -1011,10 +921,7 @@ More details on the user location distribution mechanisms are
 		available under [distributed sip user location](#distributed-sip-user-location).
 
 
-**Example: Setting the location_cluster parameter**
-
-
-```opensips
+```opensips title="Setting the location_cluster parameter"
 ...
 modparam("usrloc", "location_cluster", 1)
 ...
@@ -1033,10 +940,7 @@ Only relevant in **"federation-cachedb"**
 Default value is 0 (disabled).
 
 
-**Example: Setting the ha_cluster parameter**
-
-
-```opensips
+```opensips title="Setting the ha_cluster parameter"
 ...
 modparam("usrloc", "ha_cluster", 4)
 ...
@@ -1055,10 +959,7 @@ Only relevant in **"federation-cachedb"**
 Default value is NULL (disabled).
 
 
-**Example: Setting the ha_shtag parameter**
-
-
-```opensips
+```opensips title="Setting the ha_shtag parameter"
 ...
 modparam("usrloc", "ha_shtag", "vip2")
 ...
@@ -1081,11 +982,8 @@ More details on the user location replication mechanism are available
 		in [distributed sip user location](#distributed-sip-user-location)
 
 
-**Example: Setting the skip_replicated_db_ops
-			parameter**
-
-
-```opensips
+```opensips title="Setting the skip_replicated_db_ops
+			parameter"
 ...
 modparam("usrloc", "skip_replicated_db_ops", 1)
 ...
@@ -1103,11 +1001,8 @@ Relevant only in WRITE_THROUGH or WRITE_BACK schemes. The maximum
 Default value is "10"
 
 
-**Example: Setting the max_contact_delete
-			parameter**
-
-
-```opensips
+```opensips title="Setting the max_contact_delete
+			parameter"
 ...
 modparam("usrloc", "max_contact_delete", 10)
 ...
@@ -1126,10 +1021,7 @@ The number of entries of the hash table used by usrloc to store the
 *Default value is "9".*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("usrloc", "hash_size", 10)
 ...
@@ -1152,10 +1044,7 @@ Since version 2.2, **contact_id** concept
 *Default value is "0(not enabled)"*
 
 
-**Example: Set regen_broken_contactid parameter**
-
-
-```opensips
+```opensips title="Set regen_broken_contactid parameter"
 ...
 modparam("usrloc", "regen_broken_contactid", 1)
 ...
@@ -1178,10 +1067,7 @@ If both [latency event min us](#param_latency_event_min_us) and
 *Default value is "0 (no bottom limit set)".*
 
 
-**Example: Set latency_event_min_us parameter**
-
-
-```opensips
+```opensips title="Set latency_event_min_us parameter"
 ...
 # raise an event for any 425+ ms pinging latency
 modparam("usrloc", "latency_event_min_us", 425000)
@@ -1207,10 +1093,7 @@ If both [latency event min us](#param_latency_event_min_us) and
 *Default value is "0 (no minimal latency delta set)".*
 
 
-**Example: Set latency_event_min_us_delta parameter**
-
-
-```opensips
+```opensips title="Set latency_event_min_us_delta parameter"
 ...
 # raise an event only if a contact has pinging latency swings of 300+ ms
 modparam("usrloc", "latency_event_min_us_delta", 300000)
@@ -1262,10 +1145,7 @@ Notice that only the **"full-sharing"**
 			for those modes will be silently discarded.
 
 
-**Example: Set pinging_mode parameter**
-
-
-```opensips
+```opensips title="Set pinging_mode parameter"
 ...
 # prepare an active/backup "full-sharing" setup, with no front-end
 modparam("usrloc", "pinging_mode", "ownership")
@@ -1285,10 +1165,7 @@ Enable in order to include the "KV-Store" field in all usrloc MI
 *Default value is "0 (disabled)".*
 
 
-**Example: Set mi_dump_kv_store parameter**
-
-
-```opensips
+```opensips title="Set mi_dump_kv_store parameter"
 ...
 # include the "KV-Store" key in all usrloc MI output
 modparam("usrloc", "mi_dump_kv_store", 1)
@@ -1309,10 +1186,7 @@ Enable a timer which will periodically scan a sorted list of contacts
 *Default value is "false (disabled)".*
 
 
-**Example: Set contact_refresh_timer parameter**
-
-
-```opensips
+```opensips title="Set contact_refresh_timer parameter"
 ...
 modparam("usrloc", "contact_refresh_timer", true)
 ...
@@ -1348,10 +1222,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: ul_add_key usage**
-
-
-```
+```c title="ul_add_key usage"
 ...
 ul_add_key("location", "$tU@$td", "service_route", "$hdr(Service-Route)");
 ...
@@ -1383,10 +1254,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: ul_get_key usage**
-
-
-```
+```c title="ul_get_key usage"
 ...
 if (ul_get_key("location", "$tU@$td", "service_route", $avp(service_route))) {
         append_to_reply("Service-Route: $avp(service_route)\r\n");
@@ -1418,10 +1286,7 @@ Meaning of the parameters is as follows:
 This function can be used in ANY route.
 
 
-**Example: ul_del_key usage**
-
-
-```
+```c title="ul_del_key usage"
 ...
 ul_del_key("location", "$tU@$td", "service_route");
 ...

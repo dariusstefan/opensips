@@ -24,10 +24,7 @@ The H350 module uses the OpenSIPS LDAP module to import H.350 attribute values i
 The following example shows a typical H.350 commObject LDAP entry storing SIP account data.
 
 
-**Example: Example H.350 commObject storing SIP account data**
-
-
-```
+```c title="Example H.350 commObject storing SIP account data"
 Attribute Name                Attribute Value(s)
 --------------                -----------------
 
@@ -113,10 +110,7 @@ Name of the LDAP session to be used for H.350 queries, as defined in the LDAP mo
 Default value: ""
 
 
-**Example: ldap_session parameter usage**
-
-
-```opensips
+```opensips title="ldap_session parameter usage"
 modparam("h350", "ldap_session", "h350");
             
 ```
@@ -131,10 +125,7 @@ Base LDAP DN to start LDAP search for H.350 entries. For best performance, this 
 Default value: ""
 
 
-**Example: base_dn parameter usage**
-
-
-```opensips
+```opensips title="base_dn parameter usage"
 modparam("h350", "base_dn", "ou=h350,dc=example,dc=com");
             
 ```
@@ -149,10 +140,7 @@ LDAP search scope for H.350 queries, one of "one", "base", or "sub".
 Default value: "one"
 
 
-**Example: search_scope parameter usage**
-
-
-```opensips
+```opensips title="search_scope parameter usage"
 modparam("h350", "search_scope", "sub");
             
 ```
@@ -200,10 +188,7 @@ H.350 SIPIdentitySIPURI to search for in directory.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 #
 # H.350 lookup for callee
 #
@@ -278,10 +263,7 @@ Specification for authentication password AVP, e.g. `$avp(pwd)`.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 # -- auth params --
 modparam("auth", "username_spec", "$avp(auth_user)")
 modparam("auth", "password_spec", "$avp(auth_pwd)")
@@ -383,10 +365,7 @@ This function parses the callPreferenceURI attribute of an H.350 commObject, whi
 In a SIP environment, `target_uri` is typically the call forwarding rule's target SIP URI, although it could be any type of URI, e.g. an HTTP pointer to a CPL script. Four different values are specified for `type`: `b` for "forward on busy", `n` for "forward on no answer", `u` for "forward unconditionally", and `f` for "forward on destination not found". The optional `argument` is a string indicating the time in milliseconds after which the call forwarding should occur.
 
 
-**Example: Example H.350 callPreferenceURI simple call forwarding rules**
-
-
-```
+```c title="Example H.350 callPreferenceURI simple call forwarding rules"
 # Example 1:
 # forward to sip:voicemail@example.com on no answer after 15 seconds:
 
@@ -410,7 +389,7 @@ callPreferenceURI: sip:alice@example.com f
 *h350_result_call_preferences* stores these call forwarding rules as AVPs according to the following rules:
 
 
-```
+```c
 #
 # AVP storing a forwarding rule's target URI
 #
@@ -473,10 +452,7 @@ Name prefix for call forwarding rule AVPs, as described above.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 #
 # H.350 lookup for callee
 #
@@ -530,10 +506,7 @@ if ($avp(callee_pref_u) != NULL)
 The resulting AVPs have a name of the form `avp_name_prefix + SIPIdentityServiceLevel attribute value`, and an integer value of `1`.
 
 
-**Example: Example SIPIdentityServiceLevel values and resulting AVPs**
-
-
-```
+```c title="Example SIPIdentityServiceLevel values and resulting AVPs"
 SIPIdentityServiceLevel: longdistance
 SIPIdentityServiceLevel: international
 SIPIdentityServiceLevel: 900
@@ -581,10 +554,7 @@ Name prefix for service level AVPs, as described above.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 #
 # H.350 SIP digest authentication for caller
 #

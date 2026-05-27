@@ -101,10 +101,7 @@ The size of the hash table internally used to keep the registrants.
 *Default value is 1.*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("uac_registrant", "hash_size", 2)
 ...
@@ -120,10 +117,7 @@ Defines the periodic timer for checking the registrations status.
 *Default value is 100.*
 
 
-**Example: Set timer_interval parameter**
-
-
-```opensips
+```opensips title="Set timer_interval parameter"
 ...
 modparam("uac_registrant", "timer_interval", 120)
 ...
@@ -142,10 +136,7 @@ Defines a custom interval to retry the registration upon error/failure.
 *Default value is 0 (not set).*
 
 
-**Example: Set failure_retry_interval parameter**
-
-
-```opensips
+```opensips title="Set failure_retry_interval parameter"
 ...
 modparam("uac_registrant", "failure_retry_interval", 3600)
 ...
@@ -167,10 +158,7 @@ This parameter enables the clustering support in the module. This is
 *Default value is 0 / off.*
 
 
-**Example: Set enable_clustering parameter**
-
-
-```opensips
+```opensips title="Set enable_clustering parameter"
 ...
 modparam("uac_registrant", "enable_clustering", 1)
 ...
@@ -186,10 +174,7 @@ Database where to load the registrants from.
 *Default value is "NULL" (use default DB URL from core).*
 
 
-**Example: Set "db_url" parameter**
-
-
-```opensips
+```opensips title="Set "db_url" parameter"
 ...
 modparam("uac_registrant", "db_url", "mysql://user:passw@localhost/database")
 ...
@@ -205,10 +190,7 @@ The database table that holds the registrant records.
 *Default value is "registrant".*
 
 
-**Example: Set "table_name" parameter**
-
-
-```opensips
+```opensips title="Set "table_name" parameter"
 ...
 modparam("uac_registrant", "table_name", "my_registrant")
 ...
@@ -226,10 +208,7 @@ The column's name in the database storing the
 *Default value is "registrar".*
 
 
-**Example: Set "registrar_column" parameter**
-
-
-```opensips
+```opensips title="Set "registrar_column" parameter"
 ...
 modparam("uac_registrant", "registrar_column", "registrant_uri")
 ...
@@ -248,10 +227,7 @@ The column's name in the database storing the
 *Default value is "proxy".*
 
 
-**Example: Set "proxy_column" parameter**
-
-
-```opensips
+```opensips title="Set "proxy_column" parameter"
 ...
 modparam("uac_registrant", "proxy_column", "proxy_uri")
 ...
@@ -270,10 +246,7 @@ The column's name in the database storing the
 *Default value is "aor".*
 
 
-**Example: Set "aor_column" parameter**
-
-
-```opensips
+```opensips title="Set "aor_column" parameter"
 ...
 modparam("uac_registrant", "aor_column", "to_uri")
 ...
@@ -294,10 +267,7 @@ The column's name in the database storing the
 *Default value is "third_party_registrant".*
 
 
-**Example: Set "third_party_registrant_column" parameter**
-
-
-```opensips
+```opensips title="Set "third_party_registrant_column" parameter"
 ...
 modparam("uac_registrant", "third_party_registrant_column", "from_uri")
 ...
@@ -314,10 +284,7 @@ The column's name in the database storing the
 *Default value is "username".*
 
 
-**Example: Set "username_column" parameter**
-
-
-```opensips
+```opensips title="Set "username_column" parameter"
 ...
 modparam("uac_registrant", "username_column", "auth_username")
 ...
@@ -334,10 +301,7 @@ The column's name in the database storing the
 *Default value is "password".*
 
 
-**Example: Set "password_column" parameter**
-
-
-```opensips
+```opensips title="Set "password_column" parameter"
 ...
 modparam("uac_registrant", "password_column", "auth_passowrd")
 ...
@@ -356,10 +320,7 @@ The column's name in the database storing the
 *Default value is "binding_URI".*
 
 
-**Example: Set "binding_URI_column" parameter**
-
-
-```opensips
+```opensips title="Set "binding_URI_column" parameter"
 ...
 modparam("uac_registrant", "binding_URI_column", "contact_uri")
 ...
@@ -387,7 +348,7 @@ If the following two params are present, then the binding will be enforced
 Example of params that will force unique binding:
 
 
-```
+```c
 ;reg-id=1;+sip.instance="<urn:uuid:11111111-AABBCCDDEEFF>"
 		
 ```
@@ -396,10 +357,7 @@ Example of params that will force unique binding:
 *Default value is "binding_params".*
 
 
-**Example: Set "binding_params_column" parameter**
-
-
-```opensips
+```opensips title="Set "binding_params_column" parameter"
 ...
 modparam("uac_registrant", "binding_params_column", "contact_params")
 ...
@@ -416,10 +374,7 @@ The column's name in the database storing the
 *Default value is "expiry".*
 
 
-**Example: Set "expiry_column" parameter**
-
-
-```opensips
+```opensips title="Set "expiry_column" parameter"
 ...
 modparam("uac_registrant", "expiry_column", "registration_timeout")
 ...
@@ -439,10 +394,7 @@ The column's name in the database storing the
 *Default value is "forced_socket".*
 
 
-**Example: Set "forced_socket_column" parameter**
-
-
-```opensips
+```opensips title="Set "forced_socket_column" parameter"
 ...
 modparam("uac_registrant", "forced_socket_column", "fs")
 ...
@@ -461,10 +413,7 @@ The column's name in the database storing the
 *Default value is "cluster_shtag".*
 
 
-**Example: Set "cluster_shtag_column" parameter**
-
-
-```opensips
+```opensips title="Set "cluster_shtag_column" parameter"
 ...
 modparam("uac_registrant", "cluster_shtag_column", "sh")
 ...
@@ -483,10 +432,7 @@ The column's name in the database storing the current state of the
 *Default value is "state".*
 
 
-**Example: Set "state_column" parameter**
-
-
-```opensips
+```opensips title="Set "state_column" parameter"
 ...
 modparam("uac_registrant", "state_column", "status")
 ...
@@ -502,10 +448,7 @@ Percentage describing how much sooner a RE-REGISTER needs to be send based on th
 *Default value is "100".*
 
 
-**Example: Set "reregister_expiry_percentage" parameter**
-
-
-```opensips
+```opensips title="Set "reregister_expiry_percentage" parameter"
 ...
 modparam("uac_registrant", "reregister_expiry_percentage", 90)
 ...
@@ -554,7 +497,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:list
 ...
 opensips-cli -x mi uac_registrant:list sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip:opensips.org
@@ -595,7 +538,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:reload
 ...
 opensips-cli -x mi reg_leload sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip:opensips.org
@@ -628,7 +571,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:enable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip:opensips.org
 		
 ```
@@ -668,7 +611,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:disable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip:opensips.org
 		
 ```
@@ -708,7 +651,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:force_register sip:alice@opensips.org  sip:alice@127.0.0.1:5060 sip:opensips.org
 		
 ```
@@ -746,7 +689,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:upsert aor=sip:vlad@test.com contact=sip:test@localhost registrar=sip:127.0.0.1:5061 proxy="" third_party_registrant="" username="vlad" password="1234" binding_params="" expiry=60 forced_socket="" cluster_shtag="" state=0
 		
 ```
@@ -775,7 +718,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi uac_registrant:delete aor=sip:vlad@test.com contact=sip:test@localhost registrar=sip:127.0.0.1:5061 
 		
 ```
@@ -920,7 +863,7 @@ The module provides the "uac_registrant" Status/Report group, where each
 The name of each individual identitfier is built as follows:
 
 
-```
+```c
    "aor=_AOR_;contact=_SIP_CONTACT_URI_;registrar=_SIP_REGISTAR_URI_"
    Ex:
    "aor=sip:vlad@test.com;contact=sip:test@mycontact.com;registrar=sip:127.0.0.1:5061"
@@ -939,7 +882,7 @@ In terms of status, the following values will be reported:
 As reports, each identifier may provide information like:
 
 
-```
+```c
 # opensips-cli -x mi  sr_list_reports uac_registrant
 [
    {

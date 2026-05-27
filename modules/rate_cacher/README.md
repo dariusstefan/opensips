@@ -48,10 +48,7 @@ The DB URL for querying the Vendors used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the vendors_db_url parameter**
-
-
-```opensips
+```opensips title="Setting the vendors_db_url parameter"
 ...
 modparam("rate_cacher", "vendors_db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ...
@@ -67,10 +64,7 @@ The DB Table for querying the Vendors used by the module
 *Default value is "rc_vendors".*
 
 
-**Example: Setting the vendors_db_table parameter**
-
-
-```opensips
+```opensips title="Setting the vendors_db_table parameter"
 ...
 modparam("rate_cacher", "vendors_db_table", "my_vendors_view")
 ...
@@ -88,10 +82,7 @@ The size of the hash table internally used to keep the vendors. A
 *Default value is "256".*
 
 
-**Example: Setting the vendors_hash_size parameter**
-
-
-```opensips
+```opensips title="Setting the vendors_hash_size parameter"
 ...
 modparam("rate_cacher", "vendors_hash_size", 1024)
 ...
@@ -107,10 +98,7 @@ The DB URL for querying the Clients used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the clients_db_url parameter**
-
-
-```opensips
+```opensips title="Setting the clients_db_url parameter"
 ...
 modparam("rate_cacher", "clients_db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ...
@@ -126,10 +114,7 @@ The DB Table for querying the Clients used by the module
 *Default value is "rc_clients".*
 
 
-**Example: Setting the clients_db_table parameter**
-
-
-```opensips
+```opensips title="Setting the clients_db_table parameter"
 ...
 modparam("rate_cacher", "clients_db_table", "my_clients_view")
 ...
@@ -147,10 +132,7 @@ The size of the hash table internally used to keep the clients. A
 *Default value is "256".*
 
 
-**Example: Setting the vendors_hash_size parameter**
-
-
-```opensips
+```opensips title="Setting the vendors_hash_size parameter"
 ...
 modparam("rate_cacher", "clients_hash_size", 1024)
 ...
@@ -166,10 +148,7 @@ The DB URL for querying the Ratesheets used by the module
 *Default value is "NULL".*
 
 
-**Example: Setting the rates_db_url parameter**
-
-
-```opensips
+```opensips title="Setting the rates_db_url parameter"
 ...
 modparam("rate_cacher", "rates_db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ...
@@ -185,10 +164,7 @@ The DB Table for querying the Ratesheets used by the module
 *Default value is "rc_ratesheets".*
 
 
-**Example: Setting the rates_db_table parameter**
-
-
-```opensips
+```opensips title="Setting the rates_db_table parameter"
 ...
 modparam("rate_cacher", "rates_db_table", "my_clients_view")
 ...
@@ -237,10 +213,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: get_client_price usage**
-
-
-```opensips
+```opensips title="get_client_price usage"
 ...
 if (get_client_price("my_client",1,"4072794242",$var(prefix),$var(dest),$var(price),$var(min),$var(inc))) {
                         xlog("We matched $var(prefix) , $var(dest) , $var(price) , $var(min) , $var(inc) for the client's ratesheet\n");
@@ -286,10 +259,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: get_vendor_price usage**
-
-
-```opensips
+```opensips title="get_vendor_price usage"
 ...
 if (get_vendor_price("my_vendor","4072794242",$var(prefix),$var(dest),$var(price),$var(min),$var(inc))) {
                         xlog("We matched $var(prefix) , $var(dest) , $var(price) , $var(min) , $var(inc) for the vendor's ratesheet\n");
@@ -332,10 +302,7 @@ Possible parameter types
 This function can be used from a REQUEST or FAILURE route.
 
 
-**Example: cost_based_filtering usage**
-
-
-```opensips
+```opensips title="cost_based_filtering usage"
 ...
 
 
@@ -391,10 +358,7 @@ Possible parameter types
 This function can be used from any route.
 
 
-**Example: cost_based_ordering usage**
-
-
-```opensips
+```opensips title="cost_based_ordering usage"
 ...
 # If we get a call from testClient on it's wholesale quality,
 # going to number 40720018124, and we have to pick from the list 
@@ -441,7 +405,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Add a new Vendor
 # opensips-cli -x mi rate_cacher:addVendor myNewVendor
 		
@@ -469,7 +433,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Delete a Vendor
 # opensipss-cli -x mi rate_cacher:deleteVendor myNewVendor
 		
@@ -498,7 +462,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Reloads a Vendor Ratesheet
 # opensips-cli -x mi rate_cacher:reloadVendorRate myVendor 3
 		
@@ -526,7 +490,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Reloads a Vendor Ratesheet
 # opensips-cli -x mi rate_cacher:deleteVendorRate myVendor
 		
@@ -555,7 +519,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Query for the price of myVendor for the 4072731825 number
 #/usr/local/bin/opensips-cli -x mi rate_cacher:getVendorPrice myVendor 4072731825
 {
@@ -591,7 +555,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Add a new Client
 # opensips-cli -x mi fifo rate_cacher:addClient myNewClient
 		
@@ -619,7 +583,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Delete a Client
 # opensips-cli -x mi rate_cacher:deleteClient myClient
 		
@@ -649,7 +613,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Reloads the Client's wholesale Ratesheet, assigning it rate id 3
 # opensips-cli -x mi rate_cacher:reloadClientRate myClient 1 3
 		
@@ -678,7 +642,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Deletes a Client Ratesheet
 # opensips-cli -x mi rate_cacher:deleteClientRate myClient 1
 		
@@ -708,7 +672,7 @@ Parameters :
 MI FIFO Command Format:
 
 
-```
+```c
 ## Query for the price of myClient, on the retail quality, for the 4072731825 number
 #/usr/local/bin/opensips-cli -x mi rate_cacher:getClientPrice myClient 0 4072731825
 {

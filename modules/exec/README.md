@@ -79,10 +79,7 @@ Set to 1 to enable setting all above-mentioned environment variables
 *Default value is 0 (disabled).*
 
 
-**Example: Set "setvars" parameter**
-
-
-```opensips
+```opensips title="Set "setvars" parameter"
 ...
 modparam("exec", "setvars", 1)
 ...
@@ -110,10 +107,7 @@ NOTE: due to internal limitations, a SIGTERM will actually be sent to
 *Default value is 0 (disabled).*
 
 
-**Example: Set "time_to_kill" parameter**
-
-
-```opensips
+```opensips title="Set "time_to_kill" parameter"
 ...
 modparam("exec", "time_to_kill", 20)
 ...
@@ -175,10 +169,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: exec usage**
-
-
-```opensips
+```opensips title="exec usage"
 ...
 $avp(env) = "a";
 $avp(env) = "b";
@@ -217,10 +208,7 @@ To read and understand more on the asynchronous functions, how to use
 		online Manual.
 
 
-**Example: async exec usage**
-
-
-```
+```c title="async exec usage"
 {
 ...
 async(exec("ruri-changer.sh", $ru, $ru), resume);

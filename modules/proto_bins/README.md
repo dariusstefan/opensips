@@ -17,7 +17,7 @@ This module implements a secure Binary communication protocol
 Once loaded, you will be able to define BINS listeners in your
 		configuration file by adding their IP and, optionally, a
 		listening port, similar to this example:
-	```
+	```c
 
 ...
 socket= bins:127.0.0.1 		# change the listening IP
@@ -62,10 +62,7 @@ The default port to be used by all BINS listeners.
 *Default value is 5556.*
 
 
-**Example: Set bins_port parameter**
-
-
-```opensips
+```opensips title="Set bins_port parameter"
 ...
 modparam("proto_bins", "bins_port", 5557)
 ...
@@ -89,10 +86,7 @@ The timeout is invoked during acceptance of a new connection
 *Default value is 100.*
 
 
-**Example: Set bins_handshake_timeout variable**
-
-
-```
+```c title="Set bins_handshake_timeout variable"
 param("proto_tls", "bins_handshake_timeout", 200) # number of milliseconds
 
 			
@@ -113,10 +107,7 @@ The send timeout is invoked for all TLS write operations,
 *Default value is 100 ms.*
 
 
-**Example: Set bins_send_timeout parameter**
-
-
-```opensips
+```opensips title="Set bins_send_timeout parameter"
 ...
 modparam("proto_bins", "bins_send_timeout", 200)
 ...
@@ -138,10 +129,7 @@ The maximum number of chunks in which a BINS message is
 *Default value is 32.*
 
 
-**Example: Set bins_max_msg_chunks parameter**
-
-
-```opensips
+```opensips title="Set bins_max_msg_chunks parameter"
 ...
 modparam("proto_bins", "bins_max_msg_chunks", 8)
 ...
@@ -160,10 +148,7 @@ Specifies whether the TCP/TLS connect and write operations
 *Default value is 1 (enabled).*
 
 
-**Example: Set bins_async parameter**
-
-
-```opensips
+```opensips title="Set bins_async parameter"
 ...
 modparam("proto_bins", "bins_async", 0)
 ...
@@ -182,10 +167,7 @@ If bins_async is enabled, this specifies the maximum number of
 *Default value is 32.*
 
 
-**Example: Set bins_async_max_postponed_chunks parameter**
-
-
-```opensips
+```opensips title="Set bins_async_max_postponed_chunks parameter"
 ...
 modparam("proto_bins", "bins_async_max_postponed_chunks", 16)
 ...
@@ -212,10 +194,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "hep_id", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -232,10 +211,7 @@ This controls whether tracing for tls is on or not. You still need to define
 			controlled using mi function [mi trace](#mi_trace).
 
 
-**Example: Set trace_on parameter**
-
-
-```opensips
+```opensips title="Set trace_on parameter"
 ...
 modparam("proto_bins", "trace_on", 1)
 ...
@@ -269,7 +245,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi bins:trace on
 			
 ```

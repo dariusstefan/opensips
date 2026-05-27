@@ -67,10 +67,7 @@ Url to the database containing the routing data.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("userblacklist", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -87,10 +84,7 @@ Name of the table where the user blacklist data is stored.
 *Default value is "userblacklist".*
 
 
-**Example: Set db_table parameter**
-
-
-```opensips
+```opensips title="Set db_table parameter"
 ...
 modparam("userblacklist", "db_table", "userblacklist")
 ...
@@ -108,10 +102,7 @@ If enabled, the "domain" column will also be
 *Default value is *true* (enabled).*
 
 
-**Example: Set use_domain parameter**
-
-
-```opensips
+```opensips title="Set use_domain parameter"
 ...
 modparam("userblacklist", "use_domain", true)
 ...
@@ -143,10 +134,7 @@ Parameters:
 	    		the defalut is used.
 
 
-**Example: check_user_blacklist usage**
-
-
-```opensips
+```opensips title="check_user_blacklist usage"
 ...
 if (!check_user_blacklist("user", "domain.com"))
 	sl_send_reply(403, "Forbidden");
@@ -171,10 +159,7 @@ Parameters:
 - *table* (string)
 
 
-**Example: check_blacklist usage**
-
-
-```opensips
+```opensips title="check_blacklist usage"
 ...
 if (!check_blacklist("global_blacklist")))
 	sl_send_reply(403, "Forbidden");
@@ -198,10 +183,7 @@ Reload the internal global blacklist cache. This is necessary after
 		the database tables for the global blacklist have been changed.
 
 
-**Example: reload_blacklists usage**
-
-
-```
+```c title="reload_blacklists usage"
 ...
 opensips-cli -x mi userblacklist:reload
 ...
@@ -228,10 +210,7 @@ Before running OpenSIPS with userblacklist, you have to setup the database
 			project webpage, https://opensips.org/docs/db/db-schema-devel.html.
 
 
-**Example: Example database content - globalblacklist table**
-
-
-```
+```c title="Example database content - globalblacklist table"
 ...
 +----+-----------+-----------+
 | id | prefix    | whitelist |
@@ -252,10 +231,7 @@ This table will setup a global blacklist for all numbers, only allowing calls
 		will be matched.
 
 
-**Example: Example database content - userblacklist table**
-
-
-```
+```c title="Example database content - userblacklist table"
 ...
 +----+----------------+-------------+-----------+-----------+
 | id | username       | domain      | prefix    | whitelist |

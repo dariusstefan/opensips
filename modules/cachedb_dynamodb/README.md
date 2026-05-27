@@ -45,7 +45,7 @@ The tables used with DynamoDB must adhere to a specific format.
 			Below is an example of creating a table:
 
 
-```
+```c
 aws dynamodb create-table \
 --table-name TableName \
 --attribute-definitions \
@@ -72,7 +72,7 @@ To enable TTL (Time to Live) for the table, which can be used with operations li
 			add, and subtract, you can update the table with the TTL option:
 
 
-```
+```c
 aws dynamodb update-time-to-live --table-name TableName --time-to-live-specification
 "Enabled=true, AttributeName=ttl"
 			
@@ -184,10 +184,7 @@ Syntax for *cachedb_url*
 *"dynamodb:///tableName?region=regionName"*
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 
 # single-instance URLs
@@ -199,10 +196,7 @@ modparam("cachedb_dynamodb", "cachedb_url", "dynamodb:///table2?region=central-1
 ```
 
 
-**Example: Use Dynamodb servers**
-
-
-```
+```c title="Use Dynamodb servers"
 ...
 
 cache_store("dynamodb", "call1", "10");

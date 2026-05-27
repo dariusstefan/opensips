@@ -45,7 +45,7 @@ Additional instructions for installation can be found at:
 For testing purposes, you can run SQS locally. To achieve this, you start localstack on your computer:
 
 
-```
+```c
 pip install localstack
 localstack start
 		
@@ -55,7 +55,7 @@ localstack start
 Don't forget to set the necessary environment variables for testing, for example:
 
 
-```
+```c
 export AWS_ACCESS_KEY_ID=test
 export AWS_SECRET_ACCESS_KEY=test
 export AWS_DEFAULT_REGION=us-east-1
@@ -92,10 +92,7 @@ The queue_url contains:
 This parameter can be set multiple times.
 
 
-**Example: Set queue_url parameter**
-
-
-```opensips
+```opensips title="Set queue_url parameter"
 ...
 
 modparam("event_sqs", "queue_url",
@@ -130,10 +127,7 @@ The function has the following parameters:
 - *message (string)* - The payload of the message to publish.
 
 
-**Example: sqs_publish_message() function usage**
-
-
-```
+```c title="sqs_publish_message() function usage"
 ...
 
 $var(msg) = "Hello, this is a message to SQS!";
