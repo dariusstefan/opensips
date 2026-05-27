@@ -123,7 +123,8 @@ In DR, a gateway is defined by:
 - SIP address (SIP URI)
 - type (integer which allows GWs to be grouped by purpose,
 	e.g. inbound, outbound, etc.)
-- 
+- strip value (number of digits) from dialled
+	number
 - prefix (string) to be added to dialled
 	number
 - attributes (not used by DR engine, but only pushed

@@ -24,10 +24,10 @@ A stun server working with the same port as SIP (5060) in order to
 The stun server will use 4 sockets:
 
 
-- 
-- 
-- 
-- 
+- socket1 = ip1 : port1
+- socket2 = ip1 : port2
+- socket3 = ip2 : port1
+- socket4 = ip2 : port2
 
 
 where *ip1* / *port1*
@@ -63,23 +63,23 @@ This stun implements RFC3489 (and XOR_MAPPED_ADDRESS from
 				RFC5389)
 
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- MAPPED_ADDRESS
+- RESPONSE_ADDRESS
+- CHANGE_REQUEST
+- SOURCE_ADDRESS
+- CHANGED_ADDRESS
+- ERROR_CODE
+- UNKNOWN_ATTRIBUTES
+- REFLECTED_FROM
+- XOR_MAPPED_ADDRESS
 
 
 Not supported attributes:
 
 
-- 
-- 
-- 
+- USERNAME
+- PASSWORD
+- MESSAGE_INTEGRITY
 
 
 and associated ERROR_CODEs

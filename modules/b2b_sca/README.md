@@ -238,8 +238,8 @@ The b2b_sca module can utilize database for persistent call appearance storage.
 		The following databse accessing modes are available for b2b_sca module:
 
 
-- 
-- 
+- NO DB STORAGE - set this parameter to 0
+- WRITE THROUGH (synchronous write in database) - set this parameter to 1
 
 
 *The default value is 0 (NO DB STORAGE).*
@@ -344,10 +344,10 @@ The column's name in the database storing the call state of a
 		particular appearance.  The following states are stored:
 
 
-- 
-- 
-- 
-- 
+- 1 - alerting,
+- 2 - active,
+- 3 - held,
+- 4 - held-private.
 
 
 *The default value is "app[index]_call_state".*

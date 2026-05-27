@@ -28,11 +28,14 @@ A virtual DB will expose the same front DB api however, it will
 The implemented modes are:
 
 
-- Use the first URL; if it fails, take the next
+- FAILOVER
+Use the first URL; if it fails, take the next
 								URL and redo the operation.
-- Use all the URLs in the virtual DB URL set.
+- PARALLEL
+Use all the URLs in the virtual DB URL set.
 								Fails if all the URLs fail.
-- Use the next URL each time; if it fails, 
+- ROUND (round-robin)
+Use the next URL each time; if it fails, 
 								use the next one, redo operation.
 
 
@@ -243,19 +246,19 @@ Name:
 Parameters:
 
 
-- 
-- 
-- 
-- 
+- set_index [int]
+- db_url_index [int]
+- may_use_db_flag [boolean]
+- ignore_retries[boolean](optional)
 
 
 db_set 3 2 0 1 means:
 
 
-- 
-- 
-- 
-- 
+- 3 - the fourth set (must exist)
+- 2 - the third URL in the fourth set(must exist)
+- 0 - processes are not allowed to use that URL
+- 1 - reset and suppress db_max_consec_retrys
 
 
 MI FIFO Command Format:
