@@ -181,7 +181,7 @@ Meaning of the flags is as follows:
 *Default value is "NULL".*
 
 
-```c title="Set  parameter"
+```c title="Set parameter"
 ...
 modparam("b2b_logic", "custom_headers_regexp", "/^x-/i")
 ...
@@ -215,7 +215,7 @@ If you wish some other headers to be passed also you should define them
 *Default value is "NULL".*
 
 
-```c title="Set  parameter"
+```c title="Set parameter"
 ...
 modparam("b2b_logic", "custom_headers", "User-Agent;Date")
 ...

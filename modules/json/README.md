@@ -474,7 +474,7 @@ Test link :
 ```
 
 
-```c title="[LOGICAL ERROR] Creating a  circular reference"
+```c title="[LOGICAL ERROR] Creating a circular reference"
 ...
 
 $json(b) := "[1]";
