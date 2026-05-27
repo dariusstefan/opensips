@@ -12,8 +12,9 @@ description: "The B2BUA implementation in OpenSIPS is separated in two layers: a
 The B2BUA implementation in OpenSIPS is separated in two layers:
 
 
-- 
-- 
+- a lower one(coded in this module)- which implements the basic functions of a UAS and UAC
+- a upper one - which represents the logic engine of B2BUA, responsible of actually
+			implementing the B2BUA services using the functions offered by the low level.
 
 
 This module stores records corresponding to the dialogs in which the B2BUA
@@ -245,9 +246,9 @@ modparam("b2b_entities", "b2b_key_prefix", "B2B1")
 The B2B modules have support for the 3 type of database storage
 
 
-- 
-- 
-- 
+- NO DB STORAGE - set this parameter to 0
+- WRITE THROUGH (synchronous write in database) - set this parameter to 1
+- WRITE BACK (update in db from time to time) - set this parameter to 2
 
 
 *Default value is "2" (WRITE BACK).*
