@@ -68,10 +68,7 @@ There are 3 mode of restoring the original headers (FROM/TO) URI:
 					"auto".*
 
 
-**Example: Set restore_mode parameter**
-
-
-```opensips
+```opensips title="Set restore_mode parameter"
 ...
 modparam("uac","restore_mode","auto")
 ...
@@ -90,10 +87,7 @@ String password to be used to encrypt the RR storing parameter
 *Default value of this parameter is empty.*
 
 
-**Example: Set restore_passwd parameter**
-
-
-```opensips
+```opensips title="Set restore_passwd parameter"
 ...
 modparam("uac","restore_passwd","my_secret_passwd")
 ...
@@ -112,10 +106,7 @@ Name of Record-Route header parameter that will be used to store
 					"vsf".*
 
 
-**Example: Set rr_from_store_param parameter**
-
-
-```opensips
+```opensips title="Set rr_from_store_param parameter"
 ...
 modparam("uac","rr_from_store_param","my_Fparam")
 ...
@@ -134,10 +125,7 @@ Name of Record-Route header parameter that will be used to store
 					"vst".*
 
 
-**Example: Set rr_to_store_param parameter**
-
-
-```opensips
+```opensips title="Set rr_to_store_param parameter"
 ...
 modparam("uac","rr_to_store_param","my_Tparam")
 ...
@@ -154,10 +142,7 @@ Force create dialog if it is not created from the configuration script.
 Default value is no.
 
 
-**Example: Set force_dialog parameter**
-
-
-```opensips
+```opensips title="Set force_dialog parameter"
 ...
 modparam("uac", "force_dialog", yes)
 ...
@@ -192,10 +177,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 			FAILURE_ROUTE.
 
 
-**Example: uac_replace_from/uac_replace_to usage**
-
-
-```
+```c title="uac_replace_from/uac_replace_to usage"
 ...
 # replace both display and uri
 uac_replace_from($avp(display),$avp(uri));
@@ -229,10 +211,7 @@ NOTE - this function should be used only if you configured MANUAL
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: uac_restore_from/uac_restore_to usage**
-
-
-```
+```c title="uac_restore_from/uac_restore_to usage"
 ...
 uac_restore_from();
 ...
@@ -275,10 +254,7 @@ This function can be used from FAILURE_ROUTE.
 				authenticating the initial INVITE though.
 
 
-**Example: uac_auth usage**
-
-
-```opensips
+```opensips title="uac_auth usage"
 ...
 uac_auth();
 ...
@@ -313,10 +289,7 @@ It receives as the *cseq* parameter the value that
 This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and  FAILURE_ROUTE.
 
 
-**Example: uac_inc_cseq usage**
-
-
-```
+```c title="uac_inc_cseq usage"
 ...
 uac_inc_cseq(1);
 ...

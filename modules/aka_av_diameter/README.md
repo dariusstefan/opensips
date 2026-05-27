@@ -88,10 +88,7 @@ This is the url representing the connection to the AAA server.
 		not start, or not work properly.
 
 
-**Example: aaa_url parameter usage**
-
-
-```opensips
+```opensips title="aaa_url parameter usage"
 modparam("auth_aaa", "aaa_url", "diameter:freeDiameter.conf;extra-avps-file:/etc/freeDiameter/aka_av_diameter.dictionary")
 		
 ```
@@ -106,10 +103,7 @@ The Realm used in the Origin Diameter commands.
 Default value is "diameter.test".
 
 
-**Example: realm parameter usage**
-
-
-```opensips
+```opensips title="realm parameter usage"
 		
 modparam("aka_av_diameter", "realm", "scscf.ims.mnc001.mcc001.3gppnetwork.org")
 		
@@ -127,10 +121,7 @@ If it is left empty, the Server-Name will be created by adding "sip:" in front o
 		(e.g. "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org").
 
 
-**Example: server_uri parameter usage**
-
-
-```opensips
+```opensips title="server_uri parameter usage"
 		
 modparam("aka_av_diameter", "server_uri", "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org")
 		
@@ -143,10 +134,7 @@ modparam("aka_av_diameter", "server_uri", "sip:scscf.ims.mnc001.mcc001.3gppnetwo
 File that should be provided to the *aaa_diameter* connection.
 
 
-**Example: Diameter Commands File Example**
-
-
-```
+```c title="Diameter Commands File Example"
 VENDOR 10415 TGPP
 
 ATTRIBUTE Public-Identity                     601 string     10415

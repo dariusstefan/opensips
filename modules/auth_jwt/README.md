@@ -54,10 +54,7 @@ If set to 0, the module won't connect to the Database for reading the Keys for d
 *Default value is "0".*
 
 
-**Example: db_mode parameter usage**
-
-
-```opensips
+```opensips title="db_mode parameter usage"
 modparam("auth_jwt", "db_mode", 0)
 ```
 
@@ -75,10 +72,7 @@ This is URL of the database to be used. Value of the parameter depends
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: db_url parameter usage**
-
-
-```opensips
+```opensips title="db_url parameter usage"
 modparam("auth_jwt", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
@@ -92,10 +86,7 @@ Name of the DB table containing the jwt profiles
 Default value of this parameter is jwt_profiles.
 
 
-**Example: profiles_table parameter usage**
-
-
-```opensips
+```opensips title="profiles_table parameter usage"
 modparam("auth_jwt", "profiles_table", "my_profiles")
 ```
 
@@ -109,10 +100,7 @@ Name of the DB table containing the jwt secrets
 Default value of this parameter is jwt_secrets.
 
 
-**Example: secrets_table parameter usage**
-
-
-```opensips
+```opensips title="secrets_table parameter usage"
 modparam("auth_jwt", "secrets_table", "my_secrets")
 ```
 
@@ -126,10 +114,7 @@ Column holding the JWT profile tag.
 *Default value is "tag".*
 
 
-**Example: Set tag_column parameter**
-
-
-```opensips
+```opensips title="Set tag_column parameter"
 ...
 modparam("auth_jwt", "tag_column", "my_tag_column")
 ...
@@ -145,10 +130,7 @@ Column holding the JWT profile associated SIP username.
 *Default value is "sip_username".*
 
 
-**Example: Set username_column parameter**
-
-
-```opensips
+```opensips title="Set username_column parameter"
 ...
 modparam("auth_jwt", "username_column", "my_username_column")
 ...
@@ -164,10 +146,7 @@ Column holding the JWT secret associated tag.
 *Default value is "corresponding_tag".*
 
 
-**Example: Set secret_tag_column parameter**
-
-
-```opensips
+```opensips title="Set secret_tag_column parameter"
 ...
 modparam("auth_jwt", "secret_tag_column", "my_secret_tag_column")
 ...
@@ -183,10 +162,7 @@ Column holding the actual jwt signing secret.
 *default value is "secret".*
 
 
-**Example: set secret_column parameter**
-
-
-```opensips
+```opensips title="set secret_column parameter"
 ...
 modparam("auth_jwt", "secret_column", "my_secret_column")
 ...
@@ -202,10 +178,7 @@ Column holding the JWT secret start UNIX timestamp.
 *default value is "start_ts".*
 
 
-**Example: set start_ts parameter**
-
-
-```opensips
+```opensips title="set start_ts parameter"
 ...
 modparam("auth_jwt", "start_ts", "my_start_ts_column")
 ...
@@ -221,10 +194,7 @@ column holding the jwt secret end unix timestamp.
 *default value is "end_ts".*
 
 
-**Example: set end_ts parameter**
-
-
-```opensips
+```opensips title="set end_ts parameter"
 ...
 modparam("auth_jwt", "end_ts", "my_end_ts_column")
 ...
@@ -240,10 +210,7 @@ The JWT claim which will be used to identify the JWT profile
 *default value is "tag".*
 
 
-**Example: set tag_claim parameter**
-
-
-```opensips
+```opensips title="set tag_claim parameter"
 ...
 modparam("auth_jwt", "tag_claim", "my_tag_claim")
 ...
@@ -271,10 +238,7 @@ Parameter syntax:
 Default value of this parameter is "none ( empty )".
 
 
-**Example: load_credentials parameter usage**
-
-
-```opensips
+```opensips title="load_credentials parameter usage"
 # load my_extra_column into $avp(extra_jwt_info)
 modparam("auth_jwt", "load_credentials", "$avp(extra_jwt_info)=my_extra_column")
 ```
@@ -307,10 +271,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: jwt_db_authorize usage**
-
-
-```opensips
+```opensips title="jwt_db_authorize usage"
 ...
 if (!jwt_db_authorize("$avp(my_jwt_token)", $avp(decoded_token), $avp(sip_username) )) {
 	send_reply(401,"Unauthorized");
@@ -350,10 +311,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: jwt_script_authorize usage**
-
-
-```opensips
+```opensips title="jwt_script_authorize usage"
 ...
 if (!jwt_script_authorize("$avp(my_jwt_token)",$avp(pub_key), $avp(decoded_token))) {
 	send_reply(401,"Unauthorized");
@@ -387,10 +345,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: extract_pub_key_from_cert usage**
-
-
-```opensips
+```opensips title="extract_pub_key_from_cert usage"
 ...
 if (extract_pub_key_from_cert("$avp(my_certificate)",$avp(my_pub_key))) {
     xlog("Succesfully extracted public key - $avp(my_pub_key) \n");
@@ -423,10 +378,7 @@ The string may contain pseudo variables.
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: extract_pub_key_from_exp_mod usage**
-
-
-```opensips
+```opensips title="extract_pub_key_from_exp_mod usage"
 ...
 if (extract_pub_key_from_exp_mod("$avp(my_exp)", "$avp(my_mod)", $avp(my_pub_key))) {
     xlog("Succesfully extracted public key - $avp(my_pub_key) \n");

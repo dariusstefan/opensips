@@ -136,10 +136,7 @@ Boolean flag that specifies if callcontrol should be disabled. This
 *Default value is "0".*
 
 
-**Example: Setting the disable parameter**
-
-
-```opensips
+```opensips title="Setting the disable parameter"
 ...
 modparam("call_control", "disable", 1)
 ...
@@ -158,10 +155,7 @@ It is the path to the filesystem socket where the callcontrol
             "/run/callcontrol/socket".*
 
 
-**Example: Setting the socket_name parameter**
-
-
-```opensips
+```opensips title="Setting the socket_name parameter"
 ...
 modparam("call_control", "socket_name", "/run/callcontrol/socket")
 ...
@@ -179,10 +173,7 @@ How much time (in milliseconds) to wait for an answer from the
 *Default value is "500" (ms).*
 
 
-**Example: Setting the socket_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the socket_timeout parameter"
 ...
 modparam("call_control", "socket_timeout", 500)
 ...
@@ -216,10 +207,7 @@ This is used by the rating engine which finds the rates to apply to a
 *Default value is "$avp(cc_signaling_ip)".*
 
 
-**Example: Setting the signaling_ip_avp parameter**
-
-
-```opensips
+```opensips title="Setting the signaling_ip_avp parameter"
 ...
 modparam("call_control", "signaling_ip_avp", "$avp(cc_signaling_ip)")
 ...
@@ -241,10 +229,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_can_uri)".*
 
 
-**Example: Setting the canonical_uri_avp parameter**
-
-
-```opensips
+```opensips title="Setting the canonical_uri_avp parameter"
 ...
 modparam("call_control", "canonical_uri_avp", "$avp(cc_can_uri)")
 ...
@@ -275,10 +260,7 @@ This is useful when a destination diverts a call, thus becoming the
 *Default value is "$avp(diverter)".*
 
 
-**Example: Setting the diverter_avp parameter**
-
-
-```opensips
+```opensips title="Setting the diverter_avp parameter"
 ...
 modparam("call_control", "diverter_avp", "$avp(diverter)")
 
@@ -309,10 +291,7 @@ The flag that is used to specify whether the account making the call is
 *Default value is NULL (undefined).*
 
 
-**Example: Setting the prepaid_account_flag parameter**
-
-
-```opensips
+```opensips title="Setting the prepaid_account_flag parameter"
 ...
 modparam("call_control", "prepaid_account_flag", "PP_ACC_FLAG")
 ...
@@ -332,10 +311,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_limit)".*
 
 
-**Example: Setting the call_limit_avp parameter**
-
-
-```opensips
+```opensips title="Setting the call_limit_avp parameter"
 ...
 modparam("call_control", "call_limit_avp", "$avp(cc_call_limit)")
 ...
@@ -357,10 +333,7 @@ Specification of the AVP which holds an optional application defined
 *Default value is "$avp(cc_call_token)".*
 
 
-**Example: Setting the call_token_avp parameter**
-
-
-```opensips
+```opensips title="Setting the call_token_avp parameter"
 ...
 modparam("call_control", "call_token_avp", "$avp(cc_call_token)")
 ...
@@ -393,10 +366,7 @@ If the parameter is not set, the default initialize message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the init parameter**
-
-
-```opensips
+```opensips title="Setting the init parameter"
 	
 ...
 modparam("call_control", "init", "call-id=$ci to=$tu from=$fu 
@@ -429,10 +399,7 @@ If the parameter is not set, the default start message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the start parameter**
-
-
-```opensips
+```opensips title="Setting the start parameter"
 	
 ...
 modparam("call_control", "start", "call-id=$ci to=$tu from=$fu 
@@ -465,10 +432,7 @@ If the parameter is not set, the default stop message is sent.
 *Default value is "NULL".*
 
 
-**Example: Setting the stop parameter**
-
-
-```opensips
+```opensips title="Setting the stop parameter"
 	
 ...
 modparam("call_control", "stop", "call-id=$ci to=$tu from=$fu 
@@ -512,10 +476,7 @@ This function has the following return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: Using the call_control function**
-
-
-```opensips
+```opensips title="Using the call_control function"
 ...
 if ($avp(805) != NULL) {
     # the diverter AVP is set, use it as billing party

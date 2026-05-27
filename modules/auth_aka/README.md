@@ -101,10 +101,7 @@ This module does not depend on any external library.
 The default AV Manager used in case the functions do not provide them explicitly.
 
 
-**Example: default_av_mgm parameter usage**
-
-
-```opensips
+```opensips title="default_av_mgm parameter usage"
 		
 modparam("auth_aka", "default_av_mgm", "diameter") # fetch AVs through the Cx interface
 		
@@ -121,10 +118,7 @@ The default qop parameter used during challenge, if the functions
 Default value is *auth*.
 
 
-**Example: default_qop parameter usage**
-
-
-```opensips
+```opensips title="default_qop parameter usage"
 		
 modparam("auth_aka", "default_qop", "auth,auth-int")
 		
@@ -147,10 +141,7 @@ Default value is *AKAv1-MD5*.
 *WARNING:* only AKAv1* algorithms are currently supported.
 
 
-**Example: default_algorithm parameter usage**
-
-
-```opensips
+```opensips title="default_algorithm parameter usage"
 		
 modparam("auth_aka", "default_algorithm", "AKAv2-MD5")
 		
@@ -167,10 +158,7 @@ The size of the hash that stores the AVs for each user.
 Default value is *4096*.
 
 
-**Example: hash_size parameter usage**
-
-
-```opensips
+```opensips title="hash_size parameter usage"
 		
 modparam("auth_aka", "hash_size", 1024)
 		
@@ -191,10 +179,7 @@ Must be a positive value. A value of
 Default value is *100* ms.
 
 
-**Example: sync_timeout parameter usage**
-
-
-```opensips
+```opensips title="sync_timeout parameter usage"
 		
 modparam("auth_aka", "sync_timeout", 200)
 		
@@ -219,10 +204,7 @@ Must be a positive value, greater than 0.
 Default value is *1000* ms.
 
 
-**Example: async_timeout parameter usage**
-
-
-```opensips
+```opensips title="async_timeout parameter usage"
 modparam("auth_aka", "async_timeout", 2000)
 		
 ```
@@ -242,10 +224,7 @@ Must be a positive value, greater than 0.
 Default value is *60* s.
 
 
-**Example: unused_timeout parameter usage**
-
-
-```opensips
+```opensips title="unused_timeout parameter usage"
 modparam("auth_aka", "unused_timeout", 120)
 		
 ```
@@ -266,10 +245,7 @@ Must be a positive value, greater than 0.
 Default value is *30* s.
 
 
-**Example: pending_timeout parameter usage**
-
-
-```opensips
+```opensips title="pending_timeout parameter usage"
 modparam("auth_aka", "pending_timeout", 10)
 		
 ```
@@ -330,10 +306,7 @@ If the credentials are verified successfully then the function will
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: aka_www_authorize usage**
-
-
-```
+```c title="aka_www_authorize usage"
 		
 ...
 if (!aka_www_authorize("diameter", "siphub.com"))
@@ -353,10 +326,7 @@ The function behaves the same as [aka www authorize](#func_aka_www_authorize),
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: aka_proxy_authorize usage**
-
-
-```
+```c title="aka_proxy_authorize usage"
 		
 ...
 if (!aka_proxy_authorize("siphub.com"))
@@ -439,10 +409,7 @@ Possible return codes:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: aka_www_challenge usage**
-
-
-```
+```c title="aka_www_challenge usage"
 ...
 if (!aka_www_authorize("siphub.com")) {
 	aka_www_challenge(,"siphub.com", "auth-int", "AKAv1-MD5");
@@ -468,10 +435,7 @@ The function behaves the same as [aka www challenge](#func_aka_www_challenge),
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: aka_proxy_challenge usage**
-
-
-```
+```c title="aka_proxy_challenge usage"
 		
 ...
 if (!aka_proxy_authorize("siphub.com"))
@@ -511,10 +475,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: aka_av_add usage**
-
-
-```
+```c title="aka_av_add usage"
 		
 ...
 aka_av_add("sip:test@siphub.com", "test@siphub.com",
@@ -550,10 +511,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: aka_av_drop usage**
-
-
-```
+```c title="aka_av_drop usage"
 		
 ...
 aka_av_drop("sip:test@siphub.com", "test@siphub.com",
@@ -585,10 +543,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: aka_av_drop_all usage**
-
-
-```
+```c title="aka_av_drop_all usage"
 		
 ...
 aka_av_drop_all("sip:test@siphub.com", "test@siphub.com", $var(count));
@@ -624,10 +579,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: aka_av_fail usage**
-
-
-```
+```c title="aka_av_fail usage"
 ...
 aka_av_fail("sip:test@siphub.com", "test@siphub.com", 3);
 ...
@@ -666,10 +618,7 @@ Parameters:
 				algorithm.
 
 
-**Example: auth_aka:av_add usage**
-
-
-```
+```c title="auth_aka:av_add usage"
 ...
 ## adds an AKA AV
 $ opensips-cli -x mi auth_aka:av_add \
@@ -705,10 +654,7 @@ Parameters:
 				to indentify the authentication vector.
 
 
-**Example: auth_aka:av_drop usage**
-
-
-```
+```c title="auth_aka:av_drop usage"
 ...
 ## adds an AKA AV
 $ opensips-cli -x mi auth_aka:av_drop \
@@ -739,10 +685,7 @@ Parameters:
 				(IMPI) of the user to drop authentication vectors for.
 
 
-**Example: auth_aka:av_drop_all usage**
-
-
-```
+```c title="auth_aka:av_drop_all usage"
 ...
 ## adds an AKA AV
 $ opensips-cli -x mi auth_aka:av_drop_all \
@@ -780,10 +723,7 @@ Parameters:
 				authentication vectors failures.
 
 
-**Example: aka_av_drop usage**
-
-
-```
+```c title="aka_av_drop usage"
 ...
 ## adds an AKA AV
 $ opensips-cli -x mi aka_av_drop \

@@ -88,10 +88,7 @@ The function strips off the SDP offer from a SIP INVITE, thus
 The function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: sngtc_offer usage**
-
-
-```opensips
+```opensips title="sngtc_offer usage"
 ...
 	if (is_method("INVITE")) {
 		t_newtran();
@@ -139,10 +136,7 @@ The following **error codes** may be returned:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: sngtc_callee_answer usage**
-
-
-```
+```c title="sngtc_callee_answer usage"
 ...
 onreply_route[1] {
 	if ($rs == 200)
@@ -168,10 +162,7 @@ The following **error codes** may be returned:
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
-**Example: sngtc_caller_answer usage**
-
-
-```opensips
+```opensips title="sngtc_caller_answer usage"
 ...
 	if (has_totag()) {
 		if (loose_route()) {

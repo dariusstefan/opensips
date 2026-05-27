@@ -457,7 +457,7 @@ Binds the Web3 authentication API to a module interface structure.
 *Example:*
 
 
-```
+```c
 #include "web3_auth_api.h"
 
 web3_auth_api_t web3_api;

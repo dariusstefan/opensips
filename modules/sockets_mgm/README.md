@@ -124,10 +124,7 @@ The database URL where the sockets are fetched from.
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set "db_url" parameter**
-
-
-```opensips
+```opensips title="Set "db_url" parameter"
 ...
 modparam("sockets_mgm", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -143,10 +140,7 @@ The database table name where the sockets are stored.
 *Default value is "sockets".*
 
 
-**Example: Set "table_name" parameter**
-
-
-```opensips
+```opensips title="Set "table_name" parameter"
 ...
 modparam("sockets_mgm", "table_name", "sockets_def")
 ...
@@ -162,10 +156,7 @@ The database table column where the socket definition is stored.
 *Default value is "socket".*
 
 
-**Example: Set "socket_column" parameter**
-
-
-```opensips
+```opensips title="Set "socket_column" parameter"
 ...
 modparam("sockets_mgm", "socket_column", "sock")
 ...
@@ -181,10 +172,7 @@ The database table column where the advertised definition is stored.
 *Default value is "advertised".*
 
 
-**Example: Set "advertised_column" parameter**
-
-
-```opensips
+```opensips title="Set "advertised_column" parameter"
 ...
 modparam("sockets_mgm", "advertised_column", "adv")
 ...
@@ -200,10 +188,7 @@ The database table column where the tag definition is stored.
 *Default value is "tag".*
 
 
-**Example: Set "tag_column" parameter**
-
-
-```opensips
+```opensips title="Set "tag_column" parameter"
 ...
 modparam("sockets_mgm", "tag_column", "sock")
 ...
@@ -219,10 +204,7 @@ The database table column where the flags definition is stored.
 *Default value is "flags".*
 
 
-**Example: Set "flags_column" parameter**
-
-
-```opensips
+```opensips title="Set "flags_column" parameter"
 ...
 modparam("sockets_mgm", "flags_column", "sock")
 ...
@@ -238,10 +220,7 @@ The database table column where the tos definition is stored.
 *Default value is "tos".*
 
 
-**Example: Set "tos_column" parameter**
-
-
-```opensips
+```opensips title="Set "tos_column" parameter"
 ...
 modparam("sockets_mgm", "tos_column", "sock")
 ...
@@ -257,10 +236,7 @@ The number of processes designated to handle UDP sockets.
 *Default value is "8".*
 
 
-**Example: Set "processes" parameter**
-
-
-```opensips
+```opensips title="Set "processes" parameter"
 ...
 modparam("sockets_mgm", "processes", 32)
 ...
@@ -277,10 +253,7 @@ The maximum number of sockets that can be defined dynamically.
 *Default value is "100".*
 
 
-**Example: Set "max_sockets" parameter**
-
-
-```opensips
+```opensips title="Set "max_sockets" parameter"
 ...
 modparam("sockets_mgm", "max_sockets", 2000)
 ...
@@ -302,7 +275,7 @@ MI command used to reload the sockets from the database.
 MI FIFO Command Format:
 
 
-```
+```c
 		## reload sockets from the database
 		opensips-mi sockets_mgm:reload
 		opensips-cli -x mi sockets_mgm:reload
@@ -322,7 +295,7 @@ MI command to list all the currently used dynamic sockets.
 MI FIFO Command Format:
 
 
-```
+```c
 		## reload sockets from the database
 		opensips-mi sockets_mgm:list
 		opensips-cli -x mi sockets_mgm:list

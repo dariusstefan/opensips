@@ -59,10 +59,7 @@ Specifies the root path for xmlrpc requests:
 *The default value is "RPC2".*
 
 
-**Example: Set http_root parameter**
-
-
-```opensips
+```opensips title="Set http_root parameter"
 ...
 modparam("mi_xmlrpc", "http_root", "opensips_mi_xmlrpc")
 ...
@@ -85,10 +82,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "trace_destination", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -124,10 +118,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 ## blacklist ps and which mi commands
 ## all the other commands shall be traced
@@ -166,10 +157,7 @@ This is an example showing the xmlrpc format for the
 		response.
 
 
-**Example: XMLRPC request**
-
-
-```
+```c title="XMLRPC request"
 POST /xmlrpc HTTP/1.0
 Host: my.host.com
 User-Agent: My xmlrpc UA

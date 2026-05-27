@@ -48,10 +48,7 @@ If queries take longer than 'exec_query_threshold' microseconds, warning
 *Default value is 0 - disabled.*
 
 
-**Example: Set exec_query_threshold parameter**
-
-
-```opensips
+```opensips title="Set exec_query_threshold parameter"
 ...
 modparam("db_mysql", "exec_query_threshold", 60000)
 ...
@@ -75,10 +72,7 @@ The read timeout parameter is ignored on driver versions prior to
 *Default value is 2 (6 sec).*
 
 
-**Example: Set timeout_interval parameter**
-
-
-```opensips
+```opensips title="Set timeout_interval parameter"
 ...
 modparam("db_mysql", "timeout_interval", 2)
 ...
@@ -95,10 +89,7 @@ The maximum number of retries to execute a failed query due to connections probl
 *Default value is 2.*
 
 
-**Example: Set max_db_queries parameter**
-
-
-```opensips
+```opensips title="Set max_db_queries parameter"
 ...
 modparam("db_mysql", "max_db_queries", 2)
 ...
@@ -115,10 +106,7 @@ The maximum number of database connection retries. If this parameter
 *Default value is 3.*
 
 
-**Example: Set max_db_retries parameter**
-
-
-```opensips
+```opensips title="Set max_db_retries parameter"
 ...
 modparam("db_mysql", "max_db_retries", 2)
 ...
@@ -140,10 +128,7 @@ NOTE: Should a column's data exceed this limit, the value will be
 *Default value is *1024 (bytes)*.*
 
 
-**Example: Set ps_max_col_size parameter**
-
-
-```opensips
+```opensips title="Set ps_max_col_size parameter"
 ...
 modparam("db_mysql", "ps_max_col_size", 4096)
 ...
@@ -182,10 +167,7 @@ Also, you can *NOT* enable TLS for the connection
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the use_tls parameter**
-
-
-```opensips
+```opensips title="Set the use_tls parameter"
 ...
 modparam("tls_mgm", "client_domain", "dom1")
 modparam("tls_mgm", "certificate", "[dom1]/etc/pki/tls/certs/opensips.pem")
