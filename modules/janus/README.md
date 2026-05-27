@@ -195,8 +195,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-```c title="
-				*janus_send_request()* usage"
+```c title="*janus_send_request()* usage"
 ...
 # if the DB contains: 
 #       id: 1
@@ -236,8 +235,7 @@ Parameters represent the janus_id and the janus_url that originated the notifica
 - *janus_body* - full body of the notification received from janus
 
 
-```c title="
-				*E_JANUS_EVENT* example"
+```c title="*E_JANUS_EVENT* example"
 ...
 # if the DB contains: 
 #       id: 1

@@ -157,8 +157,7 @@ Parameters:
 This function can be used only from request route.
 
 
-```c title="Use b2b_sdp_demux() to 
-				handle an audio SIPREC call"
+```c title="Use b2b_sdp_demux() to handle an audio SIPREC call"
 ...
 if (!has_totag() && is_method("INVITE")) {
 	$avp(headers) = "X-Leg: caller\r\n");
