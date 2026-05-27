@@ -73,7 +73,7 @@ Default value is
 			"10".
 
 
-```opensips title="initial_probability parameter usage"
+```c title="initial_probability parameter usage"
    
 modparam("cfgutils", "initial_probability", 15)
    
@@ -90,7 +90,7 @@ There is no default value, is no parameter is given the hash functionality
 		is disabled.
 
 
-```opensips title="hash_file parameter usage"
+```c title="hash_file parameter usage"
    
 modparam("cfgutils", "hash_file", "/etc/opensips/opensips.cfg")
    
@@ -106,7 +106,7 @@ The size of the hash table used to store the shared variables ($shv).
 Default value is "64".
 
 
-```opensips title="shv_hash_size parameter usage"
+```c title="shv_hash_size parameter usage"
 modparam("cfgutils", "shv_hash_size", 1024)
 ```
 
@@ -133,7 +133,7 @@ The value of the parameter has the format:
 Default value is "NULL".
 
 
-```opensips title="shvset parameter usage"
+```c title="shvset parameter usage"
 ...
 modparam("cfgutils", "shvset", "debug=i:1")
 modparam("cfgutils", "shvset", "pstngw=s:sip:10.10.10.10")
@@ -163,7 +163,7 @@ The value of the parameter has the format:
 Default value is "NULL".
 
 
-```opensips title="varset parameter usage"
+```c title="varset parameter usage"
 ...
 modparam("cfgutils", "varset", "init=i:1")
 modparam("cfgutils", "varset", "gw=s:sip:11.11.11.11;transport=tcp")
@@ -187,7 +187,7 @@ Note that the *lock_pool_size* parameter only affects
 Default value is "32".
 
 
-```opensips title="Setting lock_pool_size module parameter"
+```c title="Setting lock_pool_size module parameter"
 modparam("cfgutils", "lock_pool_size", 64)
 ```
 
@@ -210,7 +210,7 @@ Parameters:
 - probability (int, optional) - probability override
 
 
-```opensips title="rand_event() usage"
+```c title="rand_event() usage"
 ...
 if (rand_event()) {
   append_to_reply("Retry-After: 120\n");
@@ -513,7 +513,7 @@ This example multi-recurrence expresses the working days schedule for
 				workforce will have flown back to Europe.
 
 
-```opensips title="check_time_rec usage"
+```c title="check_time_rec usage"
 ...
 # Only passing if still in 2012 and on a Bucharest-compatible timezone
 if (check_time_rec("Europe/Bucharest|20120101T000000|20130101T000000"))
@@ -623,7 +623,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 		BRANCH_ROUTE, LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE|EVENT_ROUTE.
 
 
-```opensips title="get_dynamic_lock usage"
+```c title="get_dynamic_lock usage"
 ...
 # acquire and release a dynamic lock on the "Call-ID" header field value
 if (!get_dynamic_lock($ci)) {
@@ -655,7 +655,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 		BRANCH_ROUTE, LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE|EVENT_ROUTE.
 
 
-```opensips title="release_dynamic_lock usage"
+```c title="release_dynamic_lock usage"
 ...
 # acquire and release a dynamic lock on the "Call-ID" header field value
 if (!get_dynamic_lock($ci)) {
@@ -697,7 +697,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 		BRANCH_ROUTE, LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE|EVENT_ROUTE.
 
 
-```opensips title="strings_share_lock usage"
+```c title="strings_share_lock usage"
 ...
 # Proper way of acquiring two dynamic locks successively
 if (!get_dynamic_lock($avp(foo))) {
@@ -743,7 +743,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 		BRANCH_ROUTE, LOCAL_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-```opensips title="get_accurate_time usage"
+```c title="get_accurate_time usage"
 ...
 get_accurate_time($var(sec), $var(usec));
 xlog("Current Unix timestamp: $var(sec) s, $var(usec) us\n");
@@ -955,7 +955,7 @@ $ opensips-cli -x mi shv_get
 This PV provides access to the environment variable 'name'.
 
 
-```opensips title="env(name) pseudo-variable usage"
+```c title="env(name) pseudo-variable usage"
 ...
 xlog("PATH environment variable is $env(PATH)\n");
 ...
@@ -969,7 +969,7 @@ xlog("PATH environment variable is $env(PATH)\n");
 Returns a random value from the [0 - 2^31) range.
 
 
-```opensips title="RANDOM pseudo-variable usage"
+```c title="RANDOM pseudo-variable usage"
 ...
 $avp(10) = ($RANDOM / 16777216); # 2^24
 if ($avp(10) < 10) {
@@ -1004,7 +1004,7 @@ The "name" can be:
 - *isdst* - return daylight saving time status (int, 0 - DST off, >0 DST on)
 
 
-```opensips title="ctime(name) pseudo-variable usage"
+```c title="ctime(name) pseudo-variable usage"
 ...
 if ($ctime(year) == 2008) {
 	xlog("request: $rm from $fu to $ru in year 2008\n");
@@ -1025,7 +1025,7 @@ It is a class of pseudo-variables stored in shared memory. The
 				functions to get/set the value of shared variables.
 
 
-```opensips title="shv(name) pseudo-variable usage"
+```c title="shv(name) pseudo-variable usage"
 ...
 modparam("cfgutils", "shvset", "debug=i:1")
 ...

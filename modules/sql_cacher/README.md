@@ -102,7 +102,7 @@ Overall, the parameter does not have a default value, it must be set
 		at least once in order to cache any table.
 
 
-```opensips title="cache_table parameter usage"
+```c title="cache_table parameter usage"
    
 modparam("sql_cacher", "cache_table",
 "id=caching_name
@@ -127,7 +127,7 @@ The delimiter to be used in the caching entry specification provided in the
 The default value is newline.
 
 
-```opensips title="spec_delimiter parameter usage"
+```c title="spec_delimiter parameter usage"
    
 modparam("sql_cacher", "spec_delimiter", "\n")
    
@@ -145,7 +145,7 @@ The delimiter to be used in the "$sql_cached_value"
 The default value is ":".
 
 
-```opensips title="pvar_delimiter parameter usage"
+```c title="pvar_delimiter parameter usage"
    
 modparam("sql_cacher", "pvar_delimiter", " ")
    
@@ -163,7 +163,7 @@ The delimiter to be used in the *columns* subparameter of
 The default value is " "(space).
 
 
-```opensips title="columns_delimiter parameter usage"
+```c title="columns_delimiter parameter usage"
    
 modparam("sql_cacher", "columns_delimiter", ",")
    
@@ -181,7 +181,7 @@ The number of rows to be fetched into OpenSIPS private memory in one chunk from
 The default value is "100".
 
 
-```opensips title="sql_fetch_nr_rows parameter usage"
+```c title="sql_fetch_nr_rows parameter usage"
    
 modparam("sql_cacher", "sql_fetch_nr_rows", 1000)
    
@@ -199,7 +199,7 @@ Expire period for the values stored in cache for the full caching type
 The default value is "24 hours".
 
 
-```opensips title="full_caching_expire parameter usage"
+```c title="full_caching_expire parameter usage"
    
 modparam("sql_cacher", "full_caching_expire", 3600)
    
@@ -216,7 +216,7 @@ This parameter represents how many seconds before the data expires (for full cac
 The default value is "60 s".
 
 
-```opensips title="reload_interval parameter usage"
+```c title="reload_interval parameter usage"
    
 modparam("sql_cacher", "reload_interval", 5)
    
@@ -313,7 +313,7 @@ In the first place, the details of the caching must be provided by setting
 		the module parameter "cache_table" in the OpenSIPS configuration script.
 
 
-```opensips title="Setting the cache_table parameter"
+```c title="Setting the cache_table parameter"
 modparam("sql_cacher", "cache_table",
 "id=carrier_fr_caching
 db_url=mysql://root:opensips@localhost/opensips
@@ -328,7 +328,7 @@ columns=host_name reply_code flags next_domain")
 Next, the values of the cached columns ca be accessed through the "$sql_cached_value" PV.
 
 
-```opensips title="Accessing cached values"
+```c title="Accessing cached values"
 ...
 $avp(rc1) = $sql_cached_value(carrier_fr_caching:reply_code:1);
 $avp(rc2) = $sql_cached_value(carrier_fr_caching:reply_code:2);

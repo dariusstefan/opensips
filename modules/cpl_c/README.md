@@ -63,7 +63,7 @@ A SQL URL have to be given to the module for knowing where the
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("cpl_c","db_url","dbdriver://username:password@dbhost/dbname")
 ...
@@ -82,7 +82,7 @@ Indicates the name of the table that store the CPL scripts.
 *Default value is "cpl".*
 
 
-```opensips title="Set db_table parameter"
+```c title="Set db_table parameter"
 ...
 modparam("cpl_c","cpl_table","cpl")
 ...
@@ -98,7 +98,7 @@ Indicates the name of the column used for storing the username.
 *Default value is "username".*
 
 
-```opensips title="Set username_column parameter"
+```c title="Set username_column parameter"
 ...
 modparam("cpl_c","username_column","username")
 ...
@@ -114,7 +114,7 @@ Indicates the name of the column used for storing the domain.
 *Default value is "domain".*
 
 
-```opensips title="Set domain_column parameter"
+```c title="Set domain_column parameter"
 ...
 modparam("cpl_c","domain_column","domain")
 ...
@@ -131,7 +131,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_xml".*
 
 
-```opensips title="Set cpl_xml_column parameter"
+```c title="Set cpl_xml_column parameter"
 ...
 modparam("cpl_c","cpl_xml_column","cpl_xml")
 ...
@@ -148,7 +148,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_bin".*
 
 
-```opensips title="Set cpl_bin_column parameter"
+```c title="Set cpl_bin_column parameter"
 ...
 modparam("cpl_c","cpl_bin_column","cpl_bin")
 ...
@@ -167,7 +167,7 @@ Points to the DTD file describing the CPL grammar. The file
 *This parameter is MANDATORY!*
 
 
-```opensips title="Set cpl_dtd_file parameter"
+```c title="Set cpl_dtd_file parameter"
 ...
 modparam("cpl_c","cpl_dtd_file","/etc/opensips/cpl-06.dtd")
 ...
@@ -186,7 +186,7 @@ Points to a directory where should be created all the log file
 					without generating error on execution.*
 
 
-```opensips title="Set log_dir parameter"
+```c title="Set log_dir parameter"
 ...
 modparam("cpl_c","log_dir","/var/log/opensips/cpl")
 ...
@@ -207,7 +207,7 @@ Tells for how many time is allow to have recurse for PROXY CPL
 *Default value of this parameter is 0.*
 
 
-```opensips title="Set proxy_recurse parameter"
+```c title="Set proxy_recurse parameter"
 ...
 modparam("cpl_c","proxy_recurse",2)
 ...
@@ -225,7 +225,7 @@ Before doing proxy (forward), a script route can be executed.
 *Default value of this parameter is NULL (none).*
 
 
-```opensips title="Set proxy_route parameter"
+```c title="Set proxy_route parameter"
 ...
 modparam("cpl_c","proxy_route", "1")
 ...
@@ -243,7 +243,7 @@ Tells if the username matching should be perform case
 *Default value of this parameter is 0.*
 
 
-```opensips title="Set case_sensitive parameter"
+```c title="Set case_sensitive parameter"
 ...
 modparam("cpl_c","case_sensitive",1)
 ...
@@ -260,7 +260,7 @@ Defines a prefix for the domain part which should be ignored
 *Default value of this parameter is empty string.*
 
 
-```opensips title="Set realm_prefix parameter"
+```c title="Set realm_prefix parameter"
 ...
 modparam("cpl_c","realm_prefix","sip.")
 ...
@@ -282,7 +282,7 @@ If set to empty string, the lookup node will be disabled - no
 *Default value of this parameter is NULL.*
 
 
-```opensips title="Set lookup_domain parameter"
+```c title="Set lookup_domain parameter"
 ...
 modparam("cpl_c","lookup_domain","location")
 ...
@@ -301,7 +301,7 @@ Tells if the lookup tag should append branches (to do parallel
 *Default value of this parameter is 0.*
 
 
-```opensips title="Set lookup_append_branches 
+```c title="Set lookup_append_branches 
 					parameter"
 ...
 modparam("cpl_c","lookup_append_branches",1)
@@ -320,7 +320,7 @@ Indicates if the domain part of the URI should be used in
 *Default value is "0 (disabled)".*
 
 
-```opensips title="Set use_domain parameter"
+```c title="Set use_domain parameter"
 ...
 modparam("cpl_c","use_domain",1)
 ...

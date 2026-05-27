@@ -272,7 +272,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="is_method usage"
+```c title="is_method usage"
 ...
 if(is_method("INVITE"))
 {
@@ -696,7 +696,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="get_updated_body_part usage"
+```c title="get_updated_body_part usage"
 ...
 	codec_delete_re("PCMA|PCMU");
 
@@ -784,7 +784,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE and BRANCH_ROUTE.
 
 
-```opensips title="sipmsg_validate usage"
+```c title="sipmsg_validate usage"
 ...
 if(!sipmsg_validate())
 {
@@ -1080,7 +1080,7 @@ Meaning of the parameters is as follows:
 This function can be used from ONREPLY_ROUTE.
 
 
-```opensips title="change_reply_status usage"
+```c title="change_reply_status usage"
 ...
 onreply_route {
     if ($rs == "603") {
@@ -1183,7 +1183,7 @@ The function returns true if the options was found listed in one of the
 		FAILURE_ROUTE, BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="list_hdr_has_option usage"
+```c title="list_hdr_has_option usage"
 ...
 # check if 100rel is advertised
 if (list_hdr_has_option("Supported", "100rel"))
@@ -1295,7 +1295,7 @@ The function returns true if at least 1 header was found that matches the glob p
 		FAILURE_ROUTE, BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="get_glob_headers_values usage"
+```c title="get_glob_headers_values usage"
 ...
        if (get_glob_headers_values("X-*",$avp(names),$avp(values))) {
            xlog("All X- names are $(avp(names)[*]) and X- vals are $(avp(values)[*])\n");

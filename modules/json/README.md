@@ -61,7 +61,7 @@ Enable this parameter if your input JSONs contain signed integers which
 *Default value is *false*.*
 
 
-```opensips title="Set enable_long_quoting parameter"
+```c title="Set enable_long_quoting parameter"
 ...
 modparam("json", "enable_long_quoting", true)
 ...
@@ -143,7 +143,7 @@ Trying to replace or insert a value in a
 			describing the value of the json and the path used
 
 
-```opensips title="Accessing the $json variable"
+```c title="Accessing the $json variable"
 ...
 $json(obj1/key) = "value"; #replace or insert the (key,value)
 			   #pair into the json object;
@@ -158,7 +158,7 @@ xlog("$json(name/key1[0][-1]/key2)"); # a more complex example
 ```
 
 
-```opensips title="Iterating through an array using variables"
+```c title="Iterating through an array using variables"
 ...
 
 $json(ar1) := "[1,2,3,4]";
@@ -199,7 +199,7 @@ In order to explicitly iterate over a JSON object keys or values, you can use th
 			specified in the *id*.
 
 
-```opensips title="iteration over $json object keys"
+```c title="iteration over $json object keys"
 ...
 $json(foo) := "{\"a\": 1, \"b\": 2, \"c\": 3}";
 for ($var(k) in $(json(foo.keys)[*]))
@@ -209,7 +209,7 @@ for ($var(k) in $(json(foo.keys)[*]))
 ```
 
 
-```opensips title="iteration over $json object values"
+```c title="iteration over $json object values"
 ...
 $json(foo) := "{\"a\": 1, \"b\": 2, \"c\": 3}";
 for ($var(v) in $(json(foo.values)[*]))
@@ -225,7 +225,7 @@ for ($var(v) in $(json(foo)[*]))
 ```
 
 
-```opensips title="iteration over $json array values"
+```c title="iteration over $json array values"
 ...
 $json(foo) := "[1, 2, 3]";
 for ($var(v) in $(json(foo)[*]))
@@ -395,7 +395,7 @@ WARNING: You should be careful when using references.
 			to get the value from the object you will crash OPENSIPS.
 
 
-```opensips title="Creating a reference"
+```c title="Creating a reference"
 ...
 
 $json(b) := "[{},{},{}]";
@@ -442,7 +442,7 @@ Test link :
 ```
 
 
-```opensips title="[LOGICAL ERROR] Creating a  circular reference"
+```c title="[LOGICAL ERROR] Creating a  circular reference"
 ...
 
 $json(b) := "[1]";

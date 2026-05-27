@@ -87,7 +87,7 @@ DB URL for database connection. As the module allows the usage
 *This parameter is optional, it's default value being NULL.*
 
 
-```opensips title="Set avp_url parameter"
+```c title="Set avp_url parameter"
 ...
 # default URL
 modparam("avpops","db_url","mysql://user:passwd@host/database")
@@ -107,7 +107,7 @@ DB table to be used.
 *This parameter is optional, it's default value being NULL.*
 
 
-```opensips title="Set avp_table parameter"
+```c title="Set avp_table parameter"
 ...
 modparam("avpops","avp_table","avptable")
 ...
@@ -125,7 +125,7 @@ If the domain part of the an URI should be used for
 *Default value is 0 (no).*
 
 
-```opensips title="Set use_domain parameter"
+```c title="Set use_domain parameter"
 ...
 modparam("avpops","use_domain",1)
 ...
@@ -142,7 +142,7 @@ Name of column containing the uuid (unique user id).
 *Default value is "uuid".*
 
 
-```opensips title="Set uuid_column parameter"
+```c title="Set uuid_column parameter"
 ...
 modparam("avpops","uuid_column","uuid")
 ...
@@ -159,7 +159,7 @@ Name of column containing the username.
 *Default value is "username".*
 
 
-```opensips title="Set username_column parameter"
+```c title="Set username_column parameter"
 ...
 modparam("avpops","username_column","username")
 ...
@@ -176,7 +176,7 @@ Name of column containing the domain name.
 *Default value is "domain".*
 
 
-```opensips title="Set domain_column parameter"
+```c title="Set domain_column parameter"
 ...
 modparam("avpops","domain_column","domain")
 ...
@@ -193,7 +193,7 @@ Name of column containing the attribute name (AVP name).
 *Default value is "attribute".*
 
 
-```opensips title="Set attribute_column parameter"
+```c title="Set attribute_column parameter"
 ...
 modparam("avpops","attribute_column","attribute")
 ...
@@ -210,7 +210,7 @@ Name of column containing the AVP value.
 *Default value is "value".*
 
 
-```opensips title="Set value_column parameter"
+```c title="Set value_column parameter"
 ...
 modparam("avpops","value_column","value")
 ...
@@ -227,7 +227,7 @@ Name of column containing the AVP type.
 *Default value is "type".*
 
 
-```opensips title="Set type_column parameter"
+```c title="Set type_column parameter"
 ...
 modparam("avpops","type_column","type")
 ...
@@ -259,7 +259,7 @@ Definition of a DB scheme. Scheme syntax is:
 *Default value is "NULL".*
 
 
-```opensips title="Set db_scheme parameter"
+```c title="Set db_scheme parameter"
 ...
 modparam("avpops","db_scheme",
 "scheme1:table=subscriber;uuid_col=uuid;value_col=first_name")
@@ -317,7 +317,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="avp_db_load usage"
+```c title="avp_db_load usage"
 ...
 avp_db_load("$fu", "$avp(678)");
 avp_db_load("$ru/domain", "i/domain_preferences");
@@ -748,7 +748,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="is_avp_set usage"
+```c title="is_avp_set usage"
 ...
 if(is_avp_set("$avp(foo)"))
     xlog("AVP with name 'foo' is set!\n");
@@ -777,7 +777,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="avp_shuffle usage"
+```c title="avp_shuffle usage"
 ...
 $avp(foo) := "str1";
 $avp(foo)  = "str2";
@@ -827,7 +827,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="async avp_db_query usage"
+```c title="async avp_db_query usage"
 ...
 {
 ...

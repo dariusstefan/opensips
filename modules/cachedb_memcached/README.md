@@ -79,7 +79,7 @@ The urls of the server groups that OpenSIPS will connect to in order
 			from the script.
 
 
-```opensips title="Set cachedb_url parameter"
+```c title="Set cachedb_url parameter"
 ...
 modparam("cachedb_memcached", "cachedb_url","memcached:group1://localhost:9999,127.0.0.1/");
 modparam("cachedb_memcached", "cachedb_url","memcached:y://random_url:8888/");
@@ -108,7 +108,7 @@ The maximum number of microseconds that a local cache query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-```opensips title="Set exec_threshold parameter"
+```c title="Set exec_threshold parameter"
 ...
 modparam("cachedb_memcached", "exec_threshold", 100000)
 ...

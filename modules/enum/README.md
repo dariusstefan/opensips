@@ -124,7 +124,7 @@ The domain suffix to be added to the domain name obtained from
 Default value is "e164.arpa."
 
 
-```opensips title="Setting domain_suffix module parameter"
+```c title="Setting domain_suffix module parameter"
 modparam("enum", "domain_suffix", "e1234.arpa.")
 ```
 
@@ -143,7 +143,7 @@ A string whose contents is appended to each new tel URI in the
 Default value is ""
 
 
-```opensips title="Setting tel_uri_params module parameter"
+```c title="Setting tel_uri_params module parameter"
 modparam("enum", "tel_uri_params", ";npdi")
 ```
 
@@ -158,7 +158,7 @@ The domain suffix to be used for i_enum_query() lookups.
 Default value is "e164.arpa."
 
 
-```opensips title="Setting i_enum_suffix module parameter"
+```c title="Setting i_enum_suffix module parameter"
 modparam("enum", "i_enum_suffix", "e1234.arpa.")
 ```
 
@@ -173,7 +173,7 @@ The domain suffix to be used for isn_query() lookups. Can
 Default value is "freenum.org."
 
 
-```opensips title="Setting isn_suffix module parameter"
+```c title="Setting isn_suffix module parameter"
 modparam("enum", "isn_suffix", "freenum.org.")
 ```
 
@@ -188,7 +188,7 @@ This parameter determines which label i_enum_query() will use
 Default value is ""i""
 
 
-```opensips title="Setting branchlabel module parameter"
+```c title="Setting branchlabel module parameter"
 modparam("enum", "branchlabel", "i")
 ```
 
@@ -236,7 +236,7 @@ i.1.e164.arpa.     TYPE65300  \# 14 (
 Default value is "cc"
 
 
-```opensips title="Setting the bl_algorithm module parameter"
+```c title="Setting the bl_algorithm module parameter"
 modparam("enum", "bl_algorithm", "txt")
 ```
 

@@ -50,7 +50,7 @@ The module can also be used to catch *Notify refer* events
 		the NOTIFY to the end-point, you have to drop it, like below:
 
 
-```opensips title="Drop automatically handled NOTIFY refer events"
+```c title="Drop automatically handled NOTIFY refer events"
 ...
 if (has_totag() && loose_route() &&
 		is_method("NOTIFY") && $hdr(Event) == "refer")
@@ -114,7 +114,7 @@ This parameter can be used to change the mode that the module
 *Default value is "0 (auto mode using parameters)".*
 
 
-```opensips title="Set mode parameter"
+```c title="Set mode parameter"
 ...
 modparam("callops", "mode", "manual") # use your own logic
 ...
@@ -133,7 +133,7 @@ The parameter used to match the different calls together. This is
 *Default value is "osid".*
 
 
-```opensips title="Set match_param parameter"
+```c title="Set match_param parameter"
 ...
 modparam("callops", "match_param", "call")
 ...
@@ -166,7 +166,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-```opensips title="Use call_blind_replace() function to match
+```c title="Use call_blind_replace() function to match
 					an existing leg."
 ...
 if (!has_totag() && is_method("INVITE")) {
@@ -194,7 +194,7 @@ Note that if the function successfully handles the NOTIFY request,
 This function can be used from a request route, failure route and local route.
 
 
-```opensips title="Use call_transfer_notify() function to handle
+```c title="Use call_transfer_notify() function to handle
 					NOTIFY refer requests."
 ...
 if (has_totag() && is_method("NOTIFY") && loose_route()) {

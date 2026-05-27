@@ -155,7 +155,7 @@ Returns 1 if the message is received via TLS and the peer was verified
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="is_peer_verified usage"
+```c title="is_peer_verified usage"
 ...
 if (is_peer_verified()) {
         xlog("L_INFO","request from verified TLS peer\n");
@@ -231,7 +231,7 @@ Selects which TLS library to use. Possible values are:
 Default value is *auto*.
 
 
-```opensips title="Set tls_library variable"
+```c title="Set tls_library variable"
 ...
 modparam("tls_mgm", "tls_library", "none")
 ...
@@ -285,7 +285,7 @@ If you want RFC3261 conformance and all your clients support
 			applications with SSL support use the SSLv23 method).
 
 
-```opensips title="Set tls_method variable"
+```c title="Set tls_method variable"
 ...
 modparam("tls_mgm", "tls_method", "[dom]TLSv1")
 ...
@@ -293,7 +293,7 @@ modparam("tls_mgm", "tls_method", "[dom]TLSv1")
 ```
 
 
-```opensips title="Set tls_method range variable"
+```c title="Set tls_method range variable"
 ...
 modparam("tls_mgm", "tls_method", "[dom]TLSv1-TLSv1_3")  # between v1 and v1.3
 modparam("tls_mgm", "tls_method", "[dom]TLSv1-")         # v1 or higher
@@ -316,7 +316,7 @@ Public certificate file for OpenSIPS. It will be used as
 *Default value is "CFG_DIR/tls/cert.pem".*
 
 
-```opensips title="Set certificate variable"
+```c title="Set certificate variable"
 ...
 modparam("tls_mgm", "certificate", "[dom]/mycerts/certs/opensips_server_cert.pem")
 ...
@@ -335,7 +335,7 @@ Private key of the above certificate. I must be kept in a
 *Default value is "CFG_DIR/tls/ckey.pem".*
 
 
-```opensips title="Set private_key variable"
+```c title="Set private_key variable"
 ...
 modparam("tls_mgm", "private_key", "[dom]/mycerts/private/prik.pem")
 ...
@@ -355,7 +355,7 @@ List of trusted CAs. The file contains the certificates
 *Default value is "".*
 
 
-```opensips title="Set ca_list variable"
+```c title="Set ca_list variable"
 ...
 modparam("tls_mgm", "ca_list", "[dom]/mycerts/certs/ca_list.pem")
 ...
@@ -376,7 +376,7 @@ Directory storing trusted CAs. The certificates in the directory
 *Default value is "/etc/pki/CA/".*
 
 
-```opensips title="Set ca_dir variable"
+```c title="Set ca_dir variable"
 ...
 modparam("tls_mgm", "ca_dir", "[dom]/mycerts/certs")
 ...
@@ -394,7 +394,7 @@ Directory storing certificate revocation lists (CRLs). The domain
 *If this parameter is not set, no CRLs will be used.*
 
 
-```opensips title="Set crl_dir variable"
+```c title="Set crl_dir variable"
 ...
 modparam("tls_mgm", "crl_dir", "[dom]/mycerts/crls")
 ...
@@ -413,7 +413,7 @@ Setting this parameter with a non-zero integer value enables CRL
 				is checked.*
 
 
-```opensips title="Set crl_check_all variable"
+```c title="Set crl_check_all variable"
 ...
 modparam("tls_mgm", "crl_check_all", "[dom]1")
 ...
@@ -439,7 +439,7 @@ You can specify the list of algorithms for authentication
 *It defaults to the OpenSSL default ciphers.*
 
 
-```opensips title="Set ciphers_list variable"
+```c title="Set ciphers_list variable"
 ...
 modparam("tls_mgm", "ciphers_list", "[dom]NULL")
 ...
@@ -459,7 +459,7 @@ You can specify a file which contains Diffie-Hellman
 *It defaults to not set a dh param file.*
 
 
-```opensips title="Set dh_params variable"
+```c title="Set dh_params variable"
 ...
 modparam("tls_mgm", "dh_params", "[dom]/etc/pki/CA/dh1024.pem")
 ...
@@ -501,7 +501,7 @@ The domain part represents the name of the TLS domain.
 Default value is *1*.
 
 
-```opensips title="Set verify_cert variable"
+```c title="Set verify_cert variable"
 ...
 modparam("tls_mgm", "verify_cert", "[dom]0")
 ...
@@ -524,7 +524,7 @@ The domain part represents the name of the TLS domain.
 Default value is *1*.
 
 
-```opensips title="Set require_cert variable"
+```c title="Set require_cert variable"
 ...
 modparam("tls_mgm", "require_cert", "[dom]0")
 ...
@@ -554,7 +554,7 @@ Note: You can force a particular domain to be used just for a particular
 *No default value.*
 
 
-```opensips title="Set client_tls_domain_avp variable"
+```c title="Set client_tls_domain_avp variable"
 ...
 modparam("tls_mgm", "client_tls_domain_avp", "tls_match_dom")
 ...
@@ -585,7 +585,7 @@ For the AVP usage example, refer to  [domains param](#domains-param).
 *No default value.*
 
 
-```opensips title="Set client_sip_domain_avp variable"
+```c title="Set client_sip_domain_avp variable"
 ...
 modparam("tls_mgm", "client_sip_domain_avp", "sip_match_dom")
 ...
@@ -603,7 +603,7 @@ You cannot use the "tls_domain=*dom_name*" URL parameter
 			for a TLS connection to the database for the tls_mgm module itself.
 
 
-```opensips title="Usage of db_url block"
+```c title="Usage of db_url block"
 modparam("tls_mgm", "db_url", "mysql://root:admin@localhost/opensips")
 				
 ```
@@ -618,7 +618,7 @@ Sets the database table name.
 Default value is "tls_mgm".
 
 
-```opensips title="Usage of db_table block"
+```c title="Usage of db_table block"
 modparam("tls_mgm", "db_table", "tls_mgm")
                                 
 ```
@@ -633,7 +633,7 @@ Sets the name for the TLS domain column.
 Default value is "domain".
 
 
-```opensips title="Usage of domain_col block"
+```c title="Usage of domain_col block"
 modparam("tls_mgm", "domain_col", "tls_domain")
                                 
 ```
@@ -648,7 +648,7 @@ Sets the IP address matching column name.
 Default value is "match_ip_address".
 
 
-```opensips title="Usage of match_ip_address_col block"
+```c title="Usage of match_ip_address_col block"
 modparam("tls_mgm", "match_ip_address_col", "addr")
                                 
 ```
@@ -663,7 +663,7 @@ Sets the SIP domain matching column name.
 Default value is "match_sip_domain".
 
 
-```opensips title="Usage of match_sip_domain_col block"
+```c title="Usage of match_sip_domain_col block"
 modparam("tls_mgm", "match_sip_domain_col", "addr")
                                 
 ```
@@ -678,7 +678,7 @@ Sets the method column name.
 Default value is "method".
 
 
-```opensips title="Usage of tls_method_col block"
+```c title="Usage of tls_method_col block"
 modparam("tls_mgm", "tls_method_col", "method")
                                 
 ```
@@ -693,7 +693,7 @@ Sets the verrify certificate column name.
 Default value is "verify_cert".
 
 
-```opensips title="Usage of vertify_cert_col block"
+```c title="Usage of vertify_cert_col block"
 modparam("tls_mgm", "verify_cert_col", "verify_cert")
                                 
 ```
@@ -708,7 +708,7 @@ Sets the require certificate column name.
 Default value is "require_cert".
 
 
-```opensips title="Usage of require_cert_col block"
+```c title="Usage of require_cert_col block"
 modparam("tls_mgm", "require_cert_col", "req")
                                 
 ```
@@ -723,7 +723,7 @@ Sets the certificate column name.
 Default value is "certificate".
 
 
-```opensips title="Usage of certificate_col block"
+```c title="Usage of certificate_col block"
 modparam("tls_mgm", "certificate_col", "certificate")
                                 
 ```
@@ -738,7 +738,7 @@ Sets the private key column name.
 Default value is "private_key".
 
 
-```opensips title="Usage of private_key_col block"
+```c title="Usage of private_key_col block"
 modparam("tls_mgm", "private_key_col", "pk")
                                 
 ```
@@ -753,7 +753,7 @@ Sets the crl_check_all column name.
 Default value is "crl_check_all".
 
 
-```opensips title="Usage of crl_check_all block"
+```c title="Usage of crl_check_all block"
 modparam("tls_mgm", "crl_check_all_col", "crl_check")
                                 
 ```
@@ -768,7 +768,7 @@ Sets the crl directory column name.
 Default value is "crl_dir".
 
 
-```opensips title="Usage of crl_dir_col block"
+```c title="Usage of crl_dir_col block"
 modparam("tls_mgm", "crl_dir_col", "crl_dir")
                                 
 ```
@@ -783,7 +783,7 @@ Sets the CA list column name.
 Default value is "ca_list".
 
 
-```opensips title="Usage of ca_list_col block"
+```c title="Usage of ca_list_col block"
 modparam("tls_mgm", "ca_list_col", "ca_list")
                                 
 ```
@@ -798,7 +798,7 @@ Sets the CA directory column name.
 Default value is "ca_dir".
 
 
-```opensips title="Usage of ca_dir_col block"
+```c title="Usage of ca_dir_col block"
 modparam("tls_mgm", "ca_dir_col", "ca_dir")
                                 
 ```
@@ -813,7 +813,7 @@ Sets the cipher list column name.
 Default value is "cipher_list".
 
 
-```opensips title="Usage of cipher_list_col block"
+```c title="Usage of cipher_list_col block"
 modparam("tls_mgm", "cipher_list_col", "cipher_list")
                                 
 ```
@@ -828,7 +828,7 @@ Sets the Diffie-Hellmann parameters column name.
 Default value is "dh_params".
 
 
-```opensips title="Usage of dh_params_col block"
+```c title="Usage of dh_params_col block"
 modparam("tls_mgm", "dh_params_col", "dh_parms")
                                 
 ```
@@ -843,7 +843,7 @@ Sets the ec_curve column name.
 Default value is "ec_curve".
 
 
-```opensips title="Usage of ec_curve_col block"
+```c title="Usage of ec_curve_col block"
 modparam("tls_mgm", "ec_curve_col", "ec_curve")
                                 
 ```
@@ -866,7 +866,7 @@ The parameter accepts a list of values, and the special value "*"
 *Default value is "*" (match any address).*
 
 
-```opensips title="Set match_ip_address variable"
+```c title="Set match_ip_address variable"
 ...
 modparam("tls_mgm", "match_ip_address", "[dom1]10.0.0.10:5061, 10.0.0.11:5061")
 ...
@@ -904,7 +904,7 @@ The FQDNs can be specified as with Unix shell-style wildcards. If
 *Default value is "*" (match any sip domain).*
 
 
-```opensips title="Set match_sip_domain variable"
+```c title="Set match_sip_domain variable"
 ...
 modparam("tls_mgm", "match_sip_domain", "[dom1]foo.com, bar.com, *.baz.com")
 modparam("tls_mgm", "match_sip_domain", "[default_dom]*")
@@ -923,7 +923,7 @@ The value of these parameters represents the virtual tls domain's
 				name which is only used for identification.
 
 
-```opensips title="Usage of tls_client_domain and
+```c title="Usage of tls_client_domain and
 					tls_server_domain block"
 ...
 socket=tls:10.0.0.10:5061
@@ -1233,7 +1233,7 @@ NOTE: Since the TLS engine is quite memory consuming, increase the
 - fork = yes
 
 
-```opensips title="Script with TLS support"
+```c title="Script with TLS support"
   # ----------- global configuration parameters ------------------------
   log_level=3
   stderror_enabled=no
@@ -1416,7 +1416,7 @@ If you want to debug TLS connections, put the following log
 	This will dump all available TLS pseudo variables.
 
 
-```opensips title="Example of TLS logging"
+```c title="Example of TLS logging"
 xlog("L_INFO","================= start TLS pseudo variables ===============\n");
 xlog("L_INFO","$$tls_version                   = '$tls_version'\n");
 xlog("L_INFO","$$tls_description               = '$tls_description'\n");

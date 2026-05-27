@@ -108,7 +108,7 @@ If turned on, request's from-tag is appended to record-route; that's
 *Default value is 1 (yes).*
 
 
-```opensips title="Set append_fromtag parameter"
+```c title="Set append_fromtag parameter"
 ...
 modparam("rr", "append_fromtag", 0)
 ...
@@ -128,7 +128,7 @@ There are some situations when the server needs to insert two
 *Default value is 1 (yes).*
 
 
-```opensips title="Set enable_double_rr parameter"
+```c title="Set enable_double_rr parameter"
 ...
 modparam("rr", "enable_double_rr", 0)
 ...
@@ -145,7 +145,7 @@ If set to a non 0 value (which means yes), the username part will
 *Default value is 0 (no).*
 
 
-```opensips title="Set add_username parameter"
+```c title="Set add_username parameter"
 ...
 modparam("rr", "add_username", 1)
 ...
@@ -166,7 +166,7 @@ When a preset record-route header is forced in OpenSIPS config and the
 *Default value is 1 (yes).*
 
 
-```opensips title="enable_socket_mismatch_warning usage"
+```c title="enable_socket_mismatch_warning usage"
 ...
 modparam("rr", "enable_socket_mismatch_warning", 0)
 ...

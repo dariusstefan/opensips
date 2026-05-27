@@ -53,7 +53,7 @@ First char of this parameter is used as separator for encoding/decoding
 *Default value is "*".*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("mangler", "contact_flds_separator", "-")
 ...
