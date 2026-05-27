@@ -45,7 +45,7 @@ All additional credentials will be stored as OpenSIPS AVPs
 The RPID value may be fetch via this mechanism.
 
 
-```c title=""SIP-AVP" AAA AVP examples"
+```c title="'SIP-AVP' AAA AVP examples"
 ....
 "email:joe@yahoo.com"
     - STRING NAME AVP (email) with STRING VALUE (joe@yahoo.com)

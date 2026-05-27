@@ -49,7 +49,7 @@ The default parameter used when the [example str](#func_example_str)
 *Default value is "" (empty sring).*
 
 
-```c title="Set "default_str" parameter"
+```c title="Set 'default_str' parameter"
 ...
 modparam("example", "default_str", "TEST")
 ...
@@ -66,7 +66,7 @@ The default parameter used when the [example int](#func_example_int)
 *Default value is "0".*
 
 
-```c title="Set "default_int" parameter"
+```c title="Set 'default_int' parameter"
 ...
 modparam("example", "default_int", -1)
 ...

@@ -124,7 +124,7 @@ The database URL where the sockets are fetched from.
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-```c title="Set "db_url" parameter"
+```c title="Set 'db_url' parameter"
 ...
 modparam("sockets_mgm", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -140,7 +140,7 @@ The database table name where the sockets are stored.
 *Default value is "sockets".*
 
 
-```c title="Set "table_name" parameter"
+```c title="Set 'table_name' parameter"
 ...
 modparam("sockets_mgm", "table_name", "sockets_def")
 ...
@@ -156,7 +156,7 @@ The database table column where the socket definition is stored.
 *Default value is "socket".*
 
 
-```c title="Set "socket_column" parameter"
+```c title="Set 'socket_column' parameter"
 ...
 modparam("sockets_mgm", "socket_column", "sock")
 ...
@@ -172,7 +172,7 @@ The database table column where the advertised definition is stored.
 *Default value is "advertised".*
 
 
-```c title="Set "advertised_column" parameter"
+```c title="Set 'advertised_column' parameter"
 ...
 modparam("sockets_mgm", "advertised_column", "adv")
 ...
@@ -188,7 +188,7 @@ The database table column where the tag definition is stored.
 *Default value is "tag".*
 
 
-```c title="Set "tag_column" parameter"
+```c title="Set 'tag_column' parameter"
 ...
 modparam("sockets_mgm", "tag_column", "sock")
 ...
@@ -204,7 +204,7 @@ The database table column where the flags definition is stored.
 *Default value is "flags".*
 
 
-```c title="Set "flags_column" parameter"
+```c title="Set 'flags_column' parameter"
 ...
 modparam("sockets_mgm", "flags_column", "sock")
 ...
@@ -220,7 +220,7 @@ The database table column where the tos definition is stored.
 *Default value is "tos".*
 
 
-```c title="Set "tos_column" parameter"
+```c title="Set 'tos_column' parameter"
 ...
 modparam("sockets_mgm", "tos_column", "sock")
 ...
@@ -236,7 +236,7 @@ The number of processes designated to handle UDP sockets.
 *Default value is "8".*
 
 
-```c title="Set "processes" parameter"
+```c title="Set 'processes' parameter"
 ...
 modparam("sockets_mgm", "processes", 32)
 ...
@@ -253,7 +253,7 @@ The maximum number of sockets that can be defined dynamically.
 *Default value is "100".*
 
 
-```c title="Set "max_sockets" parameter"
+```c title="Set 'max_sockets' parameter"
 ...
 modparam("sockets_mgm", "max_sockets", 2000)
 ...
