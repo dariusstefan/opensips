@@ -75,7 +75,7 @@ Path to either a GeoLite or GeoIP City database file.
 *Mandatory parameter.*
 
 
-```c title="Set "mmgeoip_city_db_path" parameter"
+```c title="Set 'mmgeoip_city_db_path' parameter"
 ...
 modparam("mmgeoip", "mmgeoip_city_db_path",
   "/usr/share/GeoIP/GeoLiteCity.dat")
@@ -109,7 +109,7 @@ NOTE: If libmaxminddb is used, this parameter will be ignored as the library onl
 	  	supports loading the database into mmap allocated memory.
 
 
-```c title="Set "cache_type" parameter"
+```c title="Set 'cache_type' parameter"
 ...
 modparam("mmgeoip", "cache_type","MEM_CACHE_CHECK")
 ...
