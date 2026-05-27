@@ -172,7 +172,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_offer".*
 
 
-```opensips title="Set route_offer parameter"
+```c title="Set route_offer parameter"
 ...
 modparam("rtp_relay", "route_offer", "custom_rtp_offer")
 ...
@@ -234,7 +234,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_answer".*
 
 
-```opensips title="Set route_answer parameter"
+```c title="Set route_answer parameter"
 ...
 modparam("rtp_relay", "route_answer", "custom_rtp_answer")
 ...
@@ -285,7 +285,7 @@ Return values are not needed.
 		*Default value is "rtp_relay_delete".*
 
 
-```opensips title="Set route_delete parameter"
+```c title="Set route_delete parameter"
 ...
 modparam("rtp_relay", "route_delete", "custom_rtp_delete")
 ...
@@ -338,7 +338,7 @@ When running the route, the following values are expected to be returned:
 		*Default value is "rtp_relay_copy_offer".*
 
 
-```opensips title="Set rtp_relay_copy_offer parameter"
+```c title="Set rtp_relay_copy_offer parameter"
 ...
 modparam("rtp_relay", "route_copy_offer", "custom_rtp_copy_offer")
 ...
@@ -389,7 +389,7 @@ When the route is executed, the following parameters are
 *Default value is "rtp_relay_copy_answer".*
 
 
-```opensips title="Set rtp_relay_copy_answer parameter"
+```c title="Set rtp_relay_copy_answer parameter"
 ...
 modparam("rtp_relay", "route_copy_answer", "custom_rtp_copy_answer")
 ...
@@ -441,7 +441,7 @@ Return values are not needed.
 *Default value is "rtp_relay_copy_delete".*
 
 
-```opensips title="Set rtp_relay_copy_delete parameter"
+```c title="Set rtp_relay_copy_delete parameter"
 ...
 modparam("rtp_relay", "route_copy_delete", "custom_rtp_copy_delete")
 ...
@@ -498,7 +498,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-```opensips title="rtp_relay_engage usage"
+```c title="rtp_relay_engage usage"
 ...
 if (is_method("INVITE") && !has_totag()) {
 	xlog("SCRIPT: engaging RTPProxy relay for all branches\n");

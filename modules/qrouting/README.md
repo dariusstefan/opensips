@@ -82,7 +82,7 @@ An SQL database URL.
 *Default value is **NULL**.*
 
 
-```opensips title="Setting the db_url parameter"
+```c title="Setting the db_url parameter"
 modparam("qrouting", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 	
 ```
@@ -97,7 +97,7 @@ The name of the quality-based routing profiles table.
 *Default value is **"qr_profiles"**.*
 
 
-```opensips title="Setting the table_name parameter"
+```c title="Setting the table_name parameter"
 modparam("qrouting", "table_name", "qr_profiles_bak")
 	
 ```
@@ -138,7 +138,7 @@ Possible values:
 *Default value is **"dynamic-weights"**.*
 
 
-```opensips title="Setting the algorithm parameter"
+```c title="Setting the algorithm parameter"
 modparam("qrouting", "algorithm", "best-dest-first")
 	
 ```
@@ -154,7 +154,7 @@ The duration (in minutes) that a gateway's statistics for a given call
 *Default value is **30** minutes.*
 
 
-```opensips title="Setting the connection_timeout parameter"
+```c title="Setting the connection_timeout parameter"
 modparam("qrouting", "history_span", 15)
 	
 ```
@@ -178,7 +178,7 @@ A lower value will lead to a closer to realtime adjustment to traffic
 *Default value is **5** seconds.*
 
 
-```opensips title="Setting the connect_poll_interval parameter"
+```c title="Setting the connect_poll_interval parameter"
 modparam("qrouting", "sampling_interval", 5)
 	
 ```
@@ -224,7 +224,7 @@ The thresholds and penalties for a custom statistic must be provided
 *Default value is **NULL**.*
 
 
-```opensips title="Setting the extra_stats parameter"
+```c title="Setting the extra_stats parameter"
 modparam("qrouting", "extra_stats", "+mos/60; +r_factor; -503_replies/100")
 	
 ```
@@ -242,7 +242,7 @@ The minimally accepted amount of sampled ASR statistics for each
 *Default value is **30**.*
 
 
-```opensips title="Setting the min_samples_asr parameter"
+```c title="Setting the min_samples_asr parameter"
 modparam("qrouting", "min_samples_asr", 50)
 	
 ```
@@ -260,7 +260,7 @@ The minimally accepted amount of sampled CCR statistics for each
 *Default value is **30**.*
 
 
-```opensips title="Setting the min_samples_ccr parameter"
+```c title="Setting the min_samples_ccr parameter"
 modparam("qrouting", "min_samples_ccr", 50)
 	
 ```
@@ -278,7 +278,7 @@ The minimally accepted amount of sampled PDD statistics for each
 *Default value is **10**.*
 
 
-```opensips title="Setting the min_samples_pdd parameter"
+```c title="Setting the min_samples_pdd parameter"
 modparam("qrouting", "min_samples_pdd", 15)
 	
 ```
@@ -296,7 +296,7 @@ The minimally accepted amount of sampled AST statistics for each
 *Default value is **10**.*
 
 
-```opensips title="Setting the min_samples_ast parameter"
+```c title="Setting the min_samples_ast parameter"
 modparam("qrouting", "min_samples_ast", 15)
 	
 ```
@@ -314,7 +314,7 @@ The minimally accepted amount of sampled ACD statistics for each
 *Default value is **20**.*
 
 
-```opensips title="Setting the min_samples_acd parameter"
+```c title="Setting the min_samples_acd parameter"
 modparam("qrouting", "min_samples_acd", 30)
 	
 ```
@@ -333,7 +333,7 @@ The minimally accepted quality of a (prefix, destination) combination,
 *Default value is **NULL** (not set).*
 
 
-```opensips title="Setting the event_bad_dst_threshold parameter"
+```c title="Setting the event_bad_dst_threshold parameter"
 modparam("qrouting", "event_bad_dst_threshold", "0.5")
 	
 ```
@@ -348,7 +348,7 @@ The amount of decimal digits to use in logging or MI output.
 *Default value is **2**.*
 
 
-```opensips title="Setting the decimal_digits parameter"
+```c title="Setting the decimal_digits parameter"
 modparam("qrouting", "decimal_digits", 4)
 	
 ```
