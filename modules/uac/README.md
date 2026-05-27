@@ -68,7 +68,7 @@ There are 3 mode of restoring the original headers (FROM/TO) URI:
 					"auto".*
 
 
-```opensips title="Set restore_mode parameter"
+```c title="Set restore_mode parameter"
 ...
 modparam("uac","restore_mode","auto")
 ...
@@ -87,7 +87,7 @@ String password to be used to encrypt the RR storing parameter
 *Default value of this parameter is empty.*
 
 
-```opensips title="Set restore_passwd parameter"
+```c title="Set restore_passwd parameter"
 ...
 modparam("uac","restore_passwd","my_secret_passwd")
 ...
@@ -106,7 +106,7 @@ Name of Record-Route header parameter that will be used to store
 					"vsf".*
 
 
-```opensips title="Set rr_from_store_param parameter"
+```c title="Set rr_from_store_param parameter"
 ...
 modparam("uac","rr_from_store_param","my_Fparam")
 ...
@@ -125,7 +125,7 @@ Name of Record-Route header parameter that will be used to store
 					"vst".*
 
 
-```opensips title="Set rr_to_store_param parameter"
+```c title="Set rr_to_store_param parameter"
 ...
 modparam("uac","rr_to_store_param","my_Tparam")
 ...
@@ -142,7 +142,7 @@ Force create dialog if it is not created from the configuration script.
 Default value is no.
 
 
-```opensips title="Set force_dialog parameter"
+```c title="Set force_dialog parameter"
 ...
 modparam("uac", "force_dialog", yes)
 ...
@@ -254,7 +254,7 @@ This function can be used from FAILURE_ROUTE.
 				authenticating the initial INVITE though.
 
 
-```opensips title="uac_auth usage"
+```c title="uac_auth usage"
 ...
 uac_auth();
 ...

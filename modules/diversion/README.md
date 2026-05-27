@@ -54,7 +54,7 @@ The suffix to be appended to the end of the header field. You can use
 Default value is "" (empty string).
 
 
-```opensips title="suffix usage"
+```c title="suffix usage"
 modparam("diversion", "suffix", ";privacy=full")
 ```
 

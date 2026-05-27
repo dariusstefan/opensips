@@ -65,7 +65,7 @@ Time in milliseconds after a MSRP connection will be closed if it is
 *Default value is 100 ms.*
 
 
-```opensips title="Set send_timeout parameter"
+```c title="Set send_timeout parameter"
 ...
 modparam("proto_msrp", "send_timeout", 200)
 ...
@@ -86,7 +86,7 @@ The maximum number of chunks that a SIP message is expected to
 *Default value is 4.*
 
 
-```opensips title="Set max_msg_chunks parameter"
+```c title="Set max_msg_chunks parameter"
 ...
 modparam("proto_msrp", "max_msg_chunks", 8)
 ...
@@ -138,7 +138,7 @@ This checking is done only when comes to send SIP traffic via TLS and
 *Default value is 0 (disabled).*
 
 
-```opensips title="Set cert_check_on_conn_reusage parameter"
+```c title="Set cert_check_on_conn_reusage parameter"
 ...
 modparam("proto_msrp", "cert_check_on_conn_reusage", 1)
 ...
@@ -162,7 +162,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-```opensips title="Set trace_destination parameter"
+```c title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "hep_id", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -180,7 +180,7 @@ This controls whether tracing for MSRP is on or not. You still need
 		[msrp trace](#msrp-trace).
 
 
-```opensips title="Set trace_on parameter"
+```c title="Set trace_on parameter"
 ...
 modparam("proto_msrp", "trace_on", 1)
 ...
@@ -215,7 +215,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-```opensips title="Set trace_filter_route parameter"
+```c title="Set trace_filter_route parameter"
 ...
 modparam("proto_msrp", "trace_filter_route", "msrp_filter")
 ...

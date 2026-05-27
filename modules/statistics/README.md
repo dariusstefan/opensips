@@ -102,7 +102,7 @@ Name of a new statistic variable. The name may be followed by additional
 - *no_reset* : variable cannot be reset.
 
 
-```opensips title="variable example"
+```c title="variable example"
 modparam("statistics", "variable", "register_counter")
 modparam("statistics", "variable", "active_calls/no_reset")
 ```
@@ -116,7 +116,7 @@ A comma-separated values string, specifying the statistic groups that
 		trailing whitespace characters.
 
 
-```opensips title="setting the stat_groups parameter"
+```c title="setting the stat_groups parameter"
 modparam("statistics", "stat_groups", "method, packet, response")
 ```
 
@@ -159,7 +159,7 @@ Used to define a statistic series profile. Has the following format:
 This parameter can be set multiple times, for each profile needed.
 
 
-```opensips title="setting the stat_series_profile parameter"
+```c title="setting the stat_series_profile parameter"
 ...
 # define a statistic that accumulates average values in the last minute
 modparam("statistics", "stat_series_profile", "avg: algorithm=average")
@@ -345,7 +345,7 @@ If a searching group is not provided, the statistic is first
 			grouped statistics which are not exported by the OpenSIPS core.
 
 
-```opensips title="$stat usage"
+```c title="$stat usage"
 ...
 xlog("SHM used size = $stat(used_size), no_invites = $stat(method:invite)\n");
 ...

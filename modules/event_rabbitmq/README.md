@@ -110,7 +110,7 @@ Enables heartbeat support for the AMQP communication. If the
 *Default value is "0 (disabled)".*
 
 
-```opensips title="Set heartbeat parameter"
+```c title="Set heartbeat parameter"
 ...
 modparam("event_rabbitmq", "heartbeat", 3)
 ...
@@ -127,7 +127,7 @@ The maximally allowed duration (in milliseconds) for the establishment
 *Default value is "500" (milliseconds).*
 
 
-```opensips title="Setting the connect_timeout parameter"
+```c title="Setting the connect_timeout parameter"
 ...
 modparam("event_rabbitmq", "connect_timeout", 1000)
 ...
@@ -152,7 +152,7 @@ When using this parameter, you must also ensure that
 *Default value is **0** (not enabled)*
 
 
-```opensips title="Set the use_tls parameter"
+```c title="Set the use_tls parameter"
 ...
 modparam("tls_mgm", "client_domain", "rmq")
 modparam("tls_mgm", "certificate", "[rmq]/etc/pki/tls/certs/rmq.pem")
@@ -180,7 +180,7 @@ Indicates the timeout (in milliseconds) of any command (i.e. publish)
 *Default value is **0** (no timeout - blocking mode)*
 
 
-```opensips title="Set the timeout parameter"
+```c title="Set the timeout parameter"
 ...
 modparam("event_rabbitmq", "timeout", 1000) # timeout after 1s
 ...
@@ -235,7 +235,7 @@ This configuration file presents the usage of the event_rabbitmq
 			body.
 
 
-```opensips title="OpenSIPS config script - sample event_rabbitmq usage"
+```c title="OpenSIPS config script - sample event_rabbitmq usage"
 ...
 loadmodule "signaling.so"
 loadmodule "sl.so"

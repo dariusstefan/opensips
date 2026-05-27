@@ -14,7 +14,7 @@ gflags module (global flags) keeps a bitmap of flags in shared memory
 	Example:
 
 
-```opensips
+```c
 	if (is_gflag(1)) {
 		t_relay("udp:10.0.0.1:5060");
 	} else {
@@ -57,7 +57,7 @@ The initial value of global flags bitmap.
 Default value is "0".
 
 
-```opensips title="initial parameter usage"
+```c title="initial parameter usage"
 modparam("gflags", "initial", 15)
 		
 ```

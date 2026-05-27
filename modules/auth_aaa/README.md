@@ -94,7 +94,7 @@ This is the url representing the AAA protocol used and the location of the confi
 The syntax for the url is the following: "name_of_the_aaa_protocol_used:path_of_the_configuration_file"
 
 
-```opensips title="aaa_url parameter usage"
+```c title="aaa_url parameter usage"
 		
 modparam("auth_aaa", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 		
@@ -114,7 +114,7 @@ This is the value of the Service-Type aaa attribute to be used when
 Default value is "15".
 
 
-```opensips title="auth_service_type parameter usage"
+```c title="auth_service_type parameter usage"
 		
 modparam("auth_aaa", "auth_service_type", 15)
 		
@@ -131,7 +131,7 @@ AAA service type used by `aaa_does_uri_exist` and
 *Default value is 10 (Call-Check).*
 
 
-```opensips title="Set check_service_type parameter"
+```c title="Set check_service_type parameter"
 ...
 modparam("auth_aaa", "check_service_type", 11)
 ...
@@ -154,7 +154,7 @@ When this parameter is set to the value other than "NULL" and the
 Default value is "NULL" (not set).
 
 
-```opensips title="use_ruri_flag parameter usage"
+```c title="use_ruri_flag parameter usage"
 		
 modparam("auth_aaa", "use_ruri_flag", "USE_RURI_FLAG")
 		

@@ -159,7 +159,7 @@ A regular expression used to specify the codes that should prevent
 *By default any negative reply generates a failover.*
 
 
-```opensips title="Set skip_failover_codes parameter"
+```c title="Set skip_failover_codes parameter"
 ...
 # do not failover on 408 reply codes
 modparam("siprec", "skip_failover_codes", "408")
@@ -217,7 +217,7 @@ The function returns false when an internal error is triggered
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="Use siprec_start_recording() function with a single SRS"
+```c title="Use siprec_start_recording() function with a single SRS"
 	...
 	if (!has_totag() && is_method("INVITE")) {
 		$var(srs) = "sip:127.0.0.1";
@@ -229,7 +229,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-```opensips title="Use siprec_start_recording() function with multiple SRS servers"
+```c title="Use siprec_start_recording() function with multiple SRS servers"
 	...
 	if (!has_totag() && is_method("INVITE")) {
 		$var(srs) = "sip:127.0.0.1, sip:127.0.0.1;transport=TCP";
@@ -278,7 +278,7 @@ Pauses the recording for the ongoing call. Should be called after
 This function can be used from any route.
 
 
-```opensips title="Use siprec_pause_recording()"
+```c title="Use siprec_pause_recording()"
 	...
 	if (has_totag() && is_method("INVITE")) {
 		if (is_audio_on_hold())
@@ -299,7 +299,7 @@ Resumes the recording for the ongoing call. Should be called after
 This function can be used from any route.
 
 
-```opensips title="Use siprec_resume_recording()"
+```c title="Use siprec_resume_recording()"
 	...
 	if (has_totag() && is_method("INVITE")) {
 		if (!is_audio_on_hold())
