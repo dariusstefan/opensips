@@ -166,8 +166,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-```c title="Use call_blind_replace() function to match
-					an existing leg."
+```c title="Use call_blind_replace() function to match an existing leg."
 ...
 if (!has_totag() && is_method("INVITE")) {
 	if (cache_fetch("local", "callid_$si", $avp(callid))) {
@@ -194,8 +193,7 @@ Note that if the function successfully handles the NOTIFY request,
 This function can be used from a request route, failure route and local route.
 
 
-```c title="Use call_transfer_notify() function to handle
-					NOTIFY refer requests."
+```c title="Use call_transfer_notify() function to handle NOTIFY refer requests."
 ...
 if (has_totag() && is_method("NOTIFY") && loose_route()) {
 	call_transfer_notify();
@@ -226,8 +224,7 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-```c title="Use call_transfer() function to do a blind
-					transfer of the caller to a new destination."
+```c title="Use call_transfer() function to do a blind transfer of the caller to a new destination."
 ...
 if (has_totag() && && loose_route()) {
 	call_transfer("caller", "sip:announcement@127.0.0.1");
@@ -265,8 +262,7 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-```c title="Use call_transfer() function to do an
-					attended transfer of the caller to the callee of a different call."
+```c title="Use call_transfer() function to do an attended transfer of the caller to the callee of a different call."
 ...
 if (has_totag() && && loose_route()) {
 	call_transfer("caller", "ba55b1b3-459d-4e84-a6f8-14c40e4f6ace", "callee");

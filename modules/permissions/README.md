@@ -525,8 +525,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-```c title="check_address()
-		 usage"
+```c title="check_address() usage"
 ...
 
 // Checks if the tuple IP address/port (given as strings) and source protocol
