@@ -138,10 +138,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-**Example: rtp_relay_engage usage**
-
-
-```opensips
+```opensips title="rtp_relay_engage usage"
 ...
 if (is_method("INVITE") && !has_totag()) {
 	xlog("SCRIPT: engaging RTPProxy relay for all branches\n");
@@ -177,10 +174,7 @@ Parameters:
 					parameter must also be specified.
 
 
-**Example: rtp_relay_list usage**
-
-
-```
+```c title="rtp_relay_list usage"
 ...
 ## list all sessions
 $ opensips-cli -x mi rtp_relay_list
@@ -243,10 +237,7 @@ Parameters:
 					same set will be used.
 
 
-**Example: rtp_relay_update usage**
-
-
-```
+```c title="rtp_relay_update usage"
 ...
 ## update all sessions that are using rtpproxy
 $ opensips-cli -x mi rtp_relay_update rtpproxy
@@ -292,10 +283,7 @@ Parameters:
 					explicitely specified flags will be overwritten.
 
 
-**Example: rtp_relay_update_callid usage**
-
-
-```
+```c title="rtp_relay_update_callid usage"
 ...
 ## update a call with a working RTPproxy node
 $ opensips-cli -x mi rtp_relay_update_callid 1-3758963@127.0.0.1 rtpproxy

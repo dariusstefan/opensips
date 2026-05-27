@@ -210,10 +210,7 @@ This parameter can have multiple values, for each server
 *Default value is "None".*
 
 
-**Example: Set cgrates_engine parameter**
-
-
-```opensips
+```opensips title="Set cgrates_engine parameter"
 ...
 modparam("cgrates", "cgrates_engine", "127.0.0.1")
 modparam("cgrates", "cgrates_engine", "127.0.0.1:2013")
@@ -234,10 +231,7 @@ IP used to bind the socket that communicates with the
 *Default value is "not set - any IP is used".*
 
 
-**Example: Set bind_ip parameter**
-
-
-```opensips
+```opensips title="Set bind_ip parameter"
 ...
 modparam("cgrates", "bind_ip", "10.0.0.100")
 ...
@@ -254,10 +248,7 @@ The maximum number of simultaneous asynchronous connections
 *Default value is "10".*
 
 
-**Example: Set max_async_connections parameter**
-
-
-```opensips
+```opensips title="Set max_async_connections parameter"
 ...
 modparam("cgrates", "max_async_connections", 20)
 ...
@@ -274,10 +265,7 @@ The number of seconds after which a disabled connection/engine
 *Default value is "60".*
 
 
-**Example: Set retry_timeout parameter**
-
-
-```opensips
+```opensips title="Set retry_timeout parameter"
 ...
 modparam("cgrates", "retry_timeout", 120)
 ...
@@ -294,10 +282,7 @@ Indicates whether OpenSIPS should use the old (compat_mode)
 *Default value is "false (0)".*
 
 
-**Example: Set compat_mode parameter**
-
-
-```opensips
+```opensips title="Set compat_mode parameter"
 ...
 modparam("cgrates", "compat_mode", 1)
 ...
@@ -372,10 +357,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: cgrates_acc() usage**
-
-
-```
+```c title="cgrates_acc() usage"
 		...
 		if (!has_totag()) {
 			...
@@ -427,10 +409,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-**Example: cgrates_auth() usage**
-
-
-```opensips
+```opensips title="cgrates_auth() usage"
 		...
 		if (!has_totag()) {
 			...
@@ -445,10 +424,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 ```
 
 
-**Example: cgrates_auth() usage with attributes parsing**
-
-
-```opensips
+```opensips title="cgrates_auth() usage with attributes parsing"
 		...
 		if (!has_totag()) {
 			...
@@ -504,10 +480,7 @@ The function can return the following values:
 This function can be used from any route.
 
 
-**Example: cgrates_cmd() usage**
-
-
-```opensips
+```opensips title="cgrates_cmd() usage"
 		...
 		# cgrates_auth($fU, $rU); simulation
 		$cgr_opt(Tenant) = $fd;
@@ -561,10 +534,7 @@ When assigned with the *:=* operator,
 				the JSON, the value is sent as a string.
 
 
-**Example: $cgr(name) simple usage**
-
-
-```opensips
+```opensips title="$cgr(name) simple usage"
 		...
 		if (!has_totag()) {
 			...
@@ -581,10 +551,7 @@ When assigned with the *:=* operator,
 ```
 
 
-**Example: $cgr(name) multiple sessions usage**
-
-
-```opensips
+```opensips title="$cgr(name) multiple sessions usage"
 		...
 		if (!has_totag()) {
 			...
@@ -638,10 +605,7 @@ Possible values at the time the documentation was written:
 						all the suppliers for that can terminate that call.
 
 
-**Example: $cgr_opt(name) usage**
-
-
-```
+```c title="$cgr_opt(name) usage"
 		...
 		$cgr_opt(Tenant) = "cgrates.org";
 		$cgr_opt(GetMaxUsage) = 1; # also retrieve the max usage
@@ -661,10 +625,7 @@ Returns the reply message of a CGRateS command in script,
 				within the reply.
 
 
-**Example: $cgr_ret(name) usage**
-
-
-```opensips
+```opensips title="$cgr_ret(name) usage"
 		...
 		cgrates_auth("$fU", "$rU");
 
@@ -717,10 +678,7 @@ The function can return the following values:
 - *-5* - CGRateS returned an invalid message.
 
 
-**Example: async cgrates_auth usage**
-
-
-```opensips
+```opensips title="async cgrates_auth usage"
 route {
 	...
 	async(cgrates_auth("$fU", "$rU"), auth_reply);
@@ -768,10 +726,7 @@ The function can return the following values:
 				message type (not an initial INVITE).
 
 
-**Example: async cgrates_cmd compat_mode usage**
-
-
-```opensips
+```opensips title="async cgrates_cmd compat_mode usage"
 route {
 	...
 	$cgr(Tenant) = $fd;
@@ -795,10 +750,7 @@ route [auth_reply]
 ```
 
 
-**Example: async cgrates_cmd new usage**
-
-
-```opensips
+```opensips title="async cgrates_cmd new usage"
 route {
 	...
 	$cgr_opt(Tenant) = $fd;

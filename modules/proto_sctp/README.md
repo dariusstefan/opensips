@@ -58,10 +58,7 @@ If you want to change only the listening port for STP, use the port
 *Default value is 5060.*
 
 
-**Example: Set sctp_port parameter**
-
-
-```opensips
+```opensips title="Set sctp_port parameter"
 ...
 modparam("proto_sctp", "sctp_port", 5070)
 ...

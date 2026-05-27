@@ -1,6 +1,6 @@
 ---
 title: "gflags Module"
-description: "gflags module (global flags) keeps a bitmap of flags in shared memory and may be used to change behaviour of server based on value of the flags. Example: ``` if (is_gflag(1)) { t_relay(\"udp:10.0.0.1:5060\"); } else { t_relay(\"udp:10.0.0.2:5060\"); } ```"
+description: "gflags module (global flags) keeps a bitmap of flags in shared memory and may be used to change behaviour of server based on value of the flags. Example: ```c if (is_gflag(1)) { t_relay(\"udp:10.0.0.1:5060\"); } else { t_relay(\"udp:10.0.0.2:5060\"); } ```"
 ---
 
 ## Admin Guide
@@ -57,10 +57,7 @@ The initial value of global flags bitmap.
 Default value is "0".
 
 
-**Example: initial parameter usage**
-
-
-```opensips
+```opensips title="initial parameter usage"
 modparam("gflags", "initial", 15)
 		
 ```
@@ -81,10 +78,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: set_gflag() usage**
-
-
-```
+```c title="set_gflag() usage"
 ...
 set_gflag(4);
 ...
@@ -103,10 +97,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: reset_gflag() usage**
-
-
-```
+```c title="reset_gflag() usage"
 ...
 reset_gflag(4);
 ...
@@ -126,10 +117,7 @@ The "flag" (int) parameter can have a value in the range of 0..31.
 This function may be used from any route.
 
 
-**Example: is_gflag() usage**
-
-
-```
+```c title="is_gflag() usage"
 ...
 if(is_gflag(4))
 {
@@ -161,10 +149,7 @@ The parameter value must be a bitmask in decimal or hexa format.
 			The bitmaks has a 32 bit size.
 
 
-**Example: set_gflag usage**
-
-
-```
+```c title="set_gflag usage"
 ...
 $ opensips-cli -x mi set_gflag 1
 $ opensips-cli -x mi set_gflag 0x3
@@ -182,10 +167,7 @@ The parameter value must be a bitmask in decimal or hexa format.
 			The bitmaks has a 32 bit size.
 
 
-**Example: reset_gflag usage**
-
-
-```
+```c title="reset_gflag usage"
 ...
 $ opensips-cli -x mi reset_gflag 1
 $ opensips-cli -x mi reset_gflag 0x3
@@ -207,10 +189,7 @@ The function returns TRUE if all the flags from the set are set
 			and FALSE if at least one is not set.
 
 
-**Example: is_gflag usage**
-
-
-```
+```c title="is_gflag usage"
 ...
 $ opensips-cli -x mi set_gflag 1024
 $ opensips-cli -x mi is_gflag 1024
@@ -237,10 +216,7 @@ Return the bitmap with all flags. The function gets no
 			parameters and returns the bitmap in hexa and decimal format.
 
 
-**Example: get_gflags usage**
-
-
-```
+```c title="get_gflags usage"
 ...
 $ opensips-cli -x mi get_gflags
 0x3039

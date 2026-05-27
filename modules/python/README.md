@@ -44,7 +44,7 @@ A minimal example of a Python script that satisfies these requirements
 		is:
 
 
-```
+```c
 	def mod_init():
 		return SIPMsg()
 
@@ -129,10 +129,7 @@ The script that contains the Python module.
 *Default value is "/usr/local/etc/opensips/handler.py".*
 
 
-**Example: Set script_name parameter**
-
-
-```opensips
+```opensips title="Set script_name parameter"
 ...
 modparam("python", "script_name", "/usr/local/bin/opensips_handler.py")
 ...
@@ -148,10 +145,7 @@ The method used to initialize the Python module and return the object.
 *Default value is "mod_init".*
 
 
-**Example: Set mod_init_function parameter**
-
-
-```opensips
+```opensips title="Set mod_init_function parameter"
 ...
 modparam("python", "mod_init_function", "module_initializer")
 ...
@@ -167,10 +161,7 @@ The method called for each child process.
 *Default value is "child_init".*
 
 
-**Example: Set child_init_method parameter**
-
-
-```opensips
+```opensips title="Set child_init_method parameter"
 ...
 modparam("python", "child_init_method", "child_initializer")
 ...

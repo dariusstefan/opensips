@@ -187,10 +187,7 @@ SQL address to the DB server -- database specific. This must be
 		and cc_calls tables).
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("call_center", "db_url", 
 	"mysql://opensips:opensipsrw@localhost/opensips")
@@ -205,10 +202,7 @@ SQL address to the DB server -- database specific. This must be
 		the Database where the CDRs table (cc_cdrs) is located.
 
 
-**Example: Set acc_db_url parameter**
-
-
-```opensips
+```opensips title="Set acc_db_url parameter"
 ...
 modparam("call_center", "acc_db_url", 
 	"mysql://opensips:opensipsrw@localhost/opensips_cdrs")
@@ -226,10 +220,7 @@ SQL address/URL of the DB server (database specific) where the
 		table we have so far is the "cc_calls" table.
 
 
-**Example: Set rt_db_url parameter**
-
-
-```opensips
+```opensips title="Set rt_db_url parameter"
 ...
 modparam("call_center", "rt_db_url", 
 	"mysql://opensips:opensipsrw@localhost/opensips_runtime")
@@ -252,10 +243,7 @@ This value may be overwritten by the per-agent value (if defined)
 *Default value is "30 seconds".*
 
 
-**Example: Set wrapup_time parameter**
-
-
-```opensips
+```opensips title="Set wrapup_time parameter"
 ...
 modparam("call_center", "wrapup_time", 45)
 ...
@@ -274,10 +262,7 @@ The name of an SIP URI parameter to be used to report the position
 *Default value is "empty(none)".*
 
 
-**Example: Set queue_pos_param parameter**
-
-
-```opensips
+```opensips title="Set queue_pos_param parameter"
 ...
 modparam("call_center", "queue_pos_param", "cc_pos")
 ...
@@ -295,10 +280,7 @@ A parameter to tell if an incoming call should be rejected or
 *Default value is "1 (true)".*
 
 
-**Example: Set reject_on_no_agents parameter**
-
-
-```opensips
+```opensips title="Set reject_on_no_agents parameter"
 ...
 modparam("call_center", "reject_on_no_agents", 0)
 ...
@@ -333,10 +315,7 @@ Options are:
 *Default value is "balancing".*
 
 
-**Example: Set chat_dispatch_policy parameter**
-
-
-```opensips
+```opensips title="Set chat_dispatch_policy parameter"
 ...
 modparam("call_center", "chat_dispatch_policy", "balancing")
 ...
@@ -360,10 +339,7 @@ A parameter to tell if the internal/buit-in call dispatching to agent
 *Default value is "1" (enabled).*
 
 
-**Example: Set internal_call_dispatching parameter**
-
-
-```opensips
+```opensips title="Set internal_call_dispatching parameter"
 ...
 modparam("call_center", "internal_call_dispatching", 0)
 ...
@@ -379,10 +355,7 @@ Name to be used for the table holding the agents.
 *Default value is "cc_agents".*
 
 
-**Example: Set cc_agents_table parameter**
-
-
-```opensips
+```opensips title="Set cc_agents_table parameter"
 ...
 modparam("call_center", "cc_agents_table", "my_agents")
 ...
@@ -399,10 +372,7 @@ Name to be used for the "agent id" (unique DB id) column in the
 *Default value is "agentid".*
 
 
-**Example: Set cca_agentid_column parameter**
-
-
-```opensips
+```opensips title="Set cca_agentid_column parameter"
 ...
 modparam("call_center", "cca_agentid_column", "cid")
 ...
@@ -419,10 +389,7 @@ Name to be used for the calling/audio "location" (SIP URI) column in
 *Default value is "location".*
 
 
-**Example: Set cca_location_column parameter**
-
-
-```opensips
+```opensips title="Set cca_location_column parameter"
 ...
 modparam("call_center", "cca_location_column", "sip_uri")
 ...
@@ -439,10 +406,7 @@ Name to be used for the msrp/chat "location" (SIP URI) column in the
 *Default value is "msrp_location".*
 
 
-**Example: Set cca_msrp_location_column parameter**
-
-
-```opensips
+```opensips title="Set cca_msrp_location_column parameter"
 ...
 modparam("call_center", "cca_msrp_location_column", "sip_uri")
 ...
@@ -459,10 +423,7 @@ Name to be used for the column (in the agents table) holding the
 *Default value is "msrp_max_sessions".*
 
 
-**Example: Set cca_msrp_max_sessions_column parameter**
-
-
-```opensips
+```opensips title="Set cca_msrp_max_sessions_column parameter"
 ...
 modparam("call_center", "cca_msrp_max_sessions_column", "max_chats")
 ...
@@ -479,10 +440,7 @@ Name to be used for the "skills" (list of skills) column in the
 *Default value is "skills".*
 
 
-**Example: Set cca_skills_column parameter**
-
-
-```opensips
+```opensips title="Set cca_skills_column parameter"
 ...
 modparam("call_center", "cca_skills_column", "skills")
 ...
@@ -499,10 +457,7 @@ Name to be used for the "logstate" (original login state) column in the
 *Default value is "logstate".*
 
 
-**Example: Set cca_logstate_column parameter**
-
-
-```opensips
+```opensips title="Set cca_logstate_column parameter"
 ...
 modparam("call_center", "cca_logstate_column", "log_state")
 ...
@@ -519,10 +474,7 @@ Name to be used for the "wrapuptime" (per-agent wrapup time) column
 *Default value is "wrapup_time".*
 
 
-**Example: Set cca_wrapuptime_column parameter**
-
-
-```opensips
+```opensips title="Set cca_wrapuptime_column parameter"
 ...
 modparam("call_center", "cca_wrapuptime_column", "wtime")
 ...
@@ -539,10 +491,7 @@ Name to be used for the "wrapupend" (timestamp when the wrapup ends)
 *Default value is "wrapup_end_time".*
 
 
-**Example: Set cca_wrapupend_column parameter**
-
-
-```opensips
+```opensips title="Set cca_wrapupend_column parameter"
 ...
 modparam("call_center", "cca_wrapupend_column", "wrapup_ends")
 ...
@@ -559,10 +508,7 @@ Name to be used for the table holding the definition of the
 *Default value is "cc_flows".*
 
 
-**Example: Set cc_flows_table parameter**
-
-
-```opensips
+```opensips title="Set cc_flows_table parameter"
 ...
 modparam("call_center", "cc_flows_table", "queues")
 ...
@@ -579,10 +525,7 @@ Name to be used for the "flow id" (unique DB id) column in the
 *Default value is "flowid".*
 
 
-**Example: Set ccf_flowid_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_flowid_column parameter"
 ...
 modparam("call_center", "ccf_flowid_column", "queue_id")
 ...
@@ -599,10 +542,7 @@ Name to be used for the "priority" column in the
 *Default value is "priority".*
 
 
-**Example: Set ccf_priority_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_priority_column parameter"
 ...
 modparam("call_center", "ccf_priority_column", "queue_prio")
 ...
@@ -619,10 +559,7 @@ Name to be used for the "skill" column in the
 *Default value is "skill".*
 
 
-**Example: Set ccf_skill_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_skill_column parameter"
 ...
 modparam("call_center", "ccf_skill_column", "queue_skill")
 ...
@@ -639,10 +576,7 @@ Name to be used for the "caller ID prefix" column in the
 *Default value is "prependcid".*
 
 
-**Example: Set ccf_cid_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_cid_column parameter"
 ...
 modparam("call_center", "ccf_cid_column", "queue_cli_prefix")
 ...
@@ -659,10 +593,7 @@ Name to be used for the "max limit for wrapup time" column in the
 *Default value is "max_wrapup_time".*
 
 
-**Example: Set ccf_max_wrapup_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_max_wrapup_column parameter"
 ...
 modparam("call_center", "ccf_max_wrapup_column", "queue_wrapup")
 ...
@@ -679,10 +610,7 @@ Name to be used for the "hangup after dissuading" column in the
 *Default value is "dissuading_hangup".*
 
 
-**Example: Set ccf_dissuading_hangup_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_dissuading_hangup_column parameter"
 ...
 modparam("call_center", "ccf_dissuading_hangup_column", "hangup_on_dissuading")
 ...
@@ -699,10 +627,7 @@ Name to be used for the "on-hold dissuading threshold" column in the
 *Default value is "dissuading_onhold_th".*
 
 
-**Example: Set ccf_dissuading_onhold_th_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_dissuading_onhold_th_column parameter"
 ...
 modparam("call_center", "ccf_dissuading_onhold_th_column", "th_diss_onhold")
 ...
@@ -719,10 +644,7 @@ Name to be used for the "EWT dissuading threshold" column in the
 *Default value is "dissuading_ewt_th".*
 
 
-**Example: Set ccf_dissuading_ewt_th_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_dissuading_ewt_th_column parameter"
 ...
 modparam("call_center", "ccf_dissuading_ewt_th_column", "th_diss_ewt")
 ...
@@ -739,10 +661,7 @@ Name to be used for the "queue size dissuading threshold" column in the
 *Default value is "dissuading_qsize_th".*
 
 
-**Example: Set ccf_dissuading_qsize_th_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_dissuading_qsize_th_column parameter"
 ...
 modparam("call_center", "ccf_dissuading_qsize_th_column", "th_diss_qsize")
 ...
@@ -759,10 +678,7 @@ Name to be used for the "audio message on welcome" column in the
 *Default value is "message_welcome".*
 
 
-**Example: Set ccf_m_welcome_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_m_welcome_column parameter"
 ...
 modparam("call_center", "ccf_m_welcome_column", "audio_welcome")
 ...
@@ -779,10 +695,7 @@ Name to be used for the "audio message on queueing" column in the
 *Default value is "message_queue".*
 
 
-**Example: Set ccf_m_queue_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_m_queue_column parameter"
 ...
 modparam("call_center", "ccf_m_queue_column", "audio_queue")
 ...
@@ -799,10 +712,7 @@ Name to be used for the "audio message on dissuading" column in the
 *Default value is "message_dissuading".*
 
 
-**Example: Set ccf_m_dissuading_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_m_dissuading_column parameter"
 ...
 modparam("call_center", "ccf_m_dissuading_column", "audio_dissuading")
 ...
@@ -819,10 +729,7 @@ Name to be used for the "audio message on identifying the flow" column
 *Default value is "message_flow_id".*
 
 
-**Example: Set ccf_m_flow_id_column parameter**
-
-
-```opensips
+```opensips title="Set ccf_m_flow_id_column parameter"
 ...
 modparam("call_center", "ccf_m_flow_id_column", "audio_flow_id")
 ...
@@ -846,10 +753,7 @@ This parameter will be copied throughout all the B2B scenarios started
 *Default value is "call_center".*
 
 
-**Example: Set b2b_logic_ctx_param parameter**
-
-
-```opensips
+```opensips title="Set b2b_logic_ctx_param parameter"
 ...
 modparam("call_center", "b2b_logic_ctx_param", "b2b_callid")
 ...
@@ -916,10 +820,7 @@ In case of error, FALSE is returned to the script with the following
 - **-5** - internal error;
 
 
-**Example: cc_handle_call usage**
-
-
-```opensips
+```opensips title="cc_handle_call usage"
 ...
 if (is_method("INVITE") and !has_totag()) {
 	if (!cc_handle_call("tech_support")) {
@@ -948,10 +849,7 @@ Parameters:
 				the new state - 0 means logged off, anything else means logged in.
 
 
-**Example: cc_agent_login usage**
-
-
-```
+```c title="cc_agent_login usage"
 ...
 # log off the 'agentX' agent
 cc_agent_login("agentX",0);
@@ -1154,7 +1052,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_reload
 ```
 
@@ -1175,7 +1073,7 @@ Parameters:
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_agent_login agentX 0
 ```
 
@@ -1196,7 +1094,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_list_queue
 ```
 
@@ -1216,7 +1114,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_list_flows
 ```
 
@@ -1235,7 +1133,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_list_agents
 ```
 
@@ -1255,7 +1153,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_list_agents
 ```
 
@@ -1292,7 +1190,7 @@ IMPORTANT: in order to be used, you need to be sure that the internal
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_dispatch_call_to_agent B2B452.dee2.33 agentX
 ```
 
@@ -1312,7 +1210,7 @@ It takes one optional parameter `dispatching` if the
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_internal_call_dispatching 0
 ```
 
@@ -1329,7 +1227,7 @@ It takes no parameter.
 MI FIFO Command usage:
 
 
-```
+```c
 opensips-cli -x mi cc_reset_stats
 ```
 
@@ -1376,7 +1274,7 @@ Parameters:
 		
 		$rtpquery Usage
 		
-```
+```c
 
 ...
 	$json(reply) := $rtpquery;

@@ -117,10 +117,7 @@ The size of the hash table used for storing Subscribe and
 *Default value is "9".*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("pua", "hash_size", 11)
 ...
@@ -136,10 +133,7 @@ Database url.
 *Default value is ">mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("pua", "db_url" "dbdriver://username:password@dbhost/dbname")
 ...
@@ -155,10 +149,7 @@ The name of the database table.
 *Default value is "pua".*
 
 
-**Example: Set db_table parameter**
-
-
-```opensips
+```opensips title="Set db_table parameter"
 ...
 modparam("pua", "db_table", "pua")
 ...
@@ -174,10 +165,7 @@ The inferior expires limit for both Publish and Subscribe.
 *Default value is "300".*
 
 
-**Example: Set min_expires parameter**
-
-
-```opensips
+```opensips title="Set min_expires parameter"
 ...
 modparam("pua", "min_expires", 0)
 ...
@@ -193,10 +181,7 @@ The default expires value used in case this information is not provisioned.
 *Default value is "3600".*
 
 
-**Example: Set default_expires parameter**
-
-
-```opensips
+```opensips title="Set default_expires parameter"
 ...
 modparam("pua", "default_expires", 3600)
 ...
@@ -218,10 +203,7 @@ IMPORTANT - if you use clustering support for this module, set a low
 		value here, like 2-5, see the clustering chapter above.
 
 
-**Example: Set update_period parameter**
-
-
-```opensips
+```opensips title="Set update_period parameter"
 ...
 modparam("pua", "update_period", 100)
 ...
@@ -244,10 +226,7 @@ For more on PUA clustering see the
 *Default value is "None".*
 
 
-**Example: Set cluster_id parameter**
-
-
-```opensips
+```opensips title="Set cluster_id parameter"
 ...
 modparam("pua", "cluster_id", 10)
 ...
@@ -273,10 +252,7 @@ For more on PUA clustering see the
 *Default value is "NULL".*
 
 
-**Example: Set cluster_sharing_tag parameter**
-
-
-```opensips
+```opensips title="Set cluster_sharing_tag parameter"
 ...
 modparam("pua", "cluster_sharing_tag", "vip")
 ...
@@ -307,10 +283,7 @@ This function can be used from REQUEST_ROUTE.
 - *-1 - if error*.
 
 
-**Example: pua_update_contact usage**
-
-
-```
+```c title="pua_update_contact usage"
 ...
 if($rm=="NOTIFY")
     pua_update_contact();
@@ -342,10 +315,7 @@ This function binds the pua modules and fills the structure
 				with the two exported function.
 
 
-**Example: pua_api structure**
-
-
-```
+```c title="pua_api structure"
 ...
 typedef struct pua_api {
 	send_subscribe_t send_subscribe;
@@ -364,7 +334,7 @@ typedef struct pua_api {
 Field type:
 
 
-```
+```c
 ...
 typedef int (*send_publish_t)(publ_info_t* publ);
 ...
@@ -379,7 +349,7 @@ This function receives as a parameter a structure with Publish
 The structure received as a parameter:
 
 
-```
+```c
 ...
 typedef struct publ_info
 
@@ -422,7 +392,7 @@ typedef struct publ_info
 The callback function type:
 
 
-```
+```c
 ...
 typedef int (publrpl_cb_t)(struct sip_msg* reply, void*  extra_param);
 ...
@@ -436,7 +406,7 @@ typedef int (publrpl_cb_t)(struct sip_msg* reply, void*  extra_param);
 Field type:
 
 
-```
+```c
 ...
 typedef int (*send_subscribe_t)(subs_info_t* subs);
 ...
@@ -450,7 +420,7 @@ This function receives as a parameter a structure with Subscribe
 The structure received as a parameter:
 
 
-```
+```c
 ...
 typedef struct subs_info
 
@@ -487,7 +457,7 @@ typedef struct subs_info
 Field type:
 
 
-```
+```c
 ...
 typedef int  (*query_dialog_t)(ua_pres_t* presentity);
 ...
@@ -499,10 +469,7 @@ This function checks is the parameter corresponds to a stored
 			Subscribe initiated dialog.
 
 
-**Example: pua_is_dialog usage example**
-
-
-```
+```c title="pua_is_dialog usage example"
 ...	
 	if(pua_is_dialog(dialog) < 0)
 	{
@@ -519,7 +486,7 @@ This function checks is the parameter corresponds to a stored
 Field type:
 
 
-```
+```c
 ...
 typedef int (*register_puacb_t)(int types, pua_cb f, void* param );
 ...
@@ -536,10 +503,7 @@ This function registers a callback to be called on receiving the reply message
 			reply message.
 
 
-**Example: register_puacb usage example**
-
-
-```
+```c title="register_puacb usage example"
 ...
 	if(pua.register_puacb(XMPP_SUBSCRIBE, Sipreply2Xmpp, NULL) & 0)
 	{
@@ -557,7 +521,7 @@ This function registers a callback to be called on receiving the reply message
 Field type:
 
 
-```
+```c
 ...
 typedef int (*add_pua_event_t)(int ev_flag, char* name, 
    char* content_type,evs_process_body_t* process_body);
@@ -583,7 +547,7 @@ This function allows registering new events to the pua module.
 Filed type for process_body:
 
 
-```
+```c
 ...
 typedef int (evs_process_body_t)(struct publ_info* publ, 
   str** final_body, int ver, str* tuple);
@@ -601,10 +565,7 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 ```
 
 
-**Example: add_event usage example**
-
-
-```
+```c title="add_event usage example"
 ...
 	if(pua.add_event((PRESENCE_EVENT, "presence", "application/pidf+xml", 
 				pres_process_body) & 0)

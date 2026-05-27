@@ -50,11 +50,8 @@ The following libraries or applications must be installed before running
 The URL for the CacheDB back-end to be used. It can be set more than one time.
 
 
-**Example: Set
-                    cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set
+                    cachedb_url parameter"
 ...
 modparam("db_cachedb","cachedb_url","mongodb:mycluster://127.0.0.1:27017/db.col")
 ...
@@ -71,10 +68,7 @@ modparam("db_cachedb","cachedb_url","mongodb:mycluster://127.0.0.1:27017/db.col"
 In order to achieve such a setup, one would have to  set the db_url parameter of the auth_db module to point to the DB_CACHEDB URL.
 
 
-**Example: OpenSIPS CFG Snippet for using DB_CACHEDB**
-
-
-```opensips
+```opensips title="OpenSIPS CFG Snippet for using DB_CACHEDB"
 loadmodule "auth_db.so"
 modparam("auth_db", "load_credentials", "$avp(user_rpid)=rpid")
 

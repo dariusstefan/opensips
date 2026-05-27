@@ -63,10 +63,7 @@ Specifies the root metrics path Promethus uses to query the stats:
 *The default value is "metrics".*
 
 
-**Example: Set root parameter**
-
-
-```opensips
+```opensips title="Set root parameter"
 ...
 modparam("prometheus", "root", "prometheus")
 ...
@@ -82,10 +79,7 @@ Appends a prefix to each statistic exported.
 *The default value is "opensips".*
 
 
-**Example: Set prefix parameter**
-
-
-```opensips
+```opensips title="Set prefix parameter"
 ...
 modparam("prometheus", "prefix", "opensips_1")
 ...
@@ -101,10 +95,7 @@ Appends a prefix to the name of the group the statistic belongs to.
 *The default value is "" (no group prefix).*
 
 
-**Example: Set group_prefix parameter**
-
-
-```opensips
+```opensips title="Set group_prefix parameter"
 ...
 modparam("prometheus", "group_prefix", "opensips")
 ...
@@ -121,10 +112,7 @@ Specifies the delimiter to be used to separate *prefix*
 *The default value is "_".*
 
 
-**Example: Set delimiter parameter**
-
-
-```opensips
+```opensips title="Set delimiter parameter"
 ...
 modparam("prometheus", "delimiter", "-")
 ...
@@ -140,10 +128,7 @@ Specifies the label used to store the group when *group_mode* is 2.
 *The default value is "group".*
 
 
-**Example: Set group_label parameter**
-
-
-```opensips
+```opensips title="Set group_label parameter"
 ...
 modparam("prometheus", "group_label", "grp")
 ...
@@ -170,10 +155,7 @@ group_label
 *The default value is 0 (do not specify the group).*
 
 
-**Example: Set group_mode parameter**
-
-
-```opensips
+```opensips title="Set group_mode parameter"
 ...
 modparam("prometheus", "group_mode", 1)
 ...
@@ -199,10 +181,7 @@ This parameter can be defined multiple times.
 *The default value is empty: no metric is exported.*
 
 
-**Example: Set statistics parameter**
-
-
-```opensips
+```opensips title="Set statistics parameter"
 ...
 # export the number of active dialogs and the load statistics class
 modparam("prometheus", "statistics", "active_dialogs load:")
@@ -256,10 +235,7 @@ This parameter can be defined multiple times, even for a single group.
 *The default value is empty: statistic name is provided.*
 
 
-**Example: Set statistics parameter**
-
-
-```opensips
+```opensips title="Set statistics parameter"
 ...
 # convert duration_gateway to stat duration with gateway as a label
 modparam("prometheus", "labels", "group: /^(.*)_(.*)$/\1:gateway=\"\2\"/")
@@ -276,10 +252,7 @@ Specifies the route name to be used to for adding custom prometheus information.
 *The default value is "" - no custom route called.*
 
 
-**Example: Set script_route parameter**
-
-
-```opensips
+```opensips title="Set script_route parameter"
 ...
 modparam("prometheus", "script_route", "my_custom_prometheus_route")
 ...
@@ -298,10 +271,7 @@ The AVP is expected to contain a JSON format, containing an array of arrays of c
 *The default value is "" - no custom route called.*
 
 
-**Example: Set script_route parameter**
-
-
-```opensips
+```opensips title="Set script_route parameter"
 ...
 modparam("prometheus", "script_route", "my_custom_prometheus_route")
 modparam("prometheus", "script_route_avp_result", "$avp(prometheus_out_json)")
@@ -353,10 +323,7 @@ In order to have Prometheus query OpenSIPS for statistics, you need to
 			module to listen on (default: *0.0.0.0:8888*).
 
 
-**Example: Prometheus Scrape Config**
-
-
-```
+```c title="Prometheus Scrape Config"
 scrape_configs:
   - job_name: opensips
 

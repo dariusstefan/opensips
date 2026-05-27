@@ -98,10 +98,7 @@ If set, the module is a fully operational
 *Default value is "NULL".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("presence", "db_url", 
 	"mysql://opensips:opensipsrw@192.168.2.132/opensips")
@@ -119,10 +116,7 @@ Setting this parameter enables a fallback to db mode of operation.
 		using the same database.
 
 
-**Example: Set fallback2db parameter**
-
-
-```opensips
+```opensips title="Set fallback2db parameter"
 ...
 modparam("presence", "fallback2db", 1)
 ...
@@ -154,10 +148,7 @@ For more on presence clustering see the
 *Default value is "None".*
 
 
-**Example: Set cluster_id parameter**
-
-
-```opensips
+```opensips title="Set cluster_id parameter"
 ...
 modparam("presence", "cluster_id", 2)
 ...
@@ -200,10 +191,7 @@ For more on presence clustering see the
 *Default value is "disabled".*
 
 
-**Example: Set cluster_federation_mode parameter**
-
-
-```opensips
+```opensips title="Set cluster_federation_mode parameter"
 ...
 modparam("presence", "cluster_federation_mode", "full-sharing")
 ...
@@ -225,10 +213,7 @@ For more on presence clustering see the
 *Default value is "empty" (meaning all).*
 
 
-**Example: Set cluster_pres_events parameter**
-
-
-```opensips
+```opensips title="Set cluster_pres_events parameter"
 ...
 modparam("presence", "cluster_pres_events" ,"presence, dialog;sla, message-summary")
 ...
@@ -261,10 +246,7 @@ For more on presence clustering see the
 *Default value is "empty" (not tag define).*
 
 
-**Example: Set cluster_be_active_shtag parameter**
-
-
-```opensips
+```opensips title="Set cluster_be_active_shtag parameter"
 ...
 modparam("presence", "cluster_be_active_shtag" ,"local_ha")
 ...
@@ -280,10 +262,7 @@ The extra time to store a subscription/publication.
 *Default value is "0".*
 
 
-**Example: Set expires_offset parameter**
-
-
-```opensips
+```opensips title="Set expires_offset parameter"
 ...
 modparam("presence", "expires_offset", 10)
 ...
@@ -300,10 +279,7 @@ The the maximum admissible expires value for SUBSCRIBE
 *Default value is "3600".*
 
 
-**Example: Set max_expires_subscribe parameter**
-
-
-```opensips
+```opensips title="Set max_expires_subscribe parameter"
 ...
 modparam("presence", "max_expires_subscribe", 3600)
 ...
@@ -320,10 +296,7 @@ The the maximum admissible expires value for PUBLISH
 *Default value is "3600".*
 
 
-**Example: Set max_expires_publish parameter**
-
-
-```opensips
+```opensips title="Set max_expires_publish parameter"
 ...
 modparam("presence", "max_expires_publish", 3600)
 ...
@@ -346,10 +319,7 @@ If set to an empty string, no username will be added to the contact and
 *Default value is "presence".*
 
 
-**Example: Set contact_user parameter**
-
-
-```opensips
+```opensips title="Set contact_user parameter"
 ...
 modparam("presence", "contact_user", "presence")
 ...
@@ -370,10 +340,7 @@ This parameter is a flag that should be set if permission rules
 *Default value is "0 ".*
 
 
-**Example: Set enable_sphere_check parameter**
-
-
-```opensips
+```opensips title="Set enable_sphere_check parameter"
 ...
 modparam("presence", "enable_sphere_check", 1)
 ...
@@ -395,10 +362,7 @@ The number of days to keep the record of a subscription in server
 			value is 30 days.*
 
 
-**Example: Set waiting_subs_daysno parameter**
-
-
-```opensips
+```opensips title="Set waiting_subs_daysno parameter"
 ...
 modparam("presence", "waiting_subs_daysno", 2)
 ...
@@ -420,10 +384,7 @@ This module parameter enables a very nice feature in the presence
 *Default value is "0".*
 
 
-**Example: Set mix_dialog_presence parameter**
-
-
-```opensips
+```opensips title="Set mix_dialog_presence parameter"
 ...
 modparam("presence", "mix_dialog_presence", 1)
 ...
@@ -448,10 +409,7 @@ By default the presentity uri for BLA subscribes (event=dialog;sla)
 *Default value is "NULL".*
 
 
-**Example: Set bla_presentity_spec parameter**
-
-
-```opensips
+```opensips title="Set bla_presentity_spec parameter"
 ...
 modparam("presence", "bla_presentity_spec", "$var(bla_pres)")
 ...
@@ -478,10 +436,7 @@ In some cases(configurations) however this is not desirable, so
 *Default value is "1".*
 
 
-**Example: Set bla_fix_remote_target parameter**
-
-
-```opensips
+```opensips title="Set bla_fix_remote_target parameter"
 ...
 modparam("presence", "bla_fix_remote_target", 0)
 ...
@@ -501,10 +456,7 @@ If this parameter is set, when no published info is found for
 *Default value is "0".*
 
 
-**Example: Set notify_offline_body parameter**
-
-
-```opensips
+```opensips title="Set notify_offline_body parameter"
 ...
 modparam("presence", "notify_offline_body", 1)
 ...
@@ -523,10 +475,7 @@ If a presence subscription should be automatically terminated
 *Default value is "1" (enabled).*
 
 
-**Example: Set end_sub_on_timeout parameter**
-
-
-```opensips
+```opensips title="Set end_sub_on_timeout parameter"
 ...
 modparam("presence", "end_sub_on_timeout", 0)
 ...
@@ -544,10 +493,7 @@ The period at which to clean the expired subscription dialogs.
 		value disables this activity.*
 
 
-**Example: Set clean_period parameter**
-
-
-```opensips
+```opensips title="Set clean_period parameter"
 ...
 modparam("presence", "clean_period", 100)
 ...
@@ -565,10 +511,7 @@ The period at which to synchronize cached subscriber info with the
 		value disables synchronization.*
 
 
-**Example: Set db_update_period parameter**
-
-
-```opensips
+```opensips title="Set db_update_period parameter"
 ...
 modparam("presence", "db_update_period", 100)
 ...
@@ -584,10 +527,7 @@ The name of the db table where Publish information are stored.
 *Default value is "presentity".*
 
 
-**Example: Set presentity_table parameter**
-
-
-```opensips
+```opensips title="Set presentity_table parameter"
 ...
 modparam("presence", "presentity_table", "presentity")
 ...
@@ -604,10 +544,7 @@ The name of the db table where active subscription information are
 *Default value is "active_watchers".*
 
 
-**Example: Set active_watchers_table parameter**
-
-
-```opensips
+```opensips title="Set active_watchers_table parameter"
 ...
 modparam("presence", "active_watchers_table", "active_watchers")
 ...
@@ -623,10 +560,7 @@ The name of the db table where subscription states are stored.
 *Default value is "watchers".*
 
 
-**Example: Set watchers_table parameter**
-
-
-```opensips
+```opensips title="Set watchers_table parameter"
 ...
 modparam("presence", "watchers_table", "watchers")
 ...
@@ -643,10 +577,7 @@ The size of the hash table to store subscription dialogs.
 *Default value is "9 (512)".*
 
 
-**Example: Set subs_htable_size parameter**
-
-
-```opensips
+```opensips title="Set subs_htable_size parameter"
 ...
 modparam("presence", "subs_htable_size", 11)
 ...
@@ -664,10 +595,7 @@ The size of the hash table to store publish records.
 *Default value is "9 (512)".*
 
 
-**Example: Set pres_htable_size parameter**
-
-
-```opensips
+```opensips title="Set pres_htable_size parameter"
 ...
 modparam("presence", "pres_htable_size", 11)
 ...
@@ -711,10 +639,7 @@ The module sends an appropriate stateless reply
 			in all cases.
 
 
-**Example: handle_publish usage**
-
-
-```opensips
+```opensips title="handle_publish usage"
 ...
 	if(is_method("PUBLISH"))
 	{
@@ -760,7 +685,7 @@ There are scenarios where the presentity (the party you
 				chapter for more details.
 
 
-```
+```c
    Ex: 
 	if($ru =~ "kphone@opensips.org")
 		handle_subscribe(1);
@@ -782,10 +707,7 @@ The module sends an appropriate stateless reply
 			in all cases.
 
 
-**Example: handle_subscribe usage**
-
-
-```
+```c title="handle_subscribe usage"
 ...
 if($rm=="SUBSCRIBE")
     handle_subscribe();
@@ -827,7 +749,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi refresh_watchers sip:11@192.168.2.132 presence 1
 	
 ```
@@ -849,7 +771,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi cleanup
 	  
 ```
@@ -870,7 +792,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi pres_phtable_list
 	  
 ```
@@ -895,7 +817,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi subs_phtable_list sip:222@domain2.com sip:user_1@example.com
 	  
 ```
@@ -928,7 +850,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi pres_expose presence ^sip:10\.0\.5\.[0-9]*
 	  
 ```
@@ -999,10 +921,7 @@ This function binds the presence modules and fills the structure
 				in presence module and functions specific for Subscribe processing.
 
 
-**Example: presence_api_t structure**
-
-
-```
+```c title="presence_api_t structure"
 ...
 typedef struct presence_api {
 	add_event_t add_event;
@@ -1040,7 +959,7 @@ typedef struct presence_api {
 Field type:
 
 
-```
+```c
 ...
 typedef int (*add_event_t)(pres_ev_t* event);
 ...
@@ -1054,7 +973,7 @@ This function receives as a parameter a structure with event specific
 The structure received as a parameter:
 
 
-```
+```c
 ...
 typedef struct pres_ev
 {
@@ -1113,7 +1032,7 @@ typedef struct pres_ev
 Filed type:
 
 
-```
+```c
 ...
 typedef int (get_rules_doc_t)(str* user, str* domain, str** rules_doc);
 ...
@@ -1144,7 +1063,7 @@ It is called only if the req_auth field is not 0.
 Filed type:
 
 
-```
+```c
 ...
 typedef int (is_allowed_t)(struct subscription* subs);
 ...
@@ -1165,7 +1084,7 @@ This parameter should be a function to be called for an event
 Filed type:
 
 
-```
+```c
 ...
 typedef int (apply_auth_t)(str* , struct subscription*, str** );
 ...
@@ -1186,7 +1105,7 @@ If present, this field marks that the events requires aggregation
 Filed type:
 
 
-```
+```c
 ...
 typedef str* (agg_nbody_t)(str* pres_user, str* pres_domain, 
 str** body_array, int n, int off_index);
@@ -1208,7 +1127,7 @@ This field must be field in if subsequent processing is performed
 Filed type:
 
 
-```
+```c
 ...
 typedef void(free_body_t)(char* body);
 ..
@@ -1229,7 +1148,7 @@ This field must be set if the module needs to manipulate the NOTIFY body
 Filed type:
 
 
-```
+```c
 ...
 typedef str* (aux_body_processing_t)(struct subscription *subs, str* body);
 ..
@@ -1251,7 +1170,7 @@ This field must be set if the module registers the aux_body_processing function
 Filed type:
 
 
-```
+```c
 ...
 typedef void(free_body_t)(char* body);
 ..
@@ -1266,7 +1185,7 @@ This function is called when handling Publish requests. Most contain
 		body correctness check.
 
 
-```
+```c
 ...
 typedef int (publ_handling_t)(struct sip_msg*);
 ..
@@ -1284,7 +1203,7 @@ It is not compulsory. Should contain event specific handling for
 Filed type:
 
 
-```
+```c
 ...
 typedef int (subs_handling_t)(struct sip_msg*);
 ..
@@ -1297,7 +1216,7 @@ typedef int (subs_handling_t)(struct sip_msg*);
 Field type:
 
 
-```
+```c
 ..
 typedef pres_ev_t* (*contains_event_t)(str* name,
 event_t* parsed_event);
@@ -1317,7 +1236,7 @@ The function parses the event name received as a parameter and searches
 Field type:
 
 
-```
+```c
 ...
 typedef int (*get_event_list_t) (str** ev_list);
 ...
@@ -1334,7 +1253,7 @@ This function returns a string representation of the events registered
 Field type:
 
 
-```
+```c
 ...
 typedef int (*update_watchers_t)(str pres_uri, pres_ev_t* ev,
 str* rules_doc);
@@ -1355,7 +1274,7 @@ This function is an external command that can be used to announce a change
 Field type:
 
 
-```
+```c
 ...
 typedef char* (*pres_get_sphere_t)(str* pres_uri);
 ...
@@ -1373,7 +1292,7 @@ This function searches for a sphere definition in the published information
 Field type:
 
 
-```
+```c
 ...
 typedef int (*pres_contains_presence_t)(str* pres_uri);
 ...

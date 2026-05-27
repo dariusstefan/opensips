@@ -92,10 +92,7 @@ The mode you are using the module; it can be either component or server.
 *Default value is "component".*
 
 
-**Example: Set backend parameter**
-
-
-```opensips
+```opensips title="Set backend parameter"
 ...
  modparam("xmpp", "backend", "server")
 ...
@@ -111,10 +108,7 @@ The xmpp domain of the component or the server, depending on the mode we are in.
 *Default value is "127.0.0.1".*
 
 
-**Example: Set xmpp_domain parameter**
-
-
-```opensips
+```opensips title="Set xmpp_domain parameter"
 ...
  modparam("xmpp", "xmpp_domain", "xmpp.opensips.org")
 ...
@@ -130,10 +124,7 @@ The ip address or the name of the local jabber server, if the backend is set to 
 *Default value is "127.0.0.1".*
 
 
-**Example: Set xmpp_host parameter**
-
-
-```opensips
+```opensips title="Set xmpp_host parameter"
 ...
  modparam("xmpp", "xmpp_host", "xmpp.opensips.org")
 ...
@@ -159,10 +150,7 @@ This parameter must be set only if the xmpp module is used in component mode and
 *Default value is NULL.*
 
 
-**Example: Set xmpp_host parameter**
-
-
-```opensips
+```opensips title="Set xmpp_host parameter"
 ...
  modparam("xmpp", "sip_domain", "sip.opensips.org")
 ...
@@ -178,10 +166,7 @@ In the component mode, this is the port of the jabber router we connect to. In t
 *Default value is "5347", if backend is set to "component" and "5269", if backend is set to "server".*
 
 
-**Example: Set xmpp_port parameter**
-
-
-```opensips
+```opensips title="Set xmpp_port parameter"
 ...
  modparam("xmpp", "xmpp_port", 5269)
 ...
@@ -197,7 +182,7 @@ The password of the local jabber server.
 *Default value is "secret"; if changed here, it must also be changed in the c2s.xml, added by the jabber server. This is how the default configuration for the jabberd2 looks like:*
 
 
-```
+```c
 			<router>
 	............... 
 	;
@@ -206,10 +191,7 @@ The password of the local jabber server.
 ```
 
 
-**Example: Set xmpp_password parameter**
-
-
-```opensips
+```opensips title="Set xmpp_password parameter"
 ...
  modparam("xmpp", "xmpp_password", "secret")
 ...
@@ -229,10 +211,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is NULL.*
 
 
-**Example: Set outbound_proxy parameter**
-
-
-```opensips
+```opensips title="Set outbound_proxy parameter"
 ...
  modparam("xmpp", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ...
@@ -248,10 +227,7 @@ The SIP address used as next hop when sending the message. Very
 Converts SIP messages to XMPP(jabber) messages, in order to be relayed to a XMPP(jabber) client.
 
 
-**Example: xmpp_send_message() usage**
-
-
-```
+```c title="xmpp_send_message() usage"
 ...
 xmpp_send_message();
 ...

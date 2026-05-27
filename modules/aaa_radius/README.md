@@ -88,10 +88,7 @@ The right-hand side of the assignment must be a script pseudo variable or
 			a script AVP. For more information about them see [CookBooks - Scripting Variables](https://opensips.org/Resources/DocsCoreVar15).
 
 
-**Example: Set sets parameter**
-
-
-```opensips
+```opensips title="Set sets parameter"
 ...
 modparam("aaa_radius","sets","set4  =  (  Sip-User-ID  =   $avp(10)
 			,   Sip-From-Tag=$si,Sip-To-Tag=$tt      )      ")
@@ -118,10 +115,7 @@ This parameter is optional. It must be set only if the radius_send_acct
 			and radius_send_auth functions are used.
 
 
-**Example: Set radius_config parameter**
-
-
-```opensips
+```opensips title="Set radius_config parameter"
 ...
 modparam("aaa_radius", "radius_config", "/etc/radiusclient-ng/radiusclient.conf")
 ...
@@ -143,10 +137,7 @@ This parameter is optional. Radius client libraries will try to use syslog
 By default this parameter is not set (no logging).
 
 
-**Example: Set syslog_name parameter**
-
-
-```opensips
+```opensips title="Set syslog_name parameter"
 ...
 modparam("aaa_radius", "syslog_name", "aaa-radius")
 ...
@@ -166,10 +157,7 @@ By default this parameter is disabled (set to 0) for backward compatibility
 		reasons.
 
 
-**Example: Set fetch_all_values parameter**
-
-
-```opensips
+```opensips title="Set fetch_all_values parameter"
 ...
 modparam("aaa_radius", "fetch_all_values", 1)
 ...
@@ -212,10 +200,7 @@ The function return TRUE (retcode 1) if authentication was
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: radius_send_auth usage**
-
-
-```opensips
+```opensips title="radius_send_auth usage"
 ...
 radius_send_auth("set1","set2");
 switch ($rc) {
@@ -254,10 +239,7 @@ The set must be defined using the "sets" exported parameter.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: radius_send_acct usage**
-
-
-```
+```c title="radius_send_acct usage"
 ...
 radius_send_acct("set1");
 ...
@@ -299,10 +281,7 @@ The function return TRUE (retcode 1) if authentication was
 			authentication was rejected or denied by RADIUS server.
 
 
-**Example: radius_send_auth usage**
-
-
-```opensips
+```opensips title="radius_send_auth usage"
 ...
 {
 async( radius_send_auth("set1","set2"), resume);
@@ -345,10 +324,7 @@ The set must be defined using the "sets" exported parameter.
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE, BRANCH_ROUTE, ERROR_ROUTE and LOCAL_ROUTE.
 
 
-**Example: radius_send_acct usage**
-
-
-```opensips
+```opensips title="radius_send_acct usage"
 ...
 {
 async( radius_send_acct("set1","set2"), resume);
@@ -378,10 +354,7 @@ You can download the last freeRADIUS Client Library sources from
 			extract the contents of the archive.
 
 
-**Example: downloading the library**
-
-
-```
+```c title="downloading the library"
 ........
 mkdir freeRADIUS-client; cd freeRADIUS-client
 wget ftp://ftp.freeradius.org/pub/freeradius/freeradius-client-1.1.7.tar.gz
@@ -402,10 +375,7 @@ After you extracted the contents of the archive, you can apply the patch
 			commands and free to use the library.
 
 
-**Example: How to apply the patch**
-
-
-```
+```c title="How to apply the patch"
 ........
 cd freeRADIUS-client/freeradius-client-1.1.7.tar.gz
 patch -p1 < /path/to/opensips/modules/aaa_radius/radius_async_support.patch

@@ -100,10 +100,7 @@ First line is the definition of the columns. Each column must be
 - *0* -- the zero value must be escaped too.
 
 
-**Example: Sample of a db_text table**
-
-
-```
+```c title="Sample of a db_text table"
 ...
 id(int,auto) name(str) flag(double) desc(str,null)
 1:nick:0.34:a\tgood\: friend
@@ -113,20 +110,14 @@ id(int,auto) name(str) flag(double) desc(str,null)
 ```
 
 
-**Example: Minimal OpenSIPS location db_text table definition**
-
-
-```
+```c title="Minimal OpenSIPS location db_text table definition"
 ...
 username(str) contact(str) expires(int) q(double) callid(str) cseq(int)
 ...
 ```
 
 
-**Example: Minimal OpenSIPS subscriber db_text table example**
-
-
-```
+```c title="Minimal OpenSIPS subscriber db_text table example"
 ...
 username(str) password(str) ha1(str) domain(str) ha1b(str)
 suser:supasswd:xxx:alpha.org:xxx
@@ -180,10 +171,7 @@ Set caching mode (0) or non-caching mode (1). In caching mode, data
 *Default value is "0".*
 
 
-**Example: Set db_mode parameter**
-
-
-```opensips
+```opensips title="Set db_mode parameter"
 ...
 modparam("db_text", "db_mode", 1)
 ...
@@ -199,10 +187,7 @@ Size of the buffer used to read the text file.
 *Default value is "4096".*
 
 
-**Example: Set buffer_size parameter**
-
-
-```opensips
+```opensips title="Set buffer_size parameter"
 ...
 modparam("db_text", "buffer_size", 8192)
 ...
@@ -233,7 +218,7 @@ Parameters: none
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi dbt_dump
 		
 ```
@@ -263,19 +248,19 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi dbt_reload
 		
 ```
 
 
-```
+```c
 opensips-cli -x mi dbt_reload /path/to/dbtext/database
 		
 ```
 
 
-```
+```c
 opensips-cli -x mi dbt_reload /path/to/dbtext/database table_name
 		
 ```
@@ -298,10 +283,7 @@ REMINDER: when you use *db_text* in OpenSIPS,
 		"CFG_DIR" directory.
 
 
-**Example: Load the db_text module**
-
-
-```opensips
+```opensips title="Load the db_text module"
 ...
 loadmodule "/path/to/opensips/modules/db_text.so"
 ...
@@ -323,30 +305,21 @@ You have to populate the table 'subscriber' by hand with user profiles
 		file, the table files must be placed in the '/tmp/opensipsdb' directory.
 
 
-**Example: Definition of 'subscriber' table (one line)**
-
-
-```
+```c title="Definition of 'subscriber' table (one line)"
 ...
 username(str) domain(str) password(str) first_name(str) last_name(str) phone(str) email_address(str) datetime_created(int) datetime_modified(int) confirmation(str) flag(str) sendnotification(str) greeting(str) ha1(str) ha1b(str) perms(str) allow_find(str) timezone(str,null) rpid(str,null)
 ...
 ```
 
 
-**Example: Definition of 'location' and 'aliases' tables (one line)**
-
-
-```
+```c title="Definition of 'location' and 'aliases' tables (one line)"
 ...
 username(str) domain(str,null) contact(str,null) received(str) expires(int,null) q(double,null) callid(str,null) cseq(int,null) last_modified(str) flags(int) user_agent(str) socket(str) 
 ...
 ```
 
 
-**Example: Definition of 'version' table and sample records**
-
-
-```
+```c title="Definition of 'version' table and sample records"
 ...
 table_name(str) table_version(int)
 subscriber:3
@@ -356,10 +329,7 @@ aliases:6
 ```
 
 
-**Example: Configuration file**
-
-
-```opensips
+```opensips title="Configuration file"
 ...
 #
 # simple quick-start config script with dbtext

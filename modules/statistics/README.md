@@ -102,10 +102,7 @@ Name of a new statistic variable. The name may be followed by additional
 - *no_reset* : variable cannot be reset.
 
 
-**Example: variable example**
-
-
-```opensips
+```opensips title="variable example"
 modparam("statistics", "variable", "register_counter")
 modparam("statistics", "variable", "active_calls/no_reset")
 ```
@@ -119,10 +116,7 @@ A comma-separated values string, specifying the statistic groups that
 		trailing whitespace characters.
 
 
-**Example: setting the stat_groups parameter**
-
-
-```opensips
+```opensips title="setting the stat_groups parameter"
 modparam("statistics", "stat_groups", "method, packet, response")
 ```
 
@@ -165,10 +159,7 @@ Used to define a statistic series profile. Has the following format:
 This parameter can be set multiple times, for each profile needed.
 
 
-**Example: setting the stat_series_profile parameter**
-
-
-```opensips
+```opensips title="setting the stat_series_profile parameter"
 ...
 # define a statistic that accumulates average values in the last minute
 modparam("statistics", "stat_series_profile", "avg: algorithm=average")
@@ -205,10 +196,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: update_stat usage**
-
-
-```
+```c title="update_stat usage"
 ...
 update_stat("register_counter", 1);
 ...
@@ -234,10 +222,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: reset_stat usage**
-
-
-```
+```c title="reset_stat usage"
 ...
 reset_stat("register_counter");
 ...
@@ -266,10 +251,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: stat_iter_init usage**
-
-
-```
+```c title="stat_iter_init usage"
 ...
 stat_iter_init("packet", "iter");
 ...
@@ -297,10 +279,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 		FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: stat_iter_next usage**
-
-
-```
+```c title="stat_iter_next usage"
 ...
 # periodically clear packet-related data
 timer_route [clear_packet_stats, 7200] {
@@ -333,10 +312,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: update_stat_series usage**
-
-
-```
+```c title="update_stat_series usage"
 ...
 # account failed calls
 update_stat_series("perc_1h", "ASR_1h", -1);
@@ -369,10 +345,7 @@ If a searching group is not provided, the statistic is first
 			grouped statistics which are not exported by the OpenSIPS core.
 
 
-**Example: $stat usage**
-
-
-```opensips
+```opensips title="$stat usage"
 ...
 xlog("SHM used size = $stat(used_size), no_invites = $stat(method:invite)\n");
 ...

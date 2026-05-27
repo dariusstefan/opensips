@@ -55,10 +55,7 @@ Database URL.
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("alias_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -74,10 +71,7 @@ Name of the column storing username.
 *Default value is "username".*
 
 
-**Example: Set user_column parameter**
-
-
-```opensips
+```opensips title="Set user_column parameter"
 ...
 modparam("alias_db", "user_column", "susername")
 ...
@@ -93,10 +87,7 @@ Name of the column storing user's domain.
 *Default value is "domain".*
 
 
-**Example: Set domain_column parameter**
-
-
-```opensips
+```opensips title="Set domain_column parameter"
 ...
 modparam("alias_db", "domain_column", "sdomain")
 ...
@@ -112,10 +103,7 @@ Name of the column storing alias username.
 *Default value is "alias_username".*
 
 
-**Example: Set alias_user_column parameter**
-
-
-```opensips
+```opensips title="Set alias_user_column parameter"
 ...
 modparam("alias_db", "alias_user_column", "auser")
 ...
@@ -131,10 +119,7 @@ Name of the column storing alias domain.
 *Default value is "alias_domain".*
 
 
-**Example: Set alias_domain_column parameter**
-
-
-```opensips
+```opensips title="Set alias_domain_column parameter"
 ...
 modparam("alias_db", "alias_domain_column", "adomain")
 ...
@@ -151,10 +136,7 @@ Specifies the prefix to be stripped from the domain in R-URI before
 *Default value is "NULL".*
 
 
-**Example: Set domain_prefix parameter**
-
-
-```opensips
+```opensips title="Set domain_prefix parameter"
 ...
 modparam("alias_db", "domain_prefix", "sip.")
 ...
@@ -172,10 +154,7 @@ If the alias resolves to many SIP IDs, the first is replacing
 			1 - add branches).*
 
 
-**Example: Set append_branches parameter**
-
-
-```opensips
+```opensips title="Set append_branches parameter"
 ...
 modparam("alias_db", "append_branches", 1)
 ...
@@ -217,10 +196,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: alias_db_lookup() usage**
-
-
-```
+```c title="alias_db_lookup() usage"
 ...
 alias_db_lookup("dbaliases", "rd");
 alias_db_lookup("dba_$(rU{s.substr,0,1})");
@@ -270,10 +246,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 			LOCAL_ROUTE, STARTUP_ROUTE, FAILURE_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: alias_db_find() usage**
-
-
-```
+```c title="alias_db_find() usage"
 ...
 # do revers alias lookup and find the alias for the FROM URI
 alias_db_find("dbaliases", $fu, $avp(from_alias), "r");

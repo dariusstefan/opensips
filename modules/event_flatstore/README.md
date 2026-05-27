@@ -68,10 +68,7 @@ Defines the maximum number of simultaneously opened files by the
 *Default value is "100".*
 
 
-**Example: Set max_open_sockets parameter**
-
-
-```opensips
+```opensips title="Set max_open_sockets parameter"
 ...
 modparam("event_flatstore", "max_open_sockets", 200)
 ...
@@ -87,10 +84,7 @@ Sets the separator between the parameters of the event in the logging file.
 *Default value is ",".*
 
 
-**Example: Set delimiter parameter**
-
-
-```opensips
+```opensips title="Set delimiter parameter"
 ...
 modparam("event_flatstore", "delimiter", ";")
 ...
@@ -107,10 +101,7 @@ Sets the permissions for the newly created logs. It
 *Default value is "644".*
 
 
-**Example: Set file_permissions parameter**
-
-
-```opensips
+```opensips title="Set file_permissions parameter"
 ...
 modparam("event_flatstore", "file_permissions", "664")
 ...
@@ -126,10 +117,7 @@ Suppresses the name of the event in the log file.
 *Default value is "0/OFF" (the event's name is printed).*
 
 
-**Example: Set suppress_event_name parameter**
-
-
-```opensips
+```opensips title="Set suppress_event_name parameter"
 ...
 modparam("event_flatstore", "suppress_event_name", 1)
 ...
@@ -160,7 +148,7 @@ Parameters: *path_to_file*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi evi_flat_rotate _path_to_log_file_
 		
 ```

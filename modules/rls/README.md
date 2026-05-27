@@ -76,10 +76,7 @@ The name of the db table where resource lists subscription
 *Default value is "rls_watchers".*
 
 
-**Example: Set rlsubs_table parameter**
-
-
-```opensips
+```opensips title="Set rlsubs_table parameter"
 ...
 modparam("rls", "rlsubs_table", "rls_subscriptions")
 ...
@@ -96,10 +93,7 @@ The name of the db table where notified event specific
 *Default value is "rls_presentity".*
 
 
-**Example: Set rlpres_table parameter**
-
-
-```opensips
+```opensips title="Set rlpres_table parameter"
 ...
 modparam("rls", "rlpres_table", "rls_notify")
 ...
@@ -115,10 +109,7 @@ The period at which to check for expired information.
 *Default value is "100".*
 
 
-**Example: Set clean_period parameter**
-
-
-```opensips
+```opensips title="Set clean_period parameter"
 ...
 modparam("rls", "clean_period", 100)
 ...
@@ -136,10 +127,7 @@ The timer period at which the server should attempt to send
 *Default value is "50".*
 
 
-**Example: Set waitn_time parameter**
-
-
-```opensips
+```opensips title="Set waitn_time parameter"
 ...
 modparam("rls", "waitn_time", 10)
 ...
@@ -155,10 +143,7 @@ The maximum accepted expires for a subscription to a list.
 *Default value is "7200".*
 
 
-**Example: Set max_expires parameter**
-
-
-```opensips
+```opensips title="Set max_expires parameter"
 ...
 modparam("rls", "max_expires", 10800)
 ...
@@ -176,10 +161,7 @@ The dimension of the hash table used to store subscription to a list.
 *Default value is "9 (512)".*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("rls", "hash_size", 11)
 ...
@@ -196,10 +178,7 @@ The address of the xcap server.
 *Default value is "NULL".*
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("rls", "xcap_root", "http://192.168.2.132/xcap-root:800")
 ...
@@ -220,10 +199,7 @@ The code to be returned by rls_handle_subscribe function
 *Default value is "0".*
 
 
-**Example: Set to_presence_code parameter**
-
-
-```opensips
+```opensips title="Set to_presence_code parameter"
 ...
 modparam("rls", "to_presence_code", 10)
 ...
@@ -242,10 +218,7 @@ The default event that RLS handles is presence. If some other
 *Default value is ""presence"".*
 
 
-**Example: Set rls_event parameter**
-
-
-```opensips
+```opensips title="Set rls_event parameter"
 ...
 modparam("rls", "rls_event", "dialog;sla")
 ...
@@ -262,10 +235,7 @@ The address of the presence server. It will be used as outbound proxy for
 		in the proxy's configuration file.
 
 
-**Example: Set presence_server parameter**
-
-
-```opensips
+```opensips title="Set presence_server parameter"
 ...
 modparam("rls", "presence_server", "sip:pres@opensips.org:5060")
 ...
@@ -291,10 +261,7 @@ If set to an empty string, no username will be added to the contact and
 *Default value is "rls".*
 
 
-**Example: Set contact_user parameter**
-
-
-```opensips
+```opensips title="Set contact_user parameter"
 ...
 modparam("rls", "contact_user", "rls")
 ...
@@ -317,10 +284,7 @@ This function detects if a Subscribe message should be
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: rls_handle_subscribe usage**
-
-
-```opensips
+```opensips title="rls_handle_subscribe usage"
 ...
 For presence and rls on the same machine:
 	modparam(rls, "to_presence_code", 10)
@@ -366,10 +330,7 @@ It can return 3 codes:
 - *-1* - an error occurred during processing.
 
 
-**Example: rls_handle_notify usage**
-
-
-```
+```c title="rls_handle_notify usage"
 ...
 if($rm=="NOTIFY")
     rls_handle_notify();
@@ -400,7 +361,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi rls_update_subscriptions sip:alice@atlanta.com
 	
 ```

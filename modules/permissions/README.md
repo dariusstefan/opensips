@@ -183,10 +183,7 @@ Default allow file used by functions without parameters. If you
 *Default value is "permissions.allow".*
 
 
-**Example: Set default_allow_file parameter**
-
-
-```opensips
+```opensips title="Set default_allow_file parameter"
 ...
 modparam("permissions", "default_allow_file", "/etc/permissions.allow")
 ...
@@ -204,10 +201,7 @@ Default file containing deny rules. The file is used by functions
 *Default value is "permissions.deny".*
 
 
-**Example: Set default_deny_file parameter**
-
-
-```opensips
+```opensips title="Set default_deny_file parameter"
 ...
 modparam("permissions", "default_deny_file", "/etc/permissions.deny")
 ...
@@ -229,10 +223,7 @@ If set then allow_routing functions will check Request-URI of all
 *Default value is 1.*
 
 
-**Example: Set check_all_branches parameter**
-
-
-```opensips
+```opensips title="Set check_all_branches parameter"
 ...
 modparam("permissions", "check_all_branches", 0)
 ...
@@ -254,10 +245,7 @@ Suffix to be appended to basename to create filename of the allow
 *Default value is ".allow".*
 
 
-**Example: Set allow_suffix parameter**
-
-
-```opensips
+```opensips title="Set allow_suffix parameter"
 ...
 modparam("permissions", "allow_suffix", ".allow")
 ...
@@ -279,10 +267,7 @@ Suffix to be appended to basename to create filename of the deny file
 *Default value is ".deny".*
 
 
-**Example: Set deny_suffix parameter**
-
-
-```opensips
+```opensips title="Set deny_suffix parameter"
 ...
 modparam("permissions", "deny_suffix", ".deny")
 ...
@@ -309,10 +294,7 @@ Since version 2.2, this URL represents the db_url for the
 *Default value is "NULL".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("permissions", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -331,10 +313,7 @@ Name of database table containing matching rules used by
 *Default value is "address".*
 
 
-**Example: Set address_table parameter**
-
-
-```opensips
+```opensips title="Set address_table parameter"
 ...
 modparam("permissions", "address_table", "pbx")
 ...
@@ -352,10 +331,7 @@ Specify a new IP-based checking partition (data source).  This
 		the default partition is 'default'.
 
 
-**Example: Set partition parameter**
-
-
-```opensips
+```opensips title="Set partition parameter"
 ...
 modparam("permissions", "partition", "
 	inbound:
@@ -375,10 +351,7 @@ Name of address table column containing group
 *Default value is "grp".*
 
 
-**Example: Set grp_col parameter**
-
-
-```opensips
+```opensips title="Set grp_col parameter"
 ...
 modparam("permissions", "grp_col", "group_id")
 ...
@@ -395,10 +368,7 @@ Name of address table column containing IP address
 *Default value is "ip".*
 
 
-**Example: Set ip_col parameter**
-
-
-```opensips
+```opensips title="Set ip_col parameter"
 ...
 modparam("permissions", "ip_col", "ipess")
 ...
@@ -416,10 +386,7 @@ Name of address table column containing network mask of
 *Default value is "mask".*
 
 
-**Example: Set mask_col parameter**
-
-
-```opensips
+```opensips title="Set mask_col parameter"
 ...
 modparam("permissions", "mask_col", "subnet_length")
 ...
@@ -436,10 +403,7 @@ Name of address table column containing port
 *Default value is "port".*
 
 
-**Example: Set port_col parameter**
-
-
-```opensips
+```opensips title="Set port_col parameter"
 ...
 modparam("permissions", "port_col", "prt")
 ...
@@ -462,10 +426,7 @@ Name of address table column containing transport
 *Default value is "proto".*
 
 
-**Example: Set proto_col parameter**
-
-
-```opensips
+```opensips title="Set proto_col parameter"
 ...
 modparam("permissions", "proto_col", "transport")
 ...
@@ -485,10 +446,7 @@ Name of address table column containinga a pattern (a shell wildcard
 *Default value is "pattern".*
 
 
-**Example: Set pattern_col parameter**
-
-
-```opensips
+```opensips title="Set pattern_col parameter"
 ...
 modparam("permissions", "pattern_col", "wildcard_col")
 ...
@@ -508,10 +466,7 @@ Name of address table column containing a string
 *Default value is "context_info".*
 
 
-**Example: Set info_col parameter**
-
-
-```opensips
+```opensips title="Set info_col parameter"
 ...
 modparam("permissions", "info_col", "info_col")
 ...
@@ -570,11 +525,8 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-**Example: check_address()
-		 usage**
-
-
-```opensips
+```opensips title="check_address()
+		 usage"
 ...
 
 // Checks if the tuple IP address/port (given as strings) and source protocol
@@ -634,10 +586,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE, STARTUP_ROUTE, TIMER_ROUTE, EVENT_ROUTE.
 
 
-**Example: check_source_address() usage**
-
-
-```opensips
+```opensips title="check_source_address() usage"
 ...
 // Check if source address/port/proto is in group 4 and stores
 // context information in $avp(ctx)
@@ -673,10 +622,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		LOCAL_ROUTE, BRANCH_ROUTE.
 
 
-**Example: get_source_group() usage**
-
-
-```opensips
+```opensips title="get_source_group() usage"
 ...
 
 if ( get_source_group( $var(group)) ) {
@@ -699,10 +645,7 @@ Returns true if all pairs constructed as described in [sec call routing](#sec-ca
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: allow_routing usage**
-
-
-```opensips
+```opensips title="allow_routing usage"
 ...
 if (allow_routing()) {
 	t_relay();
@@ -733,10 +676,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: allow_routing(basename) usage**
-
-
-```opensips
+```opensips title="allow_routing(basename) usage"
 ...
 if (allow_routing("basename")) {
 	t_relay();
@@ -767,10 +707,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: allow_register(basename) usage**
-
-
-```opensips
+```opensips title="allow_register(basename) usage"
 ...
 if ($rm=="REGISTER") {
 	if (allow_register("register")) {
@@ -807,10 +744,7 @@ If the parameter doesn't contain full pathname then the function
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: allow_uri(basename, uri) usage**
-
-
-```opensips
+```opensips title="allow_uri(basename, uri) usage"
 ...
 if (allow_uri("basename", $rt)) {  // Check Refer-To URI
 	t_relay();

@@ -117,10 +117,7 @@ Note that if you need a reliable communication with
 *Default value is "0 (disabled)".*
 
 
-**Example: Set reliable_mode parameter**
-
-
-```opensips
+```opensips title="Set reliable_mode parameter"
 ...
 modparam("event_stream", "reliable_mode", yes)
 ...
@@ -146,10 +143,7 @@ NOTE that if the event is not using names for its parameters,
 *Default value is "1000 milliseconds = 1 second".*
 
 
-**Example: Set timeout parameter**
-
-
-```opensips
+```opensips title="Set timeout parameter"
 ...
 # only wait for 200 milliseonds for a reply
 modparam("event_stream", "timeout", 200)
@@ -170,10 +164,7 @@ By default, the name of the event subscribed to is not
 *Default value is "disabled" - event is not added.*
 
 
-**Example: Set event_param parameter**
-
-
-```opensips
+```opensips title="Set event_param parameter"
 ...
 modparam("event_stream", "event_param", "opensips_event")
 # json resulted will contain the "opensips_event": EVENT token
@@ -190,10 +181,7 @@ No function exported to be used from configuration file.
 ### Examples
 
 
-**Example: Stream socket**
-
-
-```
+```c title="Stream socket"
 	# calls the 'block_ip' method
 	tcp:127.0.0.1:8080/block_ip
 
@@ -210,10 +198,7 @@ This is an example of an event raised when
 			by the pike module when it decides an ip should be blocked:
 
 
-**Example: E_PIKE_BLOCKED JSON-RPC notification**
-
-
-```
+```c title="E_PIKE_BLOCKED JSON-RPC notification"
 {
 	"jsonrpc": "2.0",
 	"method": "E_PIKE_BLOCKED",
@@ -232,10 +217,7 @@ This is an example of an event raised in
 			when it decides an ip should be blocked:
 
 
-**Example: E_PIKE_BLOCKED JSON-RPC request (reliable_mode)**
-
-
-```
+```c title="E_PIKE_BLOCKED JSON-RPC request (reliable_mode)"
 # request
 {
 	"id": 915243442,
@@ -263,10 +245,7 @@ when having the *event_param* set to
 			the pike module will look like the following:
 
 
-**Example: E_PIKE_BLOCKED notification with event name**
-
-
-```opensips
+```opensips title="E_PIKE_BLOCKED notification with event name"
 # module configuration
 modparam("event_stream", "event_param", "opensips_event")
 
@@ -297,10 +276,7 @@ Note that we are only populating values for the
 			Therefore, the parameters will be sent as an array.
 
 
-**Example: E_PIKE_BLOCKED event**
-
-
-```opensips
+```opensips title="E_PIKE_BLOCKED event"
 startup_route {
 	subscribe_event("E_MY_EVENT", "tcp:127.0.0.1:8080");
 }

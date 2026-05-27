@@ -52,10 +52,7 @@ For this purpose, the modules offers the following functions:
 				[check route param](#func_check_route_param)
 
 
-**Example: Dialog support in RR module**
-
-
-```
+```c title="Dialog support in RR module"
   
 UAC                       OpenSIPS PROXY                          UAS
 
@@ -111,10 +108,7 @@ If turned on, request's from-tag is appended to record-route; that's
 *Default value is 1 (yes).*
 
 
-**Example: Set append_fromtag parameter**
-
-
-```opensips
+```opensips title="Set append_fromtag parameter"
 ...
 modparam("rr", "append_fromtag", 0)
 ...
@@ -134,10 +128,7 @@ There are some situations when the server needs to insert two
 *Default value is 1 (yes).*
 
 
-**Example: Set enable_double_rr parameter**
-
-
-```opensips
+```opensips title="Set enable_double_rr parameter"
 ...
 modparam("rr", "enable_double_rr", 0)
 ...
@@ -154,10 +145,7 @@ If set to a non 0 value (which means yes), the username part will
 *Default value is 0 (no).*
 
 
-**Example: Set add_username parameter**
-
-
-```opensips
+```opensips title="Set add_username parameter"
 ...
 modparam("rr", "add_username", 1)
 ...
@@ -178,10 +166,7 @@ When a preset record-route header is forced in OpenSIPS config and the
 *Default value is 1 (yes).*
 
 
-**Example: enable_socket_mismatch_warning usage**
-
-
-```opensips
+```opensips title="enable_socket_mismatch_warning usage"
 ...
 modparam("rr", "enable_socket_mismatch_warning", 0)
 ...
@@ -245,10 +230,7 @@ The loose_routing topic is very complex. See the RFC3261 for more
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: loose_route usage**
-
-
-```
+```c title="loose_route usage"
 ...
 loose_route();
 ...
@@ -273,10 +255,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: record_route usage**
-
-
-```
+```c title="record_route usage"
 ...
 record_route();
 ...
@@ -307,10 +286,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: record_route_preset usage**
-
-
-```
+```c title="record_route_preset usage"
 ...
 record_route_preset("1.2.3.4:5090");
 ...
@@ -337,10 +313,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: add_rr_param usage**
-
-
-```
+```c title="add_rr_param usage"
 ...
 add_rr_param(";nat=yes");
 ...
@@ -366,10 +339,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: check_route_param usage**
-
-
-```
+```c title="check_route_param usage"
 ...
 if (check_route_param("nat=yes")) {
     setflag(6);
@@ -407,10 +377,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: is_direction usage**
-
-
-```
+```c title="is_direction usage"
 ...
 if (is_direction("upstream")) {
     xdbg("upstream request ($rm)\n");
@@ -568,10 +535,7 @@ Meaning of the parameters is as follows:
 ### Examples
 
 
-**Example: Loading RR module's API from another module**
-
-
-```
+```c title="Loading RR module's API from another module"
 ...
 #include "../rr/api.h"
 ...
