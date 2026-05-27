@@ -184,7 +184,7 @@ Syntax for *cachedb_url*
 *"dynamodb:///tableName?region=regionName"*
 
 
-```opensips title="Set cachedb_url parameter"
+```c title="Set cachedb_url parameter"
 ...
 
 # single-instance URLs

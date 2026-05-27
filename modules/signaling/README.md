@@ -126,7 +126,7 @@ NOTE: the variable returns the To-Tag that will be used by OpenSIPS
 		the To-tag in the replies received and forwarded by OpenSIPS.
 
 
-```opensips title="Usage of $sig_local_totag variable"
+```c title="Usage of $sig_local_totag variable"
 ...
 # stateful handling
 t_newtran();

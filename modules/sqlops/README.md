@@ -54,7 +54,7 @@ DB URL for database connection. As the module allows the usage
 *This parameter is optional, it's default value being NULL.*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 # default URL
 modparam("sqlops","db_url","mysql://user:passwd@host/database")
@@ -75,7 +75,7 @@ DB table to be used for user preferences (AVPs)
 					"usr_preferences".*
 
 
-```opensips title="Set usr_table parameter"
+```c title="Set usr_table parameter"
 ...
 modparam("sqlops","usr_table","avptable")
 ...
@@ -107,7 +107,7 @@ Definition of a DB scheme. Scheme syntax is:
 *Default value is "NULL".*
 
 
-```opensips title="Set db_scheme parameter"
+```c title="Set db_scheme parameter"
 ...
 modparam("sqlops","db_scheme",
 "scheme1:table=subscriber;uuid_col=uuid;value_col=first_name")
@@ -126,7 +126,7 @@ If the domain part of the a SIP URI should be used for
 *Default value is *true* (enabled).*
 
 
-```opensips title="Set use_domain parameter"
+```c title="Set use_domain parameter"
 ...
 modparam("sqlops", "use_domain", true)
 ...
@@ -150,7 +150,7 @@ If the size is exceeded (when trying to build the PS query ID),
 *Default value is 1024.*
 
 
-```opensips title="Set ps_id_max_buf_len parameter"
+```c title="Set ps_id_max_buf_len parameter"
 ...
 modparam("sqlops","ps_id_max_buf_len", 2048)
 ...
@@ -171,7 +171,7 @@ Controls bigint conversion.
 *Default value is "0".*
 
 
-```opensips title="Set bigint_to_str parameter"
+```c title="Set bigint_to_str parameter"
 ...
 # Return bigint as string
 modparam("sqlops","bigint_to_str",1)
@@ -189,7 +189,7 @@ Name of column containing the uuid (unique user id).
 *Default value is "uuid".*
 
 
-```opensips title="Set uuid_column parameter"
+```c title="Set uuid_column parameter"
 ...
 modparam("sqlops","uuid_column","uuid")
 ...
@@ -206,7 +206,7 @@ Name of column containing the username.
 *Default value is "username".*
 
 
-```opensips title="Set username_column parameter"
+```c title="Set username_column parameter"
 ...
 modparam("sqlops","username_column","username")
 ...
@@ -223,7 +223,7 @@ Name of column containing the domain name.
 *Default value is "domain".*
 
 
-```opensips title="Set domain_column parameter"
+```c title="Set domain_column parameter"
 ...
 modparam("sqlops","domain_column","domain")
 ...
@@ -240,7 +240,7 @@ Name of column containing the attribute name (AVP name).
 *Default value is "attribute".*
 
 
-```opensips title="Set attribute_column parameter"
+```c title="Set attribute_column parameter"
 ...
 modparam("sqlops","attribute_column","attribute")
 ...
@@ -257,7 +257,7 @@ Name of column containing the AVP value.
 *Default value is "value".*
 
 
-```opensips title="Set value_column parameter"
+```c title="Set value_column parameter"
 ...
 modparam("sqlops","value_column","value")
 ...
@@ -274,7 +274,7 @@ Name of column containing the AVP type.
 *Default value is "type".*
 
 
-```opensips title="Set type_column parameter"
+```c title="Set type_column parameter"
 ...
 modparam("sqlops","type_column","type")
 ...
@@ -680,7 +680,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="sql_avp_load usage"
+```c title="sql_avp_load usage"
 ...
 sql_avp_load("$fu", "$avp(678)");
 sql_avp_load("$ru/domain", "i/domain_preferences");
@@ -771,7 +771,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, LOCAL_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="async sql_query usage"
+```c title="async sql_query usage"
 ...
 {
 ...
@@ -809,7 +809,7 @@ This function takes the same parameters and behaves identically
 This function can be used from any route.
 
 
-```opensips title="async sql_query_one usage"
+```c title="async sql_query_one usage"
 ...
 {
 ...

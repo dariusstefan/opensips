@@ -61,7 +61,7 @@ The database url.
 *The default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("imc", "db_url", "dbdriver://username:password@dbhost/dbname")
 ...
@@ -77,7 +77,7 @@ The name of the table storing IMC rooms.
 *The default value is "imc_rooms".*
 
 
-```opensips title="Set rooms_table parameter"
+```c title="Set rooms_table parameter"
 ...
 modparam("imc", "rooms_table", "rooms")
 ...
@@ -93,7 +93,7 @@ The name of the table storing IMC members.
 *The default value is "imc_members".*
 
 
-```opensips title="Set members_table parameter"
+```c title="Set members_table parameter"
 ...
 modparam("imc", "rooms_table", "members")
 ...
@@ -110,7 +110,7 @@ The power of 2 to get the size of the hash table used for storing
 *The default value is 4 (resultimg in hash size 16).*
 
 
-```opensips title="Set hash_size parameter"
+```c title="Set hash_size parameter"
 ...
 modparam("imc", "hash_size", 8)
 ...
@@ -126,7 +126,7 @@ The character which indicates that the body of the message is a command.
 *The default value is "#".*
 
 
-```opensips title="Set imc_cmd_start_char parameter"
+```c title="Set imc_cmd_start_char parameter"
 ...
 modparam("imc", "imc_cmd_start_char", "#")
 ...
@@ -146,7 +146,7 @@ The SIP address used as next hop when sending the message. Very
 *Default value is NULL.*
 
 
-```opensips title="Set outbound_proxy parameter"
+```c title="Set outbound_proxy parameter"
 ...
 modparam("imc", "outbound_proxy", "sip:opensips.org;transport=tcp")
 ...
@@ -167,7 +167,7 @@ Handles Message method.It detects if the body of the message is a
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="Usage of imc_manager() function"
+```c title="Usage of imc_manager() function"
 ...
 # the rooms will be named chat-xyz to avoid overlapping
 # with usernames

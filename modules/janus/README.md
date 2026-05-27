@@ -50,7 +50,7 @@ Time in milliseconds after a Janus WebSocket connection will be closed if it is 
 *Default value is "1000" (milliseconds).*
 
 
-```opensips title="Setting the janus_send_timeout parameter"
+```c title="Setting the janus_send_timeout parameter"
 ...
 modparam("janus", "janus_send_timeout", 2000)
 ...
@@ -66,7 +66,7 @@ The maximum number of chunks in which a Janus message is expected to arrive via 
 *Default value is "4"*
 
 
-```opensips title="Setting the janus_max_msg_chunks parameter"
+```c title="Setting the janus_max_msg_chunks parameter"
 ...
 modparam("janus", "janus_max_msg_chunks", 8)
 ...
@@ -83,7 +83,7 @@ The maximally allowed duration for the execution of an Janus command.
 *Default value is "5000" (milliseconds).*
 
 
-```opensips title="Setting the janus_cmd_timeout parameter"
+```c title="Setting the janus_cmd_timeout parameter"
 ...
 modparam("janus", "janus_cmd_timeout", 3000)
 ...
@@ -102,7 +102,7 @@ The sleep interval used when polling for an Janus command response. Since the
 *Default value is "1000" (microseconds).*
 
 
-```opensips title="Setting the janus_cmd_polling_itv parameter"
+```c title="Setting the janus_cmd_polling_itv parameter"
 ...
 modparam("janus", "janus_cmd_polling_itv", 3000)
 ...
@@ -118,7 +118,7 @@ The time interval at which OpenSIPS will do keepalive pinging on the Janus conne
 *Default value is "5" (seconds).*
 
 
-```opensips title="Setting the janus_ping_interval parameter"
+```c title="Setting the janus_ping_interval parameter"
 ...
 modparam("janus", "janus_ping_interval", 10)
 ...
@@ -134,7 +134,7 @@ The DB URL from where OpenSIPS will load the list of Janus connection
 *Default value is ""none"" (needs to be set for the module to start).*
 
 
-```opensips title="Setting the janus_db_url parameter"
+```c title="Setting the janus_db_url parameter"
 ...
 modparam("janus", "janus_db_url", "mysql://root@localhost/opensips")
 ...
@@ -150,7 +150,7 @@ The DB Table from where OpenSIPS will load the list of Janus connection
 *Default value is "janus"*
 
 
-```opensips title="Setting the janus_db_table parameter"
+```c title="Setting the janus_db_table parameter"
 ...
 modparam("janus", "janus_db_table", "my_janus_table")
 ...
@@ -195,7 +195,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-```opensips title="
+```c title="
 				*janus_send_request()* usage"
 ...
 # if the DB contains: 
@@ -236,7 +236,7 @@ Parameters represent the janus_id and the janus_url that originated the notifica
 - *janus_body* - full body of the notification received from janus
 
 
-```opensips title="
+```c title="
 				*E_JANUS_EVENT* example"
 ...
 # if the DB contains: 

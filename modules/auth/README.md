@@ -98,7 +98,7 @@ If you use multiple servers in your installation, and would like to authenticate
 		issued the request.
 
 
-```opensips title="secret parameter example"
+```c title="secret parameter example"
 modparam("auth", "secret", "johndoessecretphrase")
 ```
 
@@ -119,7 +119,7 @@ Nonces have limited lifetime. After a given period of time nonces
 The value is in seconds and default value is 30 seconds.
 
 
-```opensips title="nonce_expire parameter example"
+```c title="nonce_expire parameter example"
 modparam("auth", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
@@ -134,7 +134,7 @@ Prefix to be added to Remote-Party-ID header field just before
 Default value is "".
 
 
-```opensips title="rpid_prefix parameter example"
+```c title="rpid_prefix parameter example"
 modparam("auth", "rpid_prefix", "Whatever <")
 ```
 
@@ -150,7 +150,7 @@ Default value is
 			";party=calling;id-type=subscriber;screen=yes".
 
 
-```opensips title="rpid_suffix parameter example"
+```c title="rpid_suffix parameter example"
 modparam("auth", "rpid_suffix", "@1.2.3.4>")
 ```
 
@@ -170,7 +170,7 @@ Prefix to be automatically strip from realm. As an alternative to
 Default value is empty string.
 
 
-```opensips title="realm_prefix parameter example"
+```c title="realm_prefix parameter example"
 modparam("auth", "realm_prefix", "sip.")
 ```
 
@@ -191,7 +191,7 @@ If defined to NULL string, all RPID functions will fail at
 Default value is "$avp(rpid)".
 
 
-```opensips title="rpid_avp parameter example"
+```c title="rpid_avp parameter example"
 modparam("auth", "rpid_avp", "$avp(caller_rpid)")
 		
 ```
@@ -206,7 +206,7 @@ This name of the pseudo-variable that will hold the username.
 Default value is "NULL".
 
 
-```opensips title="username_spec parameter usage"
+```c title="username_spec parameter usage"
 modparam("auth", "username_spec", "$var(username)")
 ```
 
@@ -220,7 +220,7 @@ This name of the pseudo-variable that will hold the password.
 Default value is "NULL".
 
 
-```opensips title="password_spec parameter usage"
+```c title="password_spec parameter usage"
 modparam("auth", "password_spec", "$var(password)")
 ```
 
@@ -242,7 +242,7 @@ If the parameter is set to 1 then the server will assume that the
 Default value of this parameter is 0.
 
 
-```opensips title="calculate_ha1 parameter usage"
+```c title="calculate_ha1 parameter usage"
 modparam("auth", "calculate_ha1", 1)
 ```
 
@@ -261,7 +261,7 @@ By setting this parameter you disable the security mechanism
 Default value is "0" (enabled).
 
 
-```opensips title="disable_nonce_check parameter usage"
+```c title="disable_nonce_check parameter usage"
 modparam("auth", "disable_nonce_check", 1)
 ```
 

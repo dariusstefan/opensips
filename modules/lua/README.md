@@ -112,7 +112,7 @@ This is the file name of your script. This may be set once
 The default value is "/etc/opensips/opensips.lua"
 
 
-```opensips title="Set luafilename parameter"
+```c title="Set luafilename parameter"
 ...
 modparam("lua", "luafilename", "/etc/opensips/opensips.lua")
 ...

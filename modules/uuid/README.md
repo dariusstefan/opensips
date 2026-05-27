@@ -58,7 +58,7 @@ An optional *version* parameter can be provided to
 			parameters.
 
 
-```opensips title="$uuid usage"
+```c title="$uuid usage"
 xlog("generated uuid: $uuid\n");
 xlog("generated uuid v7: $uuid(7)\n");
 				

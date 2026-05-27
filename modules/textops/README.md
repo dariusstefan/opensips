@@ -406,7 +406,7 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE,
 		FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-```opensips title="subst_body usage"
+```c title="subst_body usage"
 ...
 if (subst_body("/^o=([^ ]*) /o=$fU /"))
 	xlog("successfully prepared an "o" line update!\n");

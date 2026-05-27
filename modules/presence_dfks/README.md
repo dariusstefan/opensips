@@ -65,7 +65,7 @@ The name of the script route to be run in order to retrieve the status
 *Default value is "dfks_get".*
 
 
-```opensips title="Set  parameter"
+```c title="Set  parameter"
 ...
 modparam("presence_dfks", "get_route", "dfks_get")
 ...
@@ -82,7 +82,7 @@ The name of the script route to be run when a feature status update
 *Default value is "dfks_get".*
 
 
-```opensips title="Set  parameter"
+```c title="Set  parameter"
 ...
 modparam("presence_dfks", "set_route", "dfks_set")
 ...
@@ -194,7 +194,7 @@ This pseudo-variable can be used in the routes triggered by the module
 			*ringCount* - for *CallForwardingNoAnswer*
 
 
-```opensips title="dfks usage"
+```c title="dfks usage"
 ...
 route[dfks_set] {
     # CallForwardingAlways is not allowed
