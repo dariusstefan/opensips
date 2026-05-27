@@ -514,8 +514,7 @@ If an empty string "" is used then the server will
 This function can be used from REQUEST_ROUTE.
 
 
-```c title="pv_www_authorize
-		usage"
+```c title="pv_www_authorize usage"
 ...
 $var(username)="abc";
 $var(password)="xyz";

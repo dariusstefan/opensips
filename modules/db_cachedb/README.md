@@ -50,8 +50,7 @@ The following libraries or applications must be installed before running
 The URL for the CacheDB back-end to be used. It can be set more than one time.
 
 
-```c title="Set
-                    cachedb_url parameter"
+```c title="Set cachedb_url parameter"
 ...
 modparam("db_cachedb","cachedb_url","mongodb:mycluster://127.0.0.1:27017/db.col")
 ...

@@ -382,8 +382,7 @@ Multiple instances of this param are allowed.
 *Default value is "NULL".*
 
 
-```c title="Set the 'default' partition's 'ds_define_blacklist'
-				parameter"
+```c title="Set the 'default' partition's 'ds_define_blacklist' parameter"
 ...
 modparam("dispatcher", "ds_define_blacklist", "list= 1,4,3")
 modparam("dispatcher", "ds_define_blacklist", "blist2= 2,10,6")
@@ -705,8 +704,7 @@ modparam("dispatcher", "partition",
 ```
 
 
-```c title="Define the 'trunks' partition and make it the 'default'
-					partition, so we avoid loading the 'dispatcher' table"
+```c title="Define the 'trunks' partition and make it the 'default' partition, so we avoid loading the 'dispatcher' table"
 ...
 modparam("dispatcher", "partition",
                 "trunks:
