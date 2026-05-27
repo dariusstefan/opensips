@@ -59,7 +59,7 @@ None.
 The following packages must be installed before running OpenSIPS with this module loaded:
 
 
-```c title="Runtime requirements for "cachedb_mongodb""
+```c title="Runtime requirements for 'cachedb_mongodb'"
 # Debian / Ubuntu
 sudo apt-get install libjson-c2 libmongoc-1.0
 
@@ -72,7 +72,7 @@ sudo yum install json-c mongo-c-driver
 The following packages are required in order to compile this module:
 
 
-```c title="Compilation requirements for "cachedb_mongodb""
+```c title="Compilation requirements for 'cachedb_mongodb'"
 # Debian / Ubuntu
 sudo apt-get install libjson-c-dev libmongoc-dev libbson-dev
 
