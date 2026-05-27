@@ -155,7 +155,7 @@ Database where to load the registrants from.
 *Default value is "NULL" (use default DB URL from core).*
 
 
-```c title="Set "db_url" parameter"
+```c title="Set 'db_url' parameter"
 ...
 modparam("uac_registrant", "db_url", "mysql://user:passw@localhost/database")
 ...
@@ -171,7 +171,7 @@ The database table that holds the registrant records.
 *Default value is "registrant".*
 
 
-```c title="Set "table_name" parameter"
+```c title="Set 'table_name' parameter"
 ...
 modparam("uac_registrant", "table_name", "my_registrant")
 ...
@@ -189,7 +189,7 @@ The column's name in the database storing the
 *Default value is "registrar".*
 
 
-```c title="Set "registrar_column" parameter"
+```c title="Set 'registrar_column' parameter"
 ...
 modparam("uac_registrant", "registrar_column", "registrant_uri")
 ...
@@ -208,7 +208,7 @@ The column's name in the database storing the
 *Default value is "proxy".*
 
 
-```c title="Set "proxy_column" parameter"
+```c title="Set 'proxy_column' parameter"
 ...
 modparam("uac_registrant", "proxy_column", "proxy_uri")
 ...
@@ -227,7 +227,7 @@ The column's name in the database storing the
 *Default value is "aor".*
 
 
-```c title="Set "aor_column" parameter"
+```c title="Set 'aor_column' parameter"
 ...
 modparam("uac_registrant", "aor_column", "to_uri")
 ...
@@ -248,7 +248,7 @@ The column's name in the database storing the
 *Default value is "third_party_registrant".*
 
 
-```c title="Set "third_party_registrant_column" parameter"
+```c title="Set 'third_party_registrant_column' parameter"
 ...
 modparam("uac_registrant", "third_party_registrant_column", "from_uri")
 ...
@@ -265,7 +265,7 @@ The column's name in the database storing the
 *Default value is "username".*
 
 
-```c title="Set "username_column" parameter"
+```c title="Set 'username_column' parameter"
 ...
 modparam("uac_registrant", "username_column", "auth_username")
 ...
@@ -282,7 +282,7 @@ The column's name in the database storing the
 *Default value is "password".*
 
 
-```c title="Set "password_column" parameter"
+```c title="Set 'password_column' parameter"
 ...
 modparam("uac_registrant", "password_column", "auth_passowrd")
 ...
@@ -301,7 +301,7 @@ The column's name in the database storing the
 *Default value is "binding_URI".*
 
 
-```c title="Set "binding_URI_column" parameter"
+```c title="Set 'binding_URI_column' parameter"
 ...
 modparam("uac_registrant", "binding_URI_column", "contact_uri")
 ...
@@ -338,7 +338,7 @@ Example of params that will force unique binding:
 *Default value is "binding_params".*
 
 
-```c title="Set "binding_params_column" parameter"
+```c title="Set 'binding_params_column' parameter"
 ...
 modparam("uac_registrant", "binding_params_column", "contact_params")
 ...
@@ -355,7 +355,7 @@ The column's name in the database storing the
 *Default value is "expiry".*
 
 
-```c title="Set "expiry_column" parameter"
+```c title="Set 'expiry_column' parameter"
 ...
 modparam("uac_registrant", "expiry_column", "registration_timeout")
 ...
@@ -375,7 +375,7 @@ The column's name in the database storing the
 *Default value is "forced_socket".*
 
 
-```c title="Set "forced_socket_column" parameter"
+```c title="Set 'forced_socket_column' parameter"
 ...
 modparam("uac_registrant", "forced_socket_column", "fs")
 ...
@@ -394,7 +394,7 @@ The column's name in the database storing the
 *Default value is "cluster_shtag".*
 
 
-```c title="Set "cluster_shtag_column" parameter"
+```c title="Set 'cluster_shtag_column' parameter"
 ...
 modparam("uac_registrant", "cluster_shtag_column", "sh")
 ...
@@ -413,7 +413,7 @@ The column's name in the database storing the current state of the
 *Default value is "state".*
 
 
-```c title="Set "state_column" parameter"
+```c title="Set 'state_column' parameter"
 ...
 modparam("uac_registrant", "state_column", "status")
 ...

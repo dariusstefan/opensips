@@ -220,7 +220,7 @@ if (pcre_match("$ua", "(?i)^twinkle")) {
 ```
 
 
-```c title="pcre_match usage (using "end of line" symbol)"
+```c title="pcre_match usage (using 'end of line' symbol)"
 ...
 if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
     xlog("L_INFO", "RURI username matches\n");

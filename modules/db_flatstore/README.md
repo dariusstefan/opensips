@@ -147,7 +147,7 @@ Enable or disable flushing after each write.
 *Default value is 1.*
 
 
-```c title="Set "flush" parameter"
+```c title="Set 'flush' parameter"
 ...
 modparam("db_flatstore", "flush", 0)
 ...
@@ -163,7 +163,7 @@ Delimiter used to separate the values.
 *Default value is '|'.*
 
 
-```c title="Set "delimiter" parameter"
+```c title="Set 'delimiter' parameter"
 ...
 modparam("db_flatstore", "delimiter", ";")
 ...
@@ -180,7 +180,7 @@ The suffix appended to the table name. Can be a pseudo
 *Default value is ".log".*
 
 
-```c title="Set "suffix" parameter"
+```c title="Set 'suffix' parameter"
 ...
 modparam("db_flatstore", "suffix", "$time(%H)")
 ...
@@ -196,7 +196,7 @@ The table name prefix. Can be a pseudo variable.
 *Defaul value is none.*
 
 
-```c title="Set "prefix" parameter"
+```c title="Set 'prefix' parameter"
 ...
 modparam("db_flatstore", "prefix", "$time(%H)")
 ...
@@ -213,7 +213,7 @@ Specifies if all the processes should dump the data
 *Default value is 0.*
 
 
-```c title="Set "single_file" parameter"
+```c title="Set 'single_file' parameter"
 ...
 modparam("db_flatstore", "single_file", 1)
 ...
