@@ -54,10 +54,7 @@ The size of the hash table that stores the gateway session
 			 (1024 records).
 
 
-**Example: Set hash_size parameter**
-
-
-```opensips
+```opensips title="Set hash_size parameter"
 ...
 modparam("msrp_gateway", "hash_size", 16)
 ...
@@ -75,10 +72,7 @@ The interval between full iterations of the sessions table
 *Default value is "60". (seconds)*
 
 
-**Example: Set cleanup_interval parameter**
-
-
-```opensips
+```opensips title="Set cleanup_interval parameter"
 ...
 modparam("msrp_gateway", "cleanup_interval", 60)
 ...
@@ -96,10 +90,7 @@ Amount of time (in seconds) since last message has been received
 *The default value is 12 * 3600 seconds (12 hours).*
 
 
-**Example: Set session_timeout parameter**
-
-
-```opensips
+```opensips title="Set session_timeout parameter"
 ...
 modparam("msrp_gateway", "session_timeout", 7200)
 ...
@@ -117,10 +108,7 @@ Amount of time (in seconds) since last MESSAGE has been received
 *The default value is 2 * 3600 seconds (2 hours).*
 
 
-**Example: Set message_timeout parameter**
-
-
-```opensips
+```opensips title="Set message_timeout parameter"
 ...
 modparam("msrp_gateway", "message_timeout", 3600)
 ...
@@ -165,10 +153,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-**Example: msrp_gw_answer() usage**
-
-
-```opensips
+```opensips title="msrp_gw_answer() usage"
 ...
 if (!has_totag() && is_method("INVITE")) {
 	msrp_gw_answer($var(corr_key), "text/plain", $fu, $tu, $ru);
@@ -206,10 +191,7 @@ Parameters:
 This function can be used only from a request route.
 
 
-**Example: msg_to_msrp() usage**
-
-
-```opensips
+```opensips title="msg_to_msrp() usage"
 ...
 if (is_method("MESSAGE")) {
 	msg_to_msrp($var(corr_key), "text/plain");
@@ -240,7 +222,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi msrp_gw_list_sessions
 		
 ```
@@ -264,7 +246,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi msrp_gw_end_session alice@opensips.org-bob@opensips.org
 		
 ```

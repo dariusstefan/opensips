@@ -43,10 +43,7 @@ The following libraries or applications must be installed before running
 Filename of private RSA-key of authentication service. This file must be in PEM format.
 
 
-**Example: Set privKey parameter**
-
-
-```opensips
+```opensips title="Set privKey parameter"
 ...
 modparam("identity", "privKey", "/etc/openser/privkey.pem")
 ...
@@ -59,10 +56,7 @@ modparam("identity", "privKey", "/etc/openser/privkey.pem")
 Filename of certificate which belongs to `privKey`. This file must be in PEM format.
 
 
-**Example: Set authCert parameter**
-
-
-```opensips
+```opensips title="Set authCert parameter"
 ...
 modparam("identity", "authCert", "/etc/openser/cert.pem")
 ...
@@ -75,10 +69,7 @@ modparam("identity", "authCert", "/etc/openser/cert.pem")
 URI from which the certificate of the authentication service can be acquired. This string will be placed in the Identity-Info header.
 
 
-**Example: Set certUri parameter**
-
-
-```opensips
+```opensips title="Set certUri parameter"
 ...
 modparam("identity", "certUri", "http://www.myserver.com/cert.pem")
 ...
@@ -92,10 +83,7 @@ Path containing certificates for the verifier. Certificates must be in PEM forma
 		It is also possible to store a whole certificate chain in a file. In this case certificates must be in right order, end certificate first.
 
 
-**Example: Set verCert parameter**
-
-
-```opensips
+```opensips title="Set verCert parameter"
 ...
 modparam("identity", "verCert", "/etc/openser/verCert/")
 ...
@@ -108,10 +96,7 @@ modparam("identity", "verCert", "/etc/openser/verCert/")
 File containing all trusted (root) certificates for the verifier. Certificates must be in PEM format.
 
 
-**Example: Set caList parameter**
-
-
-```opensips
+```opensips title="Set caList parameter"
 ...
 modparam("identity", "caList", "/etc/openser/caList.pem")
 ...
@@ -124,10 +109,7 @@ modparam("identity", "caList", "/etc/openser/caList.pem")
 File containing certificate revocation lists (crls) for the verifier. Setting this parameter is only necessary if `useCrls` is set to "1".
 
 
-**Example: Set crlList parameter**
-
-
-```opensips
+```opensips title="Set crlList parameter"
 ...
 modparam("identity", "crlList", "/etc/openser/crls.pem")
 ...
@@ -143,10 +125,7 @@ Switch to decide whether to use revocation lists ("1") or not ("0").
 *Default value is "0".*
 
 
-**Example: Set privKey parameter**
-
-
-```opensips
+```opensips title="Set privKey parameter"
 ...
 modparam("identity", "useCrls", 1)
 ...
@@ -173,10 +152,7 @@ This function performs the steps of an authentication service. Before you call t
 - 1: everything OK, Identity header has been added.
 
 
-**Example: authservice() usage**
-
-
-```opensips
+```opensips title="authservice() usage"
 ...
 # CANCEL and ACK cannot be challenged
 if (($rm=="CANCEL") || ($rm"ACK"))
@@ -255,10 +231,7 @@ This function performs the steps of an verifier. The returned code tells you the
 - 1: verification OK
 
 
-**Example: verifier() usage**
-
-
-```opensips
+```opensips title="verifier() usage"
 ...
 # we have to define the same exceptions as we did for the authentication service
 if (($rm=="CANCEL") || ($rm"ACK")) 

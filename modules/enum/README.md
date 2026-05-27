@@ -124,10 +124,7 @@ The domain suffix to be added to the domain name obtained from
 Default value is "e164.arpa."
 
 
-**Example: Setting domain_suffix module parameter**
-
-
-```opensips
+```opensips title="Setting domain_suffix module parameter"
 modparam("enum", "domain_suffix", "e1234.arpa.")
 ```
 
@@ -146,10 +143,7 @@ A string whose contents is appended to each new tel URI in the
 Default value is ""
 
 
-**Example: Setting tel_uri_params module parameter**
-
-
-```opensips
+```opensips title="Setting tel_uri_params module parameter"
 modparam("enum", "tel_uri_params", ";npdi")
 ```
 
@@ -164,10 +158,7 @@ The domain suffix to be used for i_enum_query() lookups.
 Default value is "e164.arpa."
 
 
-**Example: Setting i_enum_suffix module parameter**
-
-
-```opensips
+```opensips title="Setting i_enum_suffix module parameter"
 modparam("enum", "i_enum_suffix", "e1234.arpa.")
 ```
 
@@ -182,10 +173,7 @@ The domain suffix to be used for isn_query() lookups. Can
 Default value is "freenum.org."
 
 
-**Example: Setting isn_suffix module parameter**
-
-
-```opensips
+```opensips title="Setting isn_suffix module parameter"
 modparam("enum", "isn_suffix", "freenum.org.")
 ```
 
@@ -200,10 +188,7 @@ This parameter determines which label i_enum_query() will use
 Default value is ""i""
 
 
-**Example: Setting branchlabel module parameter**
-
-
-```opensips
+```opensips title="Setting branchlabel module parameter"
 modparam("enum", "branchlabel", "i")
 ```
 
@@ -226,10 +211,7 @@ If set to "txt", i_enum_query() will look for a TXT record at
                 label should in inserted.
 
 
-**Example: Zone file example**
-
-
-```
+```c title="Zone file example"
 i.1.e164.arpa.                     IN TXT   "4"
 9.9.9.8.7.6.5.i.4.3.2.1.e164.arpa. IN NAPTR "NAPTR content for  +1 234 5678 999"
 ```
@@ -241,10 +223,7 @@ If set to "ebl", i_enum_query() will look for an EBL (ENUM Branch Label) record 
                 This version of the code uses 65300. See resolve.h.
 
 
-**Example: Zone file example**
-
-
-```
+```c title="Zone file example"
 i.1.e164.arpa.     TYPE65300  \# 14 (
                               04    ; position
                               01 69 ; separator
@@ -257,10 +236,7 @@ i.1.e164.arpa.     TYPE65300  \# 14 (
 Default value is "cc"
 
 
-**Example: Setting the bl_algorithm module parameter**
-
-
-```opensips
+```opensips title="Setting the bl_algorithm module parameter"
 modparam("enum", "bl_algorithm", "txt")
 ```
 
@@ -292,10 +268,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: enum_query usage**
-
-
-```
+```c title="enum_query usage"
 ...
 # search for "e2u+sip" in freenum.org 
 enum_query("freenum.org.", , $avp(number));
@@ -366,10 +339,7 @@ See ftp://www.ietf.org/rfc/rfc3872.txt and
 			regarding the ITAD part of the ISN string.
 
 
-**Example: isn_query usage**
-
-
-```
+```c title="isn_query usage"
 ...
 # search for "e2u+sip" in freenum.org 
 isn_query("freenum.org.");
@@ -403,10 +373,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: is_from_user_enum usage**
-
-
-```
+```c title="is_from_user_enum usage"
 ...
 if (is_from_user_enum()) {
 	....

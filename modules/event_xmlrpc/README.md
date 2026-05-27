@@ -83,10 +83,7 @@ When raising an event, pack the name and value of the
 *Default value is "0 (disabled)".*
 
 
-**Example: Set use_struct_param parameter**
-
-
-```opensips
+```opensips title="Set use_struct_param parameter"
 ...
 modparam("event_xmlrpc", "use_struct_param", 1)
 ...
@@ -106,10 +103,7 @@ This is an example of an event raised by the pike module
 			when it decides an ip should be blocked:
 
 
-**Example: E_PIKE_BLOCKED event**
-
-
-```
+```c title="E_PIKE_BLOCKED event"
 POST /RPC2 HTTP/1.1.
 Host: 127.0.0.1:8081.
 Connection: close.
@@ -133,10 +127,7 @@ Content-length: 240.
 ```
 
 
-**Example: XMLRPC socket**
-
-
-```
+```c title="XMLRPC socket"
 	# calls the 'block_ip' function
 	xmlrpc:127.0.0.1:8080:block_ip
 ```

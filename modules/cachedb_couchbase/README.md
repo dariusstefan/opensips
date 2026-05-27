@@ -72,10 +72,7 @@ The urls of the server groups that OpenSIPS will connect to in order
 			couchbase[:identifier]://[username:password@]IP:Port/bucket_name
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("cachedb_couchbase", "cachedb_url","couchbase:group1://localhost:6379/default")
 modparam("cachedb_couchbase", "cachedb_url","couchbase:cluster1://random_url:8888/my_bucket")
@@ -93,10 +90,7 @@ The max duration in microseconds that a couchbase op is expected to last.
 			Default is 3000000 ( 3 seconds )
 
 
-**Example: Set timeout parameter**
-
-
-```opensips
+```opensips title="Set timeout parameter"
 ...
 modparam("cachedb_couchbase", "timeout",5000000);
 ...
@@ -114,10 +108,7 @@ The maximum number of microseconds that a couchbase query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set exec_threshold parameter**
-
-
-```opensips
+```opensips title="Set exec_threshold parameter"
 ...
 modparam("cachedb_couchbase", "exec_threshold", 100000)
 ...
@@ -137,10 +128,7 @@ Delay connecting to a bucket until the first time it is used.
 			Default is 0 ( Connect to all buckets on startup )
 
 
-**Example: Set lazy_connect parameter**
-
-
-```opensips
+```opensips title="Set lazy_connect parameter"
 ...
 modparam("cachedb_couchbase", "lazy_connect", 1);
 ...
@@ -148,10 +136,7 @@ modparam("cachedb_couchbase", "lazy_connect", 1);
 ```
 
 
-**Example: Use CouchBase servers**
-
-
-```
+```c title="Use CouchBase servers"
 ...
 cache_store("couchbase:group1","key","$ru value");
 cache_fetch("couchbase:cluster1","key",$avp(10));

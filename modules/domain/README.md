@@ -54,10 +54,7 @@ Default value is
 			"mysql://opensipsro:opensipsro@localhost/opensips"
 
 
-**Example: Setting db_url parameter**
-
-
-```opensips
+```opensips title="Setting db_url parameter"
 modparam("domain", "db_url", "mysql://ser:pass@db_host/ser")
 ```
 
@@ -71,10 +68,7 @@ Database mode: 0 means non-caching, 1 means caching.
 Default value is 0 (non-caching).
 
 
-**Example: db_mode example**
-
-
-```opensips
+```opensips title="db_mode example"
 modparam("domain", "db_mode", 1)   # Use caching
 ```
 
@@ -90,10 +84,7 @@ Name of table containing names of local domains that the proxy is
 Default value is "domain".
 
 
-**Example: Setting domain_table parameter**
-
-
-```opensips
+```opensips title="Setting domain_table parameter"
 modparam("domain", "domain_table", "new_name")
 ```
 
@@ -107,10 +98,7 @@ Name of column containing domains in domain table.
 Default value is "domain".
 
 
-**Example: Setting domain_col parameter**
-
-
-```opensips
+```opensips title="Setting domain_col parameter"
 modparam("domain", "domain_col", "domain_name")
 ```
 
@@ -124,10 +112,7 @@ Name of column containing attributes in domain table.
 Default value is "attrs".
 
 
-**Example: Setting attrs_col parameter**
-
-
-```opensips
+```opensips title="Setting attrs_col parameter"
 modparam("domain", "attrs_col", "attributes")
 ```
 
@@ -148,10 +133,7 @@ Checks based on domain table if host part of From header uri is
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: is_from_local usage**
-
-
-```opensips
+```opensips title="is_from_local usage"
 ...
 if (is_from_local()) {
 	...
@@ -185,10 +167,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		BRANCH_ROUTE.
 
 
-**Example: is_uri_host_local usage**
-
-
-```opensips
+```opensips title="is_uri_host_local usage"
 ...
 if (is_uri_host_local()) {
 	...
@@ -232,10 +211,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		BRANCH_ROUTE.
 
 
-**Example: is_domain_local usage**
-
-
-```opensips
+```opensips title="is_domain_local usage"
 ...
 if (is_domain_local($rd)) {
 	...
@@ -280,7 +256,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi domain_reload
 		
 ```
@@ -302,7 +278,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi domain_dump
 		
 ```

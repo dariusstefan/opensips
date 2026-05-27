@@ -63,10 +63,7 @@ A SQL URL have to be given to the module for knowing where the
 *Default value is "mysql://opensips:opensipsrw@localhost/opensips".*
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("cpl_c","db_url","dbdriver://username:password@dbhost/dbname")
 ...
@@ -85,10 +82,7 @@ Indicates the name of the table that store the CPL scripts.
 *Default value is "cpl".*
 
 
-**Example: Set db_table parameter**
-
-
-```opensips
+```opensips title="Set db_table parameter"
 ...
 modparam("cpl_c","cpl_table","cpl")
 ...
@@ -104,10 +98,7 @@ Indicates the name of the column used for storing the username.
 *Default value is "username".*
 
 
-**Example: Set username_column parameter**
-
-
-```opensips
+```opensips title="Set username_column parameter"
 ...
 modparam("cpl_c","username_column","username")
 ...
@@ -123,10 +114,7 @@ Indicates the name of the column used for storing the domain.
 *Default value is "domain".*
 
 
-**Example: Set domain_column parameter**
-
-
-```opensips
+```opensips title="Set domain_column parameter"
 ...
 modparam("cpl_c","domain_column","domain")
 ...
@@ -143,10 +131,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_xml".*
 
 
-**Example: Set cpl_xml_column parameter**
-
-
-```opensips
+```opensips title="Set cpl_xml_column parameter"
 ...
 modparam("cpl_c","cpl_xml_column","cpl_xml")
 ...
@@ -163,10 +148,7 @@ Indicates the name of the column used for storing the
 *Default value is "cpl_bin".*
 
 
-**Example: Set cpl_bin_column parameter**
-
-
-```opensips
+```opensips title="Set cpl_bin_column parameter"
 ...
 modparam("cpl_c","cpl_bin_column","cpl_bin")
 ...
@@ -185,10 +167,7 @@ Points to the DTD file describing the CPL grammar. The file
 *This parameter is MANDATORY!*
 
 
-**Example: Set cpl_dtd_file parameter**
-
-
-```opensips
+```opensips title="Set cpl_dtd_file parameter"
 ...
 modparam("cpl_c","cpl_dtd_file","/etc/opensips/cpl-06.dtd")
 ...
@@ -207,10 +186,7 @@ Points to a directory where should be created all the log file
 					without generating error on execution.*
 
 
-**Example: Set log_dir parameter**
-
-
-```opensips
+```opensips title="Set log_dir parameter"
 ...
 modparam("cpl_c","log_dir","/var/log/opensips/cpl")
 ...
@@ -231,10 +207,7 @@ Tells for how many time is allow to have recurse for PROXY CPL
 *Default value of this parameter is 0.*
 
 
-**Example: Set proxy_recurse parameter**
-
-
-```opensips
+```opensips title="Set proxy_recurse parameter"
 ...
 modparam("cpl_c","proxy_recurse",2)
 ...
@@ -252,10 +225,7 @@ Before doing proxy (forward), a script route can be executed.
 *Default value of this parameter is NULL (none).*
 
 
-**Example: Set proxy_route parameter**
-
-
-```opensips
+```opensips title="Set proxy_route parameter"
 ...
 modparam("cpl_c","proxy_route", "1")
 ...
@@ -273,10 +243,7 @@ Tells if the username matching should be perform case
 *Default value of this parameter is 0.*
 
 
-**Example: Set case_sensitive parameter**
-
-
-```opensips
+```opensips title="Set case_sensitive parameter"
 ...
 modparam("cpl_c","case_sensitive",1)
 ...
@@ -293,10 +260,7 @@ Defines a prefix for the domain part which should be ignored
 *Default value of this parameter is empty string.*
 
 
-**Example: Set realm_prefix parameter**
-
-
-```opensips
+```opensips title="Set realm_prefix parameter"
 ...
 modparam("cpl_c","realm_prefix","sip.")
 ...
@@ -318,10 +282,7 @@ If set to empty string, the lookup node will be disabled - no
 *Default value of this parameter is NULL.*
 
 
-**Example: Set lookup_domain parameter**
-
-
-```opensips
+```opensips title="Set lookup_domain parameter"
 ...
 modparam("cpl_c","lookup_domain","location")
 ...
@@ -340,11 +301,8 @@ Tells if the lookup tag should append branches (to do parallel
 *Default value of this parameter is 0.*
 
 
-**Example: Set lookup_append_branches 
-					parameter**
-
-
-```opensips
+```opensips title="Set lookup_append_branches 
+					parameter"
 ...
 modparam("cpl_c","lookup_append_branches",1)
 ...
@@ -362,10 +320,7 @@ Indicates if the domain part of the URI should be used in
 *Default value is "0 (disabled)".*
 
 
-**Example: Set use_domain parameter**
-
-
-```opensips
+```opensips title="Set use_domain parameter"
 ...
 modparam("cpl_c","use_domain",1)
 ...
@@ -444,10 +399,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: cpl_run_script usage**
-
-
-```
+```c title="cpl_run_script usage"
 ...
 cpl_run_script("incoming","force_stateful");
 ...
@@ -481,10 +433,7 @@ This function MUST be called only for REGISTER requests. It
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: cpl_process_register usage**
-
-
-```
+```c title="cpl_process_register usage"
 ...
 if ($rm=="REGISTER") {
     cpl_process_register();
@@ -509,10 +458,7 @@ Main purpose of this function is to allow integration
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: cpl_process_register_norpl usage**
-
-
-```
+```c title="cpl_process_register_norpl usage"
 ...
 if ($rm=="REGISTER") {
     cpl_process_register();
@@ -546,7 +492,7 @@ Parameters:
 MI FIFO Command format:
 
 
-```
+```c
                  opensips-cli -x mi LOAD_CPL sip:bob@domain.com cpl_script.xml
 ```
 
@@ -571,7 +517,7 @@ Parameters:
 MI FIFO Command format:
 
 
-```
+```c
                  opensips-cli -x mi REMOVE_CPL sip:bob@domain.com
 ```
 
@@ -594,7 +540,7 @@ Parameters:
 MI FIFO Command format:
 
 
-```
+```c
                  opensips-cli -x mi GET_CPL sip:bob@domain.com
 ```
 

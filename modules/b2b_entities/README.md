@@ -71,10 +71,7 @@ The size of the hash table that stores the b2b server entities.
 		 (512 records).
 
 
-**Example: Set server_hsize parameter**
-
-
-```opensips
+```opensips title="Set server_hsize parameter"
 ...
 modparam("b2b_entities", "server_hsize", 10)
 ...
@@ -93,10 +90,7 @@ The size of the hash table that stores the b2b client entities.
 		 (512 records).
 
 
-**Example: Set client_hsize parameter**
-
-
-```opensips
+```opensips title="Set client_hsize parameter"
 ...
 modparam("b2b_entities", "client_hsize", 10)
 ...
@@ -111,10 +105,7 @@ The name of the b2b script route that will be called when
 			B2B requests are received.
 
 
-**Example: Set script_req_route parameter**
-
-
-```opensips
+```opensips title="Set script_req_route parameter"
 ...
 modparam("b2b_entities", "script_req_route", "b2b_request")
 ...
@@ -129,10 +120,7 @@ The name of the b2b script route that will be called when
 			B2B replies are received.
 
 
-**Example: Set script_repl_route parameter**
-
-
-```opensips
+```opensips title="Set script_repl_route parameter"
 ...
 modparam("b2b_entities", "script_reply_route", "b2b_reply")
 ...
@@ -147,10 +135,7 @@ Database URL. It is not compulsory, if not set
 			data is not stored in database.
 
 
-**Example: Set db_url parameter**
-
-
-```opensips
+```opensips title="Set db_url parameter"
 ...
 modparam("b2b_entities", "db_url", "mysql://opensips:opensipsrw@127.0.0.1/opensips")
 ...
@@ -165,10 +150,7 @@ URL of a NoSQL database to be used. Only Redis is supported
 			at the moment.
 
 
-**Example: Set cachedb_url parameter**
-
-
-```opensips
+```opensips title="Set cachedb_url parameter"
 ...
 modparam("b2b_entities", "cachedb_url", "redis://localhost:6379/")
 ...
@@ -185,10 +167,7 @@ Prefix to use for every key set in the NoSQL database.
 *Default value is "b2be$".*
 
 
-**Example: Set cachedb_key_prefix parameter**
-
-
-```opensips
+```opensips title="Set cachedb_key_prefix parameter"
 ...
 modparam("b2b_entities", "cachedb_key_prefix", "b2b")
 ...
@@ -204,10 +183,7 @@ The time interval at which to update the info in database.
 *Default value is "100".*
 
 
-**Example: Set update_period parameter**
-
-
-```opensips
+```opensips title="Set update_period parameter"
 ...
 modparam("b2b_entities", "update_period", 60)
 ...
@@ -229,10 +205,7 @@ The string to use when generating the key ( it is inserted
 *Default value is "B2B".*
 
 
-**Example: Set b2b_key_prefix parameter**
-
-
-```opensips
+```opensips title="Set b2b_key_prefix parameter"
 ...
 modparam("b2b_entities", "b2b_key_prefix", "B2B1")
 ...
@@ -254,10 +227,7 @@ The B2B modules have support for the 3 type of database storage
 *Default value is "2" (WRITE BACK).*
 
 
-**Example: Set db_mode parameter**
-
-
-```opensips
+```opensips title="Set db_mode parameter"
 ...
 modparam("b2b_entities", "db_mode", 1)
 ...
@@ -274,10 +244,7 @@ The name of the table that will be used for storing B2B entities
 *Default value is "b2b_entities"*
 
 
-**Example: Set db_table parameter**
-
-
-```opensips
+```opensips title="Set db_table parameter"
 ...
 modparam("b2b_entities", "db_table", "some table name")
 ...
@@ -298,10 +265,7 @@ The ID of the cluster this instance belongs to. Setting this parameter
 *Default value is "0" (clustering disabled)*
 
 
-**Example: Set cluster_id parameter**
-
-
-```opensips
+```opensips title="Set cluster_id parameter"
 ...
 modparam("b2b_entities", "cluster_id", 10)
 ...
@@ -319,10 +283,7 @@ This parameter allows to control, whether a PRACK should be generated locally (=
 *Default value is "0" (generate PRACK locally)*
 
 
-**Example: Set passthru_prack parameter**
-
-
-```opensips
+```opensips title="Set passthru_prack parameter"
 ...
 modparam("b2b_entities", "passthru_prack", 1)
 ...
@@ -355,7 +316,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 	opensips-cli -x mi b2be_list
 	
 ```
@@ -378,10 +339,7 @@ This function binds the b2b_entities modules and fills the structure
 				the exported functions that will be described in detail.
 
 
-**Example: b2b_api_t structure**
-
-
-```
+```c title="b2b_api_t structure"
 ...
 typedef struct b2b_api {
 	b2b_server_new_t          server_new;
@@ -405,7 +363,7 @@ typedef struct b2b_api {
 Field type:
 
 
-```
+```c
 ...
 typedef str* (*b2b_server_new_t) (struct sip_msg* , str* local_contact,
 		b2b_notify_t , str *mod_name, str* logic_key, struct b2b_tracer *tracer,
@@ -431,7 +389,7 @@ The return value is an identifier for the record that will be mentioned when
 The notify function has the following prototype:
 
 
-```
+```c
 ...
 typedef int (*b2b_notify_t)(struct sip_msg* msg, str* id, int type, void* param);
 ...
@@ -451,7 +409,7 @@ This function is called when a request or reply is received for a dialog
 Field type:
 
 
-```
+```c
 ...
 typedef str* (*b2b_client_new_t) (client_info_t* , b2b_notify_t b2b_cback,
 				b2b_add_dlginfo_t add_dlginfo_f, str *mod_name, str *logic_key,
@@ -484,7 +442,7 @@ The return value is an identifier for the record that will be mentioned when
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2b_send_request_t)(enum b2b_entity_type ,str* b2b_key, str* method,
 		str* extra_headers, str* body, b2b_dlginfo_t*);
@@ -511,7 +469,7 @@ The return value is 0 for success and a negative value for error.
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2b_send_reply_t)(enum b2b_entity_type et, str* b2b_key, int code, str* text,
 		str* body, str* extra_headers, b2b_dlginfo_t* dlginfo);
@@ -536,7 +494,7 @@ The return value is 0 for success and a negative value for error.
 Field type:
 
 
-```
+```c
 ...
 typedef void (*b2b_entity_delete_t)(enum b2b_entity_type et, str* b2b_key,
 	 b2b_dlginfo_t* dlginfo);
@@ -555,7 +513,7 @@ This function must be called by the upper level function to delete the
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2b_restore_linfo_t)(enum b2b_entity_type type, str* key,
 		b2b_notify_t cback, void *param, b2b_param_free_cb free_param);
@@ -573,7 +531,7 @@ This function is used at startup when loading the data from the database to
 Field type:
 
 
-```
+```c
 ...
 typedef int (*b2b_update_b2bl_param_t)(enum b2b_entity_type type, str* key,
 		str* param, int replicate);

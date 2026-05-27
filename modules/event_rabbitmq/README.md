@@ -110,10 +110,7 @@ Enables heartbeat support for the AMQP communication. If the
 *Default value is "0 (disabled)".*
 
 
-**Example: Set heartbeat parameter**
-
-
-```opensips
+```opensips title="Set heartbeat parameter"
 ...
 modparam("event_rabbitmq", "heartbeat", 3)
 ...
@@ -130,10 +127,7 @@ The maximally allowed duration (in milliseconds) for the establishment
 *Default value is "500" (milliseconds).*
 
 
-**Example: Setting the connect_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the connect_timeout parameter"
 ...
 modparam("event_rabbitmq", "connect_timeout", 1000)
 ...
@@ -158,10 +152,7 @@ When using this parameter, you must also ensure that
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the use_tls parameter**
-
-
-```opensips
+```opensips title="Set the use_tls parameter"
 ...
 modparam("tls_mgm", "client_domain", "rmq")
 modparam("tls_mgm", "certificate", "[rmq]/etc/pki/tls/certs/rmq.pem")
@@ -186,10 +177,7 @@ This is an example of an event raised by the pike module
 			when it decides an ip should be blocked:
 
 
-**Example: E_PIKE_BLOCKED event**
-
-
-```
+```c title="E_PIKE_BLOCKED event"
 {
   "jsonrpc": "2.0",
   "method": "E_PIKE_BLOCKED",
@@ -200,10 +188,7 @@ This is an example of an event raised by the pike module
 ```
 
 
-**Example: RabbitMQ socket**
-
-
-```
+```c title="RabbitMQ socket"
 	rabbitmq:guest:guest@127.0.0.1:5672/pike
 
 	# same socket can be written as
@@ -227,10 +212,7 @@ This configuration file presents the usage of the event_rabbitmq
 			body.
 
 
-**Example: OpenSIPS config script - sample event_rabbitmq usage**
-
-
-```opensips
+```opensips title="OpenSIPS config script - sample event_rabbitmq usage"
 ...
 loadmodule "signaling.so"
 loadmodule "sl.so"

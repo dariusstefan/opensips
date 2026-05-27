@@ -65,10 +65,7 @@ If the parameter is set to empty string, the AAA accounting support
 Default value is "NULL".
 
 
-**Example: Set aaa_url parameter**
-
-
-```opensips
+```opensips title="Set aaa_url parameter"
 ...
 modparam("peering", "aaa_url", "radius:/etc/radiusclient-ng/radiusclient.conf")
 ...
@@ -87,10 +84,7 @@ Default value is dictionary value of "Sip-Verify-Destination"
 		Service-Type.
 
 
-**Example: verify_destination_service_type parameter usage**
-
-
-```opensips
+```opensips title="verify_destination_service_type parameter usage"
 ...
 modparam("peering", "verify_destination_service_type", 21)
 ...
@@ -109,10 +103,7 @@ Default value is dictionary value of "Sip-Verify-Source"
 		Service-Type.
 
 
-**Example: verify_source_service_type parameter usage**
-
-
-```opensips
+```opensips title="verify_source_service_type parameter usage"
 ...
 modparam("peering", "verify_source_service_type", 22)
 ...
@@ -170,10 +161,7 @@ This function can be used from REQUEST_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: verify_destination() usage**
-
-
-```
+```c title="verify_destination() usage"
 ...
 if (verify_destination()) {
    append_hf("P-Request-Hash: $avp(prh)\r\n");
@@ -222,10 +210,7 @@ This function can be used from REQUEST_ROUTE and
 		FAILURE_ROUTE.
 
 
-**Example: verify_source() usage**
-
-
-```opensips
+```opensips title="verify_source() usage"
 ...
 if (is_present_hf("P-Request-Hash")) {
    if (verify_source()) {

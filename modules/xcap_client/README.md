@@ -77,10 +77,7 @@ To disable it set this parameter to 0.
 *Default value is "1".*
 
 
-**Example: Set periodical_query parameter**
-
-
-```opensips
+```opensips title="Set periodical_query parameter"
 ...
 modparam("xcap_client", "periodical_query", 0)
 ...
@@ -101,10 +98,7 @@ To disable it set this parameter to 0.
 *Default value is "100".*
 
 
-**Example: Set query_period parameter**
-
-
-```opensips
+```opensips title="Set query_period parameter"
 ...
 modparam("xcap_client", "query_period", 50)
 ...
@@ -140,7 +134,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 ...
 opensips-cli -x mi refreshXcapDoc /xcap-root/resource-lists/users/eyebeam/buddies-resource-list.xml 8000
 ...
@@ -163,10 +157,7 @@ The module exports a number of functions that allow selecting
 This function allows binding the needed functions.
 
 
-**Example: xcap_client_api structure**
-
-
-```
+```c title="xcap_client_api structure"
 ...
 typedef struct xcap_client_api {
 	
@@ -194,7 +185,7 @@ typedef struct xcap_client_api {
 Field type:
 
 
-```
+```c
 ...
 typedef char* (*xcap_get_elem_t)(char* xcap_root,
 xcap_doc_sel_t* doc_sel, xcap_node_sel_t* node_sel);
@@ -280,7 +271,7 @@ If the intention is to retrieve the whole document this argument must
 Field type:
 
 
-```
+```c
 ...
 typedef int (*register_xcapcb_t)(int types, xcap_cb f);
 ...
@@ -295,7 +286,7 @@ typedef int (*register_xcapcb_t)(int types, xcap_cb f);
 -the callback function has type :
 
 
-```
+```c
 ...
 typedef int (xcap_cb)(int doc_type, str xid, char* doc);
 ...

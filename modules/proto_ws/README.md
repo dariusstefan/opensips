@@ -42,7 +42,7 @@ Once loaded, you will be able to define WebSocket listeners in your script. To
 		add a listener, you have to add its IP, and optionally the listening port,
 		*after* the `mpath` parameter, similar to this
 		example:
-	```
+	```c
 
 ...
 mpath=/path/to/modules
@@ -94,10 +94,7 @@ If you want to change only the listening port for WS, use the port
 *Default value is 80.*
 
 
-**Example: Set ws_port parameter**
-
-
-```opensips
+```opensips title="Set ws_port parameter"
 ...
 modparam("proto_ws", "ws_port", 8080)
 ...
@@ -115,10 +112,7 @@ Time in milliseconds after a WebSocket connection will be closed if it is
 *Default value is 100 ms.*
 
 
-**Example: Set ws_send_timeout parameter**
-
-
-```opensips
+```opensips title="Set ws_send_timeout parameter"
 ...
 modparam("proto_ws", "ws_send_timeout", 200)
 ...
@@ -139,10 +133,7 @@ The maximum number of chunks in which a SIP message is expected to
 *Default value is 4.*
 
 
-**Example: Set ws_max_msg_chunks parameter**
-
-
-```opensips
+```opensips title="Set ws_max_msg_chunks parameter"
 ...
 modparam("proto_ws", "ws_max_msg_chunks", 8)
 ...
@@ -169,10 +160,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-**Example: Set trace_destination parameter**
-
-
-```opensips
+```opensips title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "hep_id", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -189,10 +177,7 @@ This controls whether tracing for ws is on or not. You still need to define
 			controlled using mi function [mi ws trace](#mi_ws_trace).
 
 
-**Example: Set trace_on parameter**
-
-
-```opensips
+```opensips title="Set trace_on parameter"
 ...
 modparam("proto_ws", "trace_on", 1)
 ...
@@ -227,10 +212,7 @@ Define the name of a route in which you can filter which connections will
 			this route won't be called.
 
 
-**Example: Set trace_filter_route parameter**
-
-
-```opensips
+```opensips title="Set trace_filter_route parameter"
 ...
 modparam("proto_ws", "trace_filter_route", "ws_filter")
 ...
@@ -257,10 +239,7 @@ route[ws_filter] {
 Controls whether the module should require the Origin header or not.
 
 
-**Example: Set require_origin parameter**
-
-
-```opensips
+```opensips title="Set require_origin parameter"
 ...
 modparam("proto_ws", "require_origin", no)
 ...
@@ -291,7 +270,7 @@ Parameters:
 MI FIFO Command Format:
 
 
-```
+```c
 			opensips-cli -x mi ws_trace on
 			
 ```

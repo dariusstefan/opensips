@@ -55,10 +55,7 @@ This parameter may be defined multiple times, in order to define
 		multiple groups.
 
 
-**Example: script_sr_group example**
-
-
-```opensips
+```opensips title="script_sr_group example"
 modparam("status_report", "script_sr_group", "security")
 modparam("status_report", "script_sr_group", "alarms")
 ```
@@ -89,10 +86,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: sr_set_status usage**
-
-
-```
+```c title="sr_set_status usage"
 ...
 sr_set_status( "script_caching", 1, "completed");
 ...
@@ -118,10 +112,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-**Example: sr_add_report usage**
-
-
-```
+```c title="sr_add_report usage"
 ...
 sr_add_report("security","IP $si detected as attacker");
 ...

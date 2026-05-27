@@ -99,10 +99,7 @@ The following parameters can be used:
 				the [use tls](#param_use_tls) module parameter must be enabled.
 
 
-**Example: Set connection_id parameter**
-
-
-```opensips
+```opensips title="Set connection_id parameter"
 ...
 # connection to a RabbitMQ server on localhost, default port
 # with a 5 seconds interval for heartbeat messages
@@ -131,10 +128,7 @@ The maximally allowed duration (in milliseconds) for the establishment
 *Default value is "500" (milliseconds).*
 
 
-**Example: Setting the connect_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the connect_timeout parameter"
 ...
 modparam("rabbitmq_consumer", "connect_timeout", 1000)
 ...
@@ -151,10 +145,7 @@ The interval (in milliseconds) after which OpenSIPS will try to
 *Default value is "5000" (milliseconds).*
 
 
-**Example: Setting the retry_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the retry_timeout parameter"
 ...
 modparam("rabbitmq_consumer", "retry_timeout", 10000)
 ...
@@ -178,10 +169,7 @@ When using this parameter, you must also ensure that
 *Default value is **0** (not enabled)*
 
 
-**Example: Set the use_tls parameter**
-
-
-```opensips
+```opensips title="Set the use_tls parameter"
 ...
 modparam("tls_mgm", "client_domain", "rmq")
 modparam("tls_mgm", "certificate", "[rmq]/etc/pki/tls/certs/rmq.pem")

@@ -97,10 +97,7 @@ If you use multiple servers in your installation, and would like to authenticate
 		issued the request.
 
 
-**Example: secret parameter example**
-
-
-```opensips
+```opensips title="secret parameter example"
 modparam("auth", "secret", "johndoessecretphrase")
 ```
 
@@ -121,10 +118,7 @@ Nonces have limited lifetime. After a given period of time nonces
 The value is in seconds and default value is 30 seconds.
 
 
-**Example: nonce_expire parameter example**
-
-
-```opensips
+```opensips title="nonce_expire parameter example"
 modparam("auth", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
@@ -139,10 +133,7 @@ Prefix to be added to Remote-Party-ID header field just before
 Default value is "".
 
 
-**Example: rpid_prefix parameter example**
-
-
-```opensips
+```opensips title="rpid_prefix parameter example"
 modparam("auth", "rpid_prefix", "Whatever <")
 ```
 
@@ -158,10 +149,7 @@ Default value is
 			";party=calling;id-type=subscriber;screen=yes".
 
 
-**Example: rpid_suffix parameter example**
-
-
-```opensips
+```opensips title="rpid_suffix parameter example"
 modparam("auth", "rpid_suffix", "@1.2.3.4>")
 ```
 
@@ -181,10 +169,7 @@ Prefix to be automatically strip from realm. As an alternative to
 Default value is empty string.
 
 
-**Example: realm_prefix parameter example**
-
-
-```opensips
+```opensips title="realm_prefix parameter example"
 modparam("auth", "realm_prefix", "sip.")
 ```
 
@@ -205,10 +190,7 @@ If defined to NULL string, all RPID functions will fail at
 Default value is "$avp(rpid)".
 
 
-**Example: rpid_avp parameter example**
-
-
-```opensips
+```opensips title="rpid_avp parameter example"
 modparam("auth", "rpid_avp", "$avp(caller_rpid)")
 		
 ```
@@ -223,10 +205,7 @@ This name of the pseudo-variable that will hold the username.
 Default value is "NULL".
 
 
-**Example: username_spec parameter usage**
-
-
-```opensips
+```opensips title="username_spec parameter usage"
 modparam("auth", "username_spec", "$var(username)")
 ```
 
@@ -240,10 +219,7 @@ This name of the pseudo-variable that will hold the password.
 Default value is "NULL".
 
 
-**Example: password_spec parameter usage**
-
-
-```opensips
+```opensips title="password_spec parameter usage"
 modparam("auth", "password_spec", "$var(password)")
 ```
 
@@ -265,10 +241,7 @@ If the parameter is set to 1 then the server will assume that the
 Default value of this parameter is 0.
 
 
-**Example: calculate_ha1 parameter usage**
-
-
-```opensips
+```opensips title="calculate_ha1 parameter usage"
 modparam("auth", "calculate_ha1", 1)
 ```
 
@@ -287,10 +260,7 @@ By setting this parameter you disable the security mechanism
 Default value is "0" (enabled).
 
 
-**Example: disable_nonce_check parameter usage**
-
-
-```opensips
+```opensips title="disable_nonce_check parameter usage"
 modparam("auth", "disable_nonce_check", 1)
 ```
 
@@ -355,10 +325,7 @@ Values can be listed in any order. The actual order of individual
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: www_challenge usage**
-
-
-```
+```c title="www_challenge usage"
 ...
 if (!www_authorize("siphub.net", "subscriber")) {
 	www_challenge("siphub.net", "auth,auth-int", "MD5,SHA-512-256");
@@ -386,10 +353,7 @@ See the paragraph on [www challenge params](#www_challenge_params) for
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: proxy_challenge usage**
-
-
-```
+```c title="proxy_challenge usage"
 ...
 $var(secure_algorithms) = "sha-256,sha-512-256";
 ...
@@ -418,10 +382,7 @@ This function removes previously authorized credentials from the
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: consume_credentials example**
-
-
-```
+```c title="consume_credentials example"
 ...
 if (www_authorize("", "subscriber")) {
     consume_credentials();
@@ -443,10 +404,7 @@ The function checks if the SIP URI received from the database or
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: is_rpid_user_e164 usage**
-
-
-```
+```c title="is_rpid_user_e164 usage"
 ...
 if (is_rpid_user_e164()) {
     # do something here
@@ -469,10 +427,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		BRANCH_ROUTE.
 
 
-**Example: append_rpid_hf usage**
-
-
-```
+```c title="append_rpid_hf usage"
 ...
 append_rpid_hf();  # Append Remote-Party-ID header field
 ...
@@ -506,10 +461,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 		BRANCH_ROUTE.
 
 
-**Example: append_rpid_hf(prefix, suffix) usage**
-
-
-```
+```c title="append_rpid_hf(prefix, suffix) usage"
 ...
 # Append Remote-Party-ID header field
 append_rpid_hf("", ";party=calling;id-type=subscriber;screen=yes");
@@ -561,11 +513,8 @@ If an empty string "" is used then the server will
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: pv_www_authorize
-		usage**
-
-
-```
+```c title="pv_www_authorize
+		usage"
 ...
 $var(username)="abc";
 $var(password)="xyz";
@@ -606,10 +555,7 @@ If an empty string "" is used then the server will
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: pv_proxy_authorize usage**
-
-
-```
+```c title="pv_proxy_authorize usage"
 ...
 $var(username)="abc";
 $var(password)="xyz";

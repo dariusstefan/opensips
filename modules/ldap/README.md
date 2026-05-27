@@ -150,7 +150,7 @@ The configuration file follows the Windows INI file syntax,
         section names are enclosed in square brackets:
 
 
-```
+```c
 [Section_Name]
 ```
 
@@ -160,7 +160,7 @@ Any
         form
 
 
-```
+```c
 key = value ; comment
 ```
 
@@ -179,7 +179,7 @@ Each section describes one LDAP session that can be referred to
         specification looks like:
 
 
-```
+```c
 [example_ldap]
 ldap_server_url            = "ldap://ldap1.example.com, ldap://ldap2.example.com"
 ldap_bind_dn               = "cn=sip_proxy,ou=accounts,dc=example,dc=com"
@@ -199,7 +199,7 @@ The configuration keys are
         e.g.
 
 
-```
+```c
 ldap://example_ldap/cn=admin,dc=example,dc=com
 ```
 
@@ -216,10 +216,7 @@ LDAP URL including fully qualified domain name or IP address of LDAP server opti
 Default value: none, this is a mandatory setting
 
 
-**Example: ldap_server_url examples**
-
-
-```
+```c title="ldap_server_url examples"
 ldap_server_url = "ldap://localhost"
 ldap_server_url = "ldap://ldap.example.com:7777"
 ldap_server_url = "ldap://ldap1.example.com,
@@ -237,10 +234,7 @@ Supported LDAP versions are 2 and 3.
 Default value: `3` (LDAPv3)
 
 
-**Example: ldap_version example**
-
-
-```
+```c title="ldap_version example"
 ldap_version = 2
 ```
 
@@ -257,10 +251,7 @@ Default value: "" (empty string -->
               anonymous bind)
 
 
-**Example: ldap_bind_dn example**
-
-
-```
+```c title="ldap_bind_dn example"
 ldap_bind_dn = "cn=root,dc=example,dc=com";
 ```
 
@@ -276,10 +267,7 @@ Default value: "" (empty string -->
               anonymous bind)
 
 
-**Example: ldap_bind_password example**
-
-
-```
+```c title="ldap_bind_password example"
 ldap_bind_password = "secret";
 ```
 
@@ -294,10 +282,7 @@ LDAP TCP connect timeout in milliseconds. Setting this
 Default value: 1000 (one second)
 
 
-**Example: ldap_network_timeout example**
-
-
-```
+```c title="ldap_network_timeout example"
 ldap_network_timeout = 500 ; setting TCP timeout to 500 ms
 ```
 
@@ -311,11 +296,8 @@ LDAP bind operation timeout in milliseconds.
 Default value: 1000 (one second)
 
 
-**Example: ldap_client_bind_timeout
-                example**
-
-
-```
+```c title="ldap_client_bind_timeout
+                example"
 ldap_client_bind_timeout = 1000
 ```
 
@@ -329,11 +311,8 @@ LDAP full path of the CA certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: ldap_ca_cert_file
-                example**
-
-
-```
+```c title="ldap_ca_cert_file
+                example"
 ldap_ca_cert_file = "/usr/local/CAcert.pem"
 ```
 
@@ -347,11 +326,8 @@ LDAP full path of the certificate file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: ldap_cert_file
-                example**
-
-
-```
+```c title="ldap_cert_file
+                example"
 ldap_cert_file = "/usr/local/mycert.pem"
 ```
 
@@ -365,11 +341,8 @@ LDAP full path of the key file.
 No default value. It is mandatory in case you wish to use StartTLS
 
 
-**Example: ldap_key_file
-                example**
-
-
-```
+```c title="ldap_key_file
+                example"
 ldap_key_file = "/usr/local/mykey.pem"
 ```
 
@@ -384,11 +357,8 @@ LDAP peer certificate checking strategy, one of "NEVER", "HARD", "DEMAND", "ALLO
 Default value "NEVER".
 
 
-**Example: ldap_require_certificate
-                example**
-
-
-```
+```c title="ldap_require_certificate
+                example"
 ldap_require_certificate = "NEVER"
 ```
 
@@ -401,10 +371,7 @@ The following configuration file example includes two LDAP
         and do phone number to name mappings.
 
 
-**Example: Example LDAP Configuration File**
-
-
-```
+```c title="Example LDAP Configuration File"
 # LDAP session "sipaccounts":
 #
 # - using LDAPv3 (default)
@@ -450,10 +417,7 @@ Default value:
         `/usr/local/etc/opensips/ldap.cfg`
 
 
-**Example: config_file parameter usage**
-
-
-```opensips
+```opensips title="config_file parameter usage"
 modparam("ldap", "config_file", "/etc/opensips/ldap.ini")
 		  
 ```
@@ -472,10 +436,7 @@ Number of maximum asynchronous connections that will be started
 Default value: `20`
 
 
-**Example: max_async_connections parameter usage**
-
-
-```opensips
+```opensips title="max_async_connections parameter usage"
 modparam("ldap", "max_async_connections", 50)
 		  
 ```
@@ -506,9 +467,6 @@ An LDAP URL defining the LDAP search operation (refer to
               declared in the LDAP configuration script.
 
 
-**Example: Example Usage of ldap_url**
-
-
 Search with LDAP session named
                 `sipaccounts`, base
                 `ou=sip,dc=example,dc=com`,
@@ -517,7 +475,7 @@ Search with LDAP session named
                 attributes:
 
 
-```
+```c title="Example Usage of ldap_url"
 ldap://sipaccounts/ou=sip,dc=example,dc=com??one?(cn=schlatter)
 ```
 
@@ -530,7 +488,7 @@ Subtree search with LDAP session named
                 `SIPIdentityServiceLevel` attributes
 
 
-```
+```c title="Example Usage of ldap_url"
 ldap://ldap_1/dc=example,dc=com?
        SIPIdentityUserName,SIPIdentityServiceLevel?sub?(cn=$(avp(name)))
 	        
@@ -560,10 +518,7 @@ ldap://ldap_1/dc=example,dc=com?
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 ...
 # ldap search
 if (!ldap_search("ldap://sipaccounts/ou=sip,dc=example,dc=com??one?(cn=$rU)"))
@@ -660,10 +615,7 @@ Internal error occurred
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 ...
 
 # ldap_search call
@@ -757,10 +709,7 @@ Internal error occurred
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 ...
 # ldap_search call
 ...
@@ -821,10 +770,7 @@ Internal error
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```
+```c title="Example Usage"
 ...
 # ldap_search call
 ...
@@ -905,10 +851,7 @@ Internal error
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 ...
 if (!ldap_filter_url_encode("cn=$avp(name)", $avp(name_esc)))
 {
@@ -951,9 +894,6 @@ An LDAP URL defining the LDAP search operation (refer to
               declared in the LDAP configuration script.
 
 
-**Example: Example Usage of ldap_url**
-
-
 Search with LDAP session named
                 `sipaccounts`, base
                 `ou=sip,dc=example,dc=com`,
@@ -962,7 +902,7 @@ Search with LDAP session named
                 attributes:
 
 
-```
+```c title="Example Usage of ldap_url"
 ldap://sipaccounts/ou=sip,dc=example,dc=com??one?(cn=schlatter)
 ```
 
@@ -975,7 +915,7 @@ Subtree search with LDAP session named
                 `SIPIdentityServiceLevel` attributes
 
 
-```
+```c title="Example Usage of ldap_url"
 ldap://ldap_1/dc=example,dc=com?
        SIPIdentityUserName,SIPIdentityServiceLevel?sub?(cn=$(avp(name)))
 	        
@@ -1005,10 +945,7 @@ ldap://ldap_1/dc=example,dc=com?
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-**Example: Example Usage**
-
-
-```opensips
+```opensips title="Example Usage"
 ...
 # ldap search
 
@@ -1053,7 +990,7 @@ OpenLDAP library (libldap) and header files (libldap-dev) v2.1 or greater (this 
 The OpenLDAP library is available pre-compiled for most UNIX/Linux flavors. On Debian/Ubuntu, the following packages must be installed:
 
 
-```
+```c
 # apt-get install libldap2 libldap2-dev
 ```
 
@@ -1073,10 +1010,7 @@ The LDAP module API can be used by other OpenSIPS modules to implement LDAP sear
 In order to use this API, a module has to load the API using the `load_ldap_api` function which returns a pointer to a `ldap_api` structure. This structure includes pointers to the API functions described below. The LDAP module source file `api.h` includes all declarations needed to load the API, it has to be included in the file that loads the API. Loading the API is typically done inside a module's `mod_init` call as the following example shows:
 
 
-**Example: Example code fragment to load LDAP module API**
-
-
-```
+```c title="Example code fragment to load LDAP module API"
 #include "../../sr_module.h"
 #include "../ldap/api.h"
 
@@ -1110,10 +1044,7 @@ static int mod_init(void)
 The API functions can then be used like in the following example:
 
 
-**Example: Example LDAP module API function call**
-
-
-```
+```c title="Example LDAP module API function call"
 ...
 	
     rc = ldap_api.ldap_rfc4515_escape(str1, str2, 0);	
@@ -1133,7 +1064,7 @@ The API functions can then be used like in the following example:
 Performs an LDAP search using the parameters given as function arguments.
 
 
-```
+```c
 typedef int (*ldap_params_search_t)(int* _ld_result_count,
                                     char* _lds_name,
                                     char* _dn,
@@ -1200,7 +1131,7 @@ Success, `_ld_result_count` includes the number of LDAP entries found.
 Performs an LDAP search using an LDAP URL.
 
 
-```
+```c
 typedef int (*ldap_url_search_t)(char* _ldap_url,
                                  int* _result_count);
 
@@ -1241,7 +1172,7 @@ Retrieve the value(s) of a returned LDAP attribute. The function accesses the LD
 This function allocates memory to store the LDAP attribute value(s). This memory has to freed with the function `ldap_value_free_len` (see next section).
 
 
-```
+```c
 typedef int (*ldap_result_attr_vals_t)(str* _attr_name,
                                        struct berval ***_vals);
 									   
@@ -1290,7 +1221,7 @@ No attribute value found.
 Function used to free memory allocated by `ldap_result_attr_vals`. The `berval` structure is defined in OpenLDAP's `ldap.h`, which has to be included.
 
 
-```
+```c
 typedef void (*ldap_value_free_len_t)(struct berval **_vals);
 
 typedef struct berval {
@@ -1314,7 +1245,7 @@ typedef struct berval {
 Increments the LDAP result pointer.
 
 
-```
+```c
 typedef int (*ldap_result_next_t)();
 
 			
@@ -1345,7 +1276,7 @@ No more results available.
 Converts LDAP search scope string into integer value e.g. for `ldap_params_search`.
 
 
-```
+```c
 typedef int (*ldap_str2scope_t)(char* scope_str);
 
 			
@@ -1376,7 +1307,7 @@ LDAP search scope integer.
 Applies escaping rules described in [ldap filter url encode fn](#ldap-filter-url-encode-fn).
 
 
-```
+```c
 typedef int (*ldap_rfc4515_escape_t)(str *sin, str *sout, int url_encode);
 
 			
@@ -1419,7 +1350,7 @@ Success, `sout` contains escaped string.
 Returns the OpenLDAP LDAP handle for a specific LDAP session. This allows a module implementor to use the OpenLDAP API functions directly, instead of using the API functions exported by the OpenSIPS LDAP module. The `LDAP` structure is defined in OpenLDAP's `ldap.h`, which has to be included.
 
 
-```
+```c
 typedef int (*get_ldap_handle_t)(char* _lds_name, LDAP** _ldap_handle);
 
 			
@@ -1456,7 +1387,7 @@ Success, `_ldap_handle` contains the OpenLDAP LDAP handle.
 Returns the OpenLDAP LDAP handle and OpenLDAP result handle of the last LDAP search operation. These handles can be used as input for OpenLDAP LDAP result API functions. `LDAP` and `LDAPMessage` structures are defined in OpenLDAP's `ldap.h`, which has to be included.
 
 
-```
+```c
 typedef void (*get_last_ldap_result_t)
 	     (LDAP** _last_ldap_handle, LDAPMessage** _last_ldap_result);
 
@@ -1482,7 +1413,7 @@ OpenLDAP result handle returned by this function.
 The following example shows how this API can be used to perform an LDAP search operation. It is assumed that the API is loaded and available through the `ldap_api` pointer.
 
 
-```
+```c
 ...
 	
 int rc, ld_result_count, scope = 0;

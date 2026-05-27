@@ -58,10 +58,7 @@ The size of the hash table that stores the MSRP sessions.
 			 (1024 records).
 
 
-**Example: Set server_hsize parameter**
-
-
-```opensips
+```opensips title="Set server_hsize parameter"
 ...
 modparam("msrp_relay", "hash_size", 10)
 ...
@@ -81,10 +78,7 @@ The interval between full iterations of the sessions table
 *Default value is "60".*
 
 
-**Example: Set cleanup_interval parameter**
-
-
-```opensips
+```opensips title="Set cleanup_interval parameter"
 ...
 modparam("msrp_relay", "cleanup_interval", 30)
 ...
@@ -105,10 +99,7 @@ The name of the script route to be called when authorizing
 *No default value; this parameter is mandatory.*
 
 
-**Example: Set auth_route parameter**
-
-
-```opensips
+```opensips title="Set auth_route parameter"
 ...
 modparam("msrp_relay", "auth_route", "auth")
 ...
@@ -126,10 +117,7 @@ This name of the pseudo-variable that holds the authentication
 Default value is "$var(username)".
 
 
-**Example: username_var parameter usage**
-
-
-```opensips
+```opensips title="username_var parameter usage"
 modparam("msrp_relay", "username_var", "$var(msrp_auth_user)")
 ```
 
@@ -144,10 +132,7 @@ This name of the pseudo-variable that hols the authentication
 Default value is "$var(realm)".
 
 
-**Example: realm_var parameter usage**
-
-
-```opensips
+```opensips title="realm_var parameter usage"
 modparam("msrp_relay", "realm_var", "$var(msrp_auth_realm)")
 ```
 
@@ -165,10 +150,7 @@ This name of the pseudo-variable that should be set in the
 Default value is "$var(password)".
 
 
-**Example: password_var parameter usage**
-
-
-```opensips
+```opensips title="password_var parameter usage"
 modparam("msrp_relay", "password_var", "$var(msrp_auth_password)")
 ```
 
@@ -184,10 +166,7 @@ This parameter configures whether the value of the
 Default value of this parameter is 0 (HA1 string).
 
 
-**Example: calculate_ha1 parameter usage**
-
-
-```opensips
+```opensips title="calculate_ha1 parameter usage"
 modparam("msrp_relay", "calculate_ha1", 1)
 ```
 
@@ -226,10 +205,7 @@ In this route you should optionally set the desired MSRP(S)
 Default value is "NULL" (none).
 
 
-**Example: Set socket_route parameter**
-
-
-```opensips
+```opensips title="Set socket_route parameter"
 ...
 modparam("msrp_relay", "socket_route", "msrp_routing")
 
@@ -277,10 +253,7 @@ If this parameter is not set, the realm chose by the relay is the
 		domain part of the top MSRP URI in the To-Path header of the AUTH request.
 
 
-**Example: auth_realm parameter usage**
-
-
-```opensips
+```opensips title="auth_realm parameter usage"
 modparam("msrp_relay", "auth_realm", "opensips.org")
 ```
 
@@ -298,10 +271,7 @@ The *Expires* header value to be provided in the 200 OK
 		 (1024 records).
 
 
-**Example: Set server_hsize parameter**
-
-
-```opensips
+```opensips title="Set server_hsize parameter"
 ...
 modparam("msrp_relay", "auth_expires", 600)
 ...
@@ -322,10 +292,7 @@ The minimum value accepted by the relay in the *Expires*
 If not set, the relay will accept any value.
 
 
-**Example: Set auth_min_expires parameter**
-
-
-```opensips
+```opensips title="Set auth_min_expires parameter"
 ...
 modparam("msrp_relay", "auth_min_expires", 60)
 ...
@@ -346,10 +313,7 @@ The maximum value accepted by the relay in the *Expires*
 If not set, the relay will accept any value.
 
 
-**Example: Set auth_max_expires parameter**
-
-
-```opensips
+```opensips title="Set auth_max_expires parameter"
 ...
 modparam("msrp_relay", "auth_max_expires", 60)
 ...
@@ -373,10 +337,7 @@ Nonces have limited lifetime. After a given period of time nonces
 The value is in seconds and default value is 30 seconds.
 
 
-**Example: nonce_expire parameter example**
-
-
-```opensips
+```opensips title="nonce_expire parameter example"
 modparam("msrp_relay", "nonce_expire", 15)   # Set nonce_expire to 15s
 ```
 
@@ -400,10 +361,7 @@ If the port is not set explicitly, the default value of 2855 wil
 		be assumed. The session-id part of the URI should not be set
 
 
-**Example: my_uri parameter usage**
-
-
-```opensips
+```opensips title="my_uri parameter usage"
 modparam("msrp_relay", "my_uri", "msrp://opensips.org:2855;tcp")
 ```
 

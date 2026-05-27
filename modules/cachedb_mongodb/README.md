@@ -59,10 +59,7 @@ None.
 The following packages must be installed before running OpenSIPS with this module loaded:
 
 
-**Example: Runtime requirements for "cachedb_mongodb"**
-
-
-```
+```c title="Runtime requirements for "cachedb_mongodb""
 # Debian / Ubuntu
 sudo apt-get install libjson-c2 libmongoc-1.0
 
@@ -75,10 +72,7 @@ sudo yum install json-c mongo-c-driver
 The following packages are required in order to compile this module:
 
 
-**Example: Compilation requirements for "cachedb_mongodb"**
-
-
-```
+```c title="Compilation requirements for "cachedb_mongodb""
 # Debian / Ubuntu
 sudo apt-get install libjson-c-dev libmongoc-dev libbson-dev
 
@@ -106,19 +100,13 @@ The URL syntax is identical to the one used by MongoDB, including
 			please refer to [the official MongoDB connect string documentation](https://docs.mongodb.com/manual/reference/connection-string/).
 
 
-**Example: Set cachedb_url parameter**
-
-
-```
+```c title="Set cachedb_url parameter"
 ...
 # Connect to a single 
 ```
 
 
-**Example: Reference MongoDB connections**
-
-
-```
+```c title="Reference MongoDB connections"
 ...
 cache_store("mongodb", "key", "$ru value");
 cache_remove("mongodb:cluster", "key");
@@ -138,10 +126,7 @@ The maximum number of microseconds that a mongodb query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-**Example: Set exec_threshold parameter**
-
-
-```opensips
+```opensips title="Set exec_threshold parameter"
 ...
 modparam("cachedb_mongodb", "exec_threshold", 100000)
 ...
@@ -165,10 +150,7 @@ Caveat: only the minimally required raw query options are
 *Default value is "0 (disabled)".*
 
 
-**Example: Setting the compat_mode_2.4 parameter**
-
-
-```opensips
+```opensips title="Setting the compat_mode_2.4 parameter"
 ...
 modparam("cachedb_mongodb", "compat_mode_2.4", 1)
 ...
@@ -192,10 +174,7 @@ Caveat: only the minimally required options for "find" raw queries are
 *Default value is "0 (disabled)".*
 
 
-**Example: Setting the compat_mode_3.0 parameter**
-
-
-```opensips
+```opensips title="Setting the compat_mode_3.0 parameter"
 ...
 modparam("cachedb_mongodb", "compat_mode_3.0", 1)
 ...
@@ -229,10 +208,7 @@ The query syntax is identical to the mongo cli. Documentation for it
 Some example raw queries:
 
 
-**Example: MongoDB Raw Insert**
-
-
-```opensips
+```opensips title="MongoDB Raw Insert"
 ...
 cache_raw_query("mongodb:cluster", "{ \
     \"insert\": \"ip_blacklist\", \
@@ -248,10 +224,7 @@ xlog("INSERT RAW QUERY returned $rc, output: '$avp(out)'\n");
 ```
 
 
-**Example: MongoDB Raw Update**
-
-
-```opensips
+```opensips title="MongoDB Raw Update"
 ...
 cache_raw_query("mongodb:cluster", "{ \
     \"update\": \"ip_blacklist\", \

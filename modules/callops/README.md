@@ -50,10 +50,7 @@ The module can also be used to catch *Notify refer* events
 		the NOTIFY to the end-point, you have to drop it, like below:
 
 
-**Example: Drop automatically handled NOTIFY refer events**
-
-
-```opensips
+```opensips title="Drop automatically handled NOTIFY refer events"
 ...
 if (has_totag() && loose_route() &&
 		is_method("NOTIFY") && $hdr(Event) == "refer")
@@ -117,10 +114,7 @@ This parameter can be used to change the mode that the module
 *Default value is "0 (auto mode using parameters)".*
 
 
-**Example: Set mode parameter**
-
-
-```opensips
+```opensips title="Set mode parameter"
 ...
 modparam("callops", "mode", "manual") # use your own logic
 ...
@@ -139,10 +133,7 @@ The parameter used to match the different calls together. This is
 *Default value is "osid".*
 
 
-**Example: Set match_param parameter**
-
-
-```opensips
+```opensips title="Set match_param parameter"
 ...
 modparam("callops", "match_param", "call")
 ...
@@ -175,11 +166,8 @@ Parameters:
 This function can be used only from a request route.
 
 
-**Example: Use call_blind_replace() function to match
-					an existing leg.**
-
-
-```opensips
+```opensips title="Use call_blind_replace() function to match
+					an existing leg."
 ...
 if (!has_totag() && is_method("INVITE")) {
 	if (cache_fetch("local", "callid_$si", $avp(callid))) {
@@ -206,11 +194,8 @@ Note that if the function successfully handles the NOTIFY request,
 This function can be used from a request route, failure route and local route.
 
 
-**Example: Use call_transfer_notify() function to handle
-					NOTIFY refer requests.**
-
-
-```opensips
+```opensips title="Use call_transfer_notify() function to handle
+					NOTIFY refer requests."
 ...
 if (has_totag() && is_method("NOTIFY") && loose_route()) {
 	call_transfer_notify();
@@ -241,11 +226,8 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-**Example: Use call_transfer() function to do a blind
-					transfer of the caller to a new destination.**
-
-
-```
+```c title="Use call_transfer() function to do a blind
+					transfer of the caller to a new destination."
 ...
 if (has_totag() && && loose_route()) {
 	call_transfer("caller", "sip:announcement@127.0.0.1");
@@ -283,11 +265,8 @@ Parameters:
 This function can be used from any route that has a dialog context.
 
 
-**Example: Use call_transfer() function to do an
-					attended transfer of the caller to the callee of a different call.**
-
-
-```
+```c title="Use call_transfer() function to do an
+					attended transfer of the caller to the callee of a different call."
 ...
 if (has_totag() && && loose_route()) {
 	call_transfer("caller", "ba55b1b3-459d-4e84-a6f8-14c40e4f6ace", "callee");
@@ -354,7 +333,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 # blind transfer to sip:agent@127.0.0.1
 opensips-cli -x mi call_transfer \
 	callid=4b664b48-5639-40bf-bff8-3a866c145c3b \
@@ -364,7 +343,7 @@ opensips-cli -x mi call_transfer \
 ```
 
 
-```
+```c
 # attended transfer between two calls
 opensips-cli -x mi call_transfer \
 	callid=e8d024db-78e5-4d18-9794-5b8ba837bed4
@@ -399,7 +378,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 # put a call on hold
 opensips-cli -x mi call_hold \
 	callid=921b00e4-fec0-4a36-9397-a40ab74e1893
@@ -432,7 +411,7 @@ Parameters
 MI FIFO Command Format:
 
 
-```
+```c
 opensips-cli -x mi call_unhold \
 	callid=921b00e4-fec0-4a36-9397-a40ab74e1893
 		

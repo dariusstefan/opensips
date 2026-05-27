@@ -34,10 +34,7 @@ Even if using HTTPS the url must begin with "http://" , and the
 	SSL parameter for the module must be set to 1.
 
 
-**Example: Setting db_url for a module**
-
-
-```opensips
+```opensips title="Setting db_url for a module"
 ...
 modparam("presence", "db_url","http://user:pass@localhost:13100")
 or
@@ -77,10 +74,7 @@ If value is 1 the module will use https otherwise
 *Default value is " 0 ".*
 
 
-**Example: Set SSL parameter**
-
-
-```opensips
+```opensips title="Set SSL parameter"
 ...
 modparam("db_http", "SSL",1)
 ...
@@ -96,10 +90,7 @@ Whether or not the server supports raw queries.
 *Default value is "0".*
 
 
-**Example: Set cap_raw_query parameter**
-
-
-```opensips
+```opensips title="Set cap_raw_query parameter"
 ...
 modparam("db_http", "cap_raw_query", 1)
 ...
@@ -115,10 +106,7 @@ Whether or not the server supports replace capabilities.
 *Default value is "0".*
 
 
-**Example: Set cap_replace parameter**
-
-
-```opensips
+```opensips title="Set cap_replace parameter"
 ...
 modparam("db_http", "cap_replace", 1)
 ...
@@ -134,10 +122,7 @@ Whether or not the server supports insert_update capabilities.
 *Default value is "0".*
 
 
-**Example: Set cap_insert_update parameter**
-
-
-```opensips
+```opensips title="Set cap_insert_update parameter"
 ...
 modparam("db_http", "cap_insert_update", 1)
 ...
@@ -153,10 +138,7 @@ Whether or not the server supports last_inserted_id capabilities.
 *Default value is "0".*
 
 
-**Example: Set cap_last_inserted_id parameter**
-
-
-```opensips
+```opensips title="Set cap_last_inserted_id parameter"
 ...
 modparam("db_http", "cap_last_inserted_id", 1)
 ...
@@ -173,10 +155,7 @@ Character to be used to delimit fields in the reply.Only
 *Default value is ";"*
 
 
-**Example: Set field_delimiter parameter**
-
-
-```opensips
+```opensips title="Set field_delimiter parameter"
 ...
 modparam("db_http", "field_delimiter",";")
 ...
@@ -193,10 +172,7 @@ Character to be used to delimit rows in the reply.Only
 *Default value is "\n"*
 
 
-**Example: Set row_delimiter parameter**
-
-
-```opensips
+```opensips title="Set row_delimiter parameter"
 ...
 modparam("db_http", "row_delimiter","\n")
 ...
@@ -213,10 +189,7 @@ Character to be used to quote  fields that require quoting
 *Default value is "|"*
 
 
-**Example: Set quote_delimiter parameter**
-
-
-```opensips
+```opensips title="Set quote_delimiter parameter"
 ...
 modparam("db_http", "quote_delimiter","|")
 ...
@@ -234,10 +207,7 @@ The delimiter used to separate multiple fields of a single
 *Default value is ","*
 
 
-**Example: Set value_delimiter parameter**
-
-
-```opensips
+```opensips title="Set value_delimiter parameter"
 ...
 modparam("db_http", "value_delimiter",";")
 ...
@@ -253,10 +223,7 @@ The maximum number of milliseconds that the HTTP ops are allowed to last
 *Default value is "30000 ( 30 seconds )"*
 
 
-**Example: Set timeout parameter**
-
-
-```opensips
+```opensips title="Set timeout parameter"
 ...
 modparam("db_http", "timeout",5000)
 ...
@@ -274,10 +241,7 @@ Disables automatic 'Expect: 100-continue' behavior in libcurl for requests over 
 *Default value is "0 (off)"*
 
 
-**Example: Set disable_expect parameter**
-
-
-```opensips
+```opensips title="Set disable_expect parameter"
 ...
 modparam("db_http", "disable_expect",1)
 ...
@@ -306,10 +270,7 @@ There are several types of queries and the server can tell
 		specific variables simillar to those in the opensips db_api.
 
 
-**Example: Example query.**
-
-
-```
+```c title="Example query."
 ...
 GET /presentity/?c=username,domain,event,expires HTTP/1.1
 ...
@@ -363,10 +324,7 @@ Describes the type of the current query.
 				"SELECT" (normal query).
 
 
-**Example: Example query with variables.**
-
-
-```
+```c title="Example query with variables."
 ...
 GET /presentity/?c=username,domain,event,expires HTTP/1.1
 GET /version/?k=table_name&v=xcap&c=table_version HTTP/1.1 
@@ -415,10 +373,7 @@ Uses the q  variable. This is an optional
 				it will not.
 
 
-**Example: More query examples.**
-
-
-```
+```c title="More query examples."
 ...
 POST /active_watchers HTTP/1.1
 
@@ -440,10 +395,7 @@ NULL values in queries are represented as a string of length 1
 		containing a single character with value '\0'.
 
 
-**Example: NULL query example.**
-
-
-```
+```c title="NULL query example."
 ...
 POST /active_watchers HTTP/1.1
 
@@ -483,10 +435,7 @@ If the query produced an error the server must reply with a
 		HTTP 500 reply,	or with a corresponding error code (404, 401).
 
 
-**Example: Example Reply.**
-
-
-```
+```c title="Example Reply."
 ...
 int;string;blob
 6;something=something;1000
@@ -512,10 +461,7 @@ If a value contains a field ,  row  or a quote delimiter
 		must be preceeded by another quote delimiter.
 
 
-**Example: Quoting Example.**
-
-
-```
+```c title="Quoting Example."
 ...
 int;string;blob
 6;|ana;maria|;1000

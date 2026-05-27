@@ -49,7 +49,7 @@ This configuration options tells acc module that it should use the
 Name of files in that directory will follow the following pattern:
 
 
-```
+```c
 <prefix><table_name>[_<process_name>]<suffix>
 ```
 
@@ -81,7 +81,7 @@ There is a new OpenSIPS MI (management interface) command called
 
 - Rename the files that you want to rotate:
 			
-```
+```c
 
 cd /var/log/acc
 mv acc_1.log acc_1.log.20050605
@@ -95,7 +95,7 @@ mv acc_4.log acc_3.log.20050605
 - Send OpenSIPS the MI command to close and reopen the
 			renamed files. For example, using FIFO:
 			
-```
+```c
 
 opensips-cli -x mi flat_rotate
 ```
@@ -147,10 +147,7 @@ Enable or disable flushing after each write.
 *Default value is 1.*
 
 
-**Example: Set "flush" parameter**
-
-
-```opensips
+```opensips title="Set "flush" parameter"
 ...
 modparam("db_flatstore", "flush", 0)
 ...
@@ -166,10 +163,7 @@ Delimiter used to separate the values.
 *Default value is '|'.*
 
 
-**Example: Set "delimiter" parameter**
-
-
-```opensips
+```opensips title="Set "delimiter" parameter"
 ...
 modparam("db_flatstore", "delimiter", ";")
 ...
@@ -186,10 +180,7 @@ The suffix appended to the table name. Can be a pseudo
 *Default value is ".log".*
 
 
-**Example: Set "suffix" parameter**
-
-
-```opensips
+```opensips title="Set "suffix" parameter"
 ...
 modparam("db_flatstore", "suffix", "$time(%H)")
 ...
@@ -205,10 +196,7 @@ The table name prefix. Can be a pseudo variable.
 *Defaul value is none.*
 
 
-**Example: Set "prefix" parameter**
-
-
-```opensips
+```opensips title="Set "prefix" parameter"
 ...
 modparam("db_flatstore", "prefix", "$time(%H)")
 ...
@@ -225,10 +213,7 @@ Specifies if all the processes should dump the data
 *Default value is 0.*
 
 
-**Example: Set "single_file" parameter**
-
-
-```opensips
+```opensips title="Set "single_file" parameter"
 ...
 modparam("db_flatstore", "single_file", 1)
 ...
@@ -259,7 +244,7 @@ Parameters: *none*
 MI FIFO Command Format:
 
 
-```
+```c
 		opensips-cli -x mi flat_rotate
 		
 ```

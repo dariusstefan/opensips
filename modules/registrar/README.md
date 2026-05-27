@@ -193,10 +193,7 @@ If the processed message contains neither Expires
 *Default value is 3600.*
 
 
-**Example: Set default_expires parameter**
-
-
-```opensips
+```opensips title="Set default_expires parameter"
 ...
 modparam("registrar", "default_expires", 1800)
 ...
@@ -214,10 +211,7 @@ The minimum expires value of a Contact, values lower than this
 *Default value is 60.*
 
 
-**Example: Set min_expires parameter**
-
-
-```opensips
+```opensips title="Set min_expires parameter"
 ...
 modparam("registrar", "min_expires", 60)
 ...
@@ -235,10 +229,7 @@ The maximum expires value of a Contact, values higher than this
 *Default value is 0.*
 
 
-**Example: Set max_expires parameter**
-
-
-```opensips
+```opensips title="Set max_expires parameter"
 ...
 modparam("registrar", "max_expires", 120)
 ...
@@ -257,10 +248,7 @@ The parameter represents default q value for new contacts. Because
 *Default value is 0.*
 
 
-**Example: Set default_q parameter**
-
-
-```opensips
+```opensips title="Set default_q parameter"
 ...
 modparam("registrar", "default_q", 1000)
 ...
@@ -281,10 +269,7 @@ The parameter specifies the message flag to be used to control the
 *Default value is -1 (disabled).*
 
 
-**Example: Set tcp_persistent_flag parameter**
-
-
-```opensips
+```opensips title="Set tcp_persistent_flag parameter"
 ...
 modparam("registrar", "tcp_persistent_flag", "TCP_PERSIST_DURATION")
 ...
@@ -305,10 +290,7 @@ Prefix to be automatically strip from realm. As an alternative to
 *Default value is NULL (none).*
 
 
-**Example: Set realm_prefix parameter**
-
-
-```opensips
+```opensips title="Set realm_prefix parameter"
 ...
 modparam("registrar", "realm_prefix", "sip.")
 ...
@@ -326,10 +308,7 @@ If set to 1 then AOR comparison will be case
 *Default value is 1.*
 
 
-**Example: Set case_sensitive parameter**
-
-
-```opensips
+```opensips title="Set case_sensitive parameter"
 ...
 modparam("registrar", "case_sensitive", 0)
 ...
@@ -353,10 +332,7 @@ Registrar will store the value of the AVP configured by this
 *Default value is "NULL" (disabled).*
 
 
-**Example: Set received_avp parameter**
-
-
-```opensips
+```opensips title="Set received_avp parameter"
 ...
 modparam("registrar", "received_avp", "$avp(rcv)")
 ...
@@ -373,10 +349,7 @@ The name of the parameter that will be appended to Contacts of
 *Default value is "received".*
 
 
-**Example: Set received_param parameter**
-
-
-```opensips
+```opensips title="Set received_param parameter"
 ...
 modparam("registrar", "received_param", "rcv")
 ...
@@ -402,10 +375,7 @@ Set this parameter in order to add a random +/- deviation up to
 *Default value is 0 (no deviation).*
 
 
-**Example: Setting the expires_max_deviation parameter**
-
-
-```opensips
+```opensips title="Setting the expires_max_deviation parameter"
 ...
 # add a random +/- 0-100 seconds to each registration lifetime
 modparam("
@@ -426,10 +396,7 @@ The parameter can be used to limit the number of contacts per
 *Default value is 0.*
 
 
-**Example: Set max_contacts parameter**
-
-
-```opensips
+```opensips title="Set max_contacts parameter"
 ...
 # Allow no more than 10 contacts per AOR
 modparam("
@@ -445,10 +412,7 @@ The maximum length of the "username" part of an Address-of-Record SIP URI.
 Default value is **64**.
 
 
-**Example: Setting the *max_username_len* module parameter**
-
-
-```opensips
+```opensips title="Setting the *max_username_len* module parameter"
 modparam("
 ```
 
@@ -462,10 +426,7 @@ The maximum length of the "domain" part of an Address-of-Record SIP URI.
 Default value is **64**.
 
 
-**Example: Setting the *max_domain_len* module parameter**
-
-
-```opensips
+```opensips title="Setting the *max_domain_len* module parameter"
 modparam("
 ```
 
@@ -479,10 +440,7 @@ The maximum length of an Address-of-Record SIP URI.
 Default value is **256**.
 
 
-**Example: Setting the *max_aor_len* module parameter**
-
-
-```opensips
+```opensips title="Setting the *max_aor_len* module parameter"
 modparam("
 ```
 
@@ -496,10 +454,7 @@ The maximum length of a Contact header field SIP URI.
 Default value is **255**.
 
 
-**Example: Setting the *max_contact_len* module parameter**
-
-
-```opensips
+```opensips title="Setting the *max_contact_len* module parameter"
 modparam("
 ```
 
@@ -522,10 +477,7 @@ If you want to add the Retry-After header field in 5xx replies, set
 *Default value is 0 (disabled).*
 
 
-**Example: Set retry_after parameter**
-
-
-```opensips
+```opensips title="Set retry_after parameter"
 ...
 modparam("registrar", "retry_after", 30)
 ...
@@ -547,10 +499,7 @@ This makes sense only in multiple replicated servers scenarios.
 *Default value is NULL.*
 
 
-**Example: Set sock_hdr_namer parameter**
-
-
-```opensips
+```opensips title="Set sock_hdr_namer parameter"
 ...
 modparam("registrar", "sock_hdr_name", "Sock-Info")
 ...
@@ -575,10 +524,7 @@ This makes sense only in cached registrations scenario, where your
 *Default value is NULL.*
 
 
-**Example: Set mcontact_avp parameter**
-
-
-```opensips
+```opensips title="Set mcontact_avp parameter"
 ...
 modparam("registrar", "mcontact_avp", "$avp(orig_ct)")
 ...
@@ -620,10 +566,7 @@ When doing call forking, the avp will hold multiple values. The position of
 *Default value is NULL.*
 
 
-**Example: Set attr_avp parameter**
-
-
-```opensips
+```opensips title="Set attr_avp parameter"
 # reading attributes from the attr_pvar when doing parallel forking
 ...
 modparam("registrar", "attr_avp", "$avp(attr)")
@@ -656,10 +599,7 @@ The string that will be used in XORing when generating
 *If not set, 'OpenSIPS' is the default secret.*
 
 
-**Example: Set gruu_secret parameter**
-
-
-```opensips
+```opensips title="Set gruu_secret parameter"
 ...
 modparam("registrar", "gruu_secret", "top_secret")
 ...
@@ -676,10 +616,7 @@ Globally disable GRUU handling
 *Default value is 1 ( GRUU will not be handled ).*
 
 
-**Example: Set gruu_secret parameter**
-
-
-```opensips
+```opensips title="Set gruu_secret parameter"
 ...
 modparam("registrar", "disable_gruu", 0)
 ...
@@ -701,10 +638,7 @@ Enable SIP Push Notification support ([RFC 8599](https://tools.ietf.org/html/rfc
 *Default value is **false**.*
 
 
-**Example: Setting the pn_enable parameter**
-
-
-```opensips
+```opensips title="Setting the pn_enable parameter"
 ...
 modparam("
 ```
@@ -722,10 +656,7 @@ A list of supported Push Notification providers.  While only three
 						(not set).*
 
 
-**Example: Setting the pn_providers parameter**
-
-
-```opensips
+```opensips title="Setting the pn_providers parameter"
 ...
 modparam("
 ```
@@ -757,10 +688,7 @@ After calling *lookup()* or
 *Default value is **"pn-provider, pn-prid, pn-param"**.*
 
 
-**Example: Setting the pn_ct_match_params parameter**
-
-
-```opensips
+```opensips title="Setting the pn_ct_match_params parameter"
 ...
 modparam("
 ```
@@ -780,10 +708,7 @@ For devices capable of waking up and refreshing their binding on
 						(seconds before expiry).*
 
 
-**Example: Setting the pn_pnsreg_interval parameter**
-
-
-```opensips
+```opensips title="Setting the pn_pnsreg_interval parameter"
 ...
 modparam("
 ```
@@ -811,10 +736,7 @@ Once [E_UL_CONTACT_REFRESH](../usrloc#event_E_UL_CONTACT_REFRESH)
 						(seconds before expiry).*
 
 
-**Example: Setting the pn_trigger_interval parameter**
-
-
-```opensips
+```opensips title="Setting the pn_trigger_interval parameter"
 ...
 modparam("
 ```
@@ -832,10 +754,7 @@ Following a successful (re)registration of a contact, this setting
 					(always generate Push Notifications).*
 
 
-**Example: Setting the pn_skip_pn_interval parameter**
-
-
-```opensips
+```opensips title="Setting the pn_skip_pn_interval parameter"
 ...
 modparam("
 ```
@@ -868,10 +787,7 @@ Once this timeout is exceeded for an initial or a mid-dialog
 *Default value is **6** seconds.*
 
 
-**Example: Setting the pn_refresh_timeout parameter**
-
-
-```opensips
+```opensips title="Setting the pn_refresh_timeout parameter"
 ...
 modparam("
 ```
@@ -902,10 +818,7 @@ When enabling this parameter, make sure to also add logic for
 *Default value is **false**.*
 
 
-**Example: Setting the pn_enable_purr parameter**
-
-
-```opensips
+```opensips title="Setting the pn_enable_purr parameter"
 ...
 modparam("
 ```
@@ -1031,10 +944,7 @@ If you plan to use the "save()" function in reply route,
 		please refer to [mcontact avp](#param_mcontact_avp) module parameter.
 
 
-**Example: save usage**
-
-
-```
+```c title="save usage"
 ...
 # save into 'location', no flags, use default AOR (TO URI)
 save("location");
@@ -1098,10 +1008,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE and ONREPLY_ROUTE.
 
 
-**Example: remove usage**
-
-
-```
+```c title="remove usage"
 ...
 # remove all contacts belonging to the "bob" AOR
 remove("location", "sip:bob@atlanta.com");
@@ -1142,10 +1049,7 @@ Meaning of the parameters is as follows:
 This function can be used from ALL ROUTES.
 
 
-**Example: remove_ip_port usage**
-
-
-```
+```c title="remove_ip_port usage"
 ...
 # remove all contacts behind 8.8.8.8 port 43213
 remove_ip_port("8.8.8.8",43213,"location");
@@ -1268,10 +1172,7 @@ Return codes:
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE.
 
 
-**Example: lookup usage**
-
-
-```opensips
+```opensips title="lookup usage"
 ...
 lookup("location");  # simple lookup
    #or
@@ -1322,10 +1223,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, ONREPLY_ROUTE, LOCAL_ROUTE.
 
 
-**Example: is_registered usage**
-
-
-```opensips
+```opensips title="is_registered usage"
 ...
 /**/
 if (is_method("REGISTER")) {
@@ -1373,10 +1271,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, ONREPLY_ROUTE, LOCAL_ROUTE.
 
 
-**Example: is_contact_registered usage**
-
-
-```opensips
+```opensips title="is_contact_registered usage"
 ...
 /*let's say you want to block users that are not registered*/
 if (is_method("INVITE")) {
@@ -1423,10 +1318,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE,
 			BRANCH_ROUTE, ONREPLY_ROUTE, LOCAL_ROUTE.
 
 
-**Example: is_ip_registered usage**
-
-
-```opensips
+```opensips title="is_ip_registered usage"
 ...
 /* check the source ip  whether it is already registered */
 if (is_method("REGISTER")) {
@@ -1459,10 +1351,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-**Example: add_sock_hdr usage**
-
-
-```
+```c title="add_sock_hdr usage"
 ...
 add_sock_hdr("Sock-Info");
 ...
@@ -1509,10 +1398,7 @@ Meaning of the parameters is as follows:
 - **-1** - Internal Error
 
 
-**Example: async pn_process_purr() usage**
-
-
-```opensips
+```opensips title="async pn_process_purr() usage"
 route {
 	...
 	if (has_totag()) {

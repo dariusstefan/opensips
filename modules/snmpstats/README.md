@@ -214,10 +214,7 @@ This parameter describes the entity type for this OpenSIPS instance,
 *registrarServer, redirectServer, proxyServer, userAgent, other*
 
 
-**Example: Setting the sipEntityType parameter**
-
-
-```opensips
+```opensips title="Setting the sipEntityType parameter"
 ...
 modparam("snmpstats", "sipEntityType", "registrarServer")
 modparam("snmpstats", "sipEntityType", "proxyServer")
@@ -242,10 +239,7 @@ The SNMPStats module monitors the number of bytes waiting to be
 		MsgQueueMinorThreshold parameter.
 
 
-**Example: Setting the MsgQueueMinorThreshold parameter**
-
-
-```opensips
+```opensips title="Setting the MsgQueueMinorThreshold parameter"
 ...
 modparam("snmpstats", "MsgQueueMinorThreshold", 2000)
 ...
@@ -268,10 +262,7 @@ The SNMPStats module monitors the number of bytes waiting to be
 		MsgQueueMajorThreshold parameter.
 
 
-**Example: Setting the MsgQueueMajorThreshold parameter**
-
-
-```opensips
+```opensips title="Setting the MsgQueueMajorThreshold parameter"
 ...
 modparam("snmpstats", "MsgQueueMajorThreshold", 5000)
 ...
@@ -293,10 +284,7 @@ The SNMPStats module monitors the number of active dialogs.  If the
 		the dlg_minor_threshold parameter.
 
 
-**Example: Setting the dlg_minor_threshold parameter**
-
-
-```opensips
+```opensips title="Setting the dlg_minor_threshold parameter"
 ...
   modparam("snmpstats", "dlg_minor_threshold", 500)
 ...
@@ -318,10 +306,7 @@ The SNMPStats module monitors the number of active dialogs.  If
 		with the dlg_major_threshold parameter.
 
 
-**Example: Setting the dlg_major_threshold parameter**
-
-
-```opensips
+```opensips title="Setting the dlg_major_threshold parameter"
 ...
   modparam("snmpstats", "dlg_major_threshold", 750)
 ...
@@ -345,10 +330,7 @@ The SNMPStats module provides the openserSIPServiceStartTime scalar.
 *Default value is "/usr/local/bin/".*
 
 
-**Example: Setting the snmpgetPath parameter**
-
-
-```opensips
+```opensips title="Setting the snmpgetPath parameter"
 ...
 modparam("snmpstats", "snmpgetPath",     "/my/custom/path/")
 ...
@@ -368,10 +350,7 @@ The SNMPStats module provides the openserSIPServiceStartTime scalar.
 *Default value is "public".*
 
 
-**Example: Setting the snmpCommunity parameter**
-
-
-```opensips
+```opensips title="Setting the snmpCommunity parameter"
 ...
 modparam("snmpstats", "snmpCommunity", "customCommunityString")
 ...
@@ -423,7 +402,7 @@ First you need to turn on AgentX support.  The exact location of
 	By default, via a package installation, it is located in:
 
 
-```
+```c
     /etc/snmp/snmpd.conf.
 	
 ```
@@ -432,7 +411,7 @@ First you need to turn on AgentX support.  The exact location of
 At the very end of the file add the following line:
 
 
-```
+```c
     master agentx
 	
 ```
@@ -448,7 +427,7 @@ There is still one last step.  Even though we have configured
 	via the configuration file (snmpd.conf) :
 
 
-```
+```c
     agentXSocket    tcp:localhost:705
 	
 ```
@@ -469,7 +448,7 @@ The previous section explained how to set up a SNMP master agent to accept
 	that was configured above. By default this would be:
 
 
-```
+```c
     /etc/snmp/snmpstats.conf
 	
 ```
@@ -479,7 +458,7 @@ The default configuration file included with the distribution can be used,
 	and contains the following:
 
 
-```
+```c
     agentXSocket tcp:localhost:705
 	
 ```
@@ -502,7 +481,7 @@ As a quick test to make sure that the SNMPStats module sub-agent can
 	following:
 
 
-```
+```c
     snmpd -f -Dagentx -x tcp:localhost:705 2>&1 | less
 	
 ```
@@ -511,7 +490,7 @@ As a quick test to make sure that the SNMPStats module sub-agent can
 You should see something similar to the following:
 
 
-```
+```c
     No log handling enabled - turning on stderr logging
     registered debug token agentx, 1
     ...
@@ -527,7 +506,7 @@ Now, start up OpenSIPS in another window.  In the snmpd window, you should
 	see a bunch of:
 
 
-```
+```c
     agentx/master: handle pdu (req=0x2c58ebd4,trans=0x0,sess=0x0)
     agentx/master: open 0x81137c0
     agentx/master: opened 0x814bbe0 = 6 with flags = a0
@@ -626,7 +605,7 @@ All scalars and tables are named in the SNMPStats module overview.  The files
 		invoke snmptranslate as follows:
 
 		
-```
+```c
 
     snmptranslate -TBd openserSIPEntityType
 ```
@@ -635,7 +614,7 @@ All scalars and tables are named in the SNMPStats module overview.  The files
 		Which would result in something similar to the following:
 
 		
-```
+```c
 
     -- FROM       OPENSER-SIP-COMMON-MIB
     -- TEXTUAL CONVENTION OpenSIPSSIPEntityRole
@@ -671,7 +650,7 @@ If your snmp operations are always returning with: "Timeout: No Response
 NetSNMP's snmpget is used as follows:
 
 		
-```
+```c
 
     snmpget -v 2c -c theCommunityString machineToSendTheMachineTo scalarElement.0
 ```
@@ -682,7 +661,7 @@ NetSNMP's snmpget is used as follows:
 		"public" community string.  The command would be:
 
 		
-```
+```c
 
     snmpget -v2c -c public localhost openserSIPEntityType.0
 ```
@@ -691,7 +670,7 @@ NetSNMP's snmpget is used as follows:
 		Which would result in something similar to:
 
 		
-```
+```c
 
     OPENSER-SIP-COMMON-MIB::openserSIPEntityType.0 = BITS: F8 \
 		other(0) userAgent(1) proxyServer(2)          \
@@ -705,7 +684,7 @@ NetSNMP's snmpget is used as follows:
 NetSNMP's snmptable is used as follows:
 
 		
-```
+```c
 
     snmptable -Ci -v 2c -c theCommunityString machineToSendTheMachineTo theTableName
 ```
@@ -716,7 +695,7 @@ NetSNMP's snmptable is used as follows:
 		the default "public" community string.  The command would be:
 
 		
-```
+```c
 
     snmptable -Ci -v 2c -c public localhost openserSIPRegUserTable
 ```
@@ -725,7 +704,7 @@ NetSNMP's snmptable is used as follows:
 		Which would result in something similar to:
 
 		
-```
+```c
 
     index openserSIPUserUri openserSIPUserAuthenticationFailures
         1       DefaultUser                                    0

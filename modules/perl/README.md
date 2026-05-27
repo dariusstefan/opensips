@@ -36,7 +36,7 @@ Cross compilation is supported by the Makefile. You need to set the environment 
 		PERLLDOPTS, PERLCCOPTS and TYPEMAP to values similar to the output of
 
 
-```
+```c
 PERLLDOPTS: perl -MExtUtils::Embed -e ldopts
 PERLCCOPTS: perl -MExtUtils::Embed -e ccopts
 TYPEMAP:    echo "`perl -MConfig -e 'print $Config{installprivlib}'`/ExtUtils/typemap"
@@ -56,7 +56,7 @@ The Perl module has two interfaces: The perl side, and the OpenSIPS side. Once a
 		a function "ldap_alias" in Perl, and then execute
 
 
-```
+```c
 ...
 if (perl_exec("ldap_alias")) {
 	...
@@ -151,10 +151,7 @@ This is the file name of your script. This may be set once only, but it may incl
 *May not be empty!*
 
 
-**Example: Set filename parameter**
-
-
-```opensips
+```opensips title="Set filename parameter"
 ...
 modparam("perl", "filename", "/home/john/opensips/myperl.pl")
 ...
@@ -171,10 +168,7 @@ The path to the Perl modules included (OpenSIPS.pm et.al). It is not absolutely
 			is the standard behavior, though.
 
 
-**Example: Set modpath parameter**
-
-
-```opensips
+```opensips title="Set modpath parameter"
 ...
 modparam("perl", "modpath", "/usr/local/lib/opensips/perl/")
 ...
@@ -204,10 +198,7 @@ The function returns *1* if the perl function was successfully called
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE and BRANCH_ROUTE.
 
 
-**Example: perl_exec_simple() usage**
-
-
-```
+```c title="perl_exec_simple() usage"
 ...
 if ($rm=="INVITE") {
 	perl_exec_simple("dosomething", "on invite messages");
@@ -236,10 +227,7 @@ The function returns back to the OpenSIPS script the value returned by the perl 
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE and BRANCH_ROUTE.
 
 
-**Example: perl_exec() usage**
-
-
-```
+```c title="perl_exec() usage"
 ...
 if (perl_exec("ldapalias")) {
 	...
@@ -266,7 +254,7 @@ Logs the message with OpenSIPS's logging facility. The logging level
 	is one of the following:
 
 
-```
+```c
 * L_ALERT
 * L_CRIT
 * L_ERR
@@ -283,7 +271,7 @@ Please note that this method is *NOT* automatically exported, as it collides
 	it with its full name:
 
 
-```
+```c
 OpenSIPS::log(L_INFO, "foobar");
 ```
 
@@ -412,7 +400,7 @@ As this function provides access to the functions that are exported
 	functions. Instead of writing
 
 
-```
+```c
 $m->moduleFunction("sl_send_reply", "500", "Internal Error");
 $m->moduleFunction("xlog", "L_INFO", "foo");
 ```
@@ -438,7 +426,7 @@ Here is a list of functions that are expected to be working (not
 	claiming completeness):
 
 
-```
+```c
 * alias_db_lookup
 * consume_credentials
 * is_rpid_user_e164
@@ -536,7 +524,7 @@ Logs the message with OpenSIPS's logging facility. The logging level
 	is one of the following:
 
 
-```
+```c
 * L_ALERT
 * L_CRIT
 * L_ERR
@@ -558,7 +546,7 @@ Sets a new destination (recipient) URI. Useful for rerouting the
 	current message/call.
 
 
-```
+```c
 if ($m->getRURI() =~ m/\@somedomain.net/) {
   $m->rewrite_ruri("sip:dispatcher\@organization.net");
 }
@@ -770,7 +758,7 @@ Add an OpenSIPS AVP to its environment. name and val may both be
 	correct. Please note that
 
 
-```
+```c
 OpenSIPS::AVP::add("10", "10")
 ```
 
@@ -778,7 +766,7 @@ OpenSIPS::AVP::add("10", "10")
 is something different than
 
 
-```
+```c
 OpenSIPS::AVP::add(10, 10)
 ```
 
@@ -796,7 +784,7 @@ You can modify/overwrite AVPs with this function.
 get an OpenSIPS AVP:
 
 
-```
+```c
 my $numavp = OpenSIPS::AVP::get(5);
 my $stravp = OpenSIPS::AVP::get("foo");
 ```
@@ -808,7 +796,7 @@ my $stravp = OpenSIPS::AVP::get("foo");
 Destroy an AVP.
 
 
-```
+```c
 OpenSIPS::AVP::destroy(5);
 OpenSIPS::AVP::destroy("foo");
 ```
@@ -821,7 +809,7 @@ OpenSIPS::Utils::PhoneNumbers - Functions for canonical forms of phone
       numbers.
 
 
-```
+```c
 use OpenSIPS::Utils::PhoneNumbers;
 
 my $phonenumbers = new OpenSIPS::Utils::PhoneNumbers(
@@ -872,7 +860,7 @@ As said before, the interpretation of a phone number depends on the
 The following fields should be set:
 
 
-```
+```c
 'longDistancePrefix' 
 'areaCode'
 'pbxCode' 
@@ -918,7 +906,7 @@ OpenSIPS::LDAPUtils::LDAPConf - Read openldap config from standard
       config files.
 
 
-```
+```c
 use OpenSIPS::LDAPUtils::LDAPConf;
 my $conf = new OpenSIPS::LDAPUtils::LDAPConf();
 ```
@@ -1008,7 +996,7 @@ OpenSIPS::LDAPUtils::LDAPConnection - Perl module to perform simple
 OO-Style interface:
 
 
-```
+```c
 use OpenSIPS::LDAPUtils::LDAPConnection;
 my $ldap = new OpenSIPS::LDAPUtils::LDAPConnection;
 my @rows = $ldap-search("uid=andi","ou=people,ou=coreworks,ou=de");
@@ -1018,7 +1006,7 @@ my @rows = $ldap-search("uid=andi","ou=people,ou=coreworks,ou=de");
 Procedural interface:
 
 
-```
+```c
 use OpenSIPS::LDAPUtils::LDAPConnection;
 my @rows = $ldap->search(
       new OpenSIPS::LDAPUtils::LDAPConfig(), "uid=andi","ou=people,ou=coreworks,ou=de");
@@ -1240,7 +1228,7 @@ This package handles virtual tables and is used by the OpenSIPS::VDB
 #### new() {#ID-a42ddb87d67983028cf8d1b7d6f46baa}
 
 
-```
+```c
 Constructs a new VTab object
 ```
 
@@ -1373,7 +1361,7 @@ The constructor creates a new Result object. Its first parameter is
 #### coldefs() {#ID-c77fe41ba24f3f04c12254c9f001bb27}
 
 
-```
+```c
 Returns or sets the column definition of the object.
 ```
 
@@ -1381,7 +1369,7 @@ Returns or sets the column definition of the object.
 #### rows() {#ID-a20f0baefcdf46a3e923bb02203b3792}
 
 
-```
+```c
 Returns or sets the rows of the object.
 ```
 

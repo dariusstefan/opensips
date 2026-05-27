@@ -67,7 +67,7 @@ In order to handle the *E_PIKE_BLOCKED* event,
 
 			EVENT_ROUTE usage
 					
-```
+```c
 
 	event_route[E_PIKE_BLOCKED] {
 		xlog("IP $param(ip) has been blocked\n");
