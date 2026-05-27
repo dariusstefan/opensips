@@ -113,7 +113,7 @@ The name of the avp to contain the attributes string of the current
 *Default value is "null" - don't provide ATTRIBUTEs.*
 
 
-```c title="Set the 'default' partition's "attrs_avp" parameter"
+```c title="Set the 'default' partition's 'attrs_avp' parameter"
 ...
 modparam("dispatcher", "attrs_avp", "$avp(272)")
 ...
@@ -133,7 +133,7 @@ Name of the avp to contain the script attributes string of the current
 *Default value is "null" - don't provide SCRIPT ATTRIBUTEs.*
 
 
-```c title="Set the 'default' partition's "script_attrs_avp" parameter"
+```c title="Set the 'default' partition's 'script_attrs_avp' parameter"
 ...
 modparam("dispatcher", "attrs_avp", "$avp(script_attrs)")
 ...
@@ -211,7 +211,7 @@ The name of the PV where to store the set ID (group ID) when calling
 *Default value is "null" - don't set PV.*
 
 
-```c title="Set the "setid_pvar" parameter"
+```c title="Set the 'setid_pvar' parameter"
 ...
 modparam("dispatcher", "setid_pvar", "$var(setid)")
 ...
@@ -233,7 +233,7 @@ Use the 'partition' parameter if you want to define the ping method
 *Default value is "OPTIONS".*
 
 
-```c title="Set the "ds_ping_method" parameter"
+```c title="Set the 'ds_ping_method' parameter"
 ...
 modparam("dispatcher", "ds_ping_method", "INFO")
 ...
@@ -255,7 +255,7 @@ Use the 'partition' parameter if you want to define the "From:"
 *Default value is "sip:dispatcher@localhost".*
 
 
-```c title="Set the "ds_ping_from" parameter"
+```c title="Set the 'ds_ping_from' parameter"
 ...
 modparam("dispatcher", "ds_ping_from", "sip:proxy@sip.somehost.com")
 ...
@@ -274,7 +274,7 @@ With this Method you can define the interval for sending a request to
 *Default value is "0" (disabled).*
 
 
-```c title="Set the "ds_ping_interval" parameter"
+```c title="Set the 'ds_ping_interval' parameter"
 ...
 modparam("dispatcher", "ds_ping_interval", 30)
 ...
@@ -294,7 +294,7 @@ The accepted values are any positive integer values, including the
 		"0" value.
 
 
-```c title="Set the "ds_ping_maxfwd" parameter"
+```c title="Set the 'ds_ping_maxfwd' parameter"
 ...
 modparam("dispatcher", "ds_ping_maxfwd", 2)
 ...
@@ -312,7 +312,7 @@ A socket description [proto:]host[:port] of the local socket (which
 *Default value is "NULL(none)".*
 
 
-```c title="Set the "ds_probing_sock" parameter"
+```c title="Set the 'ds_probing_sock' parameter"
 ...
 modparam("dispatcher", "ds_probing_sock", "udp:192.168.1.100:5077")
 ...
@@ -330,7 +330,7 @@ If you want to set a gateway into probing mode, you will need a
 *Default value is "3".*
 
 
-```c title="Set the "ds_probing_threshold" parameter"
+```c title="Set the 'ds_probing_threshold' parameter"
 ...
 modparam("dispatcher", "ds_probing_threshold", 10)
 ...
@@ -349,7 +349,7 @@ Controls what gateways are tested to see if they are reachable. If set
 *Default value is "0".*
 
 
-```c title="Set the "ds_probing_mode" parameter"
+```c title="Set the 'ds_probing_mode' parameter"
 ...
 modparam("dispatcher", "ds_probing_mode", 1)
 ...
@@ -369,7 +369,7 @@ Defines a list of one or more setids that limits which
 *Default value is "NULL (probe all sets)".*
 
 
-```c title="Set the "ds_probing_list" parameter"
+```c title="Set the 'ds_probing_list' parameter"
 ...
 modparam("dispatcher", "ds_probing_list", "1,2,3")
 ...
@@ -393,7 +393,7 @@ Multiple instances of this param are allowed.
 *Default value is "NULL".*
 
 
-```c title="Set the 'default' partition's "ds_define_blacklist"
+```c title="Set the 'default' partition's 'ds_define_blacklist'
 				parameter"
 ...
 modparam("dispatcher", "ds_define_blacklist", "list= 1,4,3")
@@ -413,7 +413,7 @@ This parameter must contain a list of SIP reply codes separated by
 *Default value is "NULL".*
 
 
-```c title="Set the "options_reply_codes" parameter"
+```c title="Set the 'options_reply_codes' parameter"
 ...
 modparam("dispatcher", "options_reply_codes", "501, 403")
 ...
@@ -440,7 +440,7 @@ This is mainly for internal usage and represents the name of the avp
 			the default value is "$avp(ds_dst_failover_partitionname)".*
 
 
-```c title="Set the 'default' partition's "dst_avp" parameter"
+```c title="Set the 'default' partition's 'dst_avp' parameter"
 ...
 modparam("dispatcher", "dst_avp", "$avp(271)")
 ...
@@ -463,7 +463,7 @@ This is mainly for internal usage and represents the name of the avp
 			the default value is "$avp(ds_grp_failover_partitionname)".*
 
 
-```c title="Set the 'default' partition's "grp_avp" parameter"
+```c title="Set the 'default' partition's 'grp_avp' parameter"
 ...
 modparam("dispatcher", "grp_avp", "$avp(273)")
 ...
@@ -485,7 +485,7 @@ This is mainly for internal usage and represents the name of the avp
 			the default value is "$avp(ds_cnt_failover_partitionname)".*
 
 
-```c title="Set the 'default' partition's "cnt_avp" parameter"
+```c title="Set the 'default' partition's 'cnt_avp' parameter"
 ...
 modparam("dispatcher", "cnt_avp", "$avp(274)")
 ...
@@ -508,7 +508,7 @@ This is mainly for internal usage and represents the name of the avp
 			the default value is "$avp(ds_sock_failover_partitionname)".*
 
 
-```c title="Set the 'default' partition's "sock_avp" parameter"
+```c title="Set the 'default' partition's 'sock_avp' parameter"
 ...
 modparam("dispatcher", "sock_avp", "$avp(275)")
 ...
@@ -530,7 +530,7 @@ This parameter is used by the PVAR(9) algorithm to specify the
 *Default value is "none".*
 
 
-```c title="Set the "pvar_algo_pattern" parameter"
+```c title="Set the 'pvar_algo_pattern' parameter"
 ...
 modparam("dispatcher", "pvar_algo_pattern", "$stat(load_%u)")
 ...
@@ -761,7 +761,7 @@ The column's name in the database storing the gateway's group id.
 *Default value is "setid".*
 
 
-```c title="Set "setid_col" parameter"
+```c title="Set 'setid_col' parameter"
 ...
 modparam("dispatcher", "setid_col", "groupid")
 ...
@@ -778,7 +778,7 @@ The column's name in the database storing the destination's
 *Default value is "destination".*
 
 
-```c title="Set "destination_col" parameter"
+```c title="Set 'destination_col' parameter"
 ...
 modparam("dispatcher", "destination_col", "uri")
 ...
@@ -795,7 +795,7 @@ The column's name in the database storing the state of the
 *Default value is "state".*
 
 
-```c title="Set "state_col" parameter"
+```c title="Set 'state_col' parameter"
 ...
 modparam("dispatcher", "state_col", "dststate")
 ...
@@ -812,7 +812,7 @@ The column's name in the database storing the weight for
 *Default value is "weight".*
 
 
-```c title="Set "weight_col" parameter"
+```c title="Set 'weight_col' parameter"
 ...
 modparam("dispatcher", "weight_col", "dstweight")
 ...
@@ -829,7 +829,7 @@ The column's name in the database storing the priority for
 *Default value is "priority".*
 
 
-```c title="Set "priority_col" parameter"
+```c title="Set 'priority_col' parameter"
 ...
 modparam("dispatcher", "priority_col", "dstprio")
 ...
@@ -846,7 +846,7 @@ The column's name in the database storing the attributes (opaque
 *Default value is "attrs".*
 
 
-```c title="Set "attrs_col" parameter"
+```c title="Set 'attrs_col' parameter"
 ...
 modparam("dispatcher", "attrs_col", "dstattrs")
 ...
@@ -863,7 +863,7 @@ The column's name in the database storing the socket (as
 *Default value is "socket".*
 
 
-```c title="Set "socket_col" parameter"
+```c title="Set 'socket_col' parameter"
 ...
 modparam("dispatcher", "socket_col", "my_sock")
 ...
@@ -880,7 +880,7 @@ The column's name in the database storing the probe_mode (as
 *Default value is "probe_mode".*
 
 
-```c title="Set "probe_mode_col" parameter"
+```c title="Set 'probe_mode_col' parameter"
 ...
 modparam("dispatcher", "probe_mode_col", "probing")
 ...
