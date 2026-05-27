@@ -72,8 +72,7 @@ The default behavior in filtering contacts. It may be
 *The default value is "accept".*
 
 
-```c title="Set default_filter 
-					module parameter"
+```c title="Set default_filter module parameter"
 ...
 modparam("uac_redirect","default_filter","deny")
 ...
@@ -102,8 +101,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-```c title="Set deny_filter 
-					module parameter"
+```c title="Set deny_filter module parameter"
 ...
 modparam("uac_redirect","deny_filter",".*@siphub\.net")
 ...
@@ -132,8 +130,7 @@ The parameter may be defined only one - multiple definition will
 					value being NULL.*
 
 
-```c title="Set accept_filter 
-					module parameter"
+```c title="Set accept_filter module parameter"
 ...
 modparam("uac_redirect","accept_filter",".*@siphub\.net")
 ...

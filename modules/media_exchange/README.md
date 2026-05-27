@@ -112,8 +112,7 @@ Parameters:
 This function can be used from any route.
 
 
-```c title="Use media_fork_to_uri() function to fork
-					media to a Media Server"
+```c title="Use media_fork_to_uri() function to fork media to a Media Server"
 ...
 if (!has_totag() && is_method("INVITE"))
 	media_fork_to_uri("sip:record@127.0.0.1:5080");
@@ -159,8 +158,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-```c title="Use media_fork_from_call() function to fork
-					all media streams of a call"
+```c title="Use media_fork_from_call() function to fork all media streams of a call"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 	media_fork_from_call($hdr(X-CallID));
@@ -169,8 +167,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-```c title="Use media_fork_from_call() function to fork
-					only the first caller's stream"
+```c title="Use media_fork_from_call() function to fork only the first caller's stream"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 	media_fork_from_call($hdr(X-CallID), "caller", 0);
@@ -203,8 +200,7 @@ Parameters:
 This function can be used from any route.
 
 
-```c title="Use media_fork_pause() function to temporarily
-					stop the entire media stream of the call"
+```c title="Use media_fork_pause() function to temporarily stop the entire media stream of the call"
 ...
 if (has_totag() && is_method("INVITE"))
 	media_fork_pause();
@@ -236,8 +232,7 @@ Parameters:
 This function can be used from any route.
 
 
-```c title="Use media_fork_resume() function to resume
-					a forking previously stopped"
+```c title="Use media_fork_resume() function to resume a forking previously stopped"
 ...
 if (has_totag() && is_method("INVITE"))
 	media_fork_resume();
@@ -283,8 +278,7 @@ Parameters:
 This function can be used from any route.
 
 
-```c title="Use media_exchange_from_uri() function to
-					fetch media from a Media Server's call"
+```c title="Use media_exchange_from_uri() function to fetch media from a Media Server's call"
 ...
 if (has_totag() && is_method("INVITE") && is_audio_on_hold())
 	media_exchange_from_uri("sip:moh@127.0.0.1:5080");
@@ -326,8 +320,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-```c title="Use media_exchange_to_call() function to make
-					an announcement"
+```c title="Use media_exchange_to_call() function to make an announcement"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 	media_exchange_to_call($hdr(X-CallID), "caller");
@@ -366,8 +359,7 @@ Parameters:
 This function can be used from any route.
 
 
-```c title="Use media_terminate() function to
-					terminate an announcement"
+```c title="Use media_terminate() function to terminate an announcement"
 ...
 if (has_totag() && is_method("INVITE") && !is_audio_on_hold())
 	media_terminate();
@@ -407,8 +399,7 @@ This function can be used from REQUEST_ROUTE,
 				BRANCH_ROUTE and ONREPLY_ROUTE.
 
 
-```c title="Use media_terminate() function to
-					terminate an announcement"
+```c title="Use media_terminate() function to terminate an announcement"
 ...
 if (has_totag() && loose_route()) {
 	# handling sequential
