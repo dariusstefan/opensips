@@ -51,7 +51,7 @@ The string password that will be used for encoding/decoding the callid in case o
 *Default value is ""OpenSIPS""*
 
 
-```opensips title="Set th_callid_passwd parameter"
+```c title="Set th_callid_passwd parameter"
 ...
 modparam("topology_hiding", "th_callid_passwd", "my_topo_hiding_secret")
 ...
@@ -67,7 +67,7 @@ The prefix that will be used for detecting callids which have been encoded by th
 *Default value is ""DLGCH_""*
 
 
-```opensips title="Set th_callid_prefix parameter"
+```c title="Set th_callid_prefix parameter"
 ...
 modparam("topology_hiding", "th_callid_prefix", "MYCALLIDPREFIX_")
 ...
@@ -83,7 +83,7 @@ List of semicolon-separated Contact URI parameters that will be passed from one 
 *Default value is "empty" - do not pass any parameters*
 
 
-```opensips title="Set th_passed_contact_uri_params parameter"
+```c title="Set th_passed_contact_uri_params parameter"
 ...
 modparam("topology_hiding", "th_passed_contact_uri_params", "paramname1;myparam;custom_param")
 ...
@@ -99,7 +99,7 @@ List of semicolon-separated Contact header parameters that will be passed from o
 *Default value is "empty" - do not pass any parameters*
 
 
-```opensips title="Set th_passed_contact_params parameter"
+```c title="Set th_passed_contact_params parameter"
 ...
 modparam("topology_hiding", "th_passed_contact_params", "paramname1;myparam;custom_param")
 ...
@@ -115,7 +115,7 @@ If set to 1, the module will internally create the dialog ( if not already creat
 *Default value is "0"*
 
 
-```opensips title="Set force_dialog parameter"
+```c title="Set force_dialog parameter"
 ...
 modparam("topology_hiding", "force_dialog", 1)
 ...
@@ -131,7 +131,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""ToPoCtPaSS""*
 
 
-```opensips title="Set th_contact_encode_passwd parameter"
+```c title="Set th_contact_encode_passwd parameter"
 ...
 modparam("topology_hiding", "th_contact_encode_passwd", "my_topoh_passwd")
 ...
@@ -147,7 +147,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""thinfo""*
 
 
-```opensips title="Set th_contact_encode_param parameter"
+```c title="Set th_contact_encode_param parameter"
 ...
 modparam("topology_hiding", "th_contact_encode_param", "customparam")
 ...
@@ -168,7 +168,7 @@ When not relying on the dialog module ( due to script writer preference or simpl
 *Default value is ""base64""*
 
 
-```opensips title="Set th_contact_encode_scheme parameter"
+```c title="Set th_contact_encode_scheme parameter"
 ...
 modparam("topology_hiding", "th_contact_encode_scheme", "base32")
 ...
@@ -184,7 +184,7 @@ Variable used to store the value of the contact username advertised to the calle
 *Default value is "_th_contact_caller_username_var_"*
 
 
-```opensips title="Set th_contact_caller_username_var parameter"
+```c title="Set th_contact_caller_username_var parameter"
 ...
 modparam("topology_hiding", "th_contact_caller_username_var", "__topo_hiding_username_var__")
 ...
@@ -200,7 +200,7 @@ Variable used to store the value of the contact username advertised to the calle
 *Default value is "_th_contact_callee_username_var_"*
 
 
-```opensips title="Set th_contact_callee_username_var parameter"
+```c title="Set th_contact_callee_username_var parameter"
 ...
 modparam("topology_hiding", "th_contact_callee_username_var", "__topo_hiding_username_var__")
 ...
@@ -261,7 +261,7 @@ The second parameter can be used to advertise a particular
 			put in contact per leg.
 
 
-```opensips title="topology_hiding usage"
+```c title="topology_hiding usage"
 ...
 if(!has_totag() && is_method("INVITE")) {
 	topology_hiding();
@@ -296,7 +296,7 @@ if(!has_totag() && is_method("INVITE")) {
 ```
 
 
-```opensips title="Calling topology_hiding_match() function for topology hiding sequential requests"
+```c title="Calling topology_hiding_match() function for topology hiding sequential requests"
 ...
 if (has_totag())
         if(topology_hiding_match())
@@ -329,7 +329,7 @@ The function returns true if a topology hiding dialog exists for the request and
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="topology_hiding_match_dialog() usage"
+```c title="topology_hiding_match_dialog() usage"
 ...
     if (has_totag()) {
         if (!topology_hiding_match() ) {

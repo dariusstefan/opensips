@@ -79,7 +79,7 @@ The minimum duration in seconds that a failed subscriber is
 *Default value is "30".*
 
 
-```opensips title="Setting the failover_timeout parameter"
+```c title="Setting the failover_timeout parameter"
 ...
 modparam("event_virtual", "failover_timeout", 5)
 ...

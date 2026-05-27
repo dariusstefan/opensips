@@ -55,7 +55,7 @@ The URL to connect to database for loading values
 *Default value is NULL (do not connect).*
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("mqueue", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 
@@ -120,7 +120,7 @@ The parameter can be set many times, each holding the
 		definition of one queue.
 
 
-```opensips title="Set mqueue parameter"
+```c title="Set mqueue parameter"
 ...
 modparam("mqueue", "mqueue", "name=myq;size=20;")
 modparam("mqueue", "mqueue", "name=myq;size=10000;addmode=2")
@@ -158,7 +158,7 @@ Return: true on success (1); false on failure (-1) or
 		no item fetched (-2).
 
 
-```opensips title="mq_fetch usage"
+```c title="mq_fetch usage"
 ...
 while(mq_fetch("myq"))
 {
@@ -192,7 +192,7 @@ If the mqueue is empty, the function returns -1. If the
 		mqueue is not found, the function returns -2.
 
 
-```opensips title="mq_size usage"
+```c title="mq_size usage"
 ...
 $var(q_size) = mq_size("queue");
 xlog("L_INFO", "Size of queue is: $var(q_size)\n");

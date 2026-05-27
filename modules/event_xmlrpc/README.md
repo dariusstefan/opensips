@@ -83,7 +83,7 @@ When raising an event, pack the name and value of the
 *Default value is "0 (disabled)".*
 
 
-```opensips title="Set use_struct_param parameter"
+```c title="Set use_struct_param parameter"
 ...
 modparam("event_xmlrpc", "use_struct_param", 1)
 ...

@@ -71,7 +71,7 @@ This is URL of the database to be used. Value of the parameter depends
 *Default value is "mysql://opensipsro:opensipsro@localhost/opensips".*
 
 
-```opensips title="db_url parameter usage"
+```c title="db_url parameter usage"
 modparam("auth_db", "db_url", "dbdriver://username:password@dbhost/dbname")
 ```
 
@@ -112,7 +112,7 @@ Default value of this parameter is
 			*0 (use hashed passwords)*.
 
 
-```opensips title="calculate_ha1 parameter usage"
+```c title="calculate_ha1 parameter usage"
 modparam("auth_db", "calculate_ha1", 1)
 ```
 
@@ -134,7 +134,7 @@ IMPORTANT: before turning on this parameter, be sure that the
 Default value is "0 (false)".
 
 
-```opensips title="use_domain parameter usage"
+```c title="use_domain parameter usage"
 modparam("auth_db", "use_domain", 1)
 		
 ```
@@ -170,7 +170,7 @@ Default value of this parameter is "rpid".
 Default value of this parameter is "rpid".
 
 
-```opensips title="load_credentials parameter usage"
+```c title="load_credentials parameter usage"
 # load rpid column into $avp(13) and email_address column
 # into $avp(email_address)
 modparam("auth_db", "load_credentials", "$avp(13)=rpid;email_address")
@@ -187,7 +187,7 @@ This parameter specifies not to check the auth table version. This
 Default value is "0 (false)".
 
 
-```opensips title="skip_version_check parameter usage"
+```c title="skip_version_check parameter usage"
 modparam("auth_db", "skip_version_check", 1)
 		
 ```
@@ -204,7 +204,7 @@ This is the name of the column in a 'SUBSCRIBER' like table holding
 Default value is "username".
 
 
-```opensips title="user_column parameter usage"
+```c title="user_column parameter usage"
 modparam("auth_db", "user_column", "user")
 ```
 
@@ -221,7 +221,7 @@ This is the name of the column in a 'SUBSCRIBER' like table holding
 Default value is "domain".
 
 
-```opensips title="domain_column parameter usage"
+```c title="domain_column parameter usage"
 modparam("auth_db", "domain_column", "domain")
 ```
 
@@ -241,7 +241,7 @@ This is the name of the column in a *"subscriber"*
 Default value is "ha1".
 
 
-```opensips title="password_column parameter usage"
+```c title="password_column parameter usage"
 modparam("auth_db", "password_column", "password")
 ```
 
@@ -256,7 +256,7 @@ The name of the column holding SHA-256 HA1 hashes
 Default value is "ha1_sha256".
 
 
-```opensips title="password_column parameter usage"
+```c title="password_column parameter usage"
 modparam("auth_db", "hash_column_sha256", "ha1_sha256")
 ```
 
@@ -271,7 +271,7 @@ The name of the column holding SHA-512/256 HA1 hashes.
 Default value is "ha1_sha512t256".
 
 
-```opensips title="password_column parameter usage"
+```c title="password_column parameter usage"
 modparam("auth_db", "hash_column_sha512t256", "ha1_sha512t256")
 ```
 
@@ -285,7 +285,7 @@ Column holding usernames in an 'URI' like table.
 *Default value is "username".*
 
 
-```opensips title="Set uri_user_column parameter"
+```c title="Set uri_user_column parameter"
 ...
 modparam("auth_db", "uri_user_column", "username")
 ...
@@ -301,7 +301,7 @@ Column holding domain in an 'URI' like table.
 *Default value is "domain".*
 
 
-```opensips title="Set uri_domain_column parameter"
+```c title="Set uri_domain_column parameter"
 ...
 modparam("auth_db", "uri_domain_column", "domain")
 ...
@@ -317,7 +317,7 @@ Column holding URI username in an 'URI' like table.
 *Default value is "uri_user".*
 
 
-```opensips title="Set uriuser_column parameter"
+```c title="Set uriuser_column parameter"
 ...
 modparam("auth_db", "uri_uriuser_column", "uri_user")
 ...
@@ -464,7 +464,7 @@ Meaning of the parameters is as follows:
 This function can be used from REQUEST_ROUTE.
 
 
-```opensips title="db_is_to_authorized usage"
+```c title="db_is_to_authorized usage"
 ...
 if (!db_is_to_authorized("uri")) {
 	xlog("User $tu is not authorized to authenticate with $au credential\n");

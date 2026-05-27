@@ -101,7 +101,7 @@ This module does not depend on any external library.
 The default AV Manager used in case the functions do not provide them explicitly.
 
 
-```opensips title="default_av_mgm parameter usage"
+```c title="default_av_mgm parameter usage"
 		
 modparam("auth_aka", "default_av_mgm", "diameter") # fetch AVs through the Cx interface
 		
@@ -118,7 +118,7 @@ The default qop parameter used during challenge, if the functions
 Default value is *auth*.
 
 
-```opensips title="default_qop parameter usage"
+```c title="default_qop parameter usage"
 		
 modparam("auth_aka", "default_qop", "auth,auth-int")
 		
@@ -141,7 +141,7 @@ Default value is *AKAv1-MD5*.
 *WARNING:* only AKAv1* algorithms are currently supported.
 
 
-```opensips title="default_algorithm parameter usage"
+```c title="default_algorithm parameter usage"
 		
 modparam("auth_aka", "default_algorithm", "AKAv2-MD5")
 		
@@ -158,7 +158,7 @@ The size of the hash that stores the AVs for each user.
 Default value is *4096*.
 
 
-```opensips title="hash_size parameter usage"
+```c title="hash_size parameter usage"
 		
 modparam("auth_aka", "hash_size", 1024)
 		
@@ -179,7 +179,7 @@ Must be a positive value. A value of
 Default value is *100* ms.
 
 
-```opensips title="sync_timeout parameter usage"
+```c title="sync_timeout parameter usage"
 		
 modparam("auth_aka", "sync_timeout", 200)
 		
@@ -204,7 +204,7 @@ Must be a positive value, greater than 0.
 Default value is *1000* ms.
 
 
-```opensips title="async_timeout parameter usage"
+```c title="async_timeout parameter usage"
 modparam("auth_aka", "async_timeout", 2000)
 		
 ```
@@ -224,7 +224,7 @@ Must be a positive value, greater than 0.
 Default value is *60* s.
 
 
-```opensips title="unused_timeout parameter usage"
+```c title="unused_timeout parameter usage"
 modparam("auth_aka", "unused_timeout", 120)
 		
 ```
@@ -245,7 +245,7 @@ Must be a positive value, greater than 0.
 Default value is *30* s.
 
 
-```opensips title="pending_timeout parameter usage"
+```c title="pending_timeout parameter usage"
 modparam("auth_aka", "pending_timeout", 10)
 		
 ```

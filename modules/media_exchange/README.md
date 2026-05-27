@@ -120,7 +120,7 @@ Parameters:
 This function can be used from any route.
 
 
-```opensips title="Use media_fork_to_uri() function to fork
+```c title="Use media_fork_to_uri() function to fork
 					media to a Media Server"
 ...
 if (!has_totag() && is_method("INVITE"))
@@ -175,7 +175,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-```opensips title="Use media_fork_from_call() function to fork
+```c title="Use media_fork_from_call() function to fork
 					all media streams of a call"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
@@ -185,7 +185,7 @@ if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
 ```
 
 
-```opensips title="Use media_fork_from_call() function to fork
+```c title="Use media_fork_from_call() function to fork
 					only the first caller's stream"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
@@ -221,7 +221,7 @@ Parameters:
 This function can be used from any route.
 
 
-```opensips title="Use media_fork_pause() function to temporarily
+```c title="Use media_fork_pause() function to temporarily
 					stop the entire media stream of the call"
 ...
 if (has_totag() && is_method("INVITE"))
@@ -256,7 +256,7 @@ Parameters:
 This function can be used from any route.
 
 
-```opensips title="Use media_fork_resume() function to resume
+```c title="Use media_fork_resume() function to resume
 					a forking previously stopped"
 ...
 if (has_totag() && is_method("INVITE"))
@@ -303,7 +303,7 @@ Parameters:
 This function can be used from any route.
 
 
-```opensips title="Use media_exchange_from_uri() function to
+```c title="Use media_exchange_from_uri() function to
 					fetch media from a Media Server's call"
 ...
 if (has_totag() && is_method("INVITE") && is_audio_on_hold())
@@ -346,7 +346,7 @@ This function can be used from REQUEST_ROUTE, BRANCH_ROUTE,
 					exit the processing after running the function.
 
 
-```opensips title="Use media_exchange_to_call() function to make
+```c title="Use media_exchange_to_call() function to make
 					an announcement"
 ...
 if (!has_totag() && is_method("INVITE") && $hdr(X-CallID) != NULL)
@@ -393,7 +393,7 @@ Parameters:
 This function can be used from any route.
 
 
-```opensips title="Use media_terminate() function to
+```c title="Use media_terminate() function to
 					terminate an announcement"
 ...
 if (has_totag() && is_method("INVITE") && !is_audio_on_hold())
@@ -434,7 +434,7 @@ This function can be used from REQUEST_ROUTE,
 				BRANCH_ROUTE and ONREPLY_ROUTE.
 
 
-```opensips title="Use media_terminate() function to
+```c title="Use media_terminate() function to
 					terminate an announcement"
 ...
 if (has_totag() && loose_route()) {

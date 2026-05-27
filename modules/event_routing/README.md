@@ -135,7 +135,7 @@ Parameters:
 			lifetime, a subscription may be notified several or zero times.
 
 
-```opensips title="notify_on_event() usage"
+```c title="notify_on_event() usage"
 ...
 $avp(filter) = "aor=*@opensips.org"
 notify_on_event("E_UL_AOR_INSERT",$avp(filter),"reg_done",60);
@@ -162,7 +162,7 @@ The meaning of the parameters is the same as for
 		*notify_on_event*.
 
 
-```opensips title="wait_for_event usage"
+```c title="wait_for_event usage"
 ...
 # wait for callee to register
 $avp(filter) = "aor="+$rU+"@"+$rd
@@ -195,7 +195,7 @@ Schematics : when we send a call to a user, we subscribe to see any
 		(ringing) to user.
 
 
-```opensips title="Push Notification script"
+```c title="Push Notification script"
 ...
 route[route_to_user] {
 
@@ -260,7 +260,7 @@ Schematics: when we send a call to a user within a pickup group, we
 		(Charlie).
 
 
-```opensips title="Call Pickup script"
+```c title="Call Pickup script"
 ...
 route[handle_call]
     if ($rU=="33") {

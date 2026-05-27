@@ -126,7 +126,7 @@ The maximum number of microseconds that a mongodb query can last.
 *Default value is "0 ( unlimited - no warnings )".*
 
 
-```opensips title="Set exec_threshold parameter"
+```c title="Set exec_threshold parameter"
 ...
 modparam("cachedb_mongodb", "exec_threshold", 100000)
 ...
@@ -150,7 +150,7 @@ Caveat: only the minimally required raw query options are
 *Default value is "0 (disabled)".*
 
 
-```opensips title="Setting the compat_mode_2.4 parameter"
+```c title="Setting the compat_mode_2.4 parameter"
 ...
 modparam("cachedb_mongodb", "compat_mode_2.4", 1)
 ...
@@ -174,7 +174,7 @@ Caveat: only the minimally required options for "find" raw queries are
 *Default value is "0 (disabled)".*
 
 
-```opensips title="Setting the compat_mode_3.0 parameter"
+```c title="Setting the compat_mode_3.0 parameter"
 ...
 modparam("cachedb_mongodb", "compat_mode_3.0", 1)
 ...
@@ -208,7 +208,7 @@ The query syntax is identical to the mongo cli. Documentation for it
 Some example raw queries:
 
 
-```opensips title="MongoDB Raw Insert"
+```c title="MongoDB Raw Insert"
 ...
 cache_raw_query("mongodb:cluster", "{ \
     \"insert\": \"ip_blacklist\", \
@@ -224,7 +224,7 @@ xlog("INSERT RAW QUERY returned $rc, output: '$avp(out)'\n");
 ```
 
 
-```opensips title="MongoDB Raw Update"
+```c title="MongoDB Raw Update"
 ...
 cache_raw_query("mongodb:cluster", "{ \
     \"update\": \"ip_blacklist\", \

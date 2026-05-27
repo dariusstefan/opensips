@@ -417,7 +417,7 @@ Default value:
         `/usr/local/etc/opensips/ldap.cfg`
 
 
-```opensips title="config_file parameter usage"
+```c title="config_file parameter usage"
 modparam("ldap", "config_file", "/etc/opensips/ldap.ini")
 		  
 ```
@@ -436,7 +436,7 @@ Number of maximum asynchronous connections that will be started
 Default value: `20`
 
 
-```opensips title="max_async_connections parameter usage"
+```c title="max_async_connections parameter usage"
 modparam("ldap", "max_async_connections", 50)
 		  
 ```
@@ -518,7 +518,7 @@ ldap://ldap_1/dc=example,dc=com?
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 ...
 # ldap search
 if (!ldap_search("ldap://sipaccounts/ou=sip,dc=example,dc=com??one?(cn=$rU)"))
@@ -615,7 +615,7 @@ Internal error occurred
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 ...
 
 # ldap_search call
@@ -709,7 +709,7 @@ Internal error occurred
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 ...
 # ldap_search call
 ...
@@ -851,7 +851,7 @@ Internal error
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 ...
 if (!ldap_filter_url_encode("cn=$avp(name)", $avp(name_esc)))
 {
@@ -945,7 +945,7 @@ ldap://ldap_1/dc=example,dc=com?
 This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE, and ONREPLY_ROUTE.
 
 
-```opensips title="Example Usage"
+```c title="Example Usage"
 ...
 # ldap search
 

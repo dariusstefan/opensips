@@ -126,7 +126,7 @@ Definition of socket(s) used to connect to (a set) RTP proxy. It may
 *Default value is "NONE" (disabled).*
 
 
-```opensips title="Set rtpengine_sock parameter"
+```c title="Set rtpengine_sock parameter"
 ...
 # single rtproxy
 modparam("rtpengine", "rtpengine_sock", "udp:localhost:12221")
@@ -153,7 +153,7 @@ Once an RTP proxy was found unreachable and marked as disabled, the rtpengine
 *Default value is "60".*
 
 
-```opensips title="Set rtpengine_disable_tout parameter"
+```c title="Set rtpengine_disable_tout parameter"
 ...
 modparam("rtpengine", "rtpengine_disable_tout", 20)
 ...
@@ -169,7 +169,7 @@ Timeout value in waiting for reply from RTP proxy.
 *Default value is "1".*
 
 
-```opensips title="Set rtpengine_tout parameter"
+```c title="Set rtpengine_tout parameter"
 ...
 modparam("rtpengine", "rtpengine_tout", 2)
 ...
@@ -186,7 +186,7 @@ How many times the module should retry to send and receive after
 *Default value is "5".*
 
 
-```opensips title="Set rtpengine_retr parameter"
+```c title="Set rtpengine_retr parameter"
 ...
 modparam("rtpengine", "rtpengine_retr", 2)
 ...
@@ -206,7 +206,7 @@ Frequency to scan rtpengine sets for disabled node probing. Probing is done
 Default value is "5".
 
 
-```opensips title="Set rtpengine_timer_interval parameter"
+```c title="Set rtpengine_timer_interval parameter"
 ...
 modparam("rtpengine", "rtpengine_timer_interval", 1)
 ...
@@ -228,7 +228,7 @@ Every notification received from RTPengine will trigger an
 *Default value is "none" - notifications are ignored.*
 
 
-```opensips title="Set notification_sock parameter"
+```c title="Set notification_sock parameter"
 ...
 modparam("rtpengine", "notification_sock", "127.0.0.1:9999")
 ...
@@ -246,7 +246,7 @@ The parameter sets the PV definition to use when the "via-branch=extra"
 Default is empty, the "via-branch=extra" option may not be used then.
 
 
-```opensips title="Set extra_id_pv parameter"
+```c title="Set extra_id_pv parameter"
 ...
 modparam("rtpengine", "extra_id_pv", "$avp(extra_id)")
 ...
@@ -266,7 +266,7 @@ The parameter defines an AVP that, if set,
 There is no default value.
 
 
-```opensips title="Set setid_avp parameter"
+```c title="Set setid_avp parameter"
 ...
 modparam("rtpengine", "setid_avp", "$avp(setid)")
 ...
@@ -283,7 +283,7 @@ The parameter defines a variable that shall be populated
 There is no default value.
 
 
-```opensips title="Set error_pv parameter"
+```c title="Set error_pv parameter"
 ...
 modparam("rtpengine", "error_pv", "$var(rtpengine_error)")
 ...
@@ -303,7 +303,7 @@ Default value is "NULL", no database
 			is used.
 
 
-```opensips title="Set db_url parameter"
+```c title="Set db_url parameter"
 ...
 modparam("rtpengine", "db_url", 
 		"mysql://opensips:opensipsrw@localhost/opensips")
@@ -321,7 +321,7 @@ The table where the RTPEngines sockets are stored.
 Default value is "rtpengine".
 
 
-```opensips title="Set db_table parameter"
+```c title="Set db_table parameter"
 ...
 modparam("rtpengine", "db_table", "rtpengine_new")
 ...
@@ -337,7 +337,7 @@ The name of the rtpengine socket column in the database table.
 Default value is "socket".
 
 
-```opensips title="Set socket_column parameter"
+```c title="Set socket_column parameter"
 ...
 modparam("rtpengine", "socket_column", "sock")
 ...
@@ -353,7 +353,7 @@ The name of the rtpengine set column in the database table.
 Default value is "set_id".
 
 
-```opensips title="Set set_column parameter"
+```c title="Set set_column parameter"
 ...
 modparam("rtpengine", "set_column", "set_new")
 ...
@@ -375,7 +375,7 @@ If this parameter is set, each enabled node is pinged
 *Default value is "0" (disabled).*
 
 
-```opensips title="Set ping_enabled parameter"
+```c title="Set ping_enabled parameter"
 ...
 modparam("rtpengine", "ping_enabled", yes)
 ...
@@ -616,7 +616,7 @@ Note: Please note, that this will only work properly with non-dual-stack user-ag
 This function can be used from ALL_ROUTES.
 
 
-```opensips title="rtpengine_offer usage"
+```c title="rtpengine_offer usage"
 route {
 ...
     if (is_method("INVITE")) {
@@ -650,7 +650,7 @@ onreply_route[2]
 ```
 
 
-```opensips title="rtpengine_offer usage with body replace"
+```c title="rtpengine_offer usage with body replace"
 ...
 if (rtpengine_offer(, $var(socket), $var(body), $rb)) {
     xlog("Used rtpengine $var(socket)\n");
@@ -713,7 +713,7 @@ This parameter can be used to extend the list
 Default value is empty, no extra errors are being used.
 
 
-```opensips title="Set extra_failover_error parameter"
+```c title="Set extra_failover_error parameter"
 ...
 modparam("rtpengine", "extra_failover_error", "Parallel session limit reached")
 ...
@@ -914,7 +914,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-```opensips title="Ringback tone using rtpengine_play_media"
+```c title="Ringback tone using rtpengine_play_media"
 ...
 if (is_method("INVITE") && !has_totag())
 	rtpengine_play_media("file=/path/to/ringback_tone_file.wav");
@@ -923,7 +923,7 @@ if (is_method("INVITE") && !has_totag())
 ```
 
 
-```opensips title="Manage music on hold using rtpengine_play_media"
+```c title="Manage music on hold using rtpengine_play_media"
 ...
 if (is_method("INVITE") && has_totag()) {
 	if (is_audio_on_hold()) {
@@ -962,7 +962,7 @@ Meaning of the parameters is as follows:
 This function can be used from any route.
 
 
-```opensips title="Ringback tone stop using rtpengine_stop_media"
+```c title="Ringback tone stop using rtpengine_stop_media"
 ...
 if (is_method("INVITE") && $rs == 200)
 	rtpengine_stop_media();
@@ -971,7 +971,7 @@ if (is_method("INVITE") && $rs == 200)
 ```
 
 
-```opensips title="Example use of the last-frame-pos parameter rtpengine_stop_media"
+```c title="Example use of the last-frame-pos parameter rtpengine_stop_media"
 ...
 if (is_method("INVITE") && has_totag()) {
 	if (is_audio_on_hold()) {
@@ -1141,7 +1141,7 @@ The asynchronous flavor of the [rtpengine offer](#func_rtpengine_offer)
 			function. It receives the same parameters, with the same meanings.
 
 
-```opensips title="Example of async rtpengine_offer() usage"
+```c title="Example of async rtpengine_offer() usage"
 ...
 if (is_method("ACK") && has_totag() && has_body_part("application/sdp")) {
 	async(rtpengine_offer(), resume_invite);
@@ -1162,7 +1162,7 @@ The asynchronous flavor of the [rtpengine answer](#func_rtpengine_answer)
 			function. It receives the same parameters, with the same meanings.
 
 
-```opensips title="Example of async rtpengine_answer() usage"
+```c title="Example of async rtpengine_answer() usage"
 ...
 if (is_method("ACK") && has_body_part("application/sdp")) {
 	# late negotiation
@@ -1184,7 +1184,7 @@ The asynchronous flavor of the [rtpengine delete](#func_rtpengine_delete)
 			function. It receives the same parameters, with the same meanings.
 
 
-```opensips title="Example of async rtpengine_delete() usage"
+```c title="Example of async rtpengine_delete() usage"
 ...
 if (is_method("BYE")) {
 	launch(rtpengine_delete());
@@ -1289,7 +1289,7 @@ Returnes one of the pre-fined statistics listed below:
 				the variable returns the *NULL* value.
 
 
-```opensips title="$rtpstat(STAT)"
+```c title="$rtpstat(STAT)"
 ...
     xlog("Average MOS of the entire call is $rtpstat(MOS-average)\r\n");
     xlog("Average MOS of caller is $(rtpstat(MOS-average)[$ft])\r\n");
@@ -1313,7 +1313,7 @@ You can use a *$json()* variable to parse
 			RTP statistics, or MOS values.
 
 
-```opensips title="$rtpquery Usage"
+```c title="$rtpquery Usage"
 ...
 	$json(reply) := $rtpquery;
 	xlog("Total RTP Stats: $json(reply/totals)\n");

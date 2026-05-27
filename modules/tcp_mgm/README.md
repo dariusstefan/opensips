@@ -37,7 +37,7 @@ None.
 Mandatory URL to the SQL database.
 
 
-```opensips title="Setting the db_url parameter"
+```c title="Setting the db_url parameter"
 modparam("tcp_mgm", "db_url", "mysql://opensips:opensipsrw@localhost/opensips")
 ```
 
@@ -51,7 +51,7 @@ The name of the table holding the TCP paths (rules).
 Default value is *"tcp_mgm"*.
 
 
-```opensips title="Setting the db_table parameter"
+```c title="Setting the db_table parameter"
 modparam("tcp_mgm", "db_table", "tcp_mgm")
 ```
 
@@ -62,7 +62,7 @@ modparam("tcp_mgm", "db_table", "tcp_mgm")
 Use a different name for column *"column-name"*.
 
 
-```opensips title="Setting the [column-name]_col parameter"
+```c title="Setting the [column-name]_col parameter"
 modparam("tcp_mgm", "connect_timeout_col", "connect_to")
 ```
 

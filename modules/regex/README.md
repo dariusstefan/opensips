@@ -60,7 +60,7 @@ Text file containing the regular expression groups. It must be set in order
 *Default value is "NULL".*
 
 
-```opensips title="Set file parameter"
+```c title="Set file parameter"
 ...
 modparam("regex", "file", "/etc/opensips/regex_groups")
 ...
@@ -76,7 +76,7 @@ Max number of regular expression groups in the text file.
 *Default value is "20".*
 
 
-```opensips title="Set max_groups parameter"
+```c title="Set max_groups parameter"
 ...
 modparam("regex", "max_groups", 40)
 ...
@@ -92,7 +92,7 @@ Max content size of a group in the text file.
 *Default value is "8192".*
 
 
-```opensips title="Set group_max_size parameter"
+```c title="Set group_max_size parameter"
 ...
 modparam("regex", "group_max_size", 16384)
 ...
@@ -110,7 +110,7 @@ If this options is set, matching is done caseless. It is equivalent to
 *Default value is "0".*
 
 
-```opensips title="Set pcre_caseless parameter"
+```c title="Set pcre_caseless parameter"
 ...
 modparam("regex", "pcre_caseless", 1)
 ...
@@ -138,7 +138,7 @@ When this option is set, the "start of line" and "end of line" constructs
 *Default value is "0".*
 
 
-```opensips title="Set pcre_multiline parameter"
+```c title="Set pcre_multiline parameter"
 ...
 modparam("regex", "pcre_multiline", 1)
 ...
@@ -157,7 +157,7 @@ If this option is set, a dot metacharater in the pattern matches all characters,
 *Default value is "0".*
 
 
-```opensips title="Set pcre_dotall parameter"
+```c title="Set pcre_dotall parameter"
 ...
 modparam("regex", "pcre_dotall", 1)
 ...
@@ -178,7 +178,7 @@ If this option is set, whitespace data characters in the pattern are totally
 *Default value is "0".*
 
 
-```opensips title="Set pcre_extended parameter"
+```c title="Set pcre_extended parameter"
 ...
 modparam("regex", "pcre_extended", 1)
 ...
@@ -211,7 +211,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="pcre_match usage (forcing case insensitive)"
+```c title="pcre_match usage (forcing case insensitive)"
 ...
 if (pcre_match("$ua", "(?i)^twinkle")) {
     xlog("L_INFO", "User-Agent matches\n");
@@ -220,7 +220,7 @@ if (pcre_match("$ua", "(?i)^twinkle")) {
 ```
 
 
-```opensips title="pcre_match usage (using "end of line" symbol)"
+```c title="pcre_match usage (using "end of line" symbol)"
 ...
 if (pcre_match($rU, "^user[1234]$$")) {  # Will be converted to "^user[1234]$"
     xlog("L_INFO", "RURI username matches\n");
@@ -250,7 +250,7 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE, ONREPLY_ROUTE,
 				BRANCH_ROUTE and LOCAL_ROUTE.
 
 
-```opensips title="pcre_match_group usage"
+```c title="pcre_match_group usage"
 ...
 if (pcre_match_group($rU, 2)) {
     xlog("L_INFO", "RURI username matches group 2\n");
@@ -414,7 +414,7 @@ The first group can be used to avoid auto-generated PUBLISH (pua_usrloc
 				module) for UA's already supporting presence:
 
 
-```opensips title="Using with pua_usrloc"
+```c title="Using with pua_usrloc"
 route[REGISTER] {
     if (! pcre_match_group("$ua", 0)) {
         xlog("L_INFO", "Auto-generated PUBLISH for $fu ($ua)\n");

@@ -68,7 +68,7 @@ Indicates whether the JSON responses stored in the return
 *Default value is "0 - no pretty-printing".*
 
 
-```opensips title="Set pretty_printing parameter"
+```c title="Set pretty_printing parameter"
 ...
 modparam("mi_script", "pretty_printing", 1)
 ...
@@ -91,7 +91,7 @@ Trace destination as defined in the tracing module. Currently
 *Default value is none(not defined).*
 
 
-```opensips title="Set trace_destination parameter"
+```c title="Set trace_destination parameter"
 ...
 modparam("proto_hep", "trace_id", "[hep_dest]10.0.0.2;transport=tcp;version=3")
 
@@ -127,7 +127,7 @@ Defining a blacklists means all the commands that are not blacklisted
 *Default value is none(not defined).*
 
 
-```opensips title="Set trace_destination parameter"
+```c title="Set trace_destination parameter"
 ...
 ## blacklist ps and which mi commands
 ## all the other commands shall be traced
@@ -285,7 +285,7 @@ The function works is more or less the same as its
 			asynchronously cannot be traced through hep.
 
 
-```opensips title="async mi call usage"
+```c title="async mi call usage"
 ...
 xlog("reload starting\n");
 async(mi("dr_reload"), after_reload);

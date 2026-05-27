@@ -70,7 +70,7 @@ Even when the module is loaded, benchmarking is not enabled
 *Default value is "0".*
 
 
-```opensips title="Set enable parameter"
+```c title="Set enable parameter"
 ...
 modparam("benchmark", "enable", 1)
 ...
@@ -91,7 +91,7 @@ If granularity is set to 0, then nothing will be logged automatically. Instead b
 *Default value is "100".*
 
 
-```opensips title="Set granularity parameter"
+```c title="Set granularity parameter"
 ...
 modparam("benchmark", "granularity", 500)
 ...
@@ -116,7 +116,7 @@ Set the log level for the benchmark logs. These levels should be used:
 *Default value is "3" (L_INFO).*
 
 
-```opensips title="Set loglevel parameter"
+```c title="Set loglevel parameter"
 ...
 modparam("benchmark", "loglevel", 4)
 ...

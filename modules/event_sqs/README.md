@@ -92,7 +92,7 @@ The queue_url contains:
 This parameter can be set multiple times.
 
 
-```opensips title="Set queue_url parameter"
+```c title="Set queue_url parameter"
 ...
 
 modparam("event_sqs", "queue_url",
