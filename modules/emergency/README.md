@@ -396,6 +396,6 @@ This function can be used from the *FAILURE* routes.
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Evandro Villaron ([@evillaron](https://github.com/evillaron)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
