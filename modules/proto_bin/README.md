@@ -244,6 +244,6 @@ modparam("proto_bin", "tcp_async_local_write_timeout", 100)
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
