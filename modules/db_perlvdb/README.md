@@ -362,3 +362,6 @@ The standard Adapter/VTab pattern lets the user choose between three options on 
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Bastian Friedrich.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

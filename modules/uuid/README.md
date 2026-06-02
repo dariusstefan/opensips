@@ -171,3 +171,6 @@ This function can be used from any route.
 
 
 **Last edited by:** Norman Brandinger ([@NormB](https://github.com/NormB)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

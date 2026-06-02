@@ -767,3 +767,6 @@ $ opensips-cli -x mi aka_av_drop \
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

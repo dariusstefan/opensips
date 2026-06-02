@@ -282,3 +282,6 @@ Boolean flag indicating if the XCAP server has access to the local database or
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
