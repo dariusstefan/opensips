@@ -343,9 +343,3 @@ MI FIFO Command Format:
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2025 OpenSIPS Solutions;

@@ -367,9 +367,3 @@ This function can be used from REQUEST_ROUTE.
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2010-2013 [VoIP Embedded, Inc.](http://www.voipembedded.com)

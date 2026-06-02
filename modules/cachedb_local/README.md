@@ -426,9 +426,3 @@ The parameter was removed because it was redundant. Since the
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Dragus, Anca Vamanu.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Anca-Maria Vamanu

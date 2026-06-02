@@ -601,9 +601,3 @@ opensips-cli -x mi stir_shaken_crl_reload
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), MonkeyTester, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2019 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

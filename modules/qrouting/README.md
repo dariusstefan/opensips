@@ -631,9 +631,3 @@ Parameters:
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2020 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -456,12 +456,3 @@ if (aaa_is_user_in("Request-URI", "ld")) {
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)), Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Voice Sistem SRL
-
-
-Copyright © 2003 FhG FOKUS

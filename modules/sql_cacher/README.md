@@ -487,9 +487,3 @@ For how to access and use the Status/Report information, please see
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2015 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

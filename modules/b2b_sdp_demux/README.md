@@ -219,9 +219,3 @@ if (!has_totag() && is_method("INVITE")) {
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021-2022 Five9 Inc.

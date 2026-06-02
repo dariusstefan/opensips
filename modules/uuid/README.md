@@ -177,9 +177,3 @@ This function can be used from any route.
 
 
 **Last edited by:** Aron Podrigal ([@ar45](https://github.com/ar45)), Norman Brandinger ([@NormB](https://github.com/NormB)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2019 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -119,9 +119,3 @@ The following libraries or applications must be installed before
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Denis Bilenko.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2008 AG Projects

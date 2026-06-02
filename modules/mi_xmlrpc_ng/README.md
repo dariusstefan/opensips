@@ -270,9 +270,3 @@ Date: Mon, 8 Mar 2013 12:00:00 GMT
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [VoIP Embedded, Inc.](http://www.voipembedded.com)

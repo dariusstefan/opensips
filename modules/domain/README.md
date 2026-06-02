@@ -397,9 +397,3 @@ The function returns 1 if domain is local and -1 if
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Dan Pascu ([@danpascu](https://github.com/danpascu)), Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2002-2008 Juha Heinanen

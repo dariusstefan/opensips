@@ -250,9 +250,3 @@ The module exports no function to be used in other OpenSIPS modules.
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2007 Voice Sistem SRL

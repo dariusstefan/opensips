@@ -3213,9 +3213,3 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Stefan-Cristian Mititelu, Ryan Bullock, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Norman Brandinger ([@NormB](https://github.com/NormB)), Anca Vamanu, Andrei Dragus, Hugues Mitonneau, Klaus Darilion, Henning Westerholt ([@henningw](https://github.com/henningw)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Michel Bensoussan, Andy Pyles, Elena-Ramona Modroiu.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2006-2009 Voice Sistem SRL

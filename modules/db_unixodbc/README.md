@@ -234,9 +234,3 @@ The module implements the OpenSIPS DB API, in order to
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu, Marco Lorrai.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2005-2006 Marco Lorrai

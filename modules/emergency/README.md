@@ -396,9 +396,3 @@ This function can be used from the *FAILURE* routes.
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Evandro Villaron ([@evillaron](https://github.com/evillaron)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2014 Villaron/Tesini
