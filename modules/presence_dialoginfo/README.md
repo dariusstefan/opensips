@@ -261,3 +261,6 @@ None to be used in configuration file.
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

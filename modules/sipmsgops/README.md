@@ -1343,3 +1343,6 @@ Search functions are applied to the current message so
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Julián Moreno Patiño, Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Boris Ratner, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

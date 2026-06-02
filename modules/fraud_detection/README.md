@@ -606,3 +606,6 @@ Parameters:
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

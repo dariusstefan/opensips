@@ -633,3 +633,6 @@ opensips-cli -x mi reg_disable sip:alice@opensips.org  sip:alice@127.0.0.1:5060 
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
