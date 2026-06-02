@@ -399,9 +399,3 @@ Parameters:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2017 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -396,9 +396,3 @@ The module requires some tables in the OpenSIPS database.
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Project

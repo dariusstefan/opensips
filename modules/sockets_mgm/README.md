@@ -349,9 +349,3 @@ MI FIFO Command Format:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Norm Brandinger.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2025 OpenSIPS Solutions;

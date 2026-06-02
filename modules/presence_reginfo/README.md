@@ -145,9 +145,3 @@ None to be used in configuration file.
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Carsten Bock.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011-2023 Carsten Bock, carsten@ng-voice.com, http://www.ng-voice.com

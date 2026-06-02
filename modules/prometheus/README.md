@@ -453,9 +453,3 @@ scrape_configs:
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Dudu Ben Moshe, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), OpenSIPS.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

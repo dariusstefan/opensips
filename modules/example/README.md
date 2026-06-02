@@ -184,9 +184,3 @@ example_int(10);
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Solutions;

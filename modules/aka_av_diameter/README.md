@@ -241,9 +241,3 @@ ANSWER 303 Multimedia-Auth Answer
 
 
 **Last edited by:** LarryLaffer-dev, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Solutions;

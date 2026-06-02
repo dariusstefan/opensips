@@ -221,9 +221,3 @@ Finally, to send a message, raise the subscribed event with the desired message 
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexandra Titoc.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

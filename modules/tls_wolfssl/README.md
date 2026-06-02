@@ -167,9 +167,3 @@ In order to fetch the *wolfSSL* library code you can run:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

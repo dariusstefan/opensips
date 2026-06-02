@@ -311,9 +311,3 @@ event_route[E_JANUS_EVENT] {
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Project;

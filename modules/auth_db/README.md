@@ -598,12 +598,3 @@ if (db_get_auth_id("uri", $ru, $avp(auth_id), $avp(auth_realm))) {
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Kennard White, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2005 Voice Sistem SRL
-
-
-Copyright © 2002-2003 FhG FOKUS

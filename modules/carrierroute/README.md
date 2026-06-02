@@ -1471,9 +1471,3 @@ ALTER TABLE subscriber ADD cr_preferred_carrier int(10) default NULL;
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon, Hardy Kahl, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Edson Gellert Schubert, Carsten Bock, Jonas Appel.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2007 1&1 Internet AG
