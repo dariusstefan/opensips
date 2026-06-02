@@ -1548,9 +1548,3 @@ route [resume_route] {
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2016-2020 [OpenSIPS Solutions](http://opensips-solutions.com)

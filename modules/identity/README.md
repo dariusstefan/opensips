@@ -372,9 +372,3 @@ exit;
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Alexander Christ.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2007 Alexander Christ, Cologne University of Applied Sciences

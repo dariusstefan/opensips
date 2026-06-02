@@ -175,9 +175,3 @@ Because it dependes on an external library, the sqlite module is not
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2015 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

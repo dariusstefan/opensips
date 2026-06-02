@@ -251,9 +251,3 @@ It was replaced with the "cachedb_url" parameter.
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

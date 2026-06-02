@@ -211,9 +211,3 @@ The module does not export functions to be used
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

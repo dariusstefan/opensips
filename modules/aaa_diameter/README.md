@@ -293,9 +293,3 @@ $json(avps) := $var(rpl_avps);
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

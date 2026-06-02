@@ -1770,21 +1770,3 @@ Cleans up the entire domain lists.
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2015 [www.opensips-solutions.com](http://www.opensips-solutions.com/)
-
-
-Copyright © 2013 Secusmart GmbH
-
-
-Copyright © 2006 enum.at
-
-
-Copyright © 2005 Cesc Santasusana
-
-
-Copyright © 2005 Voice Sistem SRL

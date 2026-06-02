@@ -509,9 +509,3 @@ This is a read-only pseudo-variable that provides access to the
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2019 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

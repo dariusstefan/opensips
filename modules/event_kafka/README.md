@@ -237,9 +237,3 @@ The function has the following parameters:
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2020 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

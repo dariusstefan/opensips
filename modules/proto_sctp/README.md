@@ -133,9 +133,3 @@ You need to load the "proto_sctp" module. In your script, make sure
 
 
 **Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2015 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

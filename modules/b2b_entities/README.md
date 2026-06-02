@@ -611,12 +611,3 @@ This function can be used to change the logic param stored for an
 
 
 **Last edited by:** Carsten Bock, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Anca-Maria Vamanu
-
-
-Copyright © 2022 [ng-voice GmbH](https://www.ng-voice.com)

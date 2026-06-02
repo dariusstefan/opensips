@@ -767,9 +767,3 @@ xlog("$(var(tmp){rest.unescape})\n");
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Agalya Ramachandran ([@AgalyaR](https://github.com/AgalyaR)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

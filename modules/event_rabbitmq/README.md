@@ -496,9 +496,3 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

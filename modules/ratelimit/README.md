@@ -825,15 +825,3 @@ NULL will be returned if the pipe does not exist.
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Arnaud Boussus, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Henning Westerholt ([@henningw](https://github.com/henningw)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Edson Gellert Schubert.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011 OpenSIPS Foundation
-
-
-Copyright © 2008 VoIP Embedded Inc.
-
-
-Copyright © 2006 Freenet Cityline GmbH

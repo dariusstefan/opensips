@@ -163,9 +163,3 @@ sr_add_report("security","IP $si detected as attacker");
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 OpenSIPS Solutions

@@ -2135,12 +2135,3 @@ The module provides no function to be used
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Matt Lehner, Anca Vamanu, Andrei Dragus, Sergio Gutierrez.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009-2012 [www.opensips-solutions.com](http://www.opensips-solutions.com/)
-
-
-Copyright © 2005-2008 Voice Sistem SRL
