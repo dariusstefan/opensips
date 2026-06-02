@@ -239,9 +239,3 @@ The function has the following parameters:
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2023 Five9 Inc.

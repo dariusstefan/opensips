@@ -550,6 +550,3 @@ This function can be used from REQUEST_ROUTE, FAILURE_ROUTE
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*

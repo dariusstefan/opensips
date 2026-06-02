@@ -268,9 +268,3 @@ route[dfks_get] {
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2019 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -322,9 +322,3 @@ onreply_route[register_reply] {
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Carsten Bock.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011-2023 Carsten Bock, carsten@ng-voice.com, http://www.ng-voice.com

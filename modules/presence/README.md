@@ -1371,9 +1371,3 @@ This function searches is a presence uri has published any presence
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Jasper Hafkenscheid, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Anca Vamanu, Kennard White, Angel Marin, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Klaus Darilion, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2006 Voice Sistem SRL

@@ -459,9 +459,3 @@ xlog("Using $ipsec_ue(ip):$ipsec_ue(port-c) and $ipsec_ue(ip):$ipsec_ue(port-s) 
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Solutions;

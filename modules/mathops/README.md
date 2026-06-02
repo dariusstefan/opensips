@@ -451,9 +451,3 @@ if (math_compare($var(exp1), $var(exp2), $var(result))) {
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Julián Moreno Patiño, Stephane Alnet.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

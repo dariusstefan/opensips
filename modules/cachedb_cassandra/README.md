@@ -311,9 +311,3 @@ The table required for supporting the cache_add()/cache_sub()/cache_counter_fetc
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -312,9 +312,3 @@ xlog("UPDATE RAW QUERY returned $rc, output: '$avp(out)'\n");
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013-2017 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

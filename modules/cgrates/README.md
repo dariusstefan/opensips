@@ -834,9 +834,3 @@ route [auth_reply]
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2017 Răzvan Crainea

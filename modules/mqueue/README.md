@@ -325,15 +325,3 @@ The variable is read-only and returns the size of the specified
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2010 Elena-Ramona Modroiu
-
-
-Copyright © 2018-2020 Julien chavanton, Flowroute
-
-
-Copyright © 2024 Ovidiu Sas, [VoIP Embedded, Inc.](http://www.voipembedded.com)

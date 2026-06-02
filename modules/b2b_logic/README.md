@@ -1530,15 +1530,3 @@ The third argument is the entity identifier.
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 [ng-voice GmbH](https://www.ng-voice.com)
-
-
-Copyright © 2010 [VoIP Embedded, Inc.](http://www.voipembedded.com)
-
-
-Copyright © 2009 Anca-Maria Vamanu

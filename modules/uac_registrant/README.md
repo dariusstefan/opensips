@@ -694,9 +694,3 @@ opensips-cli -x mi reg_force_register sip:alice@opensips.org  sip:alice@127.0.0.
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011-2014 [VoIP Embedded, Inc.](http://www.voipembedded.com)

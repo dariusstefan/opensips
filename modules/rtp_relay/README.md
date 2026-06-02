@@ -431,9 +431,3 @@ The following settings can be used:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 OpenSIPS Solutions

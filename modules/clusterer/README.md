@@ -1677,9 +1677,3 @@ Possble values for the event signaled through *ev* parameter of the callback fun
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Shanee Vanstone, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Jasper Hafkenscheid, Fabian Gast ([@fgast](https://github.com/fgast)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2015-2017 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

@@ -439,9 +439,3 @@ if (is_method("BYE")) {
 
 
 **Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2004 Dan Pascu
