@@ -193,3 +193,6 @@ For working with opensips-cli tool, should be able to print the 'query'
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

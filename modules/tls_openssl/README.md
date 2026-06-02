@@ -105,3 +105,6 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -1141,3 +1141,6 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Mikko Lehto, Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
