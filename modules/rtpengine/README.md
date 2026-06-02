@@ -1670,6 +1670,6 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Norman Brandinger ([@NormB](https://github.com/NormB)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Norm Brandinger, Eddie Fiorentine, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), John Burke ([@john08burke](https://github.com/john08burke)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Flavio E. Goncalves, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Richard Fuchs.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
