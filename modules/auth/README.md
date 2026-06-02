@@ -634,3 +634,6 @@ if (!pv_proxy_authorize("")) {
 
 
 **Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Sergio Gutierrez, Dan Pascu ([@danpascu](https://github.com/danpascu)), Anca Vamanu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Jan Janak ([@janakj](https://github.com/janakj)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

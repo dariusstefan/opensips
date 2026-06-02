@@ -242,3 +242,6 @@ The function receives the same parameters as
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

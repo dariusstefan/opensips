@@ -608,3 +608,6 @@ Meaning of the parameters:
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Damien Sandras ([@dsandras](https://github.com/dsandras)), Vallimamod Abdullah, Anca Vamanu, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

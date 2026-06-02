@@ -646,3 +646,6 @@ typedef int (evs_process_body_t)(struct publ_info* publ,
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

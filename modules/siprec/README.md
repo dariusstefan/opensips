@@ -404,3 +404,6 @@ Settings that can be provisioned:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Norman Brandinger ([@NormB](https://github.com/NormB)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
