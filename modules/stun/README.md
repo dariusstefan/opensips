@@ -316,9 +316,3 @@ modparam("stun","use_listeners_as_primary",1)
 
 
 **Last edited by:** Bernard, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Pistolea.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Voice Sistem SRL

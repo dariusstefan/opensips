@@ -787,9 +787,3 @@ $ opensips-cli -x mi aka_av_drop \
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2024 OpenSIPS Solutions;

@@ -662,9 +662,3 @@ opensips-cli -x mi media_exchange:terminate \
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2020 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

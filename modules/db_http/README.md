@@ -563,9 +563,3 @@ The module will try to use the most secure type of
 
 
 **Last edited by:** Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Stephane Alnet, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Andrei Dragus.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Voice Sistem SRL

@@ -432,9 +432,3 @@ The command returns the number of values successfully flushed.
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2025 OpenSIPS Solutions;

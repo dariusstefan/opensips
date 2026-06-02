@@ -457,9 +457,3 @@ Add header to the reply.
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Arnaud Chong + Eric Gouyer.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2006-2011 Arnaud Chong, Eric Gouyer

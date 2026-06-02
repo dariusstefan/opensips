@@ -529,9 +529,3 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Darius Stefan, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

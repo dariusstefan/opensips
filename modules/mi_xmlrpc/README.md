@@ -270,9 +270,3 @@ Date: Mon, 8 Mar 2013 12:00:00 GMT
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Lavinia Andrei Spirea.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [VoIP Embedded, Inc.](http://www.voipembedded.com)
