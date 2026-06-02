@@ -900,6 +900,6 @@ route [my_resume_route]
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), John Burke ([@john08burke](https://github.com/john08burke)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Norman Brandinger ([@NormB](https://github.com/NormB)), Kobi Eshun ([@ekobi](https://github.com/ekobi)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Klaus Darilion, Andrei Pelinescu-Onciul, Elena-Ramona Modroiu.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

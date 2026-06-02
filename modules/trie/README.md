@@ -381,6 +381,6 @@ The module requires some tables in the OpenSIPS database.
 
 
 **Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

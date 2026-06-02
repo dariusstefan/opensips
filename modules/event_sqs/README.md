@@ -221,6 +221,6 @@ Finally, to send a message, raise the subscribed event with the desired message 
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexandra Titoc.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

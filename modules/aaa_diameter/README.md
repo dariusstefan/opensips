@@ -512,6 +512,6 @@ Note that this event is currently designed to be mainly consumed by an *event_ro
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
