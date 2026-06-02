@@ -1812,3 +1812,6 @@ Possble values for the event signaled through *ev* parameter of the callback fun
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Norm Brandinger, Shanee Vanstone, Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Jasper Hafkenscheid, Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

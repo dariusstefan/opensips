@@ -342,3 +342,6 @@ Parameters:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

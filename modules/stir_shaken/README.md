@@ -607,3 +607,6 @@ opensips-cli -x mi stir_shaken:crl_reload
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), MonkeyTester, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

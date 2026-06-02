@@ -207,3 +207,6 @@ modparam("uac_auth","auth_password_avp","$avp(12)")
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

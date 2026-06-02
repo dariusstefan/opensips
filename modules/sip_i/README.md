@@ -827,3 +827,6 @@ The mandatory parameters(According to ITU-T Rec. Q.763) for each supported ISUP 
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -268,3 +268,6 @@ The module does not export functions to be used
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexandra Titoc.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

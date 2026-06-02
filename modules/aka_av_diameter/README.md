@@ -241,3 +241,6 @@ ANSWER 303 Multimedia-Auth Answer
 
 
 **Last edited by:** LarryLaffer-dev, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

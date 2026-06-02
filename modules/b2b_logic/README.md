@@ -1614,3 +1614,6 @@ The third argument is the entity identifier.
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Norman Brandinger ([@NormB](https://github.com/NormB)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

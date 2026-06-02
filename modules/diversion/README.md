@@ -241,3 +241,6 @@ static inline int add_diversion_helper(struct sip_msg* msg, str* s)
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jan Janak ([@janakj](https://github.com/janakj)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

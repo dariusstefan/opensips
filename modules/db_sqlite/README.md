@@ -226,3 +226,6 @@ Because it dependes on an external library, the sqlite module is not
 
 
 **Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
