@@ -255,6 +255,6 @@ The function has the following parameters:
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

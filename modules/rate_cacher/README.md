@@ -710,6 +710,6 @@ MI FIFO Command Format:
 
 
 **Last edited by:** Callum, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

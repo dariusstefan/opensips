@@ -198,6 +198,6 @@ send_reply(); # or sl_send_reply();
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), zhangst, Anca Vamanu.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

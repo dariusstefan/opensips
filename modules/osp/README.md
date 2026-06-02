@@ -931,6 +931,6 @@ The functions of the OSP modules are not used by other OpenSIPS modules.
 
 
 **Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Di-Shi Sun, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Di-Shi Sun ([@di-shi](https://github.com/di-shi)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dmitry Isakbayev.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

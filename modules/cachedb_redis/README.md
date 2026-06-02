@@ -319,6 +319,6 @@ Make sure you've upgraded the Redis "libhiredis" client library to at
 		least version 0.14.1.  There was at least one significant vulnerability
 		reported in library versions prior to that one ([CVE-2020-7105](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-7105)),
 		so upgrading to latest stable may very well fix the crash!
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

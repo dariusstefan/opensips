@@ -398,6 +398,6 @@ Before running OpenSIPS with IMC, you have to setup the database
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

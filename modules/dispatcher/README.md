@@ -1720,6 +1720,6 @@ Please follow the guidelines provided at: [https://github.com/OpenSIPS/opensips/
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), wangdd, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Roman Sevko, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Stanislaw Pitucha, Anca Vamanu, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Carsten Bock, Edson Gellert Schubert, Elena-Ramona Modroiu.
-## License
+### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
