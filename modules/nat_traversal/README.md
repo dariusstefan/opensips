@@ -932,3 +932,6 @@ If the proxy receiving the INVITE request is the same as the proxy
 
 
 **Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

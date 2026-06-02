@@ -110,3 +110,6 @@ modparam("rtp.io", "rtpproxy_args", "-m 12000 -M 15000 -l 0.0.0.0 -6 /::")
 
 
 **Last edited by:** Maksym Sobolyev ([@sobomax](https://github.com/sobomax)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

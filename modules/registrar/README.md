@@ -1670,3 +1670,6 @@ It was removed, as its functionality was mmigrate into usrloc
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dudu Ben Moshe, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Irina-Maria Stanescu, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Marcus Hunger, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Carsten Bock, Andreas Granig, Jan Janak ([@janakj](https://github.com/janakj)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

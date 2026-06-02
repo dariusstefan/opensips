@@ -599,3 +599,6 @@ t_relay();
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Zero King ([@l2dy](https://github.com/l2dy)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Irina-Maria Stanescu.
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

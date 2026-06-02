@@ -1439,3 +1439,6 @@ Search functions are applied to the current message so
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Bence Szigeti, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Julián Moreno Patiño, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Boris Ratner, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
+## License
+
+All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
