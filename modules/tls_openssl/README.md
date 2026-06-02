@@ -105,9 +105,3 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2021 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

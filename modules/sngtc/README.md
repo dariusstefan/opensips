@@ -230,9 +230,3 @@ This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

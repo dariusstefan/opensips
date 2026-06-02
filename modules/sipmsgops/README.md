@@ -1382,9 +1382,3 @@ Search functions are applied to the current message so
 
 
 **Last edited by:** David Trihy, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Julián Moreno Patiño, Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Boris Ratner, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2003 FhG FOKUS

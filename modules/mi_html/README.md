@@ -225,9 +225,3 @@ Future realeases of the httpd module will address this issue.
 
 
 **Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011-2013 [VoIP Embedded, Inc.](http://www.voipembedded.com)

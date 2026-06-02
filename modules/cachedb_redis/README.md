@@ -319,9 +319,3 @@ Make sure you've upgraded the Redis "libhiredis" client library to at
 		least version 0.14.1.  There was at least one significant vulnerability
 		reported in library versions prior to that one ([CVE-2020-7105](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-7105)),
 		so upgrading to latest stable may very well fix the crash!
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2011 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

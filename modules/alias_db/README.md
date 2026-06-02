@@ -341,9 +341,3 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Elena-Ramona Modroiu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2005-2009 Voice Sistem SRL

@@ -450,9 +450,3 @@ if (is_from_user_enum()) {
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Greg Fausak, Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2002-2003 Juha Heinanen

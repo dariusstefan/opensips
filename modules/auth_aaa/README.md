@@ -399,12 +399,3 @@ if (aaa_does_uri_user_exist()) {
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2005-2009 Voice Sistem SRL
-
-
-Copyright © 2002-2003 FhG FOKUS

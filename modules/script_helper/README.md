@@ -179,9 +179,3 @@ The Max-Forwards header is currently not handled at all.
 
 
 **Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2014 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

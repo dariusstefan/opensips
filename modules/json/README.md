@@ -529,9 +529,3 @@ xlog("\nTest link :\n$json(stub)\n$json(b)\n\n");
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Andrei Dragus.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Voice Sistem SRL

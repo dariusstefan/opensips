@@ -1105,15 +1105,3 @@ if ($shv(debug) == 1) {
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Anca Vamanu, Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Elena-Ramona Modroiu, Konstantin Bokarius, Edson Gellert Schubert.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2007-2008 1und1 Internet AG
-
-
-Copyright © 2007-2008 BASIS AudioNet GmbH
-
-
-Copyright © 2007-2008 Elena-Ramona Modroiu

@@ -478,9 +478,3 @@ NOTE: A line containing a regular expression cannot start by '[' since it
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Iñaki Baz Castillo.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2009 Iñaki Baz Castillo

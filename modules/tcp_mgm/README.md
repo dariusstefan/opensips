@@ -136,9 +136,3 @@ $ "OK"
 
 
 **Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

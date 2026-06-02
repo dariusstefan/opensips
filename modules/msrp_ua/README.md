@@ -663,9 +663,3 @@ enum msrp_failure_report_type {
 
 
 **Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

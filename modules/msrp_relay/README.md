@@ -414,9 +414,3 @@ modparam("msrp_relay", "my_uri", "msrp://opensips.org:2855;tcp")
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 [www.opensips-solutions.com](http://www.opensips-solutions.com/)

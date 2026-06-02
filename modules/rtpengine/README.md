@@ -1405,21 +1405,3 @@ Please follow the guidelines provided at:
 
 
 **Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), John Burke ([@john08burke](https://github.com/john08burke)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Flavio E. Goncalves, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Richard Fuchs.
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2013-2014 Sipwise GmbH
-
-
-Copyright © 2010 [VoIPEmbedded Inc.](http://www.voipembedded.com)
-
-
-Copyright © 2009-2014 TuTPro Inc.
-
-
-Copyright © 2005 Voice Sistem SRL
-
-
-Copyright © 2003-2008 Sippy Software, Inc.

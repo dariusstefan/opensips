@@ -320,9 +320,3 @@ MI FIFO Command Format:
 
 
 **Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
-
-
-*Documentation Copyrights:*
-
-
-Copyright © 2022 [www.opensips-solutions.com](http://www.opensips-solutions.com/)
