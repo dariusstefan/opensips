@@ -241,7 +241,7 @@ What are the impacted processes may be controlled via the **ID** (internal ID) o
 Also see the [E_PROFILING_PROC event](Interface-CoreEvents.md#E_PROFILING_PROC) used for reporting the profiling data.
 
 **Arguments**:
-* *ID* or ''PID** (optional) - processes to work with;**
+* *ID* or *PID* (optional) - processes to work with;
 * *level* (optional) - the new verbosity level (if to be set)
 Examples of usage:
 ```text
