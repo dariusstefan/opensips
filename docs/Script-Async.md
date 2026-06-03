@@ -3,14 +3,6 @@ title: "Asynchronous Statements"
 description: "Asynchronous statements are one of the key features of OpenSIPS 2.X. One of the main reasons to use them is that they allow the performance of the OpenSIPS s..."
 ---
 
-| **Asynchronous Statements v3.6**  |
-| --- |
-
-| [Prev](Script-Tran.md) | [Next](Modules.md) |
-| --- | --- |
-
----
-
 ## Description
 
 Asynchronous statements are one of the key features of OpenSIPS 2.X. One of the main reasons to use them is that they allow the performance of the OpenSIPS script to scale with a high number of requests per second even when doing blocking I/O operations such as MySQL queries, exec commands or HTTP requests.
