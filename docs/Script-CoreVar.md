@@ -10,9 +10,7 @@ The **OpenSIPS** variables can be easily identified in the script as all their n
 Syntax:  
 
 The complete syntax for a pseudo variable is: 
-```text
-$(%green%''<context>''%black%'''name'''%green%''(subname)[index]{transformation}''%%)
-```
+`$(@@green|<context>@@name@@green|(subname)[index]{transformation}@@)`
 
 The fields written in green are optional.
 The fields meaning is:
