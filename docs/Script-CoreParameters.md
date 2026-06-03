@@ -437,7 +437,7 @@ Example of usage:
 
 ```
 
-### listen @@red|(Replaced in OpenSIPS 3.1)@@  [🔗](#listen @@red|)@@ {#listen}
+### listen @@red|(Replaced in OpenSIPS 3.1)@@ {#listen}
 
 This parameter was replaced by the [#socket|socket]] parameter, preserving exactly the same format and behavior.
 
@@ -629,7 +629,7 @@ Example of usage:
 ```
 
 [mem_dump](#memdump)
-### memdump | mem_dump  [mem_dump|🔗](#memdump)
+### memdump | mem_dump  
 
 Log level to print memory status information (runtime and shutdown). It has to be less than the value of 'log_level' parameter if you want memory info to be logged. Default: memdump=L_DBG (4)
 
@@ -642,7 +642,7 @@ memdump=2
 NOTE that setting memlog (see below), will also set the memdump parameter - if you want different values for memlog and memdump, you need to first set memlog and then memdump.
 
 [mem_log](#memlog)
-### memlog | mem_log  [mem_log|🔗](#memlog)
+### memlog | mem_log  
 
 Log level to print memory debug info. It has to be less than the value of 'log_level' parameter if you want memory info to be logged. Default: memlog=L_DBG (4)
 
@@ -1166,7 +1166,7 @@ Usage example:
 
 ```
 
-### xlog_print_level   [🔗](#xlog_print_level) {#xlog_print_level}
+### xlog_print_level {#xlog_print_level}
 
 Default value: -1 (L_ERR)
 
