@@ -3,14 +3,6 @@ title: "Templating opensips.cfg Files"
 description: "OpenSIPS 3.0+ releases offer script writers full support for piping the opensips.cfg file (including any other files imported by it) to a generic preprocessi..."
 ---
 
-| **Templating opensips.cfg Files v3.4**  |
-| --- |
-
-| [Prev](Configure-File.md) | [Next](Script-Syntax.md) |
-| --- | --- |
-
----
-
 ## Generic Preprocessing Support
 
 OpenSIPS 3.0+ releases offer script writers full support for piping the *opensips.cfg* file (including any other files imported by it) to a generic preprocessing command.  This may be useful in scenarios where *opensips.cfg* must be parameterized (e.g. listening interfaces, ports, DB connectors, etc.) and deployed to multiple servers, in an automated fashion.  The system administrator may achieve this using the "-p `<cmdline>`" (preprocessor) option.  For example:
