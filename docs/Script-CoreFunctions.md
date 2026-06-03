@@ -770,7 +770,7 @@ Example of usage:
 seturi("sip:test@opensips.org");
 ```
 
-## route(name [, param1 [, param2 [, ...] ] ] )  [🔗](# route)
+## route(name [, param1 [, param2 [, ...] ] ] )  
 
 This function is used to run the code from the 'name' route, declared in the script. Optionally, it can receive several parameters (up to 7), that can be later retrieved using the '`$param(idx)`' pseudo-variable.
 
@@ -783,7 +783,7 @@ route(HANDLE_SEQUENTIALS);
 route(HANDLE_SEQUENTIALS, 1, "param", $var(param));
 ```
 
-## script_trace([log_level, pv_format_string, [info]])  [🔗](# script_trace) {#script_trace}
+## script_trace([log_level, pv_format_string, [info]]) {#script_trace}
 
 This function start the script tracing - this helps to better understand the flow of execution in the OpenSIPS script, like what function is executed, what line it is, etc. Moreover, you can also trace the values of pseudo-variables, as script execution progresses.
 
