@@ -133,7 +133,7 @@ Example of usage:
 
 ```
 
-## for each  [🔗](#for each)
+## for each  
 
 for each statement - easy iteration over indexed variables or pseudo-variables
 
