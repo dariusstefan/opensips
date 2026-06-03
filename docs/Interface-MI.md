@@ -16,8 +16,7 @@ The **MI** commands are provided by the OpenSIPS core (see [full list](Interface
 
 ---
 
-@@anchor|protocols@@
-## Protocols
+## Protocols {#protocols}
 
 The protocols available in order to connect (from external apps) to the OpenSIPS **MI** are JSON-RPC over several transports and XML-RPC. While the interface itself (tailored around the JSON format) is provided by the OpenSIPS core, each actual transport protocol is provided by a separate OpenSIPS module. You can load multiple MI modules in order to use multiple MI transport protocols at the same time.
 

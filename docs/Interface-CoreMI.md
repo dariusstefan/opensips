@@ -5,8 +5,7 @@ description: "MI (management interface) functions which are exported by OpenSIPS
 
 MI (management interface) functions which are exported by **OpenSIPS** core.
 
-@@anchor|arg@@
-## arg [🔗](#arg)
+## arg [🔗](#arg) {#arg}
 Returns the full list of arguments used when **OpenSIPS** was started. As in UNIX, the first argument is the name of executable binary.  
 
 **Arguments**: none  
@@ -25,8 +24,7 @@ Example of usage:
 
 ```
 
-@@anchor|kill@@
-## kill [🔗](#kill)
+## kill [🔗](#kill) {#kill}
 The command will terminate **OpenSIPS** (and internal shutdown).  
 
 **Arguments**: none  
@@ -40,8 +38,7 @@ Examples of usage:
 
 ```
 
-@@anchor|list_blacklists@@
-## list_blacklists [🔗](#list_blacklists)
+## list_blacklists [🔗](#list_blacklists) {#list_blacklists}
 The command lists all the defined (static or learned) blacklists from **OpenSIPS**.  
 
 **Arguments**: none  
@@ -55,8 +52,7 @@ Examples of usage:
 
 ```
 
-@@anchor|list_tcp_conns@@
-## list_tcp_conns [🔗](#list_tcp_conns)
+## list_tcp_conns [🔗](#list_tcp_conns) {#list_tcp_conns}
 The command lists all ongoing TCP/TLS connection from **OpenSIPS**.  
 
 **Arguments**: none  
@@ -70,9 +66,7 @@ Examples of usage:
 
 ```
 
-@@anchor|log_level@@
-@@anchor|log_level@@
-## log_level [🔗](#log_level) [level] [pid]
+## log_level [🔗](#log_level) [level] [pid] {#log_level}
 Get or set the logging level of one or all OpenSIPS processes. If no argument is passed to the **log_level** command, it will print a table with the current logging levels of all processes. If a logging **level** is given, it will be set for each process. If **pid** is also given, the logging level will change only for that process.  
 
 **Arguments**:
@@ -113,8 +107,7 @@ Examples of usage:
 
 ```
 
-@@anchor|ps@@
-## ps [🔗](#ps)
+## ps [🔗](#ps) {#ps}
 The command will list all all **OpenSIPS** processes, along with type and description.  
 
 **Arguments**: none  
@@ -162,8 +155,7 @@ Examples of usage:
 
 ```
 
-@@anchor|pwd@@
-## pwd [🔗](#pwd)
+## pwd [🔗](#pwd) {#pwd}
 Prints the working directory of **OpenSIPS** instance.  
 
 **Arguments**: none  
@@ -180,8 +172,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reload_routes@@
-## reload_routes [🔗](#reload_routes)
+## reload_routes [🔗](#reload_routes) {#reload_routes}
 Triggers the reload of the routing block (the routes) from the script during the runtime.
 **Arguments**: none  
 
@@ -191,8 +182,7 @@ Please note that there are some limitations of when a reload is possible or not.
 
 If the reload fails, take a look at the logs to understand why - it may have been a syntax error or maybe a module related constraint. Anyhow, if the reload fails, there is no impact on your running OpenSIPS.
 
-@@anchor|sr_get_status@@
-## sr_get_status [🔗](#sr_get_status)
+## sr_get_status [🔗](#sr_get_status) {#sr_get_status}
 The MI equivalent of the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-3-3#sr_check_status) - to get the status of an 'status/report' identifier/group.
 
 **Arguments**: a mandatory *group* and optional *identifier*, see the parameters of the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-3-3#sr_check_status).
@@ -217,8 +207,7 @@ Examples of usage:
 
 ```
 
-@@anchor|sr_list_status@@
-## sr_list_status [🔗](#sr_list_status)
+## sr_list_status [🔗](#sr_list_status) {#sr_list_status}
 Command to list the status of the identifiers within one or all 'status/report' groups.
 
 **Arguments**: an optional 'status/report'  *group*, see the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-3-3#sr_check_status) for more details.
@@ -265,8 +254,7 @@ Examples of usage:
 
 ```
 
-@@anchor|sr_list_reports@@
-## sr_list_reports [🔗](#sr_list_reports)
+## sr_list_reports [🔗](#sr_list_reports) {#sr_list_reports}
 Command to list the full set of reports (logs) collected by 'status/report' identifiers.
 
 **Arguments**:
@@ -337,8 +325,7 @@ Examples of usage:
 
 ```
 
-@@anchor|sr_list_identifiers@@
-## sr_list_identifiers [🔗](#sr_list_identifiers)
+## sr_list_identifiers [🔗](#sr_list_identifiers) {#sr_list_identifiers}
 Command to list all the existing identifiers in OpenSIPS or only from a certain group.
 
 **Arguments**:
@@ -394,8 +381,7 @@ Examples of usage:
 
 ```
 
-@@anchor|uptime@@
-## uptime [🔗](#uptime)
+## uptime [🔗](#uptime) {#uptime}
 Prints various time information about **OpenSIPS** - when it started to run, for how long it runs.  
 
 **Arguments**: none  
@@ -414,8 +400,7 @@ Examples of usage:
 
 ```
 
-@@anchor|version@@
-## version [🔗](#version)
+## version [🔗](#version) {#version}
 Prints the version string of a running**OpenSIPS**.  
 
 **Arguments**: none  
@@ -432,8 +417,7 @@ Examples of usage:
 
 ```
 
-@@anchor|which@@
-## which [🔗](#which)
+## which [🔗](#which) {#which}
 Prints all available MI commands from the queried **OpenSIPS**instance.  
 
 **Arguments**: none  
@@ -467,8 +451,7 @@ Examples of usage:
 
 ```
 
-@@anchor|get_statistics@@
-## get_statistics [🔗](#get_statistics)
+## get_statistics [🔗](#get_statistics) {#get_statistics}
 Prints the statistics (all, group or one) realtime values.  
 
 **Arguments**:
@@ -499,8 +482,7 @@ Examples of usage:
 
 ```
 
-@@anchor|list_statistics@@
-## list_statistics [🔗](#list_statistics)
+## list_statistics [🔗](#list_statistics) {#list_statistics}
 Prints a list of available statistics in the current configuration of OpenSIPS.
 **Arguments**:
 * *statistics* (optional) - an array of the same possible values as for **get_statistics** MI command, with the exception of "all". Omitting the parameter will list all available statistics.
@@ -522,8 +504,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reset_statistics@@
-## reset_statistics [🔗](#reset_statistics)
+## reset_statistics [🔗](#reset_statistics) {#reset_statistics}
 Reset (to zero) the value of a statistic variable. Note that not all variables allow reset (depending of the nature of the information they carry - example "shmem:used_size").  
 
 **Arguments**: 
@@ -545,8 +526,7 @@ Examples of usage:
 
 ```
 
-@@anchor|cache_store@@
-## cache_store [🔗](#cache_store)
+## cache_store [🔗](#cache_store) {#cache_store}
 This command stores in a cache system a string value.  
 
 **Arguments**:
@@ -563,8 +543,7 @@ Examples of usage:
 
 ```
 
-@@anchor|cache_fetch@@
-## cache_fetch [🔗](#cache_fetch)
+## cache_fetch [🔗](#cache_fetch) {#cache_fetch}
 This command queries for a stored value.  
 
 **Arguments**:
@@ -579,8 +558,7 @@ Examples of usage:
 
 ```
 
-@@anchor|cache_remove@@
-## cache_remove [🔗](#cache_remove)
+## cache_remove [🔗](#cache_remove) {#cache_remove}
 This command removes a record from the cache system.  
 
 **Arguments**:
@@ -595,9 +573,7 @@ Examples of usage:
 
 ```
 
-@@anchor|event_subscribe@@
-@@anchor|event_subscribe@@
-## event_subscribe [🔗](#event_subscribe)
+## event_subscribe [🔗](#event_subscribe) {#event_subscribe}
 Subscribes an external application to a certain event.  
 
 **Arguments**:
@@ -613,8 +589,7 @@ Examples of usage:
 
 ```
 
-@@anchor|events_list@@
-## events_list [🔗](#events_list)
+## events_list [🔗](#events_list) {#events_list}
 Lists all the events published through the Event Interface.  
 
 **Arguments**: None.   
@@ -643,8 +618,7 @@ Examples of usage:
 
 ```
 
-@@anchor|raise_event@@
-## raise_event [🔗](#raise_event)
+## raise_event [🔗](#raise_event) {#raise_event}
 Raises an event through the Event Interface using an MI command.  
 
 **Arguments**:
@@ -660,8 +634,7 @@ Examples of usage:
 
 ```
 
-@@anchor|subscribers_list@@
-## subscribers_list [🔗](#subscribers_list)
+## subscribers_list [🔗](#subscribers_list) {#subscribers_list}
 Lists information about the subscribers  
 
 **Arguments**:
@@ -722,8 +695,7 @@ Examples of usage:
 
 ```
 
-@@anchor|mem_pkg_dump@@
-## mem_pkg_dump [🔗](#mem_pkg_dump)
+## mem_pkg_dump [🔗](#mem_pkg_dump) {#mem_pkg_dump}
 Triggers a pkg memory dump for a given process. The memory dump will written to OpenSIPS's log (syslog or stderr) using the 'memdump' logging level. The global 'memdump' log level may be overwritten by a custom value provided as argument to this command.  
 
 **Arguments**:
@@ -740,8 +712,7 @@ Examples of usage:
 
 The processes without IPC support (like timer and per-module processes) will not be able to generate a memory dump.
 
-@@anchor|mem_shm_dump@@
-## mem_shm_dump [🔗](#mem_shm_dump)
+## mem_shm_dump [🔗](#mem_shm_dump) {#mem_shm_dump}
 Triggers a shm memory dump. The memory dump will written to OpenSIPS's log (syslog or stderr) using the 'memdump' logging level. The global 'memdump' log level may be overwritten by a custom value provided as argument to this command.  
 
 **Arguments**:
@@ -755,8 +726,7 @@ Examples of usage:
 
 ```
 
-@@anchor|shm_check@@
-## shm_check [🔗](#shm_check)
+## shm_check [🔗](#shm_check) {#shm_check}
 Only available with *QM_MALLOC* + *DBG_MALLOC*.  Fully scans the shared memory pool in order to locate any inconsistencies.  If any sign of memory corruption is detected, OpenSIPS will immediately abort.   
 
 **Arguments**: None  
@@ -770,8 +740,7 @@ Example of usage:
 
 ```
 
-@@anchor|xlog_level@@
-## xlog_level [level] [🔗](#xlog_lelvel)
+## xlog_level [level] [🔗](#xlog_lelvel) {#xlog_level}
 Get or set the global xlogging level in OpenSIPS processes. If no argument is passed to the **xlog_level** command, it will print the current **xlog_level**. If a logging **level** is given, it will be globally set for all OpenSIPS processes.   
 
 **Arguments**:
