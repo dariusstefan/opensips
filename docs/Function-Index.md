@@ -3,14 +3,6 @@ title: "Function Index"
 description: ""
 ---
 
-| **Script Function Index v3.3** |
-| --- |
-
-| [Prev](Modules.md) | [Next](Interface-MI.md) |
-| --- | --- |
-
----
-
 *Note: Core functions are not included. You can find them [here](Script-CoreFunctions.md).*
 
 | **+Function+** | **+Module+** |
