@@ -19,8 +19,7 @@ Asynchronous statements are one of the key features of OpenSIPS 2.X. One of the 
 
 Using the asynchronous, "suspend-resume" logic instead of forking a large number of processes in order to scale also has the advantage of optimizing system resource usage, increasing its maximal throughput. By requiring less processes to complete the same amount of work in the same amount of time, process context switching is minimized and overall CPU usage is improved. Less processes will also eat up less system memory.
 
-@@anchor|async@@
-## Serial asynchronous operations, async() [🔗](#async)
+## Serial asynchronous operations, async() [🔗](#async) {#async}
 
 The **async()** statement of the OpenSIPS script can be used in situations where the script writer both needs to perform blocking I/O and also depends on the result of this operation. Some example scenarios:
 
@@ -94,8 +93,7 @@ Data is copied over to the resume route as follows:
 **@@red|Ignored data (not available anymore in resume route)@@**
 * **all `$var` variables**
 
-@@anchor|launch@@
-## Parallel asynchronous operations, launch() [🔗](#launch)
+## Parallel asynchronous operations, launch() [🔗](#launch) {#launch}
 
 The **launch()** statement of the OpenSIPS script can be used in situations where the script writer needs to perform blocking I/O, but does not depend on the result of this operation in order to continue the current SIP routing decision flow. Some example scenarios:
 
@@ -173,8 +171,7 @@ route [pn_counter]
 * **any other variable**
 * **the initial SIP message**
 
-@@anchor|async_functions@@
-## List of async functions [🔗](#async_functions)
+## List of async functions [🔗](#async_functions) {#async_functions}
 
 The following functions may also be called asynchronously:
 
@@ -188,8 +185,7 @@ The following functions may also be called asynchronously:
 
 The async implementation is not limited to the above functions, but these are the first ones migrated to async support. More I/O related functions will be ported to the async support.
 
-@@anchor|async_limitations@@
-## Limitations [🔗](#async_limitations)
+## Limitations [🔗](#async_limitations) {#async_limitations}
 
 ### Async Engine Compatibility
 
@@ -245,8 +241,7 @@ or
  async(exec("mysql-query 'SELECT * FROM subscriber...'", $var(result_row)), resume_route); 
 ```
 
-@@anchor|async_routes@@
-### Allowed Routes [🔗](#async_routes)
+### Allowed Routes [🔗](#async_routes) {#async_routes}
 
 Since the **async** operations are tightly coupled with the transactional engine, they can
 only be performed in routes where a SIP transaction is present and is awaiting completion:

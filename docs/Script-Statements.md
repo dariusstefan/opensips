@@ -5,8 +5,7 @@ description: "Statements you can use in the OpenSIPS config file while building 
 
 Statements you can use in the **OpenSIPS** config file while building the routing logic.
 
-@@anchor|if@@
-## if  [🔗](#if)
+## if  [🔗](#if) {#if}
 
 IF-ELSE statement
 
@@ -52,8 +51,7 @@ Example of usage:
 
 ```
 
-@@anchor|switch@@
-## switch  [🔗](#switch)
+## switch  [🔗](#switch) {#switch}
 
 SWITCH statement - it can be used to test the value of a pseudo-variable. 
 
@@ -115,8 +113,7 @@ Example of usage:
 
 Take care while using 'return' - 'return(0)' stops the execution of the script.
 
-@@anchor|while@@
-## while  [🔗](#while)
+## while  [🔗](#while) {#while}
 
 while statement
 
