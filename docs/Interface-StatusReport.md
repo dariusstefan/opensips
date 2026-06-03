@@ -22,15 +22,13 @@ I most of the cases, the status and reports of an identifier are internally prod
 
 ---
 
-@@anchor|scripting@@
-## Scripting functions
+## Scripting functions {#scripting}
 
 The SR Interface provides a script function to check the readiness status of an identifier (or of an entire group), see the [sr_check_status( group, \[identifier\])](https://www.opensips.org/Documentation/Script-CoreFunctions-3-6#sr_check_status) function.
 
 ---
 
-@@anchor|mi@@
-## MI functions
+## MI functions {#mi}
 
 The SR Interface provides multiple functions to check/list the status of one/multiple identifiers and to list their reports:
 * [sr_get_status](https://www.opensips.org/Documentation/Interface-CoreMI-3-6#sr_get_status)
@@ -40,15 +38,13 @@ The SR Interface provides multiple functions to check/list the status of one/mul
 
 ---
 
-@@anchor|code_identifiers@@
-## Events
+## Events {#code_identifiers}
 
 The SR framework raises an event each time the status of a Status/Report identifier changes. See the [E_CORE_SR_STATUS_CHANGED event](https://www.opensips.org/Documentation/Interface-CoreEvents-3-6#E_CORE_SR_STATUS_CHANGED) for more details.
 
 ---
 
-@@anchor|code_identifiers@@
-## Core identifiers
+## Core identifiers {#code_identifiers}
 
 The OpenSIPS core provides the **core** group, with a "main" (default) identifier. The available status are:
 * STATE_NONE (-100) - OpenSIPS just started
@@ -60,14 +56,12 @@ Also the **auto-scaling** group is exposed (if auto-scaling feature enabled), wh
 
 ---
 
-@@anchor|module_identifiers@@
-## Modules identifiers
+## Modules identifiers {#module_identifiers}
 
 The OpenSIPS modules may or may not provide their own groups and identifiers. For this you need to check the module's documentation.
 
 ---
 
-@@anchor|scripting_identifiers@@
-## Scripting identifiers
+## Scripting identifiers {#scripting_identifiers}
 
 The [status_report](https://opensips.org/docs/modules/3.6.x/status_report.html) allow the creation of custom SR identifiers from script level. Even more, it is possible to set the status or to publish a report from script for such custom identifiers.
