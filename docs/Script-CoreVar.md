@@ -48,7 +48,7 @@ Standard PV is read-only and returns a single value (if not otherwise documented
 
 * [**escape sequences**](#varesc) - escape sequences used to format the strings; they are actually not variables, but rather formatters.
 
-## Script variables [🔗](#varscript) {#varscript}
+## Script variables {#varscript}
 
 **Naming**: `$var(name)` 
 
@@ -77,7 +77,7 @@ if( [ $var(a) & 4 ] ) {
 
 Setting a variable to NULL is actually initializing the value to integer '0'. Script variables don't have NULL value.
 
-## AVP variables [🔗](#varavps) {#varavps}
+## AVP variables {#varavps}
 
 **Naming**: `$avp(name)` or `$(avp(name)[N])`
 
@@ -146,7 +146,7 @@ $(avp(17)[0]) = "zero";
 
 The **AVPOPS** module provides a lot of useful functions to operate AVPs (like checking values, pushing values into different other locations, deleting AVPs, etc).
 
-## Scripting Variables [🔗](#varpv) {#varpv}
+## Scripting Variables {#varpv}
 
 **Naming**: `$name`
 
@@ -156,63 +156,63 @@ The **AVPOPS** module provides a lot of useful functions to operate AVPs (like c
 
 Predefined (provided by core) PVs are listed in alphabetical order.
 
-### URI in SIP Request's P-Asserted-Identity header - $ai [🔗](#ai) {#ai}
+### URI in SIP Request's P-Asserted-Identity header - $ai {#ai}
 
 `$ai` - reference to URI in request's P-Asserted-Identity header (see RFC 3325)
 
-### Authentication Digest URI - $adu [🔗](#adu) {#adu}
+### Authentication Digest URI - $adu {#adu}
 
 `$adu` - URI from Authorization or Proxy-Authorization header. This URI is used when calculating the HTTP Digest Response.
 
-### Authentication realm - $ar [🔗](#ar) {#ar}
+### Authentication realm - $ar {#ar}
 
 `$ar` - realm from Authorization or Proxy-Authorization header
 
-### Auth username user - $au [🔗](#au) {#au}
+### Auth username user - $au {#au}
 
 `$au` - user part of username from Authorization or Proxy-Authorization header
 
-### Auth username domain - $ad [🔗](#ad) {#ad}
+### Auth username domain - $ad {#ad}
 
 `$ad` - domain part of username from Authorization or Proxy-Authorization header
 
-### Auth nonce - $an [🔗](#an) {#an}
+### Auth nonce - $an {#an}
 
 `$an` - the nonce from Authorization or Proxy-Authorization header
 
-### Auth response  - $auth.resp [🔗](#auth.resp) {#auth.resp}
+### Auth response  - $auth.resp {#auth.resp}
 
 `$auth.resp` - the authentication response from Authorization or Proxy-Authorization header
 
-### Auth nonce  - $auth.nonce [🔗](#auth.nonce) {#auth.nonce}
+### Auth nonce  - $auth.nonce {#auth.nonce}
 
 `$auth.nonce` - the nonce string from Authorization or Proxy-Authorization header
 
-### Auth opaque - $auth.opaque [🔗](#auth.opaque) {#auth.opaque}
+### Auth opaque - $auth.opaque {#auth.opaque}
 
 `$auth.opaque` - the opaque string from Authorization or Proxy-Authorization header
 
-### Auth algorithm - $auth.alg [🔗](#auth.alg) {#auth.alg}
+### Auth algorithm - $auth.alg {#auth.alg}
 
 `$auth.alg` - the algorithm string from Authorization or Proxy-Authorization header
 
-### Auth QOP - $auth.qop [🔗](#auth.qop) {#auth.qop}
+### Auth QOP - $auth.qop {#auth.qop}
 
 `$auth.qop` - the value of qop parameter from Authorization or Proxy-Authorization header
 
-### Auth nonce count (nc) - $auth.nc [🔗](#auth.nc) {#auth.nc}
+### Auth nonce count (nc) - $auth.nc {#auth.nc}
 
 `$auth.nc` - the value of nonce count parameter from Authorization or Proxy-Authorization header
 
-### Auth whole username - $aU [🔗](#aU) {#aU}
+### Auth whole username - $aU {#aU}
 
 `$aU` - whole username from Authorization or Proxy-Authorization header
 
-### Acc username - $Au [🔗](#Au) {#Au}
+### Acc username - $Au {#Au}
 
 `$Au` - username for accounting purposes. It's a selective pseudo variable (inherited from acc module). It returns `$au` if exits or From username otherwise.
 
-### Argument options - $argv [🔗](#argv) {#argv}
+### Argument options - $argv {#argv}
 
 `$argv` - provides access to command line arguments specified with '-o' option.
 Examples:
@@ -223,11 +223,11 @@ Examples:
 
 ```
 
-### Branch flags list - $bf [🔗](#bf) {#bf}
+### Branch flags list - $bf {#bf}
 
 `$bf` - displays a list with the branch flags set for the current SIP request
 
-### Branch - $branch [🔗](#branch) {#branch}
+### Branch - $branch {#branch}
 
 `$branch` - this variable is used for creating new branches by writing into it the value of a SIP URI.
 Examples:
@@ -240,7 +240,7 @@ Examples:
 
 ```
 
-### Branch fields - $branch.fields [🔗](#branch.fields) {#branch.fields}
+### Branch fields - $branch.fields {#branch.fields}
 
 `$branch()` - this variable provides read/write access to all fields/attributes of an already existing branch (prior created with append_branch() ). The fields of the branch are:
 * uri - the RURI of the branch  (string value)
@@ -277,7 +277,7 @@ Examples:
 
 @@red|It is R/W variable (you can assign values to it from routing logic)@@
 
-### Branch flag - $branch.flag [🔗](#branch.flag) {#branch.flag}
+### Branch flag - $branch.flag {#branch.flag}
 
 `$branch.flag(flag_name)[]` - this variable provides read/write access to the value of a single certain branch flag (identified by name). The values accepted for writing are 1 (set) and 0 (unset). The returned values are 1/"true" (set) and 0/"false" (unset). An index is accepted, in order to access the flag for a certain branch. By default the 0 (or current) branch accessed (for more on index, see the the [branch.fields](#branch.fields) variable) - note that "*" is not accepted.
 
@@ -290,26 +290,26 @@ Examples:
 
 ```
 
-### Call-Id - $ci [🔗](#ci) {#ci}
+### Call-Id - $ci {#ci}
 
 `$ci` - reference to body of call-id header
 
-### Content-Length - $cl [🔗](#cl) {#cl}
+### Content-Length - $cl {#cl}
 
 `$cl` - reference to body of content-length header
 
-### CSeq number - $cs [🔗](#cs) {#cs}
+### CSeq number - $cs {#cs}
 
 `$cs` - reference to cseq number from cseq header
 
-### Contact instance - $ct [🔗](#ct) {#ct}
+### Contact instance - $ct {#ct}
 
 `$ct` - reference to contact instance/body from the contact header. A contact instance is  display_name + URI + contact_params. As a Contact header may contain multiple Contact instances and a message may contain multiple Contact headers, an index was added to the `$ct` variable:
 * `$ct` -first contact instance from message
 * `$(ct[n])` - the n-th contact instance form the beginning of message, starting with index 0
 * `$(ct[-n])` - the n-th contact instance form the end of the message, starting with index -1 (the last contact instance)
 
-### Fields of a contact instance - $ct.fields [🔗](#ct.fields) {#ct.fields}
+### Fields of a contact instance - $ct.fields {#ct.fields}
 
 `$ct.fields()` - reference to the fields of a contact instance/body (see above). Supported fields are:
 * name - display name
@@ -324,7 +324,7 @@ Examples:
 * `$ct.fields(uri)` - the URI of the first contact instance
 * `$(ct.fields(name)[1])` - the display name of the second contact instance
 
-### Content-Type - $cT [🔗](#cT) {#cT}
+### Content-Type - $cT {#cT}
 
 `$cT` - reference to body of Content-Type header and also the content-type headers inside a multi-part body
 * `$cT` - the main Content-Type of the message; the one inside the headers
@@ -332,86 +332,86 @@ Examples:
 * `$(cT[-n])` - the **n**-th Content-Type inside a multi-part body from the end of the message, starting with index -1 (the last contact instance)
 * `$(cT[*])` - all the Content-Type headers including the main one and the ones from the multi-part body
 
-### Domain of destination URI - $dd [🔗](#dd) {#dd}
+### Domain of destination URI - $dd {#dd}
 
 `$dd` - reference to domain of destination uri
 
 @@red|It is R/W variable (you can assign values to it from routing logic)@@
 
-### Diversion header URI - $di [🔗](#di) {#di}
+### Diversion header URI - $di {#di}
 
 `$di` - reference to Diversion header URI
 
-### Diversion "privacy" parameter - $dip [🔗](#dip) {#dip}
+### Diversion "privacy" parameter - $dip {#dip}
 
 `$dip` - reference to Diversion header "privacy" parameter value
 
-### Diversion "reason" parameter - $dir [🔗](#dir) {#dir}
+### Diversion "reason" parameter - $dir {#dir}
 
 `$dir` - reference to Diversion header "reason" parameter value
 
-### Port of destination URI - $dp [🔗](#dp) {#dp}
+### Port of destination URI - $dp {#dp}
 
 `$dp` - reference to port of destination uri
 
 @@red|It is R/W variable (you can assign values to it from routing logic)@@
 
-### Transport protocol of destination URI - $dP [🔗](#dP) {#dP}
+### Transport protocol of destination URI - $dP {#dP}
 
 `$dP` - reference to transport protocol of destination uri
 
-### Destination set - $ds [🔗](#ds) {#ds}
+### Destination set - $ds {#ds}
 
 `$ds` - reference to destination set
 
-### Destination URI - $du [🔗](#du) {#du}
+### Destination URI - $du {#du}
 
 `$du` - reference to destination uri (outbound proxy to be used for sending the request)
 If loose_route() returns TRUE a destination uri is set according to the first Route header.
 
 @@red|It is R/W variable (you can assign values to it from routing logic)@@
 
-### Error class - $err.class [🔗](#err.class) {#err.class}
+### Error class - $err.class {#err.class}
 
 `$err.class` - the class of error (now is '1' for parsing errors)
 
-### Error level - $err.level [🔗](#err.level) {#err.level}
+### Error level - $err.level {#err.level}
 
 `$err.level` - severity level for the error
 
-### Error info - $err.info [🔗](#err.info) {#err.info}
+### Error info - $err.info {#err.info}
 
 `$err.info` - text describing the error
 
-### Error reply code - $err.rcode [🔗](#err.rcode) {#err.rcode}
+### Error reply code - $err.rcode {#err.rcode}
 
 `$err.rcode` - recommended reply code
 
-### Error reply reason - $err.rreason [🔗](#err.rreason) {#err.rreason}
+### Error reply reason - $err.rreason {#err.rreason}
 
 `$err.rreason` - recommended reply reason phrase
 
-### From URI domain - $fd [🔗](#fd) {#fd}
+### From URI domain - $fd {#fd}
 
 `$fd` - reference to domain in URI of 'From' header
 
-### From display name - $fn [🔗](#fn) {#fn}
+### From display name - $fn {#fn}
 
 `$fn` - reference to display name of 'From' header
 
-### From tag - $ft [🔗](#ft) {#ft}
+### From tag - $ft {#ft}
 
 `$ft` - reference to tag parameter of 'From' header
 
-### From URI - $fu [🔗](#fu) {#fu}
+### From URI - $fu {#fu}
 
 `$fu` - reference to URI of 'From' header
 
-### From URI username - $fU [🔗](#fU) {#fU}
+### From URI username - $fU {#fU}
 
 `$fU` - reference to username in URI of 'From' header
 
-### OpenSIPS Log level - $log_level [🔗](#log_level) {#log_level}
+### OpenSIPS Log level - $log_level {#log_level}
 
 `$log_level` - changes the log level for the current process ; the log level can be set to a new value (see [possible values](Script-CoreParameters.md#log_level) or it can be reset back to the global log level.
 This function is very helpful if you are tracing and debugging only a specific piece of code. 
@@ -434,19 +434,19 @@ $log_level = NULL; # reset the log level of the current process to its default l
 
 `$mb` - reference to SIP message buffer
 
-### Message Flags - $mf [🔗](#mf) {#mf}
+### Message Flags - $mf {#mf}
 
 `$mf` - displays a list with the message/transaction flags set for the current SIP request
 
-### SIP message ID - $mi [🔗](#mi) {#mi}
+### SIP message ID - $mi {#mi}
 
 `$mi` - reference to SIP message id
 
-### SIP message length - $ml [🔗](#ml) {#ml}
+### SIP message length - $ml {#ml}
 
 `$ml` - reference to SIP message length
 
-### Message flag - $msg.flag [🔗](#msg.flag) {#msg.flag}
+### Message flag - $msg.flag {#msg.flag}
 
 `$msg.flag(flag_name)` - this variable provides read/write access to the value of a single certain message flag (identified by name). The values accepted for writing are 1 (set) and 0 (unset). The returned values are 1/"true" (set) and 0/"false" (unset).
 ```text
@@ -458,7 +458,7 @@ $log_level = NULL; # reset the log level of the current process to its default l
 
 ```
 
-### Message is request  - $msg.is_request [🔗](#msg.is_request) {#msg.is_request}
+### Message is request  - $msg.is_request {#msg.is_request}
 
 `$msg.is_request` - this variable tells if the current SIP message is a request or not. The returned values are 1/"true" (request) and 0/"false" (reply).
 ```text
@@ -469,7 +469,7 @@ $log_level = NULL; # reset the log level of the current process to its default l
 
 ```
 
-### Message type - $msg.type [🔗](#msg.type) {#msg.type}
+### Message type - $msg.type {#msg.type}
 
 `$msg.type` - this variable returns the type of the current  message. The returned values are "request" (request) or "reply" (reply).
 ```text
@@ -478,27 +478,27 @@ $log_level = NULL; # reset the log level of the current process to its default l
 
 ```
 
-### Domain in SIP Request's original URI - $od [🔗](#od) {#od}
+### Domain in SIP Request's original URI - $od {#od}
 
 `$od` - reference to domain in request's original R-URI
 
-### Port of SIP request's original URI - $op [🔗](#op) {#op}
+### Port of SIP request's original URI - $op {#op}
 
 `$op` - reference to port of original R-URI
 
-### Transport protocol of SIP request original URI - $oP [🔗](#oP) {#oP}
+### Transport protocol of SIP request original URI - $oP {#oP}
 
 `$oP` - reference to transport protocol of original R-URI
 
-### SIP Request's original URI - $ou [🔗](#ou) {#ou}
+### SIP Request's original URI - $ou {#ou}
 
 `$ou` - reference to request's original URI
 
-### Username in SIP Request's original URI - $oU [🔗](#oU) {#oU}
+### Username in SIP Request's original URI - $oU {#oU}
 
 `$oU` - reference to username in request's original URI
 
-### Route parameter - $param [🔗](#param) {#param}
+### Route parameter - $param {#param}
 `$param(idx)` - retrieves the parameters of the route. The index can be an integer, or a pseudo-variable (index starts at 1).  
 
 Example:
@@ -518,33 +518,33 @@ Example:
 
 ```
 
-### Domain in SIP Request's P-Preferred-Identity header URI - $pd [🔗](#pd) {#pd}
+### Domain in SIP Request's P-Preferred-Identity header URI - $pd {#pd}
 
 `$pd` - reference to domain in request's P-Preferred-Identity header URI (see RFC 3325)
 
-### Display Name in SIP Request's P-Preferred-Identity header - $pn [🔗](#pn) {#pn}
+### Display Name in SIP Request's P-Preferred-Identity header - $pn {#pn}
 
 `$pn` - reference to Display Name in request's P-Preferred-Identity header (see RFC 3325)
 
-### Process id - $pp [🔗](#pp) {#pp}
+### Process id - $pp {#pp}
 
 `$pp` - reference to process id (pid)
 
-### User in SIP Request's P-Preferred-Identity header URI - $pU [🔗](#pU) {#pU}
+### User in SIP Request's P-Preferred-Identity header URI - $pU {#pU}
 
 `$pU` - reference to user in request's P-Preferred-Identity header URI (see RFC 3325)
 
-### URI in SIP Request's P-Preferred-Identity header - $pu [🔗](#pu) {#pu}
+### URI in SIP Request's P-Preferred-Identity header - $pu {#pu}
 
 `$pu` - reference to URI in request's P-Preferred-Identity header (see RFC 3325)
 
-### Domain in SIP Request's URI - $rd [🔗](#rd) {#rd}
+### Domain in SIP Request's URI - $rd {#rd}
 
 `$rd` - reference to domain in request's URI
 
 @@red|It is R/W variable (you can assign values to it routing script)@@
 
-### Body of request/reply - $rb [🔗](#rb) {#rb}
+### Body of request/reply - $rb {#rb}
 
 `$rb` - reference to the body or a body part of the SIP message
 * `$rb` - the whole body of the message (with all the parts)
@@ -554,65 +554,65 @@ Example:
 * `$rb(application/sdp)`   - get the first SDP body part
 * `$(rb(application/isup)[-1])`  - get the last ISUP body part
 
-### Returned code - $rc [🔗](#rc) {#rc}
+### Returned code - $rc {#rc}
 
 `$rc` - reference to returned code by last invoked function
 
 `$retcode` - same as `$rc`
 
-### Remote-Party-ID header URI - $re [🔗](#re) {#re}
+### Remote-Party-ID header URI - $re {#re}
 
 `$re` - reference to Remote-Party-ID header URI
 
-### SIP request's method - $rm [🔗](#rm) {#rm}
+### SIP request's method - $rm {#rm}
 
 `$rm` - reference to request's method
 
-### SIP request's port - $rp [🔗](#rp) {#rp}
+### SIP request's port - $rp {#rp}
 
 `$rp` - reference to port of R-URI
 
 @@red|It is R/W variable (you can assign values to it routing script)@@
 
-### Transport protocol of SIP request URI - $rP [🔗](#rP) {#rP}
+### Transport protocol of SIP request URI - $rP {#rP}
 
 `$rP` - reference to transport protocol of R-URI
 
-### SIP reply's reason - $rr [🔗](#rr) {#rr}
+### SIP reply's reason - $rr {#rr}
 
 `$rr` - reference to reply's reason
 
-### SIP reply's status - $rs [🔗](#rs) {#rs}
+### SIP reply's status - $rs {#rs}
 
 `$rs` - reference to reply's status
 
-### Refer-to URI - $rt [🔗](#rt) {#rt}
+### Refer-to URI - $rt {#rt}
 
 `$rt` - reference to URI of refer-to header
 
-### SIP Request's URI - $ru [🔗](#ru) {#ru}
+### SIP Request's URI - $ru {#ru}
 
 `$ru` - reference to request's URI
 
 @@red|It is R/W variable (you can assign values to it routing script)@@
 
-### Username in SIP Request's URI - $rU [🔗](#rU) {#rU}
+### Username in SIP Request's URI - $rU {#rU}
 
 `$rU` - reference to username in request's URI
 
 @@red|It is R/W variable (you can assign values to it routing script)@@
 
-### Q value of the SIP Request's URI - $ru_q [🔗](#ru_q) {#ru_q}
+### Q value of the SIP Request's URI - $ru_q {#ru_q}
 
 `$ru_q` - reference to q value of the R-URI
 
 @@red|It is R/W variable (you can assign values to it routing script)@@
 
-### IP source address - $si [🔗](#si) {#si}
+### IP source address - $si {#si}
 
 `$si` - reference to IP source address of the message
 
-### Socket inbound - $socket_in [🔗](#socket_in) {#socket_in}
+### Socket inbound - $socket_in {#socket_in}
 
 `$socket_in` - read-only variable to get the description (proto:ip:port format) of the inbound socket (used for receiving the message).
   
@@ -628,7 +628,7 @@ The variable also offers detailed read-only access to various attributes/sub-fie
 * af - the address family of the socket's IP. It's value is "INET" if IPv4 or "INET6" if IPv6.
 For more details on the meaning of these sub-fields, please also read about the [socket definition](Script-CoreParameters.md#toc66).
 
-### Socket outbound - $socket_out [🔗](#socket_out) {#socket_out}
+### Socket outbound - $socket_out {#socket_out}
 
 `$socket_out` - read-write variable for reading or changing the outbound socket of the message. Originally (before being written/changed) it will return the same socket description as [`$socket_in`](#socket_in) (the inbound socket will be used as outbound socket also).
   
@@ -642,59 +642,59 @@ The variable also offers detailed read-only access to various attributes/sub-fie
 
 ```
 
-### Source port - $sp [🔗](#sp) {#sp}
+### Source port - $sp {#sp}
 
 `$sp` - reference to the source port of the message
 
-### To URI Domain - $td [🔗](#td) {#td}
+### To URI Domain - $td {#td}
 
 `$td` - reference to domain in URI of 'To' header
 
-### To display name - $tn [🔗](#tn) {#tn}
+### To display name - $tn {#tn}
 
 `$tn` - reference to display name of 'To' header
 
-### To tag - $tt [🔗](#tt) {#tt}
+### To tag - $tt {#tt}
 
 `$tt` - reference to tag parameter of 'To' header
 
-### To URI - $tu [🔗](#tu) {#tu}
+### To URI - $tu {#tu}
 
 `$tu` - reference to URI of 'To' header
 
-### To URI Username - $tU [🔗](#tU) {#tU}
+### To URI Username - $tU {#tU}
 
 `$tU` - reference to username in URI of 'To' header
 
-### Formatted date and time - $time [🔗](#time) {#time}
+### Formatted date and time - $time {#time}
 
 `$time(format)` - returns the string formatted time according to UNIX date (see: **man date**).
 
-### Branch index - $T_branch_idx [🔗](#T_branch_idx) {#T_branch_idx}
+### Branch index - $T_branch_idx {#T_branch_idx}
 
 `$T_branch_idx` - the index (starting with 1 for the first branch) of the branch for which is executed the branch_route[]. If used outside of branch_route[] block, the value is '0'. This is exported by TM module.
 
-### String formatted time - $Tf [🔗](#Tf) {#Tf}
+### String formatted time - $Tf {#Tf}
 
 `$Tf` - reference string formatted time
 
-### Current unix time stamp in seconds - $Ts [🔗](#Ts) {#Ts}
+### Current unix time stamp in seconds - $Ts {#Ts}
 
 `$Ts` - reference to current unix time stamp in seconds
 
-### Current microseconds of the current second - $Tsm [🔗](#Tsm) {#Tsm}
+### Current microseconds of the current second - $Tsm {#Tsm}
 
 `$Tsm` - reference to current microseconds of the current second
 
-### Startup unix time stamp - $TS [🔗](#TS) {#TS}
+### Startup unix time stamp - $TS {#TS}
 
 `$TS` - reference to startup unix time stamp
 
-### User agent header - $ua [🔗](#ua) {#ua}
+### User agent header - $ua {#ua}
 
 `$ua` - reference to user agent header field
 
-### SIP Headers - $hdr [🔗](#hdr) {#hdr}
+### SIP Headers - $hdr {#hdr}
 
 `$(hdr(name)[N])` - represents the body of the N-th header identified by 'name'. If [N] is omitted then the body of the first header is printed. The first header is got when N=0, for the second N=1, a.s.o. To print the last header of that type, use -1, no other negative values are supported now. No white spaces are allowed inside the specifier (before `}`, before or after `{`, [, ] symbols). When N='*', all headers of that type are printed.
 
@@ -723,7 +723,7 @@ For message fragment below, `$hdrcnt(Path)` will have value 1 and `$(hdr(Path)[0
 
 Note that both examples above are semantically equivalent but the variables take on different values.
 
-### Route Name (Full) - $route [🔗](#route) {#route}
+### Route Name (Full) - $route {#route}
 `$route` - Access route names of the current route call stack.  Usage examples (assuming a route call stack of "route > route[A] > route[B]"):
 
 * `$route` and `$(route[0])` both return **"route[B]"** (current route)
@@ -735,7 +735,7 @@ Note that both examples above are semantically equivalent but the variables take
 * `$(route[3])` and `$(route[-4])` both return **NULL** (index out of bounds)
 * `$(route[*])` returns **"route > route[A] > route[B]"** (entire call stack)
 
-### Route Type - $route.type [🔗](#route.type) {#route.type}
+### Route Type - $route.type {#route.type}
 `$route.type` - Access the type of the current route.  May be indexed, using positive or negative indexes.
 
 * `$route.type` and `$(route.type[0])` both return current route type
@@ -743,7 +743,7 @@ Note that both examples above are semantically equivalent but the variables take
 * `$(route.type[-1])` returns topmost route type
 * `$(route.type[-2])` returns next-topmost route type
 
-### Route Name - $route.name [🔗](#route.name) {#route.name}
+### Route Name - $route.name {#route.name}
 `$route.name` - Access the name of the current route.  May be indexed, using positive or negative indexes.
 
 * `$route.name` and `$(route.name[0])` both return current route name
@@ -751,12 +751,12 @@ Note that both examples above are semantically equivalent but the variables take
 * `$(route.name[-1])` returns topmost route name
 * `$(route.name[-2])` returns next-topmost route name
 
-### Current script line and file  - $cfg_line [🔗](#cfg_line) {#cfg_line}
+### Current script line and file  - $cfg_line {#cfg_line}
 `$cfg_line` - Holds the current line from the script of the action being executed, useful for logging purposes   
 
 `$cfg_file` - Holds the current name of the cfg file being executed, useful when using multiple scripts via the include statement
 
-### Log level for xlog() - $xlog_level [🔗](#xlog_level) {#xlog_level}
+### Log level for xlog() - $xlog_level {#xlog_level}
 
 `$xlog_level` - allows to set /reset the xlog() logging level on per-process bases. Shortly said, you can read the verbosity level for the xlog() calls or you can temporary change the level per process bases.
 
