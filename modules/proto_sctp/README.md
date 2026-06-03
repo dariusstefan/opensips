@@ -75,66 +75,8 @@ modparam("proto_sctp", "sctp_port", 5070)
 You need to load the "proto_sctp" module. In your script, make sure
 			you do a **loadmodule "proto_sctp.so"**
 			after setting the **[mpath](https://opensips.org/Documentation/Script-CoreParameters-2-1#toc74)**.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 11 | 9 | 17 | 21 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 11 | 5 | 448 | 73 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 7 | 4 | 153 | 25 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 11 | 10 |
-| 5. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 3 | 1 | 1 | 1 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-| 7. | Zero King ([@l2dy](https://github.com/l2dy)) | 3 | 1 | 1 | 1 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 2 | 1 | 1 | 0 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Feb 2026 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Nov 2023 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Feb 2015 - Apr 2021 |
-| 4. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2015 - Jun 2018 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2017 |
-| 8. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Feb 2016 - Feb 2016 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

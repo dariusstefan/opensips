@@ -253,64 +253,8 @@ event_route[E_JANUS_EVENT] {
 ...
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 45 | 7 | 4390 | 5 |
-| 2. | Norman Brandinger ([@NormB](https://github.com/NormB)) | 6 | 2 | 280 | 13 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 5 | 3 | 3 | 5 |
-| 4. | rdondeti | 3 | 1 | 20 | 4 |
-| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 3 | 1 | 4 | 12 |
-| 6. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | 3 | 1 | 1 | 1 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 2 | 1 | 7 | 0 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Mar 2025 - May 2026 |
-| 2. | Norman Brandinger ([@NormB](https://github.com/NormB)) | Mar 2026 - Apr 2026 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Apr 2026 - Apr 2026 |
-| 4. | rdondeti | Mar 2026 - Mar 2026 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2026 - Mar 2026 |
-| 6. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Dec 2024 - May 2025 |
-| 7. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Feb 2025 - Feb 2025 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -387,70 +387,8 @@ if (math_compare($var(exp1), $var(exp2), $var(result))) {
 
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 26 | 12 | 1355 | 66 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 10 | 8 | 39 | 44 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 10 | 3 | 96 | 302 |
-| 4. | Ryan Bullock ([@rrb3942](https://github.com/rrb3942)) | 9 | 1 | 552 | 160 |
-| 5. | Stephane Alnet | 6 | 2 | 327 | 36 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 3 | 3 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 4 | 2 | 3 | 1 |
-| 8. | Julián Moreno Patiño | 3 | 1 | 3 | 3 |
-| 9. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-| 10. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 2 | 1 | 88 | 0 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Feb 2023 |
-| 2. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Jan 2022 - Jan 2022 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Oct 2019 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Feb 2013 - Jun 2019 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Apr 2019 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | Ryan Bullock ([@rrb3942](https://github.com/rrb3942)) | Feb 2016 - Feb 2016 |
-| 9. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-| 10. | Stephane Alnet | Nov 2013 - Nov 2013 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Julián Moreno Patiño, Stephane Alnet.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
