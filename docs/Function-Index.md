@@ -5,7 +5,7 @@ description: ""
 
 *Note: Core functions are not included. You can find them [here](Script-CoreFunctions.md).*
 
-| **+Function+** | **+Module+** |
+| **Function** | **Module** |
 | --- | --- |
 | [aaa_does_uri_exist](https://opensips.org/docs/modules/4.1.x/auth_aaa.html#func_aaa_does_uri_exist) | [auth_aaa](https://opensips.org/docs/modules/4.1.x/auth_aaa.html) |
 | [aaa_does_uri_user_exist](https://opensips.org/docs/modules/4.1.x/auth_aaa.html#func_aaa_does_uri_user_exist) | [auth_aaa](https://opensips.org/docs/modules/4.1.x/auth_aaa.html) |
