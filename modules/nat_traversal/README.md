@@ -862,76 +862,8 @@ If the proxy receiving the INVITE request is the same as the proxy
         that have used record_route() during the first INVITE should also
         call record_route() during further in-dialog requests to keep staying
         in the path.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | 54 | 26 | 3085 | 115 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 37 | 31 | 306 | 128 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 18 | 15 | 61 | 84 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 11 | 6 |
-| 5. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | 9 | 5 | 188 | 102 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 7 | 5 | 27 | 16 |
-| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 5 | 3 | 12 | 14 |
-| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 7 | 8 |
-| 9. | Anca Vamanu | 4 | 2 | 12 | 1 |
-| 10. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 4 | 2 | 3 | 6 |
-
-
-**All remaining contributors**: David Sanders, Stéphane Alnet ([@shimaore](https://github.com/shimaore)), okhowang, Sergio Gutierrez, Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2023 |
-| 3. | okhowang | Mar 2023 - Mar 2023 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Feb 2023 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Apr 2022 |
-| 6. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Mar 2022 - Mar 2022 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jun 2008 - Apr 2020 |
-| 8. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Sep 2019 |
-| 9. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | May 2008 - Aug 2019 |
-| 10. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | Aug 2011 - Nov 2014 |
-
-
-**All remaining contributors**: David Sanders, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Stéphane Alnet ([@shimaore](https://github.com/shimaore)), Sergio Gutierrez.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -850,76 +850,8 @@ route [my_resume_route]
 ...
 				
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 104 | 44 | 2927 | 2158 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 67 | 49 | 690 | 716 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 54 | 28 | 1112 | 946 |
-| 4. | Elena-Ramona Modroiu | 51 | 11 | 4040 | 390 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 14 | 149 | 246 |
-| 6. | Elena-Ramona Modroiu | 18 | 5 | 1051 | 192 |
-| 7. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 12 | 8 | 112 | 133 |
-| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 8 | 6 | 25 | 2 |
-| 9. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 8 | 5 | 180 | 12 |
-| 10. | Kobi Eshun ([@ekobi](https://github.com/ekobi)) | 7 | 1 | 300 | 146 |
-
-
-**All remaining contributors**: Andrei Pelinescu-Onciul, Anca Vamanu, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Norman Brandinger ([@NormB](https://github.com/NormB)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Klaus Darilion, John Burke ([@john08burke](https://github.com/john08burke)), Andrey Vorobiev, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Olle E. Johansson, Kennard White, Julián Moreno Patiño, Konstantin Bokarius, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Andreas Granig, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Sergio Gutierrez, Edson Gellert Schubert, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Feb 2025 - Feb 2025 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2013 - May 2024 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Mar 2023 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Oct 2022 - Feb 2023 |
-| 5. | John Burke ([@john08burke](https://github.com/john08burke)) | Jun 2022 - Jun 2022 |
-| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jun 2005 - Mar 2020 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jul 2019 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 9. | Andrey Vorobiev | Apr 2016 - Apr 2016 |
-| 10. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-
-
-**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Kennard White, Norman Brandinger ([@NormB](https://github.com/NormB)), Sergio Gutierrez, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Henning Westerholt ([@henningw](https://github.com/henningw)), Olle E. Johansson, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Klaus Darilion, Andreas Granig, Andrei Pelinescu-Onciul, Elena-Ramona Modroiu.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), John Burke ([@john08burke](https://github.com/john08burke)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Norman Brandinger ([@NormB](https://github.com/NormB)), Kobi Eshun ([@ekobi](https://github.com/ekobi)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Klaus Darilion, Andrei Pelinescu-Onciul, Elena-Ramona Modroiu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

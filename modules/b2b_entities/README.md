@@ -949,76 +949,8 @@ typedef int (*b2b_update_b2bl_param_t)(enum b2b_entity_type type, str* key,
 
 This function can be used to change the logic param stored for an 
 			entity ( useful in case an entity is moved between logic records).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Anca Vamanu | 181 | 94 | 6839 | 1860 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 127 | 63 | 5504 | 1156 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 87 | 71 | 798 | 508 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 61 | 52 | 518 | 202 |
-| 5. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 57 | 42 | 987 | 348 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 22 | 18 | 99 | 128 |
-| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 6 | 4 | 74 | 47 |
-| 8. | Carsten Bock | 6 | 4 | 66 | 40 |
-| 9. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | 6 | 3 | 166 | 29 |
-| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 24 | 17 |
-
-
-**All remaining contributors**: Stanislaw Pitucha, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Giedrius, [@DMOsipov](https://github.com/DMOsipov), Stéphane Alnet ([@shimaore](https://github.com/shimaore)), Henk Hesselink, Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Ibrahim Shahzad, Walter Doekes ([@wdoekes](https://github.com/wdoekes)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2010 - Mar 2026 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Aug 2009 - Feb 2026 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jan 2026 |
-| 4. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Nov 2010 - Nov 2025 |
-| 5. | Ibrahim Shahzad | Jul 2025 - Jul 2025 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jun 2023 |
-| 7. | Giedrius | Apr 2023 - Apr 2023 |
-| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Feb 2023 |
-| 9. | Carsten Bock | Mar 2022 - Apr 2022 |
-| 10. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Jan 2013 - Feb 2022 |
-
-
-**All remaining contributors**: Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), [@DMOsipov](https://github.com/DMOsipov), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Stéphane Alnet ([@shimaore](https://github.com/shimaore)), Anca Vamanu, Henk Hesselink, Stanislaw Pitucha.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Anca Vamanu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -533,76 +533,8 @@ if (db_get_auth_id("uri", $ru, $avp(auth_id), $avp(auth_realm))) {
 }
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 51 | 37 | 783 | 380 |
-| 2. | Jan Janak ([@janakj](https://github.com/janakj)) | 50 | 29 | 1610 | 424 |
-| 3. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 29 | 20 | 130 | 382 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 23 | 18 | 161 | 137 |
-| 5. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 11 | 9 | 83 | 49 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 10 | 5 | 307 | 116 |
-| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 29 | 47 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 8 | 4 | 69 | 163 |
-| 9. | Sergio Gutierrez | 7 | 5 | 13 | 13 |
-| 10. | Andrei Pelinescu-Onciul | 6 | 4 | 81 | 33 |
-
-
-**All remaining contributors**: Dan Pascu ([@danpascu](https://github.com/danpascu)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Anatoly Pidruchny, Kennard White, Konstantin Bokarius, Richard Revels, Julián Moreno Patiño, Norman Brandinger ([@NormB](https://github.com/NormB)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Oct 2004 - Feb 2023 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jun 2005 - Jul 2021 |
-| 4. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | Apr 2021 - Apr 2021 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Sep 2019 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jul 2019 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-| 9. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Jan 2015 - Jan 2015 |
-| 10. | Richard Revels | Sep 2011 - Sep 2011 |
-
-
-**All remaining contributors**: Kennard White, Dan Pascu ([@danpascu](https://github.com/danpascu)), Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Anatoly Pidruchny, Norman Brandinger ([@NormB](https://github.com/NormB)), Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Kennard White, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Anatoly Pidruchny, Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

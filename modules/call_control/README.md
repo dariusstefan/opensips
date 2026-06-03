@@ -529,76 +529,8 @@ t_relay();
 ...
         
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | 27 | 10 | 1621 | 177 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 16 | 13 | 56 | 67 |
-| 3. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | 15 | 9 | 320 | 124 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 11 | 9 | 57 | 33 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 11 | 9 | 18 | 48 |
-| 6. | Irina-Maria Stanescu | 6 | 2 | 356 | 17 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 5 | 3 | 11 | 9 |
-| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 4 | 2 | 5 | 12 |
-| 9. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 3 | 4 |
-| 10. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | 3 | 1 | 3 | 3 |
-
-
-**All remaining contributors**: Zero King ([@l2dy](https://github.com/l2dy)), Julián Moreno Patiño, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Mauro Davi.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jan 2013 - May 2024 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 3. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Mar 2022 - Mar 2022 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2009 - May 2020 |
-| 5. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jul 2010 - Sep 2019 |
-| 7. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Dec 2008 - Aug 2019 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 9. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 10. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-
-
-**All remaining contributors**: Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Irina-Maria Stanescu, Mauro Davi.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Zero King ([@l2dy](https://github.com/l2dy)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

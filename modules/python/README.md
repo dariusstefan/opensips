@@ -188,64 +188,8 @@ Meaning of the parameters is as follows:
 - *method_name* (string) - name of the method called
 - *extra_args* (string, optional) - extra arguments that can
 					be passed from the script to the python function.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 22 | 10 | 1319 | 23 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 14 | 502 | 101 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 13 | 9 | 204 | 113 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 10 | 7 | 35 | 62 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 7 | 5 | 38 | 50 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 5 | 3 | 7 | 7 |
-| 7. | importos | 3 | 1 | 104 | 4 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jul 2014 - Apr 2026 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Mar 2015 - Sep 2025 |
-| 3. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Aug 2025 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Oct 2024 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Dec 2009 - Feb 2023 |
-| 6. | importos | Nov 2020 - Nov 2020 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Nov 2019 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** importos, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

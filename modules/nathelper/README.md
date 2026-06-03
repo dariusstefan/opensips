@@ -732,76 +732,8 @@ If you want to keep the mail private, send it to
 
 Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 154 | 122 | 2050 | 872 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 152 | 44 | 3552 | 4786 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 50 | 40 | 452 | 324 |
-| 4. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 40 | 15 | 1598 | 627 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 33 | 27 | 158 | 240 |
-| 6. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 22 | 17 | 142 | 124 |
-| 7. | Anca Vamanu | 22 | 4 | 1602 | 185 |
-| 8. | Jan Janak ([@janakj](https://github.com/janakj)) | 21 | 11 | 780 | 129 |
-| 9. | Andrei Pelinescu-Onciul | 20 | 17 | 121 | 110 |
-| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 19 | 11 | 261 | 268 |
-
-
-**All remaining contributors**: Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Ancuta Onofrei, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Andrei Dragus, Henning Westerholt ([@henningw](https://github.com/henningw)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Christophe Sollet ([@csollet](https://github.com/csollet)), Marcus Hunger, Klaus Darilion, Sergio Gutierrez, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nils Ohlmeier, Emmanuel Buu, Carsten Bock, Shlomi Gutman, Jeremie Le Hen, Bayan Towfiq, Laurent Schweizer, Jasper Hafkenscheid ([@hafkensite](https://github.com/hafkensite)), Konstantin Bokarius, John Riordan, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Elena-Ramona Modroiu, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jan 2013 - Nov 2024 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Nov 2003 - Jun 2024 |
-| 3. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Aug 2010 - Jul 2023 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2023 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | May 2003 - Feb 2023 |
-| 6. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | May 2022 - May 2022 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Apr 2022 |
-| 8. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2010 - Jan 2021 |
-| 9. | Jasper Hafkenscheid ([@hafkensite](https://github.com/hafkensite)) | Mar 2020 - Mar 2020 |
-| 10. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | May 2019 - May 2019 |
-
-
-**All remaining contributors**: Shlomi Gutman, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Christophe Sollet ([@csollet](https://github.com/csollet)), Anca Vamanu, John Riordan, Emmanuel Buu, Andrei Dragus, Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Ancuta Onofrei, Marcus Hunger, Carsten Bock, Jeremie Le Hen, Laurent Schweizer, Bayan Towfiq, Andrei Pelinescu-Onciul, Elena-Ramona Modroiu, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Jan Janak ([@janakj](https://github.com/janakj)), Nils Ohlmeier.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Jasper Hafkenscheid ([@hafkensite](https://github.com/hafkensite)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Christophe Sollet ([@csollet](https://github.com/csollet)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Anca Vamanu, Andrei Dragus, Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Carsten Bock, Ancuta Onofrei, Marcus Hunger, Jeremie Le Hen, Bayan Towfiq, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

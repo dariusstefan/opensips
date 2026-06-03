@@ -163,76 +163,8 @@ If you want to keep the mail private, send it to
 
 Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 40 | 25 | 993 | 317 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 18 | 9 | 142 | 400 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 14 | 12 | 29 | 49 |
-| 4. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 8 | 5 | 138 | 51 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 7 | 5 | 14 | 5 |
-| 6. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 7 | 2 | 384 | 9 |
-| 7. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 18 | 16 |
-| 8. | Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)) | 3 | 1 | 5 | 6 |
-| 9. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-| 10. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 2 | 1 | 1 | 0 |
-
-
-**All remaining contributors**: Walter Doekes ([@wdoekes](https://github.com/wdoekes)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Apr 2025 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2012 - Apr 2024 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jun 2023 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - May 2023 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2021 - Feb 2023 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Jun 2016 - Jun 2016 |
-| 8. | Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)) | Jun 2015 - Jun 2015 |
-| 9. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Oct 2014 - Oct 2014 |
-| 10. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Jul 2014 - Jul 2014 |
-
-
-**All remaining contributors**: Walter Doekes ([@wdoekes](https://github.com/wdoekes)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
