@@ -470,76 +470,8 @@ Important note- A corrupted DB file must be moved out of the way before bdb_reco
 The Berkeley DB does not nativly support an autoincrement (or sequence) mechanism.
 	Consequently, this version does not support surragate keys in dbschema. These
 	are the id columns in the tables.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | William Quan | 41 | 1 | 4682 | 0 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 30 | 25 | 157 | 156 |
-| 3. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 26 | 10 | 381 | 688 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 24 | 19 | 149 | 170 |
-| 5. | Anonymous | 16 | 4 | 681 | 341 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 13 | 10 | 19 | 79 |
-| 7. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 10 | 8 | 47 | 30 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 6 | 4 | 34 | 28 |
-| 9. | Andrei Dragus | 5 | 1 | 135 | 103 |
-| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 5 | 5 |
-
-
-**All remaining contributors**: Jan Janak ([@janakj](https://github.com/janakj)), Konstantin Bokarius, Razvan Pistolea, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Sep 2011 - Jul 2024 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2008 - Apr 2019 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 7. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | May 2014 - May 2014 |
-| 8. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Oct 2010 - Oct 2010 |
-| 9. | Andrei Dragus | Oct 2009 - Oct 2009 |
-| 10. | Razvan Pistolea | Jul 2009 - Jul 2009 |
-
-
-**All remaining contributors**: Jan Janak ([@janakj](https://github.com/janakj)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Henning Westerholt ([@henningw](https://github.com/henningw)), Konstantin Bokarius, Edson Gellert Schubert, Anonymous, William Quan.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Anonymous, William Quan.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

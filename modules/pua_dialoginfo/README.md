@@ -538,76 +538,8 @@ Meaning of the parameters:
 ...
 		
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 58 | 34 | 1205 | 742 |
-| 2. | Anca Vamanu | 26 | 16 | 713 | 231 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 13 | 11 | 19 | 21 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 13 | 10 | 44 | 78 |
-| 5. | Klaus Darilion | 11 | 1 | 1109 | 0 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 6 | 117 | 120 |
-| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 7 | 5 | 104 | 9 |
-| 8. | Vallimamod Abdullah | 5 | 2 | 97 | 75 |
-| 9. | Damien Sandras ([@dsandras](https://github.com/dsandras)) | 4 | 2 | 93 | 1 |
-| 10. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 4 | 2 | 29 | 15 |
-
-
-**All remaining contributors**: Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Stanislaw Pitucha, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Zero King ([@l2dy](https://github.com/l2dy)), Aron Podrigal ([@ar45](https://github.com/ar45)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - May 2026 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Mar 2023 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2009 - Jun 2021 |
-| 6. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Feb 2020 |
-| 8. | Aron Podrigal ([@ar45](https://github.com/ar45)) | Jan 2019 - Jan 2019 |
-| 9. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Sep 2010 - Jan 2014 |
-| 10. | Damien Sandras ([@dsandras](https://github.com/dsandras)) | Jul 2013 - Aug 2013 |
-
-
-**All remaining contributors**: Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Vallimamod Abdullah, Stanislaw Pitucha, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Damien Sandras ([@dsandras](https://github.com/dsandras)), Vallimamod Abdullah, Anca Vamanu, Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Klaus Darilion.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

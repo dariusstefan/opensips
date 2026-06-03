@@ -757,76 +757,8 @@ xlog("$(var(tmp){rest.unescape})\n");
 ...
                 
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 151 | 87 | 4035 | 1786 |
-| 2. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 23 | 12 | 663 | 262 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 17 | 8 | 336 | 345 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 16 | 14 | 42 | 19 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 8 | 6 | 115 | 48 |
-| 6. | Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)) | 6 | 3 | 131 | 32 |
-| 7. | Agalya Ramachandran ([@AgalyaR](https://github.com/AgalyaR)) | 6 | 2 | 354 | 1 |
-| 8. | Callum Guy ([@spacetourist](https://github.com/spacetourist)) | 6 | 2 | 281 | 8 |
-| 9. | Ryan Bullock ([@rrb3942](https://github.com/rrb3942)) | 5 | 2 | 91 | 77 |
-| 10. | Aron Podrigal ([@ar45](https://github.com/ar45)) | 4 | 2 | 15 | 7 |
-
-
-**All remaining contributors**: Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Andrey Vorobiev ([@andrey-vorobiev](https://github.com/andrey-vorobiev)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - May 2026 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2013 - Feb 2026 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Nov 2025 |
-| 4. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Nov 2025 - Nov 2025 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Oct 2025 |
-| 6. | Aron Podrigal ([@ar45](https://github.com/ar45)) | Sep 2024 - Sep 2024 |
-| 7. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Oct 2020 - Feb 2023 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2021 |
-| 9. | John Burke ([@john08burke](https://github.com/john08burke)) | Apr 2021 - Apr 2021 |
-| 10. | Callum Guy ([@spacetourist](https://github.com/spacetourist)) | Jan 2020 - Jan 2020 |
-
-
-**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrey Vorobiev ([@andrey-vorobiev](https://github.com/andrey-vorobiev)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Agalya Ramachandran ([@AgalyaR](https://github.com/AgalyaR)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Agalya Ramachandran ([@AgalyaR](https://github.com/AgalyaR)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

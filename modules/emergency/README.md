@@ -326,76 +326,8 @@ This function can be used from the *FAILURE* routes.
 ...
 		
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Evandro Villaron ([@evillaron](https://github.com/evillaron)) | 152 | 9 | 10947 | 3011 |
-| 2. | Robison Tesini ([@rtesini](https://github.com/rtesini)) | 62 | 1 | 3116 | 2038 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 27 | 18 | 332 | 339 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 19 | 13 | 134 | 188 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 11 | 9 | 52 | 52 |
-| 6. | Alexandra Titoc | 10 | 8 | 62 | 19 |
-| 7. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 6 | 4 | 18 | 17 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 5 | 3 | 38 | 17 |
-| 9. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | 4 | 2 | 4 | 4 |
-| 10. | Zero King ([@l2dy](https://github.com/l2dy)) | 4 | 2 | 2 | 1 |
-
-
-**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jul 2015 - May 2026 |
-| 2. | Alexandra Titoc | Sep 2024 - Sep 2024 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Nov 2023 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2015 - May 2023 |
-| 5. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | Apr 2021 - Apr 2021 |
-| 6. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Aug 2020 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2015 - Mar 2020 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Feb 2020 |
-| 9. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2017 |
-| 10. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-
-
-**All remaining contributors**: Evandro Villaron ([@evillaron](https://github.com/evillaron)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Robison Tesini ([@rtesini](https://github.com/rtesini)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Evandro Villaron ([@evillaron](https://github.com/evillaron)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

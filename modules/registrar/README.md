@@ -1600,76 +1600,8 @@ Please follow the guidelines provided at:
 
 It was removed, as its functionality was mmigrate into usrloc
 			module, were there is a parameter with the same name.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 201 | 125 | 2923 | 3031 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 171 | 116 | 2426 | 2055 |
-| 3. | Jan Janak ([@janakj](https://github.com/janakj)) | 122 | 73 | 3465 | 1102 |
-| 4. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 23 | 19 | 160 | 105 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 16 | 311 | 90 |
-| 6. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 21 | 12 | 729 | 96 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 21 | 9 | 243 | 497 |
-| 8. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 16 | 4 | 763 | 248 |
-| 9. | Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)) | 15 | 9 | 538 | 45 |
-| 10. | Andreas Granig | 13 | 7 | 527 | 36 |
-
-
-**All remaining contributors**: Henning Westerholt ([@henningw](https://github.com/henningw)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Andrei Pelinescu-Onciul, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ancuta Onofrei, Elena-Ramona Modroiu, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Sergio Gutierrez, Carsten Bock, Jeffrey Magder, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Dudu Ben Moshe, Marcus Hunger, Julián Moreno Patiño, Phil D'Amore, Klaus Darilion, Irina-Maria Stanescu, Dmitry Semyonov, Konstantin Bokarius, Andrej Solovjov, Jesus Rodrigues, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Ruslan Bukin, Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), [@jalung](https://github.com/jalung), Tolga Tarhan, Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Apr 2011 - May 2026 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2013 - May 2026 |
-| 3. | Andrej Solovjov | Jul 2025 - Jul 2025 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Sep 2003 - May 2025 |
-| 5. | Dudu Ben Moshe | Feb 2024 - Feb 2024 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jul 2004 - Nov 2023 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - May 2023 |
-| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Sep 2011 - Nov 2022 |
-| 9. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Feb 2020 |
-| 10. | [@jalung](https://github.com/jalung) | Aug 2017 - Aug 2017 |
-
-
-**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Tolga Tarhan, Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Ruslan Bukin, Irina-Maria Stanescu, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Phil D'Amore, Sergio Gutierrez, Klaus Darilion, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Dan Pascu ([@danpascu](https://github.com/danpascu)), Ancuta Onofrei, Marcus Hunger, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Jeffrey Magder, Carsten Bock, Andreas Granig, Dmitry Semyonov, Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dudu Ben Moshe, Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Irina-Maria Stanescu, Kobi Eshun ([@ekobi](https://github.com/ekobi)), Sergio Gutierrez, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Marcus Hunger, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Carsten Bock, Andreas Granig, Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

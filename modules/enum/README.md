@@ -380,76 +380,8 @@ if (is_from_user_enum()) {
 };
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Juha Heinanen ([@juha-h](https://github.com/juha-h)) | 36 | 14 | 1681 | 396 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 29 | 24 | 307 | 97 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 20 | 10 | 240 | 375 |
-| 4. | Jan Janak ([@janakj](https://github.com/janakj)) | 19 | 14 | 345 | 75 |
-| 5. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 14 | 12 | 46 | 55 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 3 | 47 | 251 |
-| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 8 | 6 | 19 | 17 |
-| 8. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 8 | 3 | 14 | 190 |
-| 9. | Greg Fausak | 7 | 1 | 493 | 30 |
-| 10. | Andrei Pelinescu-Onciul | 5 | 3 | 11 | 7 |
-
-
-**All remaining contributors**: Dan Pascu ([@danpascu](https://github.com/danpascu)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Klaus Darilion, Konstantin Bokarius, Klaus Darilion, Andreas Granig, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Sep 2005 - May 2025 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Sep 2019 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Sep 2019 |
-| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Sep 2012 - Apr 2019 |
-| 6. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Apr 2019 - Apr 2019 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
-| 9. | Juha Heinanen ([@juha-h](https://github.com/juha-h)) | Jan 2003 - Apr 2008 |
-| 10. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | Oct 2005 - Mar 2008 |
-
-
-**All remaining contributors**: Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)), Klaus Darilion, Greg Fausak, Andreas Granig, Klaus Darilion, Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Juha Heinanen ([@juha-h](https://github.com/juha-h)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Greg Fausak, Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

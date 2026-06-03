@@ -266,60 +266,8 @@ MI FIFO Command Format:
 			_empty_line_
 			
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 68 | 18 | 4835 | 528 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 32 | 22 | 422 | 348 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 6 | 4 | 30 | 28 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 6 | 4 | 23 | 21 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 5 | 3 | 5 | 3 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2022 - Jan 2026 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Sep 2022 - Jul 2025 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Nov 2023 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | Mar 2022 - Jul 2022 |
-| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Apr 2022 - Jul 2022 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
