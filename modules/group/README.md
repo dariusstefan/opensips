@@ -386,76 +386,8 @@ if (aaa_is_user_in("Request-URI", "ld")) {
 };
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 45 | 31 | 848 | 397 |
-| 2. | Jan Janak ([@janakj](https://github.com/janakj)) | 35 | 20 | 1370 | 148 |
-| 3. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 24 | 18 | 176 | 226 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 15 | 11 | 87 | 152 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 16 | 39 |
-| 6. | Irina-Maria Stanescu | 9 | 4 | 466 | 59 |
-| 7. | Andrei Pelinescu-Onciul | 7 | 5 | 101 | 40 |
-| 8. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 7 | 5 | 27 | 46 |
-| 9. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 5 | 2 | 78 | 106 |
-| 10. | Edson Gellert Schubert | 5 | 1 | 0 | 206 |
-
-
-**All remaining contributors**: Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Sergio Gutierrez, Konstantin Bokarius, Norman Brandinger ([@NormB](https://github.com/NormB)), UnixDev, Anca Vamanu.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Jun 2021 |
-| 2. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | Apr 2021 - Apr 2021 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2020 |
-| 4. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - May 2020 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2005 - Mar 2020 |
-| 6. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Oct 2007 - Apr 2019 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 8. | Irina-Maria Stanescu | Aug 2009 - Dec 2009 |
-| 9. | Anca Vamanu | Sep 2009 - Sep 2009 |
-| 10. | UnixDev | Feb 2009 - Feb 2009 |
-
-
-**All remaining contributors**: Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Norman Brandinger ([@NormB](https://github.com/NormB)), Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Irina-Maria Stanescu, Sergio Gutierrez, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)), Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

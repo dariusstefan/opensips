@@ -699,76 +699,8 @@ The modules requires one table in OpenSIPS database: dialplan.The SQL
 
 
 The module does not provide any API to use in other OpenSIPS modules.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 69 | 45 | 980 | 941 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 69 | 45 | 900 | 980 |
-| 3. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 40 | 20 | 1149 | 579 |
-| 4. | Anca Vamanu | 33 | 5 | 3263 | 19 |
-| 5. | Andrei Dragus | 24 | 3 | 382 | 1029 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 17 | 92 | 132 |
-| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 16 | 13 | 144 | 37 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 10 | 6 | 157 | 115 |
-| 9. | Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)) | 5 | 3 | 114 | 47 |
-| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 6 | 6 |
-
-
-**All remaining contributors**: Henning Westerholt ([@henningw](https://github.com/henningw)), Zero King ([@l2dy](https://github.com/l2dy)), Parantido Julius De Rica ([@Parantido](https://github.com/Parantido)), Paul Wise, Sergio Gutierrez, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Rudy Pedraza, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), UnixDev, David Sanders.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Mar 2023 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jul 2022 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jun 2008 - May 2022 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jul 2012 - Mar 2022 |
-| 5. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2010 - Sep 2019 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Sep 2008 - Nov 2015 |
-| 9. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Jul 2014 - Nov 2015 |
-| 10. | David Sanders | Sep 2015 - Sep 2015 |
-
-
-**All remaining contributors**: Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Parantido Julius De Rica ([@Parantido](https://github.com/Parantido)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Rudy Pedraza, Sergio Gutierrez, Paul Wise, Anca Vamanu, Andrei Dragus, UnixDev, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Henning Westerholt ([@henningw](https://github.com/henningw)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Zero King ([@l2dy](https://github.com/l2dy)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Dragus, Anca Vamanu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

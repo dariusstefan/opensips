@@ -1273,76 +1273,8 @@ Search functions are applied to the current message so
 			to the codec_exists functions( e.g. after
 			calling codec_delete("speex") , codec_exists("speex")
 			will return false ).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 67 | 37 | 2112 | 689 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 59 | 27 | 809 | 1510 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 48 | 21 | 2968 | 105 |
-| 4. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 13 | 6 | 427 | 123 |
-| 5. | Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)) | 6 | 3 | 155 | 28 |
-| 6. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 4 | 2 | 49 | 13 |
-| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 4 | 2 | 22 | 1 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 4 | 2 | 2 | 2 |
-| 9. | Boris Ratner | 4 | 1 | 129 | 46 |
-| 10. | Julián Moreno Patiño | 3 | 1 | 8 | 8 |
-
-
-**All remaining contributors**: Fabian Gast ([@fgast](https://github.com/fgast)), Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Dan Pascu ([@danpascu](https://github.com/danpascu)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Feb 2012 - Jun 2023 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - Jun 2023 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Nov 2012 - Oct 2022 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Feb 2012 - Mar 2022 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Mar 2021 - Mar 2021 |
-| 6. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | May 2019 - May 2019 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 8. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Jan 2019 - Jan 2019 |
-| 9. | Fabian Gast ([@fgast](https://github.com/fgast)) | Nov 2018 - Nov 2018 |
-| 10. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jan 2013 - Jun 2018 |
-
-
-**All remaining contributors**: Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Julián Moreno Patiño, Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Boris Ratner, Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Julián Moreno Patiño, Mihai Tiganus ([@tallicamike](https://github.com/tallicamike)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Boris Ratner, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -176,68 +176,8 @@ Date: Fri, 01 Nov 2013 12:00:00 GMT
 
 {"jsonrpc":"2.0","result":{"dialog:active_dialogs":0,"dialog:early_dialogs":0,"dialog:processed_dialogs":2,"dialog:expired_dialogs":0,"dialog:failed_dialogs":2,"dialog:create_sent":0,"dialog:update_sent":0,"dialog:delete_sent":0,"dialog:create_recv":0,"dialog:update_recv":0,"dialog:delete_recv":0,"tm:received_replies":49252,"tm:relayed_replies":49220,"tm:local_replies":370,"tm:UAS_transactions":49584,"tm:UAC_transactions":0,"tm:2xx_transactions":12004,"tm:3xx_transactions":0,"tm:4xx_transactions":37580,"tm:5xx_transactions":0,"tm:6xx_transactions":0,"tm:inuse_transactions":60},"id":10}
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Stephane Alnet | 20 | 5 | 1265 | 233 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 19 | 3 | 170 | 814 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 15 | 12 | 171 | 34 |
-| 4. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 14 | 10 | 273 | 52 |
-| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 9 | 7 | 30 | 36 |
-| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 8 | 6 | 102 | 36 |
-| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 5 | 3 | 8 | 3 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-| 9. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 2 | 1 | 24 | 0 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Mar 2020 - Mar 2020 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Dec 2013 - Sep 2019 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2014 - Apr 2019 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jul 2014 - Jun 2018 |
-| 7. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | May 2016 - Feb 2017 |
-| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Nov 2013 - Jan 2016 |
-| 9. | Stephane Alnet | Oct 2013 - Nov 2013 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Stephane Alnet.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

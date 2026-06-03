@@ -331,76 +331,8 @@ route{
 
 ....
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 67 | 16 | 5988 | 76 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 28 | 23 | 120 | 245 |
-| 3. | Anca Vamanu | 20 | 9 | 438 | 398 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 12 | 9 | 52 | 92 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 31 | 23 |
-| 6. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 5 | 3 | 13 | 13 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 5 | 3 | 7 | 4 |
-| 8. | Sergio Gutierrez | 3 | 1 | 5 | 5 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 3 | 1 | 3 | 2 |
-| 10. | Konstantin Bokarius | 3 | 1 | 2 | 5 |
-
-
-**All remaining contributors**: John Riordan, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Zero King ([@l2dy](https://github.com/l2dy)), Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2006 - Apr 2020 |
-| 2. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Sep 2019 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jun 2018 |
-| 7. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Feb 2012 - Feb 2012 |
-| 8. | Anca Vamanu | Oct 2007 - Sep 2010 |
-| 9. | John Riordan | May 2009 - May 2009 |
-| 10. | Sergio Gutierrez | Nov 2008 - Nov 2008 |
-
-
-**All remaining contributors**: Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

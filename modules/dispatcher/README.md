@@ -1619,76 +1619,8 @@ If you want to keep the mail private, send it to users@lists.opensips.org.
 
 
 Please follow the guidelines provided at: [https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues)
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 166 | 106 | 3304 | 2011 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 106 | 68 | 1664 | 1429 |
-| 3. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 81 | 39 | 3372 | 844 |
-| 4. | Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)) | 47 | 15 | 2153 | 846 |
-| 5. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 43 | 17 | 1145 | 969 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 39 | 33 | 462 | 120 |
-| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 31 | 17 | 705 | 434 |
-| 8. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 19 | 11 | 378 | 236 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 16 | 9 | 673 | 33 |
-| 10. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 11 | 7 | 93 | 125 |
-
-
-**All remaining contributors**: Carsten Bock, Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Elena-Ramona Modroiu, John Burke ([@john08burke](https://github.com/john08burke)), Klaus Darilion, Anca Vamanu, Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Stanislaw Pitucha, Federico Cabiddu, Konstantin Bokarius, Andreas Granig, John Riordan, Aron Podrigal ([@ar45](https://github.com/ar45)), Julián Moreno Patiño, Kevin McAllister, Roman Sevko, UnixDev, David Sanders, Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | May 2011 - Nov 2023 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2005 - Oct 2023 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Aug 2012 - Aug 2022 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jul 2022 |
-| 5. | John Burke ([@john08burke](https://github.com/john08burke)) | Feb 2021 - Jan 2022 |
-| 6. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Mar 2012 - Apr 2020 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Feb 2020 |
-| 8. | Roman Sevko | Oct 2019 - Oct 2019 |
-| 9. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Mar 2012 - Mar 2018 |
-| 10. | Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)) | Jul 2015 - Jun 2016 |
-
-
-**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), David Sanders, Aron Podrigal ([@ar45](https://github.com/ar45)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Stanislaw Pitucha, Anca Vamanu, John Riordan, UnixDev, Kevin McAllister, Klaus Darilion, Carsten Bock, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Henning Westerholt ([@henningw](https://github.com/henningw)), Konstantin Bokarius, Edson Gellert Schubert, Federico Cabiddu, Elena-Ramona Modroiu, Andreas Granig, Andrei Pelinescu-Onciul, Jan Janak ([@janakj](https://github.com/janakj)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), John Burke ([@john08burke](https://github.com/john08burke)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Roman Sevko, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Stanislaw Pitucha, Anca Vamanu, Klaus Darilion, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Carsten Bock, Edson Gellert Schubert, Elena-Ramona Modroiu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

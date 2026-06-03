@@ -1700,76 +1700,8 @@ void tls_free_domains(void);
 
 
 Cleans up the entire domain lists.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 177 | 57 | 4819 | 4881 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 81 | 57 | 1415 | 724 |
-| 3. | Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)) | 52 | 11 | 4268 | 321 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 25 | 19 | 170 | 231 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 24 | 13 | 291 | 460 |
-| 6. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | 17 | 13 | 90 | 176 |
-| 7. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 16 | 9 | 383 | 169 |
-| 8. | Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)) | 8 | 1 | 494 | 109 |
-| 9. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | 4 | 2 | 33 | 19 |
-| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 4 | 2 | 4 | 18 |
-
-
-**All remaining contributors**: Callum Guy ([@spacetourist](https://github.com/spacetourist)), Aleksei Vasilev, Fabian Gast ([@fgast](https://github.com/fgast)), Nick Altmann ([@nikbyte](https://github.com/nikbyte)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | Apr 2017 - Jan 2023 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Sep 2015 - Apr 2022 |
-| 3. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | May 2021 - May 2021 |
-| 4. | Aleksei Vasilev | Apr 2021 - Apr 2021 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Mar 2016 - Sep 2020 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Oct 2015 - Aug 2020 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2016 - Apr 2020 |
-| 8. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Jun 2019 - Feb 2020 |
-| 9. | Fabian Gast ([@fgast](https://github.com/fgast)) | Jan 2020 - Jan 2020 |
-| 10. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Nov 2018 - May 2019 |
-
-
-**All remaining contributors**: Callum Guy ([@spacetourist](https://github.com/spacetourist)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Ionel Cerghit ([@ionel-cerghit](https://github.com/ionel-cerghit)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Callum Guy ([@spacetourist](https://github.com/spacetourist)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

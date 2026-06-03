@@ -200,66 +200,8 @@ Meaning of the parameters is as follows:
 			"
 - *void *param* - parameter to be passed to
 			the callback function.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 22 | 3 | 2152 | 13 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 15 | 12 | 41 | 69 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 10 | 8 | 25 | 16 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 9 | 7 | 19 | 19 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 8 | 5 | 99 | 96 |
-| 6. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 3 | 1 | 5 | 6 |
-| 7. | Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)) | 3 | 1 | 1 | 1 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Oct 2011 - Jul 2020 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2009 - May 2020 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jan 2013 - May 2019 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 6. | Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)) | Oct 2014 - Oct 2014 |
-| 7. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Dec 2008 - May 2012 |
-| 8. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Jun 2011 - Jun 2011 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

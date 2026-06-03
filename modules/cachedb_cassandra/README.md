@@ -247,68 +247,8 @@ The table required for supporting the cache_add()/cache_sub()/cache_counter_fetc
 
 - *opensipskey* - as the primary key with type "text"
 - *opensipsval* - with type "counter"
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 374 | 13 | 1998 | 21057 |
-| 2. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 183 | 7 | 21444 | 38 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 10 | 8 | 38 | 49 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 8 | 6 | 16 | 14 |
-| 5. | fabriziopicconi | 4 | 2 | 5 | 5 |
-| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 4 | 2 | 3 | 1 |
-| 7. | Julián Moreno Patiño | 3 | 1 | 1 | 1 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 3 | 1 | 1 | 1 |
-| 9. | Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)) | 2 | 1 | 2 | 0 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - Jan 2021 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Jun 2020 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Sep 2019 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2014 - Apr 2019 |
-| 5. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 6. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-| 7. | Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)) | May 2015 - May 2015 |
-| 8. | fabriziopicconi | Apr 2014 - Apr 2014 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Dec 2011 - Nov 2013 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Julián Moreno Patiño, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

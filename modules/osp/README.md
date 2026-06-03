@@ -861,76 +861,8 @@ if (is_method("SUBSCRIBE")) {
 
 
 The functions of the OSP modules are not used by other OpenSIPS modules.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Di-Shi Sun ([@di-shi](https://github.com/di-shi)) | 274 | 101 | 10368 | 5372 |
-| 2. | Dmitry Isakbayev | 42 | 5 | 4120 | 159 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 33 | 27 | 220 | 211 |
-| 4. | Di-Shi Sun | 18 | 2 | 1006 | 386 |
-| 5. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 15 | 13 | 81 | 48 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 15 | 12 | 83 | 92 |
-| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 11 | 9 | 75 | 54 |
-| 8. | Zero King ([@l2dy](https://github.com/l2dy)) | 10 | 8 | 20 | 23 |
-| 9. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 6 | 68 | 65 |
-| 10. | Ancuta Onofrei | 9 | 1 | 206 | 318 |
-
-
-**All remaining contributors**: Dan Pascu ([@danpascu](https://github.com/danpascu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Konstantin Bokarius, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), fabriziopicconi, Andreas Granig, Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Julián Moreno Patiño, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ralf Zerres, Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Jan 2021 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Sep 2020 - Sep 2020 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2006 - Apr 2020 |
-| 4. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 5. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Nov 2008 - Jul 2019 |
-| 6. | Ralf Zerres | May 2019 - May 2019 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 8. | Di-Shi Sun | Oct 2018 - Feb 2019 |
-| 9. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Dec 2018 |
-| 10. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-
-
-**All remaining contributors**: Di-Shi Sun ([@di-shi](https://github.com/di-shi)), Julián Moreno Patiño, Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), fabriziopicconi, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Ancuta Onofrei, Dmitry Isakbayev, Andreas Granig.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Di-Shi Sun, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Di-Shi Sun ([@di-shi](https://github.com/di-shi)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dmitry Isakbayev.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
