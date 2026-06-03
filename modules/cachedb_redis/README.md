@@ -739,76 +739,6 @@ Here are a couple examples of running some Redis queries :
 ```
 
 
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Debian | 61 | 3 | 6168 | 356 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 43 | 23 | 1720 | 288 |
-| 3. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 33 | 19 | 1446 | 50 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 20 | 16 | 180 | 72 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 12 | 6 | 595 | 38 |
-| 6. | Norman Brandinger ([@NormB](https://github.com/NormB)) | 7 | 5 | 58 | 4 |
-| 7. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 7 | 5 | 7 | 5 |
-| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 6 | 4 | 7 | 7 |
-| 9. | jalung | 5 | 1 | 144 | 61 |
-| 10. | Norm Brandinger | 4 | 1 | 207 | 5 |
-
-
-**All remaining contributors**: rdondeti, Dan Pascu ([@danpascu](https://github.com/danpascu)), Ezequiel Lovelle, John Burke ([@john08burke](https://github.com/john08burke)), tcresson, Eddie Fiorentine, Julián Moreno Patiño, Ken Rice, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), zhengsh, Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), Kristian Høgh.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2012 - May 2026 |
-| 2. | Debian | Mar 2026 - Mar 2026 |
-| 3. | rdondeti | Mar 2026 - Mar 2026 |
-| 4. | Norman Brandinger ([@NormB](https://github.com/NormB)) | Mar 2026 - Feb 2026 |
-| 5. | Ken Rice | Sep 2025 - Sep 2025 |
-| 6. | Norm Brandinger | May 2025 - May 2025 |
-| 7. | Eddie Fiorentine | Mar 2025 - Mar 2025 |
-| 8. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Jan 2025 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Oct 2011 - Nov 2024 |
-| 10. | tcresson | Oct 2023 - Oct 2023 |
-
-
-**All remaining contributors**: zhengsh, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), John Burke ([@john08burke](https://github.com/john08burke)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Kristian Høgh, Julián Moreno Patiño, Jarrod Baumann ([@jarrodb](https://github.com/jarrodb)), jalung, Ezequiel Lovelle.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Debian, Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Julián Moreno Patiño, Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
 ## Frequently Asked Questions
 
 
@@ -819,6 +749,8 @@ Make sure you've upgraded the Redis "libhiredis" client library to at
 		least version 0.14.1.  There was at least one significant vulnerability
 		reported in library versions prior to that one ([CVE-2020-7105](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2020-7105)),
 		so upgrading to latest stable may very well fix the crash!
+<!-- CONTRIBUTORS -->
+
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

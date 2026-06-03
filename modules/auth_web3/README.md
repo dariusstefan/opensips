@@ -565,6 +565,8 @@ If ENS resolution fails, the module falls back to direct Web3 authentication
 Enable debug mode and monitor OpenSIPS logs for authentication attempts.
                         The module logs detailed information about ENS resolution, contract calls,
                         and authentication results when debug mode is enabled.
+<!-- CONTRIBUTORS -->
+
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

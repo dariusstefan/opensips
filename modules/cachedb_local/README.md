@@ -362,76 +362,8 @@ The parameter was removed because it was redundant. Since the
 			default collection. This collection is created every time and
 			it has a default size of 512. The size can be changed by
 			setting the default collection size using cache_collections paramter.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 35 | 11 | 1335 | 693 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 25 | 16 | 509 | 226 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 24 | 18 | 165 | 191 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 16 | 14 | 46 | 50 |
-| 5. | Anca Vamanu | 13 | 5 | 739 | 54 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 10 | 8 | 26 | 16 |
-| 7. | Andrei Dragus | 10 | 4 | 182 | 181 |
-| 8. | Fabian Gast ([@fgast](https://github.com/fgast)) | 9 | 3 | 517 | 48 |
-| 9. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 9 | 3 | 513 | 55 |
-| 10. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 9 | 10 |
-
-
-**All remaining contributors**: Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Julián Moreno Patiño, Zero King ([@l2dy](https://github.com/l2dy)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - Mar 2026 |
-| 2. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Oct 2011 - Feb 2024 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Feb 2023 |
-| 4. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | Jan 2017 - Oct 2022 |
-| 5. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Apr 2021 |
-| 6. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Feb 2020 |
-| 8. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2009 - Apr 2019 |
-| 9. | Fabian Gast ([@fgast](https://github.com/fgast)) | Dec 2018 - Dec 2018 |
-| 10. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Jan 2017 - Jan 2017 |
-
-
-**All remaining contributors**: Julián Moreno Patiño, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Ryan Bullock ([@rrb3942](https://github.com/rrb3942)), Andrei Dragus, Anca Vamanu.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Zero King ([@l2dy](https://github.com/l2dy)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Fabian Gast ([@fgast](https://github.com/fgast)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Andrei Dragus, Anca Vamanu.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

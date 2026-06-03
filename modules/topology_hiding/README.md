@@ -374,70 +374,8 @@ Read only variable that will contain the callid as it is propagated towards the 
 
 
 NULL will be returned if there is no topology hiding dialog for the request or if topology_hiding with callid encoding was not used for the current dialog.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 43 | 29 | 879 | 338 |
-| 2. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 32 | 8 | 2700 | 25 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 25 | 21 | 146 | 88 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 17 | 15 | 81 | 56 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 6 | 82 | 72 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 8 | 6 | 9 | 10 |
-| 7. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | 4 | 2 | 3 | 15 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 4 | 2 | 2 | 2 |
-| 9. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 3 | 1 | 4 | 3 |
-| 10. | James Stanley | 3 | 1 | 2 | 2 |
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2015 - May 2026 |
-| 2. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | May 2026 - May 2026 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2015 - Mar 2025 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Mar 2015 - Dec 2023 |
-| 5. | James Stanley | Dec 2023 - Dec 2023 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Nov 2023 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Feb 2020 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jan 2020 |
-| 9. | Alexey Vasilyev ([@vasilevalex](https://github.com/vasilevalex)) | Sep 2019 - Sep 2019 |
-| 10. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Feb 2015 - Mar 2016 |
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
