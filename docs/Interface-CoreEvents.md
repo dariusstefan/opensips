@@ -7,8 +7,7 @@ Events are exported by the **OpenSIPS** core through the Event Interface.
 
 ---
 
-@@anchor|E_CORE_THRESHOLD@@
-## Threshold limit exceeded [🔗](#E_CORE_THRESHOLD)
+## Threshold limit exceeded [🔗](#E_CORE_THRESHOLD) {#E_CORE_THRESHOLD}
 
 **Event**: E_CORE_THRESHOLD
 
@@ -19,8 +18,7 @@ Parameters:
 * **time**: the amount of time (in microseconds) spent by the operation
 * **extra**: extra information, depending on the source of the event
 
-@@anchor|E_CORE_PKG_THRESHOLD@@
-## Private memory threshold exceeded [🔗](#E_CORE_PKG_THRESHOLD)
+## Private memory threshold exceeded [🔗](#E_CORE_PKG_THRESHOLD) {#E_CORE_PKG_THRESHOLD}
 
 **Event**: E_CORE_PKG_THRESHOLD
 
@@ -35,8 +33,7 @@ Parameters:
 
 > **Observation:** If the event_pkg_threshold is not specified or 0, then this event is disabled.
 
-@@anchor|E_CORE_SHM_THRESHOLD@@
-## Shared memory threshold exceeded   [🔗](#E_CORE_SHM_THRESHOLD)
+## Shared memory threshold exceeded   [🔗](#E_CORE_SHM_THRESHOLD) {#E_CORE_SHM_THRESHOLD}
 
 **Event**: E_CORE_SHM_THRESHOLD
 
@@ -50,8 +47,7 @@ Parameters:
 
 > **Observation:** If the event_shm_threshold is not specified or 0, then this event is disabled.
 
-@@anchor|E_CORE_PROC_AUTO_SCALE@@
-## Process Auto-Scaling (upscale and downscale)  [🔗](#E_CORE_PROC_AUTO_SCALE)
+## Process Auto-Scaling (upscale and downscale)  [🔗](#E_CORE_PROC_AUTO_SCALE) {#E_CORE_PROC_AUTO_SCALE}
 
 **Event**: E_CORE_PROC_AUTO_SCALE
 
@@ -65,8 +61,7 @@ Parameters:
 * **process_id**: the process ID (at OpenSIPS level) of the scaled (up or down) process.
 * **pid**: the PID (OS level) of the scaled (up or down) process.
 
-@@anchor|E_CORE_TCP_DISCONNECT@@
-## TCP connection disconnected [🔗](#E_CORE_TCP_DISCONNECT)
+## TCP connection disconnected [🔗](#E_CORE_TCP_DISCONNECT) {#E_CORE_TCP_DISCONNECT}
 
 **Event**: E_CORE_TCP_DISCONNECT
 
@@ -79,8 +74,7 @@ Parameters:
 * **dst_port**: the destination PORT of the TCP connection
 * **proto**: the protocol of the underlying TCP connection ( ie. tcp, tls, ws, wss, etc )
 
-@@anchor|E_CORE_SR_STATUS_CHANGED@@
-## Status/Report status changed [🔗](#E_CORE_SR_STATUS_CHANGED)
+## Status/Report status changed [🔗](#E_CORE_SR_STATUS_CHANGED) {#E_CORE_SR_STATUS_CHANGED}
 
 **Event**: E_CORE_SR_STATUS_CHANGED
 
@@ -93,8 +87,7 @@ Parameters:
 * **details**: the details/text attached to the new status
 * **old_status**: the old status (as numerical value) of the SR identifier
 
-@@anchor|E_CORE_LOG@@
-## Log message produced  [🔗](#E_CORE_LOG)
+## Log message produced  [🔗](#E_CORE_LOG) {#E_CORE_LOG}
 
 **Event**: E_CORE_LOG
 
