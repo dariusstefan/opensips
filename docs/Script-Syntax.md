@@ -96,8 +96,7 @@ The OpenSIPS scripting language supports the following data types:
 * *list* via the **[`$avp` variable](https://www.opensips.org/Documentation/Script-CoreVar-4-0#toc2)**
 * *map* via the **[`$json`](https://opensips.org/docs/modules/4.0.x/json.html#pv_json)** and **[`$xml`](https://opensips.org/docs/modules/4.0.x/xml.html#pv_xml)** variables
 
-@@anchor|function-calling-conventions@@
-## Function Calling Conventions
+## Function Calling Conventions {#function-calling-conventions}
 All OpenSIPS [core](https://www.opensips.org/Documentation/Script-CoreFunctions-4-0) and [module](https://www.opensips.org/Documentation/Function-Index-4-0) functions internally share the same function interface, such that they benefit from the following calling convention:
 
   

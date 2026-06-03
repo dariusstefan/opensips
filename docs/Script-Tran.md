@@ -75,8 +75,7 @@ The name of these transformation starts with 's.'. They are intended to apply st
 
 Available transformations in this class:
 
-@@anchor|s.len@@
-### `{s.len}`  [🔗](#s.len)
+### `{s.len}`  [🔗](#s.len) {#s.len}
 
 Return strlen of variable value
 
@@ -90,8 +89,7 @@ if($(var(x){s.len}) == 3)
 
 ```
 
-@@anchor|s.int@@
-### `{s.int}`  [🔗](#s.int)
+### `{s.int}`  [🔗](#s.int) {#s.int}
 
 Converts the initial part of the given string to an integer value. Returns 0 if there were no digits at all.
 
@@ -104,8 +102,7 @@ if ($(var(dur){s.int}) < 3600) {
 
 ```
 
-@@anchor|s.md5@@
-### `{s.md5}`  [🔗](#s.md5)
+### `{s.md5}`  [🔗](#s.md5) {#s.md5}
 
 Returns the MD5 hash of the given input.
 
@@ -115,8 +112,7 @@ xlog("MD5 over From username: $(fU{s.md5})\n");
 
 ```
 
-@@anchor|s.reverse@@
-### `{s.reverse}`  [🔗](#s.reverse)
+### `{s.reverse}`  [🔗](#s.reverse) {#s.reverse}
 
 Returns the input string in revers order.
 
@@ -127,8 +123,7 @@ $var(reverse) = $(var(forward){s.reverse}); //Contains "eerhtowteno";
 
 ```
 
-@@anchor|s.substr@@
-### `{s.substr,offset,length}`  [🔗](#s.substr)
+### `{s.substr,offset,length}`  [🔗](#s.substr) {#s.substr}
 
 Return the substring starting at *offset* having size of *length*. If *offset* is negative, then it is counted from the end of the value, -1 being the last char.  In case of a positive value, *0* is the first char.  The *length* must be positive and in case of both *0* and *greater-than-string-length* values, the substring to the end of the input string is returned.  Both offset and length may be specified using variables.
 
@@ -140,8 +135,7 @@ $(var(x){s.substr,1,0}) = "bcd"
 
 ```
 
-@@anchor|s.select@@
-### `{s.select,index,separator}`  [🔗](#s.select)
+### `{s.select,index,separator}`  [🔗](#s.select) {#s.select}
 
 Return a field from the value of a variable. The field is selected based on separator and index. The separator must be a character used to identify the fields. Index must be a integer value or a variable. If index is negative, the count of fields starts from end of value, -1 being last field. If index is positive, 0 is the first field. Note that if a field is empty, an empty string will be returned and not NULL.
 
@@ -156,58 +150,47 @@ $(var(x){s.select,-2,,}) => "34"
 
 ```
 
-@@anchor|s.encode.hexa@@
-### `{s.encode.hexa}`  [🔗](#s.encode.hexa)
+### `{s.encode.hexa}`  [🔗](#s.encode.hexa) {#s.encode.hexa}
 
 Return encoding in hexa of variable's value
 
-@@anchor|s.decode.hexa@@
-### `{s.decode.hexa}`  [🔗](#s.decode.hexa)
+### `{s.decode.hexa}`  [🔗](#s.decode.hexa) {#s.decode.hexa}
 
 Return decoding from hexa of variable's value
 
-@@anchor|s.escape.common@@
-### `{s.escape.common}`  [🔗](#s.escape.common)
+### `{s.escape.common}`  [🔗](#s.escape.common) {#s.escape.common}
 
 Return escaped string of variable's value. Characters escaped are ', ",  and 0. Useful when doing DB queries (care should be taken for non Latin character set).
 
-@@anchor|s.unescape.common@@
-### `{s.unescape.common}`  [🔗](#s.unescape.common)
+### `{s.unescape.common}`  [🔗](#s.unescape.common) {#s.unescape.common}
 
 Return unescaped string of variable's value. Reverse of above transformation.
 
-@@anchor|s.escape.user@@
-### `{s.escape.user}`  [🔗](#s.escape.user)
+### `{s.escape.user}`  [🔗](#s.escape.user) {#s.escape.user}
 
 Return escaped string of variable's value, changing to '%hexa' the characters that are not allowed in user part of SIP URI following RFC requirements.
 
-@@anchor|s.unescape.user@@
-### `{s.unescape.user}`  [🔗](#s.unescape.user)
+### `{s.unescape.user}`  [🔗](#s.unescape.user) {#s.unescape.user}
 
 Return unescaped string of variable's value, changing '%hexa' to character code. Reverse of above transformation.
 
-@@anchor|s.escape.param@@
-### `{s.escape.param}`  [🔗](#s.escape.param)
+### `{s.escape.param}`  [🔗](#s.escape.param) {#s.escape.param}
 
 Return escaped string of variable's value, changing to '%hexa' the characters that are not allowed in the param part of SIP URI following RFC requirements.
 
-@@anchor|s.unescape.param@@
-### `{s.unescape.param}`  [🔗](#s.unescape.param)
+### `{s.unescape.param}`  [🔗](#s.unescape.param) {#s.unescape.param}
 
 Return unescaped string of variable's value, changing '%hexa' to character code. Reverse of above transformation.
 
-@@anchor|s.tolower@@
-### `{s.tolower}`  [🔗](#s.tolower)
+### `{s.tolower}`  [🔗](#s.tolower) {#s.tolower}
 
 Return string with lower case ASCII letters.
 
-@@anchor|s.toupper@@
-### `{s.toupper}`  [🔗](#s.toupper)
+### `{s.toupper}`  [🔗](#s.toupper) {#s.toupper}
 
 Return string with upper case ASCII letters.
 
-@@anchor|s.index@@
-### `{s.index}`  [🔗](#s.index)
+### `{s.index}`  [🔗](#s.index) {#s.index}
 
 Searches for one string within another starting at the beginning of the first string. Returns starting index of the string found or NULL if not found.
 The optional index specifies the offset to begin the search at in the string. Negative offsets are supported and will wrap.
@@ -234,8 +217,7 @@ if ($(var(strtosearch){s.index, $var(str)}) != NULL)
 
 ```
 
-@@anchor|s.rindex@@
-### `{s.rindex}`  [🔗](#s.rindex)
+### `{s.rindex}`  [🔗](#s.rindex) {#s.rindex}
 
 Searches for one string within another starting at the end of the first string. Returns starting index of the string found or NULL if not found.
 The optional index specifies an offset to start the search before, e.g the start of the found string will be before the supplied offset. Negative offsets are supported and will wrap.
@@ -249,8 +231,7 @@ $(var(strtosearch){s.rindex, $var(str), -4}) # will return 0
 
 ```
 
-@@anchor|s.fill.left@@
-### `{s.fill.left, tok, len}`  [🔗](#s.fill.left)
+### `{s.fill.left, tok, len}`  [🔗](#s.fill.left) {#s.fill.left}
 
 Fills a string to the left with a char/string until the given final length is reached. The initial string is returned if its length is greater or equal to the given final length.
 
@@ -266,8 +247,7 @@ $(var(in){s.fill.left, abc, 8})  => bcabc485
 
 > **Observation:** currently optimized for speed. Does not support pseudo-variable parameters or successive "s.fill" cascading.
 
-@@anchor|s.fill.right@@
-### `{s.fill.right, tok, len}`  [🔗](#s.fill.right)
+### `{s.fill.right, tok, len}`  [🔗](#s.fill.right) {#s.fill.right}
 
 Fills a string to the right with a char/string until the given final length is reached. The initial string is returned if its length is greater or equal to the given final length.
 
@@ -281,8 +261,7 @@ $(var(in){s.fill.right, abc, 8}) => 485abcab
 
 ```
 
-@@anchor|s.width@@
-### `{s.width, len}`  [🔗](#s.width)
+### `{s.width, len}`  [🔗](#s.width) {#s.width}
 
 Truncates or expands the input to the given *len*. Expanding is done to the right with the space character ' '. Truncating is done in a similar manner, from the right. Examples:
 
@@ -298,8 +277,7 @@ $(var(in){s.width, 9})   => "transform"
 
 ```
 
-@@anchor|s.trim@@
-### `{s.trim}`  [🔗](#s.trim)
+### `{s.trim}`  [🔗](#s.trim) {#s.trim}
 
 Strips any leading or trailing whitespace from the input string. Trimmed characters are " " (space), \t (tab), \n (newline) and \r (carriage return).
 
@@ -311,8 +289,7 @@ $(var(in){s.trim})   => "input string"
 
 ```
 
-@@anchor|s.trimr@@
-### `{s.trimr}`  [🔗](#s.trimr)
+### `{s.trimr}`  [🔗](#s.trimr) {#s.trimr}
 
 Strips any trailing whitespace from the input string. Trimmed characters are " " (space), \t (tab), \n (newline) and \r (carriage return).
 
@@ -324,8 +301,7 @@ $(var(in){s.trimr})   => "\t \n input string"
 
 ```
 
-@@anchor|s.triml@@
-### `{s.triml}`  [🔗](#s.triml)
+### `{s.triml}`  [🔗](#s.triml) {#s.triml}
 
 Strips any leading whitespace from the input string. Trimmed characters are " " (space), \t (tab), \n (newline) and \r (carriage return).
 
@@ -337,18 +313,15 @@ $(var(in){s.triml})   => "input string  \r  "
 
 ```
 
-@@anchor|s.dec2hex@@
-### `{s.dec2hex}`  [🔗](#s.dec2hex)
+### `{s.dec2hex}`  [🔗](#s.dec2hex) {#s.dec2hex}
 
 Converts a decimal(base 10) number to hexadecimal (in base 16), represented as string.
 
-@@anchor|s.hex2dec@@
-### `{s.hex2dec}`  [🔗](#s.hex2dec)
+### `{s.hex2dec}`  [🔗](#s.hex2dec) {#s.hex2dec}
 
 Converts a hexadecimal number (base 16) represented as string to decimal (base 10).
 
-@@anchor|s.b64encode@@
-### `{s.b64encode}`  [🔗](#s.b64encode)
+### `{s.b64encode}`  [🔗](#s.b64encode) {#s.b64encode}
 
 Represents binary input data in an ASCII string format.
 
@@ -359,8 +332,7 @@ $(var(in){s.b64encode})   => "AgMEBSFAIyVeJio="
 
 ```
 
-@@anchor|s.b64decode@@
-### `{s.b64decode}`  [🔗](#s.b64decode)
+### `{s.b64decode}`  [🔗](#s.b64decode) {#s.b64decode}
 
 Assumes input is a Base64 string and decodes as many characters as possible.
 
@@ -371,8 +343,7 @@ $(var(in){s.b64decode})   => "\x2\x3\x4\x5!@#%^&*"
 
 ```
 
-@@anchor|s.xor@@
-### `{s.xor,secret}`  [🔗](#s.xor)
+### `{s.xor,secret}`  [🔗](#s.xor) {#s.xor}
 
 Performs one or more logical XOR operations with (a part of) the "secret" string parameter and the input string, depending on the lengths of the two strings.
 
@@ -383,8 +354,7 @@ $(var(in){s.xor,x})   => "!/>^P!/>^P!^U2^Q!^U2^Q"
 
 ```
 
-@@anchor|s.eval@@
-### `{s.eval}`  [🔗](#s.eval)
+### `{s.eval}`  [🔗](#s.eval) {#s.eval}
 
 Interprets the string as a variable formatted string, evaluating all the variables declared in it.
 
@@ -396,8 +366,7 @@ $(var(format){s.eval})   => "Hello, client!"
 
 ```
 
-@@anchor|s.date2unix@@
-### `{s.date2unix}`  [🔗](#s.date2unix)
+### `{s.date2unix}`  [🔗](#s.date2unix) {#s.date2unix}
 
 Assumes the input is an RFC-3261 SIP "Date" header value, parses it accordingly and returns the equivalent UNIX timestamp.
 
@@ -408,8 +377,7 @@ $(var(date){s.date2unix})   => "1718282880";
 
 ```
 
-@@anchor|s.sha1@@
-### `{s.sha1}`  [🔗](#s.sha1)
+### `{s.sha1}`  [🔗](#s.sha1) {#s.sha1}
 
 Returns the SHA1 hash of the given input.
 ```text
@@ -418,8 +386,7 @@ xlog("SHA1 over From username: $(fU{s.sha1})\n");
 
 ```
 
-@@anchor|s.sha224@@
-### `{s.sha224}`  [🔗](#s.sha224)
+### `{s.sha224}`  [🔗](#s.sha224) {#s.sha224}
 
 Returns the SHA224 hash of the given input.
 ```text
@@ -428,8 +395,7 @@ xlog("SHA224 over From username: $(fU{s.sha224})\n");
 
 ```
 
-@@anchor|s.sha256@@
-### `{s.sha256}`  [🔗](#s.sha256)
+### `{s.sha256}`  [🔗](#s.sha256) {#s.sha256}
 
 Returns the SHA256 hash of the given input.
 ```text
@@ -438,8 +404,7 @@ xlog("SHA256 over From username: $(fU{s.sha256})\n");
 
 ```
 
-@@anchor|s.sha384@@
-### `{s.sha384}`  [🔗](#s.sha384)
+### `{s.sha384}`  [🔗](#s.sha384) {#s.sha384}
 
 Returns the SHA384 hash of the given input.
 ```text
@@ -448,8 +413,7 @@ xlog("SHA384 over From username: $(fU{s.sha384})\n");
 
 ```
 
-@@anchor|s.sha512@@
-### `{s.sha512}`  [🔗](#s.sha512)
+### `{s.sha512}`  [🔗](#s.sha512) {#s.sha512}
 
 Returns the SHA512 hash of the given input.
 ```text
@@ -458,8 +422,7 @@ xlog("SHA512 over From username: $(fU{s.sha512})\n");
 
 ```
 
-@@anchor|s.sha1_hmac@@
-### `{s.sha1_hmac,key}`  [🔗](#s.sha1_hmac)
+### `{s.sha1_hmac,key}`  [🔗](#s.sha1_hmac) {#s.sha1_hmac}
 
 Returns the SHA1 HMAC hash of the given input using key.
 ```text
@@ -468,8 +431,7 @@ xlog("SHA1 HMAC over From username using key 'secret': $(fU{s.sha1_hmac,secret})
 
 ```
 
-@@anchor|s.sha224_hmac@@
-### `{s.sha224_hmac,key}`  [🔗](#s.sha224_hmac)
+### `{s.sha224_hmac,key}`  [🔗](#s.sha224_hmac) {#s.sha224_hmac}
 
 Returns the SHA224 HMAC hash of the given input using key.
 ```text
@@ -478,8 +440,7 @@ xlog("SHA224 HMAC over From username using key 'secret': $(fU{s.sha224_hmac,secr
 
 ```
 
-@@anchor|s.sha256_hmac@@
-### `{s.sha256_hmac,key}`  [🔗](#s.sha256_hmac)
+### `{s.sha256_hmac,key}`  [🔗](#s.sha256_hmac) {#s.sha256_hmac}
 
 Returns the SHA256 HMAC hash of the given input using key.
 ```text
@@ -488,8 +449,7 @@ xlog("SHA256 HMAC over From username using key 'secret': $(fU{s.sha256_hmac,secr
 
 ```
 
-@@anchor|s.sha384_hmac@@
-### `{s.sha384_hmac,key}`  [🔗](#s.sha384_hmac)
+### `{s.sha384_hmac,key}`  [🔗](#s.sha384_hmac) {#s.sha384_hmac}
 
 Returns the SHA384 HMAC hash of the given input using key.
 ```text
@@ -498,8 +458,7 @@ xlog("SHA384 HMAC over From username using key 'secret': $(fU{s.sha384_hmac,secr
 
 ```
 
-@@anchor|s.sha512_hmac@@
-### `{s.sha512_hmac,key}`  [🔗](#s.512_hmac)
+### `{s.sha512_hmac,key}`  [🔗](#s.512_hmac) {#s.sha512_hmac}
 
 Returns the SHA512 HMAC hash of the given input using key.
 ```text
@@ -514,80 +473,65 @@ The name of transformation starts with 'uri.'. The value of the variable is cons
 
 Available transformations in this class:
 
-@@anchor|uri.user@@
-### `{uri.user}`  [🔗](#uri.user)
+### `{uri.user}`  [🔗](#uri.user) {#uri.user}
 
 Returns the user part of the URI schema.
 
-@@anchor|uri.host@@
-### `{uri.host}`  [🔗](#uri.host)
+### `{uri.host}`  [🔗](#uri.host) {#uri.host}
 
 (same as **`{uri.domain}`**)
 
 Returns the domain part of the URI schema.
 
-@@anchor|uri.passwd@@
-### `{uri.passwd}`  [🔗](#uri.passwd)
+### `{uri.passwd}`  [🔗](#uri.passwd) {#uri.passwd}
 
 Returns the password part of the URI schema.
 
-@@anchor|uri.port@@
-### `{uri.port}`  [🔗](#uri.port)
+### `{uri.port}`  [🔗](#uri.port) {#uri.port}
 
 Returns the port of the URI schema.
 
-@@anchor|uri.params@@
-### `{uri.params}`  [🔗](#uri.params)
+### `{uri.params}`  [🔗](#uri.params) {#uri.params}
 
 Returns all the URI parameters into a single string.
 
-@@anchor|uri.param@@
-### `{uri.param,name}`  [🔗](#uri.param)
+### `{uri.param,name}`  [🔗](#uri.param) {#uri.param}
 
 Returns the value of URI parameter with name "name"
 
-@@anchor|uri.headers@@
-### `{uri.headers}`  [🔗](#uri.headers)
+### `{uri.headers}`  [🔗](#uri.headers) {#uri.headers}
 
 Returns URI headers.
 
-@@anchor|uri.transport@@
-### `{uri.transport}`  [🔗](#uri.transport)
+### `{uri.transport}`  [🔗](#uri.transport) {#uri.transport}
 
 Returns the value of transport URI parameter.
 
-@@anchor|uri.ttl@@
-### `{uri.ttl}`  [🔗](#uri.ttl)
+### `{uri.ttl}`  [🔗](#uri.ttl) {#uri.ttl}
 
 Returns the value of ttl URI parameter.
 
-@@anchor|uri.uparam@@
-### `{uri.uparam}`  [🔗](#uri.uparam)
+### `{uri.uparam}`  [🔗](#uri.uparam) {#uri.uparam}
 
 Returns the value of user URI parameter
 
-@@anchor|uri.maddr@@
-### `{uri.maddr}`  [🔗](#uri.maddr)
+### `{uri.maddr}`  [🔗](#uri.maddr) {#uri.maddr}
 
 Returns the value of maddr URI parameter.
 
-@@anchor|uri.method@@
-### `{uri.method}`  [🔗](#uri.method)
+### `{uri.method}`  [🔗](#uri.method) {#uri.method}
 
 Returns the value of method URI parameter.
 
-@@anchor|uri.lr@@
-### `{uri.lr}`  [🔗](#uri.lr)
+### `{uri.lr}`  [🔗](#uri.lr) {#uri.lr}
 
 Returns the value of lr URI parameter.
 
-@@anchor|uri.r2@@
-### `{uri.r2}`  [🔗](#uri.r2)
+### `{uri.r2}`  [🔗](#uri.r2) {#uri.r2}
 
 Returns the value of r2 URI parameter.
 
-@@anchor|uri.schema@@
-### `{uri.schema}`  [🔗](#uri.schema)
+### `{uri.schema}`  [🔗](#uri.schema) {#uri.schema}
 
 Returns the schema part of the given URI.
 
@@ -604,60 +548,49 @@ $var(clientport) = $(hdr(Via)[-1]{via.param,rport});
 
 Available transformations in this class:
 
-@@anchor|via.name@@
-### `{via.name}`  [🔗](#via.name)
+### `{via.name}`  [🔗](#via.name) {#via.name}
 
 Returns the `protocol-name` (of RFC3261 BNF), generally `SIP`.
 
-@@anchor|via.version@@
-### `{via.version}`  [🔗](#via.version)
+### `{via.version}`  [🔗](#via.version) {#via.version}
 
 Returns the `protocol-version` (of RFC3261 BNF), generally `2.0`.
 
-@@anchor|via.transport@@
-### `{via.transport}`  [🔗](#via.transport)
+### `{via.transport}`  [🔗](#via.transport) {#via.transport}
 
 Returns the `transport` (of RFC3261 BNF), e.g., `UDP`, `TCP`, `TLS`. This is the transport protocol used to send the request message.
 
-@@anchor|via.host@@
-### `{via.host}`  [🔗](#via.host)
+### `{via.host}`  [🔗](#via.host) {#via.host}
 
 (same as `{via.domain}`)
 
 Returns the `host` portion of the `sent-by` (of RFC3261 BNF). Typically this is the IP address of the sender of the request message, and is the address to which the response will be sent.
 
-@@anchor|via.port@@
-### `{via.port}`  [🔗](#via.port)
+### `{via.port}`  [🔗](#via.port) {#via.port}
 
 Returns the `port` portion of the `sent-by` (of RFC3261 BNF). Typically this is the IP port of the sender of the request message, and is the address to which the response will be sent. Result of transform is valid as both integer and string.
 
-@@anchor|via.comment@@
-### `{via.comment}`  [🔗](#via.comment)
+### `{via.comment}`  [🔗](#via.comment) {#via.comment}
 
 The comment associated with the via header. The `struct via_body` contains this field, but it isn't clear that RFC3261 allows Via headers to have comments (see text at top of page 221, and the BNF doesn't explicit allow comment within Via). The comment is the text enclosed within parens.
 
-@@anchor|via.params@@
-### `{via.params}`  [🔗](#via.params)
+### `{via.params}`  [🔗](#via.params) {#via.params}
 
 Returns all the Via headers parameters (`via-param` of RFC3261 BNF) as single string. Result can be processed using the `{param.*}` transforms. This is essentially everything after the host and port.
 
-@@anchor|via.param@@
-### `{via.param,name}`  [🔗](#via.param)
+### `{via.param,name}`  [🔗](#via.param) {#via.param}
 
 Returns the value of Via header parameter with name `name`. Typical parameters include `branch`, `rport` and `received`.
 
-@@anchor|via.branch@@
-### `{via.branch}`  [🔗](#via.branch)
+### `{via.branch}`  [🔗](#via.branch) {#via.branch}
 
 Returns the value of the branch parameter in the VIA header.
 
-@@anchor|via.received@@
-### `{via.received}`  [🔗](#via.received)
+### `{via.received}`  [🔗](#via.received) {#via.received}
 
 Returns the value of the received parameter in the VIA header, if any.
 
-@@anchor|via.rport@@
-### `{via.rport}`  [🔗](#via.rport)
+### `{via.rport}`  [🔗](#via.rport) {#via.rport}
 
 Returns the value of the rport parameter in the VIA header, if any.
 
@@ -667,8 +600,7 @@ The name of the transformation starts with "param.". The value of the variable i
 
 Available transformations in this class:
 
-@@anchor|param.value@@
-### `{param.value,name}`  [🔗](#param.value)
+### `{param.value,name}`  [🔗](#param.value) {#param.value}
 
 Returns the value of parameter 'name'
 
@@ -681,8 +613,7 @@ Example:
 
 'name' can be a variable
 
-@@anchor|param.exist@@
-### `{param.exist,name}`  [🔗](#param.exist)
+### `{param.exist,name}`  [🔗](#param.exist) {#param.exist}
 
 Returns 1 if the parameter `name` exists (with or without value), else 0. Returned value is both string and integer. `name` can be variable. This can be used to test existence of parameters that do not have values.
 
@@ -695,8 +626,7 @@ Example:
 
 ```
 
-@@anchor|param.valueat@@
-### `{param.valueat,index}`  [🔗](#param.valueat)
+### `{param.valueat,index}`  [🔗](#param.valueat) {#param.valueat}
 
 Returns the value of parameter at position give by 'index' (0-based index)
 
@@ -709,8 +639,7 @@ Example:
 
 'index' can be a variable
 
-@@anchor|param.name@@
-### `{param.name,index}`  [🔗](#param.name)
+### `{param.name,index}`  [🔗](#param.name) {#param.name}
 
 Returns the name of parameter at position 'index'.
 
@@ -721,8 +650,7 @@ Example:
 
 ```
 
-@@anchor|param.count@@
-### `{param.count}`  [🔗](#param.count)
+### `{param.count}`  [🔗](#param.count) {#param.count}
 
 Returns the number of parameters in the list.
 
@@ -750,8 +678,7 @@ Example:
 
 Available transformations in this class:
 
-@@anchor|nameaddr.name@@
-### `{nameaddr.name}`  [🔗](#nameaddr.name)
+### `{nameaddr.name}`  [🔗](#nameaddr.name) {#nameaddr.name}
 
 Returns the value of display name
 
@@ -762,8 +689,7 @@ Example:
 
 ```
 
-@@anchor|nameaddr.uri@@
-### `{nameaddr.uri}`  [🔗](#nameaddr.uri)
+### `{nameaddr.uri}`  [🔗](#nameaddr.uri) {#nameaddr.uri}
 
 Returns the value of URI
 
@@ -774,13 +700,11 @@ Example:
 
 ```
 
-@@anchor|nameaddr.len@@
-### `{nameaddr.len}`  [🔗](#nameaddr.len)
+### `{nameaddr.len}`  [🔗](#nameaddr.len) {#nameaddr.len}
 
 Returns the length of the entire name-addr part from the value.
 
-@@anchor|nameaddr.param@@
-### `{nameaddr.param,param_name}`  [🔗](#nameaddr.param)
+### `{nameaddr.param,param_name}`  [🔗](#nameaddr.param) {#nameaddr.param}
 
 Returns the value of the parameter with name param_name.
 Example:
@@ -790,8 +714,7 @@ Example:
 
 ```
 
-@@anchor|nameaddr.params@@
-### `{nameaddr.params}`  [🔗](#nameaddr.params)
+### `{nameaddr.params}`  [🔗](#nameaddr.params) {#nameaddr.params}
 
 Returns all the parameters and their corresponding values.
 Example:
@@ -805,8 +728,7 @@ Example:
 
 The name of the transformation starts with 'ip.'. Available transformations in this class:
 
-@@anchor|ip.pton@@
-### `{ip.pton}`  [🔗](#ip.pton)
+### `{ip.pton}`  [🔗](#ip.pton) {#ip.pton}
 
 Returns a binary representation of a string represented IP.
 Example:
@@ -816,8 +738,7 @@ Example:
 
 ```
 
-@@anchor|ip.ntop@@
-### `{ip.ntop}`  [🔗](#ip.ntop)
+### `{ip.ntop}`  [🔗](#ip.ntop) {#ip.ntop}
 
 Returns a string representation of the binary IP provided
 Example:
@@ -827,8 +748,7 @@ Example:
 
 ```
 
-@@anchor|ip.isip@@
-### `{ip.isip}`  [🔗](#ip.isip)
+### `{ip.isip}`  [🔗](#ip.isip) {#ip.isip}
 
 Returns `1` if the string provided is a valid IPv4 or IPv6 address, otherwise `0`.
 Example:
@@ -839,8 +759,7 @@ Example:
 
 ```
 
-@@anchor|ip.isip4@@
-### `{ip.isip4}`  [🔗](#ip.isip4)
+### `{ip.isip4}`  [🔗](#ip.isip4) {#ip.isip4}
 
 Returns `1` if the string provided is a valid IPv4, otherwise `0`.
 Example:
@@ -850,8 +769,7 @@ Example:
 
 ```
 
-@@anchor|ip.isip6@@
-### `{ip.isip6}`  [🔗](#ip.isip6)
+### `{ip.isip6}`  [🔗](#ip.isip6) {#ip.isip6}
 
 Returns `1` if the string provided is a valid IPv6, otherwise `0`.
 Example:
@@ -862,8 +780,7 @@ Example:
 
 ```
 
-@@anchor|ip.family@@
-### `{ip.family}`  [🔗](#ip.family)
+### `{ip.family}`  [🔗](#ip.family) {#ip.family}
 Returns INET or INET6 if the binary IP representation provided is IPv4 or IPv6.
 Example:
 ```text
@@ -872,8 +789,7 @@ Example:
 
 ```
 
-@@anchor|ip.resolve@@
-### `{ip.resolve}`  [🔗](#ip.resolve)
+### `{ip.resolve}`  [🔗](#ip.resolve) {#ip.resolve}
 Returns the resolved IP address corresponding to the string domain provided. Transformation has no effect if a string IP is provided.
 Example:
 ```text
@@ -882,8 +798,7 @@ Example:
 
 ```
 
-@@anchor|ip.matches@@
-### `{ip.matches}`  [🔗](#ip.matches)
+### `{ip.matches}`  [🔗](#ip.matches) {#ip.matches}
 Checks if the input IP address matches a net mask given as IP/masklen (short format). It returns 1 if matches, 0 if not. NULL is returned on error (invalid input, invalid parameter, AF mismatch). Variables are supported for the parameter.
 Example:
 ```bash
@@ -895,8 +810,7 @@ else
 
 ```
 
-@@anchor|ip.isprivate@@
-### `{ip.isprivate}`  [🔗](#ip.isprivate)
+### `{ip.isprivate}`  [🔗](#ip.isprivate) {#ip.isprivate}
 Checks if the input IP address is an IPv4 private IP, according to RFC 1918 and RFC 6598. It returns 1 if the IP is private, 0 if not.
 Example:
 ```bash
@@ -914,8 +828,7 @@ The name of the transformation starts with "csv.". The value of the variable is 
 
 Available transformations in this class:
 
-@@anchor|csv.count@@
-### `{csv.count}`  [🔗](#csv.count)
+### `{csv.count}`  [🔗](#csv.count) {#csv.count}
 Returns the number of entries in the provided CSV.
 Example:
 ```text
@@ -924,8 +837,7 @@ Example:
 
 ```
 
-@@anchor|csv.value@@
-### `{csv.value}`  [🔗](#csv.value)
+### `{csv.value}`  [🔗](#csv.value) {#csv.value}
 Returns the entry at the specified positions. Indexing starts from 0.
 Example:
 ```text
@@ -940,8 +852,7 @@ The name of the transformation starts with "sdp.". The value of the variable is 
 
 Available transformations in this class:
 
-@@anchor|sdp.line@@
-### `{sdp.line}`  [🔗](#sdp.line)
+### `{sdp.line}`  [🔗](#sdp.line) {#sdp.line}
 Returns the specified line in the SDP body. The transformations also accepts a second parameter, that specifies the line number of the first parameter's type to get from the SDP body. Indexing starts from 0. If the second parameter is missing, it is assumed to be 0. 
 Example:
 ```bash
@@ -960,8 +871,7 @@ if (is_method("INVITE"))
 
 ```
 
-@@anchor|sdp.stream@@
-### `{sdp.stream}`  [🔗](#sdp.stream)
+### `{sdp.stream}`  [🔗](#sdp.stream) {#sdp.stream}
 Returns a specific stream (starting with the m= line) from an SDP body. The stream to be returned can be specified using its index within the body, or using on its media type. If specified as index, it starts at `0`, but it can also be negative, with `-1` being the last stream. If specified as media type, **only the first** stream of its type will be returned. If the media type or index does not exist, NULL is returned.
 
 Example:
@@ -981,8 +891,7 @@ if (is_method("INVITE"))
 
 ```
 
-@@anchor|sdp.stream-delete@@
-### `{sdp.stream-delete}`  [🔗](#sdp.stream-delete)
+### `{sdp.stream-delete}`  [🔗](#sdp.stream-delete) {#sdp.stream-delete}
 Returns the specified SDP body with some of its streams deleted. The stream to be deleted can be specified using its index, or using on its media type. If specified as index, it starts at `0`, but it can also be negative, with `-1` being the last stream. If specified as media type, all streams matching will be deleted! If the media type or index does not exist, NULL is returned.
 
 Example:
@@ -1006,8 +915,7 @@ if (is_method("INVITE"))
 
 The name of the transformation starts with "re.". The input can be any string.
 
-@@anchor|re.subst@@
-### `{re.subst,reg_exp}`  [🔗](#re.subst)
+### `{re.subst,reg_exp}`  [🔗](#re.subst) {#re.subst}
 
 The reg_exp parameter can either be a plain string or a variable.
 The format of the reg_exp is :

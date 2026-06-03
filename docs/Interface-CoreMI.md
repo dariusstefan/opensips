@@ -5,8 +5,7 @@ description: "MI (management interface) functions which are exported by OpenSIPS
 
 MI (management interface) functions which are exported by **OpenSIPS** core.
 
-@@anchor|arg@@
-## arg [🔗](#arg)
+## arg [🔗](#arg) {#arg}
 Returns the full list of arguments used when **OpenSIPS** was started. As in UNIX, the first argument is the name of executable binary.  
 
 **Arguments**: none  
@@ -25,8 +24,7 @@ Example of usage:
 
 ```
 
-@@anchor|kill@@
-## kill [🔗](#kill)
+## kill [🔗](#kill) {#kill}
 The command will terminate **OpenSIPS** (and internal shutdown).  
 
 **Arguments**: none  
@@ -40,8 +38,7 @@ Examples of usage:
 
 ```
 
-@@anchor|list@@
-## blacklists:list [🔗](#blacklists_list)
+## blacklists:list [🔗](#blacklists_list) {#list}
 The command lists all the defined (static or learned) blacklists from **OpenSIPS**.  
 
 **Arguments**:
@@ -55,8 +52,7 @@ Examples of usage:
 
 ```
 
-@@anchor|check_all@@
-## blacklists:check_all [🔗](#check_all)
+## blacklists:check_all [🔗](#check_all) {#check_all}
 The command returns all the blacklists that match an proto:IP:port+pattern.  
 
 **Arguments**:
@@ -74,8 +70,7 @@ Examples of usage:
 
 ```
 
-@@anchor|check@@
-## blacklists:check [🔗](#check)
+## blacklists:check [🔗](#check) {#check}
 The command check whether a proto:IP:port+pattern matches any rule of a blacklist.  
 
 **Arguments**:
@@ -94,8 +89,7 @@ Examples of usage:
 
 ```
 
-@@anchor|add_rule@@
-## blacklists:add_rule [🔗](#add_rule)
+## blacklists:add_rule [🔗](#add_rule) {#add_rule}
 Adds a rule to a non-readonly blacklist.  
 
 **Arguments**:
@@ -112,8 +106,7 @@ Examples of usage:
 
 ```
 
-@@anchor|del_rule@@
-## blacklists:del_rule [🔗](#del_rule)
+## blacklists:del_rule [🔗](#del_rule) {#del_rule}
 Removes a rule from a non-readonly blacklist.  
 
 **Arguments**:
@@ -128,8 +121,7 @@ Examples of usage:
 
 ```
 
-@@anchor|tcp_list@@
-## tcp:list [🔗](#tcp_list)
+## tcp:list [🔗](#tcp_list) {#tcp_list}
 The command lists all ongoing TCP/TLS connection from **OpenSIPS**.  
 
 **Arguments**:  
@@ -144,8 +136,7 @@ Examples of usage:
 
 ```
 
-@@anchor|tcp_close@@
-## tcp:close [🔗](#tcp_close)
+## tcp:close [🔗](#tcp_close) {#tcp_close}
 Command that terminates an ongoing TCP/TLS connection from **OpenSIPS**.  
 
 **Arguments**:  
@@ -165,9 +156,7 @@ you can also terminate by id:
 
 ```
 
-@@anchor|log_level@@
-@@anchor|log_level@@
-## log_level [🔗](#log_level)
+## log_level [🔗](#log_level) {#log_level}
 Get or set the logging level of one or all OpenSIPS processes. If no argument is passed to the **log_level** command, it will print a table with the current logging levels of all processes. If a logging **level** is given, it will be set for each process. If **pid** is also given, the logging level will change only for that process.  
 
 **Arguments**:
@@ -208,8 +197,7 @@ Examples of usage:
 
 ```
 
-@@anchor|log_level_filter@@
-## log_level_filter [🔗](#log_level_filter)
+## log_level_filter [🔗](#log_level_filter) {#log_level_filter}
 Get or set the level of the extra filtering applied to log messages for a specific logging "consumer"(*stderror*, *syslog* or *event*). If **log_level_filter** is not given, the command will print the current level filter for the specified consumer.
 
 **Arguments**:
@@ -228,8 +216,7 @@ Examples of usage:
 
 ```
 
-@@anchor|log_mute_state@@
-## log_mute_state [🔗](#log_mute_state)
+## log_mute_state [🔗](#log_mute_state) {#log_mute_state}
 Get or set the mute state (printing enabled/disabled) of a specific logging "consumer"(*stderror*, *syslog* or *event*). If **mute_state** is not given, the command will print the current mute state for the specified consumer.
 
 **Arguments**:
@@ -248,8 +235,7 @@ Examples of usage:
 
 ```
 
-@@anchor|profiling_proc@@
-## profiling_proc [🔗](#profiling_proc)
+## profiling_proc [🔗](#profiling_proc) {#profiling_proc}
 Get or set the profiling level globally or per process. If no **level** is given, the function will list the current profiling level of the specified processes. If **level** is given, it gives the incremental verbosity level - from the lowest to higher level, we have: **0** OFF, **1** SIP level (I/O reactor, SIP stack -TM, dialog, b2b-, scripting), **2** Extra Processes too (like MI, RTPproxy, HTTPD) and **3** TIMER/FULL (timer job execution).
 What are the impacted processes may be controlled via the **ID** (internal ID) or **PID** ids. If none given, all processes will be impacted by the set/get operation.
 Also see the [E_PROFILING_PROC event](Interface-CoreEvents.md#E_PROFILING_PROC) used for reporting the profiling data.
@@ -276,8 +262,7 @@ Examples of usage:
 
 ```
 
-@@anchor|ps@@
-## ps [🔗](#ps)
+## ps [🔗](#ps) {#ps}
 The command will list all all **OpenSIPS** processes, along with type and description.  
 
 **Arguments**: none  
@@ -325,8 +310,7 @@ Examples of usage:
 
 ```
 
-@@anchor|pwd@@
-## pwd [🔗](#pwd)
+## pwd [🔗](#pwd) {#pwd}
 Prints the working directory of **OpenSIPS** instance.  
 
 **Arguments**: none  
@@ -343,8 +327,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reload_routes@@
-## reload_routes [🔗](#reload_routes)
+## reload_routes [🔗](#reload_routes) {#reload_routes}
 Triggers the reload of the routing block (the routes) from the script during the runtime.
 **Arguments**: none  
 
@@ -354,8 +337,7 @@ Please note that there are some limitations of when a reload is possible or not.
 
 If the reload fails, take a look at the logs to understand why - it may have been a syntax error or maybe a module related constraint. Anyhow, if the reload fails, there is no impact on your running OpenSIPS.
 
-@@anchor|get@@
-## status_report:get [🔗](#get)
+## status_report:get [🔗](#get) {#get}
 The MI equivalent of the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-4-0#sr_check_status) - to get the status of an 'status/report' identifier/group.
 
 **Arguments**: a mandatory *group* and optional *identifier*, see the parameters of the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-4-0#sr_check_status).
@@ -380,8 +362,7 @@ Examples of usage:
 
 ```
 
-@@anchor|status@@
-## status_report:status [🔗](#status)
+## status_report:status [🔗](#status) {#status}
 Command to list the status of the identifiers within one or all 'status/report' groups.
 
 **Arguments**: an optional 'status/report'  *group*, see the [sr_check_status() script function](https://www.opensips.org/Documentation/Script-CoreFunctions-4-0#sr_check_status) for more details.
@@ -428,8 +409,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reports@@
-## status_report:reports [🔗](#reports)
+## status_report:reports [🔗](#reports) {#reports}
 Command to list the full set of reports (logs) collected by 'status/report' identifiers.
 
 **Arguments**:
@@ -500,8 +480,7 @@ Examples of usage:
 
 ```
 
-@@anchor|identifiers@@
-## status_report:identifiers [🔗](#identifiers)
+## status_report:identifiers [🔗](#identifiers) {#identifiers}
 Command to list all the existing identifiers in OpenSIPS or only from a certain group.
 
 **Arguments**:
@@ -557,8 +536,7 @@ Examples of usage:
 
 ```
 
-@@anchor|uptime@@
-## uptime [🔗](#uptime)
+## uptime [🔗](#uptime) {#uptime}
 Prints various time information about **OpenSIPS** - when it started to run, for how long it runs.  
 
 **Arguments**: none  
@@ -577,8 +555,7 @@ Examples of usage:
 
 ```
 
-@@anchor|version@@
-## version [🔗](#version)
+## version [🔗](#version) {#version}
 Prints the version string of a running**OpenSIPS**.  
 
 **Arguments**: none  
@@ -595,8 +572,7 @@ Examples of usage:
 
 ```
 
-@@anchor|which@@
-## which [🔗](#which)
+## which [🔗](#which) {#which}
 Prints all available MI commands from the queried **OpenSIPS**instance.  
 
 **Arguments**: none  
@@ -630,8 +606,7 @@ Examples of usage:
 
 ```
 
-@@anchor|statistics_get@@
-## statistics:get [🔗](#statistics_get)
+## statistics:get [🔗](#statistics_get) {#statistics_get}
 Prints the statistics (all, group or one) realtime values.  
 
 **Arguments**:
@@ -662,8 +637,7 @@ Examples of usage:
 
 ```
 
-@@anchor|statistics_list@@
-## statistics:list [🔗](#statistics_list)
+## statistics:list [🔗](#statistics_list) {#statistics_list}
 Prints a list of available statistics in the current configuration of OpenSIPS.
 **Arguments**:
 * *statistics* (optional) - an array of the same possible values as for **statistics:get** MI command, with the exception of "all". Omitting the parameter will list all available statistics.
@@ -685,8 +659,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reset@@
-## statistics:reset [🔗](#reset)
+## statistics:reset [🔗](#reset) {#reset}
 Reset (to zero) the value of a statistic variable. Note that not all variables allow reset (depending of the nature of the information they carry - example "shmem:used_size").  
 
 **Arguments**: 
@@ -708,8 +681,7 @@ Examples of usage:
 
 ```
 
-@@anchor|reset_all@@
-## statistics:reset_all [🔗](#reset_all)
+## statistics:reset_all [🔗](#reset_all) {#reset_all}
 Reset (to zero) the value of all statistic variables that can be reset. Note that not all variables allow reset (depending of the nature of the information they carry - example "shmem:used_size").  
 
 **Output**: none.
@@ -721,8 +693,7 @@ Examples of usage:
 
 ```
 
-@@anchor|store@@
-## cache:store [🔗](#store)
+## cache:store [🔗](#store) {#store}
 This command stores in a cache system a string value.  
 
 **Arguments**:
@@ -739,8 +710,7 @@ Examples of usage:
 
 ```
 
-@@anchor|fetch@@
-## cache:fetch [🔗](#fetch)
+## cache:fetch [🔗](#fetch) {#fetch}
 This command queries for a stored value.  
 
 **Arguments**:
@@ -755,8 +725,7 @@ Examples of usage:
 
 ```
 
-@@anchor|remove@@
-## cache:remove [🔗](#remove)
+## cache:remove [🔗](#remove) {#remove}
 This command removes a record from the cache system.  
 
 **Arguments**:
@@ -771,9 +740,7 @@ Examples of usage:
 
 ```
 
-@@anchor|subscribe@@
-@@anchor|subscribe@@
-## evi:subscribe [🔗](#subscribe)
+## evi:subscribe [🔗](#subscribe) {#subscribe}
 Subscribes an external application to a certain event.  
 
 **Arguments**:
@@ -789,8 +756,7 @@ Examples of usage:
 
 ```
 
-@@anchor|evi_list@@
-## evi:list [🔗](#evi_list)
+## evi:list [🔗](#evi_list) {#evi_list}
 Lists all the events published through the Event Interface.  
 
 **Arguments**: None.   
@@ -819,8 +785,7 @@ Examples of usage:
 
 ```
 
-@@anchor|raise@@
-## evi:raise [🔗](#raise)
+## evi:raise [🔗](#raise) {#raise}
 Raises an event through the Event Interface using an MI command.  
 
 **Arguments**:
@@ -837,8 +802,7 @@ Examples of usage:
 
 ```
 
-@@anchor|subscribers@@
-## evi:subscribers [🔗](#subscribers)
+## evi:subscribers [🔗](#subscribers) {#subscribers}
 Lists information about the subscribers  
 
 **Arguments**:
@@ -900,8 +864,7 @@ Examples of usage:
 
 ```
 
-@@anchor|pkg_dump@@
-## mem:pkg_dump [🔗](#pkg_dump)
+## mem:pkg_dump [🔗](#pkg_dump) {#pkg_dump}
 Triggers a pkg memory dump for a given process. The memory dump will written to OpenSIPS's log (syslog or stderr) using the 'memdump' logging level. The global 'memdump' log level may be overwritten by a custom value provided as argument to this command.  
 
 **Arguments**:
@@ -918,8 +881,7 @@ Examples of usage:
 
 The processes without IPC support (like timer and per-module processes) will not be able to generate a memory dump.
 
-@@anchor|shm_dump@@
-## mem:shm_dump [🔗](#shm_dump)
+## mem:shm_dump [🔗](#shm_dump) {#shm_dump}
 Triggers a shm memory dump. The memory dump will written to OpenSIPS's log (syslog or stderr) using the 'memdump' logging level. The global 'memdump' log level may be overwritten by a custom value provided as argument to this command.  
 
 **Arguments**:
@@ -933,8 +895,7 @@ Examples of usage:
 
 ```
 
-@@anchor|shm_check@@
-## mem:shm_check [🔗](#shm_check)
+## mem:shm_check [🔗](#shm_check) {#shm_check}
 Only available with *QM_MALLOC* + *DBG_MALLOC*.  Fully scans the shared memory pool in order to locate any inconsistencies.  If any sign of memory corruption is detected, OpenSIPS will immediately abort.   
 
 **Arguments**: None  
@@ -948,8 +909,7 @@ Example of usage:
 
 ```
 
-@@anchor|xlog_level@@
-## xlog_level [level] [🔗](#xlog_level)
+## xlog_level [level] [🔗](#xlog_level) {#xlog_level}
 Get or set the global xlogging level in OpenSIPS processes. If no argument is passed to the **xlog_level** command, it will print the current **xlog_level**. If a logging **level** is given, it will be globally set for all OpenSIPS processes.   
 
 **Arguments**:
