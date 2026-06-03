@@ -393,76 +393,8 @@ do_something();
 bmb.bm_log(id);
 ...
 ```
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 23 | 10 | 1391 | 50 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 21 | 19 | 88 | 53 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 13 | 11 | 28 | 61 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 11 | 9 | 23 | 21 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 9 | 4 | 185 | 143 |
-| 6. | Stanislaw Pitucha | 7 | 3 | 170 | 65 |
-| 7. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 6 | 4 | 11 | 10 |
-| 8. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 5 | 6 |
-| 9. | David Sanders | 4 | 2 | 8 | 1 |
-| 10. | Anca Vamanu | 3 | 1 | 5 | 2 |
-
-
-**All remaining contributors**: Konstantin Bokarius, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Nov 2023 |
-| 3. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Sep 2011 - Sep 2019 |
-| 4. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2007 - Apr 2019 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 7. | David Sanders | Aug 2012 - Jan 2013 |
-| 8. | Anca Vamanu | Sep 2009 - Sep 2009 |
-| 9. | Stanislaw Pitucha | Aug 2009 - Sep 2009 |
-| 10. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | Jul 2007 - Mar 2008 |
-
-
-**All remaining contributors**: Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Stanislaw Pitucha, Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Henning Westerholt ([@henningw](https://github.com/henningw)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -596,76 +596,8 @@ If you want to keep the mail private, send it to
 
 Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Jan Janak ([@janakj](https://github.com/janakj)) | 141 | 59 | 4374 | 2763 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 96 | 65 | 1915 | 843 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 19 | 16 | 72 | 105 |
-| 4. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 19 | 14 | 244 | 92 |
-| 5. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 15 | 10 | 333 | 88 |
-| 6. | Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)) | 15 | 10 | 250 | 64 |
-| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 14 | 12 | 83 | 47 |
-| 8. | Andrei Pelinescu-Onciul | 12 | 9 | 61 | 92 |
-| 9. | Anca Vamanu | 9 | 3 | 191 | 206 |
-| 10. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 7 | 4 | 115 | 73 |
-
-
-**All remaining contributors**: Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Konstantin Bokarius, Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)), Jesus Rodrigues, Julián Moreno Patiño, Norman Brandinger ([@NormB](https://github.com/NormB)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Elena-Ramona Modroiu.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Oct 2013 - May 2024 |
-| 2. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Nov 2023 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jan 2002 - Nov 2022 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Aug 2010 - Sep 2019 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 7. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-| 8. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Oct 2010 - Jan 2015 |
-| 9. | Norman Brandinger ([@NormB](https://github.com/NormB)) | Sep 2014 - Sep 2014 |
-| 10. | Saúl Ibarra Corretgé ([@saghul](https://github.com/saghul)) | Mar 2012 - Mar 2012 |
-
-
-**All remaining contributors**: Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Anca Vamanu, Dan Pascu ([@danpascu](https://github.com/danpascu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Jesus Rodrigues, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Dan Pascu ([@danpascu](https://github.com/danpascu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

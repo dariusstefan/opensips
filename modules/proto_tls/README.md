@@ -689,76 +689,8 @@ If you want to keep the mail private, send it to
 
 Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 63 | 35 | 1562 | 827 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 53 | 33 | 920 | 706 |
-| 3. | Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)) | 41 | 5 | 55 | 2133 |
-| 4. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | 35 | 14 | 1232 | 576 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 20 | 14 | 186 | 213 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 15 | 12 | 49 | 118 |
-| 7. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 6 | 4 | 20 | 35 |
-| 8. | Bogdan Chifor | 5 | 2 | 141 | 1 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 4 | 2 | 84 | 3 |
-| 10. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | 3 | 1 | 2 | 4 |
-
-
-**All remaining contributors**: Nick Altmann ([@nikbyte](https://github.com/nikbyte)), James Stanley, Julián Moreno Patiño, Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Zero King ([@l2dy](https://github.com/l2dy)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Feb 2015 - Jun 2025 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2015 - Jul 2024 |
-| 3. | James Stanley | Dec 2023 - Dec 2023 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jul 2017 - Nov 2023 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Feb 2023 |
-| 6. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | May 2021 - May 2021 |
-| 7. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Feb 2015 - Jan 2021 |
-| 8. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 9. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | Jan 2020 - Jan 2020 |
-| 10. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-
-
-**All remaining contributors**: Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Julián Moreno Patiño, Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Bogdan Chifor, Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Zero King ([@l2dy](https://github.com/l2dy)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Eseanu Marius Cristian ([@eseanucristian](https://github.com/eseanucristian)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

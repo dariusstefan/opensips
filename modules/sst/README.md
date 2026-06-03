@@ -318,76 +318,8 @@ route {
 
 
 Number of dialogs which got expired session timer.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 30 | 25 | 125 | 129 |
-| 2. | Ron Winacott | 28 | 5 | 2083 | 265 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 19 | 16 | 54 | 68 |
-| 4. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 15 | 12 | 104 | 104 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 14 | 10 | 106 | 140 |
-| 6. | Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)) | 9 | 6 | 122 | 28 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 8 | 6 | 40 | 45 |
-| 8. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | 7 | 4 | 174 | 60 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 6 | 4 | 7 | 15 |
-| 10. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 5 | 3 | 15 | 18 |
-
-
-**All remaining contributors**: Anca Vamanu, Christophe Sollet ([@csollet](https://github.com/csollet)), Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)), Damien Sandras ([@dsandras](https://github.com/dsandras)), Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Konstantin Bokarius, Dan Pascu ([@danpascu](https://github.com/danpascu)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Edson Gellert Schubert, Elena-Ramona Modroiu.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Jan 2013 - May 2024 |
-| 2. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Mar 2023 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 4. | Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)) | Mar 2008 - Jun 2022 |
-| 5. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2006 - May 2020 |
-| 6. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Sep 2019 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | Ionut Ionita ([@ionutrazvanionita](https://github.com/ionutrazvanionita)) | Oct 2016 - Oct 2016 |
-| 9. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | Jun 2011 - Feb 2015 |
-| 10. | Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)) | Oct 2014 - Oct 2014 |
-
-
-**All remaining contributors**: Andrei Datcu ([@andrei-datcu](https://github.com/andrei-datcu)), Damien Sandras ([@dsandras](https://github.com/dsandras)), Christophe Sollet ([@csollet](https://github.com/csollet)), Anca Vamanu, Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Dan Pascu ([@danpascu](https://github.com/danpascu)), Elena-Ramona Modroiu, Ron Winacott.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Christophe Sollet ([@csollet](https://github.com/csollet)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Ron Winacott.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

@@ -311,76 +311,8 @@ Checks if domain given in str* parameter is local.
 
 The function returns 1 if domain is local and -1 if
 		domain is not local or if an error occurred.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 56 | 42 | 427 | 561 |
-| 2. | Jan Janak ([@janakj](https://github.com/janakj)) | 32 | 21 | 999 | 113 |
-| 3. | Juha Heinanen ([@juha-h](https://github.com/juha-h)) | 30 | 20 | 700 | 233 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 21 | 14 | 288 | 222 |
-| 5. | Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)) | 19 | 16 | 92 | 79 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 11 | 8 | 45 | 109 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 8 | 5 | 96 | 123 |
-| 8. | Dan Pascu ([@danpascu](https://github.com/danpascu)) | 8 | 4 | 232 | 101 |
-| 9. | Andrei Pelinescu-Onciul | 8 | 4 | 186 | 121 |
-| 10. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 7 | 5 | 44 | 48 |
-
-
-**All remaining contributors**: Edson Gellert Schubert, Elena-Ramona Modroiu, Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)), [@coxx](https://github.com/coxx), Konstantin Bokarius, Klaus Darilion, Anca Vamanu, Norman Brandinger ([@NormB](https://github.com/NormB)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), UnixDev, Andreas Granig, John Burke ([@john08burke](https://github.com/john08burke)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Oct 2005 - Aug 2025 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jun 2011 - Jun 2024 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 4. | John Burke ([@john08burke](https://github.com/john08burke)) | Jan 2022 - Jan 2022 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 6. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - Nov 2018 |
-| 7. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 8. | [@coxx](https://github.com/coxx) | Mar 2010 - Mar 2010 |
-| 9. | Anca Vamanu | Sep 2009 - Sep 2009 |
-| 10. | UnixDev | Feb 2009 - Feb 2009 |
-
-
-**All remaining contributors**: Juha Heinanen ([@juha-h](https://github.com/juha-h)), Henning Westerholt ([@henningw](https://github.com/henningw)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Elena-Ramona Modroiu, Dan Pascu ([@danpascu](https://github.com/danpascu)), Norman Brandinger ([@NormB](https://github.com/NormB)), Andreas Granig, Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)), Andrei Pelinescu-Onciul, Jiri Kuthan ([@jiriatipteldotorg](https://github.com/jiriatipteldotorg)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Daniel-Constantin Mierla ([@miconda](https://github.com/miconda)), Konstantin Bokarius, Edson Gellert Schubert, Juha Heinanen ([@juha-h](https://github.com/juha-h)), Elena-Ramona Modroiu, Dan Pascu ([@danpascu](https://github.com/danpascu)), Klaus Darilion, Jan Janak ([@janakj](https://github.com/janakj)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

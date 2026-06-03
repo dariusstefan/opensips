@@ -853,76 +853,8 @@ If you want to keep the mail private, send it to
 
 Please follow the guidelines provided at:
 			[https://github.com/OpenSIPS/opensips/issues](https://github.com/OpenSIPS/opensips/issues).
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 124 | 74 | 4331 | 755 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 43 | 34 | 688 | 172 |
-| 3. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 38 | 19 | 623 | 766 |
-| 4. | Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)) | 28 | 10 | 1058 | 516 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 27 | 21 | 266 | 148 |
-| 6. | Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)) | 5 | 3 | 7 | 5 |
-| 7. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 5 | 3 | 6 | 7 |
-| 8. | Walter Doekes ([@wdoekes](https://github.com/wdoekes)) | 5 | 3 | 3 | 3 |
-| 9. | Jeremy Martinez ([@JeremyMartinez51](https://github.com/JeremyMartinez51)) | 5 | 2 | 193 | 1 |
-| 10. | Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)) | 4 | 2 | 3 | 3 |
-
-
-**All remaining contributors**: Anca Vamanu, Andrei Dragus, James Van Vleet, Dusan Klinec ([@ph4r05](https://github.com/ph4r05)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Zero King ([@l2dy](https://github.com/l2dy)), agree.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Oct 2010 - Oct 2024 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Sep 2012 - Sep 2024 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Feb 2009 - Oct 2023 |
-| 4. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 5. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | Mar 2017 - Jul 2022 |
-| 6. | agree | Jan 2022 - Jan 2022 |
-| 7. | Zero King ([@l2dy](https://github.com/l2dy)) | Mar 2020 - Mar 2020 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Jun 2018 - Jun 2018 |
-| 9. | Jeremy Martinez ([@JeremyMartinez51](https://github.com/JeremyMartinez51)) | Feb 2017 - Feb 2017 |
-| 10. | Dusan Klinec ([@ph4r05](https://github.com/ph4r05)) | Dec 2015 - Dec 2015 |
-
-
-**All remaining contributors**: Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)), Andrei Dragus, James Van Vleet, Anca Vamanu.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), agree, Zero King ([@l2dy](https://github.com/l2dy)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Sergey Khripchenko ([@shripchenko](https://github.com/shripchenko)), Ezequiel Lovelle ([@lovelle](https://github.com/lovelle)), Walter Doekes ([@wdoekes](https://github.com/wdoekes)), Vlad Paiu ([@vladpaiu](https://github.com/vladpaiu)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

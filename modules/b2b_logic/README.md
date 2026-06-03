@@ -1460,76 +1460,8 @@ The second argument is the b2bl_key of an existing call.
 
 
 The third argument is the entity identifier.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 237 | 57 | 8167 | 6793 |
-| 2. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 44 | 28 | 1153 | 308 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 16 | 12 | 148 | 72 |
-| 4. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | 14 | 10 | 346 | 36 |
-| 5. | Carsten Bock | 12 | 5 | 679 | 23 |
-| 6. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | 7 | 5 | 31 | 31 |
-| 7. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 5 | 3 | 4 | 3 |
-| 8. | truong.hua | 4 | 2 | 8 | 7 |
-| 9. | andingv | 3 | 1 | 9 | 7 |
-| 10. | Aron Podrigal ([@ar45](https://github.com/ar45)) | 3 | 1 | 1 | 1 |
-
-
-**All remaining contributors**: Rick Barenthin, Shanee Vanstone, Zero King ([@l2dy](https://github.com/l2dy)).
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Jan 2021 - Dec 2025 |
-| 2. | andingv | Nov 2025 - Nov 2025 |
-| 3. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Apr 2021 - Jan 2025 |
-| 4. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Nov 2020 - Feb 2024 |
-| 5. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Jan 2021 - Nov 2023 |
-| 6. | Rick Barenthin | Nov 2023 - Nov 2023 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | Nov 2020 - Jul 2023 |
-| 8. | Shanee Vanstone | Apr 2023 - Apr 2023 |
-| 9. | truong.hua | Jan 2023 - Feb 2023 |
-| 10. | Nick Altmann ([@nikbyte](https://github.com/nikbyte)) | Feb 2021 - Oct 2022 |
-
-
-**All remaining contributors**: Carsten Bock, Aron Podrigal ([@ar45](https://github.com/ar45)), Zero King ([@l2dy](https://github.com/l2dy)).
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)), Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)), Carsten Bock, Nick Altmann ([@nikbyte](https://github.com/nikbyte)).
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0

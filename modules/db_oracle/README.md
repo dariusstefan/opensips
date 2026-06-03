@@ -123,76 +123,8 @@ For working with opensips-cli tool, should be able to print the 'query'
 		way as the 'mysql' client utility. In addition, this utility known about 
 		the "agreements and types" in DB that are used in OpenSIPS for the work 
 		with Oracle and formats printing taking these into account.
+<!-- CONTRIBUTORS -->
 
-
-## Contributors {#contributors}
-
-
-### By Commit Statistics {#contrib_commit_statistics}
-
-
-**Top contributors by DevScore^(1)^, authored commits^(2)^ and lines added/removed^(3)^**
-
-
-|  | Name | DevScore | Commits | Lines ++ | Lines -- |
-| --- | --- | --- | --- | --- | --- |
-| 1. | Iouri Kharon | 21 | 1 | 2363 | 0 |
-| 2. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | 14 | 11 | 64 | 68 |
-| 3. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | 12 | 9 | 23 | 83 |
-| 4. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | 10 | 8 | 111 | 39 |
-| 5. | dronord | 8 | 6 | 29 | 18 |
-| 6. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | 7 | 5 | 41 | 5 |
-| 7. | Gang Zhuo | 6 | 4 | 42 | 16 |
-| 8. | Henning Westerholt ([@henningw](https://github.com/henningw)) | 5 | 3 | 19 | 7 |
-| 9. | Gang Zhuo | 4 | 2 | 4 | 2 |
-| 10. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | 4 | 2 | 3 | 3 |
-
-
-**All remaining contributors**: Maksym Sobolyev ([@sobomax](https://github.com/sobomax)), fabriziopicconi, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Sergio Gutierrez, Julián Moreno Patiño, Razvan Pistolea.
-
-
-*(1) DevScore = author_commits + author_lines_added / (project_lines_added / project_commits) + author_lines_deleted / (project_lines_deleted / project_commits)*
-
-
-*(2) including any documentation-related commits, excluding merge commits. Regarding imported patches/code, we do our best to count the work on behalf of the proper owner, as per the "fix_authors" and "mod_renames" arrays in opensips/doc/build-contrib.sh. If you identify any patches/commits which do not get properly attributed to you, please [submit a pull request](https://github.com/OpenSIPS/opensips/pulls)* which extends "fix_authors" and/or "mod_renames".
-
-
-*(3) ignoring whitespace edits, renamed files and auto-generated files*
-
-
-### By Commit Activity {#contrib_commit_activity}
-
-
-**Most recently active contributors^(1)^ to this module**
-
-
-|  | Name | Commit Activity |
-| --- | --- | --- |
-| 1. | Gang Zhuo | Nov 2022 - Nov 2024 |
-| 2. | Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)) | Mar 2014 - May 2024 |
-| 3. | Maksym Sobolyev ([@sobomax](https://github.com/sobomax)) | Feb 2023 - Feb 2023 |
-| 4. | Gang Zhuo | Dec 2021 - Dec 2021 |
-| 5. | Razvan Crainea ([@razvancrainea](https://github.com/razvancrainea)) | Oct 2011 - Sep 2019 |
-| 6. | Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)) | Jul 2008 - Apr 2019 |
-| 7. | Vlad Patrascu ([@rvlad-patrascu](https://github.com/rvlad-patrascu)) | May 2017 - Apr 2019 |
-| 8. | Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)) | Aug 2012 - Jun 2018 |
-| 9. | dronord | Nov 2017 - Dec 2017 |
-| 10. | Julián Moreno Patiño | Feb 2016 - Feb 2016 |
-
-
-**All remaining contributors**: fabriziopicconi, Ovidiu Sas ([@ovidiusas](https://github.com/ovidiusas)), Razvan Pistolea, Sergio Gutierrez, Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon.
-
-
-*(1) including any documentation-related commits, excluding merge commits*
-
-
-## Documentation {#documentation}
-
-
-### Contributors {#documentation_contributors}
-
-
-**Last edited by:** Liviu Chircu ([@liviuchircu](https://github.com/liviuchircu)), Peter Lemenkov ([@lemenkov](https://github.com/lemenkov)), Bogdan-Andrei Iancu ([@bogdan-iancu](https://github.com/bogdan-iancu)), Henning Westerholt ([@henningw](https://github.com/henningw)), Iouri Kharon.
 ### License
 
 All documentation files (i.e. .md extension) are licensed under the Creative Common License 4.0
