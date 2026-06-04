@@ -1,11 +1,12 @@
 ---
 title: "Compile And Install"
-description: "The following page of the manual is addressed to users that want to compile and install OpenSIPS 3.5 from sources."
+description: "The following page of the manual is addressed to users that want to compile and install OpenSIPS 3.5 from sources. :::tip If you have download an OpenSIPS pa..."
 ---
 
 The following page of the manual is addressed to users that want to compile and install OpenSIPS 3.5 from sources.
-
+:::tip
 If you have download an OpenSIPS package, than please feel free to skip this page, and install your package according to your platform ( dpkg for Debian, rpm for CentOS, etc ).
+:::
 
 Go for the **OpenSIPS** [install instructions](https://github.com/OpenSIPS/opensips/blob/master/INSTALL) - this is a link directly to the INSTALL file from the SVN repository, which contains the up-to-date version.
 
