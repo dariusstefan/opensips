@@ -573,7 +573,8 @@ Number of seconds between two timer runs.  During each run, the module
 		these operations to the database, if configured to do so.
 
 
-> **Warning:** In case of an OpenSIPS shutdown or even a crash, contacts which are in
+> [!WARNING]
+> In case of an OpenSIPS shutdown or even a crash, contacts which are in
 		memory only and have not been flushed yet to disk will NOT get lost!
 		OpenSIPS will try its best to do a last-minute sync to DB right before
 		shutting down.

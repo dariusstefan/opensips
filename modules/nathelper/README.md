@@ -94,7 +94,8 @@ Period of time in seconds between sending the NAT pings to all
 		Value of 0 disables this functionality.
 
 
-> **Note:** Enabling the NAT pinging functionality will force the module to
+> [!NOTE]
+> Enabling the NAT pinging functionality will force the module to
 		bind itself to USRLOC module.
 
 
@@ -173,7 +174,8 @@ The name of the Attribute-Value-Pair (AVP) used to store the URI
 		module whenever you change the value of this parameter.
 
 
-> **Note:** You must set this parameter if you use [fix nated register](#func_fix_nated_register).
+> [!NOTE]
+> You must set this parameter if you use [fix nated register](#func_fix_nated_register).
 		Additionally, if you are using registrar, you must also set its symmetric
 		[received_avp](../registrar#received_avp) module parameter
 		to the **same value**.
@@ -329,7 +331,8 @@ The parameter sets the SDP attribute used by nathelper to mark
 If empty string, no marker will be added or checked.
 
 
-> **Note:** The string must be a complete SDP line, including the EOH (\r\n).
+> [!NOTE]
+> The string must be a complete SDP line, including the EOH (\r\n).
 
 
 *Default value is "a=nortpproxy:yes\r\n".*

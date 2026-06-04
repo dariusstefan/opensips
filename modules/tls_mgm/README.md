@@ -275,7 +275,8 @@ Sets the TLS protocol. The domain part represents the name of
 *Default value is SSLv23.*
 
 
-> **Warning:** For extended compatibility with older system, best use SSLv23.
+> [!WARNING]
+> For extended compatibility with older system, best use SSLv23.
 
 
 If you want RFC3261 conformance and all your clients support
@@ -433,7 +434,8 @@ You can specify the list of algorithms for authentication
 - openssl ciphers 'ALL:eNULL:!LOW:!EXPORT'
 
 
-> **Warning:** Do not use the NULL algorithms (no encryption) ... only for testing!!!
+> [!WARNING]
+> Do not use the NULL algorithms (no encryption) ... only for testing!!!
 
 
 *It defaults to the OpenSSL default ciphers.*

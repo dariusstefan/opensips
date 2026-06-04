@@ -206,7 +206,8 @@ You can specify the list of algorithms for authentication and encryption that yo
 - gnutls-cli -l
 
 
-> **Warning:** Do not use the NULL algorithms (no encryption) ... never!!!
+> [!WARNING]
+> Do not use the NULL algorithms (no encryption) ... never!!!
 
 
 *The default value is  "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2"*
