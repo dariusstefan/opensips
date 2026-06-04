@@ -282,7 +282,7 @@ The **timer_route** is a route executed periodically at a configured interval of
 
 ---
 
-## event_route  
+## event_route {#event_route}
 The **event_route** is used by the OpenSIPS Event Interface to execute script code when an event is triggered. The name of the route is the event that has to be handled by that route. The route itself is executed asynchronously with regards to the trigger moment.
 
 **Triggered by** : the [event_route](http://www.opensips.org/html/docs/modules/3.4.x/event_route) module when an event raised by the OpenSIPS Event Interface
