@@ -134,7 +134,8 @@ Literal **"$"** characters can be included in a format string using the **"$$"**
 
   
 
-> **Observation:** There still are a few exceptions for the conventions above in the case of string parameters, due to performance optimizations, as some functions still require some parameters to be plain, static strings (e.g. *save("location")*).  Such cases will be noted in the function's documentation.
+> [!NOTE]
+> There still are a few exceptions for the conventions above in the case of string parameters, due to performance optimizations, as some functions still require some parameters to be plain, static strings (e.g. *save("location")*).  Such cases will be noted in the function's documentation.
 
   
 

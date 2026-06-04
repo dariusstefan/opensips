@@ -245,7 +245,8 @@ $(var(in){s.fill.left, abc, 8})  => bcabc485
 
 ```
 
-> **Observation:** currently optimized for speed. Does not support pseudo-variable parameters or successive "s.fill" cascading.
+> [!NOTE]
+> currently optimized for speed. Does not support pseudo-variable parameters or successive "s.fill" cascading.
 
 ### {s.fill.right, tok, len} {#s.fill.right}
 
