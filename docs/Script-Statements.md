@@ -29,10 +29,10 @@ The logical operators that can be used in the logical expressions:
 * != - not equal
 * =~ - regular expression matching  (e.g. `$rU` =~ '^1800*' is "`$rU` begins with 1800" )
 * !~ - regular expression not-matching
-* > - greater
-* >= - greater or equal
-* < - less
-* <= - less or equal
+* \> - greater
+* \>= - greater or equal
+* \< - less
+* \<= - less or equal
 * && - logical AND
 * || - logical OR
 * ! - logical NOT

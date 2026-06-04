@@ -48,8 +48,8 @@ For numbers, one can use:
 * & : bitwise AND
 * ^ : bitwise XOR
 * ~ : bitwise NOT
-* << : bitwise left shift
-* >> : bitwise right shift
+* \<< : bitwise left shift
+* \>> : bitwise right shift
 
 Example:
 
