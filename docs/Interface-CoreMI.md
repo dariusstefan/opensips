@@ -829,6 +829,7 @@ Examples of usage:
     # opensips-cli -x mi mem_pkg_dump 11854 -1
 
 ```
+
 :::caution
 The processes without IPC support (like timer and per-module processes) will not be able to generate a memory dump.
 :::
