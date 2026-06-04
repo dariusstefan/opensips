@@ -150,9 +150,8 @@ ds_count(1, "a", $var(out_result));
 
 * **integers no longer need to be passed as double-quoted strings**:
 
-_Deprecated:_
-
-```text del={1-1}
+```text del={2-2}
+# this is deprecated
 ds_select_dst("1", "1");
 ```
 
