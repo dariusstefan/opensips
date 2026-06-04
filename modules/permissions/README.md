@@ -216,7 +216,8 @@ If set then allow_routing functions will check Request-URI of all
 		branch will be checked.
 
 
-> **Warning:** Do not disable this parameter unless you really know what you
+> [!WARNING]
+> Do not disable this parameter unless you really know what you
 		are doing.
 
 
@@ -239,7 +240,8 @@ Suffix to be appended to basename to create filename of the allow
 		`allow_register` is used.
 
 
-> **Note:** Including leading dot.
+> [!NOTE]
+> Including leading dot.
 
 
 *Default value is ".allow".*
@@ -261,7 +263,8 @@ Suffix to be appended to basename to create filename of the deny file
 		`allow_register` is used.
 
 
-> **Note:** Including leading dot.
+> [!NOTE]
+> Including leading dot.
 
 
 *Default value is ".deny".*

@@ -546,7 +546,8 @@ Parameters:
 This function can be used from REQUEST_ROUTE.
 
 
-> **Note:** If you have a multi interface setup and want to chance the outbound interface,
+> [!NOTE]
+> If you have a multi interface setup and want to chance the outbound interface,
 		it is mandatory to use the "force_send_socket()" core function before passing
 		control to b2b function. If you do not do it, the requests may be correctly routed,
 		but the SIP pacakge may be invalid (as Contact, Via, etc).

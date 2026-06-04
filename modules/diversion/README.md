@@ -17,7 +17,8 @@ The module implements the Diversion extensions as per
 		extensions can be used for.
 
 
-> **Warning:** The draft-levy-sip-diversion-08 is expired!! See
+> [!WARNING]
+> The draft-levy-sip-diversion-08 is expired!! See
 		[IETF I-D tracker](https://datatracker.ietf.org/public/idindex.cgi?command=id_detail&and;id=6002).
 
 
