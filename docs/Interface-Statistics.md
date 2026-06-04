@@ -56,6 +56,7 @@ To get access to the statistics you have to use the [MI interface](Interface-MI.
   
 
 **Reseting the value** of a statistic variable (to 0 value), but only if it is counter-type variable.
+
 :::caution
 Reseting a computed-value statistic will be ignored and have no effect.
 :::
