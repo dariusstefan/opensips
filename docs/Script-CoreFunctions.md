@@ -770,7 +770,7 @@ Example of usage:
 seturi("sip:test@opensips.org");
 ```
 
-## route(name [, param1 [, param2 [, ...] ] ] )  
+## route(name [, param1 [, param2 [, ...] ] ] ) {#route}
 
 This function is used to run the code from the 'name' route, declared in the script. Optionally, it can receive several parameters (up to 7), that can be later retrieved using the '`$param(idx)`' pseudo-variable.
 
