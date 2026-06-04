@@ -650,7 +650,8 @@ Example of usage:
 memlog=2
 ```
 
-> **Observation:** by setting memlog parameter, the memdump will automatically be set to the same value (see memdump docs).
+> [!NOTE]
+> by setting memlog parameter, the memdump will automatically be set to the same value (see memdump docs).
 
 ### mcast_loopback {#mcast_loopback}
 
@@ -976,7 +977,9 @@ Example of usage:
 ### tcp_parallel_read_on_workers {#tcp_parallel_read_on_workers}
 
 This option will allow a TCP conn to perform read operations from different processes, not only from one. So far, upon creation, a TCP conn was assigned to a TCP workers which was doing all the reading for that TCP conn. This may become a bootleneck. With "tcp_parallel_read_on_workers", after a read is completed, the TCP conn is passed back to the TCP Main processes, which will perform a re-balancing for the next read operations, passing the TCP conn potentially to another worker.
-> **Observation:** at TCP conn level, the read ops are still performed in serial way, one at a time (even if from different processes)
+
+> [!NOTE]
+> at TCP conn level, the read ops are still performed in serial way, one at a time (even if from different processes)
 
 ### tcp_socket_backlog {#tcp_socket_backlog}
 
