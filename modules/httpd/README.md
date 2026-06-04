@@ -224,7 +224,8 @@ You can specify the list of algorithms for authentication and encryption that yo
 - gnutls-cli -l
 
 
-> **Warning:** Do not use the NULL algorithms (no encryption) ... never!!!
+> [!WARNING]
+> Do not use the NULL algorithms (no encryption) ... never!!!
 
 
 *The default value is  "SECURE256:+SECURE192:-VERS-ALL:+VERS-TLS1.2"*
@@ -282,7 +283,8 @@ The password for HTTP Basic Authentication.  Must be set
 		together with `auth_username`.
 
 
-> **Warning:** When using HTTP Basic Authentication, it is strongly
+> [!WARNING]
+> When using HTTP Basic Authentication, it is strongly
 		recommended to also enable TLS via
 		`tls_cert_file` and
 		`tls_key_file` to prevent credentials
