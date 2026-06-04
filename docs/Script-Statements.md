@@ -111,9 +111,8 @@ Example of usage:
 
 ```
 
-:::danger
-Take care while using 'return' - 'return(0)' stops the execution of the script.
-:::
+> [!WARNING]
+> Take care while using 'return' - 'return(0)' stops the execution of the script.
 
 ## while {#while}
 

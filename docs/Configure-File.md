@@ -21,9 +21,8 @@ The configuration file is text-based, written in an OpenSIPS custom language, ve
 
   
 
-:::caution
-If you do any change to the configuration file, in order for them to take effect, you MUST restart OpenSIPS
-:::
+> [!IMPORTANT]
+> If you do any change to the configuration file, in order for them to take effect, you MUST restart OpenSIPS
 
   
 
