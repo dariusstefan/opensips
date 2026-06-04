@@ -878,8 +878,9 @@ Examples of usage:
     # opensips-mi mem:pkg_dump 11854 -1
 
 ```
-
+:::caution
 The processes without IPC support (like timer and per-module processes) will not be able to generate a memory dump.
+:::
 
 ## mem:shm_dump {#shm_dump}
 Triggers a shm memory dump. The memory dump will written to OpenSIPS's log (syslog or stderr) using the 'memdump' logging level. The global 'memdump' log level may be overwritten by a custom value provided as argument to this command.  
