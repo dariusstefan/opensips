@@ -45,7 +45,8 @@ First char of this parameter is used as separator for encoding/decoding
 		Contact header.
 
 
-> **Warning:** First char of this field must be set to a value which is not used 
+> [!WARNING]
+> First char of this field must be set to a value which is not used 
 			inside username,password or other fields of contact. Otherwise it 
 			is possible for the decoding step to fail/produce wrong results.
 

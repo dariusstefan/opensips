@@ -136,7 +136,8 @@ A string whose contents is appended to each new tel URI in the
 		request as tel URI parameters.
 
 
-> **Note:** Currently OpenSIPS does not support tel URIs. This means that at present
+> [!NOTE]
+> Currently OpenSIPS does not support tel URIs. This means that at present
 			tel_uri_params is appended as URI parameters to every URI.
 
 

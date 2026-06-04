@@ -497,7 +497,8 @@ The module will store the value of the AVP configured by this
 		and protocol of the REGISTER message being processed.
 
 
-> **Note:** The value of this parameter should be the same as the value of
+> [!NOTE]
+> The value of this parameter should be the same as the value of
 			corresponding parameter of nathelper module.
 
 
@@ -516,7 +517,8 @@ The name of the parameter that will be appended to Contacts of
 		200 OK replies if the received URI is set by nathelper module.
 
 
-> **Note:** The value of this parameter should be the same as the value of
+> [!NOTE]
+> The value of this parameter should be the same as the value of
 			corresponding parameter of nathelper module.
 
 

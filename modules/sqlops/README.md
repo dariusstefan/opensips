@@ -394,7 +394,8 @@ Function to perform a structured (not raw) SQL SELECT operation.
 			into a set of AVPs (one to one matching the selected columns).
 
 
-> **Warning:** If using varibales in constructing the query, you must 
+> [!WARNING]
+> If using varibales in constructing the query, you must 
 			manually escape their values in order to prevent SQL injection 
 			attacks. You can use the existing transformations
 			*escape.common* and

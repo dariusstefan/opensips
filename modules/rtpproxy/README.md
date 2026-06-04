@@ -288,7 +288,8 @@ The parameter sets the SDP attribute used by rtpproxy to mark
 If empty string, no marker will be added or checked.
 
 
-> **Note:** The string must be a complete SDP line, including the EOH (\r\n).
+> [!NOTE]
+> The string must be a complete SDP line, including the EOH (\r\n).
 
 
 *Default value is "a=nortpproxy:yes\r\n".*
