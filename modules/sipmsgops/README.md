@@ -185,7 +185,8 @@ append_urihf("CC-Diversion: ", "\r\n");
 Return true if a header field is present in message.
 
 
-> **Note:** The function is also able to distinguish the compact names. For
+> [!NOTE]
+> The function is also able to distinguish the compact names. For
 			exmaple "From" will match with "f"
 
 

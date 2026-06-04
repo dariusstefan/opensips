@@ -177,7 +177,8 @@ route[my_dispatcher_logic] {
 String with PVs used for the hashing algorithm 7.
 
 
-> **Note:** You must set this parameter if you want do hashing over custom message
+> [!NOTE]
+> You must set this parameter if you want do hashing over custom message
 		parts.
 
 

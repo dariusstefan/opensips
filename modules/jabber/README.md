@@ -39,7 +39,8 @@ Expat is a common XML library and is the fastest
 ### Admin's Guide
 
 
-> **Note:** A more complete guide about SIMPLE2Jabber gateway can be found 
+> [!NOTE]
+> A more complete guide about SIMPLE2Jabber gateway can be found 
 		at [https://opensips.org/](https://opensips.org/). The part below will be removed soon, only the manual 
 		from web will be updated.
 
@@ -148,7 +149,8 @@ The destination address *must* follow the
 - For YAHOO network: "yahoo_username@yahoo_alias".
 
 
-> **Note:** "jabber_alias" is the first part of "jdomain".
+> [!NOTE]
+> "jabber_alias" is the first part of "jdomain".
 
 
 ### Admin Guide
@@ -173,7 +175,8 @@ For someone who is in Yahoo network the destination must be:
 		user@yahoo_alias
 
 
-> **Note:** The OpenSIPS administrator have to set the Jabber transports for each IM network in
+> [!NOTE]
+> The OpenSIPS administrator have to set the Jabber transports for each IM network in
 		order to be able to send messages to those networks. The alias of each IM network
 		can be found out from OpenSIPS admin. You cannot send messages from your SIP client to your associated Jabber
 		account--is something like sending messages to yourself.

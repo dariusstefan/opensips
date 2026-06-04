@@ -325,7 +325,8 @@ Registrar will store the value of the AVP configured by this
 		and protocol of the REGISTER message being processed.
 
 
-> **Note:** The value of this parameter should be the same as the value of
+> [!NOTE]
+> The value of this parameter should be the same as the value of
 			corresponding parameter of nathelper module.
 
 
