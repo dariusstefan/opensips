@@ -36,7 +36,8 @@ Example of usage:
 
 ## append_branch([uri], [qvalue]) {#append_branch}
 
-> **@@green|Attention!@@** @@red|TO BECOME OBSOLETE@@, replaced by [append_msg_branch()](#append_msg_branch).
+> [!WARNING]
+> TO BECOME OBSOLETE, replaced by [append_msg_branch()](#append_msg_branch).
 
 Adds a new message branch, so it extends the destination set by a new entry. The difference is that current URI is taken as new entry.
 

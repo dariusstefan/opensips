@@ -32,7 +32,10 @@ Parameters:
 * **pid**: the pid of the process that raises the event.
 
 > [!IMPORTANT]
-> > **Observation:** If the event_pkg_threshold is not specified or 0, then this event is disabled.
+>
+> > [!NOTE]
+> > If the event_pkg_threshold is not specified or 0, then this event is disabled.
+>
 
 ## Shared memory threshold exceeded {#E_CORE_SHM_THRESHOLD}
 
@@ -47,7 +50,10 @@ Parameters:
 * **size**: the total amount of private memory.
 
 > [!IMPORTANT]
-> > **Observation:** If the event_shm_threshold is not specified or 0, then this event is disabled.
+>
+> > [!NOTE]
+> > If the event_shm_threshold is not specified or 0, then this event is disabled.
+>
 
 ## Process Auto-Scaling (upscale and downscale) {#E_CORE_PROC_AUTO_SCALE}
 

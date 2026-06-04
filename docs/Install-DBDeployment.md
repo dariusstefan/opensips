@@ -19,7 +19,8 @@ Open your OpenSIPS CLI configuration file and specify the following parameters:
 
 You can find more information about the OpenSIPS CLI tool configuration [here](https://github.com/OpenSIPS/opensips-cli/blob/master/docs/modules/database.md#configuration).
 
-> **Observation:** OpenSIPS CLI searches for its configuration files in `~/.opensips-cli.cfg`, `/etc/opensips-cli.cfg`, `/etc/opensips/opensips-cli.cfg`, but you can also specify your own configuration file using the `-f` parameter.
+> [!NOTE]
+> OpenSIPS CLI searches for its configuration files in `~/.opensips-cli.cfg`, `/etc/opensips-cli.cfg`, `/etc/opensips/opensips-cli.cfg`, but you can also specify your own configuration file using the `-f` parameter.
 
 ## Creating the Database
 

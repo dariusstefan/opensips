@@ -59,7 +59,8 @@ $var(a) = 4 + ( 7 & ( ~2 ) );
 
 ```
 
-> **Observation:** to ensure the priority of operands in expression evaluations do use __parenthesis__.
+> [!NOTE]
+> to ensure the priority of operands in expression evaluations do use __parenthesis__.
 
 Arithmetic expressions can be used in condition expressions via test operator ' [ ... ] '.
 

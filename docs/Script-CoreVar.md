@@ -226,13 +226,16 @@ Examples:
 
 `$bf` - displays a list with the branch flags set for the current SIP request  
 
-> **@@green|Attention!@@** @@red|TO BECOME OBSOLETE@@, replaced by [`$msg.branch.flags`](#msg.branch.flags)
+> [!WARNING]
+> TO BECOME OBSOLETE, replaced by [`$msg.branch.flags`](#msg.branch.flags)
 
 ### Branch - $branch {#branch}
 
 `$branch` - this variable is used for creating new branches by writing into it the value of a SIP URI.  
 
-> **@@green|Attention!@@** @@red|TO BECOME OBSOLETE@@, replaced by [`$msg.branch`](#msg.branch)
+> [!WARNING]
+> TO BECOME OBSOLETE, replaced by [`$msg.branch`](#msg.branch)
+
 Examples:
 ```text
 
@@ -256,7 +259,8 @@ The variable accepts also index `$(branch(uri)[1])` for accessing a specific bra
 
 To get all branches, use the * index - `$(branch(uri)[*])`.  
 
-> **@@green|Attention!@@** @@red|TO BECOME OBSOLETE@@, replaced by [`$msg.branch.uri`](#msg.branch.uri)  
+> [!WARNING]
+> TO BECOME OBSOLETE, replaced by [`$msg.branch.uri`](#msg.branch.uri)
 
 Examples:
 ```text
@@ -286,7 +290,8 @@ Examples:
 
 `$branch.flag(flag_name)[]` - this variable provides read/write access to the value of a single certain branch flag (identified by name). The values accepted for writing are 1 (set) and 0 (unset). The returned values are 1/"true" (set) and 0/"false" (unset). An index is accepted, in order to access the flag for a certain branch. By default the 0 (or current) branch accessed (for more on index, see the the [branch.fields](#branch.fields) variable) - note that "*" is not accepted.  
 
-> **@@green|Attention!@@** @@red|TO BECOME OBSOLETE@@, replaced by [`$msg.branch.flag`](#msg.branch.flag)
+> [!WARNING]
+> TO BECOME OBSOLETE, replaced by [`$msg.branch.flag`](#msg.branch.flag)
 
 ```text
 
@@ -538,7 +543,9 @@ The variable can be used in REQUEST and FAILURE routes.
 
 The accepted values are 0 for FALSE, pozitive non-zero for TRUE. The returned values are 0 for FALSE and 1 for TRUE.  
 
-> **Observation:** the */ALL index cannot be used here.
+> [!NOTE]
+> the */ALL index cannot be used here.
+
 ```text
 
    # creates a new branch
@@ -557,7 +564,9 @@ The accepted values are 0 for FALSE, pozitive non-zero for TRUE. The returned va
 
 An attribute can have whatever name (no need to be pre-defined) and it can have a single value (at a time), string or integer.  
 
-> **Observation:** the */ALL index cannot be used here.
+> [!NOTE]
+> the */ALL index cannot be used here.
+
 ```text
 
    # creates a new branch
