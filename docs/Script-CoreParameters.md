@@ -628,8 +628,7 @@ Example of usage:
 
 ```
 
-[mem_dump](#memdump)
-### memdump | mem_dump  
+### memdump | mem_dump {#memdump}
 
 Log level to print memory status information (runtime and shutdown). It has to be less than the value of 'log_level' parameter if you want memory info to be logged. Default: memdump=L_DBG (4)
 
@@ -641,8 +640,7 @@ memdump=2
 
 NOTE that setting memlog (see below), will also set the memdump parameter - if you want different values for memlog and memdump, you need to first set memlog and then memdump.
 
-[mem_log](#memlog)
-### memlog | mem_log  
+### memlog | mem_log {#memlog}
 
 Log level to print memory debug info. It has to be less than the value of 'log_level' parameter if you want memory info to be logged. Default: memlog=L_DBG (4)
 
