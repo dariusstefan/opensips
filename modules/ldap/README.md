@@ -100,11 +100,13 @@ LDAP search filter definition following rules of RFC 4515
 				  [RFC4515](#RFC4515)
 
 
-> **Note:** The following table lists characters that have to be
+> [!NOTE]
+> The following table lists characters that have to be
                   escaped in LDAP search filters:
 
 
-> **Note:** Non-URL characters in an LDAP URL have to be escaped using
+> [!NOTE]
+> Non-URL characters in an LDAP URL have to be escaped using
           percent-encoding (refer to section 2.1 of RFC 4516). In particular
 	  this means that any "?" character in an LDAP URL component must be
 	  written as "%3F", since "?" is used as a URL delimiter. The exported function `ldap_filter_url_encode` ([ldap filter url encode fn](#ldap-filter-url-encode-fn))
