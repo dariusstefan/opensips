@@ -89,12 +89,12 @@ The OpenSIPS scripting language supports the following data types:
   * Min value: -2,147,483,648 == - 2 ^ 31
 * *string* (unlimited size)
   * note that some functions which use strings may have internal buffers which limit the maximum size of the strings (e.g. the [xlog()](https://www.opensips.org/Documentation/Script-CoreFunctions-4-1#toc54) function's output buffer is configurable via [xlog_buf_size](https://www.opensips.org/Documentation/Script-CoreParameters-4-1#toc96))
-* *double* (packed as string), through the **[mathops](https://opensips.org/docs/modules/4.1.x/mathops.html)** module
+* *double* (packed as string), through the **[mathops](../modules/mathops/README.md)** module
 
 ### Complex
 
 * *list* via the **[`$avp` variable](https://www.opensips.org/Documentation/Script-CoreVar-4-1#toc2)**
-* *map* via the **[`$json`](https://opensips.org/docs/modules/4.1.x/json.html#pv_json)** and **[`$xml`](https://opensips.org/docs/modules/4.1.x/xml.html#pv_xml)** variables
+* *map* via the **[`$json`](../modules/json/README.md#pv_json)** and **[`$xml`](../modules/xml/README.md#pv_xml)** variables
 
 ## Function Calling Conventions {#function-calling-conventions}
 All OpenSIPS [core](https://www.opensips.org/Documentation/Script-CoreFunctions-4-1) and [module](https://www.opensips.org/Documentation/Function-Index-4-1) functions internally share the same function interface, such that they benefit from the following calling convention:
