@@ -64,4 +64,4 @@ The OpenSIPS modules may or may not provide their own groups and identifiers. Fo
 
 ## Scripting identifiers {#scripting_identifiers}
 
-The [status_report](https://opensips.org/docs/modules/3.6.x/status_report.html) allow the creation of custom SR identifiers from script level. Even more, it is possible to set the status or to publish a report from script for such custom identifiers.
+The [status_report](../modules/status_report/README.md) allow the creation of custom SR identifiers from script level. Even more, it is possible to set the status or to publish a report from script for such custom identifiers.

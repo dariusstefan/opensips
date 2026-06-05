@@ -137,7 +137,7 @@ cache_store("redis:cluster1", "passwd_$tu", "$var(x)");
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## cache_remove(storage_id, attribute) {#cache_remove}
 
@@ -159,7 +159,7 @@ cache_remove("redis:cluster1", "total_minutes_$fU");
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## cache_fetch(storage_id, attribute, result) {#cache_fetch}
 
@@ -184,7 +184,7 @@ cache_fetch("redis:cluster1", "credit_$fU", $var(ret));
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## cache_counter_fetch(storage_id, counter_attribute, result) {#cache_counter_fetch}
 
@@ -230,7 +230,7 @@ cache_add("redis:cluster1", "my_counter", 5, 0);
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## cache_sub(storage_id, attribute, decrement, expire, [new_val]) {#cache_sub}
 
@@ -253,7 +253,7 @@ cache_sub("redis:cluster1", "my_counter", 5, 0);
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## cache_raw_query(storage_id, raw_query, result) {#cache_raw_query}
 
@@ -274,7 +274,7 @@ cache_raw_query("mongodb", "{ \"op\" : \"count\",\"query\": { \"username\" : $rU
 
 ```
 
-More complex examples can be found in the [Key-Value Interface Tutorial](/documentation/tutorials-keyvalueinterface).
+More complex examples can be found in the [Key-Value Interface Tutorial](/docs/tutorials-keyvalueinterface).
 
 ## break() {#break}
 
