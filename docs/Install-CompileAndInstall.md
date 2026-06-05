@@ -25,7 +25,7 @@ The INSTALL file provides information about:
 
 ## Video Tutorial
 
-The OpenSIPS team has held a webinar, which will guide you through the process of doing a quick installation of OpenSIPS ( downloading sources, compiling, installing, etc ) and OpenSIPS Control Panel ( installing, provisioning users ), and will show you what you have to do in order to get a fully functional platform in a matter of minutes. If you find video tutorials easier that text based ones, please feel free to go to the [OpenSIPS Installation Webinar](/documentation/tutorials-gettingstarted) page and download the webinar recording.
+The OpenSIPS team has held a webinar, which will guide you through the process of doing a quick installation of OpenSIPS ( downloading sources, compiling, installing, etc ) and OpenSIPS Control Panel ( installing, provisioning users ), and will show you what you have to do in order to get a fully functional platform in a matter of minutes. If you find video tutorials easier that text based ones, please feel free to go to the [OpenSIPS Installation Webinar](/docs/tutorials-gettingstarted) page and download the webinar recording.
 
 ## Compile
 
