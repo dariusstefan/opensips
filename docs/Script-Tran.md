@@ -42,7 +42,7 @@ $var(x) = "sip:" + $fU + "@" + $td;
 
 The transformations are intended to facilitate access to different attributes of variables (like strlen of value, parts of value, substrings) or complete different value of variables (encoded in hexa, md5 value, escape/unescape value for DB operations...).
 
-A transformation is represented in between **'`{**' and **'}`**' and follows the name of a variable. When using transformations, the variable name and transformations **must** be enclosed in between **'(**' and **')**'.
+A transformation is represented in between `{` and `}` and follows the name of a variable. When using transformations, the variable name and transformations **must** be enclosed in between `(` and `)`.
 
 Example:
 
