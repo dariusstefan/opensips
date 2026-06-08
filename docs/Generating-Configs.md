@@ -24,7 +24,7 @@ make menuconfig
 Once in the menuconfig tool, navigate to the 'Generate OpenSIPS Script' option, and then choose your desired script type.
 Once you have chosen you script type, you will be able to go to configure the various available options for that script ( described below ). Enabling certain options per script is done by using the spacebar key. Once you have configured your desired options, you can hit the 'q' key to go to the previous menu, and hit 'Save Changes'. Then, you can generate the OpenSIPS script with your configurations. At the end, the graphical tool will give you the path for your newly generated config file ( eg : Config generated : /usr/local/etc/opensips/opensips_residential_2013-5-21_12:39:48.cfg )
 
-%rfloat width=400px % ![menuconfig snapshot](/images/docs/tutorials/menuconfig_snapshot.png) | 
+ ![menuconfig snapshot](/images/docs/tutorials/menuconfig_snapshot.png)
 
 ## Types of Configs
 
