@@ -34,7 +34,7 @@ A B2B session can be triggered in two ways:
 
 High Availability for B2B sessions can be achieved by enabling the clustering support
 	offered by the the lower *b2b_entities* module (by setting the
-	[cluster_id](https://opensips.org/docs/modules/3.1.x/b2b_entities.html#param_cluster_id) modparam from *b2b_entities*).
+	[cluster_id](../b2b_entities#param_cluster_id) modparam from *b2b_entities*).
 
 
 ### Scenario Logic {#scenario_logic}
