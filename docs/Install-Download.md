@@ -9,7 +9,7 @@ description: "OpenSIPS packages for various distributions are available for down
 
 ## Packages download - preferred method {#packages}
 
-OpenSIPS packages for various distributions are available for download in [our repository](/downloads/downloads#osipmi).
+OpenSIPS packages for various distributions are available for download in [our repository](https://www.opensips.org/Downloads/Downloads#osipmi).
 
 ## GIT download {#git}
 
