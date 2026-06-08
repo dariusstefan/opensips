@@ -43,7 +43,7 @@ Example of usage:
 
 Note that if a 'route(X)' is called from a 'branch_route[Y]' then in 'route[X]' is just processed each separate branch instead of all branches together as occurs in main route.
 
-A route can return a set of values, that can later be retrieved from the route's calling context using the [`$return`](https://www.opensips.org/Documentation/Script-CoreVar-4-0#return) variable.
+A route can return a set of values, that can later be retrieved from the route's calling context using the [`$return`](https://web.opensips.org/docs/manual/4-0/script-corevar#return) variable.
 
 Example of passing values:
 ```c
@@ -198,7 +198,7 @@ onreply_route[global] {
 
 ## error_route {#error_route}
 
-The error route is executed automatically when a parsing error occurs during SIP request processing, or when a script [assert](http://www.opensips.org/Documentation/Script-CoreFunctions-4-0#toc2) fails. It allows the administrator to decide what to do in such error cases.
+The error route is executed automatically when a parsing error occurs during SIP request processing, or when a script [assert](https://web.opensips.org/docs/manual/4-0/script-corefunctions#toc2) fails. It allows the administrator to decide what to do in such error cases.
 
 IMPORTANT: as this is triggered ONLY for SIP request, OpenSIPS has to be able to correctly parse the first line of the SIP message. So any syntax error in the first line will NOT trigger this route (as OpenSIPS will not be able to tell if a reply or request).
 

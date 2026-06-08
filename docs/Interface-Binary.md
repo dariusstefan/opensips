@@ -9,7 +9,7 @@ The **Binary Internal Interface** is an OpenSIPS core interface which offers an 
 
 ## Configuring the Binary Internal Interface listeners
 
-In order to listen for incoming Binary Packets, a **bin:** interface must be specified.  Its number of listener processes can be tuned with *[tcp_workers](https://opensips.org/Documentation/Script-CoreParameters-4-0#tcp_workers)* core parameter.
+In order to listen for incoming Binary Packets, a **bin:** interface must be specified.  Its number of listener processes can be tuned with *[tcp_workers](https://web.opensips.org/docs/manual/4-0/script-coreparameters#tcp_workers)* core parameter.
 
 ```c
 
@@ -42,7 +42,7 @@ In order to **send packets**, the interface provides the following primitives:
 * *int bin_init(str *mod_name, int packet_type)* - begins the construction of a new Binary Packet
 * *int bin_push_str(const str *info)* - add a string to the Binary Packet that is currently being built
 * *int bin_push_int(int info)* - add an integer to the Binary Packet that is currently being built
-* *int bin_send(union sockaddr_union *de*[tcp_workers](https://opensips.org/Documentation/Script-CoreParameters-4-0#tcp_workers) *core parameter.st)* - sends the Binary Packet to a given destination over UDP
+* *int bin_send(union sockaddr_union *de*[tcp_workers](https://web.opensips.org/docs/manual/4-0/script-coreparameters#tcp_workers) *core parameter.st)* - sends the Binary Packet to a given destination over UDP
 
   
 
