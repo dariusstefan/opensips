@@ -167,13 +167,13 @@ route [pn_counter]
 
 The following functions may also be called asynchronously:
 
-* [avp_db_query](http://www.opensips.org/html/docs/modules/3.4.x/avpops.html#id294986)
-* [rest_get](http://www.opensips.org/html/docs/modules/3.4.x/rest_client.html#id293741)
-* [rest_post](http://www.opensips.org/html/docs/modules/3.4.x/rest_client.html#id293886)
-* [rest_put](http://www.opensips.org/html/docs/modules/3.4.x/rest_client.html#id293886)
-* [exec](http://www.opensips.org/html/docs/modules/3.4.x/exec#id294052)
-* [ldap_search](http://www.opensips.org/html/docs/modules/3.4.x/ldap.html#ldap-search-async-fn)
-* [sleep](http://www.opensips.org/html/docs/modules/3.4.x/cfgutils.html#id294676)
+* [avp_db_query](../modules/avpops/README.md#id294986)
+* [rest_get](../modules/rest_client/README.md#id293741)
+* [rest_post](../modules/rest_client/README.md#id293886)
+* [rest_put](../modules/rest_client/README.md#id293886)
+* [exec](../modules/exec/README.md#id294052)
+* [ldap_search](../modules/ldap/README.md#ldap-search-async-fn)
+* [sleep](../modules/cfgutils/README.md#id294676)
 
 The async implementation is not limited to the above functions, but these are the first ones migrated to async support. More I/O related functions will be ported to the async support.
 
