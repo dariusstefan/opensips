@@ -24,23 +24,23 @@ I most of the cases, the status and reports of an identifier are internally prod
 
 ## Scripting functions {#scripting}
 
-The SR Interface provides a script function to check the readiness status of an identifier (or of an entire group), see the [sr_check_status( group, \[identifier\])](https://www.opensips.org/Documentation/Script-CoreFunctions-3-3#sr_check_status) function.
+The SR Interface provides a script function to check the readiness status of an identifier (or of an entire group), see the [sr_check_status( group, \[identifier\])](https://web.opensips.org/docs/manual/3-3/script-corefunctions#sr_check_status) function.
 
 ---
 
 ## MI functions {#mi}
 
 The SR Interface provides multiple functions to check/list the status of one/multiple identifiers and to list their reports:
-* [sr_get_status](https://www.opensips.org/Documentation/Interface-CoreMI-3-3#sr_get_status)
-* [sr_list_status](https://www.opensips.org/Documentation/Interface-CoreMI-3-3#sr_list_status)
-* [sr_list_reports](https://www.opensips.org/Documentation/Interface-CoreMI-3-3#sr_list_reports)
-* [sr_list_identifiers](https://www.opensips.org/Documentation/Interface-CoreMI-3-3#sr_list_identifiers)
+* [sr_get_status](https://web.opensips.org/docs/manual/3-3/interface-coremi#sr_get_status)
+* [sr_list_status](https://web.opensips.org/docs/manual/3-3/interface-coremi#sr_list_status)
+* [sr_list_reports](https://web.opensips.org/docs/manual/3-3/interface-coremi#sr_list_reports)
+* [sr_list_identifiers](https://web.opensips.org/docs/manual/3-3/interface-coremi#sr_list_identifiers)
 
 ---
 
 ## Events {#code_identifiers}
 
-The SR framework raises an event each time the status of a Status/Report identifier changes. See the [E_CORE_SR_STATUS_CHANGED event](https://www.opensips.org/Documentation/Interface-CoreEvents-3-3#E_CORE_SR_STATUS_CHANGED) for more details.
+The SR framework raises an event each time the status of a Status/Report identifier changes. See the [E_CORE_SR_STATUS_CHANGED event](https://web.opensips.org/docs/manual/3-3/interface-coreevents#E_CORE_SR_STATUS_CHANGED) for more details.
 
 ---
 

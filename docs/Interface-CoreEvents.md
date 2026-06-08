@@ -59,7 +59,7 @@ Parameters:
 
 **Event**: E_CORE_PROC_AUTO_SCALE
 
-This event is triggered whenever a new process is created (forked) or a process is terminated due the auto-scaling logic. In order to have this event trigger, the [auto-scaling](https://www.opensips.org/Documentation/Script-CoreParameters-3-3#auto_scaling_profile) must be enabled in your configuration.
+This event is triggered whenever a new process is created (forked) or a process is terminated due the auto-scaling logic. In order to have this event trigger, the [auto-scaling](https://web.opensips.org/docs/manual/3-3/script-coreparameters#auto_scaling_profile) must be enabled in your configuration.
 
 Parameters:
 * **group_type**: the type/name of the scaling group (UDP/TCP/TIMER).
