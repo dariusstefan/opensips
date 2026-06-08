@@ -413,9 +413,9 @@ Meaning of the parameters is as follows:
 
 **VERY IMPORTANT:** Since version 2.3 report_capture function
 			behaviour will change depending on
-			[homer5_on](https://opensips.org/docs/modules/2.3.x/proto_hep#idp154080)
+			[homer5_on](../proto_hep#idp154080)
 			parameter from
-			[proto_hep](https://opensips.org/docs/modules/2.3.x/proto_hep). Check
+			[proto_hep](../proto_hep). Check
 			[sql](https://github.com/OpenSIPS/opensips/tree/master/modules/sipcapture/sql)
 			folder from the module to check the fields of the tables for each version.
 

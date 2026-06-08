@@ -42,7 +42,7 @@ In addition to the event-driven replication, an OpenSIPS instance will first
 			try to learn all the local cache information from antoher node in the cluster at startup.
 			The data synchronization mechanism requires defining one of the nodes in the cluster
 			as a "**seed**" node.
-			See the [clusterer](https://opensips.org/docs/modules/3.0.x/clusterer.html#capabilities)
+			See the [clusterer](../clusterer#capabilities)
 			module for details on how to do this and why is it needed.
 
 
