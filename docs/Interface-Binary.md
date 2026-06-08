@@ -30,7 +30,7 @@ Examples of cluster-enabled modules which use the binary interface are **dialog*
 
 ```
 
-More details can be found in the [dialog](https://www.opensips.org/html/docs/modules/3.5.x/dialog#dialog-clustering) and [usrloc](https://www.opensips.org/html/docs/modules/3.5.x/usrloc#distributed-sip-user-location) documentation pages.
+More details can be found in the [dialog](../modules/dialog/README.md#dialog-clustering) and [usrloc](../modules/usrloc/README.md#distributed-sip-user-location) documentation pages.
 
 ---
 
