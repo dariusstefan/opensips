@@ -32,7 +32,7 @@ Usage is straightforward: if your blocking function supports asynchronous mode (
 async(blocking_function(...), resume_route [,timeout]);
 
 ```
-*Note that resume_route must be a **[simple route](http://www.opensips.org/Documentation/Script-Routes-4-1#toc1)***.
+*Note that resume_route must be a **[simple route](https://web.opensips.org/docs/manual/devel/script-routes#toc1)***.
 
   
 
@@ -113,7 +113,7 @@ route[report_route] {
 }
 
 ```
-*Note that report_route must be a **[simple route](http://www.opensips.org/Documentation/Script-Routes-4-1#toc1)***.
+*Note that report_route must be a **[simple route](https://web.opensips.org/docs/manual/devel/script-routes#toc1)***.
 
   
 
