@@ -1255,7 +1255,7 @@ The capability identifiers also provide reports regarding the main stages of
 
 
 For how to access and use the Status/Report information, please see
-	[Status/Report Interface documentation](https://www.opensips.org/Documentation/Interface-StatusReport-3-3).
+	[Status/Report Interface documentation](https://web.opensips.org/docs/manual/3-3/interface-statusreport).
 
 
 ### Usage Example
