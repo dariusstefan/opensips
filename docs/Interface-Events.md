@@ -32,14 +32,14 @@ External applications can be notified about the events triggered using various t
 
 Available transport protocols are :
 
-* [event_datagram](http://www.opensips.org/html/docs/modules/4.0.x/event_datagram) - sends Datagrams over UDP or UNIX sockets
-* [event_flastore](http://www.opensips.org/html/docs/modules/4.0.x/event_flatstore) - writes to plain text files
-* [event_kafka](http://www.opensips.org/html/docs/modules/4.0.x/event_kafka) - sends events via Apache Kafka broker
-* [event_rabbitmq](http://www.opensips.org/html/docs/modules/4.0.x/event_rabbitmq) - sends an AMQP message to a RabbitMQ server
-* [event_route](http://www.opensips.org/html/docs/modules/4.0.x/event_route) - runs an OpenSIPS event_route in script
-* [event_stream](http://www.opensips.org/html/docs/modules/4.0.x/event_stream) - sends a JSON-RPC command/notification over TCP
-* [event_virtual](http://www.opensips.org/html/docs/modules/4.0.x/event_virtual) - aggregates event backends for failover and balancing
-* [event_xmlrpc](http://www.opensips.org/html/docs/modules/4.0.x/event_xmlrpc) - sends a XML-RPC command over TCP
+* [event_datagram](../modules/event_datagram/README.md) - sends Datagrams over UDP or UNIX sockets
+* [event_flastore](../modules/event_flatstore/README.md) - writes to plain text files
+* [event_kafka](../modules/event_kafka/README.md) - sends events via Apache Kafka broker
+* [event_rabbitmq](../modules/event_rabbitmq/README.md) - sends an AMQP message to a RabbitMQ server
+* [event_route](../modules/event_route/README.md) - runs an OpenSIPS event_route in script
+* [event_stream](../modules/event_stream/README.md) - sends a JSON-RPC command/notification over TCP
+* [event_virtual](../modules/event_virtual/README.md) - aggregates event backends for failover and balancing
+* [event_xmlrpc](../modules/event_xmlrpc/README.md) - sends a XML-RPC command over TCP
 
 An external application can subscribe to any of the exported module and can be notified using any of the loaded transport modules/protocols.
 
