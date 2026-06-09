@@ -75,7 +75,7 @@ The SQL, Event Interface and AAA backend support are compiled in the
 
 A very comprehensive description of how the accounting module works in
 	terms accounting scope, accounting events and accounting backends can
-	be found in this online [Advanced Accounting Tutorial](https://www.opensips.org/Documentation/Tutorials-Advanced-Accounting/).
+	be found in this online [Advanced Accounting Tutorial](https://web.opensips.org/docs/tutorials-advanced-accounting).
 
 
 #### General Example
