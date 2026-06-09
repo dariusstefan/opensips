@@ -89,7 +89,7 @@ Currently, the metadata information may be published to NoSQL databases
 		MongoDB and Cassandra.
 
 
-The [federated user location tutorial](https://opensips.org/Documentation/Tutorials-Distributed-User-Location-Federation)
+The [federated user location tutorial](https://web.opensips.org/docs/tutorials-distributed-user-location-federation)
 		contains precise details on how to achieve this setup (including High
 		Availability support).
 
@@ -130,7 +130,7 @@ Registrations may optionally be fully managed inside NoSQL
 		and Apache Cassandra.
 
 
-The ["full sharing" user location tutorial](https://opensips.org/Documentation/Tutorials-Distributed-User-Location-Full-Sharing)
+The ["full sharing" user location tutorial](https://web.opensips.org/docs/tutorials-distributed-user-location-full-sharing)
 		contains precise details on how to achieve this setup (including full
 		NoSQL storage support).
 
@@ -670,7 +670,7 @@ A pre-defined working mode for the usrloc module.  Setting this
 			[cluster mode](#param_cluster_mode) and
 			"sync-from-cluster" [restart persistency](#param_restart_persistency).
 			This will require the configuration of multiple "seed" nodes in
-			the cluster. Refer to the [federated user location tutorial](https://opensips.org/Documentation/Tutorials-Distributed-User-Location-Federation) for more
+			the cluster. Refer to the [federated user location tutorial](https://web.opensips.org/docs/tutorials-distributed-user-location-federation) for more
 			details.
 - **"full-sharing-cluster"** -
 			OpenSIPS will run with a "full-sharing"
