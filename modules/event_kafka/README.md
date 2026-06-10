@@ -122,8 +122,7 @@ modparam("event_kafka", "broker_id", "[k1]127.0.0.1:9092/topic1?g.linger.ms=100&
 ### Exported Functions {#exported_functions}
 
 
-#### kafka_publish(broker_id, message, [key], 
-				[report_route]) {#func_kafka_publish}
+#### kafka_publish(broker_id, message, [key], [report_route]) {#func_kafka_publish}
 
 
 Publishes a message to a Kafka broker (or cluster). As the actual

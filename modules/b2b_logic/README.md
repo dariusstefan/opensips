@@ -475,8 +475,7 @@ modparam("b2b_logic", "b2bl_early_update", 1)
 ### Exported Functions {#exported_functions}
 
 
-#### b2b_init_request(id, [flags], [req_route],
-			[reply_route]) {#func_b2b_init_request}
+#### b2b_init_request(id, [flags], [req_route], [reply_route]) {#func_b2b_init_request}
 
 
 This function initializes a new B2B session based on an initial INVITE.
@@ -540,8 +539,7 @@ if(is_method("INVITE") && !has_totag() && prepaid_user()) {
 ```
 
 
-#### b2b_server_new(id, [adv_contact], [extra_hdrs],
-			[extra_hdr_bodies]) {#func_b2b_server_new}
+#### b2b_server_new(id, [adv_contact], [extra_hdrs], [extra_hdr_bodies]) {#func_b2b_server_new}
 
 
 This function creates a new server entity (dialog where OpenSIPS acts as a UAS)
@@ -579,8 +577,7 @@ if(is_method("INVITE") && !has_totag()) {
 ```
 
 
-#### b2b_client_new(id, dest_uri, [proxy], [from_dname],
-			[adv_contact], [extra_hdrs], [extra_hdr_bodies]) {#func_b2b_client_new}
+#### b2b_client_new(id, dest_uri, [proxy], [from_dname], [adv_contact], [extra_hdrs], [extra_hdr_bodies]) {#func_b2b_client_new}
 
 
 This function creates a new client entity (dialog where OpenSIPS acts as a UAC)
@@ -879,10 +876,7 @@ if ($rU == "pickup") {
 ```
 
 
-#### b2b_trigger_scenario(scenario, [params], peer1,
-			[extra_headers_peer1], [extra_headers_contents_peer1],
-			peer2
-			[extra_headers_peer2], [extra_headers_contents_peer2]) {#func_b2b_trigger_scenario}
+#### b2b_trigger_scenario(scenario, [params], peer1, [extra_headers_peer1], [extra_headers_contents_peer1], peer2 [extra_headers_peer2], [extra_headers_contents_peer2]) {#func_b2b_trigger_scenario}
 
 
 This function triggers a certain scenario from routing script, e.g.

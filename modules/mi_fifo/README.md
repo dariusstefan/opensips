@@ -128,8 +128,7 @@ modparam("mi_fifo", "fifo_mode", 0600)
 ```
 
 
-#### fifo_group (integer)
-		fifo_group (string) {#param_fifo_group}
+#### fifo_group (integer) fifo_group (string) {#param_fifo_group}
 
 
 Group to be used for creating the listening FIFO file.
@@ -146,8 +145,7 @@ modparam("mi_fifo", "fifo_group", "root")
 ```
 
 
-#### fifo_user (integer)
-		fifo_group (string) {#param_fifo_user}
+#### fifo_user (integer) fifo_group (string) {#param_fifo_user}
 
 
 User to be used for creating the listening FIFO file.

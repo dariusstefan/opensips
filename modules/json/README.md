@@ -359,9 +359,7 @@ The `json_compact` variable has the
 ### Exported Functions {#exported_functions}
 
 
-#### 
-				json_link($json(dest_id), $json(source_id))
-				 {#func_json_link}
+#### json_link($json(dest_id), $json(source_id)) {#func_json_link}
 
 
 This function can be used to link json objects together.

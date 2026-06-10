@@ -1582,8 +1582,7 @@ Meaning of the parameters is as follows:
 				(also called table) to be registered.
 
 
-#### 
-				ul_insert_urecord(domain, aor, rec, is_replicated)
+#### ul_insert_urecord(domain, aor, rec, is_replicated)
 
 
 The function creates a new record structure and inserts it in the
@@ -1606,8 +1605,7 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### 
-				ul_delete_urecord(domain, aor, is_replicated)
+#### ul_delete_urecord(domain, aor, is_replicated)
 
 
 The function deletes all the contacts bound with the given Address
@@ -1672,8 +1670,7 @@ Meaning of the parameters is as follows:
 			unlocked.
 
 
-#### 
-				ul_release_urecord(record, is_replicated)
+#### ul_release_urecord(record, is_replicated)
 
 
 Do some sanity checks - if all contacts have been removed, delete
@@ -1690,8 +1687,7 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### ul_insert_ucontact(record, contact,
-		contact_info, contact, is_replicated)
+#### ul_insert_ucontact(record, contact, contact_info, contact, is_replicated)
 
 
 The function inserts a new contact in the given record with
@@ -1711,8 +1707,7 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### ul_delete_ucontact
-			(record, contact, is_replicated)
+#### ul_delete_ucontact (record, contact, is_replicated)
 
 
 The function deletes given contact from record.
@@ -1732,8 +1727,7 @@ Meaning of the parameters is as follows:
 			callback. If uncertain, simply use 0.
 
 
-#### ul_delete_ucontact_from_id
-			(domain, contact_id)
+#### ul_delete_ucontact_from_id (domain, contact_id)
 
 
 The function deletes a contact with the given contact_id from
@@ -1769,8 +1763,7 @@ Meaning of the parameters is as follows:
 			contact.
 
 
-#### ul_get_domain_ucontacts
-			(domain, buf, len, flags)
+#### ul_get_domain_ucontacts (domain, buf, len, flags)
 
 
 The function retrieves all contacts of all registered users from the
@@ -1806,8 +1799,7 @@ Meaning of the parameters is as follows:
 			be set.
 
 
-#### ul_get_all_ucontacts
-			(buf, len, flags)
+#### ul_get_all_ucontacts (buf, len, flags)
 
 
 The function retrieves all contacts of all registered users and
@@ -1839,8 +1831,7 @@ Meaning of the parameters is as follows:
 			be set.
 
 
-#### ul_update_ucontact(record, contact,
-				contact_info, is_replicated)
+#### ul_update_ucontact(record, contact, contact_info, is_replicated)
 
 
 The function updates contact with new values.
@@ -1860,7 +1851,6 @@ Meaning of the parameters is as follows:
 
 
 #### ul_bind_ursloc( api )
-			
 
 
 The function imports all functions that are exported by the
@@ -1875,7 +1865,6 @@ Meaning of the parameters is as follows:
 
 
 #### ul_register_ulcb(type ,callback, param)
-			
 
 
 The function register with USRLOC a callback function to be called
@@ -1894,7 +1883,6 @@ Meaning of the parameters is as follows:
 
 
 #### ul_get_num_users()
-			
 
 
 The function loops through all domains summing up the number of users.
