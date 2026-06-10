@@ -99,8 +99,7 @@ The function can be used from REQUEST_ROUTE, ONREPLY_ROUTE.
 ```
 
 
-#### sngtc_callee_answer([listen_if_A], [listen_if_B])
-		 {#func_sngtc_callee_answer}
+#### sngtc_callee_answer([listen_if_A], [listen_if_B]) {#func_sngtc_callee_answer}
 
 
 Handles the SDP offer from 200 OK responses, intersects both offers with

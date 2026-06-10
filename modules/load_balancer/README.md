@@ -31,7 +31,7 @@ Also the module has the capability to do failover (to try a new destination
 
 
 Please refer to the Load-Balancer tutorial from the OpenSIPS website:
-		[https://opensips.org/Documentation/Tutorials-LoadBalancing-1-9](https://web.opensips.org/docs/tutorials-loadbalancing-1-9).
+		[https://opensips.org/Documentation/Tutorials-LoadBalancing-1-9](https://opensips.org/Documentation/Tutorials-LoadBalancing-1-9).
 
 
 ### Probing and Disabling destinations

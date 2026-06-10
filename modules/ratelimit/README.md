@@ -532,8 +532,7 @@ modparam("ratelimit", "slot_period", 100)
 ### Exported Functions {#exported_functions}
 
 
-#### rl_check(name, limit[, algorithm])
-			 {#func_rl_check}
+#### rl_check(name, limit[, algorithm]) {#func_rl_check}
 
 
 Check the current request against the pipe identified by name and

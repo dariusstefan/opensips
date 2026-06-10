@@ -479,8 +479,7 @@ modparam("permissions", "info_col", "info_col")
 ### Exported Functions {#exported_functions}
 
 
-#### check_address(group_id, ip,
-		port, proto [, context_info], [pattern], [partition]) {#func_check_address}
+#### check_address(group_id, ip, port, proto [, context_info], [pattern], [partition]) {#func_check_address}
 
 
 Returns 1 if group id, IP address, port and protocol given as

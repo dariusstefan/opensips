@@ -262,8 +262,7 @@ modparam("event_rabbitmq", "server_id","[ID3] uri = amqps://127.0.0.1; tls_domai
 ### Exported Functions {#exported_functions}
 
 
-#### rabbitmq_publish(server_id, routing_key, message 
-					[, [content_type [, headers, headers_vals]]]) {#func_rabbitmq_publish}
+#### rabbitmq_publish(server_id, routing_key, message [, [content_type [, headers, headers_vals]]]) {#func_rabbitmq_publish}
 
 
 Sends a publish message to a RabbitMQ server.

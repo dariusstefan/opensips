@@ -346,7 +346,6 @@ Meaning of the parameters is as follows:
 
 
 #### pack_hep(from, to, proto, payload, plen, retbuf, retlen)
-			
 
 
 The function packs connection details and sip message into HEP message. It's
@@ -368,7 +367,6 @@ Meaning of the parameters is as follows:
 
 
 #### register_hep_cb(cb)
-			
 
 
 The function register callbacks to be called whenever a HEP message
@@ -385,7 +383,6 @@ Meaning of the parameters is as follows:
 
 
 #### hep_version
-			
 
 
 Current version of hep used.

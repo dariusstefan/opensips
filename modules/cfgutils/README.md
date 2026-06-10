@@ -751,8 +751,7 @@ xlog("Current Unix timestamp: $var(sec) s, $var(usec) us\n");
 ```
 
 
-#### shuffle_avps(name)
-				 {#func_shuffle_avps}
+#### shuffle_avps(name) {#func_shuffle_avps}
 
 
 Randomly shuffles AVPs with *name*.
