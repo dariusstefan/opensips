@@ -271,8 +271,7 @@ modparam("avpops","db_scheme",
 ### Exported Functions {#exported_functions}
 
 
-#### avp_db_load(source, name, [db_id], [prefix]])
-				 {#func_avp_db_load}
+#### avp_db_load(source, name, [db_id], [prefix]]) {#func_avp_db_load}
 
 
 Loads from DB into memory the AVPs corresponding to the given
@@ -447,8 +446,7 @@ avp_db_query("DELETE FROM subscriber", , $avp(id));
 ```
 
 
-#### avp_delete(name)
-				 {#func_avp_delete}
+#### avp_delete(name) {#func_avp_delete}
 
 
 Deletes from memory the AVPs with *name* or,
@@ -482,8 +480,7 @@ avp_delete("a3");
 ```
 
 
-#### avp_pushto(destination, name)
-				 {#func_avp_pushto}
+#### avp_pushto(destination, name) {#func_avp_pushto}
 
 
 Pushes the value of AVP(s) into the SIP message.
@@ -528,8 +525,7 @@ avp_pushto("$br", "$avp(680)");
 ```
 
 
-#### avp_check(name, op_value)
-				 {#func_avp_check}
+#### avp_check(name, op_value) {#func_avp_check}
 
 
 Checks the value of the AVP(s) against an operator and value.
@@ -586,8 +582,7 @@ avp_check("$avp(foo)", "fm/$avp(fm_avp)/g");
 ```
 
 
-#### avp_copy(from_avp, to_avp)
-				 {#func_avp_copy}
+#### avp_copy(from_avp, to_avp) {#func_avp_copy}
 
 
 Copy / move an avp under a new name.
@@ -679,8 +674,7 @@ IMPORTANT NOTE: if the replacement string includes src_avp
 			processing will use it.
 
 
-#### avp_op(name, op_value)
-				 {#func_avp_op}
+#### avp_op(name, op_value) {#func_avp_op}
 
 
 Different integer operations with avps.
@@ -726,8 +720,7 @@ avp_op("$avp(number)", "sub/$avp(number2)/d");
 ```
 
 
-#### is_avp_set(name)
-				 {#func_is_avp_set}
+#### is_avp_set(name) {#func_is_avp_set}
 
 
 Check if any AVP with *name* is set.
@@ -757,8 +750,7 @@ if(is_avp_set("$avp(foo)"))
 ```
 
 
-#### avp_print()
-				 {#func_avp_print}
+#### avp_print() {#func_avp_print}
 
 
 Prints the list with all the AVPs from memory. This is only a

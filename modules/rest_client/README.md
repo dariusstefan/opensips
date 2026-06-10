@@ -309,9 +309,7 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### rest_post(url, send_body, [send_ctype],
-				recv_body_pv, [recv_ctype_pv], [retcode_pv])
-		 {#func_rest_post}
+#### rest_post(url, send_body, [send_ctype], recv_body_pv, [recv_ctype_pv], [retcode_pv]) {#func_rest_post}
 
 
 Perform a blocking HTTP POST on the given *url*.
@@ -383,9 +381,7 @@ if ($var(rcode) != 200) {
 ```
 
 
-#### rest_put(url, send_body, [send_ctype],
-				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		 {#func_rest_put}
+#### rest_put(url, send_body, [send_ctype], recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]]) {#func_rest_put}
 
 
 Perform a blocking HTTP PUT on the given *url*.
@@ -531,8 +527,7 @@ if (!rest_get("https://example.com"))
 			set both timeouts to the *same value*.
 
 
-#### rest_get(url, body_pv[, [ctype_pv][, [retcode_pv]]])
-		 {#afunc_rest_get}
+#### rest_get(url, body_pv[, [ctype_pv][, [retcode_pv]]]) {#afunc_rest_get}
 
 
 Perform an asynchronous HTTP GET.  This function behaves exactly the same as
@@ -568,9 +563,7 @@ route [resume] {
 ```
 
 
-#### rest_post(url, send_body_pv, [send_ctype_pv],
-				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		 {#afunc_rest_post}
+#### rest_post(url, send_body_pv, [send_ctype_pv], recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]]) {#afunc_rest_post}
 
 
 Perform an asynchronous HTTP POST.  This function behaves exactly the same as
@@ -605,9 +598,7 @@ route [resume] {
 ```
 
 
-#### rest_put(url, send_body_pv, [send_ctype_pv],
-				recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]])
-		 {#afunc_rest_put}
+#### rest_put(url, send_body_pv, [send_ctype_pv], recv_body_pv[, [recv_ctype_pv][, [retcode_pv]]]) {#afunc_rest_put}
 
 
 Perform an asynchronous HTTP PUT.  This function behaves exactly the same as

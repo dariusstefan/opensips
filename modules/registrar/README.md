@@ -1362,8 +1362,7 @@ add_sock_hdr("Sock-Info");
 ### Exported Asynchronous Functions
 
 
-#### pn_process_purr(domain)
-		 {#afunc_pn_process_purr}
+#### pn_process_purr(domain) {#afunc_pn_process_purr}
 
 
 Perform mid-dialog request processing, according to RFC 8599.  For

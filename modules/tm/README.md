@@ -1482,8 +1482,7 @@ t_replicate("sip:1.2.3.4",0x4);
 ```
 
 
-#### t_write_req(info,fifo)
-		t_write_unix(info,sock) {#func_t_write_req}
+#### t_write_req(info,fifo) t_write_unix(info,sock) {#func_t_write_req}
 
 
 Write via FIFO file or UNIX socket a lot of information regarding the

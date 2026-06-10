@@ -105,8 +105,7 @@ modparam("mi_datagram", "unix_socket_mode", 0600)
 ```
 
 
-#### unix_socket_group (integer)
-		unix_socket_group (string) {#param_unix_socket_group}
+#### unix_socket_group (integer) unix_socket_group (string) {#param_unix_socket_group}
 
 
 Group to be used for creating the listening UNIX socket.
@@ -123,8 +122,7 @@ modparam("mi_datagram", "unix_socket_group", "root")
 ```
 
 
-#### unix_socket_user (integer)
-		unix_socket_group (string) {#param_unix_socket_user}
+#### unix_socket_user (integer) unix_socket_group (string) {#param_unix_socket_user}
 
 
 User to be used for creating the listening UNIX socket.

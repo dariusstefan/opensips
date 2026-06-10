@@ -643,8 +643,7 @@ ldap_result("SIPIdentitySIPURI", $avp(10), "/^[^@]+@(.+)$/\1/");
 ```
 
 
-#### ldap_result_check(ldap_attr_name, string_to_match, [,
-        regex_subst]) {#ldap-result-check-fn}
+#### ldap_result_check(ldap_attr_name, string_to_match, [, regex_subst]) {#ldap-result-check-fn}
 
 
 This function compares `ldap_attr_name`'s value
