@@ -60,9 +60,7 @@ xlog("generated uuid: $uuid\n");
 ### Exported Functions {#exported_functions}
 
 
-#### 
-				uuid(out_var, [version], [namespace], [name])
-				 {#func_uuid}
+#### uuid(out_var, [version], [namespace], [name]) {#func_uuid}
 
 
 Generates a new UUID.

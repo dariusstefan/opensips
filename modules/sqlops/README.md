@@ -383,8 +383,7 @@ sql_query_one("SELECT value, type FROM usr_preferences WHERE username='$fU' and 
 ```
 
 
-#### sql_select([columns],table,[filter],[order],[res_col_avps], [db_id])
-				 {#func_sql_select}
+#### sql_select([columns],table,[filter],[order],[res_col_avps], [db_id]) {#func_sql_select}
 
 
 Function to perform a structured (not raw) SQL SELECT operation.
@@ -499,8 +498,7 @@ sql_select_one('["value","type"]', 'usr_preferences',
 ```
 
 
-#### sql_update(columns,table,[filter],[db_id])
-				 {#func_sql_update}
+#### sql_update(columns,table,[filter],[db_id]) {#func_sql_update}
 
 
 Function to perform a structured (not raw) SQL UPDATE operation.
@@ -547,8 +545,7 @@ sql_update( '[{"password":"my_secret"}]', 'subscriber',
 ```
 
 
-#### sql_insert(table,columns,[db_id])
-				 {#func_sql_insert}
+#### sql_insert(table,columns,[db_id]) {#func_sql_insert}
 
 
 Function to perform a structured (not raw) SQL INSERT operation.
@@ -585,8 +582,7 @@ sql_insert( 'cc_agents', '[{"agentid":"agentX"},{"skills":"info"},{"location":nu
 ```
 
 
-#### sql_delete(table,[filter],[db_id])
-				 {#func_sql_delete}
+#### sql_delete(table,[filter],[db_id]) {#func_sql_delete}
 
 
 Function to perform a structured (not raw) SQL DELETE operation.
@@ -628,8 +624,7 @@ sql_delete( 'subscriber', '[{"username": "$tu"}]');
 ```
 
 
-#### sql_replace(table,columns,[db_id])
-				 {#func_sql_replace}
+#### sql_replace(table,columns,[db_id]) {#func_sql_replace}
 
 
 Function very similar to [sql insert](#func_sql_insert) function,
@@ -640,8 +635,7 @@ Function very similar to [sql insert](#func_sql_insert) function,
 The function returns true if the query was successful.
 
 
-#### sql_avp_load(source, name, [db_id], [prefix]])
-				 {#func_sql_avp_load}
+#### sql_avp_load(source, name, [db_id], [prefix]]) {#func_sql_avp_load}
 
 
 Loads from DB into memory the AVPs corresponding to the given

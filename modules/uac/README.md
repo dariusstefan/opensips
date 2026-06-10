@@ -153,8 +153,7 @@ modparam("uac", "force_dialog", yes)
 ### Exported Functions {#exported_functions}
 
 
-#### uac_replace_from([display],uri)
-				uac_replace_to([display],uri) {#func_uac_replace_from}
+#### uac_replace_from([display],uri) uac_replace_to([display],uri) {#func_uac_replace_from}
 
 
 Replace in FROM/TO header the *display* name or/and
@@ -194,8 +193,7 @@ uac_replace_from( , "sip:batman@gotham.org");
 ```
 
 
-#### uac_restore_from()
-				uac_restore_to() {#func_uac_restore_from}
+#### uac_restore_from() uac_restore_to() {#func_uac_restore_from}
 
 
 This function will check if the FROM/TO URI was modified and will

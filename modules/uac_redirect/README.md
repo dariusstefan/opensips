@@ -141,8 +141,7 @@ modparam("uac_redirect","accept_filter",".*@siphub\.net")
 ### Exported Functions {#exported_functions}
 
 
-#### set_deny_filter(filter,flags)
-					 {#func_set_deny_filter}
+#### set_deny_filter(filter,flags) {#func_set_deny_filter}
 
 
 Sets additional deny filters. Maximum 6 may be combined. This
@@ -180,8 +179,7 @@ set_deny_filter(".*@domain1.net","");
 ```
 
 
-#### set_accept_filter(filter,flags)
-					 {#func_set_accept_filter}
+#### set_accept_filter(filter,flags) {#func_set_accept_filter}
 
 
 Sets additional accept filters. Maximum 6 may be combined. This

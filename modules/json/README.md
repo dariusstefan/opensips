@@ -359,9 +359,7 @@ The `json_compact` variable has the
 ### Exported Functions {#exported_functions}
 
 
-#### 
-				json_link($json(dest_id), $json(source_id))
-				 {#func_json_link}
+#### json_link($json(dest_id), $json(source_id)) {#func_json_link}
 
 
 This function can be used to link json objects together.
@@ -461,9 +459,7 @@ xlog("\nTest link :\n$json(stub)\n$json(b)\n\n");
 ```
 
 
-#### 
-				json_merge(main_json_var,patch_json_var,output_var))
-				 {#func_json_merge}
+#### json_merge(main_json_var,patch_json_var,output_var)) {#func_json_merge}
 
 
 The function can be used to patch merge patch_json_var into main_json_var and the output will be populated into the output_var

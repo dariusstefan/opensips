@@ -237,8 +237,7 @@ loose_route();
 ```
 
 
-#### record_route() and 
-		record_route(string) {#func_record_route}
+#### record_route() and record_route(string) {#func_record_route}
 
 
 The function adds a new Record-Route header field. The header field 

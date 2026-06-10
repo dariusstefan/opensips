@@ -674,8 +674,7 @@ rtpproxy_unforce();
 ```
 
 
-#### rtpproxy_stream2uac(prompt_name, count[, [set_id][, sock_var]]),
-	    rtpproxy_stream2uas(prompt_name, count[, [set_id][, sock_var]]) {#rtpproxy_stream2xxx}
+#### rtpproxy_stream2uac(prompt_name, count[, [set_id][, sock_var]]), rtpproxy_stream2uas(prompt_name, count[, [set_id][, sock_var]]) {#rtpproxy_stream2xxx}
 
 
 Instruct the RTPproxy to stream prompt/announcement pre-encoded with
@@ -734,8 +733,7 @@ Meaning of the parameters is as follows:
 ```
 
 
-#### rtpproxy_stop_stream2uac([[set_id][, sock_var]]),
-	    rtpproxy_stop_stream2uas([[set_id][, sock_var]]) {#rtpproxy_stop_stream2xxx}
+#### rtpproxy_stop_stream2uac([[set_id][, sock_var]]), rtpproxy_stop_stream2uas([[set_id][, sock_var]]) {#rtpproxy_stop_stream2xxx}
 
 
 Stop streaming of announcement/prompt/MOH started previously by the
