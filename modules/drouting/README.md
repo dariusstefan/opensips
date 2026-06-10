@@ -1507,7 +1507,7 @@ if (goes_to_gw(1, , $var(gw_attrs), , "my_partition")) {
 ```
 
 
-#### is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar],  [partition]) {#func_is_from_gw}
+#### is_from_gw([type], [flags], [gw_attrs_pvar], [carrier_attrs_pvar], [partition]) {#func_is_from_gw}
 
 
 The function checks if the sender of the message (source IP + source

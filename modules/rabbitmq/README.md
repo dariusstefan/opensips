@@ -184,8 +184,7 @@ modparam("rabbitmq", "timeout", 1000) # timeout after 1s
 ### Exported Functions {#exported_functions}
 
 
-#### rabbitmq_publish(server_id, routing_key, message 
-					[, [content_type [, headers, headers_vals]]]) {#func_rabbitmq_publish}
+#### rabbitmq_publish(server_id, routing_key, message [, [content_type [, headers, headers_vals]]]) {#func_rabbitmq_publish}
 
 
 Sends a publish message to a RabbitMQ server.
