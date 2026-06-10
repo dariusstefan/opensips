@@ -357,8 +357,7 @@ modparam("qrouting", "decimal_digits", 4)
 ### Exported Functions {#exported_functions}
 
 
-#### qr_set_xstat(rule_id, gw_name, stat_name,
-										inc_by, [part], [inc_total]) {#func_qr_set_xstat}
+#### qr_set_xstat(rule_id, gw_name, stat_name, inc_by, [part], [inc_total]) {#func_qr_set_xstat}
 
 
 Provide a new sample value for an extra statistic on a given (prefix,
