@@ -67,7 +67,9 @@ If the ":port" part is omitted, **all** ports of the given "hostname" will be co
 
 It may take an optional **accept_subdomain**  indicator to say if any subdomain of the defined domain should also match.
 
-@@red|It is necessary to include the port (the port value used in the "socket=" definitions) in the alias definition otherwise the loose_route() function will not work as expected for local forwards!@@
+> [!IMPORTANT]
+> It is necessary to include the port (the port value used in the "socket=" definitions) in the alias definition otherwise the loose_route() function will not work as expected for local forwards!
+
 
 Example of usage:
 
