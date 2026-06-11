@@ -12,7 +12,7 @@ Syntax:
 The complete syntax for a pseudo variable is: 
 <code>$(<em>&lt;context&gt;</em>name<em>(subname)[index]{transformation}</em>)</code>
 
-The fields written in green are optional.
+The fields written in italics are optional.
 The fields meaning is:
 * **name**(compulsory) - the pseudo-variable name(type).  
 Ex: pvar, avp, ru, DLG_status, etc.
