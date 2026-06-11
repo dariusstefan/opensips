@@ -89,7 +89,7 @@ description: ""
 * [**EXEC**](../modules/exec/README.md) - External exec module — 🟢 **stable**
 * [**TEXTOPS**](../modules/textops/README.md) - Text operations module — 🟢 **stable**
 * **AVPOPS** - renamed, see [SQLops module](../modules/sqlops/README.md)
-* [**SQLOPS**](../modules/sqlops/README.md) - SQL DB operations module @@green|stable@@
+* [**SQLOPS**](../modules/sqlops/README.md) - SQL DB operations module — 🟢 **stable**
 * [**REGEX**](../modules/regex/README.md) - RegExp via PCRE library — 🟢 **stable**
 * [**MATHOPS**](../modules/mathops/README.md) - Floating point and rounding operations — 🟢 **stable**
 * [**BENCHMARK**](../modules/benchmark/README.md) - Script file benchmarking — 🟢 **stable**
@@ -217,7 +217,7 @@ description: ""
 * [**TRACER**](../modules/tracer/README.md) - Collects SIP, logs, DNS or REST queries and ships them to various backends — 🟢 **stable**
 * [**SNGTC**](../modules/sngtc/README.md) - Voice Transcoding in OpenSIPS using Sangoma hardware — 🟢 **stable**
 * [**SNMPStats**](../modules/snmpstats/README.md) - SNMP interface for statistics module — 🟢 **stable**
-* [**STUN**](../modules/stun/README.md) - Built-in STUN server , @@green|stable@@ - 
+* [**STUN**](../modules/stun/README.md) - Built-in STUN server — 🟢 **stable**
 * [**XMPP**](../modules/xmpp/README.md) - SIP-to-XMPP Gateway (SIP to Jabber/Google Talk) — 🟢 **stable**
 
 ---
