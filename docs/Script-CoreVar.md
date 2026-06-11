@@ -10,7 +10,7 @@ The **OpenSIPS** variables can be easily identified in the script as all their n
 Syntax:  
 
 The complete syntax for a pseudo variable is: 
-`$(@@green|<context>@@name@@green|(subname)[index]{transformation}@@)`
+<code>$(<em>&lt;context&gt;</em>name<em>(subname)[index]{transformation}</em>)</code>
 
 The fields written in green are optional.
 The fields meaning is:
@@ -23,13 +23,13 @@ Ex: hdr(From), avp(name).
 * **context** - the context in which the pseudo0variable will be evaluated. Now there are 2 pv contexts: reply and request. The reply context can be used in the failure route to request for the pseudo-variable to be evaluated in the context of the reply message. The request context can be used if in a reply route is desired for the pv to be evaluated in the context of the corresponding request.
 
 Usage examples:
-* Only **name**: `@@green|$ru@@`
-* **Name** and *'subname*: `@@green|$hdr(Contact)@@`
-* **Name** and **index**: `@@green|$(ct[0])@@`
-* **Name**, **subname** and **index**: `@@green|$(avp(i:10)[2])@@`
+* Only **name**: `$ru`
+* **Name** and *'subname*: `$hdr(Contact)`
+* **Name** and **index**: `$(ct[0])`
+* **Name**, **subname** and **index**: `$(avp(i:10)[2])`
 * **Context** 
-  * `@@green|$(<request>ru)@@` from a reply route will get the Request-URI from the request
-  * `@@green|$(<reply>hdr(Contact))@@` context can be used from failure route to access information from the reply 
+  * `$(<request>ru)` from a reply route will get the Request-URI from the request
+  * `$(<reply>hdr(Contact))` context can be used from failure route to access information from the reply 
 
 Types of variables:
 
