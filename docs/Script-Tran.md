@@ -68,7 +68,8 @@ All transformations, unless otherwise specified, will return NULL in case of err
 
 The transformations can be used anywhere, being considered parts of script variables support -- in xlog, avpops or other modules' functions and parameters, in right side assignment expressions or in comparisons.
 
-@@red|IMPORTANT@@: To learn what variables can be used with transformations see [Scripting variables list](Script-CoreVar.md).
+> [!IMPORTANT]
+> To learn what variables can be used with transformations see [Scripting variables list](Script-CoreVar.md).
 
 ## String Transformations
 The name of these transformation starts with 's.'. They are intended to apply string operations to variables.
