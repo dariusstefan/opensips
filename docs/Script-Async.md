@@ -82,8 +82,11 @@ Data is copied over to the resume route as follows:
 * **all `$avp` variables**
 * **all changes in current SIP message**
 
-**@@red|Ignored data (not available anymore in resume route)@@**
-* **all `$var` variables**
+> [!IMPORTANT]
+> Ignored data (not available anymore in resume route)
+>
+> * **all `$var` variables**
+
 
 ## Parallel asynchronous operations, launch() {#launch}
 
@@ -159,9 +162,12 @@ route [pn_counter]
 **@@green|Preserved data (still available in report route)@@**
 * output variables set by the async function
 
-**@@red|Ignored data (not available anymore in report route)@@**
-* **any other variable**
-* **the initial SIP message**
+> [!IMPORTANT]
+> Ignored data (not available anymore in report route)
+>
+> * **any other variable**
+> * **the initial SIP message**
+
 
 ## List of async functions {#async_functions}
 
