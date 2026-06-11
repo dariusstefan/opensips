@@ -198,7 +198,7 @@ onreply_route[global] {
 
 ## error_route {#error_route}
 
-The error route is executed automatically when a parsing error occurs during SIP request processing, or when a script [assert](https://web.opensips.org/docs/manual/3-6/script-corefunctions#toc2) fails. It allows the administrator to decide what to do in such error cases.
+The error route is executed automatically when a parsing error occurs during SIP request processing, or when a script [assert](https://web.opensips.org/docs/manual/3-6/script-corefunctions) fails. It allows the administrator to decide what to do in such error cases.
 
 IMPORTANT: as this is triggered ONLY for SIP request, OpenSIPS has to be able to correctly parse the first line of the SIP message. So any syntax error in the first line will NOT trigger this route (as OpenSIPS will not be able to tell if a reply or request).
 
