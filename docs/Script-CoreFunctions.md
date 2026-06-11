@@ -17,7 +17,7 @@ add_local_rport()
 
 ## assert() {#assert}
 
-Only works if [enable_asserts](https://web.opensips.org/docs/manual/3-3/script-coreparameters) is set to *true*. If the given expression evaluates to *false*, script execution is stopped and the [error_route](https://web.opensips.org/docs/manual/3-3/script-routes) is executed. If [abort_on_assert](https://web.opensips.org/docs/manual/3-3/script-coreparameters) is enabled, OpenSIPS will also shutdown.
+Only works if [enable_asserts](https://web.opensips.org/docs/manual/3-3/script-coreparameters#toc53) is set to *true*. If the given expression evaluates to *false*, script execution is stopped and the [error_route](https://web.opensips.org/docs/manual/3-3/script-routes#toc5) is executed. If [abort_on_assert](https://web.opensips.org/docs/manual/3-3/script-coreparameters#toc24) is enabled, OpenSIPS will also shutdown.
 
 Example of usage:
 ```text
