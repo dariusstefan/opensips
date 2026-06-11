@@ -42,7 +42,8 @@ Example of usage:
 
 ```
 
-@@blue|NOTE@@: Aside this global approach, you can also define an advertise IP and port in a per-interface manner (see the [socket](#socket) parameter). When advertise values are defined per interface, they will be used only for traffic leaving that interface only.
+> [!NOTE]
+> Aside this global approach, you can also define an advertise IP and port in a per-interface manner (see the [socket](#socket) parameter). When advertise values are defined per interface, they will be used only for traffic leaving that interface only.
 
 ### advertised_port {#advertised_port}
 
@@ -55,7 +56,8 @@ Example of usage:
 
 ```
 
-@@blue|NOTE@@: Aside this global approach, you can also define an advertise IP and port in a per-interface manner (see the [socket](#socket) parameter). When advertise values are defined per interface, they will be used only for traffic leaving that interface only.
+> [!NOTE]
+> Aside this global approach, you can also define an advertise IP and port in a per-interface manner (see the [socket](#socket) parameter). When advertise values are defined per interface, they will be used only for traffic leaving that interface only.
 
 ### alias {#alias}
 
@@ -1321,7 +1323,8 @@ Example of usage:
 
 ```
 
-@@blue|NOTE@@: this global value (applicable for all UDP/SCTP interfaces) can be override if you set a different number of workers in the definition of a specific interface - so actually you can define a different number of workers for each interface (see the [listen](#listen) parameter for syntax).  
+> [!NOTE]
+> this global value (applicable for all UDP/SCTP interfaces) can be override if you set a different number of workers in the definition of a specific interface - so actually you can define a different number of workers for each interface (see the [listen](#listen) parameter for syntax).
 
 ### user_agent_header {#user_agent_header}
 
