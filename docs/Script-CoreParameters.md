@@ -475,11 +475,19 @@ Example of usage:
 
 ```
 
-### listen @@red|(Replaced in OpenSIPS 3.1)@@ {#listen}
+### listen {#listen}
+
+> [!WARNING]
+> Replaced in OpenSIPS 3.1
+
 
 This parameter was replaced by the [#socket|socket]] parameter, preserving exactly the same format and behavior.
 
-### log_facility @@red|(Replaced in OpenSIPS 3.4)@@ {#log_facility}
+### log_facility {#log_facility}
+
+> [!WARNING]
+> Replaced in OpenSIPS 3.4
+
 
 This parameter was replaced by the [syslog_facility](Script-CoreParameters.md#syslog_facility) parameter, preserving exactly the same format and behavior.
 
@@ -564,7 +572,11 @@ Usage example:
 
 ```
 
-### log_name @@red|(Replaced in OpenSIPS 3.4)@@ {#log_name}
+### log_name {#log_name}
+
+> [!WARNING]
+> Replaced in OpenSIPS 3.4
+
 
 This parameter was replaced by the [syslog_name](Script-CoreParameters.md#syslog_name) parameter, preserving exactly the same format and behavior.
 
@@ -584,7 +596,11 @@ Example of usage:
 
 ```
 
-### log_stderror @@red|(Deprecated in OpenSIPS 3.4)@@ {#log_stderror}
+### log_stderror {#log_stderror}
+
+> [!WARNING]
+> Deprecated in OpenSIPS 3.4
+
 
 This parameter is deprecated and it's behavior starting with OpenSIPS 3.4 is equivalent to setting the [stderror_enabled](Script-CoreParameters.md#stderror_enabled) and [syslog_enabled](Script-CoreParameters.md#syslog_enabled) parameters, as following:
 
