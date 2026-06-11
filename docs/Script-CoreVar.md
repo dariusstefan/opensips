@@ -284,7 +284,9 @@ Examples:
 
 ```
 
-@@red|It is R/W variable (you can assign values to it from routing logic)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it from routing logic)
+
 
 ### Branch flag - $branch.flag {#branch.flag}
 
@@ -376,7 +378,9 @@ Examples:
 
 `$dd` - reference to domain of destination uri
 
-@@red|It is R/W variable (you can assign values to it from routing logic)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it from routing logic)
+
 
 ### Diversion header URI - $di {#di}
 
@@ -394,7 +398,9 @@ Examples:
 
 `$dp` - reference to port of destination uri
 
-@@red|It is R/W variable (you can assign values to it from routing logic)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it from routing logic)
+
 
 ### Transport protocol of destination URI - $dP {#dP}
 
@@ -409,7 +415,9 @@ Examples:
 `$du` - reference to destination uri (outbound proxy to be used for sending the request)
 If loose_route() returns TRUE a destination uri is set according to the first Route header.
 
-@@red|It is R/W variable (you can assign values to it from routing logic)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it from routing logic)
+
 
 ### Error class - $err.class {#err.class}
 
@@ -692,7 +700,9 @@ Example:
 
 `$rd` - reference to domain in request's URI
 
-@@red|It is R/W variable (you can assign values to it routing script)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it routing script)
+
 
 ### Body of request/reply - $rb {#rb}
 
@@ -728,7 +738,9 @@ The variable receives an index, starting with 0, indicating the return value tha
 
 `$rp` - reference to port of R-URI
 
-@@red|It is R/W variable (you can assign values to it routing script)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it routing script)
+
 
 ### Transport protocol of SIP request URI - $rP {#rP}
 
@@ -750,19 +762,25 @@ The variable receives an index, starting with 0, indicating the return value tha
 
 `$ru` - reference to request's URI
 
-@@red|It is R/W variable (you can assign values to it routing script)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it routing script)
+
 
 ### Username in SIP Request's URI - $rU {#rU}
 
 `$rU` - reference to username in request's URI
 
-@@red|It is R/W variable (you can assign values to it routing script)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it routing script)
+
 
 ### Q value of the SIP Request's URI - $ru_q {#ru_q}
 
 `$ru_q` - reference to q value of the R-URI
 
-@@red|It is R/W variable (you can assign values to it routing script)@@
+> [!IMPORTANT]
+> It is R/W variable (you can assign values to it routing script)
+
 
 ### SDP body - $sdp {#sdp}
 
