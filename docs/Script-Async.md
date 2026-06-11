@@ -78,9 +78,12 @@ Data is copied over to the resume route as follows:
 
   
 
-**@@green|Preserved data (still available in resume route)@@**
-* **all `$avp` variables**
-* **all changes in current SIP message**
+> [!NOTE]
+> Preserved data (still available in resume route)
+>
+> * **all `$avp` variables**
+> * **all changes in current SIP message**
+
 
 > [!IMPORTANT]
 > Ignored data (not available anymore in resume route)
@@ -160,8 +163,11 @@ route [pn_counter]
 
   
 
-**@@green|Preserved data (still available in report route)@@**
-* output variables set by the async function
+> [!NOTE]
+> Preserved data (still available in report route)
+>
+> * output variables set by the async function
+
 
 > [!IMPORTANT]
 > Ignored data (not available anymore in report route)

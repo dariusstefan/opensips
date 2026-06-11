@@ -440,7 +440,11 @@ Example of usage:
 
 ```
 
-### listen @@red|(Replaced in OpenSIPS 3.1)@@ {#listen}
+### listen {#listen}
+
+> [!WARNING]
+> Replaced in OpenSIPS 3.1
+
 
 This parameter was replaced by the [#socket|socket]] parameter, preserving exactly the same format and behavior.
 
