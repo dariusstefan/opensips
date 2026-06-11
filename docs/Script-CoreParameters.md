@@ -14,7 +14,7 @@ Default value: false
 
   
 
-Only relevant if [asserts](https://web.opensips.org/docs/manual/devel/script-corefunctions#toc2) are enabled. Set to *true* in order to make OpenSIPS shut down immediately in case a script assert fails.
+Only relevant if [asserts](https://web.opensips.org/docs/manual/devel/script-corefunctions) are enabled. Set to *true* in order to make OpenSIPS shut down immediately in case a script assert fails.
 
 Example of usage:
 ```text
@@ -394,7 +394,7 @@ Default value: false
 
   
 
-Set to *true* in order to enable the [assert](https://web.opensips.org/docs/manual/devel/script-corefunctions#toc2) script statement.
+Set to *true* in order to enable the [assert](https://web.opensips.org/docs/manual/devel/script-corefunctions) script statement.
 
 Example of usage:
 ```text
@@ -631,7 +631,7 @@ Default value: off
 
   
 
-Only relevant when the HP_MALLOC compile flag is enabled. If set to "on", on each startup, OpenSIPS will attempt to restore the memory fragmentation pattern it had before the stop/restart. If no [pattern_file](https://web.opensips.org/docs/manual/devel/script-coreparameters#toc68) from a previous run is found, memory warming is skipped, and the memory allocator simply starts with a big chunk of memory, like all other allocators.
+Only relevant when the HP_MALLOC compile flag is enabled. If set to "on", on each startup, OpenSIPS will attempt to restore the memory fragmentation pattern it had before the stop/restart. If no [pattern_file](https://web.opensips.org/docs/manual/devel/script-coreparameters) from a previous run is found, memory warming is skipped, and the memory allocator simply starts with a big chunk of memory, like all other allocators.
 
   
 
@@ -650,7 +650,7 @@ Default value: 75
 
   
 
-How much of OpenSIPS's memory should be fragmented with the pattern of the previous run, upon a restart. Used at startup, if [mem_warming](https://web.opensips.org/docs/manual/devel/script-coreparameters#toc66) is enabled.
+How much of OpenSIPS's memory should be fragmented with the pattern of the previous run, upon a restart. Used at startup, if [mem_warming](https://web.opensips.org/docs/manual/devel/script-coreparameters) is enabled.
 
 Example of usage:
 ```text
@@ -665,7 +665,7 @@ Default value: "CFG_DIR/mem_warming_pattern"
 
   
 
-Only relevant if [mem_warming](https://web.opensips.org/docs/manual/devel/script-coreparameters#toc66) is enabled. It contains the memory fragmentation pattern of a previous OpenSIPS run. This file is overwritten during each OpenSIPS shutdown, and is used during startup in order to restore the service behavior as soon as possible.
+Only relevant if [mem_warming](https://web.opensips.org/docs/manual/devel/script-coreparameters) is enabled. It contains the memory fragmentation pattern of a previous OpenSIPS run. This file is overwritten during each OpenSIPS shutdown, and is used during startup in order to restore the service behavior as soon as possible.
 
 Example of usage:
 ```text
@@ -1366,7 +1366,7 @@ Default value: false
 
   
 
-Only relevant when [xlog](https://web.opensips.org/docs/manual/devel/script-corefunctions#toc57) is set to *true*. Enables the use of the [color escape sequences](https://web.opensips.org/docs/manual/devel/script-corevar#toc98), otherwise they will have no effect.
+Only relevant when [xlog](https://web.opensips.org/docs/manual/devel/script-corefunctions) is set to *true*. Enables the use of the [color escape sequences](https://web.opensips.org/docs/manual/devel/script-corevar), otherwise they will have no effect.
 
 Usage example:
 ```text
