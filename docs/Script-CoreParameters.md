@@ -65,7 +65,9 @@ Parameter to set alias hostnames for the server. It can be set many times, each 
 
 If the ":port" part is omitted, **all** ports of the given "hostname" will be considered an alias (similar behavior to port 0).
 
-@@red|It is necessary to include the port (the port value used in the "socket=" definitions) in the alias definition otherwise the loose_route() function will not work as expected for local forwards!@@
+> [!IMPORTANT]
+> It is necessary to include the port (the port value used in the "socket=" definitions) in the alias definition otherwise the loose_route() function will not work as expected for local forwards!
+
 
 Example of usage:
 
