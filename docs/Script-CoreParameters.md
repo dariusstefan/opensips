@@ -29,12 +29,11 @@ It can be an IP address or string and represents the address advertised in Via h
 other destination lumps (e.g RR header). If empty or not set (default value) the socket
 address from where the request will be sent is used.
 
-@@red|WARNING@@: 
-```text
-- don't set it unless you know what you are doing (e.g. nat traversal)
-- you can set anything here, no check is made (e.g. foo.bar will be
-accepted even if foo.bar doesn't exist)
-```
+> [!WARNING]
+> don't set it unless you know what you are doing (e.g. nat traversal)
+
+> [!WARNING]
+> you can set anything here, no check is made (e.g. foo.bar will be accepted even if foo.bar doesn't exist)
 
 Example of usage:
 ```text
