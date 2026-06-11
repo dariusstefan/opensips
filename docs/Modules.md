@@ -209,7 +209,7 @@ description: ""
 * [**TRACER**](../modules/tracer/README.md) - Collects SIP, logs, DNS or REST queries and ships them to various backends — 🟢 **stable**
 * [**SNGTC**](../modules/sngtc/README.md) - Voice Transcoding in OpenSIPS using Sangoma hardware — 🟢 **stable**
 * [**SNMPStats**](../modules/snmpstats/README.md) - SNMP interface for statistics module — 🟢 **stable**
-* [**STUN**](../modules/stun/README.md) - Built-in STUN server , @@green|stable@@ - 
+* [**STUN**](../modules/stun/README.md) - Built-in STUN server — 🟢 **stable**
 * [**XMPP**](../modules/xmpp/README.md) - SIP-to-XMPP Gateway (SIP to Jabber/Google Talk) — 🟢 **stable**
 
 ---
