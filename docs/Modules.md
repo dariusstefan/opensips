@@ -86,11 +86,11 @@ description: ""
 * [**JSON**](../modules/json/README.md) - Manipulate JSON objects in OpenSIPS script — 🟢 **stable**
 * [**XML**](../modules/xml/README.md) - Manipulate XML documents in OpenSIPS script — 🟢 **stable**
 * [**CFGUTILS**](../modules/cfgutils/README.md) - Various utility functions — 🟢 **stable**
-* [**CONFIG**](../modules/config/README.md) - DB backed runtime configuration, alpha / @@red|NEW@@
+* [**CONFIG**](../modules/config/README.md) - DB backed runtime configuration — 🔴 **alpha** / 🔵 **NEW**
 * [**EXEC**](../modules/exec/README.md) - External exec module — 🟢 **stable**
 * [**TEXTOPS**](../modules/textops/README.md) - Text operations module — 🟢 **stable**
 * **AVPOPS** - renamed, see [SQLops module](../modules/sqlops/README.md)
-* [**SQLOPS**](../modules/sqlops/README.md) - SQL DB operations module @@green|stable@@
+* [**SQLOPS**](../modules/sqlops/README.md) - SQL DB operations module — 🟢 **stable**
 * [**REGEX**](../modules/regex/README.md) - RegExp via PCRE library — 🟢 **stable**
 * [**MATHOPS**](../modules/mathops/README.md) - Floating point and rounding operations — 🟢 **stable**
 * [**BENCHMARK**](../modules/benchmark/README.md) - Script file benchmarking — 🟢 **stable**
@@ -109,7 +109,7 @@ description: ""
 * [**AUTH_DB**](../modules/auth_db/README.md) -Database-backend authentication module — 🟢 **stable**
 * [**AUTH_JWT**](../modules/auth_jwt/README.md) -Authentication over JSON Web Tokens — 🟢 **stable**
 * [**AUTH_AKA**](../modules/auth_aka/README.md) - Authentication using RFC 3310 AKA mechanism — 🟡 **beta**
-* [**AUTH_WEB3**](../modules/auth_web3/README.md) - Web3-based SIP authentication through blockchain and ENS, alpha / @@red|NEW@@
+* [**AUTH_WEB3**](../modules/auth_web3/README.md) - Web3-based SIP authentication through blockchain and ENS — 🔴 **alpha** / 🔵 **NEW**
 * [**AKA_AV_DIAMETER**](../modules/aka_av_diameter/README.md) - Fetches RFC 3310 AKA AVs using Cx/Dx Diameter interface — 🟡 **beta**
 * [**PERMISSIONS**](../modules/permissions/README.md) - Permissions control module — 🟢 **stable**
 
@@ -132,7 +132,7 @@ description: ""
 * [**DNS_CACHE**](../modules/dns_cache/README.md) - Module for caching DNS records that can be used with any Key-Value back-end — 🟢 **stable**
 * [**RATE_CACHER**](../modules/rate_cacher/README.md) - Cache, Query, Reload or Update rates via MI — 🟢 **stable**
 * [**SQL_CACHER**](../modules/sql_cacher/README.md) - SQL Caching module — 🟢 **stable**
-* [**TRIE**](../modules/trie/README.md) - Fast, low memory cache with trie search for number, alpha / @@red|NEW@@
+* [**TRIE**](../modules/trie/README.md) - Fast, low memory cache with trie search for number — 🔴 **alpha** / 🔵 **NEW**
 * [**USRLOC**](../modules/usrloc/README.md) - User location implementation module — 🟢 **stable**
 
 ### Traffic shaping module
@@ -162,7 +162,7 @@ description: ""
 ### noSQL modules
 * [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) - Cassandra Implementation of CacheDB — 🟢 **stable**
 * [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) - CouchBase Implementation of CacheDB — 🟢 **stable**
-* [**CACHEDB_DYNAMODB**](../modules/cachedb_dynamodb/README.md) - AWS DynamoDB Implementation of CacheDB, alpha / @@red|NEW@@
+* [**CACHEDB_DYNAMODB**](../modules/cachedb_dynamodb/README.md) - AWS DynamoDB Implementation of CacheDB — 🔴 **alpha** / 🔵 **NEW**
 * [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) - Local Implementation of CacheDB — 🟢 **stable**
 * [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) - Memcached Implementation of CacheDB — 🟢 **stable**
 * [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) - MongoDB Implementation of CacheDB — 🟢 **stable**
@@ -181,7 +181,7 @@ description: ""
 * [**EVENT_ROUTING**](../modules/event_routing/README.md) - Event-based routing — 🟢 **stable**
 * [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) - Publish JSON-RPC notifications using AMQP over TCP — 🟢 **stable**
 * [**EVENT_STREAM**](../modules/event_stream/README.md) - Publish JSON-RPC notifications using TCP — 🟢 **stable**
-* [**EVENT_SQS**](../modules/event_sqs/README.md) - An implementation of an Amazon SQS producer, alpha / @@red|NEW@@
+* [**EVENT_SQS**](../modules/event_sqs/README.md) - An implementation of an Amazon SQS producer — 🔴 **alpha** / 🔵 **NEW**
 * [**EVENT_VIRTUAL**](../modules/event_virtual/README.md) - Aggregator of event backends (failover & balancing) — 🟢 **stable**
 * [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) - Event XMLRPC client module — 🟢 **stable**
 * [**MI_DATAGRAM**](../modules/mi_datagram/README.md) - DATAGRAM (unix and network) support for Management Interface — 🟢 **stable**
@@ -202,7 +202,7 @@ description: ""
 * [**MSRP_RELAY**](../modules/msrp_relay/README.md) - Implementation of a Relay for the MSRP protocol — 🟢 **stable**
 * [**RTPENGINE**](../modules/rtpengine/README.md) - Connector to RTPengine external RTP relay — 🟢 **stable**
 * [**RTPPROXY**](../modules/rtpproxy/README.md) - Connector to RTPproxy external RTP relay — 🟢 **stable**
-* [**RTP.IO**](../modules/rtp.io/README.md) - Builtin RTP relay module, alpha / @@red|NEW@@
+* [**RTP.IO**](../modules/rtp.io/README.md) - Builtin RTP relay module — 🔴 **alpha** / 🔵 **NEW**
 * [**RTP_RELAY**](../modules/rtp_relay/README.md) - Interface for different RTP relay engines — 🟢 **stable**
 
 ### External integration (non-SIP protocols)
@@ -212,11 +212,11 @@ description: ""
 * [**FREESWITCH_SCRIPTING**](../modules/freeswitch_scripting/README.md) - FreeSWITCH events & commands at OpenSIPS script level — 🟢 **stable**
 * [**H350**](../modules/h350/README.md) - H350 implementation — 🟢 **stable**
 * [**HTTP2D**](../modules/http2d/README.md) - Programmable HTTP/2 Server — 🟡 **beta**
-* [**JANUS**](../modules/janus/README.md) - WEB Socket connector to Janus (for running commands), alpha / @@red|NEW@@
+* [**JANUS**](../modules/janus/README.md) - WEB Socket connector to Janus (for running commands) — 🔴 **alpha** / 🔵 **NEW**
 * [**JSONRPC**](../modules/jsonrpc/README.md) - Execute JSON-RPC commands — 🟢 **stable**
 * [**LAUNCH_DARKLY**](../modules/launch_darkly/README.md) - Launch Darkly integration — 🟡 **beta**
 * [**LDAP**](../modules/ldap/README.md) - LDAP connector — 🟢 **stable**
-* [**OPENTELEMETRY**](../modules/opentelemetry/README.md) - tracing the OpenSIPS routes execution and the logs they produce alpha / @@red|NEW@@
+* [**OPENTELEMETRY**](../modules/opentelemetry/README.md) - tracing the OpenSIPS routes execution and the logs they produce — 🔴 **alpha** / 🔵 **NEW**
 * [**PROMETHEUS**](../modules/prometheus/README.md) - export statistics to a [Prometheus](http://prometheus.io/) server — 🟢 **stable**
 * [**REST_CLIENT**](../modules/rest_client/README.md) - Implementation of an HTTP client — 🟢 **stable**
 * [**SEAS**](../modules/seas/README.md) - Sip Express Application Server (interface module) — 🟢 **stable**
@@ -225,7 +225,7 @@ description: ""
 * [**TRACER**](../modules/tracer/README.md) - Collects SIP, logs, DNS or REST queries and ships them to various backends — 🟢 **stable**
 * [**SNGTC**](../modules/sngtc/README.md) - Voice Transcoding in OpenSIPS using Sangoma hardware — 🟢 **stable**
 * [**SNMPStats**](../modules/snmpstats/README.md) - SNMP interface for statistics module — 🟢 **stable**
-* [**STUN**](../modules/stun/README.md) - Built-in STUN server , @@green|stable@@ - 
+* [**STUN**](../modules/stun/README.md) - Built-in STUN server — 🟢 **stable**
 * [**XMPP**](../modules/xmpp/README.md) - SIP-to-XMPP Gateway (SIP to Jabber/Google Talk) — 🟢 **stable**
 
 ---
@@ -248,4 +248,4 @@ description: ""
 * [**PROTO_WS**](../modules/proto_ws/README.md) - WebSocket protocol module - implements WS transport for SIP — 🟢 **stable**
 * [**PROTO_WSS**](../modules/proto_wss/README.md) - WebSocket Secure protocol module - implements WSS transport for SIP — 🟢 **stable**
 * [**PROTO_SMPP**](../modules/proto_smpp/README.md) - SMPP (Short Message Peer-to-Peer) protocol module - implements transport for SMPP messages — 🟢 **stable**
-* [**SOCKETS_MGM**](../modules/sockets_mgm/README.md) - Dynamic SIP Sockets Management at runtime, alpha / @@red|NEW@@
+* [**SOCKETS_MGM**](../modules/sockets_mgm/README.md) - Dynamic SIP Sockets Management at runtime — 🔴 **alpha** / 🔵 **NEW**
