@@ -30,10 +30,8 @@ other destination lumps (e.g RR header). If empty or not set (default value) the
 address from where the request will be sent is used.
 
 > [!WARNING]
-> don't set it unless you know what you are doing (e.g. nat traversal)
-
-> [!WARNING]
-> you can set anything here, no check is made (e.g. foo.bar will be accepted even if foo.bar doesn't exist)
+> Don't set it unless you know what you are doing (e.g. nat traversal).
+> You can set anything here, no check is made (e.g. foo.bar will be accepted even if foo.bar doesn't exist).
 
 Example of usage:
 ```text
