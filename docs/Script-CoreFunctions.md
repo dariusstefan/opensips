@@ -363,7 +363,8 @@ Parameters:
 
   
 
-@@red|**WARNING!**@@ Do not perform **force_tcp_alias()** for end-user initiated connections (who are most likely grouped by one or more public IPs), as this would create an open vector for call hijacking!
+> [!WARNING]
+> Do not perform **force_tcp_alias()** for end-user initiated connections (who are most likely grouped by one or more public IPs), as this would create an open vector for call hijacking!
 
 ## forward(destination) {#forward}
 
