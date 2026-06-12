@@ -132,7 +132,7 @@ if(is_gflag("4"))
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 Functions that check or change some flags accepts one parameter 

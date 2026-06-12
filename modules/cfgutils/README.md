@@ -688,7 +688,7 @@ if (!release_dynamic_lock("$avp(1)") {
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rand_set_prop
@@ -847,7 +847,7 @@ $ opensipsctl fifo shv_get
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $env(name)

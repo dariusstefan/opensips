@@ -72,7 +72,7 @@ modparam("mi_xmlrpc_ng", "mi_xmlrpc_ng_root", "opensips_mi_xmlrpc")
 No function exported to be used from configuration file.
 
 
-### Known issues
+### Known Issues
 
 
 Commands with large responses (like ul_dump) will fail if the

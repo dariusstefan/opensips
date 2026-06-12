@@ -669,7 +669,7 @@ start_recording();
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rtpproxy_enable
