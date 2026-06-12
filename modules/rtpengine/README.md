@@ -1131,7 +1131,7 @@ rtpengine_play_dtmf("0"); # send the 0 code upstream
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### rtpengine_offer([flags[, sock_pvar[, sdp_pvar[, body]]]]) {#afunc_rtpengine_offer}

@@ -236,7 +236,7 @@ This variable is read-only.
 ```
 
 
-### MI Commands {#mi_commands}
+### Exported MI Functions {#mi_commands}
 
 
 #### config_reload {#mi_config_reload}
