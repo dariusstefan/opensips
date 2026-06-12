@@ -16,23 +16,23 @@ description: ""
 | [**BENCHMARK**](../modules/benchmark/README.md) | Config file benchmarking | 🟢 **stable** |
 | [**B2B_ENTITIES**](../modules/b2b_entities/README.md) | Back-to-Back User Agent Entities | 🟢 **stable** |
 | [**B2B_LOGIC**](../modules/b2b_logic/README.md) | Back-to-Back User Agent Logic | 🟢 **stable** |
-| [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | beta |
+| [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | 🟡 **beta** |
 | [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) | CouchBase Implementation of CacheDB | beta / 🔵 **NEW** |
 | [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) | Local Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) | Memcached Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | beta / 🔵 **NEW** |
-| [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | beta |
+| [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | 🟡 **beta** |
 | [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | beta / 🔵 **NEW** |
-| [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | beta |
-| [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | alpha |
+| [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
+| [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
 | [**CLOSEDDIAL**](../modules/closeddial/README.md) | PBX-like dialling features | 🟢 **stable** |
 | [**CPL-C**](../modules/cpl-c/README.md) | CPL interpreter module | 🟢 **stable** |
 | [**DB_BERKELEY**](../modules/db_berkeley/README.md) | Berkeley DB driver for DB API | 🟢 **stable** |
 | [**DB_FLATSTORE**](../modules/db_flatstore/README.md) | Fast writing-only text-backend for database module | 🟢 **stable** |
-| [**DB_HTTP**](../modules/db_http/README.md) | HTTP-backend for DB API | beta |
+| [**DB_HTTP**](../modules/db_http/README.md) | HTTP-backend for DB API | 🟡 **beta** |
 | [**DB_MYSQL**](../modules/db_mysql/README.md) | MYSQL-backend for database API module | 🟢 **stable** |
-| [**DB_ORACLE**](../modules/db_oracle/README.md) | ORACLE-backend for database API module | beta |
+| [**DB_ORACLE**](../modules/db_oracle/README.md) | ORACLE-backend for database API module | 🟡 **beta** |
 | [**DB_PERLVDB**](../modules/db_perlvdb/README.md) | Perl Virtual Database engine | 🟢 **stable** |
 | [**DB_POSTGRES**](../modules/db_postgres/README.md) | POSTGRES-backend for database API module | 🟢 **stable** |
 | [**DB_TEXT**](../modules/db_text/README.md) | Text-backend for database API module | 🟢 **stable** |
@@ -44,7 +44,7 @@ description: ""
 | [**DIVERSION**](../modules/diversion/README.md) | Diversion header insertion module | 🟢 **stable** |
 | [**DNS_CACHE**](../modules/dns_cache/README.md) | Module for caching DNS records that can be used with any Key-Value back-end | 🟢 **stable** |
 | [**DOMAIN**](../modules/domain/README.md) | Multi-domain support module | 🟢 **stable** |
-| [**DOMAINPOLICY**](../modules/domainpolicy/README.md) | Policies to connect federations | beta |
+| [**DOMAINPOLICY**](../modules/domainpolicy/README.md) | Policies to connect federations | 🟡 **beta** |
 | [**DROUTING**](../modules/drouting/README.md) | Dynamic Routing / LCR | 🟢 **stable** |
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
@@ -58,11 +58,11 @@ description: ""
 | [**HTTPD**](../modules/httpd/README.md) | Embedded HTTP server | 🟢 **stable** |
 | [**IDENTITY**](../modules/identity/README.md) | SIP Identity implementation | 🟢 **stable** |
 | [**IMC**](../modules/imc/README.md) | Instant Messaging Conferencing module | 🟢 **stable** |
-| [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | beta |
+| [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | 🟡 **beta** |
 | [**JSON**](../modules/json/README.md) | JSON packing function | 🟢 **stable** |
 | [**LDAP**](../modules/ldap/README.md) | LDAP connector | 🟢 **stable** |
 | [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | 🟢 **stable** |
-| [**LUA**](../modules/lua/README.md) | Call LUA scripts from OpenSIPS cfg | beta |
+| [**LUA**](../modules/lua/README.md) | Call LUA scripts from OpenSIPS cfg | 🟡 **beta** |
 | [**MANGLER**](../modules/mangler/README.md) | SIP mangler module | 🟢 **stable** |
 | [**MAXFWD**](../modules/maxfwd/README.md) | Max-Forward processor module | 🟢 **stable** |
 | [**MI_DATAGRAM**](../modules/mi_datagram/README.md) | DATAGRAM (unix and network) support for Management Interface | 🟢 **stable** |
@@ -78,7 +78,7 @@ description: ""
 | [**OSP**](../modules/osp/README.md) | OSP peering module | 🟢 **stable** |
 | [**PATH**](../modules/path/README.md) | Path support for SIP frontending | 🟢 **stable** |
 | [**PDT**](../modules/pdt/README.md) | Prefix-to-Domain translator module | 🟢 **stable** |
-| [**PEERING**](../modules/peering/README.md) | Radius peering module | alpha |
+| [**PEERING**](../modules/peering/README.md) | Radius peering module | 🔴 **alpha** |
 | [**PERL**](../modules/perl/README.md) | embed execution of Perl function | 🟢 **stable** |
 | [**PERMISSIONS**](../modules/permissions/README.md) | Permissions control module | 🟢 **stable** |
 | [**PI_HTTP**](../modules/pi_http/README.md) | Provisioning Interface module | beta / 🔵 **NEW** |
@@ -95,8 +95,8 @@ description: ""
 | [**PUA_MI**](../modules/pua_mi/README.md) | MI extension for PUA | 🟢 **stable** |
 | [**PUA_USRLOC**](../modules/pua_usrloc/README.md) | USRLOC extension for PUA | 🟢 **stable** |
 | [**PUA_XMPP**](../modules/pua_xmpp/README.md) | XMPP extension for PUA (SIMPLE-XMPP presence gateway) | 🟢 **stable** |
-| [**PYTHON**](../modules/python/README.md) | Python scripting support | beta |
-| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | beta |
+| [**PYTHON**](../modules/python/README.md) | Python scripting support | 🟡 **beta** |
+| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | 🟡 **beta** |
 | [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | 🟢 **stable** |
 | [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | 🟢 **stable** |
 | [**REGISTRAR**](../modules/registrar/README.md) | SIP Registrar implementation module | 🟢 **stable** |
@@ -126,5 +126,5 @@ description: ""
 | [**USERBLACKLIST**](../modules/userblacklist/README.md) | User black/white listing | 🟢 **stable** |
 | [**USRLOC**](../modules/usrloc/README.md) | User location implementation module | 🟢 **stable** |
 | [**XCAP_CLIENT**](../modules/xcap_client/README.md) | XCAP client implementation | 🟢 **stable** |
-| [**XCAP**](../modules/xcap/README.md) | XCAP API provider | beta |
+| [**XCAP**](../modules/xcap/README.md) | XCAP API provider | 🟡 **beta** |
 | [**XMPP**](../modules/xmpp/README.md) | SIP-to-XMPP Gateway (SIP to Jabber/Google Talk) | 🟢 **stable** |
