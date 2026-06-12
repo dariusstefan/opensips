@@ -310,7 +310,7 @@ Before running OpenSIPS with siptrace, you have to setup the database
 			project webpage, [http://www.opensips.org/html/docs/db/db-schema-devel.html](http://www.opensips.org/html/docs/db/db-schema-devel.html).
 
 
-### Known issues
+### Known Issues
 
 
 Stateless forwarded messages (forward()) are not logged if you set the

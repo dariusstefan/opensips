@@ -179,7 +179,7 @@ bm_log_timer("test");
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 Exported pseudo-variables are listed in the next sections.

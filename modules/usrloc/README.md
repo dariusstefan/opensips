@@ -617,7 +617,7 @@ Parameters:
 				is on).
 
 
-### Exported statistics
+### Exported Statistics
 
 
 Exported statistics are listed in the next sections.

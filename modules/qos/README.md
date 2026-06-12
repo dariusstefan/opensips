@@ -140,7 +140,7 @@ There are no exported MI functions for the qos module.
 	of a dialog.
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 There are no exported pseudo-variables for the qos module.
