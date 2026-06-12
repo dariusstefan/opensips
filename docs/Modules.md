@@ -16,10 +16,10 @@ description: ""
 | [**BENCHMARK**](../modules/benchmark/README.md) | Config file benchmarking | 🟢 **stable** |
 | [**B2B_ENTITIES**](../modules/b2b_entities/README.md) | Back-to-Back User Agent Entities | 🟢 **stable** |
 | [**B2B_LOGIC**](../modules/b2b_logic/README.md) | Back-to-Back User Agent Logic | 🟢 **stable** |
-| [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) | Local Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) | Memcached Implementation of CacheDB | 🟢 **stable** |
-| [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
 | [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
@@ -38,30 +38,30 @@ description: ""
 | [**DIALPLAN**](../modules/dialplan/README.md) | Dialplan management | 🟢 **stable** |
 | [**DISPATCHER**](../modules/dispatcher/README.md) | Dispatcher module | 🟢 **stable** |
 | [**DIVERSION**](../modules/diversion/README.md) | Diversion header insertion module | 🟢 **stable** |
-| [**DNS_CACHE**](../modules/dns_cache/README.md) | Module for caching DNS records that can be used with any Key-Value back-end | beta / 🔵 **NEW** |
+| [**DNS_CACHE**](../modules/dns_cache/README.md) | Module for caching DNS records that can be used with any Key-Value back-end | 🟡 **beta** / 🔵 **NEW** |
 | [**DOMAIN**](../modules/domain/README.md) | Multi-domain support module | 🟢 **stable** |
 | [**DOMAINPOLICY**](../modules/domainpolicy/README.md) | Policies to connect federations | 🟡 **beta** |
 | [**DROUTING**](../modules/drouting/README.md) | Dynamic Routing / LCR | 🟢 **stable** |
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
 | [**EVENT_DATAGRAM**](../modules/event_datagram/README.md) | Event datagram module | 🟢 **stable** |
-| [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | beta / 🔵 **NEW** |
+| [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | 🟡 **beta** / 🔵 **NEW** |
 | [**GFLAGS**](../modules/gflags/README.md) | Global shared flags module | 🟢 **stable** |
 | [**GROUP**](../modules/group/README.md) | User-groups module with DB-backend | 🟢 **stable** |
 | [**H350**](../modules/h350/README.md) | H350 implementation | 🟢 **stable** |
-| [**HTTPD**](../modules/httpd/README.md) | Embedded HTTP server | beta / 🔵 **NEW** |
+| [**HTTPD**](../modules/httpd/README.md) | Embedded HTTP server | 🟡 **beta** / 🔵 **NEW** |
 | [**IDENTITY**](../modules/identity/README.md) | SIP Identity implementation | 🟢 **stable** |
 | [**IMC**](../modules/imc/README.md) | Instant Messaging Conferencing module | 🟢 **stable** |
 | [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | 🟡 **beta** |
 | [**JSON**](../modules/json/README.md) | JSON packing function | 🟢 **stable** |
 | [**LDAP**](../modules/ldap/README.md) | LDAP connector | 🟢 **stable** |
 | [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | 🟢 **stable** |
-| [**LUA**](../modules/lua/README.md) | Call LUA scripts from OpenSIPS cfg | beta / 🔵 **NEW** |
+| [**LUA**](../modules/lua/README.md) | Call LUA scripts from OpenSIPS cfg | 🟡 **beta** / 🔵 **NEW** |
 | [**MANGLER**](../modules/mangler/README.md) | SIP mangler module | 🟢 **stable** |
 | [**MAXFWD**](../modules/maxfwd/README.md) | Max-Forward processor module | 🟢 **stable** |
 | [**MI_DATAGRAM**](../modules/mi_datagram/README.md) | DATAGRAM (unix and network) support for Management Interface | 🟢 **stable** |
 | [**MI_FIFO**](../modules/mi_fifo/README.md) | FIFO support for Management Interface | 🟢 **stable** |
-| [**MI_HTTP**](../modules/mi_http/README.md) | HTTP support for Management Interface | alpha / 🔵 **NEW** |
+| [**MI_HTTP**](../modules/mi_http/README.md) | HTTP support for Management Interface | 🔴 **alpha** / 🔵 **NEW** |
 | [**MI_XMLRPC**](../modules/mi_xmlrpc/README.md) | XMLRPC support for Management Interface | 🟢 **stable** |
 | [**MEDIAPROXY**](../modules/mediaproxy/README.md) | NAT traversal module | 🟢 **stable** |
 | [**MMGEOIP**](../modules/mmgeoip/README.md) | MaxMind GeoIP module | 🟢 **stable** |
@@ -99,7 +99,7 @@ description: ""
 | [**RTPPROXY**](../modules/rtpproxy/README.md) | NAT traversal using RTPProxy module | 🟢 **stable** |
 | [**SEAS**](../modules/seas/README.md) | Sip Express Application Server (interface module) | 🟢 **stable** |
 | [**SIGNALING**](../modules/signaling/README.md) | SIP signaling module | 🟢 **stable** |
-| [**SIPCAPTURE**](../modules/sipcapture/README.md) | SipCapture module | alpha / 🔵 **NEW** |
+| [**SIPCAPTURE**](../modules/sipcapture/README.md) | SipCapture module | 🔴 **alpha** / 🔵 **NEW** |
 | [**SIPMSGOPS**](../modules/sipmsgops/README.md) | SIP operations module | 🟢 **stable** |
 | [**SIPTRACE**](../modules/siptrace/README.md) | SipTrace module | 🟢 **stable** |
 | [**SL**](../modules/sl/README.md) | Stateless replier module | 🟢 **stable** |
