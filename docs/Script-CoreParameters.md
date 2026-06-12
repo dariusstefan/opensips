@@ -7,7 +7,9 @@ This section lists the all the parameters exported by **OpenSIPS** core for scri
 
 ## Core Keywords
 
-@@red|All the core keywords along with their accepted core values available in previous versions were eliminated in v2.4 and the use of core variables and core functions is recommended instead.@@ For detailed information about what you can use in place of the deprecated keywords, check the migration page [keywords](http://www.opensips.org/Documentation/Migration-2-3-0-to-2-4-0#toc3) section.
+> [!IMPORTANT]
+> All the core keywords along with their accepted core values available in previous versions were eliminated in v2.4 and the use of core variables and core functions is recommended instead. For detailed information about what you can use in place of the deprecated keywords, check the migration page [keywords](http://www.opensips.org/Documentation/Migration-2-3-0-to-2-4-0#toc3) section.
+
 
 ## Core parameters
 
