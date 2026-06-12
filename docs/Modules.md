@@ -24,7 +24,7 @@ description: ""
 | [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | 🟡 **beta** |
 | [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | 🟡 **beta** |
 | [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | 🟡 **beta** |
-| [**CALL CENTER**](../modules/call_center/README.md) | Inbound call center system | beta / 🔵 **NEW** |
+| [**CALL CENTER**](../modules/call_center/README.md) | Inbound call center system | 🟡 **beta** / 🔵 **NEW** |
 | [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
 | [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
@@ -52,7 +52,7 @@ description: ""
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
 | [**EVENT_DATAGRAM**](../modules/event_datagram/README.md) | Event datagram module | 🟢 **stable** |
-| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | beta / 🔵 **NEW** |
+| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | 🟡 **beta** / 🔵 **NEW** |
 | [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | 🟢 **stable** |
 | [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | 🟡 **beta** |
 | [**GFLAGS**](../modules/gflags/README.md) | Global shared flags module | 🟢 **stable** |
@@ -110,7 +110,7 @@ description: ""
 | [**RLS**](../modules/rls/README.md) | Resource List Server implementation | 🟢 **stable** |
 | [**RR**](../modules/rr/README.md) | Record-Route and Route module | 🟢 **stable** |
 | [**RTPPROXY**](../modules/rtpproxy/README.md) | NAT traversal using RTPProxy module | 🟢 **stable** |
-| [**SCRIPT_HELPER**](../modules/script_helper/README.md) | Embedded SIP routing logic and dialog management | beta / 🔵 **NEW** |
+| [**SCRIPT_HELPER**](../modules/script_helper/README.md) | Embedded SIP routing logic and dialog management | 🟡 **beta** / 🔵 **NEW** |
 | [**SEAS**](../modules/seas/README.md) | Sip Express Application Server (interface module) | 🟢 **stable** |
 | [**SIGNALING**](../modules/signaling/README.md) | SIP signaling module | 🟢 **stable** |
 | [**SIPCAPTURE**](../modules/sipcapture/README.md) | SipCapture module | 🟢 **stable** |
