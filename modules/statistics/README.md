@@ -119,7 +119,7 @@ update_stat("$var(reg_counter)");
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $stat

@@ -62,7 +62,7 @@ modparam("mi_http", "mi_http_root", "opensips_mi")
 No function exported to be used from configuration file.
 
 
-### Known issues
+### Known Issues
 
 
 Commands with large responses (like ul_dump) will fail if the

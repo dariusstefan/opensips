@@ -132,7 +132,7 @@ _empty_line_
 No function exported to be used from configuration file.
 
 
-### Known issues
+### Known Issues
 
 
 Due to the fact that OpenSIPS is a multiprocess application,

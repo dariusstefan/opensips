@@ -378,7 +378,7 @@ if (is_direction("upstream")) {
 ```
 
 
-#### Exported pseudo-variables
+#### Exported Pseudo-Variables
 
 
 Exported pseudo-variables are listed in the next sections.

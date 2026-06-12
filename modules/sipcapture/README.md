@@ -52,7 +52,7 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### db_url (str)
@@ -263,7 +263,7 @@ modparam("sipcapture", "capture_node", "homer03")
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### sip_capture
