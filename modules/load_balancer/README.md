@@ -272,7 +272,7 @@ if (t_check_status("(408)|(5[0-9][0-9])")) {
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 NONE
@@ -380,7 +380,7 @@ enable:: yes
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 NONE

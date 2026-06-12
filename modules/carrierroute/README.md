@@ -960,7 +960,7 @@ Meaning of the parameters is as follows:
 - *dstavp* - Name of the AVP where to store the next routing domain.
 
 
-### MI Commands
+### Exported MI Functions
 
 
 All commands understand the "-?" parameter to print a short help message.

@@ -941,7 +941,7 @@ start_recording();
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### nh_enable_ping

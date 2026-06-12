@@ -107,7 +107,7 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported parameters
+### Exported Parameters
 
 
 #### disable (int)

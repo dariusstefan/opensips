@@ -380,7 +380,7 @@ $avp(i:21) = set_select_weight("$avp(i:10)");
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rand_set_prop
@@ -539,7 +539,7 @@ $ opensipsctl fifo shv_get
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $env(name)
