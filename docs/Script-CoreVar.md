@@ -12,7 +12,7 @@ The **OpenSIPS** variables can be easily identified in the script as all their n
 Syntax:  
 
 The complete syntax for a pseudo variable is: 
-<code>$(<em>&lt;context&gt;</em>name<em>(subname)[index]{transformation}</em>)</code>
+`$(`*`<context>`*`name`*`(subname)[index]{transformation}`*`)`
 
 The fields written in italics are optional.
 The fields meaning is:
