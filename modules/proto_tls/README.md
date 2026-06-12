@@ -163,7 +163,7 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### OpenSIPS Exported parameters
+### Exported Parameters
 
 
 All these parameters can be used from the opensips.cfg file,

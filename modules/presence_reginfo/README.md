@@ -49,7 +49,7 @@ The following modules must be loaded before this module:
 None.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### default_expires (int) {#presence_reginfo.p.default_expires}
@@ -89,7 +89,7 @@ Whether to aggregate in a single notify body all registration
 ```
 
 
-### Functions
+### Exported Functions
 
 
 None to be used in configuration file.

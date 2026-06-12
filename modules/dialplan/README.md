@@ -704,7 +704,7 @@ The modules requires one table in OpenSIPS database: dialplan.The SQL
 		project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
 
 
-## Developer's Guide
+## Developer Guide
 
 
 The module does not provide any API to use in other OpenSIPS modules.
