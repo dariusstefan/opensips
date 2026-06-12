@@ -17,7 +17,7 @@ description: ""
 | [**CALL CONTROL**](../modules/call_control/README.md) | Prepaid Application module | 🟢 **stable** / 🔵 **NEW** |
 | [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
-| [**CLOSEDDIAL**](../modules/closeddial/README.md) | PBX-like dialling features | alpha / 🔵 **NEW** |
+| [**CLOSEDDIAL**](../modules/closeddial/README.md) | PBX-like dialling features | 🔴 **alpha** / 🔵 **NEW** |
 | [**CPL-C**](../modules/cpl-c/README.md) | CPL interpreter module | 🟢 **stable** |
 | [**DB_BERKELEY**](../modules/db_berkeley/README.md) | Berkeley DB driver for DB API | 🟡 **beta** |
 | [**DB_MYSQL**](../modules/db_mysql/README.md) | MYSQL-backend for database API module | 🟢 **stable** |
@@ -39,20 +39,20 @@ description: ""
 | [**GROUP**](../modules/group/README.md) | User-groups module with DB-backend | 🟢 **stable** |
 | [**GROUP_RADIUS**](../modules/group_radius/README.md) | User-groups module with RADIUS-backend | 🟢 **stable** |
 | [**H350**](../modules/h350/README.md) | H350 implementation | 🟢 **stable** |
-| [**IDENTITY**](../modules/identity/README.md) | SIP Identity implementation | alpha / 🔵 **NEW** |
+| [**IDENTITY**](../modules/identity/README.md) | SIP Identity implementation | 🔴 **alpha** / 🔵 **NEW** |
 | [**IMC**](../modules/imc/README.md) | Instant Messaging Conferencing module | 🟡 **beta** |
 | [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | 🟡 **beta** |
 | [**LCR**](../modules/lcr/README.md) | Least Cost Routing module | 🟢 **stable** |
 | [**LDAP**](../modules/ldap/README.md) | LDAP connector | 🟢 **stable** |
-| [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | alpha / 🔵 **NEW** |
-| [**LOCALCACHE**](../modules/localcache/README.md) | Local memory caching module | alpha / 🔵 **NEW** |
+| [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | 🔴 **alpha** / 🔵 **NEW** |
+| [**LOCALCACHE**](../modules/localcache/README.md) | Local memory caching module | 🔴 **alpha** / 🔵 **NEW** |
 | [**MANGLER**](../modules/mangler/README.md) | SIP mangler module | 🟢 **stable** |
 | [**MAXFWD**](../modules/maxfwd/README.md) | Max-Forward processor module | 🟢 **stable** |
 | [**MI_DATAGRAM**](../modules/mi_datagram/README.md) | DATAGRAM (unix and network) support for Management Interface | 🟢 **stable** |
 | [**MI_FIFO**](../modules/mi_fifo/README.md) | FIFO support for Management Interface | 🟢 **stable** |
 | [**MI_XMLRPC**](../modules/mi_xmlrpc/README.md) | XMLRPC support for Management Interface | 🟢 **stable** |
 | [**MEDIAPROXY**](../modules/mediaproxy/README.md) | NAT traversal module | 🟢 **stable** |
-| [**MMGEOIP**](../modules/mmgeoip/README.md) | MaxMind GeoIP module | alpha / 🔵 **NEW** |
+| [**MMGEOIP**](../modules/mmgeoip/README.md) | MaxMind GeoIP module | 🔴 **alpha** / 🔵 **NEW** |
 | [**MSILO**](../modules/msilo/README.md) | SIP message silo module | 🟢 **stable** |
 | [**NAT_TRAVERSAL**](../modules/nat_traversal/README.md) | NAT traversal module | 🔴 **alpha** |
 | [**NATHELPER**](../modules/nathelper/README.md) | NAT traversal helper module | 🟢 **stable** |
@@ -66,24 +66,24 @@ description: ""
 | [**PERMISSIONS**](../modules/permissions/README.md) | Permissions control module | 🟢 **stable** |
 | [**PIKE**](../modules/pike/README.md) | Flood detector module | 🟢 **stable** |
 | [**PRESENCE**](../modules/presence/README.md) | Presence server module - common API | 🟢 **stable** |
-| [**PRESENCE_DIALOGINFO**](../modules/presence_dialoginfo/README.md) | Extension to Presence server for Dialog Info | alpha / 🔵 **NEW** |
+| [**PRESENCE_DIALOGINFO**](../modules/presence_dialoginfo/README.md) | Extension to Presence server for Dialog Info | 🔴 **alpha** / 🔵 **NEW** |
 | [**PRESENCE_MWI**](../modules/presence_mwi/README.md) | Extension to Presence server for Message Waiting Indication | 🟢 **stable** |
-| [**PRESENCE_XCAPDIFF**](../modules/presence_xcapdiff/README.md) | Extension to Presence server for XCAP-DIFF event | alpha / 🔵 **NEW** |
+| [**PRESENCE_XCAPDIFF**](../modules/presence_xcapdiff/README.md) | Extension to Presence server for XCAP-DIFF event | 🔴 **alpha** / 🔵 **NEW** |
 | [**PRESENCE_XML**](../modules/presence_xml/README.md) | Presence server module - presence & watcher info and XCAP | 🟢 **stable** |
 | [**PUA**](../modules/pua/README.md) | Common API for presence user agent client | 🟢 **stable** |
 | [**PUA_BLA**](../modules/pua_bla/README.md) | BLA extension for PUA | 🟢 **stable** |
-| [**PUA_DIALOGINFO**](../modules/pua_dialoginfo/README.md) | Dialog-Info extension for PUA | alpha / 🔵 **NEW** |
+| [**PUA_DIALOGINFO**](../modules/pua_dialoginfo/README.md) | Dialog-Info extension for PUA | 🔴 **alpha** / 🔵 **NEW** |
 | [**PUA_MI**](../modules/pua_mi/README.md) | MI extension for PUA | 🟢 **stable** |
 | [**PUA_USRLOC**](../modules/pua_usrloc/README.md) | USRLOC extension for PUA | 🟢 **stable** |
 | [**PUA_XMPP**](../modules/pua_xmpp/README.md) | XMPP extension for PUA (SIMPLE-XMPP presence gateway) | 🟢 **stable** |
-| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | alpha / 🔵 **NEW** |
+| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | 🔴 **alpha** / 🔵 **NEW** |
 | [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | 🔴 **alpha** |
-| [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | alpha / 🔵 **NEW** |
+| [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | 🔴 **alpha** / 🔵 **NEW** |
 | [**REGISTRAR**](../modules/registrar/README.md) | SIP Registrar implementation module | 🟢 **stable** |
 | [**RLS**](../modules/rls/README.md) | Resource List Server implementation | 🟡 **beta** |
 | [**RR**](../modules/rr/README.md) | Record-Route and Route module | 🟢 **stable** |
 | [**SEAS**](../modules/seas/README.md) | Sip Express Application Server (interface module) | 🟢 **stable** |
-| [**SIGNALING**](../modules/signaling/README.md) | SIP signaling module | alpha / 🔵 **NEW** |
+| [**SIGNALING**](../modules/signaling/README.md) | SIP signaling module | 🔴 **alpha** / 🔵 **NEW** |
 | [**SIPTRACE**](../modules/siptrace/README.md) | SipTrace module | 🟢 **stable** |
 | [**SL**](../modules/sl/README.md) | Stateless replier module | 🟢 **stable** |
 | [**SMS**](../modules/sms/README.md) | SIP-to-SMS IM gateway module | 🟢 **stable** |
