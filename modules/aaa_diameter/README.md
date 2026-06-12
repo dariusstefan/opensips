@@ -392,7 +392,7 @@ event_route [E_DM_REQUEST] {
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### dm_send_request(app_id, cmd_code, avps_json, [rpl_avps_pv]) {#afunc_dm_send_request}

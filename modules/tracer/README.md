@@ -527,7 +527,7 @@ Before running OpenSIPS with tracer, you have to setup the database
 			project webpage, [https://opensips.org/docs/db/db-schema-devel.html](https://opensips.org/docs/db/db-schema-devel.html).
 
 
-### Known issues
+### Known Issues
 
 
 ACKs related to a transaction that are leaving OpenSIPS are not

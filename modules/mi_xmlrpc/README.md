@@ -137,7 +137,7 @@ modparam("mi_xmlrpc", "trace_bwlist", "w: sip_trace")
 No function exported to be used from configuration file.
 
 
-### Known issues
+### Known Issues
 
 
 Commands with large responses (like ul_dump) will fail if the
