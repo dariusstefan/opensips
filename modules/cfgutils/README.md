@@ -745,7 +745,7 @@ xlog("Current Unix timestamp: $var(sec) s, $var(usec) us\n");
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### sleep(seconds) {#afunc_sleep}

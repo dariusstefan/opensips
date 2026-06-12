@@ -267,7 +267,7 @@ mi("fs_subscribe", , $avp(params), $avp(vals));
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### mi(command, [ret_var [,params_avp[, vals_avp]]]) {#afunc_mi}
