@@ -17,19 +17,19 @@ description: ""
 | [**B2B_ENTITIES**](../modules/b2b_entities/README.md) | Back-to-Back User Agent Entities | 🟢 **stable** |
 | [**B2B_LOGIC**](../modules/b2b_logic/README.md) | Back-to-Back User Agent Logic | 🟢 **stable** |
 | [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | 🟡 **beta** |
-| [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) | CouchBase Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) | CouchBase Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) | Local Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) | Memcached Implementation of CacheDB | 🟢 **stable** |
-| [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | 🟡 **beta** |
-| [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
 | [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
 | [**CLOSEDDIAL**](../modules/closeddial/README.md) | PBX-like dialling features | 🟢 **stable** |
 | [**CPL-C**](../modules/cpl-c/README.md) | CPL interpreter module | 🟢 **stable** |
 | [**DB_BERKELEY**](../modules/db_berkeley/README.md) | Berkeley DB driver for DB API | 🟢 **stable** |
-| [**DB_CACHEDB**](../modules/db_cachedb/README.md) | SQL to CacheDB translator | beta / 🔵 **NEW** |
+| [**DB_CACHEDB**](../modules/db_cachedb/README.md) | SQL to CacheDB translator | 🟡 **beta** / 🔵 **NEW** |
 | [**DB_FLATSTORE**](../modules/db_flatstore/README.md) | Fast writing-only text-backend for database module | 🟢 **stable** |
 | [**DB_HTTP**](../modules/db_http/README.md) | HTTP-backend for DB API | 🟡 **beta** |
 | [**DB_MYSQL**](../modules/db_mysql/README.md) | MYSQL-backend for database API module | 🟢 **stable** |
@@ -50,9 +50,9 @@ description: ""
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
 | [**EVENT_DATAGRAM**](../modules/event_datagram/README.md) | Event datagram module | 🟢 **stable** |
-| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | beta / 🔵 **NEW** |
+| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | 🟡 **beta** / 🔵 **NEW** |
 | [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | 🟢 **stable** |
-| [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | beta / 🔵 **NEW** |
+| [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | 🟡 **beta** / 🔵 **NEW** |
 | [**GFLAGS**](../modules/gflags/README.md) | Global shared flags module | 🟢 **stable** |
 | [**GROUP**](../modules/group/README.md) | User-groups module with DB-backend | 🟢 **stable** |
 | [**H350**](../modules/h350/README.md) | H350 implementation | 🟢 **stable** |
@@ -65,13 +65,13 @@ description: ""
 | [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | 🟢 **stable** |
 | [**LUA**](../modules/lua/README.md) | Call LUA scripts from OpenSIPS cfg | 🟡 **beta** |
 | [**MANGLER**](../modules/mangler/README.md) | SIP mangler module | 🟢 **stable** |
-| [**MATHOPS**](../modules/mathops/README.md) | Math operations module | beta / 🔵 **NEW** |
+| [**MATHOPS**](../modules/mathops/README.md) | Math operations module | 🟡 **beta** / 🔵 **NEW** |
 | [**MAXFWD**](../modules/maxfwd/README.md) | Max-Forward processor module | 🟢 **stable** |
 | [**MI_DATAGRAM**](../modules/mi_datagram/README.md) | DATAGRAM (unix and network) support for Management Interface | 🟢 **stable** |
 | [**MI_FIFO**](../modules/mi_fifo/README.md) | FIFO support for Management Interface | 🟢 **stable** |
 | [**MI_HTTP**](../modules/mi_http/README.md) | HTTP support for Management Interface | 🟢 **stable** |
 | [**MI_XMLRPC**](../modules/mi_xmlrpc/README.md) | XMLRPC support for Management Interface | 🟢 **stable** |
-| [**MI_XMLRPC_NG**](../modules/mi_xmlrpc_ng/README.md) | XMLRPC support for Management Interface | beta / 🔵 **NEW** |
+| [**MI_XMLRPC_NG**](../modules/mi_xmlrpc_ng/README.md) | XMLRPC support for Management Interface | 🟡 **beta** / 🔵 **NEW** |
 | [**MEDIAPROXY**](../modules/mediaproxy/README.md) | NAT traversal module | 🟢 **stable** |
 | [**MMGEOIP**](../modules/mmgeoip/README.md) | MaxMind GeoIP module | 🟢 **stable** |
 | [**MSILO**](../modules/msilo/README.md) | SIP message silo module | 🟢 **stable** |
@@ -103,7 +103,7 @@ description: ""
 | [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | 🟢 **stable** |
 | [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | 🟢 **stable** |
 | [**REGISTRAR**](../modules/registrar/README.md) | SIP Registrar implementation module | 🟢 **stable** |
-| [**REST_CLIENT**](../modules/rest_client/README.md) | Implementation of an HTTP client | beta / 🔵 **NEW** |
+| [**REST_CLIENT**](../modules/rest_client/README.md) | Implementation of an HTTP client | 🟡 **beta** / 🔵 **NEW** |
 | [**RLS**](../modules/rls/README.md) | Resource List Server implementation | 🟢 **stable** |
 | [**RR**](../modules/rr/README.md) | Record-Route and Route module | 🟢 **stable** |
 | [**RTPPROXY**](../modules/rtpproxy/README.md) | NAT traversal using RTPProxy module | 🟢 **stable** |
@@ -114,7 +114,7 @@ description: ""
 | [**SIPTRACE**](../modules/siptrace/README.md) | SipTrace module | 🟢 **stable** |
 | [**SL**](../modules/sl/README.md) | Stateless replier module | 🟢 **stable** |
 | [**SMS**](../modules/sms/README.md) | SIP-to-SMS IM gateway module | 🟢 **stable** |
-| [**SNGTC**](../modules/sngtc/README.md) | Voice Transcoding in OpenSIPS using Sangoma hardware | beta / 🔵 **NEW** |
+| [**SNGTC**](../modules/sngtc/README.md) | Voice Transcoding in OpenSIPS using Sangoma hardware | 🟡 **beta** / 🔵 **NEW** |
 | [**SNMPStats**](../modules/snmpstats/README.md) | SNMP interface for statistics module | 🟢 **stable** |
 | [**SPEEDDIAL**](../modules/speeddial/README.md) | Per-user speed-dial controller module | 🟢 **stable** |
 | [**STATISTICS**](../modules/statistics/README.md) | Script statistics support | 🟢 **stable** |
