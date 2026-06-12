@@ -201,7 +201,7 @@ The module does not export functions to be used
 		in configuration script.
 
 
-### Known issues
+### Known Issues
 
 
 Due to the fact that Cassandra cannot store counters and regular columns in the same ColumnFamily, add() and sub() methods are not exported through the Key-Value interface.

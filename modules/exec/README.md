@@ -319,7 +319,7 @@ exec_getenv("HOSTNAME", "$avp(localhost)");
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### exec(command[,input[,output[,error[,env]]]])

@@ -88,7 +88,7 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### rtpengine_sock (string) {#rtpengine.p.rtpengine_sock}
@@ -206,7 +206,7 @@ modparam("rtpengine", "setid_avp", "$avp(setid)")
 ```
 
 
-### Functions
+### Exported Functions
 
 
 #### rtpengine_use_set(setid) {#rtpengine.f.rtpengine_use_set}
@@ -517,7 +517,7 @@ rtpengine_start_recording();
 ```
 
 
-### Exported Pseudo Variables
+### Exported Pseudo-Variables
 
 
 #### $rtpstat
@@ -536,7 +536,7 @@ Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP p
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rtpengine_enable {#rtpengine.m.rtpengine_enable}

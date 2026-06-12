@@ -245,7 +245,7 @@ This function can be used from REQUEST_ROUTE.
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $TH_callee_callid
