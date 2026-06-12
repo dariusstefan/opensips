@@ -637,7 +637,7 @@ MI FIFO Command Format:
 ```
 
 
-### Known limitations
+### Known Limitations
 
 
 The pipes and queues are stored as static vectors, so no more than

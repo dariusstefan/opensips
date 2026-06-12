@@ -303,7 +303,7 @@ The following libraries or applications must be installed before
 - *None*.
 
 
-### Exported parameters
+### Exported Parameters
 
 
 #### keepalive_interval (integer)
@@ -432,7 +432,7 @@ modparam("nat_traversal", "keepalive_state_file", "/var/run/opensips/keepalive_s
 ```
 
 
-### Exported functions
+### Exported Functions
 
 
 #### client_nat_test(type)
@@ -528,7 +528,7 @@ if ((method=="REGISTER" || method=="SUBSCRIBE" ||
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 #### keepalive_endpoints
@@ -556,7 +556,7 @@ Indicates how many of the NAT endpoints are kept alive for taking part
         in an INVITE dialog.
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $keepalive.socket(nat_endpoint)
