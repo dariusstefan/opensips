@@ -220,7 +220,11 @@ Examples:
 
 ```
 
-### Address family @@red|(Obsoleted with OpenSIPS 3.1)@@ - $af {#af}
+### Address family - $af {#af}
+
+> [!WARNING]
+> Obsoleted with OpenSIPS 3.1
+
 
 Use [`$socket_in(af)`](#socket_in) instead.
 
@@ -408,7 +412,11 @@ If loose_route() returns TRUE a destination uri is set according to the first Ro
 
 `$fn` - reference to display name of 'From' header
 
-### Forced socket @@red|(Obsoleted with OpenSIPS 3.1)@@ - $fs {#fs}
+### Forced socket - $fs {#fs}
+
+> [!WARNING]
+> Obsoleted with OpenSIPS 3.1
+
 
 Use [`$socket_out`](#socket_out) instead.
 
@@ -639,11 +647,19 @@ Use [`$socket_in(proto)`](#socket_in) instead.
 > It is R/W variable (you can assign values to it routing script)
 
 
-### Received IP address @@red|(Obsoleted with OpenSIPS 3.1)@@ - $Ri {#Ri}
+### Received IP address - $Ri {#Ri}
+
+> [!WARNING]
+> Obsoleted with OpenSIPS 3.1
+
 
 Use [`$socket_in(ip)`](#socket_in) instead.
 
-### Received port @@red|(Obsoleted with OpenSIPS 3.1)@@ - $Rp {#Rp}
+### Received port - $Rp {#Rp}
+
+> [!WARNING]
+> Obsoleted with OpenSIPS 3.1
+
 
 Use [`$socket_in(port)`](#socket_in) instead.
 
