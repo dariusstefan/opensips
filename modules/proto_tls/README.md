@@ -172,7 +172,7 @@ OpenSIPS TLS v1.1/1.2 support requires the following packages:
 					*libssl-dev*
 
 
-### OpenSIPS Exported parameters
+### Exported Parameters
 
 
 All these parameters can be used from the opensips.cfg file,

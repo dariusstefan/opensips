@@ -164,7 +164,7 @@ Reloads the TLS domains information from the database.
                 script defined domains are preserved.
 
 
-### OpenSIPS Exported parameters
+### Exported Parameters
 
 
 All these parameters can be used from the opensips.cfg file,

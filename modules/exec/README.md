@@ -183,7 +183,7 @@ exec("/home/../myscript.sh", "this is my $var(input) for exec\n", , , $avp(env))
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### exec(command, [stdin], [stdout], [stderr], [envavp]) {#afunc_exec}
