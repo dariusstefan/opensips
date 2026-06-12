@@ -55,7 +55,7 @@ description: ""
 | [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | 🟡 **beta** |
 | [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | 🟢 **stable** |
 | [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | 🟡 **beta** |
-| [**FRAUD_DETECTION**](../modules/fraud_detection/README.md) | Detects fraudulent calls | beta / 🔵 **NEW** |
+| [**FRAUD_DETECTION**](../modules/fraud_detection/README.md) | Detects fraudulent calls | 🟡 **beta** / 🔵 **NEW** |
 | [**GFLAGS**](../modules/gflags/README.md) | Global shared flags module | 🟢 **stable** |
 | [**GROUP**](../modules/group/README.md) | User-groups module with DB-backend | 🟢 **stable** |
 | [**H350**](../modules/h350/README.md) | H350 implementation | 🟢 **stable** |
@@ -99,7 +99,7 @@ description: ""
 | [**PROTO_TCP**](../modules/proto_tcp/README.md) | TCP protocol module - implements TCP-plain transport for SIP | 🟢 **stable** |
 | [**PROTO_TLS**](../modules/proto_tls/README.md) | TLS protocol module - implements TLS transport for SIP | 🟢 **stable** |
 | [**PROTO_UDP**](../modules/proto_udp/README.md) | UDP protocol module - implements UDP-plain transport for SIP | 🟢 **stable** |
-| [**PROTO_WS**](../modules/proto_ws/README.md) | WebSocket protocol module - implements WS transport for SIP | beta / 🔵 **NEW** |
+| [**PROTO_WS**](../modules/proto_ws/README.md) | WebSocket protocol module - implements WS transport for SIP | 🟡 **beta** / 🔵 **NEW** |
 | [**PUA**](../modules/pua/README.md) | Common API for presence user agent client | 🟢 **stable** |
 | [**PUA_BLA**](../modules/pua_bla/README.md) | BLA extension for PUA | 🟢 **stable** |
 | [**PUA_DIALOGINFO**](../modules/pua_dialoginfo/README.md) | Dialog-Info extension for PUA | 🟢 **stable** |
@@ -114,7 +114,7 @@ description: ""
 | [**REST_CLIENT**](../modules/rest_client/README.md) | Implementation of an HTTP client | 🟡 **beta** |
 | [**RLS**](../modules/rls/README.md) | Resource List Server implementation | 🟢 **stable** |
 | [**RR**](../modules/rr/README.md) | Record-Route and Route module | 🟢 **stable** |
-| [**RTPENGINE**](../modules/rtpengine/README.md) | Connector to RTPengine external RTP relay | beta / 🔵 **NEW** |
+| [**RTPENGINE**](../modules/rtpengine/README.md) | Connector to RTPengine external RTP relay | 🟡 **beta** / 🔵 **NEW** |
 | [**RTPPROXY**](../modules/rtpproxy/README.md) | Connector to RTPproxy external RTP relay | 🟢 **stable** |
 | [**SCRIPT_HELPER**](../modules/script_helper/README.md) | Embedded SIP routing logic and dialog management | 🟡 **beta** |
 | [**SEAS**](../modules/seas/README.md) | Sip Express Application Server (interface module) | 🟢 **stable** |
@@ -132,7 +132,7 @@ description: ""
 | [**STUN**](../modules/stun/README.md) | Built-in STUN server | 🟢 **stable** |
 | [**TEXTOPS**](../modules/textops/README.md) | Text operations module | 🟢 **stable** |
 | [**TM**](../modules/tm/README.md) | Transaction (stateful) module | 🟢 **stable** |
-| [**TOPOLOGY_HIDING**](../modules/topology_hiding/README.md) | Provides Topology Hiding capabilities | beta / 🔵 **NEW** |
+| [**TOPOLOGY_HIDING**](../modules/topology_hiding/README.md) | Provides Topology Hiding capabilities | 🟡 **beta** / 🔵 **NEW** |
 | [**UAC**](../modules/uac/README.md) | UAC functionalies (FROM mangling and UAC auth) | 🟢 **stable** |
 | [**UAC_AUTH**](../modules/uac_auth/README.md) | UAC Authentication functionality | 🟢 **stable** |
 | [**UAC_REDIRECT**](../modules/uac_redirect/README.md) | UAC redirection functionality | 🟢 **stable** |
