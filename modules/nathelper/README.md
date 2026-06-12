@@ -542,7 +542,7 @@ All flags can be bitwise combined, the test returns true if any of
 This function can be used from REQUEST_ROUTE, ONREPLY_ROUTE, FAILURE_ROUTE, BRANCH_ROUTE.
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### nh_enable_ping

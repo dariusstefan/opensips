@@ -870,7 +870,7 @@ if (ldap_search(
 ```
 
 
-### Exported Async Functions
+### Exported Asynchronous Functions
 
 
 #### ldap_search(ldap_url) {#ldap-search-async-fn}

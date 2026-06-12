@@ -741,7 +741,7 @@ MI FIFO Command Format:
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $rl_count(name)

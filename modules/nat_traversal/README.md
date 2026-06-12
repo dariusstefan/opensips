@@ -531,7 +531,7 @@ if ((method=="REGISTER" || method=="SUBSCRIBE" ||
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 #### keepalive_endpoints
@@ -559,7 +559,7 @@ Indicates how many of the NAT endpoints are kept alive for taking part
         in an INVITE dialog.
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $keepalive.socket(nat_endpoint)

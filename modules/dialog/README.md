@@ -1627,7 +1627,7 @@ $var(account) = $dlg_val(account_type);
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 #### active_dialogs
@@ -2052,7 +2052,7 @@ MI FIFO Command Format:
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $DLG_count

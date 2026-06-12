@@ -236,7 +236,7 @@ radius_send_acct("set1");
 ```
 
 
-### Exported Async Functions
+### Exported Asynchronous Functions
 
 
 #### radius_send_auth(input_set_name, output_set_name)

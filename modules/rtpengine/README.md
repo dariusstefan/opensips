@@ -522,7 +522,7 @@ rtpengine_start_recording();
 ```
 
 
-### Exported Pseudo Variables
+### Exported Pseudo-Variables
 
 
 #### $rtpstat
@@ -541,7 +541,7 @@ Returns the RTP statistics from the RTP proxy. The RTP statistics from the RTP p
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rtpengine_enable {#rtpengine.m.rtpengine_enable}

@@ -692,7 +692,7 @@ if (!release_dynamic_lock("$avp(1)") {
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### sleep(seconds)
@@ -749,7 +749,7 @@ route[after_usleep] {
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rand_set_prop
@@ -908,7 +908,7 @@ $ opensipsctl fifo shv_get
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $env(name)

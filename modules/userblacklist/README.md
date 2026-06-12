@@ -154,7 +154,7 @@ if (!check_blacklist("global_blacklist")))
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### reload_blacklist
