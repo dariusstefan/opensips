@@ -17,12 +17,12 @@ description: ""
 | [**B2B_ENTITIES**](../modules/b2b_entities/README.md) | Back-to-Back User Agent Entities | 🟢 **stable** |
 | [**B2B_LOGIC**](../modules/b2b_logic/README.md) | Back-to-Back User Agent Logic | 🟢 **stable** |
 | [**CACHEDB_CASSANDRA**](../modules/cachedb_cassandra/README.md) | Cassandra Implementation of CacheDB | 🟡 **beta** |
-| [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) | CouchBase Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_COUCHBASE**](../modules/cachedb_couchbase/README.md) | CouchBase Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) | Local Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) | Memcached Implementation of CacheDB | 🟢 **stable** |
-| [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_MONGODB**](../modules/cachedb_mongodb/README.md) | MongoDB Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | 🟡 **beta** |
-| [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | beta / 🔵 **NEW** |
+| [**CACHEDB_SQL**](../modules/cachedb_sql/README.md) | SQL-based Implementation of CacheDB | 🟡 **beta** / 🔵 **NEW** |
 | [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
 | [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
@@ -49,9 +49,9 @@ description: ""
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
 | [**EVENT_DATAGRAM**](../modules/event_datagram/README.md) | Event datagram module | 🟢 **stable** |
-| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | beta / 🔵 **NEW** |
+| [**EVENT_ROUTE**](../modules/event_route/README.md) | Route triggering based on events | 🟡 **beta** / 🔵 **NEW** |
 | [**EVENT_RABBITMQ**](../modules/event_rabbitmq/README.md) | Event RabbitMQ client module | 🟢 **stable** |
-| [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | beta / 🔵 **NEW** |
+| [**EVENT_XMLRPC**](../modules/event_xmlrpc/README.md) | Event XMLRPC client module | 🟡 **beta** / 🔵 **NEW** |
 | [**GFLAGS**](../modules/gflags/README.md) | Global shared flags module | 🟢 **stable** |
 | [**GROUP**](../modules/group/README.md) | User-groups module with DB-backend | 🟢 **stable** |
 | [**H350**](../modules/h350/README.md) | H350 implementation | 🟢 **stable** |
@@ -81,7 +81,7 @@ description: ""
 | [**PEERING**](../modules/peering/README.md) | Radius peering module | 🔴 **alpha** |
 | [**PERL**](../modules/perl/README.md) | embed execution of Perl function | 🟢 **stable** |
 | [**PERMISSIONS**](../modules/permissions/README.md) | Permissions control module | 🟢 **stable** |
-| [**PI_HTTP**](../modules/pi_http/README.md) | Provisioning Interface module | beta / 🔵 **NEW** |
+| [**PI_HTTP**](../modules/pi_http/README.md) | Provisioning Interface module | 🟡 **beta** / 🔵 **NEW** |
 | [**PIKE**](../modules/pike/README.md) | Flood detector module | 🟢 **stable** |
 | [**PRESENCE**](../modules/presence/README.md) | Presence server module - common API | 🟢 **stable** |
 | [**PRESENCE_CALLINFO**](../modules/presence_callinfo/README.md) | Extension to Presence server for Call-Info | 🟢 **stable** |
