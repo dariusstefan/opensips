@@ -128,7 +128,7 @@ if (load_balance("1","trascoding;conference")) {
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 NONE
@@ -191,7 +191,7 @@ MI FIFO Command Format:
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 NONE

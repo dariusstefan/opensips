@@ -337,7 +337,7 @@ shm_status();
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rand_set_prop
@@ -496,7 +496,7 @@ $ opensipsctl fifo shv_get
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $RANDOM

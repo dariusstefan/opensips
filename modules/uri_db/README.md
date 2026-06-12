@@ -227,7 +227,7 @@ if (does_uri_exist()) {
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 Exported statistics are listed in the next sections.

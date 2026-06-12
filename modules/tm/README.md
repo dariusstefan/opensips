@@ -1131,7 +1131,7 @@ branch_route[1] {
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 Exported pseudo-variables are listed in the next sections.
@@ -1244,7 +1244,7 @@ Parameters:
 				headers)
 
 
-### Exported statistics
+### Exported Statistics
 
 
 Exported statistics are listed in the next sections. All statistics
