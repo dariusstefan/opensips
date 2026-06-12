@@ -20,16 +20,16 @@ description: ""
 | [**CACHEDB_LOCAL**](../modules/cachedb_local/README.md) | Local Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_MEMCACHED**](../modules/cachedb_memcached/README.md) | Memcached Implementation of CacheDB | 🟢 **stable** |
 | [**CACHEDB_REDIS**](../modules/cachedb_redis/README.md) | Redis Implementation of CacheDB | beta / 🔵 **NEW** |
-| [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | beta |
-| [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | alpha |
+| [**CALL CONTROL**](../modules/call_control/README.md) | PrePaid application module | 🟡 **beta** |
+| [**CARRIERROUTE**](../modules/carrierroute/README.md) | routing extension suitable for carriers | 🔴 **alpha** |
 | [**CFGUTILS**](../modules/cfgutils/README.md) | Different config utilities | 🟢 **stable** |
 | [**CLOSEDDIAL**](../modules/closeddial/README.md) | PBX-like dialing features | 🟢 **stable** |
 | [**CPL-C**](../modules/cpl-c/README.md) | CPL interpreter module | 🟢 **stable** |
-| [**DB_BERKELEY**](../modules/db_berkeley/README.md) | Berkeley DB driver for DB API | beta |
+| [**DB_BERKELEY**](../modules/db_berkeley/README.md) | Berkeley DB driver for DB API | 🟡 **beta** |
 | [**DB_FLATSTORE**](../modules/db_flatstore/README.md) | Fast writing-only text-backend for database module | 🟢 **stable** |
 | [**DB_HTTP**](../modules/db_http/README.md) | HTTP-backend for DB API | 🟢 **stable** |
 | [**DB_MYSQL**](../modules/db_mysql/README.md) | MYSQL-backend for database API module | 🟢 **stable** |
-| [**DB_ORACLE**](../modules/db_oracle/README.md) | ORACLE-backend for database API module | beta |
+| [**DB_ORACLE**](../modules/db_oracle/README.md) | ORACLE-backend for database API module | 🟡 **beta** |
 | [**DB_POSTGRES**](../modules/db_postgres/README.md) | POSTGRES-backend for database API module | 🟢 **stable** |
 | [**DB_TEXT**](../modules/db_text/README.md) | Text-backend for database API module | 🟢 **stable** |
 | [**DB_UNIXODBC**](../modules/db_unixodbc/README.md) | unixODBC driver module | 🟢 **stable** |
@@ -40,7 +40,7 @@ description: ""
 | [**DIVERSION**](../modules/diversion/README.md) | Diversion header insertion module | 🟢 **stable** |
 | [**DNS_CACHE**](../modules/dns_cache/README.md) | Module for caching DNS records that can be used with any Key-Value back-end | beta / 🔵 **NEW** |
 | [**DOMAIN**](../modules/domain/README.md) | Multi-domain support module | 🟢 **stable** |
-| [**DOMAINPOLICY**](../modules/domainpolicy/README.md) | Policies to connect federations | beta |
+| [**DOMAINPOLICY**](../modules/domainpolicy/README.md) | Policies to connect federations | 🟡 **beta** |
 | [**DROUTING**](../modules/drouting/README.md) | Dynamic Routing / LCR | 🟢 **stable** |
 | [**ENUM**](../modules/enum/README.md) | ENUM lookup module | 🟢 **stable** |
 | [**EXEC**](../modules/exec/README.md) | External exec module | 🟢 **stable** |
@@ -52,7 +52,7 @@ description: ""
 | [**HTTPD**](../modules/httpd/README.md) | Embedded HTTP server | beta / 🔵 **NEW** |
 | [**IDENTITY**](../modules/identity/README.md) | SIP Identity implementation | 🟢 **stable** |
 | [**IMC**](../modules/imc/README.md) | Instant Messaging Conferencing module | 🟢 **stable** |
-| [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | beta |
+| [**JABBER**](../modules/jabber/README.md) | JABBER IM and PRESENCE interconnection module | 🟡 **beta** |
 | [**JSON**](../modules/json/README.md) | JSON packing function | 🟢 **stable** |
 | [**LDAP**](../modules/ldap/README.md) | LDAP connector | 🟢 **stable** |
 | [**LOAD_BALANCER**](../modules/load_balancer/README.md) | Load Balancer (for calls) module | 🟢 **stable** |
@@ -72,7 +72,7 @@ description: ""
 | [**OSP**](../modules/osp/README.md) | OSP peering module | 🟢 **stable** |
 | [**PATH**](../modules/path/README.md) | Path support for SIP frontending | 🟢 **stable** |
 | [**PDT**](../modules/pdt/README.md) | Prefix-to-Domain translator module | 🟢 **stable** |
-| [**PEERING**](../modules/peering/README.md) | Radius peering module | alpha |
+| [**PEERING**](../modules/peering/README.md) | Radius peering module | 🔴 **alpha** |
 | [**PERL**](../modules/perl/README.md) | embed execution of Perl function | 🟢 **stable** |
 | [**PERLVDB**](../modules/perlvdb/README.md) | Perl Virtual Database engine | 🟢 **stable** |
 | [**PERMISSIONS**](../modules/permissions/README.md) | Permissions control module | 🟢 **stable** |
@@ -90,8 +90,8 @@ description: ""
 | [**PUA_USRLOC**](../modules/pua_usrloc/README.md) | USRLOC extension for PUA | 🟢 **stable** |
 | [**PUA_XMPP**](../modules/pua_xmpp/README.md) | XMPP extension for PUA (SIMPLE-XMPP presence gateway) | 🟢 **stable** |
 | **PYTHON** | Python scripting support | beta |
-| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | beta |
-| [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | alpha |
+| [**QOS**](../modules/qos/README.md) | QOS (RTP) module | 🟡 **beta** |
+| [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | 🔴 **alpha** |
 | [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | 🟢 **stable** |
 | [**REGISTRAR**](../modules/registrar/README.md) | SIP Registrar implementation module | 🟢 **stable** |
 | [**RLS**](../modules/rls/README.md) | Resource List Server implementation | 🟢 **stable** |
@@ -115,9 +115,9 @@ description: ""
 | [**UAC**](../modules/uac/README.md) | UAC functionalies (FROM mangling and UAC auth) | 🟢 **stable** |
 | [**UAC_AUTH**](../modules/uac_auth/README.md) | UAC Authentication functionality | 🟢 **stable** |
 | [**UAC_REDIRECT**](../modules/uac_redirect/README.md) | UAC redirection functionality | 🟢 **stable** |
-| [**UAC_REGISTRANT**](../modules/uac_registrant/README.md) | SIP Registrant implementation module | beta |
+| [**UAC_REGISTRANT**](../modules/uac_registrant/README.md) | SIP Registrant implementation module | 🟡 **beta** |
 | [**URI**](../modules/uri/README.md) | Generic URI operation module | 🟢 **stable** |
-| [**USERBLACKLIST**](../modules/userblacklist/README.md) | User black/white listing | beta |
+| [**USERBLACKLIST**](../modules/userblacklist/README.md) | User black/white listing | 🟡 **beta** |
 | [**USRLOC**](../modules/usrloc/README.md) | User location implementation module | 🟢 **stable** |
 | [**XCAP_CLIENT**](../modules/xcap_client/README.md) | XCAP client implementation | 🟢 **stable** |
 | [**XMPP**](../modules/xmpp/README.md) | SIP-to-XMPP Gateway (SIP to Jabber/Google Talk) | 🟢 **stable** |
