@@ -89,7 +89,7 @@ description: ""
 | [**PUA_MI**](../modules/pua_mi/README.md) | MI extension for PUA | 🟢 **stable** |
 | [**PUA_USRLOC**](../modules/pua_usrloc/README.md) | USRLOC extension for PUA | 🟢 **stable** |
 | [**PUA_XMPP**](../modules/pua_xmpp/README.md) | XMPP extension for PUA (SIMPLE-XMPP presence gateway) | 🟢 **stable** |
-| **PYTHON** | Python scripting support | beta |
+| **PYTHON** | Python scripting support | 🟡 **beta** |
 | [**QOS**](../modules/qos/README.md) | QOS (RTP) module | 🟡 **beta** |
 | [**RATELIMIT**](../modules/ratelimit/README.md) | SIP traffic shaping module | 🔴 **alpha** |
 | [**REGEX**](../modules/regex/README.md) | RegExp via PCRE library | 🟢 **stable** |
