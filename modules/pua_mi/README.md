@@ -69,7 +69,7 @@ The module does not export functions to be used
 		in configuration script.
 
 
-### Exported MI functions
+### Exported MI Functions
 
 
 #### pua_publish

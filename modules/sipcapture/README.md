@@ -58,7 +58,7 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### db_url (str) {#param_db_url}
@@ -724,7 +724,7 @@ route[my_hep_route] {
 ```
 
 
-### Exported Async Functions
+### Exported Asynchronous Functions
 
 
 #### sip_capture() {#afunc_sip_capture}
@@ -818,7 +818,7 @@ Holds the version of the hep packet received on the interface.
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### sip_capture

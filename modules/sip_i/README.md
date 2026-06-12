@@ -40,7 +40,7 @@ The following libraries or applications must be installed before running
 - *None*.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### param_subfield_separator (str) {#param_param_subfield_separator}

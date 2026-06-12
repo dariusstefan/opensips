@@ -692,7 +692,7 @@ if (!release_dynamic_lock("$avp(1)") {
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### sleep(seconds) {#afunc_sleep}
