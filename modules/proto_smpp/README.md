@@ -147,7 +147,7 @@ The following modules must be loaded before this module:
 - *None*.
 
 
-### OpenSIPS Exported parameters
+### Exported Parameters
 
 
 All these parameters can be used from the opensips.cfg file,
