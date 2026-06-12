@@ -170,7 +170,7 @@ description: ""
 * [**HTTPD**](../modules/httpd/README.md) - Embedded HTTP server — 🟢 **stable**
 * [**PI_HTTP**](../modules/pi_http/README.md) - Provisioning Interface module — 🟢 **stable**
 * [**RABBITMQ**](../modules/rabbitmq/README.md) - Connector to a RabbitMQ message broker — 🟢 **stable**
-* [**RABBITMQ_CONSUMER**](../modules/rabbitmq_consumer/README.md) - Connect to RabbitMQ and receive events, @@red|alpha@@
+* [**RABBITMQ_CONSUMER**](../modules/rabbitmq_consumer/README.md) - Connect to RabbitMQ and receive events, 🔴 **alpha**
 * [**STATISTICS**](../modules/statistics/README.md) - Script statistics support — 🟢 **stable**
 
 ### Media Relays
@@ -208,4 +208,4 @@ description: ""
 * [**PROTO_UDP**](../modules/proto_udp/README.md) - UDP protocol module - implements UDP-plain transport for SIP — 🟢 **stable**
 * [**PROTO_WS**](../modules/proto_ws/README.md) - WebSocket protocol module - implements WS transport for SIP — 🟢 **stable**
 * [**PROTO_WSS**](../modules/proto_wss/README.md) - WebSocket Secure protocol module - implements WSS transport for SIP — 🟢 **stable**
-* [**PROTO_SMPP**](../modules/proto_smpp/README.md) - SMPP (Short Message Peer-to-Peer) protocol module - implements transport for SMPP messages, @@red|alpha@@
+* [**PROTO_SMPP**](../modules/proto_smpp/README.md) - SMPP (Short Message Peer-to-Peer) protocol module - implements transport for SMPP messages, 🔴 **alpha**
