@@ -1447,7 +1447,7 @@ if (has_totag()  && (uri == myself)  && is_method("INVITE|ACK|BYE|UPDATE")
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 #### active_dialogs
@@ -1736,7 +1736,7 @@ MI FIFO Command Format:
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $DLG_count
