@@ -780,7 +780,7 @@ if(shuffle_avps( $avp(foo) ))
 ```
 
 
-### Exported Asyncronous Functions
+### Exported Asynchronous Functions
 
 
 #### sleep(seconds) {#afunc_sleep}

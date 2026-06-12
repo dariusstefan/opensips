@@ -61,7 +61,7 @@ The following modules must be loaded before this module:
 None.
 
 
-### Parameters
+### Exported Parameters
 
 
 #### default_domain(str)
@@ -168,7 +168,7 @@ onreply_route[register_reply] {
 ```
 
 
-### Functions
+### Exported Functions
 
 
 #### reginfo_handle_notify(uldomain) {#pua_reginfo.f.reginfo_handle_notify}
