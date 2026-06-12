@@ -443,7 +443,7 @@ This function can be used from any route.
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $cgr(name) / $(cgr(name)[session])

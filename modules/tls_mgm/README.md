@@ -191,7 +191,7 @@ List all domains information.
 Reloads the TLS domains information from the database. The previous DB defined domains are discarded but the script defined domains are preserved. If no new default client or server domains is loaded and previously the default was DB defined, the standard default domain is reinstated.
 
 
-### OpenSIPS Exported parameters
+### Exported Parameters
 
 
 All these parameters can be used from the opensips.cfg file,

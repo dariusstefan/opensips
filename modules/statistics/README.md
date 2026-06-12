@@ -211,7 +211,7 @@ while (stat_iter_next("$var(k)", "$var(v)", "iter")) {
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $stat

@@ -333,7 +333,7 @@ Before running OpenSIPS with siptrace, you have to setup the database
 			project webpage, [http://www.opensips.org/html/docs/db/db-schema-devel.html](http://www.opensips.org/html/docs/db/db-schema-devel.html).
 
 
-### Known issues
+### Known Issues
 
 
 ACKs related to a transaction that are leaving OpenSIPS are not

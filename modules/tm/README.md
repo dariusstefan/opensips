@@ -1517,7 +1517,7 @@ Parameters:
 				headers)
 
 
-### Exported statistics
+### Exported Statistics
 
 
 Exported statistics are listed in the next sections. All statistics

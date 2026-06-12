@@ -588,7 +588,7 @@ opensipsctl fifo cc_reset_stats
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 NONE

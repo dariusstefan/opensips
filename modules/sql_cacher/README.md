@@ -221,7 +221,7 @@ modparam("sql_cacher", "reload_interval", 5)
 No function exported to be used from configuration file.
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### sql_cacher_reload
@@ -247,7 +247,7 @@ $ opensipsctl fifo sql_cacher_reload caching_name key
 ```
 
 
-### Exported pseudo-variables
+### Exported Pseudo-Variables
 
 
 #### $sql_cached_value(id{sep}col{sep}key)

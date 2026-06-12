@@ -793,7 +793,7 @@ xlog("RTP statistics for $ci: dropped=$(avp(stats)[4])\n");
 ```
 
 
-### MI Commands
+### Exported MI Functions
 
 
 #### rtpproxy_enable

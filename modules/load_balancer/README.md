@@ -665,7 +665,7 @@ if (lb_is_destination("$si","$sp") ) {
 ```
 
 
-### Exported statistics
+### Exported Statistics
 
 
 NONE
