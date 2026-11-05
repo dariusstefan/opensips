@@ -57,6 +57,22 @@
 #define SEC_MONTHLY_MAX  (31 * SEC_DAILY)
 #define SEC_YEARLY_MAX   (366 * SEC_DAILY)
 
+/* The furthest point in time this platform's time_t can represent.  POSIX
+ * time_t is a _signed_ integer, so this is 2038-01-19 where it is 32 bits
+ * wide (i386, armhf, armel) and far beyond any real date where it is 64. */
+#define TIME_T_MAX  ((time_t)((1ULL << (sizeof(time_t) * 8 - 1)) - 1))
+
+/* The dtend standing in for "this recurrence never ends": 2106-02-07
+ * (UINT32_MAX) where time_t is 64 bits wide, the end of the time_t range
+ * (2038-01-19) where it is 32 bits.  We stay away from TIME_T_MAX on 64-bit
+ * because the libc time functions cannot convert values that large.
+ *
+ * Mind the signedness here, and do not write a bare literal: 4294967295
+ * fits an _unsigned_ 32-bit int, but wraps to -1 in a signed 32-bit time_t
+ * -- and -1 is TR_NOVAL, which used to make check_tmrec() reject every
+ * open-ended recurrence on 32-bit platforms. */
+#define TR_DTEND_MAX  (sizeof(time_t) > 4 ? (time_t)4294967295LL : TIME_T_MAX)
+
 #ifdef USE_YWEEK_U
 #define SUN_WEEK(t)	(int)(((t)->tm_yday + 7 - \
 				((t)->tm_wday)) / 7)
@@ -1669,7 +1685,8 @@ done:
 				     + time_rec->ts.tm_sec); /* until the end of the year */
 				break;
 			default:
-				time_rec->dtend = 4294967295UL; /* auto-fix to +136 years */
+				/* no recurrence at all: the interval is open-ended */
+				time_rec->dtend = TR_DTEND_MAX;
 			}
 		}
 
